@@ -1,0 +1,12 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/research-ingest",
+      "schedule": "0 1 * * 1"
+    },
+    {
+      "path": "/api/cron/research-newsletter?language=en",
+      "schedule": "20 1 * * 1"
+    }
+  ]
+}

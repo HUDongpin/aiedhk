@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Research visualization cover</title>
+  <desc id="desc">Visualization-only research cover with diagram nodes and explanatory labels.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3fbff"/>
+      <stop offset="0.52" stop-color="#edf8fd"/>
+      <stop offset="1" stop-color="#dceff7"/>
+    </linearGradient>
+    <radialGradient id="wash" cx="72%" cy="35%" r="62%">
+      <stop offset="0" stop-color="#48d5e8" stop-opacity="0.28"/>
+      <stop offset="0.45" stop-color="#d9f4fb" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#f3fbff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#bad0df" stroke-width="1" opacity="0.32"/>
+    </pattern>
+    <filter id="paperShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#123047" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#0f5ea8"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#paper)"/>
+  <rect width="1600" height="1000" fill="url(#wash)"/>
+  <rect width="1600" height="1000" fill="url(#grid)" opacity="0.52"/>
+  <rect x="54" y="54" width="1492" height="892" rx="42" fill="none" stroke="#bad0df" stroke-width="2"/>
+  <!-- research-visualization-poster -->
+  <g id="research-visualization-poster" transform="translate(170 44) scale(0.87)">
+    
+    <g class="science-editorial-figure" data-style="editorial-science" data-kind="network">
+      <rect x="116" y="92" width="1368" height="820" rx="44" fill="#eaf7fc" stroke="#bad0df" stroke-width="2"/>
+      <path d="M152 144H1448M152 736H1448" stroke="#ffffff" stroke-width="1.5" opacity="0.68"/>
+      
+    <rect data-role="figure-panel" x="150" y="126" width="1300" height="720" rx="28" fill="rgba(255,255,255,0.52)" opacity="1" filter="url(#paperShadow)"/>
+    <rect x="150" y="126" width="1300" height="720" rx="28" fill="none" stroke="#bad0df" stroke-width="1.5" opacity="0.86"/>
+  
+      <g data-role="grid"><path d="M176 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M228 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M280 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M332 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M384 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M436 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M488 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M540 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M592 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M644 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M696 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M748 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M800 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M852 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M904 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M956 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1008 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1060 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1112 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1164 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1216 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1268 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1320 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1372 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1424 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 152H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 204H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 256H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 308H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 360H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 412H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 464H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 516H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 568H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 620H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 672H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 724H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 776H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/></g>
+      <g data-role="primary-visual" transform="translate(-160 -340) scale(1.6)">
+      <ellipse cx="548" cy="434" rx="286" ry="178" fill="#48d5e8" opacity="0.09"/>
+      <ellipse cx="610" cy="430" rx="218" ry="132" fill="#0f5ea8" opacity="0.07"/>
+      <path d="M404 356C503 326, 503 413, 602 383" fill="none" stroke="#0f5ea8" stroke-width="2" opacity="0.28"/><path d="M404 356C467 326, 467 594, 530 564" fill="none" stroke="#0f5ea8" stroke-width="2" opacity="0.28"/><path d="M505 304C588 274, 588 510, 671 480" fill="none" stroke="#0f5ea8" stroke-width="2" opacity="0.28"/><path d="M602 383C670.5 353, 670.5 348, 739 318" fill="none" stroke="#0f5ea8" stroke-width="2" opacity="0.28"/><path d="M671 480C743.5 450, 743.5 588, 816 558" fill="none" stroke="#0f5ea8" stroke-width="2" opacity="0.28"/><path d="M348 520C439 490, 439 594, 530 564" fill="none" stroke="#0f5ea8" stroke-width="2" opacity="0.28"/><path d="M275 412C339.5 382, 339.5 386, 404 356" fill="none" stroke="#0f5ea8" stroke-width="2" opacity="0.28"/><path d="M505 304C426.5 274, 426.5 550, 348 520" fill="none" stroke="#0f5ea8" stroke-width="2" opacity="0.28"/><path d="M739 318C777.5 288, 777.5 588, 816 558" fill="none" stroke="#0f5ea8" stroke-width="2" opacity="0.28"/>
+      <circle cx="404" cy="356" r="30" fill="#48d5e8" stroke="#0f5ea8" stroke-width="3" opacity="0.96"/><circle cx="505" cy="304" r="20" fill="#ffffff" stroke="#0f5ea8" stroke-width="2" opacity="0.96"/><circle cx="602" cy="383" r="16" fill="#ffffff" stroke="#0f5ea8" stroke-width="2" opacity="0.96"/><circle cx="671" cy="480" r="24" fill="#48d5e8" stroke="#0f5ea8" stroke-width="3" opacity="0.96"/><circle cx="530" cy="564" r="18" fill="#ffffff" stroke="#0f5ea8" stroke-width="2" opacity="0.96"/><circle cx="348" cy="520" r="14" fill="#ffffff" stroke="#0f5ea8" stroke-width="2" opacity="0.96"/><circle cx="739" cy="318" r="13" fill="#48d5e8" stroke="#0f5ea8" stroke-width="3" opacity="0.96"/><circle cx="816" cy="558" r="16" fill="#ffffff" stroke="#0f5ea8" stroke-width="2" opacity="0.96"/><circle cx="275" cy="412" r="16" fill="#ffffff" stroke="#0f5ea8" stroke-width="2" opacity="0.96"/>
+      <circle cx="568" cy="442" r="68" fill="#123047" opacity="0.96"/>
+      <text x="568" y="434" text-anchor="middle" fill="#d9f4fb" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="900">pedagogy</text>
+      <text x="568" y="462" text-anchor="middle" fill="#d9f4fb" font-family="Inter, Arial, sans-serif" font-size="21" font-weight="900">lens</text>
+      <text x="404" y="404" text-anchor="middle" fill="#52657a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="780">assessment</text><text x="872" y="410" text-anchor="start" fill="#52657a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="780">prediction</text><text x="630" y="350" text-anchor="start" fill="#52657a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="780">tutoring</text><text x="671" y="528" text-anchor="middle" fill="#52657a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="780">adaptive</text><text x="530" y="612" text-anchor="middle" fill="#52657a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="780">ethics</text><text x="348" y="568" text-anchor="middle" fill="#52657a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="780">feedback</text><text x="739" y="366" text-anchor="middle" fill="#52657a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="780">admin</text><text x="816" y="606" text-anchor="middle" fill="#52657a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="780">analytics</text><text x="275" y="460" text-anchor="middle" fill="#52657a" font-family="Inter, Arial, sans-serif" font-size="13" font-weight="780">student</text>
+      
+    <rect x="236" y="650" width="160" height="44" rx="15" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+    <circle cx="258" cy="672" r="6" fill="#48d5e8" opacity="0.9"/>
+    <text x="276" y="679" text-anchor="start" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="820">prediction</text>
+  
+      
+    <rect x="426" y="650" width="170" height="44" rx="15" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+    <circle cx="448" cy="672" r="6" fill="#48d5e8" opacity="0.9"/>
+    <text x="466" y="679" text-anchor="start" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="820">assessment</text>
+  
+      
+    <rect x="626" y="650" width="140" height="44" rx="15" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+    <circle cx="648" cy="672" r="6" fill="#48d5e8" opacity="0.9"/>
+    <text x="666" y="679" text-anchor="start" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="820">tutoring</text>
+  
+    </g>
+    </g>
+  
+  </g>
+</svg>

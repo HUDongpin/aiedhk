@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Research visualization cover</title>
+  <desc id="desc">Visualization-only research cover with diagram nodes and explanatory labels.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f3fbff"/>
+      <stop offset="0.52" stop-color="#edf8fd"/>
+      <stop offset="1" stop-color="#dceff7"/>
+    </linearGradient>
+    <radialGradient id="wash" cx="72%" cy="35%" r="62%">
+      <stop offset="0" stop-color="#48d5e8" stop-opacity="0.28"/>
+      <stop offset="0.45" stop-color="#d9f4fb" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#f3fbff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#bad0df" stroke-width="1" opacity="0.32"/>
+    </pattern>
+    <filter id="paperShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#123047" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#0f5ea8"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#paper)"/>
+  <rect width="1600" height="1000" fill="url(#wash)"/>
+  <rect width="1600" height="1000" fill="url(#grid)" opacity="0.52"/>
+  <rect x="54" y="54" width="1492" height="892" rx="42" fill="none" stroke="#bad0df" stroke-width="2"/>
+  <!-- research-visualization-poster -->
+  <g id="research-visualization-poster" transform="translate(170 44) scale(0.87)">
+    
+    <g class="science-editorial-figure" data-style="editorial-science" data-kind="tracing">
+      <rect x="116" y="92" width="1368" height="820" rx="44" fill="#f2efff" stroke="#bad0df" stroke-width="2"/>
+      <path d="M152 144H1448M152 736H1448" stroke="#ffffff" stroke-width="1.5" opacity="0.68"/>
+      
+    <rect data-role="figure-panel" x="150" y="126" width="1300" height="720" rx="28" fill="rgba(255,255,255,0.52)" opacity="1" filter="url(#paperShadow)"/>
+    <rect x="150" y="126" width="1300" height="720" rx="28" fill="none" stroke="#bad0df" stroke-width="1.5" opacity="0.86"/>
+  
+      <g data-role="grid"><path d="M176 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M228 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M280 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M332 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M384 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M436 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M488 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M540 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M592 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M644 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M696 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M748 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M800 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M852 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M904 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M956 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1008 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1060 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1112 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1164 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1216 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1268 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1320 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1372 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M1424 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 152H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 204H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 256H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 308H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 360H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 412H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 464H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 516H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 568H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 620H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 672H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 724H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/><path d="M176 776H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/></g>
+      <g data-role="primary-visual" transform="translate(-240 -340) scale(1.6)">
+      <path d="M280 640H892M280 640V300" stroke="#123047" stroke-width="3" stroke-linecap="round"/>
+      <path d="M302 602C372 596 410 562 472 542C546 518 560 466 632 430C704 394 732 344 800 322C836 310 866 300 884 286" fill="none" stroke="#48d5e8" stroke-width="28" opacity="0.24" stroke-linecap="round"/>
+      <path d="M302 602C372 596 410 562 472 542C546 518 560 466 632 430C704 394 732 344 800 322C836 310 866 300 884 286" fill="none" stroke="#0f5ea8" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="330" cy="600" r="17" fill="#ffffff" stroke="#0f5ea8" stroke-width="3"/><circle cx="468" cy="530" r="17" fill="#ffffff" stroke="#0f5ea8" stroke-width="3"/><circle cx="612" cy="460" r="17" fill="#ffffff" stroke="#0f5ea8" stroke-width="3"/><circle cx="744" cy="390" r="17" fill="#ffffff" stroke="#0f5ea8" stroke-width="3"/><circle cx="840" cy="320" r="17" fill="#ffffff" stroke="#0f5ea8" stroke-width="3"/>
+      
+    <rect x="314" y="668" width="128" height="44" rx="15" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+    <circle cx="336" cy="690" r="6" fill="#48d5e8" opacity="0.9"/>
+    <text x="354" y="697" text-anchor="start" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="820">skill A</text>
+  
+      
+    <rect x="470" y="668" width="128" height="44" rx="15" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+    <circle cx="492" cy="690" r="6" fill="#48d5e8" opacity="0.9"/>
+    <text x="510" y="697" text-anchor="start" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="820">skill B</text>
+  
+      
+    <rect x="626" y="668" width="128" height="44" rx="15" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+    <circle cx="648" cy="690" r="6" fill="#48d5e8" opacity="0.9"/>
+    <text x="666" y="697" text-anchor="start" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="15" font-weight="820">skill C</text>
+  
+      <text x="292" y="330" fill="#52657a" font-family="Inter, Arial, sans-serif" font-size="14" font-weight="800">posterior estimate</text>
+    </g>
+    </g>
+  
+  </g>
+</svg>

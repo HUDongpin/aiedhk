@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Research visualization cover</title>
+  <desc id="desc">Visualization-only research cover with national ChatGPT Education deployment signals.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fcff"/>
+      <stop offset="0.54" stop-color="#eef9fb"/>
+      <stop offset="1" stop-color="#ddecf6"/>
+    </linearGradient>
+    <radialGradient id="wash" cx="72%" cy="35%" r="62%">
+      <stop offset="0" stop-color="#48d5e8" stop-opacity="0.3"/>
+      <stop offset="0.5" stop-color="#d9f4fb" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#f7fcff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#bad0df" stroke-width="1" opacity="0.32"/>
+    </pattern>
+    <filter id="paperShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#123047" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#0f5ea8"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#paper)"/>
+  <rect width="1600" height="1000" fill="url(#wash)"/>
+  <rect width="1600" height="1000" fill="url(#grid)" opacity="0.52"/>
+  <rect x="54" y="54" width="1492" height="892" rx="42" fill="none" stroke="#bad0df" stroke-width="2"/>
+  <g id="research-visualization-poster" transform="translate(170 44) scale(0.87)">
+    <g class="science-editorial-figure" data-style="editorial-science" data-kind="national-deployment">
+      <rect x="116" y="92" width="1368" height="820" rx="44" fill="#ecf9fb" stroke="#bad0df" stroke-width="2"/>
+      <path d="M152 144H1448M152 736H1448" stroke="#ffffff" stroke-width="1.5" opacity="0.68"/>
+      <rect data-role="figure-panel" x="150" y="126" width="1300" height="720" rx="28" fill="#ffffff" opacity="0.58" filter="url(#paperShadow)"/>
+      <rect x="150" y="126" width="1300" height="720" rx="28" fill="none" stroke="#bad0df" stroke-width="1.5" opacity="0.86"/>
+      <g data-role="grid">
+        <path d="M176 152V820M280 152V820M384 152V820M488 152V820M592 152V820M696 152V820M800 152V820M904 152V820M1008 152V820M1112 152V820M1216 152V820M1320 152V820M1424 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/>
+        <path d="M176 152H1424M176 256H1424M176 360H1424M176 464H1424M176 568H1424M176 672H1424M176 776H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/>
+      </g>
+      <g data-role="primary-visual" transform="translate(-200 -178) scale(1.25)">
+        <rect x="310" y="314" width="704" height="410" rx="44" fill="#d9f4fb" stroke="#0f5ea8" stroke-width="5"/>
+        <rect x="356" y="366" width="612" height="78" rx="24" fill="#ffffff" stroke="#bad0df" stroke-width="2"/>
+        <circle cx="406" cy="405" r="18" fill="#48d5e8"/>
+        <text x="448" y="414" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="920">ChatGPT Education</text>
+        <rect x="356" y="486" width="250" height="154" rx="26" fill="#ffffff" stroke="#bad0df" stroke-width="2"/>
+        <text x="404" y="542" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="920">teachers</text>
+        <path d="M404 574H542M404 606H516" stroke="#0f5ea8" stroke-width="10" stroke-linecap="round" opacity="0.28"/>
+        <rect x="718" y="486" width="250" height="154" rx="26" fill="#ffffff" stroke="#bad0df" stroke-width="2"/>
+        <text x="768" y="542" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="25" font-weight="920">students</text>
+        <path d="M768 574H900M768 606H878" stroke="#0f5ea8" stroke-width="10" stroke-linecap="round" opacity="0.28"/>
+        <circle cx="1138" cy="356" r="84" fill="#123047"/>
+        <text x="1138" y="348" text-anchor="middle" fill="#d9f4fb" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="920">national</text>
+        <text x="1138" y="379" text-anchor="middle" fill="#d9f4fb" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="920">rollout</text>
+        <circle cx="1264" cy="544" r="84" fill="#48d5e8"/>
+        <text x="1264" y="536" text-anchor="middle" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="950">local</text>
+        <text x="1264" y="567" text-anchor="middle" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="950">training</text>
+        <circle cx="1138" cy="732" r="84" fill="#d9f4fb" stroke="#0f5ea8" stroke-width="4"/>
+        <text x="1138" y="724" text-anchor="middle" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="920">impact</text>
+        <text x="1138" y="755" text-anchor="middle" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="920">study</text>
+        <path d="M1008 392H1046" stroke="#0f5ea8" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+        <path d="M1012 576H1166" stroke="#0f5ea8" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+        <path d="M1202 624L1170 656" stroke="#0f5ea8" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+        <rect x="372" y="744" width="166" height="48" rx="16" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+        <circle cx="398" cy="768" r="7" fill="#48d5e8"/>
+        <text x="420" y="776" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="820">ministry</text>
+        <rect x="574" y="744" width="178" height="48" rx="16" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+        <circle cx="600" cy="768" r="7" fill="#48d5e8"/>
+        <text x="622" y="776" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="820">local tools</text>
+        <rect x="788" y="744" width="180" height="48" rx="16" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+        <circle cx="814" cy="768" r="7" fill="#48d5e8"/>
+        <text x="836" y="776" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="820">evidence</text>
+      </g>
+    </g>
+  </g>
+</svg>

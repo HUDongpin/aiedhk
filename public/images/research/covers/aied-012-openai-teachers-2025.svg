@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Research visualization cover</title>
+  <desc id="desc">Visualization-only research cover with teacher workspace and governance signals.</desc>
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f7fcff"/>
+      <stop offset="0.54" stop-color="#eef9fb"/>
+      <stop offset="1" stop-color="#ddecf6"/>
+    </linearGradient>
+    <radialGradient id="wash" cx="72%" cy="35%" r="62%">
+      <stop offset="0" stop-color="#48d5e8" stop-opacity="0.3"/>
+      <stop offset="0.5" stop-color="#d9f4fb" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#f7fcff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="56" height="56" patternUnits="userSpaceOnUse">
+      <path d="M56 0H0V56" fill="none" stroke="#bad0df" stroke-width="1" opacity="0.32"/>
+    </pattern>
+    <filter id="paperShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="18" stdDeviation="18" flood-color="#123047" flood-opacity="0.08"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0 0L10 5L0 10Z" fill="#0f5ea8"/>
+    </marker>
+  </defs>
+  <rect width="1600" height="1000" fill="url(#paper)"/>
+  <rect width="1600" height="1000" fill="url(#wash)"/>
+  <rect width="1600" height="1000" fill="url(#grid)" opacity="0.52"/>
+  <rect x="54" y="54" width="1492" height="892" rx="42" fill="none" stroke="#bad0df" stroke-width="2"/>
+  <g id="research-visualization-poster" transform="translate(170 44) scale(0.87)">
+    <g class="science-editorial-figure" data-style="editorial-science" data-kind="workspace">
+      <rect x="116" y="92" width="1368" height="820" rx="44" fill="#ecf9fb" stroke="#bad0df" stroke-width="2"/>
+      <path d="M152 144H1448M152 736H1448" stroke="#ffffff" stroke-width="1.5" opacity="0.68"/>
+      <rect data-role="figure-panel" x="150" y="126" width="1300" height="720" rx="28" fill="#ffffff" opacity="0.58" filter="url(#paperShadow)"/>
+      <rect x="150" y="126" width="1300" height="720" rx="28" fill="none" stroke="#bad0df" stroke-width="1.5" opacity="0.86"/>
+      <g data-role="grid">
+        <path d="M176 152V820M280 152V820M384 152V820M488 152V820M592 152V820M696 152V820M800 152V820M904 152V820M1008 152V820M1112 152V820M1216 152V820M1320 152V820M1424 152V820" stroke="#bad0df" stroke-width="1" opacity="0.24"/>
+        <path d="M176 152H1424M176 256H1424M176 360H1424M176 464H1424M176 568H1424M176 672H1424M176 776H1424" stroke="#bad0df" stroke-width="1" opacity="0.24"/>
+      </g>
+      <g data-role="primary-visual" transform="translate(-258 -306) scale(1.6)">
+        <rect x="300" y="294" width="710" height="420" rx="44" fill="#d9f4fb" stroke="#0f5ea8" stroke-width="5"/>
+        <rect x="344" y="346" width="622" height="74" rx="24" fill="#ffffff" stroke="#bad0df" stroke-width="2"/>
+        <circle cx="392" cy="383" r="18" fill="#48d5e8"/>
+        <text x="434" y="392" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="920">teacher workspace</text>
+        <rect x="344" y="454" width="278" height="170" rx="26" fill="#ffffff" stroke="#bad0df" stroke-width="2"/>
+        <text x="390" y="520" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="920">materials</text>
+        <path d="M390 552H552M390 584H516" stroke="#0f5ea8" stroke-width="10" stroke-linecap="round" opacity="0.28"/>
+        <rect x="688" y="454" width="278" height="170" rx="26" fill="#ffffff" stroke="#bad0df" stroke-width="2"/>
+        <text x="736" y="520" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="920">planning</text>
+        <path d="M736 552H890M736 584H848" stroke="#0f5ea8" stroke-width="10" stroke-linecap="round" opacity="0.28"/>
+        <circle cx="1124" cy="374" r="88" fill="#123047"/>
+        <text x="1124" y="366" text-anchor="middle" fill="#d9f4fb" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="920">privacy</text>
+        <text x="1124" y="397" text-anchor="middle" fill="#d9f4fb" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="920">controls</text>
+        <circle cx="1124" cy="596" r="88" fill="#48d5e8"/>
+        <text x="1124" y="588" text-anchor="middle" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="950">school</text>
+        <text x="1124" y="619" text-anchor="middle" fill="#123047" font-family="Inter, Arial, sans-serif" font-size="24" font-weight="950">account</text>
+        <path d="M1010 382H1034" stroke="#0f5ea8" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+        <path d="M1010 596H1034" stroke="#0f5ea8" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+        <rect x="386" y="740" width="152" height="48" rx="16" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+        <circle cx="412" cy="764" r="7" fill="#48d5e8"/>
+        <text x="434" y="772" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="820">literacy</text>
+        <rect x="574" y="740" width="164" height="48" rx="16" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+        <circle cx="600" cy="764" r="7" fill="#48d5e8"/>
+        <text x="622" y="772" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="820">templates</text>
+        <rect x="774" y="740" width="174" height="48" rx="16" fill="#ffffff" stroke="#bad0df" stroke-width="1.5"/>
+        <circle cx="800" cy="764" r="7" fill="#48d5e8"/>
+        <text x="822" y="772" fill="#0f172a" font-family="Inter, Arial, sans-serif" font-size="17" font-weight="820">governance</text>
+      </g>
+    </g>
+  </g>
+</svg>

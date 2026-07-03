@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 220" role="img" aria-labelledby="title desc">
+  <title id="title">AIEDHK knowledge compass logo</title>
+  <desc id="desc">A light rounded square with a compass, an open book base, and the AIEDHK wordmark.</desc>
+  <defs>
+    <linearGradient id="knowledgeCompassRing" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#48d5e8"/>
+      <stop offset="1" stop-color="#0f5ea8"/>
+    </linearGradient>
+    <filter id="knowledgeCompassShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="16" stdDeviation="16" flood-color="#0f172a" flood-opacity="0.1"/>
+    </filter>
+  </defs>
+  <g filter="url(#knowledgeCompassShadow)">
+    <rect x="28" y="32" width="156" height="156" rx="42" fill="#f7fbff" stroke="#dbe4ee" stroke-width="2"/>
+  </g>
+  <g transform="translate(28 32)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <circle cx="78" cy="73" r="39" stroke="url(#knowledgeCompassRing)" stroke-width="8"/>
+    <path d="M78 44L93 86L78 78L63 86L78 44Z" fill="#0f5ea8" stroke="#0f5ea8" stroke-width="3"/>
+    <path d="M43 126C58 116 73 118 78 130C84 118 99 116 114 126" stroke="#0f5ea8" stroke-width="7"/>
+    <path d="M43 140H114" stroke="#48d5e8" stroke-width="7"/>
+    <circle cx="78" cy="73" r="5.5" fill="#ffffff" stroke="#ffffff" stroke-width="2"/>
+    <circle cx="42" cy="73" r="4" fill="#48d5e8" stroke="none"/>
+    <circle cx="114" cy="73" r="4" fill="#48d5e8" stroke="none"/>
+    <path d="M52 73H66M90 73H104" stroke="#48d5e8" stroke-width="4"/>
+  </g>
+  <text x="238" y="100" fill="#0f172a" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="62" font-weight="850" letter-spacing="-2">AIEDHK</text>
+  <text x="240" y="154" fill="#64748b" font-family="ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif" font-size="31" font-weight="520">AI in Education Hub of Knowledge</text>
+</svg>

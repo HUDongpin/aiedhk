@@ -2,6 +2,80 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-018",
+    slug: "news-openai-learning-outcomes-measurement-suite-chatgpt-education",
+    title: "News: OpenAI adds a Learning Outcomes Measurement Suite to the ChatGPT Education evidence agenda",
+    authors: ["OpenAI"],
+    venue: "OpenAI Education",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "ChatGPT Education", "learning outcomes"],
+    image: "/images/research/covers/aied-018-openai-learning-outcomes-2026.png",
+    imageAlt: "Editorial cover for OpenAI ChatGPT Education and learning outcomes measurement news",
+    summaryImage: "/images/research/summary/aied-018-openai-learning-outcomes-summary.png",
+    summaryImageAlt:
+      "Premium editorial illustration of ChatGPT Education, learning outcomes measurement, classroom evidence, teacher oversight, and responsible AI adoption.",
+    summaryAudio: "/audio/research/aied-018-openai-learning-outcomes-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word summary",
+    shortSummary:
+      "News item: OpenAI's Learning Outcomes Measurement Suite pushes ChatGPT Education toward evidence gathering, not only access, by studying how AI use relates to measurable learning.",
+    fullSummary: `OpenAI's Learning Outcomes Measurement Suite is a useful Research News item because it makes the ChatGPT Education story more evidence-oriented. Earlier education announcements have focused on access, managed workspaces, teacher support, and national deployment. This update asks a harder question: how should schools, universities, researchers, and AI providers understand whether tools such as ChatGPT are helping students learn? For AIEDHK, that shift matters because education leaders need more than adoption numbers. They need evidence about learning processes, durable skill development, teacher workload, assessment integrity, and equity.
+
+The announcement presents the suite as a set of tools for studying AI and learning outcomes rather than as a finished proof that ChatGPT improves education. That distinction is important. OpenAI is positioning ChatGPT Education inside an evidence agenda: design measurement methods, work with education partners, examine student and teacher use, and connect product decisions to learning impact. This is a different kind of vendor news from a feature launch. It signals that AI providers know education systems will increasingly ask for outcome evidence before scaling managed AI workspaces or classroom tools.
+
+The practical value for AIEDHK is the measurement framing. ChatGPT Education will not be judged only by whether students like it or whether teachers can save time. It will also be judged by whether students retain knowledge, improve reasoning, revise work more thoughtfully, build AI literacy, and learn when to question a model. Learning-outcomes work also has to handle difficult attribution. A student may use ChatGPT alongside teachers, peers, textbooks, school platforms, and prior knowledge. A serious measurement suite therefore needs careful study design, transparent limits, and attention to context rather than simple before-and-after claims.
+
+The news should be read with caution because it is still an OpenAI perspective. A measurement suite designed by a vendor can support useful research, but independent validation remains essential. Schools and universities should ask who defines the outcomes, what data is collected, how student privacy is protected, how comparison groups are handled, and whether negative or mixed results will be visible. For Hong Kong, those questions are especially practical because multilingual classrooms, high-stakes assessment, parental trust, and school procurement rules all shape what counts as responsible evidence.
+
+The broader signal is that ChatGPT Education is moving into a new phase: from access and experimentation toward evidence, governance, and accountable implementation. AIEDHK can use this news to track whether AI education products are building credible learning measurement into the deployment model. The practical takeaway is not that every school should wait for perfect proof. It is that pilots should be designed from the start with measurable learning questions, teacher review, privacy safeguards, and public clarity about what the AI system is expected to improve.`,
+    keyTakeaways: [
+      "News: OpenAI is connecting ChatGPT Education to learning-outcomes measurement rather than access alone.",
+      "The measurement agenda should include durable learning, AI literacy, teacher workload, and responsible classroom use.",
+      "AIEDHK should treat vendor measurement tools as useful signals while still asking for independent validation and local evidence.",
+    ],
+    whyItMatters:
+      "News signal: AIEDHK can use this ChatGPT Education update to frame AI adoption around measurable learning, privacy-aware evidence, and independent evaluation.",
+    sourceUrl: "https://openai.com/index/understanding-ai-and-learning-outcomes/",
+    createdAt: "2026-07-06",
+  },
+  {
+    id: "aied-017",
+    slug: "metacognitive-engagement-student-genai-interaction-motivation-roles",
+    title: "How motivation and roles influence metacognitive engagement in student-GenAI interaction",
+    authors: ["Yiran Cui", "Wanxin Yan", "Thomas K. F. Chiu", "Taira Nakajima"],
+    venue: "International Journal of Educational Technology in Higher Education",
+    year: 2026,
+    type: "journal",
+    tags: ["metacognition", "GenAI", "student engagement"],
+    image: "/images/research/covers/aied-017-metacognitive-genai-engagement-2026.png",
+    imageAlt: "Editorial cover for metacognitive engagement in student-GenAI interaction",
+    summaryImage: "/images/research/summary/aied-017-metacognitive-genai-engagement-summary.png",
+    summaryImageAlt:
+      "Premium editorial illustration of students interacting with generative AI through motivation, roles, metacognitive monitoring, reflection, and strategy revision.",
+    summaryAudio: "/audio/research/aied-017-metacognitive-genai-engagement-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word summary",
+    shortSummary:
+      "A 2026 open-access IJETHE study examines how students' motivation and assumed roles during GenAI dialogue shape metacognitive engagement, monitoring, and learning strategy.",
+    fullSummary: `Cui, Yan, Chiu, and Nakajima study an issue that sits at the center of generative AI in education: students do not learn from AI interaction simply because the tool can answer questions. They learn when the interaction pushes them to plan, monitor, evaluate, and revise their own thinking. The paper is useful for AIEDHK because it treats student-GenAI dialogue as a metacognitive activity shaped by motivation and roles. That is more precise than the common question of whether students use ChatGPT often. It asks what kind of learner stance the interaction encourages.
+
+The study focuses on how motivation and role-taking influence metacognitive engagement during student interaction with generative AI. This matters because GenAI tools can place students in very different positions. A student may behave as a passive recipient of answers, a task manager asking for quick completion, a critic checking the model's claims, a collaborator refining ideas, or a learner using the dialogue to understand gaps in knowledge. The educational difference between those roles is large. The same AI response can support learning in one role and weaken learning in another if the student stops evaluating, explaining, or planning.
+
+For AIEDHK, the strongest contribution is the shift from tool access to interaction quality. The paper points toward design and teaching routines that make metacognition visible. Students need prompts and tasks that ask them to state goals, compare alternatives, justify why they accept or reject AI suggestions, and reflect on what changed in their understanding. Teachers need ways to see not only the final product, but also the student's questioning, monitoring, and revision process. Product teams can translate this into interface patterns such as reflection checkpoints, role prompts, evidence requests, and revision histories.
+
+The motivation dimension is equally important. If students are motivated mainly by speed or performance pressure, GenAI may become a shortcut for producing acceptable work. If they are motivated by mastery, curiosity, or self-improvement, the same tool can become a partner for testing understanding and improving strategy. The paper therefore supports a balanced adoption message: GenAI can be educationally valuable, but only when learning tasks and classroom norms reward thinking with the model rather than outsourcing thinking to the model.
+
+The study also has practical implications for Hong Kong classrooms and universities. High assessment pressure, multilingual learning, and unequal AI confidence can all shape the roles students adopt when using GenAI. AIEDHK can use this paper to evaluate whether AI learning tools build metacognitive habits: planning, monitoring, critique, revision, and self-explanation. The takeaway is that responsible GenAI education should not only teach students how to prompt. It should teach them how to position themselves as reflective learners who can question the model, manage their motivation, and make their own reasoning stronger.`,
+    keyTakeaways: [
+      "Student-GenAI learning depends on metacognitive engagement, not only access to a capable model.",
+      "Motivation and learner roles shape whether GenAI supports reflection or becomes a shortcut.",
+      "AIED tools should expose planning, monitoring, critique, and revision rather than only final answers.",
+    ],
+    whyItMatters:
+      "AIEDHK can use this paper to connect GenAI classroom adoption with metacognition, learner agency, and assessment designs that value process evidence.",
+    sourceUrl: "https://doi.org/10.1186/s41239-026-00610-z",
+    createdAt: "2026-07-06",
+  },
+  {
     id: "aied-016",
     slug: "news-openai-chatgpt-education-opportunity-ai-capability-gap",
     title: "News: OpenAI frames ChatGPT Education as an AI opportunity and capability-gap strategy",

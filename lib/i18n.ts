@@ -182,7 +182,7 @@ const enDictionary = {
   },
   research: {
     eyebrow: "Research News",
-    title: "AIED papers, summarized for research-to-product translation.",
+    title: "AIED papers & news, summarized for research-to-product translation.",
     intro:
       "A curated feed of AIED journal and conference papers, and AIED news. Each card is designed for a concise overview, while the detail page supports a 500-word summary and practical takeaways.",
     searchPlaceholder: "Search title, author, topic, or keyword",

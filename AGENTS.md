@@ -10,5 +10,6 @@
 - Keep local artifacts outside Git. Generated and local-only paths include `.next/`, `node_modules/`, `.playwright-cli/`, `output/`, `outputs/`, `tmp/`, `.vercel/`, and `tsconfig.tsbuildinfo`.
 - Never commit or print secret-bearing files or values, including `.env*` and `All API Keys*.docx`. `.env.example` may contain variable names only.
 - Research News automation must check existing entries for duplicates first, commit reviewed data and static audio together, and deploy only from a clean commit.
+- Each Research News article must have a different cover image; do not reuse the same cover file or visually duplicate cover art across articles.
 
 Run `npm run hygiene:check` before handoff and `npm run release:verify` before release/deploy.

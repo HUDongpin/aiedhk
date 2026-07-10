@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import test from "node:test";
@@ -17,6 +18,10 @@ function pngDimensions(path: string) {
     width: buffer.readUInt32BE(16),
     height: buffer.readUInt32BE(20),
   };
+}
+
+function fileHash(path: string) {
+  return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
 test("research news fallback contains nineteen curated Research News items", () => {
@@ -74,6 +79,19 @@ test("reviewed paper cover filenames stay aligned with paper ids", () => {
 
   for (const paper of papers) {
     assert.ok(paper.image.includes(paper.id), `${paper.image} should include ${paper.id}`);
+  }
+});
+
+test("each reviewed paper has a different cover bitmap", () => {
+  const papers = getResearchPapers("en");
+  const seen = new Map<string, string>();
+
+  for (const paper of papers) {
+    const hash = fileHash(localPublicPath(paper.image));
+    const existing = seen.get(hash);
+
+    assert.equal(existing, undefined, `${paper.image} should not reuse the same bitmap as ${existing}`);
+    seen.set(hash, paper.image);
   }
 });
 

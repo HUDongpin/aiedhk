@@ -19,11 +19,11 @@ function pngDimensions(path: string) {
   };
 }
 
-test("research news fallback contains eighteen curated Research News items", () => {
+test("research news fallback contains nineteen curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 18);
-  assert.equal(papers[0]?.slug, "news-openai-learning-outcomes-measurement-suite-chatgpt-education");
+  assert.equal(papers.length, 19);
+  assert.equal(papers[0]?.slug, "news-openai-gpt-5-6-codex-in-chatgpt-agentic-learning");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
@@ -97,6 +97,7 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-019",
       "aied-018",
       "aied-017",
       "aied-016",
@@ -136,5 +137,5 @@ test("static summary media assets are available locally", () => {
 test("untranslated locales keep reviewed English paper titles instead of stale mock titles", () => {
   const papers = getResearchPapers("zh-hant");
 
-  assert.equal(papers[0]?.title, "News: OpenAI adds a Learning Outcomes Measurement Suite to the ChatGPT Education evidence agenda");
+  assert.equal(papers[0]?.title, "News: OpenAI launches GPT-5.6 and brings Codex into ChatGPT");
 });

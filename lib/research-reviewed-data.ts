@@ -2,6 +2,43 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-019",
+    slug: "news-openai-gpt-5-6-codex-in-chatgpt-agentic-learning",
+    title: "News: OpenAI launches GPT-5.6 and brings Codex into ChatGPT",
+    authors: ["OpenAI"],
+    venue: "OpenAI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "GPT-5.6", "Codex in ChatGPT"],
+    image: "/images/research/covers/aied-019-openai-gpt-5-6-codex-2026.png",
+    imageAlt: "Editorial cover for the public GPT-5.6 launch and Codex inside ChatGPT",
+    summaryImage: "/images/research/summary/aied-019-openai-gpt-5-6-codex-summary.png",
+    summaryImageAlt:
+      "Science-editorial scene of learners and educators directing agentic AI workflows with planning, research, review, and human oversight.",
+    summaryAudio: "/audio/research/aied-019-openai-gpt-5-6-codex-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word summary",
+    shortSummary:
+      "News item: OpenAI has made GPT-5.6 generally available across ChatGPT, Codex, and the API while bringing the Codex agent directly into ChatGPT.",
+    fullSummary: `OpenAI's July 9 release of GPT-5.6 is significant for artificial intelligence in education because it combines a more capable model family with a broader shift in how people use AI. OpenAI says GPT-5.6 is now generally available across ChatGPT, Codex, and the OpenAI API. The family includes Sol as the flagship model, Terra as a balanced option for everyday work, and Luna as the fastest and most affordable tier. The release emphasizes stronger performance per token, improved computer use, better design judgment, and more reliable end-to-end knowledge work. For education, the important change is not only a higher benchmark score. It is the growing ability of one model family to research, create, inspect, revise, and coordinate tools across a complete task.
+
+The second part of the news is the placement of Codex inside ChatGPT. OpenAI describes Codex as the same coding agent now available in ChatGPT, while remaining connected across the editor and terminal through a ChatGPT account. Codex can run multi-step engineering work, use isolated worktrees, apply reusable Skills, schedule background tasks, and coordinate multiple agents. This moves the familiar ChatGPT interface closer to an agentic workspace. A learner or educator is no longer limited to asking for an explanation or a draft. They can potentially delegate a longer workflow that gathers context, produces an artifact, checks the result, and returns evidence of what changed.
+
+For AIED, this creates real opportunities. GPT-5.6 is presented as stronger at coding, browsing, computer use, scientific work, documents, spreadsheets, presentations, and interactive visual explanations. Those capabilities could support project-based learning, programming education, research apprenticeships, data analysis, multilingual content development, and teacher preparation. Codex-style workflows can also make process visible through plans, terminal output, diffs, tests, and review checkpoints. Used well, that evidence can help students examine how an AI system approached a task instead of treating the final answer as magic. It may also help educators design authentic tasks in which students direct, critique, and improve an agent's work.
+
+The same capabilities increase the need for careful educational design. An agent that completes an entire workflow can hide the thinking that learners are meant to practice. Fast production may weaken planning, debugging, source evaluation, writing, or reflection if students accept finished artifacts without understanding them. Access also differs by plan and model tier, raising equity questions. Institutions must consider privacy, connected-tool permissions, assessment validity, provenance, and the possibility that multi-agent systems produce polished but poorly understood work. OpenAI's product claims and benchmarks are useful evidence about capability, but they are not independent proof of improved learning outcomes.
+
+For Hong Kong schools and universities, the practical response should be staged and evidence-informed. AI literacy now needs to include agent literacy: how to define a task, constrain tools, inspect intermediate work, verify sources, review changes, and decide what must remain human judgment. Assessment can require process records, oral explanation, version history, and reflection on rejected AI suggestions. Teachers need supported time to test workflows before adopting them at scale, while institutions need clear rules for student data and connected services. The broader lesson is that GPT-5.6 and Codex in ChatGPT move educational AI from answer generation toward delegated action. AIEDHK should track that transition through learning evidence, human oversight, and local governance rather than capability excitement alone.`,
+    keyTakeaways: [
+      "News: GPT-5.6 is generally available across ChatGPT, Codex, and the OpenAI API.",
+      "Codex in ChatGPT shifts familiar chat interaction toward multi-step agentic work with tools, review, and background execution.",
+      "AIED adoption should teach agent literacy and preserve process evidence, teacher oversight, equity, privacy, and assessment validity.",
+    ],
+    whyItMatters:
+      "News signal: GPT-5.6 and Codex in ChatGPT make agentic AI a mainstream education issue, requiring learning designs that combine delegated work with verification, reflection, and accountable human judgment.",
+    sourceUrl: "https://openai.com/index/gpt-5-6/",
+    createdAt: "2026-07-10",
+  },
+  {
     id: "aied-018",
     slug: "news-openai-learning-outcomes-measurement-suite-chatgpt-education",
     title: "News: OpenAI adds a Learning Outcomes Measurement Suite to the ChatGPT Education evidence agenda",

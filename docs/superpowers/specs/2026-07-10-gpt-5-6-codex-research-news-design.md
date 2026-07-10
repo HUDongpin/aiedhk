@@ -47,6 +47,8 @@ Create two new raster images with the established AIED.HK science-magazine style
 1. Cover: `public/images/research/covers/aied-019-openai-gpt-5-6-codex-2026.png`
 2. Summary image: `public/images/research/summary/aied-019-openai-gpt-5-6-codex-summary.png`
 
+Generate both images from scratch with the built-in `imagegen` tool, using one dedicated generation call and prompt per asset. Do not copy, crop, edit, composite, trace, or reuse pixels from any previous Research News cover or summary image. Existing covers may inform the written AIED.HK style rules only; they must not be supplied to the generator as reference images.
+
 Both images will be approximately 16:10 and at least 1500 by 900 pixels. They will show a credible higher-education or research setting with students, educators, or researchers using agentic AI workflows. Warm institutional light will mix with restrained cyan/teal data layers representing multiple coordinated workstreams. The images must remain photographic, crop-safe, human-centered, and free of titles, logos, watermarks, robots, and decorative interface clutter.
 
 The cover will emphasize the public release and connected ChatGPT/Codex workspace. The summary image will emphasize the educational workflow: planning, research, tool use, review, and human judgment.

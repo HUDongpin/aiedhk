@@ -24,11 +24,11 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains nineteen curated Research News items", () => {
+test("research news fallback contains twenty-one curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 19);
-  assert.equal(papers[0]?.slug, "news-openai-gpt-5-6-codex-in-chatgpt-agentic-learning");
+  assert.equal(papers.length, 21);
+  assert.equal(papers[0]?.slug, "news-openai-anthropic-ai-workbenches-chatgpt-claude-science");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
@@ -115,6 +115,8 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-021",
+      "aied-020",
       "aied-019",
       "aied-018",
       "aied-017",
@@ -155,5 +157,5 @@ test("static summary media assets are available locally", () => {
 test("untranslated locales keep reviewed English paper titles instead of stale mock titles", () => {
   const papers = getResearchPapers("zh-hant");
 
-  assert.equal(papers[0]?.title, "News: OpenAI launches GPT-5.6 and brings Codex into ChatGPT");
+  assert.equal(papers[0]?.title, "News: OpenAI and Anthropic turn AI assistants into governed workbenches");
 });

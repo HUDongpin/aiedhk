@@ -37,6 +37,7 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
 
   const relatedPapers = await getRelatedPublishedPapers(paper, typedLocale, 3);
   const summaryAudioSrc = typedLocale === "en" ? paper.summaryAudio : undefined;
+  const sourceLinks = paper.sourceUrls?.length ? paper.sourceUrls : [{ label: dictionary.common.source, url: paper.sourceUrl }];
 
   return (
     <div className="bg-hub-gradient">
@@ -65,9 +66,13 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
                 <p className="text-lg leading-8 text-slate-500">{paper.authors.join(", ")}</p>
                 <p className="mt-2 text-base font-bold text-aied-blue">{paper.venue}</p>
               </div>
-              <a href={paper.sourceUrl} target="_blank" rel="noreferrer" className="focus-ring inline-flex w-fit rounded-full bg-aied-ink px-6 py-3 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-aied-blue">
-                {dictionary.common.source} ↗
-              </a>
+              <div className="flex flex-wrap gap-2">
+                {sourceLinks.map((source) => (
+                  <a key={source.url} href={source.url} target="_blank" rel="noreferrer" className="focus-ring inline-flex w-fit rounded-full bg-aied-ink px-6 py-3 text-sm font-black text-white transition hover:-translate-y-0.5 hover:bg-aied-blue">
+                    {source.label} ↗
+                  </a>
+                ))}
+              </div>
             </div>
             <div className="mt-7 flex flex-wrap gap-2">
               {paper.tags.map((tag) => (

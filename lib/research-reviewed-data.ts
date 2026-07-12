@@ -2,6 +2,94 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-021",
+    slug: "news-openai-anthropic-ai-workbenches-chatgpt-claude-science",
+    title: "News: OpenAI and Anthropic turn AI assistants into governed workbenches",
+    authors: ["OpenAI", "Anthropic"],
+    venue: "AI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "ChatGPT Work", "Claude Science", "Claude Code"],
+    image: "/images/research/covers/aied-021-ai-workbenches-openai-anthropic-2026.png",
+    imageAlt: "Editorial cover for OpenAI and Anthropic AI workbench product news",
+    summaryImage: "/images/research/summary/aied-021-ai-workbenches-openai-anthropic-summary.png",
+    summaryImageAlt:
+      "Editorial scene of educators, researchers, and developers supervising agentic AI workflows across classroom, science, coding, and governance contexts.",
+    summaryAudio: "/audio/research/aied-021-ai-workbenches-openai-anthropic-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word summary",
+    shortSummary:
+      "News item: OpenAI's GPT-5.6 rollout across ChatGPT Work and Codex, alongside Anthropic's Claude Science and Claude Code, shows AI assistants becoming auditable workbench infrastructure.",
+    fullSummary: `This product-news roundup is useful for AIEDHK because OpenAI and Anthropic are both moving AI assistants away from simple chat and toward governed workbenches for extended tasks. OpenAI's current GPT-5.6 guidance describes Sol as a model for complex work across coding, knowledge work, research, cybersecurity, science, computer use, and design. It also says GPT-5.6 availability now spans Work in ChatGPT, Codex, and the OpenAI API. Anthropic's June 30 launch of Claude Science uses similar workbench language for scientific research: a coordinated environment that can integrate tools, produce auditable artifacts, manage compute, and preserve enough history for validation and reproduction. Together, these updates mark a practical product shift that education leaders should track closely.
+
+The OpenAI side matters because GPT-5.6 is not only a stronger answer generator. In managed workspaces, Work in ChatGPT can use Sol, Terra, and Luna, while Codex connects the model family to coding and software workflows. That changes how students, teachers, researchers, and administrators may experience AI. A learner may ask for help with a project plan, data analysis, literature search, code review, or presentation, and the system may increasingly coordinate multiple steps rather than return a single response. For education, that makes process evidence more important: what sources were used, which files changed, which commands ran, and what the human user accepted or rejected.
+
+The Anthropic side makes the same direction visible in research and software. Claude Science is presented as an AI workbench for scientists that integrates common research tools, generates figures and manuscripts with code-backed artifacts, accesses local or remote compute, and uses reviewer agents to check citations, calculations, and traceability. Claude Code is positioned for work directly in a codebase through terminal, IDE, Slack, web, and other surfaces. These products are not education tools in the narrow classroom sense, but they are likely to shape research training, programming education, graduate supervision, and project-based learning because they model how expert work can be delegated, checked, and revised with agents.
+
+The caution is that product capability is not the same as learning impact. A workbench that can complete a workflow can also hide the planning, debugging, reading, and judgment that students need to practice. Stronger agentic systems may make final artifacts look more polished while weakening understanding if educators do not require explanation, version history, source review, and oral defense. They also raise governance questions about connected tools, data residency, institutional permissions, code execution, sensitive research files, and accountability when an agent's output is wrong but persuasive.
+
+For Hong Kong schools and universities, the practical response is to teach workbench literacy, not only prompt literacy. Students need to learn how to define tasks, constrain tools, inspect intermediate outputs, verify citations, review code diffs, and document human decisions. Teachers need assessment formats that reward process records and reflective critique. Institutions need policies for managed workspaces, local data, research compute, and acceptable delegation. The important news signal is therefore not simply that OpenAI and Anthropic have new products. It is that mainstream AI products are becoming environments for delegated action, and AIED practice must make human oversight, reproducibility, and learning evidence central from the start.`,
+    keyTakeaways: [
+      "News: OpenAI is making GPT-5.6 available across Work in ChatGPT, Codex, and the API, while Anthropic has launched Claude Science and continues to position Claude Code as a multi-surface coding agent.",
+      "AI assistants are becoming workbenches that can coordinate research, coding, compute, artifacts, and review rather than only produce chat responses.",
+      "AIED adoption should teach workbench literacy: task framing, tool constraints, process evidence, source verification, code review, and accountable human judgment.",
+    ],
+    whyItMatters:
+      "News signal: OpenAI and Anthropic product moves show agentic AI becoming educational and research infrastructure, so AIEDHK should evaluate them through evidence, reproducibility, governance, and learner understanding.",
+    sourceUrl: "https://help.openai.com/en/articles/20001354-gpt-5-6-in-chatgpt-codex-and-the-api",
+    sourceUrls: [
+      {
+        label: "OpenAI GPT-5.6",
+        url: "https://help.openai.com/en/articles/20001354-gpt-5-6-in-chatgpt-codex-and-the-api",
+      },
+      {
+        label: "Anthropic Claude Science",
+        url: "https://www.anthropic.com/news/claude-science-ai-workbench",
+      },
+      {
+        label: "Claude Code",
+        url: "https://claude.com/product/claude-code",
+      },
+    ],
+    createdAt: "2026-07-13",
+  },
+  {
+    id: "aied-020",
+    slug: "generative-ai-higher-education-ethical-behavioral-chatgpt-adoption",
+    title: "Generative AI in higher education: ethical and behavioral factors influencing students' intentions to use ChatGPT",
+    authors: ["Nina Rizun", "Ovidiu Niculae Bordean", "Anastasija Nikiforova", "Ioana Natalia Beleiu", "Aleksandra Revina"],
+    venue: "Computers and Education Open",
+    year: 2026,
+    type: "journal",
+    tags: ["ChatGPT", "AI ethics", "higher education"],
+    image: "/images/research/covers/aied-020-chatgpt-ethics-adoption-2026.png",
+    imageAlt: "Editorial cover for ethical and behavioral factors in students' ChatGPT adoption",
+    summaryImage: "/images/research/summary/aied-020-chatgpt-ethics-adoption-summary.png",
+    summaryImageAlt:
+      "Editorial classroom scene showing students evaluating generative AI adoption through privacy, explainability, trust, social influence, and academic integrity.",
+    summaryAudio: "/audio/research/aied-020-chatgpt-ethics-adoption-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word summary",
+    shortSummary:
+      "A 2026 open-access study of 344 European students connects ChatGPT adoption in higher education with explainability, privacy, trust, social influence, and perceived control.",
+    fullSummary: `Rizun, Bordean, Nikiforova, Beleiu, and Revina study a practical question for universities: what makes students intend to use ChatGPT for academic tasks, and how do ethical concerns fit into that decision? The paper is useful for AIEDHK because it does not treat generative AI adoption as a simple preference or novelty effect. Instead, it connects student intention with ethical trust factors, technology acceptance, planned behavior, and social influence. That gives educators a better vocabulary for discussing why students adopt AI tools and what kinds of support or safeguards may actually change behavior.
+
+The study develops and tests an integrated model using survey data from 344 students in Estonia, Germany, Poland, and Romania. Its framework combines Fairness, Accountability, Transparency and Ethics in AI, the Technology Acceptance Model, the Theory of Planned Behavior, and the Unified Theory of Acceptance and Use of Technology. This combination matters because higher education use of ChatGPT is both technical and social. Students judge whether the tool is useful, whether they feel capable of using it, whether teachers and peers normalize its use, and whether they trust the system's privacy, explainability, and fairness.
+
+One important finding is that ethical concerns shape trust, but trust itself does not directly drive students' intention to use ChatGPT. Explainability and privacy are reported as the strongest predictors of trust, while trust significantly affects perceived performance. In plain terms, students may care about whether ChatGPT feels understandable and privacy-respecting, but their decision to use it is more strongly shaped by whether they believe it will help them perform and whether they feel able and socially permitted to use it. That is a useful warning for institutions that rely only on abstract ethics statements.
+
+The paper also emphasizes social influence and perceived behavioral control as key adoption drivers. University professors matter because their guidance helps define whether ChatGPT use is legitimate, expected, risky, or academically inappropriate. Perceived control matters because students who feel capable of using ChatGPT are more likely to adopt it. For AIEDHK, this suggests that responsible AI adoption cannot be handled only through bans or general policy notices. Students need concrete examples, boundaries, guided practice, and assessment rules that explain what good use looks like in a course.
+
+The practical implication for Hong Kong higher education is that AI ethics and AI literacy should be designed together. Privacy, explainability, academic integrity, and fairness need to be taught through actual learning tasks, not isolated compliance messages. Teachers need course-level guidance so students know when AI use is permitted, when it must be disclosed, and how it should support learning rather than replace it. Product teams should also notice the model's message: trust is built through explainability and privacy, but adoption depends on performance, social norms, and student confidence. AIED systems should therefore make responsible use easy to understand, easy to practice, and visible enough for teachers to support.`,
+    keyTakeaways: [
+      "The study links ChatGPT adoption with ethics, technology acceptance, planned behavior, and social influence rather than treating usage as novelty alone.",
+      "Explainability and privacy strengthen trust, but social influence and perceived behavioral control are stronger practical drivers of student adoption.",
+      "Universities should combine AI ethics, AI literacy, course-level guidance, and transparent assessment rules if they want responsible ChatGPT use.",
+    ],
+    whyItMatters:
+      "AIEDHK can use this paper to design AI adoption guidance that connects student confidence, teacher norms, privacy, explainability, and academic integrity instead of treating ethics as a separate policy layer.",
+    sourceUrl: "https://doi.org/10.1016/j.caeo.2026.100336",
+    createdAt: "2026-07-13",
+  },
+  {
     id: "aied-019",
     slug: "news-openai-gpt-5-6-codex-in-chatgpt-agentic-learning",
     title: "News: OpenAI launches GPT-5.6 and brings Codex into ChatGPT",

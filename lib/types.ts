@@ -28,6 +28,10 @@ export interface ResearchPaper {
   keyTakeaways: string[];
   whyItMatters: string;
   sourceUrl: string;
+  sourceUrls?: Array<{
+    label: string;
+    url: string;
+  }>;
   createdAt: string;
 }
 

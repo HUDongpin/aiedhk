@@ -69,10 +69,11 @@ test("summary audio player does not render the decorative waveform square", () =
 
 test("research detail source link appears beside the author metadata before topic tags", () => {
   const pageSource = source("app/[locale]/research-news/[slug]/page.tsx");
-  const sourceLinkIndex = pageSource.indexOf("href={paper.sourceUrl}");
+  const sourceLinkIndex = pageSource.indexOf("sourceLinks.map");
   const tagListIndex = pageSource.indexOf("paper.tags.map");
 
-  assert.ok(sourceLinkIndex > 0, "research detail page should render the source link");
+  assert.match(pageSource, /paper\.sourceUrls\?\.length\s*\?\s*paper\.sourceUrls\s*:\s*\[\{\s*label:\s*dictionary\.common\.source,\s*url:\s*paper\.sourceUrl\s*\}\]/);
+  assert.ok(sourceLinkIndex > 0, "research detail page should render source links");
   assert.ok(tagListIndex > 0, "research detail page should render topic tags");
-  assert.ok(sourceLinkIndex < tagListIndex, "source link should sit before the topic tags in the hero metadata area");
+  assert.ok(sourceLinkIndex < tagListIndex, "source links should sit before the topic tags in the hero metadata area");
 });

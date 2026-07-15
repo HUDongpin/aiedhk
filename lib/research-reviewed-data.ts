@@ -2,6 +2,84 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-023",
+    slug: "news-anthropic-claude-for-teachers-k12",
+    title: "News: Anthropic launches Claude for Teachers for US K-12 educators",
+    authors: ["Anthropic"],
+    venue: "Anthropic Education",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "Claude for Teachers", "K-12 education"],
+    image: "/images/research/covers/aied-023-claude-for-teachers-2026.png",
+    imageAlt: "Editorial cover for Anthropic's Claude for Teachers launch",
+    summaryImage: "/images/research/summary/aied-023-claude-for-teachers-summary.png",
+    summaryImageAlt:
+      "A teacher plans a standards-aligned lesson with differentiated activity materials, privacy safeguards, and scheduled AI support in an empty K-12 classroom.",
+    summaryAudio: "/audio/research/aied-023-claude-for-teachers-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news summary",
+    shortSummary:
+      "News item: Anthropic's Claude for Teachers gives verified US K-12 educators free access to premium Claude capabilities, standards-linked curricula, teaching skills, and teacher-only agentic workflows.",
+    fullSummary: `Anthropic's July 14 launch of Claude for Teachers is significant Industry news for AIEDHK because it packages generative and agentic AI around teachers' work rather than direct student use. Verified K-12 educators in the United States can receive free access to premium Claude capabilities, a library of teaching skills, and evidence-based curricular resources connected to academic standards in all 50 states. Anthropic says the product is intended to narrow the gap between effective instructional practices and the time teachers have to plan, differentiate, assess, and respond to learners.
+
+The product's curricular connection is central to the announcement. Claude for Teachers uses a Learning Commons connector to access state standards, the smaller competencies beneath each standard, and typical learning progressions. It can also draw on resources including OpenSciEd and Illustrative Mathematics. In practice, a teacher can request a lesson based on high-quality instructional materials, review the generated plan, and revise student-facing resources before using them. A differentiation skill can adapt the same material for learners at different readiness levels while preserving appropriate scaffolds and extension.
+
+Claude for Teachers also includes Claude Code and Cowork, bringing agentic workflows into teacher planning. Anthropic gives examples such as analyzing a teacher-provided folder of roster, diagnostic, attendance, and observation data to support instructional decisions, or scheduling a repeated task that reviews daily exit tickets and prepares an adapted plan for the next day. These examples show the product moving beyond one-off content generation toward ongoing work across files, data, tools, and time. That could reduce routine workload, but it also makes teacher review, data minimization, and clear responsibility essential.
+
+Anthropic presents the service as educator-only, consistent with Claude's 18-and-over policy. The announcement says Claude for Teachers data is not used for model training, student information is covered by a K-12 Data Processing Addendum designed for FERPA compliance, and teachers control what they share. It also notes that this launch is for individual educators; a separate offering for schools and districts is still forthcoming. Verified educators who sign up by June 30, 2027 can receive a full year of free access.
+
+The wider launch includes an AI Fluency for K-12 Teachers course, an open-source repository of teaching skills, new connectors, and plans for an evaluation pilot with Detroit Public Schools Community District. These are useful signals because they put curriculum alignment, teacher learning, privacy, and evaluation beside product access. However, this remains a vendor announcement, not independent evidence that the product improves learning or teacher wellbeing. The quality of the outcome will depend on curriculum fidelity, teacher judgment, local policy, data practices, and whether saved time is actually redirected toward students.
+
+For Hong Kong schools, the immediate product is geographically limited, but the design pattern is relevant. Teacher-facing AI is becoming an integrated workspace linked to standards, instructional materials, class evidence, and recurring workflows. Schools evaluating similar systems should ask whether local curricula and languages are represented, whether teachers can inspect and revise every output, what student data can be connected, and how impact will be evaluated. The important news is not simply free access to Claude. It is the emergence of a governed teacher workbench in which instructional expertise must remain visibly in charge.`,
+    keyTakeaways: [
+      "News: Claude for Teachers gives verified US K-12 educators free premium access, standards-linked curricula, and teaching skills built around lesson planning and differentiation.",
+      "The product includes Claude Code and Cowork for teacher-directed class-data analysis and scheduled recurring workflows, extending AI beyond one-off content generation.",
+      "The launch foregrounds teacher-only use, FERPA-oriented data protections, AI fluency, open-source skills, and evaluation, but independent learning-impact evidence is still needed.",
+    ],
+    whyItMatters:
+      "Industry news signal: Claude for Teachers shows teacher-facing AI becoming a standards-connected workbench, giving Hong Kong educators a concrete model to assess for curriculum fit, privacy, teacher control, and evidence of impact.",
+    sourceUrl: "https://www.anthropic.com/news/claude-for-teachers",
+    createdAt: "2026-07-15",
+  },
+  {
+    id: "aied-022",
+    slug: "technology-enhanced-clil-systematic-review-empirical-studies",
+    title: "Technology-enhanced content and language integrated learning: A systematic review of empirical studies",
+    authors: ["Dongpin Hu", "Juanjuan Chen", "Yan Li", "Minhong Wang"],
+    venue: "Educational Research Review",
+    year: 2025,
+    type: "journal",
+    tags: ["systematic review", "CLIL", "technology-enhanced language learning"],
+    image: "/images/research/covers/aied-022-technology-enhanced-clil-review-2025.png",
+    imageAlt: "Editorial cover for a systematic review of technology-enhanced CLIL",
+    summaryImage: "/images/research/summary/aied-022-technology-enhanced-clil-review-summary.png",
+    summaryImageAlt:
+      "Education researchers synthesize international evidence on technology-supported content and language learning while a CLIL science lesson takes place nearby.",
+    summaryAudio: "/audio/research/aied-022-technology-enhanced-clil-review-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A systematic review of 20 SSCI journal articles maps seven technology types in CLIL and finds limited, uncertain evidence for gains in content knowledge and language achievement.",
+    fullSummary: `Hu, Chen, Li, and Wang review how technology has been used in content and language integrated learning, or CLIL, where students learn a subject through a non-native language. The paper addresses an important AIED question: does adding digital technology help learners manage the dual demands of understanding subject content and developing language? Rather than assuming that technology is beneficial, the authors map what has been studied, which tools have been used, what outcomes have been measured, and which designs offer useful examples for practice.
+
+The review searched Web of Science for English-language SSCI journal articles published from 2014 to 2023. From 390 records, the authors retained 20 empirical studies after title, abstract, and full-text screening. Two researchers screened and coded the studies independently, resolving disagreements through discussion; coding agreement was high, with a Kappa value of 0.91. The review classified education level, learning mode, subject domain, learners' first language, language of instruction, language skills, technology type, and cognitive or affective outcomes. For comparative evidence, it also synthesized nine experiments from seven controlled studies using a random-effects model.
+
+The evidence base is concentrated. Fourteen of the 20 studies were conducted in Asia, five in Europe, and one in South America. Three quarters involved tertiary education, and 90 percent used English as the language of instruction. Productive language skills such as speaking and writing received more attention than reading and listening, although many papers did not specify a language-skill focus. The authors identify seven technology categories: telecollaboration tools, online learning platforms, multimedia, virtual learning environments, social-network applications, language tools, and intelligent conversation tools. Telecollaboration was most common, while intelligent chatbots appeared in only one included study.
+
+The outcome evidence is more cautious than the technology range might suggest. All 20 studies reported cognitive outcomes, commonly language knowledge or subject-content knowledge, while eight examined affective outcomes. Only one addressed collaboration and communication, and none assessed higher-order thinking as an outcome. Across the controlled studies, the estimated effect on content knowledge was small at 0.29, with a 95 percent confidence interval from -0.07 to 0.66. The estimated effect on language achievement was 0.16, with a confidence interval from -0.03 to 0.35. Because both intervals include zero and the number of experiments is small, neither estimate provides firm evidence of a positive overall effect.
+
+Three exemplary cases make the design implications more concrete: cooperative digital storytelling in a Taiwanese primary school, an educational chatbot in a Greek secondary-school history unit, and a cloud learning environment in a mainland Chinese university course. Across these examples, technology is most useful when it supports rich input, scaffolding, interaction, purposeful learner output, higher-order activity, and balanced development of both content and language. The chatbot case also showed that novelty or student preference did not automatically produce better achievement.
+
+For Hong Kong educators, the review argues for design discipline. Technology should serve explicit content and language goals, with scaffolds that manage the cognitive load of learning subject matter through another language. Evaluation should include motivation, self-efficacy, interaction, and durable language development, not only immediate knowledge tests. The review is limited to English-language SSCI articles in one database, includes only 20 studies, and groups some EMI work with CLIL, so its estimates should not be treated as final. Its strongest contribution is a practical warning: effective TECLIL depends on pedagogy and evidence, not the presence of a digital tool alone.`,
+    keyTakeaways: [
+      "The review retained 20 empirical SSCI journal articles from 390 Web of Science records and identified seven technology categories used in CLIL.",
+      "Estimated effects were small and uncertain: 0.29 for content knowledge and 0.16 for language achievement, with confidence intervals that included zero.",
+      "Effective TECLIL should balance content and language goals through rich input, scaffolding, interaction, learner output, and evaluation of cognitive and affective outcomes.",
+    ],
+    whyItMatters:
+      "For AIEDHK, this review shows that technology-enhanced bilingual learning needs explicit pedagogy, cognitive-load support, and stronger outcome evidence; access to digital tools alone does not guarantee content or language gains.",
+    sourceUrl: "https://doi.org/10.1016/j.edurev.2025.100677",
+    createdAt: "2026-07-15",
+  },
+  {
     id: "aied-021",
     slug: "news-openai-anthropic-ai-workbenches-chatgpt-claude-science",
     title: "News: OpenAI and Anthropic turn AI assistants into governed workbenches",

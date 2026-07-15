@@ -13,3 +13,13 @@ test("paper type fallback labels policy-ethics as Industry", () => {
     "Industry"
   );
 });
+
+test("English news hero describes academic papers and audio summaries", () => {
+  const researchCopy = getDictionary("en").research;
+
+  assert.equal(researchCopy.eyebrow, "News");
+  assert.equal(
+    researchCopy.intro,
+    "A curated feed of AIED academic papers and news. Each card offers a concise overview, while each detail page includes a 500-word written summary, an audio summary, and practical takeaways."
+  );
+});

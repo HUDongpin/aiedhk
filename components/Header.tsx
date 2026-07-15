@@ -47,7 +47,7 @@ export default function Header({ locale, dictionary }: HeaderProps) {
   const navItems = [
     { href: `/${locale}`, label: dictionary.nav.home },
     { href: `/${locale}/mission`, label: dictionary.nav.mission },
-    { href: `/${locale}/research-news`, label: dictionary.nav.researchNews },
+    { href: `/${locale}/news`, label: dictionary.nav.researchNews },
     { href: `/${locale}/about`, label: dictionary.nav.about },
   ];
   const currentPath = normalizePath(pathname);

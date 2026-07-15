@@ -8,7 +8,7 @@ function source(path: string) {
 }
 
 test("public research news list route is cacheable instead of force-dynamic", () => {
-  const pageSource = source("app/[locale]/research-news/page.tsx");
+  const pageSource = source("app/[locale]/news/page.tsx");
 
   assert.doesNotMatch(pageSource, /export\s+const\s+dynamic\s*=\s*["']force-dynamic["']/);
   assert.match(pageSource, /export\s+const\s+revalidate\s*=\s*300/);
@@ -52,7 +52,7 @@ test("summary audio player can use a static audio source without live TTS", () =
 });
 
 test("research detail page uses local summary audio without dynamic TTS fallback", () => {
-  const pageSource = source("app/[locale]/research-news/[slug]/page.tsx");
+  const pageSource = source("app/[locale]/news/[slug]/page.tsx");
 
   assert.match(pageSource, /summaryAudioSrc\s*=\s*typedLocale\s*===\s*["']en["']\s*\?\s*paper\.summaryAudio/);
   assert.doesNotMatch(pageSource, /summaryAudioEndpoint/);
@@ -68,7 +68,7 @@ test("summary audio player does not render the decorative waveform square", () =
 });
 
 test("research detail source link appears beside the author metadata before topic tags", () => {
-  const pageSource = source("app/[locale]/research-news/[slug]/page.tsx");
+  const pageSource = source("app/[locale]/news/[slug]/page.tsx");
   const sourceLinkIndex = pageSource.indexOf("sourceLinks.map");
   const tagListIndex = pageSource.indexOf("paper.tags.map");
 

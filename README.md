@@ -102,9 +102,9 @@ It also includes strategy cards for research intelligence, product innovation, t
 
 Path examples:
 
-- `/en/research-news`
-- `/en/research-news?type=journal`
-- `/en/research-news?q=feedback&year=2025`
+- `/en/news`
+- `/en/news?type=journal`
+- `/en/news?q=feedback&year=2025`
 
 Includes a paper list inspired by academic publication pages, but redesigned with modern cards, thumbnails, search, filters, pagination, and a free weekly email trial signup.
 
@@ -130,7 +130,7 @@ Each mock paper includes:
 
 Path example:
 
-- `/en/research-news/adaptive-ai-tutors-for-classroom-personalized-learning`
+- `/en/news/adaptive-ai-tutors-for-classroom-personalized-learning`
 
 Includes title, authors, venue, tags, image, 500-word summary, key takeaways, AIEDHK relevance, related papers, and a back button.
 
@@ -230,7 +230,7 @@ Example body:
 {
   "email": "reader@example.com",
   "locale": "en",
-  "sourcePath": "/en/research-news",
+  "sourcePath": "/en/news",
   "honeypot": ""
 }
 ```

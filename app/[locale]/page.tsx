@@ -14,7 +14,7 @@ export default async function HomePage({ params }: HomePageProps) {
   const typedLocale = locale as Locale;
   const dictionary = getDictionary(typedLocale);
 
-  const cardLinks = [`/${typedLocale}/mission`, `/${typedLocale}/research-news`, `/${typedLocale}/about`];
+  const cardLinks = [`/${typedLocale}/mission`, `/${typedLocale}/news`, `/${typedLocale}/about`];
   return (
     <div className="bg-hub-gradient">
       <section className="container-page grid gap-12 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:py-24">
@@ -27,7 +27,7 @@ export default async function HomePage({ params }: HomePageProps) {
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-aied-muted">{dictionary.home.heroText}</p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <CTA href={`/${typedLocale}/research-news`}>{dictionary.home.primaryCta}</CTA>
+            <CTA href={`/${typedLocale}/news`}>{dictionary.home.primaryCta}</CTA>
             <CTA href={`/${typedLocale}/mission`} variant="secondary">
               {dictionary.home.secondaryCta}
             </CTA>

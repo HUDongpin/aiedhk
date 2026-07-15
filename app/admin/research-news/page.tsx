@@ -63,7 +63,7 @@ function PaperForm({ paper }: { paper: AdminResearchPaper }) {
           <p className="mt-2 text-sm leading-6 text-slate-500">{paper.authors.join(", ")}</p>
         </div>
         {paper.status === "published" && (
-          <Link className="rounded-full bg-aied-ink px-4 py-2 text-sm font-black text-white" href={`/en/research-news/${paper.slug}`}>
+          <Link className="rounded-full bg-aied-ink px-4 py-2 text-sm font-black text-white" href={`/en/news/${paper.slug}`}>
             View public
           </Link>
         )}

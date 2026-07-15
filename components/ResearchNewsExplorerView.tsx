@@ -23,7 +23,7 @@ function hrefWithPage(locale: Locale, current: Record<string, string | undefined
   if (current.type) params.set("type", current.type);
   if (current.year) params.set("year", current.year);
   params.set("page", String(page));
-  return `/${locale}/research-news?${params.toString()}`;
+  return `/${locale}/news?${params.toString()}`;
 }
 
 export default function ResearchNewsExplorerView({ locale, dictionary, years, current, result }: ResearchNewsExplorerViewProps) {

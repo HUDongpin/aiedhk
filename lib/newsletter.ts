@@ -47,7 +47,7 @@ function createUnsubscribeToken() {
 export async function subscribeToResearchNewsletter(input: SubscribeNewsletterInput): Promise<SubscribeNewsletterResult> {
   const email = normalizeEmail(input.email);
   const locale = normalizeLocale(input.locale);
-  const sourcePath = input.sourcePath?.trim().slice(0, 300) || `/${locale}/research-news`;
+  const sourcePath = input.sourcePath?.trim().slice(0, 300) || `/${locale}/news`;
   const sql = getDatabaseClient();
 
   if (!sql) {

@@ -349,7 +349,7 @@ Expected: status `Ready` and `www.aied.hk` attached to the new production deploy
 
 - [ ] **Step 5: Verify the public experience**
 
-Open `https://www.aied.hk/en/research-news` and the new detail path `/en/research-news/news-openai-gpt-5-6-codex-in-chatgpt-agentic-learning` in a browser. Confirm the new item is first, the title uses `launches`, both new images load, the source link reaches the GPT-5.6 release, and the static audio control loads the new M4A.
+Open `https://www.aied.hk/en/news` and the new detail path `/en/news/news-openai-gpt-5-6-codex-in-chatgpt-agentic-learning` in a browser. Confirm the new item is first, the title uses `launches`, both new images load, the source link reaches the GPT-5.6 release, and the static audio control loads the new M4A.
 
 - [ ] **Step 6: Record final evidence**
 

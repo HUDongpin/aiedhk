@@ -22,12 +22,12 @@ export default function ResearchFilters({ locale, dictionary, years, current }: 
     if (current.year) params.set("year", current.year);
     if (type) params.set("type", type);
     const query = params.toString();
-    return `/${locale}/research-news${query ? `?${query}` : ""}`;
+    return `/${locale}/news${query ? `?${query}` : ""}`;
   };
 
   return (
     <div className="rounded-4xl border border-slate-200 bg-white/92 p-5 shadow-card backdrop-blur">
-      <form action={`/${locale}/research-news`} method="get" className="grid gap-3 lg:grid-cols-[1fr_190px_160px_auto_auto]">
+      <form action={`/${locale}/news`} method="get" className="grid gap-3 lg:grid-cols-[1fr_190px_160px_auto_auto]">
         <input
           name="q"
           defaultValue={current.q ?? ""}
@@ -61,7 +61,7 @@ export default function ResearchFilters({ locale, dictionary, years, current }: 
         <button type="submit" className="focus-ring rounded-2xl bg-aied-ink px-5 py-3 text-sm font-black text-white transition hover:bg-aied-blue">
           {dictionary.common.search}
         </button>
-        <Link href={`/${locale}/research-news`} className="focus-ring rounded-2xl border border-slate-200 px-5 py-3 text-center text-sm font-black text-aied-ink transition hover:border-aied-cyan hover:text-aied-blue">
+        <Link href={`/${locale}/news`} className="focus-ring rounded-2xl border border-slate-200 px-5 py-3 text-center text-sm font-black text-aied-ink transition hover:border-aied-cyan hover:text-aied-blue">
           {dictionary.common.reset}
         </Link>
       </form>

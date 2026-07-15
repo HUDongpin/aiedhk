@@ -13,7 +13,7 @@ export default function ResearchCard({ paper, locale, dictionary, featured = fal
   return (
     <article className="group overflow-hidden rounded-4xl border border-slate-200 bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
       <Link
-        href={`/${locale}/research-news/${paper.slug}`}
+        href={`/${locale}/news/${paper.slug}`}
         className={
           featured
             ? "grid h-full lg:grid-cols-[minmax(360px,0.95fr)_minmax(0,1.05fr)]"

@@ -64,8 +64,8 @@ export async function POST(request: NextRequest, { params }: RouteContext) {
   );
 
   revalidateTag(RESEARCH_NEWS_CACHE_TAG, { expire: 0 });
-  revalidatePath("/[locale]/research-news", "page");
-  revalidatePath("/[locale]/research-news/[slug]", "page");
+  revalidatePath("/[locale]/news", "page");
+  revalidatePath("/[locale]/news/[slug]", "page");
 
   const redirectStatus = action === "publish" ? "published" : action === "reject" ? "rejected" : action === "archive" ? "archived" : "draft";
   return NextResponse.redirect(new URL(`/admin/research-news?status=${redirectStatus}`, request.url), { status: 303 });

@@ -42,7 +42,7 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
   return (
     <div className="bg-hub-gradient">
       <article className="container-page py-14 lg:py-20">
-        <Link href={`/${typedLocale}/research-news`} className="focus-ring inline-flex rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-black text-aied-blue shadow-sm transition hover:border-aied-cyan">
+        <Link href={`/${typedLocale}/news`} className="focus-ring inline-flex rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-black text-aied-blue shadow-sm transition hover:border-aied-cyan">
           ← {dictionary.common.backToResearch}
         </Link>
 

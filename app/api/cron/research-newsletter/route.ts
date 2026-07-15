@@ -23,7 +23,7 @@ function digestText(origin: string, locale: string, items: Awaited<ReturnType<ty
       `${index + 1}. ${item.title}`,
       `${item.authors.join(", ")} — ${item.venue}, ${item.year}`,
       item.shortSummary,
-      `${origin}/${locale}/research-news/${item.slug}`,
+      `${origin}/${locale}/news/${item.slug}`,
       "",
     ]),
   ];
@@ -39,7 +39,7 @@ function digestHtml(origin: string, locale: string, items: Awaited<ReturnType<ty
           <h2 style="margin:0 0 8px;color:#0f172a;font:800 20px/1.25 Arial,sans-serif;">${escapeHtml(item.title)}</h2>
           <p style="margin:0 0 10px;color:#64748b;font:400 14px/1.6 Arial,sans-serif;">${escapeHtml(item.authors.join(", "))}</p>
           <p style="margin:0 0 12px;color:#334155;font:400 15px/1.7 Arial,sans-serif;">${escapeHtml(item.shortSummary)}</p>
-          <a href="${origin}/${locale}/research-news/${item.slug}" style="color:#0f5ea8;font:700 14px/1.4 Arial,sans-serif;">Read summary</a>
+          <a href="${origin}/${locale}/news/${item.slug}" style="color:#0f5ea8;font:700 14px/1.4 Arial,sans-serif;">Read summary</a>
         </article>
       `
     )

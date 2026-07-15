@@ -32,7 +32,7 @@ export default async function ResearchNewsPage({ params }: ResearchNewsPageProps
           <div className="grid gap-4">
             <ResearchNewsletterSignup
               locale={typedLocale}
-              sourcePath={`/${typedLocale}/research-news`}
+              sourcePath={`/${typedLocale}/news`}
               copy={dictionary.research.newsletter}
             />
           </div>

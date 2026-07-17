@@ -137,7 +137,7 @@ For Hong Kong schools, the immediate product is geographically limited, but the 
     authors: ["Dongpin Hu", "Juanjuan Chen", "Yan Li", "Minhong Wang"],
     venue: "Educational Research Review",
     year: 2025,
-    type: "journal",
+    type: "review",
     tags: ["systematic review", "CLIL", "technology-enhanced language learning"],
     image: "/images/research/covers/aied-022-technology-enhanced-clil-review-2025.png",
     imageAlt: "Editorial cover for a systematic review of technology-enhanced CLIL",

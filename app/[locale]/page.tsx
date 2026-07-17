@@ -47,7 +47,7 @@ export default async function HomePage({ params }: HomePageProps) {
               />
             </div>
             <figcaption className="flex flex-col items-center px-7 py-7 text-center sm:px-10 sm:py-9 lg:px-8 xl:px-11">
-              <p className="max-w-full text-center text-[0.56rem] font-black uppercase leading-none tracking-[0.2em] text-aied-blue sm:text-[0.72rem] sm:tracking-[0.28em] lg:text-[0.58rem] lg:tracking-[0.16em] xl:text-xs xl:tracking-[0.22em]">
+              <p className="max-w-full text-center text-[0.68rem] font-black uppercase leading-none tracking-[0.2em] text-aied-blue sm:text-sm sm:tracking-[0.28em] lg:text-[0.72rem] lg:tracking-[0.16em] xl:text-sm xl:tracking-[0.22em]">
                 {dictionary.home.showcaseTitle}
               </p>
               <p className="mt-4 max-w-2xl text-xl font-medium leading-snug text-slate-600 sm:text-2xl lg:text-xl xl:text-2xl">

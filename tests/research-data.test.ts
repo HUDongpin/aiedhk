@@ -33,6 +33,13 @@ test("research news fallback contains twenty-five curated Research News items", 
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
 
+test("technology-enhanced CLIL systematic review is classified as Review", () => {
+  const paper = getResearchPapers("en").find((candidate) => candidate.id === "aied-022");
+
+  assert.ok(paper);
+  assert.equal(paper.type, "review");
+});
+
 test("each reviewed paper has a local generated raster cover asset", () => {
   const papers = getResearchPapers("en");
 

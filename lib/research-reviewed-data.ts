@@ -2,6 +2,96 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-025",
+    slug: "news-openai-interactive-learning-anthropic-claude-reflection",
+    title: "News: OpenAI and Anthropic add tools for active learning and reflective AI use",
+    authors: ["OpenAI", "Anthropic"],
+    venue: "AI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "ChatGPT interactive learning", "Claude reflection"],
+    image: "/images/research/covers/aied-025-interactive-learning-reflection-2026.png",
+    imageAlt: "Editorial cover for interactive learning in ChatGPT and reflective AI use in Claude",
+    summaryImage: "/images/research/summary/aied-025-interactive-learning-reflection-summary.png",
+    summaryImageAlt:
+      "A university learner explores an interactive science model while a teacher reviews a restrained reflection map of AI-use patterns and human study goals.",
+    summaryAudio: "/audio/research/aied-025-interactive-learning-reflection-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news summary",
+    shortSummary:
+      "News item: OpenAI's interactive math and science explanations and Anthropic's Claude reflection dashboard point toward AI products that support experimentation, metacognition, and deliberate limits on delegation.",
+    fullSummary: `This product-news roundup is useful for AIEDHK because OpenAI and Anthropic are adding features that address two different parts of learning with AI: understanding a difficult concept and reflecting on how much of one's work should be delegated. OpenAI's March 2026 update adds interactive visual explanations for more than 70 core mathematics and science concepts in ChatGPT. Anthropic's July 2026 beta adds a reflection dashboard to Claude that summarizes usage patterns, prompts users to examine the role AI plays in their lives, and offers tools such as quiet hours and break reminders. Together, the products suggest a move beyond answer generation toward active exploration and metacognitive oversight.
+
+OpenAI's feature turns selected formulas and relationships into manipulable visual modules. A learner can adjust variables, change a formula, and immediately see how graphs or outcomes respond. The initial list is most relevant to high-school and university learners and includes topics across algebra, geometry, mechanics, electricity, thermodynamics, and statistics. OpenAI says the experience is rolling out globally to logged-in users across all plans. The design builds on Study Mode and quizzes, but it adds a concrete representational layer: students can test a relationship rather than only read an explanation of it.
+
+The educational promise is strongest when interaction is tied to prediction and explanation. Moving a variable can make an abstract relationship visible, but visual motion alone does not guarantee conceptual understanding. A teacher can ask students to predict what will happen before changing a control, explain why the graph changed, compare the result with a symbolic derivation, and transfer the principle to a new problem. OpenAI also acknowledges that research on AI and learning is still developing. The product announcement is therefore a design signal, not evidence that the modules improve durable learning across subjects or learner groups.
+
+Anthropic's reflection feature addresses a different problem: users may become productive with AI without noticing what they repeatedly delegate or what they still want to do themselves. With memory enabled, Claude can summarize themes, usage patterns, and task types across the previous one, three, six, or twelve months. It periodically asks questions such as which activity a person wants to keep doing even if Claude could do it faster. The dashboard also frames recommendations through Anthropic's 4D AI Fluency model: delegation, description, discernment, and diligence. Users can set quiet hours or schedule a nudge to take a break.
+
+Anthropic says the reflection does not use incognito chats, underlying files from connected tools, or conversations linked to health integrations, and that the resulting insights are not used for other purposes. Even so, institutions should examine what conversation metadata is available, how memory settings affect the feature, and whether students understand that the dashboard is a vendor-generated interpretation rather than an objective learning record. Reflection prompts can support agency, but they should not become surveillance or a substitute for teacher-guided self-assessment.
+
+For Hong Kong educators, the combined lesson is to design for active cognition and reflective boundaries. Interactive modules should require prediction, reasoning, and transfer. Usage reflection should help learners decide what to delegate, what to verify, and what to practice independently. Both products remain early vendor releases, so schools should pilot them with explicit learning goals, accessibility checks, privacy review, and independent measures of understanding. The important news is not that AI interfaces have gained more features. It is that mainstream products are beginning to make learning activity and human oversight visible parts of the interface.`,
+    keyTakeaways: [
+      "News: ChatGPT now offers interactive visual explanations for more than 70 mathematics and science concepts, allowing learners to manipulate variables and observe changing relationships.",
+      "Claude's reflection beta summarizes AI-use patterns, applies the 4D AI Fluency framework, and adds user-controlled quiet hours and break reminders.",
+      "Educators should pair interactive tools with prediction and transfer tasks, and use reflection features to strengthen agency without turning vendor analytics into surveillance or learning evidence.",
+    ],
+    whyItMatters:
+      "Industry news signal: OpenAI and Anthropic are making experimentation and reflection visible product features, giving AIEDHK a timely test case for designing AI use around active reasoning, metacognition, privacy, and human agency.",
+    sourceUrl: "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt/",
+    sourceUrls: [
+      {
+        label: "OpenAI interactive math and science learning",
+        url: "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt/",
+      },
+      {
+        label: "Anthropic Claude reflection beta",
+        url: "https://www.anthropic.com/news/reflect-with-claude",
+      },
+    ],
+    createdAt: "2026-07-17",
+  },
+  {
+    id: "aied-024",
+    slug: "gpt4-feedback-student-activation-learning-outcomes-higher-education",
+    title: "GPT-4 feedback increases student activation and learning outcomes in higher education",
+    authors: ["Stephan Geschwind", "Johann Graf Lambsdorff", "Deborah Voss", "Veronika Hackl"],
+    venue: "International Journal of Artificial Intelligence in Education",
+    year: 2026,
+    type: "journal",
+    tags: ["AI feedback", "student activation", "higher education"],
+    image: "/images/research/covers/aied-024-gpt4-feedback-2026.png",
+    imageAlt: "Editorial cover for a higher-education experiment with GPT-4 feedback",
+    summaryImage: "/images/research/summary/aied-024-gpt4-feedback-summary.png",
+    summaryImageAlt:
+      "University students revise macroeconomics answers at a tutorial table while lecturer, peer, and AI feedback pathways remain visibly distinct.",
+    summaryAudio: "/audio/research/aied-024-gpt4-feedback-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A 2026 IJAIED field experiment finds that individualized GPT-4 feedback sustained voluntary participation and improved the content of students' open-ended macroeconomics answers more than lecturer-only or peer-feedback conditions.",
+    fullSummary: `Geschwind, Lambsdorff, Voss, and Hackl investigate whether generative AI can make individualized feedback more scalable in large university courses. Their 2026 open-access IJAIED article reports a lab-in-the-field experiment conducted in undergraduate macroeconomics tutorial classes over one semester. Students answered eight open-ended questions and experienced one of three feedback arrangements: classroom-level lecturer feedback, additional individual feedback from peers, or additional individual feedback generated by GPT-4. The study asks whether the feedback changes student activation and the quality of subsequent answers, rather than only whether students say they like AI.
+
+All groups received lecturer discussion of a sample solution and adaptive feedback on two selected student answers. In the peer-feedback condition, students anonymously rated another student's answer for content and style and wrote suggestions for improvement. In the AI-feedback condition, GPT-4 provided individual scores and qualitative suggestions in a comparable structure. Both individual-feedback formats were designed around three familiar feedback functions: looking back at current performance, clarifying the goal through a sample solution, and pointing forward to improvement.
+
+The researchers operationalized activation in two ways. First, they tracked voluntary participation across the eight tasks; tutorial participation did not count toward the final examination, although students who completed at least seven tasks entered a raffle. Second, they used answer length as an indicator of the effort invested in a task. For learning outcomes, GPT-4 rated the content and style of answers on five-point scales. To make treatment comparisons more consistent, the model rated answers from all three conditions after the course in three separate iterations, and the researchers averaged those ratings.
+
+The AI-feedback condition produced the clearest activation pattern. Participation remained higher over time than in the lecturer-only condition, while peer feedback performed only marginally better than lecturer feedback. Students receiving AI feedback also wrote the longest answers. Because attrition was voluntary and not random, the authors did not rely only on simple averages: their task-to-task analysis used 479 repeated comparisons in which the same student participated in the same condition on consecutive relevant tasks.
+
+For learning outcomes, AI feedback was associated with the strongest improvement in content ratings. Peer feedback did not produce the same advantage, which the authors connect to differences in reliability and completeness: peers sometimes failed to provide feedback, while the AI returned it consistently. The study found no comparable treatment effect on writing style. That distinction matters because it suggests that the intervention supported substantive engagement with macroeconomic answers without automatically improving every dimension of academic writing.
+
+The paper is promising but should be interpreted carefully. The setting was one subject area and one university course, participation was voluntary, attrition differed across conditions, and the outcome measure was improvement in open-ended answers rather than a broad examination of long-term retention or transfer. GPT-4 generated feedback in one condition and also served as the common post-course rater, even though the authors used repeated ratings and prior reliability work to strengthen the measure. These choices make the study more informative than a satisfaction survey, but they do not establish that AI feedback will outperform expert human feedback in every context.
+
+For AIEDHK, the practical lesson is to focus on feedback system design. Individual AI feedback may sustain participation when it is timely, structured, connected to a sample solution, and followed by opportunities to revise. Educators should preserve lecturer oversight, test feedback validity, measure learning with independent assessments, and compare the intervention with realistic alternatives. The contribution is not a claim that GPT-4 replaces teachers. It is evidence that carefully structured AI feedback can extend the reach of tutorial support while keeping course goals and human judgment visible.`,
+    keyTakeaways: [
+      "The semester-long field experiment compared lecturer-level feedback, individual peer feedback, and individual GPT-4 feedback across eight open-ended macroeconomics tasks.",
+      "GPT-4 feedback sustained the highest voluntary participation, elicited the longest answers, and produced the strongest improvement in content ratings; no treatment effect appeared for writing style.",
+      "The findings are promising but bounded by one course, non-random attrition, and GPT-4-rated outcomes, so replication with independent assessments and diverse contexts is needed.",
+    ],
+    whyItMatters:
+      "For AIEDHK, this study provides field evidence that structured, timely AI feedback can extend individualized support and student activation, while also showing why lecturer oversight and independent outcome measures must remain part of the design.",
+    sourceUrl: "https://doi.org/10.1016/j.ijaied.2026.100014",
+    createdAt: "2026-07-17",
+  },
+  {
     id: "aied-023",
     slug: "news-anthropic-claude-for-teachers-k12",
     title: "News: Anthropic launches Claude for Teachers for US K-12 educators",

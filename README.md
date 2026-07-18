@@ -270,6 +270,11 @@ Path:
 
 Protected by HTTP Basic Auth through `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
 
+The queue header shows a **Recent ingestion runs** panel (status, mode, candidate
+count, drafted, skipped, and source errors) read from `research_ingestion_runs`,
+so the reviewer can see whether the weekly crawl actually ran. The panel appears
+only when `DATABASE_URL` is configured.
+
 Review actions:
 
 - Save
@@ -279,6 +284,21 @@ Review actions:
 - Regenerate
 - Reject
 - Archive
+
+### Weekly research workflow (operations)
+
+To run the automated pipeline live in production, the deployment needs
+`DATABASE_URL` (with `migrations/002_research_pipeline.sql` applied), the `AI_*`
+variables for summarization and translation, `CRON_SECRET`, and the `ADMIN_*`
+credentials. The weekly loop is then:
+
+1. Monday cron `POST`/`GET /api/cron/research-ingest` crawls sources, scores and
+   dedupes candidates, and writes private drafts to the review queue.
+2. A human opens `/admin/research-news`, checks the ingestion-run panel, and
+   edits, approves, and publishes drafts.
+3. Optionally run `npm run translate:research` to draft `zh-hant`/`zh-hans`
+   versions for review before publishing multilingual copies.
+4. Monday newsletter crons send per-locale digests of published items.
 
 ### Weekly newsletter
 

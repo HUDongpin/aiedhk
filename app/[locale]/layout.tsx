@@ -27,6 +27,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     alternates: {
       languages,
     },
+    openGraph: {
+      type: "website",
+      siteName: "AIEDHK",
+      title: dictionary.meta.siteTitle,
+      description: dictionary.meta.siteDescription,
+      locale: getLocaleMeta(locale).htmlLang,
+      url: `/${locale}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dictionary.meta.siteTitle,
+      description: dictionary.meta.siteDescription,
+    },
   };
 }
 

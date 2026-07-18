@@ -26,3 +26,17 @@ export function formatDate(dateString: string, locale: string) {
     day: "numeric",
   }).format(new Date(dateString));
 }
+
+/**
+ * Estimated reading time in whole minutes. CJK scripts have no word spacing, so
+ * they are counted by character (~360 chars/min); other scripts by word
+ * (~200 words/min). Always at least 1 minute.
+ */
+export function readingTimeMinutes(text: string, locale: string) {
+  const cjkCount = (text.match(/[　-鿿가-힯]/g) ?? []).length;
+  const dateLocale = getLocaleMeta(locale).dateLocale;
+  const isCjk = cjkCount > text.length * 0.2 || dateLocale.startsWith("zh") || ["ja-JP", "ko-KR"].includes(dateLocale);
+
+  const units = isCjk ? text.replace(/\s+/g, "").length / 360 : text.trim().split(/\s+/).filter(Boolean).length / 200;
+  return Math.max(1, Math.round(units));
+}

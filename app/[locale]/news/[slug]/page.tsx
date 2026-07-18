@@ -4,13 +4,13 @@ import { notFound } from "next/navigation";
 import ResearchCard from "@/components/ResearchCard";
 import SummaryAudioPlayer from "@/components/SummaryAudioPlayer";
 import JsonLd from "@/components/JsonLd";
-import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
+import { getDictionary, getLocaleMeta, isLocale, locales, type Locale } from "@/lib/i18n";
 import { getPublishedResearchPaperBySlug, getRelatedPublishedPapers, researchPapers } from "@/lib/research-data";
 import { getReviewedLocalization } from "@/lib/research-reviewed-localizations";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/structured-data";
 import { topicSlug } from "@/lib/research-topics";
 import { absoluteUrl } from "@/lib/site";
-import { formatDate } from "@/lib/utils";
+import { formatDate, readingTimeMinutes } from "@/lib/utils";
 
 interface ResearchDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
@@ -26,9 +26,39 @@ export async function generateMetadata({ params }: ResearchDetailPageProps): Pro
   const { locale, slug } = await params;
   const dictionary = getDictionary(locale);
   const paper = await getPublishedResearchPaperBySlug(slug, locale);
+
+  if (!paper) {
+    return { title: dictionary.common.latestResearch };
+  }
+
+  const url = absoluteUrl(`/${locale}/news/${slug}`);
+  const image = absoluteUrl(paper.image);
+
   return {
-    title: paper ? paper.title : dictionary.common.latestResearch,
-    description: paper?.shortSummary,
+    title: paper.title,
+    description: paper.shortSummary,
+    alternates: {
+      canonical: url,
+      languages: Object.fromEntries(locales.map((item) => [item, `/${item}/news/${slug}`])),
+    },
+    openGraph: {
+      type: "article",
+      title: paper.title,
+      description: paper.shortSummary,
+      url,
+      siteName: "AIEDHK",
+      locale: getLocaleMeta(locale).htmlLang,
+      publishedTime: paper.createdAt,
+      authors: paper.authors,
+      tags: paper.tags,
+      images: [{ url: image, alt: paper.imageAlt }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: paper.title,
+      description: paper.shortSummary,
+      images: [image],
+    },
   };
 }
 
@@ -77,6 +107,9 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
               <span className="rounded-full bg-aied-cyan px-3 py-1 text-slate-950">{dictionary.paperTypes[paper.type]}</span>
               <span className="rounded-full bg-white px-3 py-1 text-aied-blue shadow-sm">{paper.year}</span>
               <span className="text-slate-400">{formatDate(paper.createdAt, typedLocale)}</span>
+              <span className="text-slate-400" aria-label="estimated reading time">
+                · {readingTimeMinutes(paper.fullSummary, typedLocale)} min
+              </span>
             </div>
             <h1 className="mt-6 text-4xl font-black tracking-tight text-aied-ink sm:text-5xl text-balance">{paper.title}</h1>
             <div className="mt-5 flex flex-col gap-5 sm:flex-row sm:items-end sm:gap-8">

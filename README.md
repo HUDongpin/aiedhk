@@ -194,28 +194,14 @@ Example:
 GET /api/research-news/adaptive-ai-tutors-for-classroom-personalized-learning
 ```
 
-### Mock paper creation endpoint
+### Paper creation
 
-```http
-POST /api/research-news
-Content-Type: application/json
-```
+Public draft creation over `POST /api/research-news` has been retired (it never persisted data). The endpoint now returns `410 Gone`.
 
-Example body:
+Research News drafts are created by the automated ingestion cron and curated through the authenticated admin review workflow instead:
 
-```json
-{
-  "title": "Example AIED Paper",
-  "authors": ["Author One", "Author Two"],
-  "venue": "AIED 2026",
-  "year": 2026,
-  "type": "conference",
-  "shortSummary": "Short summary here.",
-  "fullSummary": "Longer 500-word summary here."
-}
-```
-
-This endpoint performs basic validation and returns a mock accepted draft. It does not persist data yet.
+- Ingestion: `GET /api/cron/research-ingest`
+- Review and publish: `/admin/research-news`
 
 ### Research newsletter subscription
 
@@ -241,6 +227,22 @@ Responses:
 - `200` with `status: "already_subscribed"` for an existing email.
 - `400` with `status: "invalid_email"` for invalid email input.
 - `503` with `status: "database_not_configured"` when `DATABASE_URL` is missing.
+
+### Research newsletter unsubscribe
+
+```http
+GET  /api/newsletter/unsubscribe?token=<token>&language=en
+POST /api/newsletter/unsubscribe?token=<token>
+```
+
+- `GET` is the human-facing link in every email footer. It flags the subscriber as `unsubscribed` and returns a localized confirmation page.
+- `POST` is the RFC 8058 one-click target advertised through the `List-Unsubscribe` and `List-Unsubscribe-Post` headers on each weekly send.
+- Responses: `200` unsubscribed / already unsubscribed, `400` missing token, `404` unknown token, `503` when `DATABASE_URL` is missing.
+
+### SEO routes
+
+- `GET /sitemap.xml` — all locales × static pages × published article slugs.
+- `GET /robots.txt` — allows crawling, disallows `/admin` and `/api/`, and points to the sitemap.
 
 ### Weekly research ingestion
 

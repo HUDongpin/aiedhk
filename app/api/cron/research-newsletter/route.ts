@@ -1,7 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { normalizeLocale } from "@/lib/i18n";
 import { buildWeeklyResearchDigest } from "@/lib/newsletter-digest";
-import { DatabaseNotConfiguredError, getActiveResearchNewsletterSubscribers, type NewsletterSubscriber } from "@/lib/newsletter";
+import {
+  buildUnsubscribeUrl,
+  DatabaseNotConfiguredError,
+  getActiveResearchNewsletterSubscribers,
+  type NewsletterSubscriber,
+} from "@/lib/newsletter";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -15,7 +20,12 @@ function escapeHtml(value: string) {
     .replace(/'/g, "&#39;");
 }
 
-function digestText(origin: string, locale: string, items: Awaited<ReturnType<typeof buildWeeklyResearchDigest>>["items"]) {
+function digestText(
+  origin: string,
+  locale: string,
+  items: Awaited<ReturnType<typeof buildWeeklyResearchDigest>>["items"],
+  unsubscribeUrl: string
+) {
   const lines = [
     "AIEDHK Weekly Research News",
     "",
@@ -26,11 +36,18 @@ function digestText(origin: string, locale: string, items: Awaited<ReturnType<ty
       `${origin}/${locale}/news/${item.slug}`,
       "",
     ]),
+    "You are receiving this because you subscribed to the AIEDHK weekly research trial.",
+    `Unsubscribe: ${unsubscribeUrl}`,
   ];
   return lines.join("\n");
 }
 
-function digestHtml(origin: string, locale: string, items: Awaited<ReturnType<typeof buildWeeklyResearchDigest>>["items"]) {
+function digestHtml(
+  origin: string,
+  locale: string,
+  items: Awaited<ReturnType<typeof buildWeeklyResearchDigest>>["items"],
+  unsubscribeUrl: string
+) {
   const body = items
     .map(
       (item) => `
@@ -51,6 +68,7 @@ function digestHtml(origin: string, locale: string, items: Awaited<ReturnType<ty
       <h1 style="margin:0 0 20px;color:#0f172a;font:900 28px/1.2 Arial,sans-serif;">Weekly Research News</h1>
       ${body}
       <p style="margin:24px 0 0;color:#64748b;font:400 12px/1.6 Arial,sans-serif;">You are receiving this because you subscribed to the AIEDHK weekly research trial.</p>
+      <p style="margin:8px 0 0;color:#94a3b8;font:400 12px/1.6 Arial,sans-serif;"><a href="${unsubscribeUrl}" style="color:#64748b;text-decoration:underline;">Unsubscribe</a> from these emails.</p>
     </main>
   `;
 }
@@ -64,6 +82,8 @@ async function sendDigestEmail(input: {
 }) {
   if (input.digest.items.length === 0) return { status: "skipped_empty_digest" };
 
+  const unsubscribeUrl = buildUnsubscribeUrl(input.origin, input.subscriber.unsubscribeToken);
+
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: {
@@ -74,8 +94,12 @@ async function sendDigestEmail(input: {
       from: input.from,
       to: [input.subscriber.email],
       subject: "AIEDHK Weekly Research News",
-      text: digestText(input.origin, input.subscriber.locale, input.digest.items),
-      html: digestHtml(input.origin, input.subscriber.locale, input.digest.items),
+      text: digestText(input.origin, input.subscriber.locale, input.digest.items, unsubscribeUrl),
+      html: digestHtml(input.origin, input.subscriber.locale, input.digest.items, unsubscribeUrl),
+      headers: {
+        "List-Unsubscribe": `<${unsubscribeUrl}>`,
+        "List-Unsubscribe-Post": "List-Unsubscribe=One-Click",
+      },
     }),
   });
 

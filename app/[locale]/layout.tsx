@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HtmlLangSync from "@/components/HtmlLangSync";
 import { getDictionary, getLocaleMeta, isLocale, locales, type Locale } from "@/lib/i18n";
 
 interface LocaleLayoutProps {
@@ -37,6 +38,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <div lang={meta.htmlLang} dir={meta.dir}>
+      <HtmlLangSync lang={meta.htmlLang} dir={meta.dir} />
       <Header locale={typedLocale} dictionary={dictionary} />
       <main>{children}</main>
       <Footer locale={typedLocale} dictionary={dictionary} />

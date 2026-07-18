@@ -2,6 +2,116 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-027",
+    slug: "news-ai-learning-pathways-chatgpt-claude-code-gemini-education",
+    title: "News: OpenAI, Anthropic and Google build more scaffolded AI learning pathways",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "age-aware AI learning", "Claude Code education", "Gemini Education"],
+    image: "/images/research/covers/aied-027-ai-learning-pathways-2026.png",
+    imageAlt: "Editorial cover for guided, age-aware AI learning pathways across classroom study and coding",
+    summaryImage: "/images/research/summary/aied-027-ai-learning-pathways-summary.png",
+    summaryImageAlt:
+      "A teacher and learners review guided study, coding, and course-grounded learning activities while retaining human oversight.",
+    summaryAudio: "/audio/research/aied-027-ai-learning-pathways-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news summary",
+    shortSummary:
+      "News roundup: OpenAI adds age-aware study controls for teens, Anthropic brings Claude Code into an access-focused collegiate curriculum, and Google connects Gemini study notebooks to classroom materials and teacher insight.",
+    fullSummary: `This product-news roundup tracks a common direction across OpenAI, Anthropic, and Google: education products are becoming more scaffolded, context-aware, and connected to a learner's stage or course. OpenAI is adding teen-specific learning and safety controls to ChatGPT. Anthropic and CodePath are putting Claude and Claude Code inside a collegiate computer-science pathway. Google is turning Gemini study notebooks and Classroom connections into course-grounded learning environments. The products differ, but each moves beyond generic chatbot access toward a designed learning pathway.
+
+OpenAI's July 16 update combines learning features with age-aware safeguards. Parents with linked teen accounts can turn on Study Mode so that it is enabled by default in new chats. OpenAI has also added education-focused starter prompts for activities such as breaking down a topic, turning notes into a study guide, creating flashcards or practice questions, and checking evidence. These sit beside age prediction, parental controls, quiet-hour settings, break reminders, and stronger content protections. OpenAI says interactive mathematics and science experiences have expanded to more than 300 topics, but the more important product signal for schools is the attempt to connect guided learning with family-level controls and healthy-use boundaries.
+
+Anthropic's February partnership with CodePath addresses a different transition: learning to build with AI in higher education and early-career preparation. CodePath says Claude and Claude Code will be integrated into courses including Foundations of AI Engineering, Applications of AI Engineering, and an open-source capstone, reaching more than 20,000 students across community colleges, state schools, and historically Black colleges and universities. A prior pilot asked more than 100 students to use Claude Code on real open-source projects. The partnership also includes public research into how AI changes coding education and economic opportunity.
+
+That access focus matters because Anthropic reports that more than 40 percent of CodePath students come from families earning under US$50,000 a year. Yet access to an agentic coding tool is not itself a learning outcome. The curriculum must still make planning, debugging, testing, code reading, provenance, and independent explanation visible. This is especially important because current research distinguishes successful task completion from durable understanding: a learner can produce working code with AI support while learning no more than a peer using conventional resources.
+
+Google's June education releases add a third model. Study notebooks in Gemini are designed as adaptive spaces grounded in a learner's goals and materials. In Google Classroom, students can create study guides, quizzes, and Guided Learning activities; teachers will be able to assign course-grounded study notebooks and review signals about where a class or individual learner may need more help. Google also announced a connected Classroom app in Gemini for educators, using assignments, grades, and materials to support progress analysis and tailored activities. Google says Workspace for Education data is not used to train its AI models, while availability depends on account type, age, language, device, and rollout stage.
+
+For Hong Kong schools and universities, the combined product signal is not that one platform has solved AI-supported education. It is that vendors are competing on the surrounding learning architecture: age protections, guided interaction, curriculum integration, authentic projects, teacher context, and institutional controls. Procurement and pilots should therefore examine more than model capability. They should test whether scaffolds preserve productive struggle, whether teachers can inspect and override outputs, whether connected data are minimized and governed, and whether students can demonstrate understanding without the tool.
+
+These announcements remain vendor news, not independent proof of improved attainment, wellbeing, or equity. A responsible pilot should define a learning purpose, map the data flow, document which tasks may be delegated, and compare product activity with independent evidence of knowledge and transfer. The strongest shared opportunity is to make AI fluency concrete: learners should practice describing goals, evaluating evidence, reviewing code or explanations, and deciding when not to delegate. The risk is that polished pathways make assistance feel educational even when cognition has been outsourced.`,
+    keyTakeaways: [
+      "News: OpenAI is pairing teen learning features with parental Study Mode controls, education-focused starter prompts, break reminders, and age-aware safeguards.",
+      "Anthropic and CodePath are integrating Claude and Claude Code into collegiate AI courses and open-source projects, with an explicit focus on access and career pathways.",
+      "Gemini Education is connecting adaptive study notebooks and Classroom materials to student practice and teacher insight, making data governance and independent learning measures essential.",
+    ],
+    whyItMatters:
+      "Industry news signal: major AI platforms are shifting from generic chatbot access toward designed learning pathways, so AIEDHK should evaluate scaffolding, age protections, curriculum fit, data governance, and demonstrated understanding together.",
+    sourceUrl: "https://openai.com/index/why-teens-deserve-access-safe-ai/",
+    sourceUrls: [
+      {
+        label: "OpenAI teen learning and safety update",
+        url: "https://openai.com/index/why-teens-deserve-access-safe-ai/",
+      },
+      {
+        label: "Anthropic and CodePath partnership",
+        url: "https://www.anthropic.com/news/anthropic-codepath-partnership",
+      },
+      {
+        label: "Google Gemini Education student updates",
+        url: "https://blog.google/products-and-platforms/products/education/iste-students-2026/",
+      },
+      {
+        label: "Google Gemini Education educator updates",
+        url: "https://blog.google/products-and-platforms/products/education/iste-2026-educator-updates/",
+      },
+    ],
+    createdAt: "2026-07-19",
+  },
+  {
+    id: "aied-026",
+    slug: "ai-supported-programming-performance-learning-dissociation",
+    title: "Less stress, better scores, same learning: The dissociation of performance and learning in AI-supported programming education",
+    authors: ["Patrick Bassner", "Ben Lenk-Ostendorf", "Ramona Beinstingel", "Tobias Wasner", "Stephan Krusche"],
+    venue: "Computers and Education: Artificial Intelligence",
+    year: 2026,
+    type: "journal",
+    tags: ["AI-supported programming", "scaffolded tutoring", "performance-learning gap"],
+    image: "/images/research/covers/aied-026-ai-programming-performance-learning-2026.png",
+    imageAlt: "Editorial cover for a randomized comparison of AI support in university programming education",
+    summaryImage: "/images/research/summary/aied-026-ai-programming-learning-summary.png",
+    summaryImageAlt:
+      "University programming students work with scaffolded AI, unrestricted AI, and conventional resources while a lecturer observes.",
+    summaryAudio: "/audio/research/aied-026-ai-programming-learning-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A randomized trial with 275 programming students finds that scaffolded and unrestricted AI support improved exercise performance and reduced frustration, but neither condition produced stronger knowledge gains than conventional web resources.",
+    fullSummary: `Bassner, Lenk-Ostendorf, Beinstingel, Wasner, and Krusche examine a central problem in AI-supported education: does better performance while using AI mean that students have learned more? Their open-access study reports a three-arm randomized controlled trial in an introductory programming course at the Technical University of Munich. The design compares two forms of AI assistance with a no-AI control and measures task success, conceptual learning, cognitive load, frustration, and motivation.
+
+The 275 participants completed a 90-minute exercise on concurrency in which they implemented a parallel sum using threading. One group used Iris, a scaffolded tutor designed to provide calibrated hints while withholding complete solutions. A second group used unrestricted ChatGPT, which could return full solutions. The control group used conventional web resources without an AI assistant. This contrast is valuable because it separates the presence of generative AI from the instructional design wrapped around it.
+
+The researchers measured performance through automated test coverage for the programming exercise. Learning was assessed through pre- and post-knowledge tests and a code-comprehension task. Validated scales captured intrinsic, germane, and extraneous cognitive load, frustration, and intrinsic motivation. These separate measures let the study test whether students who complete more of the exercise also show greater conceptual gains, rather than treating a working submission as sufficient evidence of learning.
+
+Both AI-supported groups achieved substantially higher exercise scores than the control group. The score distributions differed: ChatGPT users clustered toward high task scores, control participants clustered lower, and Iris users were spread more widely across the performance range. Students in both AI conditions also reported less frustration and lower extraneous and germane cognitive load than the control group, while intrinsic cognitive load did not differ. Participants rated ChatGPT as easier to use and more helpful.
+
+The learning results tell a more cautious story. Neither AI condition produced larger pre-to-post knowledge gains or a code-comprehension advantage over conventional resources. In this short programming exercise, generative AI therefore functioned mainly as a performance aid. The scaffolded Iris tutor did show one distinctive benefit: it increased intrinsic motivation, while unrestricted ChatGPT did not. The authors describe the attraction of easy, helpful assistance without additional learning as a comfort trap, where learners' preferences and immediate success can diverge from pedagogical effectiveness.
+
+The study should not be generalized beyond its boundaries. It examines one 90-minute concurrency task in one introductory university programming context, and its learning measures focus on knowledge change and code comprehension around that activity. Longer courses, different domains, repeated tutor use, or designs that require explanation and transfer may produce different outcomes. The open dataset and analysis materials strengthen transparency and make replication or secondary analysis possible, but broader evidence is still needed.
+
+For AIEDHK, the practical implication is to separate assistance metrics from learning metrics. A school or university pilot should not infer understanding from completion rate, code quality, reduced frustration, or positive user ratings alone. AI-supported tasks can require students to predict program behavior, explain a generated solution, debug a novel case, compare alternatives, and complete an independent transfer assessment. Scaffolded hints may better preserve motivation and productive activity than unrestricted answer delivery, but their value still needs to be demonstrated through learning evidence. The paper's most important contribution is a clear warning: when AI makes work easier, assessment must work harder to reveal what the learner can actually understand and do.`,
+    keyTakeaways: [
+      "The randomized trial assigned 275 introductory programming students to scaffolded Iris hints, unrestricted ChatGPT, or conventional web resources during a 90-minute concurrency exercise.",
+      "Both AI groups completed more of the task and reported less frustration, but neither showed stronger knowledge gains or code comprehension than the no-AI control.",
+      "Only the scaffolded tutor increased intrinsic motivation, supporting hint-first designs and independent assessments that distinguish polished performance from durable understanding.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the study demonstrates why AI-assisted completion, low frustration, and user preference cannot stand in for learning evidence; pilots need scaffolded tasks plus independent measures of explanation, transfer, and retention.",
+    sourceUrl: "https://doi.org/10.1016/j.caeai.2025.100537",
+    sourceUrls: [
+      {
+        label: "Open-access journal article",
+        url: "https://doi.org/10.1016/j.caeai.2025.100537",
+      },
+      {
+        label: "Open dataset and analysis materials",
+        url: "https://doi.org/10.5281/zenodo.16905779",
+      },
+    ],
+    createdAt: "2026-07-19",
+  },
+  {
     id: "aied-025",
     slug: "news-openai-interactive-learning-anthropic-claude-reflection",
     title: "News: OpenAI and Anthropic add tools for active learning and reflective AI use",

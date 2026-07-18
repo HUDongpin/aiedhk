@@ -5,6 +5,7 @@ import ResearchCard from "@/components/ResearchCard";
 import SummaryAudioPlayer from "@/components/SummaryAudioPlayer";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
 import { getPublishedResearchPaperBySlug, getRelatedPublishedPapers, researchPapers } from "@/lib/research-data";
+import { getReviewedLocalization } from "@/lib/research-reviewed-localizations";
 import { formatDate } from "@/lib/utils";
 
 interface ResearchDetailPageProps {
@@ -36,7 +37,11 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
   if (!paper) notFound();
 
   const relatedPapers = await getRelatedPublishedPapers(paper, typedLocale, 3);
-  const summaryAudioSrc = typedLocale === "en" ? paper.summaryAudio : undefined;
+  // Static-audio-first: English uses its curated reading; other locales only get
+  // audio when a reviewed, locale-specific recording exists (no English-audio leak,
+  // no live TTS). The player is simply hidden where no localized audio is available.
+  const summaryAudioSrc =
+    typedLocale === "en" ? paper.summaryAudio : getReviewedLocalization(paper.id, typedLocale)?.summaryAudio;
   const sourceLinks = paper.sourceUrls?.length ? paper.sourceUrls : [{ label: dictionary.common.source, url: paper.sourceUrl }];
 
   return (

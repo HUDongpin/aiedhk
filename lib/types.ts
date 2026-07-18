@@ -35,6 +35,24 @@ export interface ResearchPaper {
   createdAt: string;
 }
 
+/**
+ * Per-article, per-locale translation of the reader-facing research fields.
+ * Bibliographic facts (authors, venue, year, source URLs, images, audio) are
+ * shared across locales and are not duplicated here.
+ */
+export interface ResearchPaperLocalization {
+  title: string;
+  tags: string[];
+  imageAlt?: string;
+  shortSummary: string;
+  fullSummary: string;
+  keyTakeaways: string[];
+  whyItMatters: string;
+  /** Optional locale-specific static audio reading of the summary. */
+  summaryAudio?: string;
+  summaryAudioTitle?: string;
+}
+
 export type ResearchPaperStatus = "draft" | "approved" | "published" | "rejected" | "archived";
 
 export type ResearchCandidateStatus = "candidate" | "drafted" | "rejected" | "skipped";

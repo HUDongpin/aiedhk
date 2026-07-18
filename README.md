@@ -312,6 +312,34 @@ Add a new object to `researchPapers` with the required fields. Add a matching th
 public/images/research/
 ```
 
+## Translate Research News articles
+
+UI chrome is translated in `lib/i18n.ts`. The reader-facing article fields
+(title, summaries, key takeaways, why-it-matters, tags) are translated
+**per article** in:
+
+```text
+lib/research-reviewed-localizations.ts
+```
+
+Each entry is keyed by article `id` then locale. When a locale is missing for an
+article, the reader sees the English source (never machine filler or a stale
+title). `localizedPaper()` in `lib/research-data.ts` applies these translations.
+
+To draft translations at scale, run the AI localization stage and review its
+output before pasting it into the file above:
+
+```bash
+AI_API_KEY="sk-..." AI_BASE_URL="https://.../v1" AI_MODEL="qwen-plus" \
+  npm run translate:research zh-hant zh-hans
+```
+
+Output is written to `output/reviewed-localizations.json` (gitignored). Without
+AI credentials the script emits flagged English fallbacks so you can inspect
+coverage without spending API calls. A per-article, per-locale static audio
+reading can be attached through the optional `summaryAudio` field; the detail
+page shows the player only when a localized recording exists.
+
 ## Change language copy
 
 Edit:

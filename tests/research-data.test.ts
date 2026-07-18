@@ -165,8 +165,22 @@ test("static summary media assets are available locally", () => {
   }
 });
 
-test("untranslated locales keep reviewed English paper titles instead of stale mock titles", () => {
-  const papers = getResearchPapers("zh-hant");
+test("reviewed papers use human-reviewed translations when present and fall back to English otherwise", () => {
+  const enById = new Map(getResearchPapers("en").map((paper) => [paper.id, paper]));
+  const zhHant = getResearchPapers("zh-hant");
+  const zhById = new Map(zhHant.map((paper) => [paper.id, paper]));
 
-  assert.equal(papers[0]?.title, "News: OpenAI and Anthropic add tools for active learning and reflective AI use");
+  // aied-025 has a reviewed Traditional Chinese translation.
+  const translated = zhById.get("aied-025");
+  assert.ok(translated);
+  assert.match(translated.title, /新聞/, "translated title should be in Traditional Chinese");
+  assert.notEqual(translated.title, enById.get("aied-025")?.title);
+  assert.notEqual(translated.fullSummary, enById.get("aied-025")?.fullSummary);
+  assert.notEqual(translated.whyItMatters, enById.get("aied-025")?.whyItMatters);
+
+  // A paper without a translation keeps its English content (never a stale mock title).
+  const untranslated = zhById.get("aied-024");
+  assert.ok(untranslated);
+  assert.equal(untranslated.title, enById.get("aied-024")?.title, "untranslated paper should keep its English title");
+  assert.doesNotMatch(untranslated.title, /面向課堂/, "must not resurrect stale rp-* mock titles");
 });

@@ -1,8 +1,9 @@
-import type { Locale } from "@/lib/i18n";
-import type { PaperType, ResearchCandidate, ResearchPaperDraft } from "@/lib/types";
+import { localeMeta, type Locale } from "@/lib/i18n";
+import type { PaperType, ResearchCandidate, ResearchPaperDraft, ResearchPaperLocalization } from "@/lib/types";
 import { createUniqueSlug, inferPaperType, selectResearchImage, suggestTags } from "./scoring";
 
 export const RESEARCH_GENERATION_PROMPT_VERSION = "aiedhk-weekly-research-v1";
+export const RESEARCH_LOCALIZATION_PROMPT_VERSION = "aiedhk-localization-v1";
 
 interface GeneratedResearchSummary {
   type: PaperType;
@@ -233,4 +234,127 @@ export function createFallbackLocalization(locale: Locale, draft: ResearchPaperD
     whyItMatters: draft.whyItMatters,
     generationModel: "english-fallback-awaiting-localization",
   };
+}
+
+/** English source fields that can be translated into another locale. */
+export interface LocalizableResearchFields {
+  title: string;
+  tags: string[];
+  imageAlt?: string;
+  shortSummary: string;
+  fullSummary: string;
+  keyTakeaways: string[];
+  whyItMatters: string;
+}
+
+export interface ResearchLocalizationResult {
+  locale: Locale;
+  localization: ResearchPaperLocalization;
+  usedModel: boolean;
+  model: string;
+  error?: string;
+}
+
+function englishLocalization(source: LocalizableResearchFields): ResearchPaperLocalization {
+  return {
+    title: source.title,
+    tags: source.tags,
+    imageAlt: source.imageAlt,
+    shortSummary: source.shortSummary,
+    fullSummary: source.fullSummary,
+    keyTakeaways: source.keyTakeaways,
+    whyItMatters: source.whyItMatters,
+  };
+}
+
+function sanitizeLocalization(value: Partial<ResearchPaperLocalization>, fallback: ResearchPaperLocalization): ResearchPaperLocalization {
+  const asString = (candidate: unknown, alt: string) =>
+    typeof candidate === "string" && candidate.trim() ? candidate.trim() : alt;
+
+  return {
+    title: asString(value.title, fallback.title),
+    tags: asStringArray(value.tags, fallback.tags).slice(0, 5),
+    imageAlt: typeof value.imageAlt === "string" && value.imageAlt.trim() ? value.imageAlt.trim() : fallback.imageAlt,
+    shortSummary: asString(value.shortSummary, fallback.shortSummary),
+    fullSummary: asString(value.fullSummary, fallback.fullSummary),
+    keyTakeaways: asStringArray(value.keyTakeaways, fallback.keyTakeaways).slice(0, 6),
+    whyItMatters: asString(value.whyItMatters, fallback.whyItMatters),
+  };
+}
+
+/**
+ * Translate a curated/generated research article into `locale`.
+ *
+ * Uses the configured model when AI_API_KEY + AI_BASE_URL are present; otherwise
+ * (and on any error) returns the English source unchanged, flagged via `usedModel`
+ * and `model` so the caller/reviewer knows the entry still needs a real translation.
+ */
+export async function generateResearchLocalization(
+  source: LocalizableResearchFields,
+  locale: Locale
+): Promise<ResearchLocalizationResult> {
+  const english = englishLocalization(source);
+
+  if (locale === "en") {
+    return { locale, localization: english, usedModel: false, model: "source-english" };
+  }
+
+  const apiKey = process.env.AI_API_KEY;
+  const baseUrl = process.env.AI_BASE_URL?.replace(/\/+$/g, "");
+  const model = process.env.AI_MODEL || "qwen-plus";
+
+  if (!apiKey || !baseUrl) {
+    return { locale, localization: english, usedModel: false, model: "english-fallback-awaiting-localization" };
+  }
+
+  const localeName = localeMeta[locale].label;
+  const prompt = `You are translating an AIEDHK Research News article into ${localeName} (${locale}).
+
+Translate faithfully. Preserve the academic register, meaning, numbers, product names, and any cautionary framing. Do NOT add, remove, or reinterpret claims. Keep proper nouns (OpenAI, Anthropic, ChatGPT, Claude, GPT-4, AIEDHK) and acronyms as-is. Keep the same paragraph breaks in fullSummary (paragraphs separated by a blank line).
+
+Return strict JSON with keys: title, tags, imageAlt, shortSummary, fullSummary, keyTakeaways, whyItMatters.
+- tags: translate each tag; keep the same count.
+- keyTakeaways: translate each item; keep the same count.
+
+English source (JSON):
+${JSON.stringify(source)}`;
+
+  try {
+    const response = await fetch(`${baseUrl}/chat/completions`, {
+      method: "POST",
+      headers: {
+        "authorization": `Bearer ${apiKey}`,
+        "content-type": "application/json",
+      },
+      body: JSON.stringify({
+        model,
+        messages: [
+          { role: "system", content: "You are a precise academic translator for an AI-in-Education knowledge hub. You never add or drop information." },
+          { role: "user", content: prompt },
+        ],
+        temperature: 0.1,
+      }),
+    });
+
+    if (!response.ok) {
+      throw new Error(`AI localization failed with HTTP ${response.status}`);
+    }
+
+    const body = (await response.json()) as { choices?: Array<{ message?: { content?: string } }> };
+    const content = body.choices?.[0]?.message?.content;
+    if (!content) {
+      throw new Error("AI localization returned no content.");
+    }
+
+    const parsed = extractJsonObject(content) as unknown as Partial<ResearchPaperLocalization>;
+    return { locale, localization: sanitizeLocalization(parsed, english), usedModel: true, model };
+  } catch (error) {
+    return {
+      locale,
+      localization: english,
+      usedModel: false,
+      model: "english-fallback-awaiting-localization",
+      error: error instanceof Error ? error.message : "unknown AI localization error",
+    };
+  }
 }

@@ -10,6 +10,7 @@
     "typecheck": "tsc --noEmit",
     "test": "tsx --test tests/*.test.ts",
     "seed:research": "tsx scripts/seed-research-papers.ts",
+    "translate:research": "tsx scripts/translate-reviewed-papers.ts",
     "hygiene:check": "node scripts/check-worktree-clean.mjs",
     "release:verify": "npm run hygiene:check && npm test && npm run typecheck && npm run build && npm run hygiene:check"
   },

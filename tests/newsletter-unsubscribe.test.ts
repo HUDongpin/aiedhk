@@ -36,7 +36,7 @@ test("the weekly newsletter sends a compliant unsubscribe link and headers", () 
   assert.match(cronSource, /buildUnsubscribeUrl/);
   assert.match(cronSource, /"List-Unsubscribe":/);
   assert.match(cronSource, /"List-Unsubscribe-Post":\s*"List-Unsubscribe=One-Click"/);
-  // both the HTML and plain-text bodies must carry the unsubscribe link
-  assert.match(cronSource, /Unsubscribe:\s*\$\{unsubscribeUrl\}/);
+  // both the HTML and plain-text bodies must carry the (localized) unsubscribe link
+  assert.match(cronSource, /\$\{copy\.unsubscribe\}:\s*\$\{unsubscribeUrl\}/);
   assert.match(cronSource, /href="\$\{unsubscribeUrl\}"/);
 });

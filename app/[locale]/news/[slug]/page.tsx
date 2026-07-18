@@ -3,9 +3,13 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import ResearchCard from "@/components/ResearchCard";
 import SummaryAudioPlayer from "@/components/SummaryAudioPlayer";
+import JsonLd from "@/components/JsonLd";
 import { getDictionary, isLocale, locales, type Locale } from "@/lib/i18n";
 import { getPublishedResearchPaperBySlug, getRelatedPublishedPapers, researchPapers } from "@/lib/research-data";
 import { getReviewedLocalization } from "@/lib/research-reviewed-localizations";
+import { articleJsonLd, breadcrumbJsonLd } from "@/lib/structured-data";
+import { topicSlug } from "@/lib/research-topics";
+import { absoluteUrl } from "@/lib/site";
 import { formatDate } from "@/lib/utils";
 
 interface ResearchDetailPageProps {
@@ -43,9 +47,18 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
   const summaryAudioSrc =
     typedLocale === "en" ? paper.summaryAudio : getReviewedLocalization(paper.id, typedLocale)?.summaryAudio;
   const sourceLinks = paper.sourceUrls?.length ? paper.sourceUrls : [{ label: dictionary.common.source, url: paper.sourceUrl }];
+  // Canonical English tags (same order as the localized tags) give stable topic slugs.
+  const englishTags = researchPapers.find((item) => item.id === paper.id)?.tags ?? paper.tags;
+
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "AIEDHK", url: absoluteUrl(`/${typedLocale}`) },
+    { name: dictionary.nav.researchNews, url: absoluteUrl(`/${typedLocale}/news`) },
+    { name: paper.title, url: absoluteUrl(`/${typedLocale}/news/${paper.slug}`) },
+  ]);
 
   return (
     <div className="bg-hub-gradient">
+      <JsonLd data={[articleJsonLd(paper, typedLocale), breadcrumb]} />
       <article className="container-page py-14 lg:py-20">
         <Link href={`/${typedLocale}/news`} className="focus-ring inline-flex rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-black text-aied-blue shadow-sm transition hover:border-aied-cyan">
           ← {dictionary.common.backToResearch}
@@ -80,11 +93,20 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
               </div>
             </div>
             <div className="mt-7 flex flex-wrap gap-2">
-              {paper.tags.map((tag) => (
-                <span key={tag} className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-bold text-slate-500">
-                  {tag}
-                </span>
-              ))}
+              {paper.tags.map((tag, index) => {
+                const slug = topicSlug(englishTags[index] ?? tag);
+                const className =
+                  "rounded-full border border-slate-200 bg-white px-3 py-1 text-xs font-bold text-slate-500 transition hover:border-aied-cyan hover:text-aied-blue";
+                return slug ? (
+                  <Link key={tag} href={`/${typedLocale}/news/topic/${slug}`} className={`focus-ring ${className}`}>
+                    {tag}
+                  </Link>
+                ) : (
+                  <span key={tag} className={className}>
+                    {tag}
+                  </span>
+                );
+              })}
             </div>
           </div>
         </div>
@@ -103,8 +125,8 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
             ) : null}
             {summaryAudioSrc ? <SummaryAudioPlayer src={summaryAudioSrc} title={paper.summaryAudioTitle} /> : null}
             <div className="research-summary mt-7 text-lg leading-8 text-aied-muted">
-              {paper.fullSummary.split("\n\n").map((paragraph) => (
-                <p key={paragraph.slice(0, 60)}>{paragraph}</p>
+              {paper.fullSummary.split("\n\n").map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
               ))}
             </div>
           </div>

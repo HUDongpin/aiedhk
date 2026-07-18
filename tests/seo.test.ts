@@ -4,6 +4,7 @@ import robots from "@/app/robots";
 import { buildSitemapEntries } from "@/app/sitemap";
 import { locales } from "@/lib/i18n";
 import { getResearchPapers } from "@/lib/research-data";
+import { getAllResearchTopics } from "@/lib/research-topics";
 
 test("robots.txt exposes the sitemap and blocks admin and api", () => {
   const result = robots();
@@ -17,7 +18,11 @@ test("robots.txt exposes the sitemap and blocks admin and api", () => {
 
 test("sitemap lists every locale home and published article slugs with absolute https URLs", () => {
   const papers = getResearchPapers("en");
-  const entries = buildSitemapEntries(papers.map((paper) => ({ slug: paper.slug, createdAt: paper.createdAt })));
+  const topicSlugs = getAllResearchTopics().map((topic) => topic.slug);
+  const entries = buildSitemapEntries(
+    papers.map((paper) => ({ slug: paper.slug, createdAt: paper.createdAt })),
+    topicSlugs
+  );
 
   assert.ok(entries.length > 0, "sitemap should not be empty");
   assert.ok(entries.every((entry) => /^https:\/\//.test(entry.url)), "all sitemap URLs should be absolute https");
@@ -41,5 +46,10 @@ test("sitemap lists every locale home and published article slugs with absolute 
   assert.ok(
     entries.some((entry) => entry.url.endsWith(`/zh-hant/news/${knownSlug}`)),
     "sitemap should localize article detail URLs across locales"
+  );
+
+  assert.ok(
+    entries.some((entry) => /\/en\/news\/topic\/[a-z0-9-]+$/.test(entry.url)),
+    "sitemap should include topic landing pages"
   );
 });

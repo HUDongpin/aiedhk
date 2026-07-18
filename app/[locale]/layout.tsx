@@ -3,7 +3,9 @@ import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HtmlLangSync from "@/components/HtmlLangSync";
+import JsonLd from "@/components/JsonLd";
 import { getDictionary, getLocaleMeta, isLocale, locales, type Locale } from "@/lib/i18n";
+import { organizationJsonLd, webSiteJsonLd } from "@/lib/structured-data";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -39,6 +41,7 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   return (
     <div lang={meta.htmlLang} dir={meta.dir}>
       <HtmlLangSync lang={meta.htmlLang} dir={meta.dir} />
+      <JsonLd data={[organizationJsonLd(), webSiteJsonLd()]} />
       <Header locale={typedLocale} dictionary={dictionary} />
       <main>{children}</main>
       <Footer locale={typedLocale} dictionary={dictionary} />

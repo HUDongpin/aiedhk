@@ -7,6 +7,14 @@
     {
       "path": "/api/cron/research-newsletter?language=en",
       "schedule": "20 1 * * 1"
+    },
+    {
+      "path": "/api/cron/research-newsletter?language=zh-hant",
+      "schedule": "21 1 * * 1"
+    },
+    {
+      "path": "/api/cron/research-newsletter?language=zh-hans",
+      "schedule": "22 1 * * 1"
     }
   ]
 }

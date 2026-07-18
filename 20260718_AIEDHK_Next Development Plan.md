@@ -144,3 +144,24 @@ The flagship workstream.
 ---
 
 *Process note (per `AGENTS.md`): do this work in `codex/YYYYMMDD-<slug>` branches or worktrees, keep `main` clean, run `npm run hygiene:check` before handoff and `npm run release:verify` before any deploy, and ship each Research News change with its cover + static audio together from a clean commit.*
+
+---
+
+## 9. Implementation status — 2026-07-18 (branch `codex/20260718-next-dev-plan`)
+
+Implemented and verified in this session (typecheck clean, 80 tests passing, `next build` green, key flows checked live in the browser):
+
+**Phase 0 — done.** Newsletter unsubscribe (GET confirmation page + RFC 8058 one-click POST + `List-Unsubscribe` headers + footer links); `sitemap.xml` + `robots.txt`; removed the dead `legacyMockResearchPapers` array; retired the no-op public `POST /api/research-news` as `410 Gone`.
+
+**Phase 1 — engine done; content backfill partially seeded.** New per-article localization model (`lib/research-reviewed-localizations.ts`) with graceful English fallback; `localizedPaper()` rewritten (dead rp-* apparatus removed); AI translate stage (`generateResearchLocalization`) + `npm run translate:research`; flagship article `aied-025` hand-translated into `zh-hant` + `zh-hans` (verified rendering live); per-locale static audio supported (player hidden where absent).
+
+**Phase 2 — done.** JSON-LD (Organization/WebSite site-wide, NewsArticle/ScholarlyArticle + BreadcrumbList on articles); topic (tag) landing pages `/[locale]/news/topic/[slug]` in the sitemap; localized weekly newsletters (en/zh-hant/zh-hans) with resilient `Promise.allSettled` delivery; admin "Recent ingestion runs" panel.
+
+**Phase 3 — self-contained items done.** Open Graph + Twitter Card metadata and canonical/hreflang on article + site pages; locale-aware reading time. Also fixed bug-report O1 (`release:verify` now builds before typecheck), O3 (newsletter resilience), O5 (React keys).
+
+### Requires Peter's inputs / credentials to finish (not fabricated here)
+
+- **Full `zh-hant`/`zh-hans` backfill of the remaining 24 articles** — run `npm run translate:research` with `AI_API_KEY`/`AI_BASE_URL` set, review `output/reviewed-localizations.json`, and paste into `lib/research-reviewed-localizations.ts`. (The coverage test will then cover them.)
+- **Live automated ingest→review→publish cycle** — needs production `DATABASE_URL` (migrations applied) + `AI_*` + `CRON_SECRET`. The admin run-status panel is ready to observe it.
+- **Verified About content (P3.1)** — needs verified bios/product facts for Dr. Peter Hu, PedaNova, MAIS, CAIS, UAIS. Deliberately not invented.
+- **"Most read this month" (P3.2)** — needs Vercel Analytics API access/token.

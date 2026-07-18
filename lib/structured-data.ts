@@ -50,6 +50,27 @@ export function articleJsonLd(paper: ResearchPaper, locale: Locale) {
   };
 }
 
+export function personJsonLd(input: { name: string; url: string; jobTitle?: string; description?: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    name: input.name,
+    url: input.url,
+    ...(input.jobTitle ? { jobTitle: input.jobTitle } : {}),
+    ...(input.description ? { description: input.description } : {}),
+  };
+}
+
+export function aboutOrganizationJsonLd(input: { name: string; url: string; description?: string }) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: input.name,
+    url: input.url,
+    ...(input.description ? { description: input.description } : {}),
+  };
+}
+
 export interface BreadcrumbItem {
   name: string;
   url: string;

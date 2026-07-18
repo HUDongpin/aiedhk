@@ -9,6 +9,7 @@ import { getPublishedResearchPaperBySlug, getRelatedPublishedPapers, researchPap
 import { getReviewedLocalization } from "@/lib/research-reviewed-localizations";
 import { articleJsonLd, breadcrumbJsonLd } from "@/lib/structured-data";
 import { topicSlug } from "@/lib/research-topics";
+import { evidenceSignalCopy, evidenceSignalForType } from "@/lib/research-evidence";
 import { absoluteUrl } from "@/lib/site";
 import { formatDate, readingTimeMinutes } from "@/lib/utils";
 
@@ -79,6 +80,7 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
   const sourceLinks = paper.sourceUrls?.length ? paper.sourceUrls : [{ label: dictionary.common.source, url: paper.sourceUrl }];
   // Canonical English tags (same order as the localized tags) give stable topic slugs.
   const englishTags = researchPapers.find((item) => item.id === paper.id)?.tags ?? paper.tags;
+  const evidence = evidenceSignalCopy(evidenceSignalForType(paper.type), typedLocale);
 
   const breadcrumb = breadcrumbJsonLd([
     { name: "AIEDHK", url: absoluteUrl(`/${typedLocale}`) },
@@ -105,6 +107,9 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
           <div>
             <div className="flex flex-wrap items-center gap-2 text-xs font-black uppercase tracking-[0.18em]">
               <span className="rounded-full bg-aied-cyan px-3 py-1 text-slate-950">{dictionary.paperTypes[paper.type]}</span>
+              <span className="rounded-full border border-aied-blue/30 bg-white px-3 py-1 text-aied-blue shadow-sm" title={evidence.description}>
+                {evidence.label}
+              </span>
               <span className="rounded-full bg-white px-3 py-1 text-aied-blue shadow-sm">{paper.year}</span>
               <span className="text-slate-400">{formatDate(paper.createdAt, typedLocale)}</span>
               <span className="text-slate-400" aria-label="estimated reading time">
@@ -189,6 +194,10 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
             <div className="rounded-4xl border border-slate-200 bg-white p-7 shadow-card">
               <h2 className="text-xl font-black tracking-tight text-aied-ink">{dictionary.common.whyItMatters}</h2>
               <p className="mt-4 text-base font-bold leading-7 text-aied-muted sm:text-lg sm:leading-8">{paper.whyItMatters}</p>
+              <div className="mt-6 flex items-start gap-3 rounded-2xl bg-aied-soft px-4 py-3">
+                <span className="mt-0.5 rounded-full bg-white px-2.5 py-0.5 text-xs font-black text-aied-blue shadow-sm">{evidence.label}</span>
+                <p className="text-xs leading-5 text-slate-500">{evidence.description}</p>
+              </div>
             </div>
           </aside>
         </div>

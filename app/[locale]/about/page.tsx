@@ -1,10 +1,36 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
-import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
+import JsonLd from "@/components/JsonLd";
+import { getDictionary, getLocaleMeta, isLocale, locales, type Locale } from "@/lib/i18n";
+import { aboutOrganizationJsonLd, personJsonLd } from "@/lib/structured-data";
+import { absoluteUrl } from "@/lib/site";
 
 interface AboutPageProps {
   params: Promise<{ locale: string }>;
+}
+
+export async function generateMetadata({ params }: AboutPageProps): Promise<Metadata> {
+  const { locale } = await params;
+  const dictionary = getDictionary(locale);
+  const url = absoluteUrl(`/${locale}/about`);
+  return {
+    title: dictionary.about.title,
+    description: dictionary.about.personText,
+    alternates: {
+      canonical: url,
+      languages: Object.fromEntries(locales.map((item) => [item, `/${item}/about`])),
+    },
+    openGraph: {
+      type: "profile",
+      title: dictionary.about.title,
+      description: dictionary.about.personText,
+      url,
+      siteName: "AIEDHK",
+      locale: getLocaleMeta(locale).htmlLang,
+    },
+  };
 }
 
 const profileLinks = [
@@ -107,8 +133,24 @@ export default async function AboutPage({ params }: AboutPageProps) {
   const typedLocale = locale as Locale;
   const dictionary = getDictionary(typedLocale);
 
+  // Structured data built only from verified names/URLs already in the codebase
+  // and Peter's own localized descriptions — no invented facts.
+  const structuredData = [
+    personJsonLd({
+      name: "Dr. Peter Hu Dongpin",
+      url: "https://www.hudongpin.com",
+      jobTitle: dictionary.about.principalLabel,
+      description: dictionary.about.personText,
+    }),
+    aboutOrganizationJsonLd({ name: "PedaNova", url: "https://www.pedanova.tech", description: dictionary.about.companyText }),
+    ...dictionary.about.products
+      .filter((product) => productWebsiteLinks[product.name])
+      .map((product) => aboutOrganizationJsonLd({ name: product.name, url: productWebsiteLinks[product.name].href, description: product.text })),
+  ];
+
   return (
     <div className="bg-hub-gradient">
+      <JsonLd data={structuredData} />
       <section className="container-page py-16 lg:py-24">
         <SectionHeader
           eyebrow={dictionary.about.eyebrow}

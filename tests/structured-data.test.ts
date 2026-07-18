@@ -1,6 +1,8 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { articleJsonLd, breadcrumbJsonLd, organizationJsonLd, webSiteJsonLd } from "@/lib/structured-data";
+import { readFileSync } from "node:fs";
+import { join } from "node:path";
+import { aboutOrganizationJsonLd, articleJsonLd, breadcrumbJsonLd, organizationJsonLd, personJsonLd, webSiteJsonLd } from "@/lib/structured-data";
 import { getResearchPapers } from "@/lib/research-data";
 
 test("organization and website JSON-LD expose canonical identity", () => {
@@ -31,6 +33,24 @@ test("article JSON-LD reflects paper type, language, and absolute assets", () =>
   assert.equal(scholarLd["@type"], "ScholarlyArticle");
   assert.equal(scholarLd.inLanguage, "zh-Hant-HK");
   assert.match(String(scholarLd.url), /\/zh-hant\/news\//);
+});
+
+test("about person and organization JSON-LD carry name and url", () => {
+  const person = personJsonLd({ name: "Dr. Peter Hu Dongpin", url: "https://www.hudongpin.com", jobTitle: "Principal", description: "Bio." }) as Record<string, string>;
+  assert.equal(person["@type"], "Person");
+  assert.equal(person.name, "Dr. Peter Hu Dongpin");
+  assert.equal(person.url, "https://www.hudongpin.com");
+
+  const org = aboutOrganizationJsonLd({ name: "PedaNova", url: "https://www.pedanova.tech" }) as Record<string, string>;
+  assert.equal(org["@type"], "Organization");
+  assert.equal(org.name, "PedaNova");
+});
+
+test("the about page emits structured data built from existing verified entities", () => {
+  const pageSource = readFileSync(join(process.cwd(), "app/[locale]/about/page.tsx"), "utf8");
+  assert.match(pageSource, /<JsonLd data=\{structuredData\}/);
+  assert.match(pageSource, /personJsonLd/);
+  assert.match(pageSource, /aboutOrganizationJsonLd/);
 });
 
 test("breadcrumb JSON-LD numbers positions from one", () => {

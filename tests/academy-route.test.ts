@@ -50,5 +50,7 @@ test("Academy detail uses lesson semantics without Research News bibliography or
   assert.match(detail, /lesson\.coreIdeas/);
   assert.match(detail, /lesson\.educationConnection/);
   assert.match(detail, /lesson\.relatedConcepts/);
+  assert.match(detail, /dictionary\.academy\.readingTimeLabel/);
+  assert.match(detail, /dictionary\.academy\.minuteAbbreviation/);
   assert.doesNotMatch(detail, /paper\.authors|paper\.venue|paper\.type|evidenceSignal|relatedPapers/);
 });

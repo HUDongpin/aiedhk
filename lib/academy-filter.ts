@@ -19,7 +19,6 @@ export function filterAcademyLessonList(
       lesson.title,
       lesson.tags.join(" "),
       lesson.shortSummary,
-      lesson.fullSummary,
       lesson.coreIdeas.join(" "),
       lesson.educationConnection,
     ]

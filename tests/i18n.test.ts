@@ -35,5 +35,10 @@ test("all fourteen locale dictionaries provide typed Academy navigation and page
     assert.ok(dictionary.academy.tracks["educational-theory"].trim());
     assert.ok(dictionary.academy.levels.basics.trim());
     assert.ok(dictionary.academy.levels.core.trim());
+    assert.ok(dictionary.academy.readingTimeLabel.trim());
+    assert.ok(dictionary.academy.minuteAbbreviation.trim());
   }
+
+  assert.notEqual(getDictionary("zh-hant").academy.readingTimeLabel, getDictionary("en").academy.readingTimeLabel);
+  assert.notEqual(getDictionary("zh-hant").academy.minuteAbbreviation, getDictionary("en").academy.minuteAbbreviation);
 });

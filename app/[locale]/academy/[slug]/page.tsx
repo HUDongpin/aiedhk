@@ -56,7 +56,7 @@ export default async function AcademyDetailPage({ params }: AcademyDetailPagePro
             <span className="rounded-full bg-aied-cyan px-3 py-1 text-slate-950">{dictionary.academy.tracks[lesson.track]}</span>
             <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-aied-blue">{dictionary.academy.levels[lesson.level]}</span>
             <span className="text-slate-400">{formatDate(lesson.createdAt, typedLocale)}</span>
-            <span className="text-slate-400" aria-label="estimated reading time">· {readingTimeMinutes(lesson.fullSummary, typedLocale)} min</span>
+            <span className="text-slate-400" aria-label={dictionary.academy.readingTimeLabel}>· {readingTimeMinutes(lesson.fullSummary, typedLocale)} {dictionary.academy.minuteAbbreviation}</span>
           </div>
           <h1 className="mt-6 text-4xl font-black tracking-tight text-aied-ink sm:text-5xl text-balance">{lesson.title}</h1>
           <p className="mt-5 text-lg leading-8 text-aied-muted">{lesson.shortSummary}</p>

@@ -6,6 +6,7 @@ import { locales } from "@/lib/i18n";
 import { academyLearningResourceJsonLd } from "@/lib/structured-data";
 import { generateMetadata as generateAcademyIndexMetadata } from "@/app/[locale]/academy/page";
 import { generateMetadata as generateAcademyDetailMetadata } from "@/app/[locale]/academy/[slug]/page";
+import { getAcademyLessonPresentation } from "@/lib/academy-data";
 
 test("sitemap includes daily Academy indexes and every localized lesson URL", () => {
   const lessons = getAcademyLessons("en");
@@ -35,11 +36,11 @@ test("Academy metadata exposes canonical, all-locale hreflang, Open Graph, and T
 
 test("Academy lessons emit LearningResource structured data", () => {
   const lesson = getAcademyLessons("en")[0];
-  const data = academyLearningResourceJsonLd(lesson, "zh-hant") as Record<string, unknown>;
+  const data = academyLearningResourceJsonLd(getAcademyLessonPresentation(lesson, "zh-hant"), "zh-hant") as Record<string, unknown>;
 
   assert.equal(data["@type"], "LearningResource");
   assert.equal(data.name, lesson.title);
-  assert.equal(data.inLanguage, "zh-Hant-HK");
+  assert.equal(data.inLanguage, "en-HK");
   assert.equal(data.learningResourceType, "Lesson");
   assert.ok(String(data.url).endsWith(`/zh-hant/academy/${lesson.slug}`));
 });

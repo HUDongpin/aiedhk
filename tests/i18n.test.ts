@@ -37,8 +37,12 @@ test("all fourteen locale dictionaries provide typed Academy navigation and page
     assert.ok(dictionary.academy.levels.core.trim());
     assert.ok(dictionary.academy.readingTimeLabel.trim());
     assert.ok(dictionary.academy.minuteAbbreviation.trim());
+    assert.ok(dictionary.academy.searchFieldLabel.trim());
+    assert.ok(dictionary.academy.trackFieldLabel.trim());
+    assert.ok(dictionary.academy.levelFieldLabel.trim());
   }
 
   assert.notEqual(getDictionary("zh-hant").academy.readingTimeLabel, getDictionary("en").academy.readingTimeLabel);
   assert.notEqual(getDictionary("zh-hant").academy.minuteAbbreviation, getDictionary("en").academy.minuteAbbreviation);
+  assert.notEqual(getDictionary("ar").academy.searchFieldLabel, getDictionary("en").academy.searchFieldLabel);
 });

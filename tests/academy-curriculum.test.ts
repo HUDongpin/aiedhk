@@ -23,3 +23,17 @@ test("curriculum helper returns the first unpublished pair and stops at queue ex
   const allSlugs = academyCurriculumV1.pairs.flatMap((pair) => pair.topics.map((topic) => topic.slug));
   assert.equal(getNextUnpublishedAcademyPair(allSlugs), undefined);
 });
+
+test("every published Academy lesson exactly matches its curriculum title, track, and level", () => {
+  const curriculumBySlug = new Map(
+    academyCurriculumV1.pairs.flatMap((pair) => pair.topics).map((topic) => [topic.slug, topic])
+  );
+
+  for (const lesson of getAcademyLessons("en")) {
+    const topic = curriculumBySlug.get(lesson.slug);
+    assert.ok(topic, `${lesson.slug} should exist in the curriculum`);
+    assert.equal(topic.title, lesson.title, `${lesson.slug} title should match`);
+    assert.equal(topic.track, lesson.track, `${lesson.slug} track should match`);
+    assert.equal(topic.level, lesson.level, `${lesson.slug} level should match`);
+  }
+});

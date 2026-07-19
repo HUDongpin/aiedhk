@@ -1,6 +1,7 @@
 import { getLocaleMeta, type Locale } from "@/lib/i18n";
 import { absoluteUrl, SITE_URL } from "@/lib/site";
-import type { AcademyLesson, ResearchPaper } from "@/lib/types";
+import type { ResearchPaper } from "@/lib/types";
+import type { AcademyLessonPresentation } from "@/lib/academy-data";
 
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 
@@ -50,8 +51,9 @@ export function articleJsonLd(paper: ResearchPaper, locale: Locale) {
   };
 }
 
-export function academyLearningResourceJsonLd(lesson: AcademyLesson, locale: Locale) {
-  const url = absoluteUrl(`/${locale}/academy/${lesson.slug}`);
+export function academyLearningResourceJsonLd(presentation: AcademyLessonPresentation, routeLocale: Locale) {
+  const { lesson } = presentation;
+  const url = absoluteUrl(`/${routeLocale}/academy/${lesson.slug}`);
   return {
     "@context": "https://schema.org",
     "@type": "LearningResource",
@@ -59,7 +61,7 @@ export function academyLearningResourceJsonLd(lesson: AcademyLesson, locale: Loc
     description: lesson.shortSummary,
     datePublished: lesson.createdAt,
     dateModified: lesson.createdAt,
-    inLanguage: getLocaleMeta(locale).htmlLang,
+    inLanguage: presentation.contentHtmlLang,
     image: absoluteUrl(lesson.image),
     keywords: lesson.tags.join(", "),
     learningResourceType: "Lesson",

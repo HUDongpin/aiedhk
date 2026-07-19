@@ -1,4 +1,4 @@
-import { normalizeLocale } from "@/lib/i18n";
+import { getLocaleMeta, normalizeLocale, type Locale, type TextDirection } from "@/lib/i18n";
 import { getReviewedAcademyLocalization } from "@/lib/academy-reviewed-localizations";
 import { reviewedAcademyLessons } from "@/lib/academy-reviewed-data";
 import type { AcademyLesson } from "@/lib/types";
@@ -8,6 +8,33 @@ import { filterAcademyLessonList } from "@/lib/academy-filter";
 export const academyLessons = [...reviewedAcademyLessons].sort(
   (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime()
 );
+
+export interface AcademyContentPresentation {
+  contentLocale: Locale;
+  contentHtmlLang: string;
+  contentDir: TextDirection;
+  isFallback: boolean;
+}
+
+export interface AcademyLessonPresentation extends AcademyContentPresentation {
+  lesson: AcademyLesson;
+  routeLocale: Locale;
+}
+
+export function resolveAcademyContentPresentation(
+  localeInput: string,
+  hasReviewedLocalization: boolean
+): AcademyContentPresentation {
+  const routeLocale = normalizeLocale(localeInput);
+  const contentLocale = routeLocale === "en" || hasReviewedLocalization ? routeLocale : "en";
+  const meta = getLocaleMeta(contentLocale);
+  return {
+    contentLocale,
+    contentHtmlLang: meta.htmlLang,
+    contentDir: meta.dir,
+    isFallback: contentLocale !== routeLocale,
+  };
+}
 
 function localizeLesson(lesson: AcademyLesson, localeInput: string): AcademyLesson {
   const locale = normalizeLocale(localeInput);
@@ -34,6 +61,21 @@ export function getAcademyLessons(locale = "en") {
 export function getAcademyLessonBySlug(slug: string, locale = "en") {
   const lesson = academyLessons.find((item) => item.slug === slug);
   return lesson ? localizeLesson(lesson, locale) : undefined;
+}
+
+export function getAcademyLessonPresentation(lesson: AcademyLesson, localeInput = "en"): AcademyLessonPresentation {
+  const routeLocale = normalizeLocale(localeInput);
+  const content = resolveAcademyContentPresentation(
+    routeLocale,
+    routeLocale !== "en" && Boolean(getReviewedAcademyLocalization(lesson.id, routeLocale))
+  );
+  return { lesson, routeLocale, ...content };
+}
+
+export function getAcademyLessonPresentationBySlug(slug: string, localeInput = "en") {
+  const routeLocale = normalizeLocale(localeInput);
+  const lesson = getAcademyLessonBySlug(slug, routeLocale);
+  return lesson ? getAcademyLessonPresentation(lesson, routeLocale) : undefined;
 }
 
 export function getRelatedAcademyLessons(lesson: AcademyLesson, locale = "en", limit = 3) {

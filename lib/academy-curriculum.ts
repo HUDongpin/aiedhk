@@ -79,6 +79,15 @@ const theoryTopics = [
   ["ethics-care-and-human-flourishing-in-education", "Ethics, Care, and Human Flourishing in Education"],
 ] as const;
 
+const explicitLaunchLevels: Record<string, AcademyLevel> = {
+  "what-artificial-intelligence-is": "basics",
+  "machine-learning-deep-learning-generative-ai": "basics",
+  "how-large-language-models-generate-text": "core",
+  "behaviorism-learning-through-consequences": "basics",
+  "cognitive-load-theory": "core",
+  "constructivism-active-knowledge-building": "basics",
+};
+
 function curriculumTopic(
   pairIndex: number,
   item: readonly [string, string],
@@ -89,7 +98,7 @@ function curriculumTopic(
     slug: item[0],
     title: item[1],
     track,
-    level: pairIndex < 10 ? "basics" : "core",
+    level: explicitLaunchLevels[item[0]] ?? (pairIndex < 10 ? "basics" : "core"),
     prerequisiteSlugs: previous ? [previous[0]] : [],
   };
 }

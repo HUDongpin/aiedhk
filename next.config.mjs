@@ -9,6 +9,16 @@ const nextConfig = {
 
     return [
       {
+        source: "/academy",
+        destination: "/en/academy",
+        permanent: false,
+      },
+      {
+        source: "/academy/:slug*",
+        destination: "/en/academy/:slug*",
+        permanent: false,
+      },
+      {
         source: "/research-news",
         destination: "/en/news",
         permanent: true,

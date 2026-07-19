@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { getDictionary } from "@/lib/i18n";
+import { getDictionary, locales } from "@/lib/i18n";
 import { PAPER_TYPES } from "@/lib/types";
 
 test("English research news labels policy-ethics as Industry", () => {
@@ -22,4 +22,18 @@ test("English news hero describes academic papers and audio summaries", () => {
     researchCopy.intro,
     "A curated feed of AIED academic papers and news. Each card offers a concise overview, while each detail page includes a 500-word written summary, an audio summary, and practical takeaways."
   );
+});
+
+test("all fourteen locale dictionaries provide typed Academy navigation and page labels", () => {
+  assert.equal(getDictionary("en").nav.academy, "Academy");
+  for (const locale of locales) {
+    const dictionary = getDictionary(locale);
+    assert.ok(dictionary.nav.academy.trim());
+    assert.ok(dictionary.academy.title.trim());
+    assert.ok(dictionary.academy.searchPlaceholder.trim());
+    assert.ok(dictionary.academy.tracks["ai-knowledge"].trim());
+    assert.ok(dictionary.academy.tracks["educational-theory"].trim());
+    assert.ok(dictionary.academy.levels.basics.trim());
+    assert.ok(dictionary.academy.levels.core.trim());
+  }
 });

@@ -1,6 +1,6 @@
 import { getLocaleMeta, type Locale } from "@/lib/i18n";
 import { absoluteUrl, SITE_URL } from "@/lib/site";
-import type { ResearchPaper } from "@/lib/types";
+import type { AcademyLesson, ResearchPaper } from "@/lib/types";
 
 const ORGANIZATION_ID = `${SITE_URL}/#organization`;
 
@@ -45,6 +45,27 @@ export function articleJsonLd(paper: ResearchPaper, locale: Locale) {
     author: paper.authors.map((name) => ({ "@type": "Person", name })),
     publisher: { "@id": ORGANIZATION_ID },
     isAccessibleForFree: true,
+    mainEntityOfPage: { "@type": "WebPage", "@id": url },
+    url,
+  };
+}
+
+export function academyLearningResourceJsonLd(lesson: AcademyLesson, locale: Locale) {
+  const url = absoluteUrl(`/${locale}/academy/${lesson.slug}`);
+  return {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    name: lesson.title,
+    description: lesson.shortSummary,
+    datePublished: lesson.createdAt,
+    dateModified: lesson.createdAt,
+    inLanguage: getLocaleMeta(locale).htmlLang,
+    image: absoluteUrl(lesson.image),
+    keywords: lesson.tags.join(", "),
+    learningResourceType: "Lesson",
+    educationalLevel: lesson.level,
+    isAccessibleForFree: true,
+    provider: { "@id": ORGANIZATION_ID },
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
     url,
   };

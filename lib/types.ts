@@ -127,3 +127,61 @@ export interface ResearchFilterResult {
   pageSize: number;
   totalPages: number;
 }
+
+export const ACADEMY_TRACKS = ["ai-knowledge", "educational-theory"] as const;
+export type AcademyTrack = (typeof ACADEMY_TRACKS)[number];
+
+export const ACADEMY_LEVELS = ["basics", "core"] as const;
+export type AcademyLevel = (typeof ACADEMY_LEVELS)[number];
+
+export interface AcademyLesson {
+  id: string;
+  slug: string;
+  title: string;
+  track: AcademyTrack;
+  level: AcademyLevel;
+  tags: string[];
+  image: string;
+  imageAlt: string;
+  summaryImage: string;
+  summaryImageAlt: string;
+  summaryAudio: string;
+  summaryAudioTitle: string;
+  shortSummary: string;
+  fullSummary: string;
+  coreIdeas: [string, string, string];
+  educationConnection: string;
+  relatedConcepts: [string, string, string];
+  sourceUrls: Array<{ label: string; url: string }>;
+  createdAt: string;
+}
+
+export interface AcademyLessonLocalization {
+  title: string;
+  tags: string[];
+  imageAlt?: string;
+  summaryImageAlt?: string;
+  shortSummary: string;
+  fullSummary: string;
+  coreIdeas: [string, string, string];
+  educationConnection: string;
+  relatedConcepts: [string, string, string];
+  summaryAudio?: string;
+  summaryAudioTitle?: string;
+}
+
+export interface AcademyFilterOptions {
+  q?: string;
+  track?: string;
+  level?: string;
+  page?: number;
+  pageSize?: number;
+}
+
+export interface AcademyFilterResult {
+  items: AcademyLesson[];
+  total: number;
+  page: number;
+  pageSize: number;
+  totalPages: number;
+}

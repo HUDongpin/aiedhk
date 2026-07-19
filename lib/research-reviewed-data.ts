@@ -2,6 +2,102 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-029",
+    slug: "news-chatgpt-voice-claude-sonnet-gemini-notebook-2026",
+    title: "News: ChatGPT Voice, Claude Sonnet 5 and Gemini Notebook expand AI interaction",
+    authors: ["OpenAI", "Anthropic", "Google"],
+    venue: "AI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "GPT-Live voice", "Claude Sonnet 5", "Gemini Notebook education"],
+    image: "/images/research/covers/aied-029-live-agent-notebook-2026.png",
+    imageAlt: "Editorial cover for live voice, agentic AI, and source-grounded notebook product news",
+    summaryImage: "/images/research/summary/aied-029-live-agent-notebook-summary.png",
+    summaryImageAlt:
+      "Learners and an educator supervise a voice conversation, an agentic workflow, and a source-grounded digital notebook.",
+    summaryAudio: "/audio/research/aied-029-live-agent-notebook-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news summary",
+    shortSummary:
+      "News roundup: OpenAI makes ChatGPT Voice more conversational with GPT-Live, Anthropic brings lower-cost agentic tool use to Claude Sonnet 5, and Google turns Gemini Notebook into a connected research-and-learning workspace.",
+    fullSummary: `This product-news roundup tracks three changes to the way people interact with AI. OpenAI's GPT-Live moves ChatGPT Voice toward continuous conversation. Anthropic's Claude Sonnet 5 makes tool-using, multi-step agents more widely available. Google has renamed NotebookLM as Gemini Notebook and is connecting the source-grounded research product more deeply to the Gemini ecosystem. For AIEDHK, the shared signal is that AI is no longer confined to a turn-by-turn chat box: it can listen continuously, act across tools, and maintain a working collection of sources.
+
+OpenAI launched GPT-Live on July 8 as the new voice-model family powering ChatGPT Voice. Its full-duplex design can listen and speak at the same time, decide whether to pause or respond many times per second, and handle interruptions more naturally than earlier turn-based voice systems. When a request needs web search, deeper reasoning, or agentic work, GPT-Live can delegate it to a frontier model in the background while maintaining the conversation. GPT-Live-1 and GPT-Live-1 mini are rolling out globally in ChatGPT, with API access planned later.
+
+That interaction model could support oral language practice, accessible hands-free learning, think-aloud explanation, and formative questioning. But conversational fluency can also make an answer feel more trustworthy than it is. Educators should therefore design voice activities that require learners to restate evidence, compare an answer with course materials, and demonstrate understanding after the conversation. OpenAI reports preference and capability evaluations, not independent evidence that GPT-Live improves learning, language development, or accessibility outcomes.
+
+Anthropic's June 30 release positions Claude Sonnet 5 as its most agentic Sonnet model yet. Anthropic says it can plan, use browsers and terminals, write and test code, and sustain complex work at a lower price than its larger Opus models. Sonnet 5 is the default for Claude Free and Pro accounts, is available across other plans, and is offered through Claude Code and the Claude API. Users can vary the effort level to balance cost, speed, and performance.
+
+For education, broader access to capable agents changes the assessment problem. A student can delegate research, coding, file changes, and verification steps that once left clearer evidence of personal effort. Agentic tools can still be educational when students must define the plan, constrain permissions, inspect each artifact, explain failures, and defend the final choices. Vendor safety tests and self-checking behavior are useful product signals, but they do not remove the need for sandboxing, data controls, provenance, or teacher review.
+
+Google's July 16 announcement brings an explicitly research-and-learning purpose into the roundup. NotebookLM is now Gemini Notebook: the standalone, source-grounded product remains focused on helping people learn and research, while gaining tighter connections to the Gemini app and, in future, Google Search. Google says more than 30 million people and 600,000 organizations use the product, including students who turn notes into audio and video summaries. A secure cloud computer is also rolling out so Gemini Notebook can write and execute code for analysis grounded in notebook sources.
+
+For Hong Kong schools and universities, these products invite three different pilots: voice for explanation and language interaction, agents for supervised project work, and notebooks for source-grounded inquiry. Each pilot needs its own evidence. Voice should be assessed for reasoning and inclusion, not naturalness alone. Agents should expose plans, actions, and human approvals. Notebooks should preserve citation checking and distinguish uploaded evidence from model-generated interpretation. The most important news is not that interfaces feel smoother or agents finish more tasks. It is that education must make learner agency, source quality, and accountable oversight visible as AI becomes more ambient and more capable.`,
+    keyTakeaways: [
+      "News: GPT-Live now powers a more continuous ChatGPT Voice experience that can handle interruptions and delegate deeper work while conversation continues.",
+      "Claude Sonnet 5 brings lower-cost planning and tool use across Claude, Claude Code, and the API, increasing the need for visible process evidence and human approval in assessed work.",
+      "Gemini Notebook keeps a source-grounded research-and-learning purpose while adding ecosystem connections and code execution, so educators should test citation quality and learner understanding separately from polished outputs.",
+    ],
+    whyItMatters:
+      "Industry news signal: voice, agentic action, and source-grounded notebooks are becoming mainstream AI interfaces, so AIEDHK should evaluate learner agency, provenance, permissions, inclusion, and durable understanding together.",
+    sourceUrl: "https://openai.com/index/introducing-gpt-live/",
+    sourceUrls: [
+      {
+        label: "OpenAI GPT-Live release",
+        url: "https://openai.com/index/introducing-gpt-live/",
+      },
+      {
+        label: "Anthropic Claude Sonnet 5 release",
+        url: "https://www.anthropic.com/news/claude-sonnet-5",
+      },
+      {
+        label: "Google Gemini Notebook announcement",
+        url: "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      },
+    ],
+    createdAt: "2026-07-20",
+  },
+  {
+    id: "aied-028",
+    slug: "structured-ai-tutoring-active-learning-physics-rct",
+    title: "AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting",
+    authors: ["Greg Kestin", "Kelly Miller", "Anna Klales", "Timothy Milbourne", "Gregorio Ponti"],
+    venue: "Scientific Reports",
+    year: 2025,
+    type: "journal",
+    tags: ["structured AI tutoring", "active learning", "physics education"],
+    image: "/images/research/covers/aied-028-structured-ai-physics-tutor-2025.png",
+    imageAlt: "Editorial cover for a randomized comparison of structured AI tutoring and active-learning physics classes",
+    summaryImage: "/images/research/summary/aied-028-structured-ai-physics-tutor-summary.png",
+    summaryImageAlt:
+      "University physics learners compare a structured AI tutor with an active-learning classroom while working through fluid mechanics.",
+    summaryAudio: "/audio/research/aied-028-structured-ai-physics-tutor-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A crossover randomized trial with 194 Harvard undergraduates found that a carefully structured AI physics tutor produced larger immediate learning gains in less time than in-class active learning, while students also reported stronger engagement and motivation.",
+    fullSummary: `Kestin, Miller, Klales, Milbourne, and Ponti test whether a deliberately designed generative-AI tutor can match or exceed a strong classroom comparison rather than a passive lecture. Their open-access Scientific Reports article describes a randomized crossover experiment in a large introductory physics course at Harvard University. The central comparison is between an AI tutor built around established learning principles and an in-class active-learning lesson covering the same content.
+
+The study involved 194 undergraduates and two consecutive lessons on surface tension and fluid flow. Students were divided into two groups. In the first week, one group completed an AI-supported lesson at home while the other attended the active-learning class; the conditions were reversed in the second week. Both groups completed a pre-test and post-test for each topic. The researchers also measured time on task and asked students about engagement, enjoyment, motivation, and growth mindset.
+
+The tutor was not a generic chatbot. Physics instructors created question-specific prompts, structured the interaction to manage cognitive load, embedded content-rich explanations and videos, and required the model to scaffold the learner rather than simply provide answers. This design choice is crucial: the experiment evaluates a pedagogically engineered system operating inside a defined lesson, not unrestricted use of a general-purpose AI assistant.
+
+Students in the AI-tutored condition achieved higher post-test scores. The median post-test score was 4.5 for the AI group and 3.5 for the in-class group, against a combined pre-test median of 2.75. The authors report that median learning gains were more than twice as large with the AI tutor and that the difference was statistically significant. Regression analyses controlling for prior physics knowledge, course performance, ChatGPT experience, topic, test version, and time on task produced a large estimated effect. The authors place the effect between 0.73 and 1.3 standard deviations after addressing a ceiling effect.
+
+The AI condition was also faster for many learners. The classroom lesson provided about 60 minutes of learning time after tests, while the median AI-tutor time on task was 49 minutes; 70 percent of AI users spent less than 60 minutes. Students reported higher engagement in the AI condition and also rated enjoyment, motivation, and growth-mindset-related experience positively. The individualized pace and immediate feedback may help explain both the cognitive and affective results.
+
+The findings need careful boundaries. This was a short intervention covering two physics topics at one selective university. The comparison was not a full course, and the post-tests measured immediate mastery rather than long-term retention, transfer, collaboration, or independent problem solving. The result may depend on GPT-4, expert-written prompts, high-quality instructional videos, a tightly structured framework, and content that fits stepwise tutoring. The authors explicitly caution that the tutor may not outperform classroom active learning for complex synthesis or higher-order critical thinking.
+
+For AIEDHK, the paper offers a productive contrast to studies of unrestricted AI. The result does not show that any chatbot improves learning. It shows that pedagogical architecture can matter as much as model capability. Schools and universities considering AI tutors should document the tutor's instructional rules, compare it with a credible teaching practice, and measure retention and transfer after access is removed. A strong pilot would also examine who benefits, which learners disengage, how errors are handled, and how the tutor complements human discussion. The practical lesson is to evaluate a designed learning system—not merely access to a model.`,
+    keyTakeaways: [
+      "The randomized crossover study compared a structured AI tutor with in-class active learning across two physics lessons for 194 Harvard undergraduates.",
+      "AI-tutored students showed more than double the median immediate learning gain, often in less time, and reported stronger engagement and motivation.",
+      "The result depends on expert prompts, scaffolding, videos, and a bounded lesson; it does not establish long-term retention or show that unrestricted chatbots outperform good teaching.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the study shows that rigorous AI-tutor evaluation must treat pedagogy as part of the intervention and test retention, transfer, equity, and human complementarity beyond immediate post-test gains.",
+    sourceUrl: "https://doi.org/10.1038/s41598-025-97652-6",
+    createdAt: "2026-07-20",
+  },
+  {
     id: "aied-027",
     slug: "news-ai-learning-pathways-chatgpt-claude-code-gemini-education",
     title: "News: OpenAI, Anthropic and Google build more scaffolded AI learning pathways",

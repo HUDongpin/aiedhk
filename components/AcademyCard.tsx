@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import type { AcademyLesson } from "@/lib/types";
@@ -16,7 +17,13 @@ export default function AcademyCard({ lesson, locale, dictionary }: AcademyCardP
     <article className="group overflow-hidden rounded-4xl border border-slate-200 bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
       <Link href={`/${locale}/academy/${lesson.slug}`} className="grid h-full md:grid-cols-[minmax(280px,36%)_minmax(0,1fr)] lg:grid-cols-[minmax(340px,38%)_minmax(0,1fr)]">
         <div className="relative aspect-[16/10] overflow-hidden border-b border-slate-200 bg-aied-soft md:aspect-auto md:min-h-[22rem] md:border-b-0 md:border-r" lang={content.contentHtmlLang} dir={content.contentDir}>
-          <img src={lesson.image} alt={lesson.imageAlt} loading="lazy" decoding="async" className="absolute inset-0 h-full w-full object-cover object-center transition duration-300 group-hover:scale-[1.012]" />
+          <Image
+            src={lesson.image}
+            alt={lesson.imageAlt}
+            fill
+            sizes="(min-width: 1280px) 456px, (min-width: 768px) 36vw, 100vw"
+            className="object-cover object-center transition duration-300 group-hover:scale-[1.012]"
+          />
         </div>
         <div className="flex min-w-0 flex-col p-6 sm:p-7">
           <div className="flex flex-wrap items-center gap-2 text-xs font-black uppercase tracking-[0.18em]">

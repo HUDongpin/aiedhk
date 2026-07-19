@@ -51,6 +51,7 @@ test("Academy lessons directly reference twelve valid, distinct local PNG images
 test("Academy lessons directly reference six valid local M4A narrations", async () => {
   const lessons = getAcademyLessons("en");
   assert.equal(lessons.length, 6);
+  const hashes = new Set<string>();
 
   for (const lesson of lessons) {
     const assetPath = lesson.summaryAudio;
@@ -62,5 +63,9 @@ test("Academy lessons directly reference six valid local M4A narrations", async 
     const bytes = await readFile(publicFile(assetPath));
     assert.ok(bytes.length > 10_000, `${assetPath} must contain nontrivial audio`);
     assert.equal(bytes.subarray(4, 8).toString("ascii"), "ftyp", `${assetPath} must have an ISO base media ftyp header`);
+    assert.ok(bytes.includes(Buffer.from("mdat")), `${assetPath} must contain an MP4 media-data atom`);
+    hashes.add(createHash("sha256").update(bytes).digest("hex"));
   }
+
+  assert.equal(hashes.size, 6, "all Academy narrations must have unique SHA-256 hashes");
 });

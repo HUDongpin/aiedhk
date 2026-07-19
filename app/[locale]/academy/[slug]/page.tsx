@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import AcademyCard from "@/components/AcademyCard";
@@ -53,7 +54,16 @@ export default async function AcademyDetailPage({ params }: AcademyDetailPagePro
     <article className="container-page py-14 lg:py-20">
       <Link href={`/${typedLocale}/academy`} className="focus-ring inline-flex rounded-full border border-slate-200 bg-white px-5 py-2.5 text-sm font-black text-aied-blue shadow-sm transition hover:border-aied-cyan">← {dictionary.academy.backToAcademy}</Link>
       <div className="mt-8 grid gap-10 lg:grid-cols-[0.88fr_1.12fr] lg:items-start">
-        <div className="relative aspect-[16/10] overflow-hidden rounded-4xl border border-slate-200 bg-aied-soft shadow-soft" lang={presentation.contentHtmlLang} dir={presentation.contentDir}><img src={lesson.image} alt={lesson.imageAlt} className="absolute inset-0 h-full w-full object-cover object-center" /></div>
+        <div className="relative aspect-[16/10] overflow-hidden rounded-4xl border border-slate-200 bg-aied-soft shadow-soft" lang={presentation.contentHtmlLang} dir={presentation.contentDir}>
+          <Image
+            src={lesson.image}
+            alt={lesson.imageAlt}
+            fill
+            preload
+            sizes="(min-width: 1280px) 516px, (min-width: 1024px) 44vw, 100vw"
+            className="object-cover object-center"
+          />
+        </div>
         <div>
           <div className="flex flex-wrap items-center gap-2 text-xs font-black uppercase tracking-[0.18em]">
             <span className="rounded-full bg-aied-cyan px-3 py-1 text-slate-950">{dictionary.academy.tracks[lesson.track]}</span>
@@ -73,7 +83,17 @@ export default async function AcademyDetailPage({ params }: AcademyDetailPagePro
       <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_340px]">
         <div className="rounded-4xl border border-slate-200 bg-white p-7 shadow-card sm:p-9">
           <p className="text-sm font-black uppercase tracking-[0.24em] text-aied-blue">{dictionary.academy.summaryHeading}</p>
-          <figure className="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50" lang={presentation.contentHtmlLang} dir={presentation.contentDir}><img src={lesson.summaryImage} alt={lesson.summaryImageAlt} className="block aspect-[16/10] h-auto w-full object-cover" /></figure>
+          <figure className="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50" lang={presentation.contentHtmlLang} dir={presentation.contentDir}>
+            <Image
+              src={lesson.summaryImage}
+              alt={lesson.summaryImageAlt}
+              width={1600}
+              height={1000}
+              loading="lazy"
+              sizes="(min-width: 1280px) 740px, (min-width: 1024px) calc(100vw - 404px), 100vw"
+              className="block h-auto w-full object-cover"
+            />
+          </figure>
           {lesson.summaryAudio ? <SummaryAudioPlayer src={lesson.summaryAudio} title={lesson.summaryAudioTitle} /> : null}
           <div className="research-summary mt-7 text-lg leading-8 text-aied-muted" lang={presentation.contentHtmlLang} dir={presentation.contentDir}>{lesson.fullSummary.split("\n\n").map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
         </div>

@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
 import test from "node:test";
 import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
@@ -7,6 +8,20 @@ import AcademyExplorerView, { academyPageHref } from "@/components/AcademyExplor
 import { filterAcademyLessonList } from "@/lib/academy-filter";
 import { getAcademyLessons } from "@/lib/academy-data";
 import { getDictionary } from "@/lib/i18n";
+
+const academyCardSource = readFileSync("components/AcademyCard.tsx", "utf8");
+const academyDetailSource = readFileSync("app/[locale]/academy/[slug]/page.tsx", "utf8");
+
+test("Academy artwork uses responsive Next images and lazy-loads the below-fold summary", () => {
+  assert.match(academyCardSource, /import Image from "next\/image"/);
+  assert.match(academyCardSource, /<Image[\s\S]*?fill[\s\S]*?sizes=/);
+  assert.doesNotMatch(academyCardSource, /<img\b/);
+
+  assert.match(academyDetailSource, /import Image from "next\/image"/);
+  assert.match(academyDetailSource, /<Image[\s\S]*?preload[\s\S]*?sizes=/);
+  assert.match(academyDetailSource, /<Image[\s\S]*?summaryImage[\s\S]*?loading="lazy"[\s\S]*?sizes=/);
+  assert.doesNotMatch(academyDetailSource, /<img\b/);
+});
 
 test("Academy filters expose q, track, and level controls plus a complete reset", () => {
   const html = renderToStaticMarkup(React.createElement(AcademyFilters, {

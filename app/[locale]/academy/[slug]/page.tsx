@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import AcademyCard from "@/components/AcademyCard";
 import JsonLd from "@/components/JsonLd";
 import SummaryAudioPlayer from "@/components/SummaryAudioPlayer";
-import { academyLessons, getAcademyLessonBySlug, getAcademyLessonPresentationBySlug, getRelatedAcademyLessons } from "@/lib/academy-data";
+import { academyLessons, getAcademyLessonPresentationBySlug, getRelatedAcademyLessons } from "@/lib/academy-data";
 import { getDictionary, getLocaleMeta, isLocale, locales, type Locale } from "@/lib/i18n";
 import { absoluteUrl } from "@/lib/site";
 import { academyLearningResourceJsonLd, breadcrumbJsonLd } from "@/lib/structured-data";
@@ -19,14 +19,15 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: AcademyDetailPageProps): Promise<Metadata> {
   const { locale, slug } = await params;
   const dictionary = getDictionary(locale);
-  const lesson = getAcademyLessonBySlug(slug, locale);
-  if (!lesson) return { title: dictionary.nav.academy };
+  const presentation = getAcademyLessonPresentationBySlug(slug, locale);
+  if (!presentation) return { title: dictionary.nav.academy };
+  const { lesson } = presentation;
   const url = absoluteUrl(`/${locale}/academy/${slug}`);
   const image = absoluteUrl(lesson.image);
   return {
     title: lesson.title, description: lesson.shortSummary,
     alternates: { canonical: url, languages: Object.fromEntries(locales.map((item) => [getLocaleMeta(item).htmlLang, `/${item}/academy/${slug}`])) },
-    openGraph: { type: "article", title: lesson.title, description: lesson.shortSummary, url, siteName: "AIEDHK", locale: getLocaleMeta(locale).htmlLang, publishedTime: lesson.createdAt, tags: lesson.tags, images: [{ url: image, alt: lesson.imageAlt }] },
+    openGraph: { type: "article", title: lesson.title, description: lesson.shortSummary, url, siteName: "AIEDHK", locale: presentation.contentHtmlLang, publishedTime: lesson.createdAt, tags: lesson.tags, images: [{ url: image, alt: lesson.imageAlt }] },
     twitter: { card: "summary_large_image", title: lesson.title, description: lesson.shortSummary, images: [image] },
   };
 }

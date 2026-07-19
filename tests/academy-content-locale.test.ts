@@ -6,6 +6,7 @@ import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import AcademyCard from "@/components/AcademyCard";
 import { getDictionary } from "@/lib/i18n";
+import { generateMetadata as generateAcademyDetailMetadata } from "@/app/[locale]/academy/[slug]/page";
 
 const slug = "what-artificial-intelligence-is";
 
@@ -57,5 +58,19 @@ test("Academy cards mark fallback text as English while retaining route-localize
 
     assert.match(html, /lang="en-HK" dir="ltr"/);
     assert.match(html, new RegExp(dictionary.academy.tracks[presentation.lesson.track]));
+  }
+});
+
+test("Academy detail metadata uses effective content language while URLs stay on the requested route", async () => {
+  const englishLesson = getAcademyLessonPresentationBySlug(slug, "en");
+  assert.ok(englishLesson);
+
+  for (const locale of ["ar", "zh-hant", "en"] as const) {
+    const metadata = await generateAcademyDetailMetadata({ params: Promise.resolve({ locale, slug }) });
+    assert.equal(metadata.title, englishLesson.lesson.title);
+    assert.equal(metadata.description, englishLesson.lesson.shortSummary);
+    assert.equal(metadata.openGraph?.locale, "en-HK");
+    assert.ok(String(metadata.alternates?.canonical).endsWith(`/${locale}/academy/${slug}`));
+    assert.ok(Object.values(metadata.alternates?.languages ?? {}).includes(`/${locale}/academy/${slug}`));
   }
 });

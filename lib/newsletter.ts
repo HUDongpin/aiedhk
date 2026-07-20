@@ -2,7 +2,7 @@ import { randomBytes } from "node:crypto";
 import { getDatabaseClient } from "@/lib/db";
 import { normalizeLocale, type Locale } from "@/lib/i18n";
 
-export const NEWSLETTER_CONSENT_VERSION = "research-news-weekly-trial-v1";
+export const NEWSLETTER_CONSENT_VERSION = "research-news-daily-v1";
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 

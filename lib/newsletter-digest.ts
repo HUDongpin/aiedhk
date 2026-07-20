@@ -1,7 +1,7 @@
 import { getPublishedResearchPapers } from "@/lib/research-data";
 import type { ResearchPaper } from "@/lib/types";
 
-export interface WeeklyResearchDigestItem {
+export interface DailyResearchDigestItem {
   slug: string;
   title: string;
   authors: string[];
@@ -12,15 +12,14 @@ export interface WeeklyResearchDigestItem {
   createdAt: string;
 }
 
-export interface WeeklyResearchDigest {
+export interface DailyResearchDigest {
   generatedAt: string;
   windowStart: string;
   windowEnd: string;
-  usedLatestFallback: boolean;
-  items: WeeklyResearchDigestItem[];
+  items: DailyResearchDigestItem[];
 }
 
-function toDigestItem(paper: ResearchPaper): WeeklyResearchDigestItem {
+function toDigestItem(paper: ResearchPaper): DailyResearchDigestItem {
   return {
     slug: paper.slug,
     title: paper.title,
@@ -33,27 +32,30 @@ function toDigestItem(paper: ResearchPaper): WeeklyResearchDigestItem {
   };
 }
 
-export async function buildWeeklyResearchDigest(locale = "en", now = new Date(), limit = 5): Promise<WeeklyResearchDigest> {
+export function createDailyResearchDigest(
+  papers: ResearchPaper[],
+  now = new Date(),
+  limit = 5
+): DailyResearchDigest {
   const windowEnd = new Date(now);
-  const windowStart = new Date(windowEnd);
-  windowStart.setDate(windowStart.getDate() - 7);
+  const windowStart = new Date(windowEnd.getTime() - 24 * 60 * 60 * 1000);
 
-  const papers = (await getPublishedResearchPapers(locale))
+  const dailyItems = papers
     .slice()
-    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
-
-  const weeklyItems = papers.filter((paper) => {
-    const createdAt = new Date(paper.createdAt).getTime();
-    return createdAt >= windowStart.getTime() && createdAt <= windowEnd.getTime();
-  });
-
-  const sourceItems = weeklyItems.length > 0 ? weeklyItems : papers;
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+    .filter((paper) => {
+      const createdAt = new Date(paper.createdAt).getTime();
+      return createdAt >= windowStart.getTime() && createdAt <= windowEnd.getTime();
+    });
 
   return {
     generatedAt: now.toISOString(),
     windowStart: windowStart.toISOString(),
     windowEnd: windowEnd.toISOString(),
-    usedLatestFallback: weeklyItems.length === 0,
-    items: sourceItems.slice(0, limit).map(toDigestItem),
+    items: dailyItems.slice(0, limit).map(toDigestItem),
   };
+}
+
+export async function buildDailyResearchDigest(locale = "en", now = new Date(), limit = 5): Promise<DailyResearchDigest> {
+  return createDailyResearchDigest(await getPublishedResearchPapers(locale), now, limit);
 }

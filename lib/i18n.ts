@@ -181,8 +181,8 @@ const enDictionary = {
     ],
   },
   research: {
-    eyebrow: "News",
-    title: "AIED papers & news, summarized for research-to-product translation.",
+    eyebrow: "AIED News",
+    title: "AIED summaries for research-to-product translation.",
     intro:
       "A curated feed of AIED academic papers and news. Each card offers a concise overview, while each detail page includes a 500-word written summary, an audio summary, and practical takeaways.",
     searchPlaceholder: "Search title, author, topic, or keyword",
@@ -190,15 +190,15 @@ const enDictionary = {
     ingestionNote:
       "Prepared for weekly Codex-assisted ingestion: crawl papers, generate summaries, tag topics, review, and publish.",
     newsletter: {
-      eyebrow: "Free weekly trial",
-      title: "Get the latest AIED papers and news in your inbox",
-      description: "Weekly curated paper updates.",
+      eyebrow: "Free daily summary",
+      title: "Get the latest AIED summaries in your inbox",
+      description: "Daily curated news updates.",
       emailLabel: "Email address",
       emailPlaceholder: "you@example.com",
       submit: "Subscribe",
       submitting: "Subscribing...",
-      success: "You are subscribed. The weekly AIED paper update will land in your inbox.",
-      alreadySubscribed: "You are already on the weekly AIED paper list.",
+      success: "You are subscribed. Daily AIED news updates will land in your inbox.",
+      alreadySubscribed: "You are already on the daily AIED news list.",
       invalidEmail: "Please enter a valid email address.",
       notConfigured: "Subscription storage is not configured yet. Please try again after launch setup.",
       error: "Something went wrong. Please try again in a moment.",
@@ -223,7 +223,7 @@ const enDictionary = {
     ],
     companyTitle: "Company",
     companyText:
-      "PedaNova EdTech is an R&D company rooted in AIED-native innovation. Its vision is to advance future-facing educational innovation that improves learning, teaching, and evidence-based growth.",
+      "PedaNova Ed-Tech is an R&D company rooted in AIED-native innovation. Its vision is to advance future-facing educational innovation that improves learning, teaching, and evidence-based growth.",
     portfolioLabel: "Portfolio",
     productsTitle: "Products",
     products: [
@@ -318,6 +318,11 @@ export interface AcademyDictionary {
   trackFieldLabel: string;
   levelFieldLabel: string;
   noResults: string;
+  newsletter: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
 }
 
 export type Dictionary = Omit<BaseDictionary, "nav"> & {
@@ -404,15 +409,15 @@ const baseDictionaries: Record<Locale, BaseDictionary> = {
       resultCount: "篇論文",
       ingestionNote: "已為每週 Codex 輔助流程預留：抓取論文、生成摘要、標註主題、審閱與發布。",
       newsletter: {
-        eyebrow: "免費每週試讀",
-        title: "將最新 AIED 論文送到你的信箱",
-        description: "每週精選論文更新。目前試用階段免費。",
+        eyebrow: "免費每日摘要",
+        title: "將最新 AIED 論文與新聞送到你的信箱",
+        description: "每日精選研究新聞更新。",
         emailLabel: "電郵地址",
         emailPlaceholder: "you@example.com",
         submit: "訂閱",
         submitting: "訂閱中...",
-        success: "你已成功訂閱，每週 AIED 論文更新將寄到你的信箱。",
-        alreadySubscribed: "你已在每週 AIED 論文訂閱名單中。",
+        success: "你已成功訂閱，每日 AIED 研究新聞更新將寄到你的信箱。",
+        alreadySubscribed: "你已在每日 AIED 研究新聞訂閱名單中。",
         invalidEmail: "請輸入有效的電郵地址。",
         notConfigured: "訂閱儲存尚未設定。請在上線設定完成後再試。",
         error: "暫時無法完成訂閱，請稍後再試。",
@@ -526,7 +531,7 @@ const baseDictionaries: Record<Locale, BaseDictionary> = {
         { title: "伦理与负责任 AI", text: "将公平、隐私、安全、透明与教育价值作为默认设计原则。" },
       ],
     },
-    research: { eyebrow: "研究新闻", title: "将 AIED 论文转化为研究到产品的洞察。", intro: "精选 AIED 期刊与会议论文。每张卡片提供快速概览，详情页则呈现 500 字摘要与实用重点。", searchPlaceholder: "搜索标题、作者、主题或关键词", resultCount: "篇论文", ingestionNote: "已为每周 Codex 辅助流程预留：抓取论文、生成摘要、标注主题、审阅与发布。", newsletter: { eyebrow: "免费每周试读", title: "将最新 AIED 论文送到你的邮箱", description: "每周精选论文更新。目前试用阶段免费。", emailLabel: "邮箱地址", emailPlaceholder: "you@example.com", submit: "订阅", submitting: "订阅中...", success: "你已成功订阅，每周 AIED 论文更新将发送到你的邮箱。", alreadySubscribed: "你已在每周 AIED 论文订阅名单中。", invalidEmail: "请输入有效的邮箱地址。", notConfigured: "订阅存储尚未配置。请在上线设置完成后再试。", error: "暂时无法完成订阅，请稍后再试。", privacyNote: "单步试用订阅。目前试用阶段不需要付款。" } },
+    research: { eyebrow: "研究新闻", title: "将 AIED 论文转化为研究到产品的洞察。", intro: "精选 AIED 期刊与会议论文。每张卡片提供快速概览，详情页则呈现 500 字摘要与实用重点。", searchPlaceholder: "搜索标题、作者、主题或关键词", resultCount: "篇论文", ingestionNote: "已为每周 Codex 辅助流程预留：抓取论文、生成摘要、标注主题、审阅与发布。", newsletter: { eyebrow: "免费每日摘要", title: "将最新 AIED 论文与新闻送到你的邮箱", description: "每日精选研究新闻更新。", emailLabel: "邮箱地址", emailPlaceholder: "you@example.com", submit: "订阅", submitting: "订阅中...", success: "你已成功订阅，每日 AIED 研究新闻更新将发送到你的邮箱。", alreadySubscribed: "你已在每日 AIED 研究新闻订阅名单中。", invalidEmail: "请输入有效的邮箱地址。", notConfigured: "订阅存储尚未配置。请在上线设置完成后再试。", error: "暂时无法完成订阅，请稍后再试。", privacyNote: "单步试用订阅。目前试用阶段不需要付款。" } },
     about: {
       eyebrow: "关于",
       title: "Dr. Peter Hu Dongpin 与 AIEDHK 研发生态。",
@@ -572,7 +577,7 @@ const baseDictionaries: Record<Locale, BaseDictionary> = {
     paperTypes: { journal: "Artículo de revista", conference: "Artículo de congreso", review: "Revisión", "tool-dataset": "Herramienta / conjunto de datos", "policy-ethics": "Política / ética" },
     home: { eyebrow: "Centro de conocimiento de IA en educación", heroTitle: "Hong Kong como centro AIED para investigación, innovación de producto e impacto en el aprendizaje.", heroText: "AIEDHK es una plataforma multilingüe de información para I+D en IA en educación. Conecta inteligencia global de investigación con práctica local de aula, experimentos de producto e innovación responsable.", primaryCta: "Explorar noticias de investigación", secondaryCta: "Leer la misión", missionStatement: "Acelerar la transición del mundo hacia el aprendizaje y la enseñanza personalizados.", showcaseTitle: "Centro de conocimiento de IA en educación", showcaseText: "Acelerar la transición del mundo hacia el aprendizaje y la enseñanza personalizados", cards: [{ title: "Misión", text: "Una estrategia clara para convertir Hong Kong en un centro confiable de conocimiento y producto AIED." }, { title: "Noticias de investigación", text: "Resúmenes legibles de 500 palabras de artículos importantes de revistas y congresos AIED." }, { title: "Acerca de", text: "Contexto de I+D de Dr. Peter Hu Dongpin, PedaNova, MAIS y CAIS." }], hubAdvantage: "Ventaja del centro", whyTitle: "¿Por qué Hong Kong como centro AIED?", whyText: "Hong Kong puede conectar redes internacionales de investigación, contextos educativos en chino, desarrollo ágil de productos y validación escolar rigurosa. AIEDHK está diseñado como la capa de conocimiento de ese puente.", translationLabel: "Traducción", impactTitle: "De la investigación al impacto real en el aprendizaje", impactText: "La plataforma convierte artículos en resúmenes, resúmenes en ideas de diseño e ideas en herramientas que apoyan a docentes y estudiantes.", pillars: ["Inteligencia de investigación", "Innovación de producto", "Empoderamiento docente", "IA responsable"] },
     mission: { eyebrow: "Misión y estrategia", title: "Acelerar la transición del mundo hacia el aprendizaje y la enseñanza personalizados.", intro: "AIEDHK existe para facilitar el descubrimiento, la evaluación, la traducción y la aplicación de la investigación en IA en educación. La ambición a largo plazo es ayudar a Hong Kong a convertirse en un centro AIED de alta confianza para el mundo.", visionTitle: "Visión", visionText: "Un futuro en el que cada estudiante reciba apoyo oportuno, humano y personalizado, y cada docente pueda usar la IA responsablemente para ampliar su juicio profesional.", whyAiedTitle: "Por qué importa AIED", whyAiedText: "AIED reúne ciencias del aprendizaje, inteligencia artificial, evaluación, interacción humano-computadora y práctica educativa. Su valor no es solo automatizar, sino ofrecer mejor retroalimentación, mejor evidencia y mejores experiencias de aprendizaje.", whyHongKongTitle: "Por qué Hong Kong", whyHongKongText: "Hong Kong está entre redes globales de investigación y sistemas educativos en chino. Puede ser un banco de pruebas para innovación AIED multilingüe, culturalmente consciente y lista para el aula.", roadmapEyebrow: "Hoja de ruta", strategyTitle: "Estrategia", strategyIntro: "Seis direcciones prácticas guían la plataforma y su futura cartera de I+D.", strategies: [{ title: "Inteligencia de investigación", text: "Seguir revistas y congresos AIED, y resumir métodos, conjuntos de datos, tendencias y escenarios de aplicación." }, { title: "Innovación de producto", text: "Traducir hallazgos de investigación en productos educativos, prototipos y herramientas docentes que puedan probarse en contextos reales." }, { title: "Empoderamiento docente", text: "Ayudar a docentes a comprender, evaluar y usar herramientas de IA educativa con confianza y agencia profesional." }, { title: "Aprendizaje centrado en el estudiante", text: "Impulsar aprendizaje personalizado, retroalimentación formativa, apoyo a la evaluación y bienestar del estudiante." }, { title: "Puente global-local", text: "Conectar investigación AIED global con prácticas educativas de Hong Kong, Gran China y Asia." }, { title: "IA ética y responsable", text: "Promover equidad, privacidad, seguridad, transparencia y valor educativo como principios de diseño por defecto." }] },
-    research: { eyebrow: "Noticias de investigación", title: "Artículos AIED resumidos para traducir investigación en producto.", intro: "Una selección curada de artículos de revistas y congresos AIED. Cada tarjeta ofrece una visión breve, y la página de detalle aporta un resumen de 500 palabras y conclusiones prácticas.", searchPlaceholder: "Buscar título, autor, tema o palabra clave", resultCount: "artículos", ingestionNote: "Preparado para ingesta semanal asistida por Codex: rastrear artículos, generar resúmenes, etiquetar temas, revisar y publicar.", newsletter: { eyebrow: "Prueba semanal gratuita", title: "Recibe los últimos artículos AIED en tu correo", description: "Actualizaciones semanales seleccionadas. Gratis durante la prueba actual.", emailLabel: "Correo electrónico", emailPlaceholder: "tu@ejemplo.com", submit: "Suscribirse", submitting: "Suscribiendo...", success: "Ya estás suscrito. La actualización semanal de artículos AIED llegará a tu correo.", alreadySubscribed: "Ya estás en la lista semanal de artículos AIED.", invalidEmail: "Introduce un correo electrónico válido.", notConfigured: "El almacenamiento de suscripciones aún no está configurado. Inténtalo después de la configuración de lanzamiento.", error: "Algo salió mal. Inténtalo de nuevo en un momento.", privacyNote: "Alta de prueba en un solo paso. No se requiere pago durante la prueba actual." } },
+    research: { eyebrow: "Noticias de investigación", title: "Artículos AIED resumidos para traducir investigación en producto.", intro: "Una selección curada de artículos de revistas y congresos AIED. Cada tarjeta ofrece una visión breve, y la página de detalle aporta un resumen de 500 palabras y conclusiones prácticas.", searchPlaceholder: "Buscar título, autor, tema o palabra clave", resultCount: "artículos", ingestionNote: "Preparado para ingesta semanal asistida por Codex: rastrear artículos, generar resúmenes, etiquetar temas, revisar y publicar.", newsletter: { eyebrow: "Resumen diario gratuito", title: "Recibe las últimas noticias AIED en tu correo", description: "Actualizaciones diarias de noticias seleccionadas.", emailLabel: "Correo electrónico", emailPlaceholder: "tu@ejemplo.com", submit: "Suscribirse", submitting: "Suscribiendo...", success: "Ya estás suscrito. Las noticias AIED diarias llegarán a tu correo.", alreadySubscribed: "Ya estás en la lista diaria de noticias AIED.", invalidEmail: "Introduce un correo electrónico válido.", notConfigured: "El almacenamiento de suscripciones aún no está configurado. Inténtalo después de la configuración de lanzamiento.", error: "Algo salió mal. Inténtalo de nuevo en un momento.", privacyNote: "Alta de prueba en un solo paso. No se requiere pago durante la prueba actual." } },
     about: { eyebrow: "Acerca de", title: "Dr. Peter Hu Dongpin y el ecosistema de I+D de AIEDHK.", intro: "Esta página usa texto editable de marcador. Sustitúyelo por biografía, empresa y detalles de producto verificados a medida que evolucione la plataforma.", principalLabel: "Principal", personTitle: "Acerca de Dr. Peter Hu Dongpin", personText: "Dr. Peter Hu Dongpin es el iniciador de AIEDHK. Esta sección puede presentar sus intereses de I+D en IA en educación, su enfoque de investigación a producto y su trabajo conectando necesidades educativas con sistemas de IA responsables.", focusTitle: "Foco de I+D AIED", focusItems: ["Aprendizaje y enseñanza personalizados", "Evaluación y retroalimentación asistidas por IA", "Herramientas de IA para docentes", "Despliegue responsable de IA en escuelas"], companyTitle: "Empresa", companyText: "PedaNova Technology se presenta aquí como un perfil editable de empresa para investigación, desarrollo, innovación de producto y aplicaciones de tecnología educativa en IA en educación.", portfolioLabel: "Portafolio", productsTitle: "Productos", products: [{ name: "MAIS", text: "Marcador editable para un producto educativo impulsado por IA. Añade aquí posicionamiento, usuarios y casos de uso verificados." }, { name: "CAIS", text: "Marcador editable para un producto educativo impulsado por IA. Añade aquí posicionamiento, usuarios y casos de uso verificados." }, { name: "UAIS", text: "University Adaptive Interactive System" }], linksTitle: "Enlaces de I+D", placeholderNote: "Contenido de marcador: sustituir por biografía, descripciones de producto, evidencia e hitos verificados antes del lanzamiento público." },
     logoConcepts: { metaTitle: "Conceptos de logo", eyebrow: "Conceptos de logo", title: "Tres nuevas direcciones para AIEDHK", intro: "Cada lockup SVG se basa en AI in Education Hub of Knowledge, con un puente más claro entre aprendizaje, conocimiento, IA y Hong Kong.", download: "Descargar SVG", recommendationTitle: "Recomendación", recommendationText: "Elige Learning Circuit si deseas una evolución directa de la marca actual. Elige Harbour Hub si el mensaje de Hong Kong como centro es lo más importante. Elige Knowledge Compass si la marca debe sentirse más académica y asesora.", previewPath: "Ruta de vista previa", concepts: [{ name: "Learning Circuit", summary: "Páginas de libro abierto llevan nodos de IA conectados, haciendo inmediata la capa de educación y conocimiento sin perder la marca cian-azul.", signal: "Mejor encaje para el encabezado actual porque se siente más cercano a la identidad existente." }, { name: "Harbour Hub", summary: "Una red de centro envuelve un monograma HK, apuntando a Hong Kong como conector entre investigación, productos, escuelas e IA responsable.", signal: "Mejor para posicionamiento público sobre Hong Kong como centro AIED." }, { name: "Knowledge Compass", summary: "Una brújula sobre un libro abierto presenta AIEDHK como guía para descubrir, evaluar y aplicar conocimiento de IA educativa.", signal: "Mejor para informes, páginas de investigación y materiales de colaboración académica." }] },
     footer: { description: "AIEDHK es un centro multilingüe de conocimiento para investigación, desarrollo e innovación responsable del aprendizaje con IA en educación.", navigation: "Navegación", ecosystem: "Enlaces del ecosistema", copyright: "© 2026 AIEDHK. Todos los derechos reservados." },
@@ -1060,45 +1065,45 @@ const localizedProductText: Record<string, string> = {
 const localizedNewsletterCopy: Record<string, BaseDictionary["research"]["newsletter"]> = {
   default: enDictionary.research.newsletter,
   Accueil: {
-    eyebrow: "Essai hebdomadaire gratuit",
+    eyebrow: "Résumé quotidien gratuit",
     title: "Recevez les derniers articles AIED par e-mail",
-    description: "Une sélection hebdomadaire d'articles. Gratuit pendant l'essai actuel.",
+    description: "Une sélection quotidienne d'actualités AIED.",
     emailLabel: "Adresse e-mail",
     emailPlaceholder: "vous@example.com",
     submit: "S'abonner",
     submitting: "Inscription...",
-    success: "Vous êtes inscrit. La veille hebdomadaire AIED arrivera dans votre boîte mail.",
-    alreadySubscribed: "Vous êtes déjà dans la liste hebdomadaire AIED.",
+    success: "Vous êtes inscrit. Les actualités AIED quotidiennes arriveront dans votre boîte mail.",
+    alreadySubscribed: "Vous êtes déjà dans la liste quotidienne AIED.",
     invalidEmail: "Veuillez saisir une adresse e-mail valide.",
     notConfigured: "Le stockage des abonnements n'est pas encore configuré. Réessayez après la mise en ligne.",
     error: "Un problème est survenu. Réessayez dans un moment.",
     privacyNote: "Inscription d'essai en une étape. Aucun paiement n'est requis pendant l'essai actuel.",
   },
   Início: {
-    eyebrow: "Teste semanal gratuito",
+    eyebrow: "Resumo diário gratuito",
     title: "Receba os artigos AIED mais recentes no e-mail",
-    description: "Atualizações semanais selecionadas. Gratuito durante o teste atual.",
+    description: "Atualizações diárias de notícias selecionadas.",
     emailLabel: "E-mail",
     emailPlaceholder: "voce@example.com",
     submit: "Assinar",
     submitting: "Assinando...",
-    success: "Você está inscrito. A atualização semanal AIED chegará ao seu e-mail.",
-    alreadySubscribed: "Você já está na lista semanal de artigos AIED.",
+    success: "Você está inscrito. As notícias diárias AIED chegarão ao seu e-mail.",
+    alreadySubscribed: "Você já está na lista diária de notícias AIED.",
     invalidEmail: "Digite um e-mail válido.",
     notConfigured: "O armazenamento de assinaturas ainda não está configurado. Tente após a configuração de lançamento.",
     error: "Algo deu errado. Tente novamente em instantes.",
     privacyNote: "Assinatura de teste em uma etapa. Nenhum pagamento é necessário durante o teste atual.",
   },
   Start: {
-    eyebrow: "Kostenloser Wochentest",
+    eyebrow: "Kostenlose tägliche Zusammenfassung",
     title: "Aktuelle AIED-Papers direkt per E-Mail",
-    description: "Wöchentlich kuratierte Paper-Updates. Im aktuellen Test kostenlos.",
+    description: "Täglich kuratierte AIED-Nachrichten.",
     emailLabel: "E-Mail-Adresse",
     emailPlaceholder: "du@example.com",
     submit: "Abonnieren",
     submitting: "Abonnieren...",
-    success: "Sie sind angemeldet. Das wöchentliche AIED-Update kommt per E-Mail.",
-    alreadySubscribed: "Sie sind bereits auf der wöchentlichen AIED-Liste.",
+    success: "Sie sind angemeldet. Tägliche AIED-Nachrichten kommen per E-Mail.",
+    alreadySubscribed: "Sie sind bereits auf der täglichen AIED-Nachrichtenliste.",
     invalidEmail: "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
     notConfigured: "Der Abonnementspeicher ist noch nicht konfiguriert. Bitte nach dem Launch-Setup erneut versuchen.",
     error: "Etwas ist fehlgeschlagen. Bitte versuchen Sie es gleich noch einmal.",
@@ -1117,8 +1122,8 @@ for (const locale of ["fr", "pt", "de", "ar", "ko", "ja", "hi", "ru", "id", "bn"
   baseDictionaries[locale] = makeRomanceDictionary(locale);
 }
 
-const academyTranslations: Record<Locale, { nav: string; copy: AcademyDictionary }> = {
-  en: { nav: "Academy", copy: { eyebrow: "Academy", title: "Build durable foundations in AI and learning science.", intro: "Paired, reviewed lessons connect essential AI knowledge with educational theory for thoughtful practice.", searchPlaceholder: "Search title, topic, summary, or core idea", resultCount: "lessons", allTracks: "All tracks", allLevels: "All levels", tracks: { "ai-knowledge": "AI Knowledge", "educational-theory": "Educational Theory" }, levels: { basics: "Basics", core: "Core" }, backToAcademy: "Back to Academy", summaryHeading: "Full lesson summary", coreIdeas: "3 core ideas", educationConnection: "Education connection", relatedConcepts: "3 related concepts", relatedLessons: "Related lessons", sources: "Sources", readingTimeLabel: "Estimated reading time", minuteAbbreviation: "min", searchFieldLabel: "Search Academy lessons", trackFieldLabel: "Filter by track", levelFieldLabel: "Filter by level", noResults: "No lessons matched the current filters." } },
+const academyTranslations: Record<Locale, { nav: string; copy: Omit<AcademyDictionary, "newsletter"> }> = {
+  en: { nav: "Academy", copy: { eyebrow: "PedaNova Academy", title: "Build durable foundations in AI and learning science.", intro: "Paired, reviewed lessons connect essential AI knowledge with educational theory for thoughtful practice.", searchPlaceholder: "Search title, topic, summary, or core idea", resultCount: "lessons", allTracks: "All tracks", allLevels: "All levels", tracks: { "ai-knowledge": "AI Knowledge", "educational-theory": "Educational Theory" }, levels: { basics: "Basics", core: "Core" }, backToAcademy: "Back to Academy", summaryHeading: "Full lesson summary", coreIdeas: "3 core ideas", educationConnection: "Education connection", relatedConcepts: "3 related concepts", relatedLessons: "Related lessons", sources: "Sources", readingTimeLabel: "Estimated reading time", minuteAbbreviation: "min", searchFieldLabel: "Search Academy lessons", trackFieldLabel: "Filter by track", levelFieldLabel: "Filter by level", noResults: "No lessons matched the current filters." } },
   "zh-hant": { nav: "學院", copy: { eyebrow: "學院", title: "建立人工智能與學習科學的穩固基礎。", intro: "經審閱的配對課程把核心 AI 知識與教育理論連結到審慎實踐。", searchPlaceholder: "搜尋標題、主題、摘要或核心概念", resultCount: "節課", allTracks: "全部軌道", allLevels: "全部程度", tracks: { "ai-knowledge": "AI 知識", "educational-theory": "教育理論" }, levels: { basics: "基礎", core: "核心" }, backToAcademy: "返回學院", summaryHeading: "完整課程摘要", coreIdeas: "3 個核心概念", educationConnection: "教育連結", relatedConcepts: "3 個相關概念", relatedLessons: "相關課程", sources: "來源", readingTimeLabel: "預計閱讀時間", minuteAbbreviation: "分鐘", searchFieldLabel: "搜尋學院課程", trackFieldLabel: "按軌道篩選", levelFieldLabel: "按程度篩選", noResults: "目前篩選條件下沒有符合的課程。" } },
   "zh-hans": { nav: "学院", copy: { eyebrow: "学院", title: "建立人工智能与学习科学的坚实基础。", intro: "经审阅的配对课程将核心 AI 知识与教育理论连接到审慎实践。", searchPlaceholder: "搜索标题、主题、摘要或核心概念", resultCount: "节课", allTracks: "全部方向", allLevels: "全部程度", tracks: { "ai-knowledge": "AI 知识", "educational-theory": "教育理论" }, levels: { basics: "基础", core: "核心" }, backToAcademy: "返回学院", summaryHeading: "完整课程摘要", coreIdeas: "3 个核心概念", educationConnection: "教育联系", relatedConcepts: "3 个相关概念", relatedLessons: "相关课程", sources: "来源", readingTimeLabel: "预计阅读时间", minuteAbbreviation: "分钟", searchFieldLabel: "搜索学院课程", trackFieldLabel: "按方向筛选", levelFieldLabel: "按程度筛选", noResults: "当前筛选条件下没有匹配的课程。" } },
   es: { nav: "Academia", copy: { eyebrow: "Academia", title: "Construye bases sólidas en IA y ciencias del aprendizaje.", intro: "Lecciones revisadas conectan conocimientos esenciales de IA con teoría educativa.", searchPlaceholder: "Buscar título, tema, resumen o idea clave", resultCount: "lecciones", allTracks: "Todas las áreas", allLevels: "Todos los niveles", tracks: { "ai-knowledge": "Conocimiento de IA", "educational-theory": "Teoría educativa" }, levels: { basics: "Fundamentos", core: "Núcleo" }, backToAcademy: "Volver a Academia", summaryHeading: "Resumen completo", coreIdeas: "3 ideas clave", educationConnection: "Conexión educativa", relatedConcepts: "3 conceptos relacionados", relatedLessons: "Lecciones relacionadas", sources: "Fuentes", readingTimeLabel: "Tiempo de lectura estimado", minuteAbbreviation: "min", searchFieldLabel: "Buscar lecciones", trackFieldLabel: "Filtrar por área", levelFieldLabel: "Filtrar por nivel", noResults: "Ninguna lección coincide con los filtros." } },
@@ -1134,11 +1139,28 @@ const academyTranslations: Record<Locale, { nav: string; copy: AcademyDictionary
   bn: { nav: "একাডেমি", copy: { eyebrow: "একাডেমি", title: "AI ও শিক্ষাবিজ্ঞানে দৃঢ় ভিত্তি গড়ুন।", intro: "পর্যালোচিত যুগ্ম পাঠ অপরিহার্য AI জ্ঞানকে শিক্ষা তত্ত্বের সঙ্গে যুক্ত করে।", searchPlaceholder: "শিরোনাম, বিষয়, সারাংশ বা মূল ধারণা খুঁজুন", resultCount: "পাঠ", allTracks: "সব ট্র্যাক", allLevels: "সব স্তর", tracks: { "ai-knowledge": "AI জ্ঞান", "educational-theory": "শিক্ষা তত্ত্ব" }, levels: { basics: "ভিত্তি", core: "মূল" }, backToAcademy: "একাডেমিতে ফিরুন", summaryHeading: "সম্পূর্ণ পাঠ সারাংশ", coreIdeas: "৩টি মূল ধারণা", educationConnection: "শিক্ষার সংযোগ", relatedConcepts: "৩টি সম্পর্কিত ধারণা", relatedLessons: "সম্পর্কিত পাঠ", sources: "উৎস", readingTimeLabel: "আনুমানিক পড়ার সময়", minuteAbbreviation: "মিনিট", searchFieldLabel: "একাডেমির পাঠ খুঁজুন", trackFieldLabel: "ট্র্যাক দিয়ে ফিল্টার করুন", levelFieldLabel: "স্তর দিয়ে ফিল্টার করুন", noResults: "কোনো পাঠ বর্তমান ফিল্টারের সঙ্গে মেলেনি।" } },
 };
 
+const academyNewsletterCopy: Record<Locale, AcademyDictionary["newsletter"]> = {
+  en: { eyebrow: "Keep learning", title: "Connect PedaNova Academy lessons with the latest AIED technologies and learning theories", description: "Daily curated lesson updates." },
+  "zh-hant": { eyebrow: "持續學習", title: "把 PedaNova 學院課程連結至最新 AIED 技術與學習理論", description: "每天獲取一則精選 AIED 更新，延伸你在學院所學的內容。" },
+  "zh-hans": { eyebrow: "持续学习", title: "将 PedaNova 学院课程连接到最新 AIED 技术与学习理论", description: "每天获取一则精选 AIED 更新，拓展你在学院所学的内容。" },
+  es: { eyebrow: "Sigue aprendiendo", title: "Conecta las lecciones de PedaNova Academy con las últimas tecnologías AIED y teorías del aprendizaje", description: "Recibe cada día una actualización AIED cuidadosamente seleccionada para ampliar lo que aprendes en la Academia." },
+  fr: { eyebrow: "Continuez à apprendre", title: "Reliez les leçons de PedaNova Academy aux dernières technologies AIED et théories de l’apprentissage", description: "Recevez chaque jour une actualité AIED soigneusement sélectionnée pour prolonger vos apprentissages dans l’Académie." },
+  pt: { eyebrow: "Continue a aprender", title: "Ligue as lições da PedaNova Academy às mais recentes tecnologias AIED e teorias da aprendizagem", description: "Receba diariamente uma atualização AIED cuidadosamente selecionada para aprofundar o que aprende na Academia." },
+  de: { eyebrow: "Weiterlernen", title: "Verbinden Sie die Lektionen der PedaNova Academy mit den neuesten AIED-Technologien und Lerntheorien", description: "Erhalten Sie jeden Tag ein sorgfältig kuratiertes AIED-Update, das Ihr Lernen in der Akademie vertieft." },
+  ar: { eyebrow: "واصل التعلّم", title: "اربط دروس أكاديمية PedaNova بأحدث تقنيات الذكاء الاصطناعي في التعليم ونظريات التعلّم", description: "احصل كل يوم على تحديث مختار بعناية حول أبحاث الذكاء الاصطناعي في التعليم لتوسيع ما تتعلمه في الأكاديمية." },
+  ko: { eyebrow: "배움을 이어가세요", title: "PedaNova Academy 수업을 최신 AIED 기술 및 학습 이론과 연결하세요", description: "매일 엄선된 AIED 업데이트를 받아 아카데미에서 배운 내용을 확장하세요." },
+  ja: { eyebrow: "学びを続ける", title: "PedaNova Academyのレッスンを最新のAIED技術と学習理論につなげる", description: "厳選されたAIEDの最新情報を毎日受け取り、アカデミーでの学びを深めましょう。" },
+  hi: { eyebrow: "सीखना जारी रखें", title: "PedaNova Academy के पाठों को नवीनतम AIED तकनीकों और अधिगम सिद्धांतों से जोड़ें", description: "अकादमी में सीखी बातों को आगे बढ़ाने के लिए हर दिन सावधानी से चुना गया एक AIED अपडेट पाएँ।" },
+  ru: { eyebrow: "Продолжайте учиться", title: "Свяжите уроки PedaNova Academy с новейшими технологиями AIED и теориями обучения", description: "Получайте каждый день тщательно отобранный обзор AIED, чтобы углублять знания из Академии." },
+  id: { eyebrow: "Terus belajar", title: "Hubungkan pelajaran PedaNova Academy dengan teknologi AIED dan teori pembelajaran terbaru", description: "Dapatkan satu pembaruan AIED pilihan setiap hari untuk memperluas pembelajaran Anda di Akademi." },
+  bn: { eyebrow: "শেখা চালিয়ে যান", title: "PedaNova Academy-এর পাঠকে সাম্প্রতিক AIED প্রযুক্তি ও শিখন তত্ত্বের সঙ্গে যুক্ত করুন", description: "একাডেমিতে শেখা বিষয়কে আরও বিস্তৃত করতে প্রতিদিন যত্নসহকারে নির্বাচিত একটি AIED আপডেট পান।" },
+};
+
 export const dictionaries = Object.fromEntries(
   locales.map((locale) => [locale, {
     ...baseDictionaries[locale],
     nav: { ...baseDictionaries[locale].nav, academy: academyTranslations[locale].nav },
-    academy: academyTranslations[locale].copy,
+    academy: { ...academyTranslations[locale].copy, newsletter: academyNewsletterCopy[locale] },
   }])
 ) as Record<Locale, Dictionary>;
 

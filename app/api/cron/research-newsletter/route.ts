@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { normalizeLocale, type Locale } from "@/lib/i18n";
-import { buildWeeklyResearchDigest } from "@/lib/newsletter-digest";
+import { buildDailyResearchDigest } from "@/lib/newsletter-digest";
 import {
   buildUnsubscribeUrl,
   DatabaseNotConfiguredError,
@@ -21,24 +21,24 @@ interface EmailCopy {
 
 const emailCopy: Partial<Record<Locale, EmailCopy>> = {
   en: {
-    subject: "AIEDHK Weekly Research News",
-    heading: "Weekly Research News",
+    subject: "AIEDHK Daily Research News",
+    heading: "Daily Research News",
     readSummary: "Read summary",
-    disclaimer: "You are receiving this because you subscribed to the AIEDHK weekly research trial.",
+    disclaimer: "You are receiving this because you subscribed to AIEDHK daily research updates.",
     unsubscribe: "Unsubscribe",
   },
   "zh-hant": {
-    subject: "AIEDHK 每週研究新聞",
-    heading: "每週研究新聞",
+    subject: "AIEDHK 每日研究新聞",
+    heading: "每日研究新聞",
     readSummary: "閱讀摘要",
-    disclaimer: "你收到此郵件，是因為你訂閱了 AIEDHK 每週研究試讀。",
+    disclaimer: "你收到此郵件，是因為你訂閱了 AIEDHK 每日研究更新。",
     unsubscribe: "取消訂閱",
   },
   "zh-hans": {
-    subject: "AIEDHK 每周研究新闻",
-    heading: "每周研究新闻",
+    subject: "AIEDHK 每日研究新闻",
+    heading: "每日研究新闻",
     readSummary: "阅读摘要",
-    disclaimer: "你收到此邮件，是因为你订阅了 AIEDHK 每周研究试读。",
+    disclaimer: "你收到此邮件，是因为你订阅了 AIEDHK 每日研究更新。",
     unsubscribe: "取消订阅",
   },
 };
@@ -59,7 +59,7 @@ function escapeHtml(value: string) {
 function digestText(
   origin: string,
   locale: Locale,
-  items: Awaited<ReturnType<typeof buildWeeklyResearchDigest>>["items"],
+  items: Awaited<ReturnType<typeof buildDailyResearchDigest>>["items"],
   unsubscribeUrl: string
 ) {
   const copy = copyFor(locale);
@@ -82,7 +82,7 @@ function digestText(
 function digestHtml(
   origin: string,
   locale: Locale,
-  items: Awaited<ReturnType<typeof buildWeeklyResearchDigest>>["items"],
+  items: Awaited<ReturnType<typeof buildDailyResearchDigest>>["items"],
   unsubscribeUrl: string
 ) {
   const copy = copyFor(locale);
@@ -118,7 +118,7 @@ async function sendDigestEmail(input: {
   origin: string;
   from: string;
   apiKey: string;
-  digest: Awaited<ReturnType<typeof buildWeeklyResearchDigest>>;
+  digest: Awaited<ReturnType<typeof buildDailyResearchDigest>>;
 }): Promise<DeliveryResult> {
   if (input.digest.items.length === 0) return { status: "skipped_empty_digest" };
 
@@ -173,7 +173,7 @@ export async function GET(request: NextRequest) {
 
   const locale = normalizeLocale(request.nextUrl.searchParams.get("language"));
   const dryRun = request.nextUrl.searchParams.get("dryRun") === "1" || request.nextUrl.searchParams.get("dryRun") === "true";
-  const digest = await buildWeeklyResearchDigest(locale);
+  const digest = await buildDailyResearchDigest(locale);
   const resendApiKey = process.env.RESEND_API_KEY;
   const from = process.env.NEWSLETTER_FROM;
   const origin = request.nextUrl.origin;
@@ -184,6 +184,18 @@ export async function GET(request: NextRequest) {
       sendEnabled: Boolean(resendApiKey && from),
       provider: resendApiKey && from ? "resend" : "resend_not_configured",
       language: locale,
+      digest,
+    });
+  }
+
+  if (digest.items.length === 0) {
+    return NextResponse.json({
+      status: "skipped_empty_digest",
+      provider: "resend",
+      language: locale,
+      subscriberCount: 0,
+      sentCount: 0,
+      failedCount: 0,
       digest,
     });
   }

@@ -17,6 +17,7 @@ interface ResearchNewsletterSignupProps {
   locale: Locale;
   sourcePath: string;
   copy: NewsletterCopy;
+  variant?: "compact" | "wide";
 }
 
 function messageForState(state: SubmitState, copy: NewsletterCopy) {
@@ -36,12 +37,14 @@ function messageForState(state: SubmitState, copy: NewsletterCopy) {
   }
 }
 
-export default function ResearchNewsletterSignup({ locale, sourcePath, copy }: ResearchNewsletterSignupProps) {
+export default function ResearchNewsletterSignup({ locale, sourcePath, copy, variant = "compact" }: ResearchNewsletterSignupProps) {
   const [state, setState] = useState<SubmitState>("idle");
   const [email, setEmail] = useState("");
   const message = messageForState(state, copy);
   const isLoading = state === "loading";
   const isSuccess = state === "subscribed" || state === "already_subscribed";
+  const isWide = variant === "wide";
+  const headingSpacing = copy.eyebrow ? (isWide ? "mt-4" : "mt-3") : "";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -79,17 +82,17 @@ export default function ResearchNewsletterSignup({ locale, sourcePath, copy }: R
   }
 
   return (
-    <div className="rounded-4xl border border-aied-blue/20 bg-aied-ink p-6 text-white shadow-card">
-      <p className="text-xs font-black uppercase tracking-[0.2em] text-aied-cyan">{copy.eyebrow}</p>
-      <h2 className="mt-3 text-2xl font-black leading-tight tracking-tight">{copy.title}</h2>
-      <p className="mt-3 text-sm leading-6 text-slate-200">{copy.description}</p>
+    <div className={`rounded-4xl border border-aied-blue/20 bg-aied-ink text-white shadow-card ${isWide ? "p-8 sm:p-10 lg:p-12 xl:p-14" : "p-6"}`}>
+      {copy.eyebrow ? <p className={`${isWide ? "text-sm sm:text-base" : "text-xs"} font-black uppercase tracking-[0.2em] text-aied-cyan`}>{copy.eyebrow}</p> : null}
+      <h2 className={`${headingSpacing} ${isWide ? "max-w-5xl text-3xl leading-[1.08] sm:text-4xl lg:text-5xl" : "text-2xl leading-tight"} text-balance font-black tracking-tight`}>{copy.title}</h2>
+      <p className={`${isWide ? "mt-5 max-w-4xl text-base leading-7 sm:text-lg sm:leading-8 lg:text-xl" : "mt-3 text-sm leading-6"} text-slate-200`}>{copy.description}</p>
 
-      <form onSubmit={handleSubmit} className="mt-5">
+      <form onSubmit={handleSubmit} className={isWide ? "mt-8" : "mt-5"}>
         <label htmlFor="research-newsletter-email" className="sr-only">
           {copy.emailLabel}
         </label>
         <input name="company" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
-        <div className="grid gap-3 sm:grid-cols-[minmax(0,1fr)_auto]">
+        <div className={`grid gap-3 ${isWide ? "md:grid-cols-[minmax(0,1fr)_auto] md:gap-5" : "sm:grid-cols-[minmax(0,1fr)_auto]"}`}>
           <input
             id="research-newsletter-email"
             type="email"
@@ -101,12 +104,12 @@ export default function ResearchNewsletterSignup({ locale, sourcePath, copy }: R
             placeholder={copy.emailPlaceholder}
             autoComplete="email"
             required
-            className="focus-ring min-h-12 rounded-2xl border border-white/15 bg-white px-4 py-3 text-sm font-semibold text-aied-ink outline-none transition placeholder:text-slate-400 focus:border-aied-cyan"
+            className={`focus-ring rounded-2xl border border-white/15 bg-white font-semibold text-aied-ink outline-none transition placeholder:text-slate-400 focus:border-aied-cyan ${isWide ? "min-h-14 px-5 py-4 text-base sm:min-h-16 sm:px-6 sm:text-lg" : "min-h-12 px-4 py-3 text-sm"}`}
           />
           <button
             type="submit"
             disabled={isLoading}
-            className="focus-ring min-h-12 rounded-2xl bg-aied-cyan px-5 py-3 text-sm font-black text-slate-950 transition hover:bg-white disabled:cursor-wait disabled:opacity-70"
+            className={`focus-ring rounded-2xl bg-aied-cyan font-black text-slate-950 transition hover:bg-white disabled:cursor-wait disabled:opacity-70 ${isWide ? "min-h-14 px-8 py-4 text-base sm:min-h-16 sm:px-10 sm:text-lg" : "min-h-12 px-5 py-3 text-sm"}`}
           >
             {isLoading ? copy.submitting : copy.submit}
           </button>

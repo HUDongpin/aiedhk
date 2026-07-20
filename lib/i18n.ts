@@ -1140,7 +1140,7 @@ const academyTranslations: Record<Locale, { nav: string; copy: Omit<AcademyDicti
 };
 
 const academyNewsletterCopy: Record<Locale, AcademyDictionary["newsletter"]> = {
-  en: { eyebrow: "Keep learning", title: "Connect PedaNova Academy lessons with the latest AIED technologies and learning theories", description: "Get one carefully curated AIED update every day to extend what you learn in the Academy." },
+  en: { eyebrow: "Keep learning", title: "Connect PedaNova Academy lessons with the latest AIED technologies and learning theories", description: "Daily curated paper updates." },
   "zh-hant": { eyebrow: "持續學習", title: "把 PedaNova 學院課程連結至最新 AIED 技術與學習理論", description: "每天獲取一則精選 AIED 更新，延伸你在學院所學的內容。" },
   "zh-hans": { eyebrow: "持续学习", title: "将 PedaNova 学院课程连接到最新 AIED 技术与学习理论", description: "每天获取一则精选 AIED 更新，拓展你在学院所学的内容。" },
   es: { eyebrow: "Sigue aprendiendo", title: "Conecta las lecciones de PedaNova Academy con las últimas tecnologías AIED y teorías del aprendizaje", description: "Recibe cada día una actualización AIED cuidadosamente seleccionada para ampliar lo que aprendes en la Academia." },

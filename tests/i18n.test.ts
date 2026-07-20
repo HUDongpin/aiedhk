@@ -24,8 +24,8 @@ test("English news hero describes academic papers and audio summaries", () => {
   );
 });
 
-test("English News newsletter promises daily curated paper updates", () => {
-  assert.equal(getDictionary("en").research.newsletter.description, "Daily curated paper updates.");
+test("English News newsletter promises daily curated news updates", () => {
+  assert.equal(getDictionary("en").research.newsletter.description, "Daily curated news updates.");
 });
 
 test("English About company description uses the PedaNova Ed-Tech name", () => {

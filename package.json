@@ -5,6 +5,7 @@
   "description": "AIEDHK — AI in Education Hub of Knowledge | Hong Kong as an AIED Hub",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "tsx scripts/generate-research-audio-sources.ts",
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",

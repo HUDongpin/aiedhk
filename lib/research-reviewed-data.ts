@@ -2,6 +2,116 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-031",
+    slug: "news-chatgpt-sites-claude-creative-gemini-education-building-2026",
+    title: "News: ChatGPT Sites, Claude creative tools and Gemini Education turn learners into builders",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "ChatGPT Sites", "Claude creative tools", "Gemini for Education"],
+    image: "/images/research/covers/aied-031-ai-creation-learning-studios-2026.png",
+    imageAlt: "Editorial cover for learners building web, design, and multimedia projects with supervised AI tools",
+    summaryImage: "/images/research/summary/aied-031-ai-creation-learning-studios-summary.png",
+    summaryImageAlt:
+      "Students and an educator inspect an interactive website, a three-dimensional model, and a visual learning project while retaining human review.",
+    summaryAudio: "/audio/research/aied-031-ai-creation-learning-studios-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news summary",
+    shortSummary:
+      "News roundup: ChatGPT Sites can publish lightweight web apps, Claude now connects to professional creative tools and code, and Gemini for Education combines guided learning with research and multimedia creation.",
+    fullSummary: `This product-news roundup follows a distinct shift in educational AI: learners can increasingly move from asking for answers to building usable artifacts. OpenAI's ChatGPT Sites turns a description into an interactive website or lightweight app. Anthropic's Claude for Creative Work connects Claude and Claude Code to professional design, audio, three-dimensional modelling, and production tools. Google's current Gemini for Education offer combines Guided Learning with quizzes, research, visual explainers, notebooks, and course integrations. Together, the products create new possibilities for project-based learning, but they also make it easier to produce a polished artifact without mastering the concepts, tools, or decisions behind it.
+
+OpenAI's current ChatGPT Sites guidance describes a public beta that can create, preview, publish, and share interactive websites and lightweight applications. A user can start in ChatGPT Work on the web or in Work or Codex on the desktop, describe a dashboard, calculator, prototype, portal, or report, review a private preview, request changes, and publish it to a production URL. Paid plans receive access in stages, with Pro, Pro Lite, Enterprise, and Edu among the first groups. Workspace administrators can control creation and publishing, while public sharing must be explicitly enabled in Enterprise environments.
+
+For education, Sites could lower the technical barrier to making a simulation, interactive explanation, research exhibit, class dashboard, or decision tool. The learning value depends on the task design. If a student only describes the desired output and submits the deployed result, the finished site may conceal weak understanding. A stronger assignment would require a written specification, evaluation criteria, version history, accessibility checks, source attribution, tests of calculations, and an explanation of what the learner changed after reviewing the generated site. OpenAI also tells users to review content and audience before publishing, which is especially important when projects contain student data, copyrighted material, or public forms.
+
+Anthropic's April 28 Claude for Creative Work release applies the same artifact-building direction to established creative software. New connectors span Ableton, Adobe Creative Cloud, Affinity by Canva, Autodesk Fusion, Blender, Resolume, SketchUp, and Splice. Anthropic says Claude can act as an on-demand tutor for complex tools, while Claude Code can create scripts, plugins, shaders, procedural animation, and generative systems. The company is also working with art and design programmes at the Rhode Island School of Design, Ringling College of Art and Design, and Goldsmiths, University of London, giving students and faculty access to Claude and the connectors.
+
+These integrations could support creative computation, design iteration, and interdisciplinary maker work. They also blur the boundary between learning a tool and delegating the tool. Educators should therefore ask students to inspect and annotate generated scripts, preserve rejected versions, explain material and aesthetic choices, and demonstrate a technique independently. Licensing, provenance, connector permissions, and the privacy of unpublished creative work also belong in the assessment, not only in institutional policy.
+
+Google's Gemini for Education products add an explicitly educational layer to the same trend. Google's higher-education guidance describes Guided Learning for deeper understanding, personalized quizzes and flashcards, research across browser tabs, video and audio overviews, Gemini LTI assignments in Canvas, improved LaTeX and PDF generation in Gemini Canvas, and presentation drafting. The purpose is broader than content generation: students can study, research, explain, and create within school-issued environments, while institutions can provide Gemini for Education and NotebookLM through managed accounts.
+
+For Hong Kong schools and universities, the combined product signal is a move from prompt literacy toward artifact literacy. A useful pilot should ask whether learners can define the problem, judge the generated design, verify code and sources, improve accessibility, document ownership, and defend the final artifact without the tool. Product access should be paired with teacher exemplars, age-appropriate privacy controls, and rubrics that reward process and subject knowledge. The opportunity is not merely faster production. It is to let more learners build meaningful things while making human judgment, disciplinary understanding, and responsible publication visible throughout the work.`,
+    keyTakeaways: [
+      "News: ChatGPT Sites can turn a description into a reviewed and published interactive website or lightweight app, including for Edu workspaces as access rolls out.",
+      "Claude's creative connectors and Claude Code can tutor learners inside professional tools and generate scripts or plugins, making process evidence and independent technique checks essential.",
+      "Gemini for Education combines Guided Learning, quizzes, research, multimedia explainers, notebooks, and course integrations, so artifact quality should be assessed separately from learner understanding.",
+    ],
+    whyItMatters:
+      "Industry news signal: mainstream AI products now help learners publish, design, code, research, and present complete artifacts, so AIEDHK should evaluate authorship, process evidence, accessibility, privacy, and independent mastery together.",
+    sourceUrl: "https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites",
+    sourceUrls: [
+      {
+        label: "OpenAI ChatGPT Sites guidance",
+        url: "https://help.openai.com/en/articles/20001339-creating-and-managing-chatgpt-sites",
+      },
+      {
+        label: "OpenAI Academy ChatGPT Sites overview",
+        url: "https://openai.com/academy/chatgpt-sites/",
+      },
+      {
+        label: "Anthropic Claude for Creative Work",
+        url: "https://www.anthropic.com/news/claude-for-creative-work",
+      },
+      {
+        label: "Google Gemini for Education in higher education",
+        url: "https://blog.google/products-and-platforms/products/education/gemini-higher-education-benefits/",
+      },
+    ],
+    createdAt: "2026-07-21",
+  },
+  {
+    id: "aied-030",
+    slug: "machine-learning-literacy-senior-primary-hong-kong",
+    title: "Fostering machine learning literacy in senior primary education: Evaluating a structured pedagogical course design",
+    authors: ["Siu Cheung Kong", "Qiaoyi Wang"],
+    venue: "Computers and Education: Artificial Intelligence",
+    year: 2026,
+    type: "journal",
+    tags: ["machine learning literacy", "primary AI education", "Hong Kong"],
+    image: "/images/research/covers/aied-030-primary-machine-learning-literacy-2026.png",
+    imageAlt: "Editorial cover for a Hong Kong primary-school machine learning literacy course using trainable robots",
+    summaryImage: "/images/research/summary/aied-030-primary-machine-learning-literacy-summary.png",
+    summaryImageAlt:
+      "Primary learners compare robot training runs while a teacher connects their observations to supervised and reinforcement learning concepts.",
+    summaryAudio: "/audio/research/aied-030-primary-machine-learning-literacy-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A structured six-to-eight-hour course across seven Hong Kong primary schools helped 752 students understand supervised and reinforcement learning through guided worksheets, robot training, and visible model refinement.",
+    fullSummary: `Kong and Wang address a basic weakness in much school AI literacy: students may learn to operate an AI tool without understanding how or why a machine-learning system changes its behaviour. Their 2026 article in Computers and Education: Artificial Intelligence evaluates whether fundamental machine-learning concepts can be taught to senior primary learners through a short, deliberately structured course. The study is especially relevant to AIEDHK because it was conducted across seven Hong Kong primary schools and led by researchers at The Education University of Hong Kong.
+
+The course involved 752 students with an average age of 11.36 years. It lasted between six and eight hours, making it closer to a feasible school module than a full computing qualification. Instead of beginning with mathematical notation or open-ended programming, the design combined guided worksheets, hands-on robot activities, competitive circuit tasks, and real-time visualizations of algorithms. Students repeatedly worked with data processing, parameter adjustment, and model training inside the robots' software. This let them observe how changes to data or settings affected behaviour and then refine the system.
+
+The content went beyond a general definition of artificial intelligence. Students encountered supervised learning and reinforcement learning and worked with ideas connected to k-nearest neighbours and artificial neural networks. The robot tasks made those abstract ideas inspectable: learners could train a system, test it on a circuit, observe its performance, and adjust the model. The worksheets and teacher-guided sequence provided conceptual scaffolding around that activity so that trial and error was tied to an explanation of what the machine was learning.
+
+The researchers used pre- and post-course tests to examine changes in machine-learning understanding. Scores improved significantly, with a reported Wilcoxon effect size of 0.55. The public article abstract characterizes this as evidence that students comprehended the targeted forms of machine learning and their associated algorithms. The study also used student interviews and thematic analysis. Students described the combination of structured guidance, practical interaction, and iterative refinement as supporting both engagement and conceptual learning.
+
+One notable qualitative finding was that some learners began to distinguish machine learning from human learning. That reflection matters because AI literacy is not simply technical vocabulary. Understanding that an algorithm learns from data, objectives, feedback, and parameter updates can help children question what a system knows, where errors come from, and why human learning cannot be reduced to the same process. The course therefore connects computational understanding with an early form of critical AI literacy.
+
+The findings should still be interpreted within the study's boundaries. The reported evaluation concerns a short course in seven Hong Kong schools and relies on before-and-after measures plus interviews rather than a randomized comparison with another curriculum. It establishes promising near-term conceptual change, but it does not by itself show long-term retention, transfer to unfamiliar AI systems, effects on later tool use, or equal benefit across learner groups. Robot hardware, software, preparation time, and teacher expertise may also affect whether other schools can reproduce the course.
+
+For AIEDHK, the practical lesson is to teach the mechanism beneath the interface. A school does not need to turn every child into a machine-learning engineer, but learners should have repeated opportunities to collect or inspect data, train a model, observe failure, adjust parameters, and explain the resulting behaviour. Guided worksheets and visual feedback can keep hands-on activity conceptually focused. A careful local rollout would add delayed assessment, compare alternative teaching designs, monitor accessibility and subgroup outcomes, and document teacher development and resource requirements. The study's strongest contribution is showing that primary learners can engage with real machine-learning ideas when pedagogy makes the learning process visible.`,
+    keyTakeaways: [
+      "The study evaluated a six-to-eight-hour machine-learning literacy course with 752 students, average age 11.36, across seven Hong Kong primary schools.",
+      "Guided worksheets, trainable robots, competitive circuit tasks, and real-time visualizations helped students work with supervised learning, reinforcement learning, KNN, and neural-network concepts.",
+      "Pre/post understanding improved with a reported Wilcoxon effect size of 0.55, while interviews suggested conceptual engagement and early reflection on differences between machine and human learning.",
+    ],
+    whyItMatters:
+      "For AIEDHK, this local study shows that primary AI literacy can move beyond tool use when learners inspect data, training, feedback, and model behaviour through structured, hands-on pedagogy.",
+    sourceUrl: "https://doi.org/10.1016/j.caeai.2026.100631",
+    sourceUrls: [
+      {
+        label: "Open-access journal article",
+        url: "https://doi.org/10.1016/j.caeai.2026.100631",
+      },
+      {
+        label: "EdUHK Research Repository record",
+        url: "https://repository.eduhk.hk/en/publications/fostering-machine-learning-literacy-in-senior-primary-education-e/",
+      },
+    ],
+    createdAt: "2026-07-21",
+  },
+  {
     id: "aied-029",
     slug: "news-chatgpt-voice-claude-sonnet-gemini-notebook-2026",
     title: "News: ChatGPT Voice, Claude Sonnet 5 and Gemini Notebook expand AI interaction",

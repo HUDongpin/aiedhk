@@ -27,7 +27,7 @@ test("English news hero describes academic papers and audio summaries", () => {
 test("English News newsletter promises daily curated news updates", () => {
   const newsletter = getDictionary("en").research.newsletter;
 
-  assert.equal(newsletter.eyebrow, "");
+  assert.equal(newsletter.eyebrow, "Free daily summary");
   assert.equal(newsletter.description, "Daily curated news updates.");
   assert.match(newsletter.success, /daily AIED news/i);
   assert.match(newsletter.alreadySubscribed, /daily AIED news/i);

@@ -102,7 +102,7 @@ test("Academy places a localized compact newsletter invitation beside the hero",
   assert.doesNotMatch(html, /lg:text-5xl/);
 });
 
-test("News newsletter removes the weekly-trial eyebrow", () => {
+test("News newsletter shows the free daily summary eyebrow", () => {
   const dictionary = getDictionary("en");
   const html = renderToStaticMarkup(React.createElement(ResearchNewsletterSignup, {
     locale: "en",
@@ -110,7 +110,7 @@ test("News newsletter removes the weekly-trial eyebrow", () => {
     copy: dictionary.research.newsletter,
   }));
 
+  assert.match(html, /Free daily summary/);
   assert.match(html, /Daily curated news updates\./);
   assert.doesNotMatch(html, /Free weekly trial/);
-  assert.doesNotMatch(html, /tracking-\[0\.22em\]/);
 });

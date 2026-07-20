@@ -3,8 +3,31 @@ import test from "node:test";
 import { getDictionary, locales } from "@/lib/i18n";
 import { PAPER_TYPES } from "@/lib/types";
 
+const newsNavigationLabels = {
+  en: "News",
+  "zh-hant": "新聞",
+  "zh-hans": "新闻",
+  es: "Noticias",
+  fr: "Actualités",
+  pt: "Notícias",
+  de: "Nachrichten",
+  ar: "الأخبار",
+  ko: "뉴스",
+  ja: "ニュース",
+  hi: "समाचार",
+  ru: "Новости",
+  id: "Berita",
+  bn: "সংবাদ",
+} as const;
+
 test("English research news labels policy-ethics as Industry", () => {
   assert.equal(getDictionary("en").paperTypes["policy-ethics"], "Industry");
+});
+
+test("navigation translates News without adding a research qualifier", () => {
+  for (const locale of locales) {
+    assert.equal(getDictionary(locale).nav.researchNews, newsNavigationLabels[locale]);
+  }
 });
 
 test("paper type fallback labels policy-ethics as Industry", () => {

@@ -102,6 +102,18 @@ test("each reviewed paper has a different cover bitmap", () => {
   }
 });
 
+test("visually duplicated News covers keep their dedicated replacement assets", () => {
+  const papers = getResearchPapers("en");
+  const nationalDeployments = papers.find((paper) => paper.id === "aied-014");
+  const llmOpportunitiesAndRisks = papers.find((paper) => paper.id === "aied-002");
+
+  assert.equal(
+    nationalDeployments?.image,
+    "/images/research/covers/aied-014-openai-countries-2026-v2.png",
+  );
+  assert.equal(llmOpportunitiesAndRisks?.image, "/images/research/covers/aied-002-kasneci-2023-v2.png");
+});
+
 test("reviewed static media overrides stale database cover paths", () => {
   const reviewedPaper = getResearchPapers("en").find((paper) => paper.id === "aied-001");
   assert.ok(reviewedPaper);

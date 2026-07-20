@@ -657,8 +657,9 @@ For Hong Kong, the paper is especially relevant because English writing, multili
     year: 2026,
     type: "policy-ethics",
     tags: ["news", "ChatGPT Education", "national deployment"],
-    image: "/images/research/covers/aied-014-openai-countries-2026.png",
-    imageAlt: "Editorial cover for OpenAI ChatGPT Education national deployment news",
+    image: "/images/research/covers/aied-014-openai-countries-2026-v2.png",
+    imageAlt:
+      "Education leaders planning national ChatGPT Edu deployments across connected campuses on a physical map",
     summaryImage: "/images/research/summary/aied-014-openai-countries-summary.png",
     summaryImageAlt:
       "Premium editorial illustration of national ChatGPT Education deployment through institutions, teacher training, localization, evidence measurement, and governance.",
@@ -866,8 +867,9 @@ For AIEDHK, this paper can anchor a why-review-matters narrative. It supports th
     year: 2023,
     type: "review",
     tags: ["large language models", "ChatGPT", "teacher support"],
-    image: "/images/research/covers/aied-002-kasneci-2023.png",
-    imageAlt: "Academic cover for a position paper on ChatGPT and large language models in education",
+    image: "/images/research/covers/aied-002-kasneci-2023-v2.png",
+    imageAlt:
+      "Student and teacher balancing learning support with privacy risks while reviewing large-language-model output",
     summaryImage: "/images/research/summary/aied-002-kasneci-llm-education-summary.png",
     summaryImageAlt:
       "Premium tabletop illustration of large language models in education balancing personalized support, teacher workflows, assessment, accessibility, privacy, bias, and transparency.",

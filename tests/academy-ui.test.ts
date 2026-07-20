@@ -91,6 +91,8 @@ test("Academy ends with a localized wide newsletter invitation", () => {
   assert.match(academyPageSource, /variant="wide"/);
   assert.match(html, /Keep learning/);
   assert.match(html, /Connect PedaNova Academy lessons with the latest AIED technologies and learning theories/);
+  assert.match(html, /Get one carefully curated AIED update every day to extend what you learn in the Academy\./);
+  assert.doesNotMatch(html, /each week/);
   assert.match(html, /you@example\.com/);
   assert.match(html, />Subscribe<\/button>/);
   assert.match(html, /lg:text-5xl/);

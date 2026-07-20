@@ -1140,20 +1140,20 @@ const academyTranslations: Record<Locale, { nav: string; copy: Omit<AcademyDicti
 };
 
 const academyNewsletterCopy: Record<Locale, AcademyDictionary["newsletter"]> = {
-  en: { eyebrow: "Keep learning", title: "Connect PedaNova Academy lessons with the latest AIED technologies and learning theories", description: "Get one carefully curated AIED update each week to extend what you learn in the Academy." },
-  "zh-hant": { eyebrow: "持續學習", title: "把 PedaNova 學院課程連結至最新 AIED 技術與學習理論", description: "每週獲取一則精選 AIED 更新，延伸你在學院所學的內容。" },
-  "zh-hans": { eyebrow: "持续学习", title: "将 PedaNova 学院课程连接到最新 AIED 技术与学习理论", description: "每周获取一则精选 AIED 更新，拓展你在学院所学的内容。" },
-  es: { eyebrow: "Sigue aprendiendo", title: "Conecta las lecciones de PedaNova Academy con las últimas tecnologías AIED y teorías del aprendizaje", description: "Recibe cada semana una actualización AIED cuidadosamente seleccionada para ampliar lo que aprendes en la Academia." },
-  fr: { eyebrow: "Continuez à apprendre", title: "Reliez les leçons de PedaNova Academy aux dernières technologies AIED et théories de l’apprentissage", description: "Recevez chaque semaine une actualité AIED soigneusement sélectionnée pour prolonger vos apprentissages dans l’Académie." },
-  pt: { eyebrow: "Continue a aprender", title: "Ligue as lições da PedaNova Academy às mais recentes tecnologias AIED e teorias da aprendizagem", description: "Receba semanalmente uma atualização AIED cuidadosamente selecionada para aprofundar o que aprende na Academia." },
-  de: { eyebrow: "Weiterlernen", title: "Verbinden Sie die Lektionen der PedaNova Academy mit den neuesten AIED-Technologien und Lerntheorien", description: "Erhalten Sie jede Woche ein sorgfältig kuratiertes AIED-Update, das Ihr Lernen in der Akademie vertieft." },
-  ar: { eyebrow: "واصل التعلّم", title: "اربط دروس أكاديمية PedaNova بأحدث تقنيات الذكاء الاصطناعي في التعليم ونظريات التعلّم", description: "احصل كل أسبوع على تحديث مختار بعناية حول أبحاث الذكاء الاصطناعي في التعليم لتوسيع ما تتعلمه في الأكاديمية." },
-  ko: { eyebrow: "배움을 이어가세요", title: "PedaNova Academy 수업을 최신 AIED 기술 및 학습 이론과 연결하세요", description: "매주 엄선된 AIED 업데이트를 받아 아카데미에서 배운 내용을 확장하세요." },
-  ja: { eyebrow: "学びを続ける", title: "PedaNova Academyのレッスンを最新のAIED技術と学習理論につなげる", description: "厳選されたAIEDの最新情報を毎週受け取り、アカデミーでの学びを深めましょう。" },
-  hi: { eyebrow: "सीखना जारी रखें", title: "PedaNova Academy के पाठों को नवीनतम AIED तकनीकों और अधिगम सिद्धांतों से जोड़ें", description: "अकादमी में सीखी बातों को आगे बढ़ाने के लिए हर सप्ताह सावधानी से चुना गया एक AIED अपडेट पाएँ।" },
-  ru: { eyebrow: "Продолжайте учиться", title: "Свяжите уроки PedaNova Academy с новейшими технологиями AIED и теориями обучения", description: "Получайте раз в неделю тщательно отобранный обзор AIED, чтобы углублять знания из Академии." },
-  id: { eyebrow: "Terus belajar", title: "Hubungkan pelajaran PedaNova Academy dengan teknologi AIED dan teori pembelajaran terbaru", description: "Dapatkan satu pembaruan AIED pilihan setiap minggu untuk memperluas pembelajaran Anda di Akademi." },
-  bn: { eyebrow: "শেখা চালিয়ে যান", title: "PedaNova Academy-এর পাঠকে সাম্প্রতিক AIED প্রযুক্তি ও শিখন তত্ত্বের সঙ্গে যুক্ত করুন", description: "একাডেমিতে শেখা বিষয়কে আরও বিস্তৃত করতে প্রতি সপ্তাহে যত্নসহকারে নির্বাচিত একটি AIED আপডেট পান।" },
+  en: { eyebrow: "Keep learning", title: "Connect PedaNova Academy lessons with the latest AIED technologies and learning theories", description: "Get one carefully curated AIED update every day to extend what you learn in the Academy." },
+  "zh-hant": { eyebrow: "持續學習", title: "把 PedaNova 學院課程連結至最新 AIED 技術與學習理論", description: "每天獲取一則精選 AIED 更新，延伸你在學院所學的內容。" },
+  "zh-hans": { eyebrow: "持续学习", title: "将 PedaNova 学院课程连接到最新 AIED 技术与学习理论", description: "每天获取一则精选 AIED 更新，拓展你在学院所学的内容。" },
+  es: { eyebrow: "Sigue aprendiendo", title: "Conecta las lecciones de PedaNova Academy con las últimas tecnologías AIED y teorías del aprendizaje", description: "Recibe cada día una actualización AIED cuidadosamente seleccionada para ampliar lo que aprendes en la Academia." },
+  fr: { eyebrow: "Continuez à apprendre", title: "Reliez les leçons de PedaNova Academy aux dernières technologies AIED et théories de l’apprentissage", description: "Recevez chaque jour une actualité AIED soigneusement sélectionnée pour prolonger vos apprentissages dans l’Académie." },
+  pt: { eyebrow: "Continue a aprender", title: "Ligue as lições da PedaNova Academy às mais recentes tecnologias AIED e teorias da aprendizagem", description: "Receba diariamente uma atualização AIED cuidadosamente selecionada para aprofundar o que aprende na Academia." },
+  de: { eyebrow: "Weiterlernen", title: "Verbinden Sie die Lektionen der PedaNova Academy mit den neuesten AIED-Technologien und Lerntheorien", description: "Erhalten Sie jeden Tag ein sorgfältig kuratiertes AIED-Update, das Ihr Lernen in der Akademie vertieft." },
+  ar: { eyebrow: "واصل التعلّم", title: "اربط دروس أكاديمية PedaNova بأحدث تقنيات الذكاء الاصطناعي في التعليم ونظريات التعلّم", description: "احصل كل يوم على تحديث مختار بعناية حول أبحاث الذكاء الاصطناعي في التعليم لتوسيع ما تتعلمه في الأكاديمية." },
+  ko: { eyebrow: "배움을 이어가세요", title: "PedaNova Academy 수업을 최신 AIED 기술 및 학습 이론과 연결하세요", description: "매일 엄선된 AIED 업데이트를 받아 아카데미에서 배운 내용을 확장하세요." },
+  ja: { eyebrow: "学びを続ける", title: "PedaNova Academyのレッスンを最新のAIED技術と学習理論につなげる", description: "厳選されたAIEDの最新情報を毎日受け取り、アカデミーでの学びを深めましょう。" },
+  hi: { eyebrow: "सीखना जारी रखें", title: "PedaNova Academy के पाठों को नवीनतम AIED तकनीकों और अधिगम सिद्धांतों से जोड़ें", description: "अकादमी में सीखी बातों को आगे बढ़ाने के लिए हर दिन सावधानी से चुना गया एक AIED अपडेट पाएँ।" },
+  ru: { eyebrow: "Продолжайте учиться", title: "Свяжите уроки PedaNova Academy с новейшими технологиями AIED и теориями обучения", description: "Получайте каждый день тщательно отобранный обзор AIED, чтобы углублять знания из Академии." },
+  id: { eyebrow: "Terus belajar", title: "Hubungkan pelajaran PedaNova Academy dengan teknologi AIED dan teori pembelajaran terbaru", description: "Dapatkan satu pembaruan AIED pilihan setiap hari untuk memperluas pembelajaran Anda di Akademi." },
+  bn: { eyebrow: "শেখা চালিয়ে যান", title: "PedaNova Academy-এর পাঠকে সাম্প্রতিক AIED প্রযুক্তি ও শিখন তত্ত্বের সঙ্গে যুক্ত করুন", description: "একাডেমিতে শেখা বিষয়কে আরও বিস্তৃত করতে প্রতিদিন যত্নসহকারে নির্বাচিত একটি AIED আপডেট পান।" },
 };
 
 export const dictionaries = Object.fromEntries(

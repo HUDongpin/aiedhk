@@ -28,6 +28,10 @@ test("English News newsletter promises daily curated paper updates", () => {
   assert.equal(getDictionary("en").research.newsletter.description, "Daily curated paper updates.");
 });
 
+test("English About company description uses the PedaNova Ed-Tech name", () => {
+  assert.match(getDictionary("en").about.companyText, /^PedaNova Ed-Tech is an R&D company/);
+});
+
 test("all fourteen locale dictionaries provide typed Academy navigation and page labels", () => {
   assert.equal(getDictionary("en").nav.academy, "Academy");
   for (const locale of locales) {

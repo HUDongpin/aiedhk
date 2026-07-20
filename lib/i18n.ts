@@ -223,7 +223,7 @@ const enDictionary = {
     ],
     companyTitle: "Company",
     companyText:
-      "PedaNova EdTech is an R&D company rooted in AIED-native innovation. Its vision is to advance future-facing educational innovation that improves learning, teaching, and evidence-based growth.",
+      "PedaNova Ed-Tech is an R&D company rooted in AIED-native innovation. Its vision is to advance future-facing educational innovation that improves learning, teaching, and evidence-based growth.",
     portfolioLabel: "Portfolio",
     productsTitle: "Products",
     products: [

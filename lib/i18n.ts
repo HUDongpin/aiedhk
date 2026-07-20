@@ -181,8 +181,8 @@ const enDictionary = {
     ],
   },
   research: {
-    eyebrow: "News",
-    title: "AIED papers & news, summarized for research-to-product translation.",
+    eyebrow: "AIED News",
+    title: "AIED summaries for research-to-product translation.",
     intro:
       "A curated feed of AIED academic papers and news. Each card offers a concise overview, while each detail page includes a 500-word written summary, an audio summary, and practical takeaways.",
     searchPlaceholder: "Search title, author, topic, or keyword",
@@ -191,7 +191,7 @@ const enDictionary = {
       "Prepared for weekly Codex-assisted ingestion: crawl papers, generate summaries, tag topics, review, and publish.",
     newsletter: {
       eyebrow: "Free daily summary",
-      title: "Get the latest AIED papers and news in your inbox",
+      title: "Get the latest AIED summaries in your inbox",
       description: "Daily curated news updates.",
       emailLabel: "Email address",
       emailPlaceholder: "you@example.com",
@@ -1123,7 +1123,7 @@ for (const locale of ["fr", "pt", "de", "ar", "ko", "ja", "hi", "ru", "id", "bn"
 }
 
 const academyTranslations: Record<Locale, { nav: string; copy: Omit<AcademyDictionary, "newsletter"> }> = {
-  en: { nav: "Academy", copy: { eyebrow: "Academy", title: "Build durable foundations in AI and learning science.", intro: "Paired, reviewed lessons connect essential AI knowledge with educational theory for thoughtful practice.", searchPlaceholder: "Search title, topic, summary, or core idea", resultCount: "lessons", allTracks: "All tracks", allLevels: "All levels", tracks: { "ai-knowledge": "AI Knowledge", "educational-theory": "Educational Theory" }, levels: { basics: "Basics", core: "Core" }, backToAcademy: "Back to Academy", summaryHeading: "Full lesson summary", coreIdeas: "3 core ideas", educationConnection: "Education connection", relatedConcepts: "3 related concepts", relatedLessons: "Related lessons", sources: "Sources", readingTimeLabel: "Estimated reading time", minuteAbbreviation: "min", searchFieldLabel: "Search Academy lessons", trackFieldLabel: "Filter by track", levelFieldLabel: "Filter by level", noResults: "No lessons matched the current filters." } },
+  en: { nav: "Academy", copy: { eyebrow: "PedaNova Academy", title: "Build durable foundations in AI and learning science.", intro: "Paired, reviewed lessons connect essential AI knowledge with educational theory for thoughtful practice.", searchPlaceholder: "Search title, topic, summary, or core idea", resultCount: "lessons", allTracks: "All tracks", allLevels: "All levels", tracks: { "ai-knowledge": "AI Knowledge", "educational-theory": "Educational Theory" }, levels: { basics: "Basics", core: "Core" }, backToAcademy: "Back to Academy", summaryHeading: "Full lesson summary", coreIdeas: "3 core ideas", educationConnection: "Education connection", relatedConcepts: "3 related concepts", relatedLessons: "Related lessons", sources: "Sources", readingTimeLabel: "Estimated reading time", minuteAbbreviation: "min", searchFieldLabel: "Search Academy lessons", trackFieldLabel: "Filter by track", levelFieldLabel: "Filter by level", noResults: "No lessons matched the current filters." } },
   "zh-hant": { nav: "學院", copy: { eyebrow: "學院", title: "建立人工智能與學習科學的穩固基礎。", intro: "經審閱的配對課程把核心 AI 知識與教育理論連結到審慎實踐。", searchPlaceholder: "搜尋標題、主題、摘要或核心概念", resultCount: "節課", allTracks: "全部軌道", allLevels: "全部程度", tracks: { "ai-knowledge": "AI 知識", "educational-theory": "教育理論" }, levels: { basics: "基礎", core: "核心" }, backToAcademy: "返回學院", summaryHeading: "完整課程摘要", coreIdeas: "3 個核心概念", educationConnection: "教育連結", relatedConcepts: "3 個相關概念", relatedLessons: "相關課程", sources: "來源", readingTimeLabel: "預計閱讀時間", minuteAbbreviation: "分鐘", searchFieldLabel: "搜尋學院課程", trackFieldLabel: "按軌道篩選", levelFieldLabel: "按程度篩選", noResults: "目前篩選條件下沒有符合的課程。" } },
   "zh-hans": { nav: "学院", copy: { eyebrow: "学院", title: "建立人工智能与学习科学的坚实基础。", intro: "经审阅的配对课程将核心 AI 知识与教育理论连接到审慎实践。", searchPlaceholder: "搜索标题、主题、摘要或核心概念", resultCount: "节课", allTracks: "全部方向", allLevels: "全部程度", tracks: { "ai-knowledge": "AI 知识", "educational-theory": "教育理论" }, levels: { basics: "基础", core: "核心" }, backToAcademy: "返回学院", summaryHeading: "完整课程摘要", coreIdeas: "3 个核心概念", educationConnection: "教育联系", relatedConcepts: "3 个相关概念", relatedLessons: "相关课程", sources: "来源", readingTimeLabel: "预计阅读时间", minuteAbbreviation: "分钟", searchFieldLabel: "搜索学院课程", trackFieldLabel: "按方向筛选", levelFieldLabel: "按程度筛选", noResults: "当前筛选条件下没有匹配的课程。" } },
   es: { nav: "Academia", copy: { eyebrow: "Academia", title: "Construye bases sólidas en IA y ciencias del aprendizaje.", intro: "Lecciones revisadas conectan conocimientos esenciales de IA con teoría educativa.", searchPlaceholder: "Buscar título, tema, resumen o idea clave", resultCount: "lecciones", allTracks: "Todas las áreas", allLevels: "Todos los niveles", tracks: { "ai-knowledge": "Conocimiento de IA", "educational-theory": "Teoría educativa" }, levels: { basics: "Fundamentos", core: "Núcleo" }, backToAcademy: "Volver a Academia", summaryHeading: "Resumen completo", coreIdeas: "3 ideas clave", educationConnection: "Conexión educativa", relatedConcepts: "3 conceptos relacionados", relatedLessons: "Lecciones relacionadas", sources: "Fuentes", readingTimeLabel: "Tiempo de lectura estimado", minuteAbbreviation: "min", searchFieldLabel: "Buscar lecciones", trackFieldLabel: "Filtrar por área", levelFieldLabel: "Filtrar por nivel", noResults: "Ninguna lección coincide con los filtros." } },

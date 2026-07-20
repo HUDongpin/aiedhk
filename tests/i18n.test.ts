@@ -14,10 +14,11 @@ test("paper type fallback labels policy-ethics as Industry", () => {
   );
 });
 
-test("English news hero describes academic papers and audio summaries", () => {
+test("English News hero uses the AIED summaries framing", () => {
   const researchCopy = getDictionary("en").research;
 
-  assert.equal(researchCopy.eyebrow, "News");
+  assert.equal(researchCopy.eyebrow, "AIED News");
+  assert.equal(researchCopy.title, "AIED summaries for research-to-product translation.");
   assert.equal(
     researchCopy.intro,
     "A curated feed of AIED academic papers and news. Each card offers a concise overview, while each detail page includes a 500-word written summary, an audio summary, and practical takeaways."
@@ -28,6 +29,7 @@ test("English News newsletter promises daily curated news updates", () => {
   const newsletter = getDictionary("en").research.newsletter;
 
   assert.equal(newsletter.eyebrow, "Free daily summary");
+  assert.equal(newsletter.title, "Get the latest AIED summaries in your inbox");
   assert.equal(newsletter.description, "Daily curated news updates.");
   assert.match(newsletter.success, /daily AIED news/i);
   assert.match(newsletter.alreadySubscribed, /daily AIED news/i);
@@ -35,6 +37,11 @@ test("English News newsletter promises daily curated news updates", () => {
 
 test("English About company description uses the PedaNova Ed-Tech name", () => {
   assert.match(getDictionary("en").about.companyText, /^PedaNova Ed-Tech is an R&D company/);
+});
+
+test("English Academy hero identifies PedaNova Academy", () => {
+  assert.equal(getDictionary("en").academy.eyebrow, "PedaNova Academy");
+  assert.equal(getDictionary("en").nav.academy, "Academy");
 });
 
 test("all fourteen locale dictionaries provide typed Academy navigation and page labels", () => {

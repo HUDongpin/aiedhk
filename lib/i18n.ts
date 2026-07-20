@@ -192,7 +192,7 @@ const enDictionary = {
     newsletter: {
       eyebrow: "Free weekly trial",
       title: "Get the latest AIED papers and news in your inbox",
-      description: "Weekly curated paper updates.",
+      description: "Daily curated paper updates.",
       emailLabel: "Email address",
       emailPlaceholder: "you@example.com",
       submit: "Subscribe",

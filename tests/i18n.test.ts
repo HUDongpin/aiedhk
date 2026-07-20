@@ -24,6 +24,10 @@ test("English news hero describes academic papers and audio summaries", () => {
   );
 });
 
+test("English News newsletter promises daily curated paper updates", () => {
+  assert.equal(getDictionary("en").research.newsletter.description, "Daily curated paper updates.");
+});
+
 test("all fourteen locale dictionaries provide typed Academy navigation and page labels", () => {
   assert.equal(getDictionary("en").nav.academy, "Academy");
   for (const locale of locales) {

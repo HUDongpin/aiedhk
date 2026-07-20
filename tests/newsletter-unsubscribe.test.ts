@@ -2,7 +2,7 @@ import assert from "node:assert/strict";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import test from "node:test";
-import { buildUnsubscribeUrl } from "@/lib/newsletter";
+import { buildUnsubscribeUrl, NEWSLETTER_CONSENT_VERSION } from "@/lib/newsletter";
 
 function source(path: string) {
   return readFileSync(join(process.cwd(), path), "utf8");
@@ -30,7 +30,7 @@ test("the public unsubscribe route exists with GET and one-click POST handlers",
   assert.match(routeSource, /unsubscribeFromResearchNewsletter/);
 });
 
-test("the weekly newsletter sends a compliant unsubscribe link and headers", () => {
+test("the daily newsletter sends a compliant unsubscribe link and headers", () => {
   const cronSource = source("app/api/cron/research-newsletter/route.ts");
 
   assert.match(cronSource, /buildUnsubscribeUrl/);
@@ -39,4 +39,12 @@ test("the weekly newsletter sends a compliant unsubscribe link and headers", () 
   // both the HTML and plain-text bodies must carry the (localized) unsubscribe link
   assert.match(cronSource, /\$\{copy\.unsubscribe\}:\s*\$\{unsubscribeUrl\}/);
   assert.match(cronSource, /href="\$\{unsubscribeUrl\}"/);
+});
+
+test("newsletter consent and unsubscribe copy reflect daily delivery", () => {
+  const unsubscribeSource = source("app/api/newsletter/unsubscribe/route.ts");
+
+  assert.equal(NEWSLETTER_CONSENT_VERSION, "research-news-daily-v1");
+  assert.match(unsubscribeSource, /daily research news/i);
+  assert.doesNotMatch(unsubscribeSource, /weekly research news/i);
 });

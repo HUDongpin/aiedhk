@@ -101,3 +101,16 @@ test("Academy places a localized compact newsletter invitation beside the hero",
   assert.match(html, /text-2xl/);
   assert.doesNotMatch(html, /lg:text-5xl/);
 });
+
+test("News newsletter removes the weekly-trial eyebrow", () => {
+  const dictionary = getDictionary("en");
+  const html = renderToStaticMarkup(React.createElement(ResearchNewsletterSignup, {
+    locale: "en",
+    sourcePath: "/en/news",
+    copy: dictionary.research.newsletter,
+  }));
+
+  assert.match(html, /Daily curated news updates\./);
+  assert.doesNotMatch(html, /Free weekly trial/);
+  assert.doesNotMatch(html, /tracking-\[0\.22em\]/);
+});

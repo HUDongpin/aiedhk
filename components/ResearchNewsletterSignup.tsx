@@ -44,6 +44,7 @@ export default function ResearchNewsletterSignup({ locale, sourcePath, copy, var
   const isLoading = state === "loading";
   const isSuccess = state === "subscribed" || state === "already_subscribed";
   const isWide = variant === "wide";
+  const headingSpacing = copy.eyebrow ? (isWide ? "mt-4" : "mt-3") : "";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -82,8 +83,8 @@ export default function ResearchNewsletterSignup({ locale, sourcePath, copy, var
 
   return (
     <div className={`rounded-4xl border border-aied-blue/20 bg-aied-ink text-white shadow-card ${isWide ? "p-8 sm:p-10 lg:p-12 xl:p-14" : "p-6"}`}>
-      <p className={`${isWide ? "text-sm sm:text-base" : "text-xs"} font-black uppercase tracking-[0.2em] text-aied-cyan`}>{copy.eyebrow}</p>
-      <h2 className={`${isWide ? "mt-4 max-w-5xl text-3xl leading-[1.08] sm:text-4xl lg:text-5xl" : "mt-3 text-2xl leading-tight"} text-balance font-black tracking-tight`}>{copy.title}</h2>
+      {copy.eyebrow ? <p className={`${isWide ? "text-sm sm:text-base" : "text-xs"} font-black uppercase tracking-[0.2em] text-aied-cyan`}>{copy.eyebrow}</p> : null}
+      <h2 className={`${headingSpacing} ${isWide ? "max-w-5xl text-3xl leading-[1.08] sm:text-4xl lg:text-5xl" : "text-2xl leading-tight"} text-balance font-black tracking-tight`}>{copy.title}</h2>
       <p className={`${isWide ? "mt-5 max-w-4xl text-base leading-7 sm:text-lg sm:leading-8 lg:text-xl" : "mt-3 text-sm leading-6"} text-slate-200`}>{copy.description}</p>
 
       <form onSubmit={handleSubmit} className={isWide ? "mt-8" : "mt-5"}>

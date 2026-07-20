@@ -16,7 +16,7 @@ interface UnsubscribeCopy {
 const enCopy: UnsubscribeCopy = {
   title: "AIEDHK Research News",
   body: {
-    unsubscribed: "You have been unsubscribed from the AIEDHK weekly Research News email. You will no longer receive it.",
+    unsubscribed: "You have been unsubscribed from the AIEDHK daily Research News email. You will no longer receive it.",
     already_unsubscribed: "You were already unsubscribed. No further Research News emails will be sent to this address.",
     not_found: "This unsubscribe link is invalid or has expired. If you keep receiving emails, please contact us.",
     missing_token: "This unsubscribe link is missing its token and cannot be processed.",
@@ -31,7 +31,7 @@ const copyByLocale: Partial<Record<Locale, UnsubscribeCopy>> = {
   "zh-hant": {
     title: "AIEDHK 研究新聞",
     body: {
-      unsubscribed: "你已取消訂閱 AIEDHK 每週研究新聞電郵，往後不會再收到相關郵件。",
+      unsubscribed: "你已取消訂閱 AIEDHK 每日研究新聞電郵，往後不會再收到相關郵件。",
       already_unsubscribed: "你此前已取消訂閱，本地址不會再收到研究新聞電郵。",
       not_found: "此取消訂閱連結無效或已過期。若你仍持續收到郵件，請與我們聯絡。",
       missing_token: "此取消訂閱連結缺少識別碼，無法處理。",
@@ -43,7 +43,7 @@ const copyByLocale: Partial<Record<Locale, UnsubscribeCopy>> = {
   "zh-hans": {
     title: "AIEDHK 研究新闻",
     body: {
-      unsubscribed: "你已取消订阅 AIEDHK 每周研究新闻邮件，之后不会再收到相关邮件。",
+      unsubscribed: "你已取消订阅 AIEDHK 每日研究新闻邮件，之后不会再收到相关邮件。",
       already_unsubscribed: "你此前已取消订阅，本地址不会再收到研究新闻邮件。",
       not_found: "此取消订阅链接无效或已过期。若你仍持续收到邮件，请与我们联系。",
       missing_token: "此取消订阅链接缺少识别码，无法处理。",

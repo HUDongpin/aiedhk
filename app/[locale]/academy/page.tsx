@@ -38,15 +38,18 @@ export default async function AcademyPage({ params }: AcademyPageProps) {
     privacyNote: "",
   };
   return <div className="bg-hub-gradient">
-    <section className="container-page pb-10 pt-16 lg:pb-12 lg:pt-20"><SectionHeader eyebrow={dictionary.academy.eyebrow} title={dictionary.academy.title} description={dictionary.academy.intro} /></section>
-    <Suspense fallback={<AcademyExplorerView locale={typedLocale} dictionary={dictionary} current={{}} result={result} />}><AcademyExplorer locale={typedLocale} dictionary={dictionary} lessons={lessons} /></Suspense>
-    <section className="container-page pb-20" aria-label={dictionary.academy.newsletter.eyebrow}>
-      <ResearchNewsletterSignup
-        locale={typedLocale}
-        sourcePath={`/${typedLocale}/academy`}
-        copy={newsletterCopy}
-        variant="wide"
-      />
+    <section className="container-page pb-10 pt-16 lg:pb-12 lg:pt-20">
+      <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
+        <SectionHeader eyebrow={dictionary.academy.eyebrow} title={dictionary.academy.title} description={dictionary.academy.intro} />
+        <aside aria-label={dictionary.academy.newsletter.eyebrow}>
+          <ResearchNewsletterSignup
+            locale={typedLocale}
+            sourcePath={`/${typedLocale}/academy`}
+            copy={newsletterCopy}
+          />
+        </aside>
+      </div>
     </section>
+    <Suspense fallback={<AcademyExplorerView locale={typedLocale} dictionary={dictionary} current={{}} result={result} />}><AcademyExplorer locale={typedLocale} dictionary={dictionary} lessons={lessons} /></Suspense>
   </div>;
 }

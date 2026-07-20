@@ -71,7 +71,7 @@ test("active Academy pagination exposes the current page to assistive technology
   assert.match(html, /aria-current="page"[^>]*href="\/en\/academy\?page=2"[^>]*>2<\/a>/);
 });
 
-test("Academy ends with a localized wide newsletter invitation", () => {
+test("Academy places a localized compact newsletter invitation beside the hero", () => {
   for (const locale of locales) {
     const copy = getDictionary(locale).academy.newsletter;
     assert.ok(copy.eyebrow.trim(), `${locale} newsletter eyebrow should be localized`);
@@ -84,16 +84,20 @@ test("Academy ends with a localized wide newsletter invitation", () => {
     locale: "en",
     sourcePath: "/en/academy",
     copy: { ...dictionary.research.newsletter, ...dictionary.academy.newsletter, privacyNote: "" },
-    variant: "wide",
   }));
 
+  const heroGrid = academyPageSource.indexOf("lg:grid-cols-[1.05fr_0.95fr]");
+  const signup = academyPageSource.indexOf("<ResearchNewsletterSignup");
+  const explorer = academyPageSource.indexOf("<Suspense");
+  assert.ok(heroGrid >= 0 && heroGrid < signup && signup < explorer);
   assert.match(academyPageSource, /sourcePath={`\/\$\{typedLocale\}\/academy`}/);
-  assert.match(academyPageSource, /variant="wide"/);
+  assert.doesNotMatch(academyPageSource, /variant="wide"/);
   assert.match(html, /Keep learning/);
   assert.match(html, /Connect PedaNova Academy lessons with the latest AIED technologies and learning theories/);
   assert.match(html, /Get one carefully curated AIED update every day to extend what you learn in the Academy\./);
   assert.doesNotMatch(html, /each week/);
   assert.match(html, /you@example\.com/);
   assert.match(html, />Subscribe<\/button>/);
-  assert.match(html, /lg:text-5xl/);
+  assert.match(html, /text-2xl/);
+  assert.doesNotMatch(html, /lg:text-5xl/);
 });

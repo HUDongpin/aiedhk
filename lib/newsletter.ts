@@ -31,6 +31,12 @@ export interface NewsletterSubscriber {
   unsubscribeToken: string;
 }
 
+export type UnsubscribeResult = "unsubscribed" | "already_unsubscribed" | "not_found";
+
+export function buildUnsubscribeUrl(origin: string, token: string) {
+  return `${origin.replace(/\/+$/, "")}/api/newsletter/unsubscribe?token=${encodeURIComponent(token)}`;
+}
+
 export function normalizeEmail(email: string) {
   return email.trim().toLowerCase();
 }
@@ -47,7 +53,7 @@ function createUnsubscribeToken() {
 export async function subscribeToResearchNewsletter(input: SubscribeNewsletterInput): Promise<SubscribeNewsletterResult> {
   const email = normalizeEmail(input.email);
   const locale = normalizeLocale(input.locale);
-  const sourcePath = input.sourcePath?.trim().slice(0, 300) || `/${locale}/research-news`;
+  const sourcePath = input.sourcePath?.trim().slice(0, 300) || `/${locale}/news`;
   const sql = getDatabaseClient();
 
   if (!sql) {
@@ -113,4 +119,44 @@ export async function getActiveResearchNewsletterSubscribers(limit = 1000): Prom
     locale: normalizeLocale(row.locale),
     unsubscribeToken: row.unsubscribe_token,
   }));
+}
+
+export async function unsubscribeFromResearchNewsletter(token: string): Promise<UnsubscribeResult> {
+  const normalized = token.trim();
+
+  if (!normalized) {
+    return "not_found";
+  }
+
+  const sql = getDatabaseClient();
+
+  if (!sql) {
+    throw new DatabaseNotConfiguredError();
+  }
+
+  const rows = await sql<{ status: string }[]>`
+    select status
+    from newsletter_subscribers
+    where unsubscribe_token = ${normalized}
+    limit 1
+  `;
+
+  if (rows.length === 0) {
+    return "not_found";
+  }
+
+  if (rows[0].status === "unsubscribed") {
+    return "already_unsubscribed";
+  }
+
+  await sql`
+    update newsletter_subscribers
+    set
+      status = 'unsubscribed',
+      unsubscribed_at = now(),
+      updated_at = now()
+    where unsubscribe_token = ${normalized}
+  `;
+
+  return "unsubscribed";
 }

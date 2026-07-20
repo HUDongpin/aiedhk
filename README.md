@@ -102,9 +102,9 @@ It also includes strategy cards for research intelligence, product innovation, t
 
 Path examples:
 
-- `/en/research-news`
-- `/en/research-news?type=journal`
-- `/en/research-news?q=feedback&year=2025`
+- `/en/news`
+- `/en/news?type=journal`
+- `/en/news?q=feedback&year=2025`
 
 Includes a paper list inspired by academic publication pages, but redesigned with modern cards, thumbnails, search, filters, pagination, and a free weekly email trial signup.
 
@@ -130,7 +130,7 @@ Each mock paper includes:
 
 Path example:
 
-- `/en/research-news/adaptive-ai-tutors-for-classroom-personalized-learning`
+- `/en/news/adaptive-ai-tutors-for-classroom-personalized-learning`
 
 Includes title, authors, venue, tags, image, 500-word summary, key takeaways, AIEDHK relevance, related papers, and a back button.
 
@@ -194,28 +194,14 @@ Example:
 GET /api/research-news/adaptive-ai-tutors-for-classroom-personalized-learning
 ```
 
-### Mock paper creation endpoint
+### Paper creation
 
-```http
-POST /api/research-news
-Content-Type: application/json
-```
+Public draft creation over `POST /api/research-news` has been retired (it never persisted data). The endpoint now returns `410 Gone`.
 
-Example body:
+Research News drafts are created by the automated ingestion cron and curated through the authenticated admin review workflow instead:
 
-```json
-{
-  "title": "Example AIED Paper",
-  "authors": ["Author One", "Author Two"],
-  "venue": "AIED 2026",
-  "year": 2026,
-  "type": "conference",
-  "shortSummary": "Short summary here.",
-  "fullSummary": "Longer 500-word summary here."
-}
-```
-
-This endpoint performs basic validation and returns a mock accepted draft. It does not persist data yet.
+- Ingestion: `GET /api/cron/research-ingest`
+- Review and publish: `/admin/research-news`
 
 ### Research newsletter subscription
 
@@ -230,7 +216,7 @@ Example body:
 {
   "email": "reader@example.com",
   "locale": "en",
-  "sourcePath": "/en/research-news",
+  "sourcePath": "/en/news",
   "honeypot": ""
 }
 ```
@@ -241,6 +227,22 @@ Responses:
 - `200` with `status: "already_subscribed"` for an existing email.
 - `400` with `status: "invalid_email"` for invalid email input.
 - `503` with `status: "database_not_configured"` when `DATABASE_URL` is missing.
+
+### Research newsletter unsubscribe
+
+```http
+GET  /api/newsletter/unsubscribe?token=<token>&language=en
+POST /api/newsletter/unsubscribe?token=<token>
+```
+
+- `GET` is the human-facing link in every email footer. It flags the subscriber as `unsubscribed` and returns a localized confirmation page.
+- `POST` is the RFC 8058 one-click target advertised through the `List-Unsubscribe` and `List-Unsubscribe-Post` headers on each weekly send.
+- Responses: `200` unsubscribed / already unsubscribed, `400` missing token, `404` unknown token, `503` when `DATABASE_URL` is missing.
+
+### SEO routes
+
+- `GET /sitemap.xml` — all locales × static pages × published article slugs.
+- `GET /robots.txt` — allows crawling, disallows `/admin` and `/api/`, and points to the sitemap.
 
 ### Weekly research ingestion
 
@@ -268,6 +270,11 @@ Path:
 
 Protected by HTTP Basic Auth through `ADMIN_USERNAME` and `ADMIN_PASSWORD`.
 
+The queue header shows a **Recent ingestion runs** panel (status, mode, candidate
+count, drafted, skipped, and source errors) read from `research_ingestion_runs`,
+so the reviewer can see whether the weekly crawl actually ran. The panel appears
+only when `DATABASE_URL` is configured.
+
 Review actions:
 
 - Save
@@ -277,6 +284,21 @@ Review actions:
 - Regenerate
 - Reject
 - Archive
+
+### Weekly research workflow (operations)
+
+To run the automated pipeline live in production, the deployment needs
+`DATABASE_URL` (with `migrations/002_research_pipeline.sql` applied), the `AI_*`
+variables for summarization and translation, `CRON_SECRET`, and the `ADMIN_*`
+credentials. The weekly loop is then:
+
+1. Monday cron `POST`/`GET /api/cron/research-ingest` crawls sources, scores and
+   dedupes candidates, and writes private drafts to the review queue.
+2. A human opens `/admin/research-news`, checks the ingestion-run panel, and
+   edits, approves, and publishes drafts.
+3. Optionally run `npm run translate:research` to draft `zh-hant`/`zh-hans`
+   versions for review before publishing multilingual copies.
+4. Monday newsletter crons send per-locale digests of published items.
 
 ### Weekly newsletter
 
@@ -309,6 +331,34 @@ Add a new object to `researchPapers` with the required fields. Add a matching th
 ```text
 public/images/research/
 ```
+
+## Translate Research News articles
+
+UI chrome is translated in `lib/i18n.ts`. The reader-facing article fields
+(title, summaries, key takeaways, why-it-matters, tags) are translated
+**per article** in:
+
+```text
+lib/research-reviewed-localizations.ts
+```
+
+Each entry is keyed by article `id` then locale. When a locale is missing for an
+article, the reader sees the English source (never machine filler or a stale
+title). `localizedPaper()` in `lib/research-data.ts` applies these translations.
+
+To draft translations at scale, run the AI localization stage and review its
+output before pasting it into the file above:
+
+```bash
+AI_API_KEY="sk-..." AI_BASE_URL="https://.../v1" AI_MODEL="qwen-plus" \
+  npm run translate:research zh-hant zh-hans
+```
+
+Output is written to `output/reviewed-localizations.json` (gitignored). Without
+AI credentials the script emits flagged English fallbacks so you can inspect
+coverage without spending API calls. A per-article, per-locale static audio
+reading can be attached through the optional `summaryAudio` field; the detail
+page shows the player only when a localized recording exists.
 
 ## Change language copy
 

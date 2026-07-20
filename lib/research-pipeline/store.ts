@@ -318,6 +318,65 @@ export async function failIngestionRun(runId: string, message: string) {
   `;
 }
 
+export interface IngestionRunSummary {
+  id: string;
+  startedAt: string;
+  completedAt: string | null;
+  status: string;
+  mode: string;
+  sourceScope: string;
+  totalCandidates: number;
+  draftedCount: number;
+  skippedCount: number;
+  sourceErrors: Array<Record<string, unknown>>;
+  errorMessage: string | null;
+}
+
+function toIso(value: string | Date | null | undefined) {
+  if (!value) return null;
+  return value instanceof Date ? value.toISOString() : new Date(value).toISOString();
+}
+
+export async function listRecentIngestionRuns(limit = 5): Promise<IngestionRunSummary[] | null> {
+  const sql = getDatabaseClient();
+  if (!sql) return null;
+
+  const rows = await sql<
+    Array<{
+      id: string;
+      started_at: string | Date;
+      completed_at: string | Date | null;
+      status: string;
+      mode: string;
+      source_scope: string;
+      total_candidates: number;
+      drafted_count: number;
+      skipped_count: number;
+      source_errors: unknown;
+      error_message: string | null;
+    }>
+  >`
+    select id, started_at, completed_at, status, mode, source_scope, total_candidates, drafted_count, skipped_count, source_errors, error_message
+    from research_ingestion_runs
+    order by started_at desc
+    limit ${limit}
+  `;
+
+  return rows.map((row) => ({
+    id: row.id,
+    startedAt: toIso(row.started_at) ?? new Date().toISOString(),
+    completedAt: toIso(row.completed_at),
+    status: row.status,
+    mode: row.mode,
+    sourceScope: row.source_scope,
+    totalCandidates: row.total_candidates,
+    draftedCount: row.drafted_count,
+    skippedCount: row.skipped_count,
+    sourceErrors: Array.isArray(row.source_errors) ? (row.source_errors as Array<Record<string, unknown>>) : [],
+    errorMessage: row.error_message,
+  }));
+}
+
 export async function insertCandidateIfNew(runId: string, candidate: ResearchCandidate) {
   const sql = getDatabaseClient();
   if (!sql) return { status: "skipped" as const };

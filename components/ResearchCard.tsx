@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import type { ResearchPaper } from "@/lib/types";
+import { formatDate } from "@/lib/utils";
 
 interface ResearchCardProps {
   paper: ResearchPaper;
@@ -13,7 +14,7 @@ export default function ResearchCard({ paper, locale, dictionary, featured = fal
   return (
     <article className="group overflow-hidden rounded-4xl border border-slate-200 bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
       <Link
-        href={`/${locale}/research-news/${paper.slug}`}
+        href={`/${locale}/news/${paper.slug}`}
         className={
           featured
             ? "grid h-full lg:grid-cols-[minmax(360px,0.95fr)_minmax(0,1.05fr)]"
@@ -32,7 +33,9 @@ export default function ResearchCard({ paper, locale, dictionary, featured = fal
         <div className="flex h-full min-w-0 flex-col p-6 sm:p-7">
           <div className="flex flex-wrap items-center gap-2 text-xs font-black uppercase tracking-[0.18em]">
             <span className="rounded-full bg-aied-soft px-3 py-1 text-aied-blue">{dictionary.paperTypes[paper.type]}</span>
-            <span className="text-slate-400">{paper.year}</span>
+            <span className="text-slate-400">
+              {paper.type === "policy-ethics" ? formatDate(paper.createdAt, locale) : paper.year}
+            </span>
           </div>
           <h3 className="mt-4 text-xl font-black leading-tight tracking-tight text-aied-ink transition group-hover:text-aied-blue sm:text-2xl">
             {paper.title}

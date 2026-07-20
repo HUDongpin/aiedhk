@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import HtmlLangSync from "@/components/HtmlLangSync";
+import JsonLd from "@/components/JsonLd";
 import { getDictionary, getLocaleMeta, isLocale, locales, type Locale } from "@/lib/i18n";
+import { organizationJsonLd, webSiteJsonLd } from "@/lib/structured-data";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -24,6 +27,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     alternates: {
       languages,
     },
+    openGraph: {
+      type: "website",
+      siteName: "AIEDHK",
+      title: dictionary.meta.siteTitle,
+      description: dictionary.meta.siteDescription,
+      locale: getLocaleMeta(locale).htmlLang,
+      url: `/${locale}`,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dictionary.meta.siteTitle,
+      description: dictionary.meta.siteDescription,
+    },
   };
 }
 
@@ -37,6 +53,8 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
 
   return (
     <div lang={meta.htmlLang} dir={meta.dir}>
+      <HtmlLangSync lang={meta.htmlLang} dir={meta.dir} />
+      <JsonLd data={[organizationJsonLd(), webSiteJsonLd()]} />
       <Header locale={typedLocale} dictionary={dictionary} />
       <main>{children}</main>
       <Footer locale={typedLocale} dictionary={dictionary} />

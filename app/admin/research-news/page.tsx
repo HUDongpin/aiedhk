@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { PAPER_TYPES, type AdminResearchPaper, type ResearchPaperStatus } from "@/lib/types";
-import { listAdminResearchPapers } from "@/lib/research-pipeline/store";
+import { listAdminResearchPapers, listRecentIngestionRuns, type IngestionRunSummary } from "@/lib/research-pipeline/store";
 
 interface AdminResearchNewsPageProps {
   searchParams: Promise<Record<string, string | string[] | undefined>>;
@@ -63,7 +63,7 @@ function PaperForm({ paper }: { paper: AdminResearchPaper }) {
           <p className="mt-2 text-sm leading-6 text-slate-500">{paper.authors.join(", ")}</p>
         </div>
         {paper.status === "published" && (
-          <Link className="rounded-full bg-aied-ink px-4 py-2 text-sm font-black text-white" href={`/en/research-news/${paper.slug}`}>
+          <Link className="rounded-full bg-aied-ink px-4 py-2 text-sm font-black text-white" href={`/en/news/${paper.slug}`}>
             View public
           </Link>
         )}
@@ -177,10 +177,75 @@ function PaperForm({ paper }: { paper: AdminResearchPaper }) {
   );
 }
 
+function formatRunTime(value: string | null) {
+  if (!value) return "—";
+  return new Intl.DateTimeFormat("en-HK", { dateStyle: "medium", timeStyle: "short" }).format(new Date(value));
+}
+
+function IngestionRuns({ runs }: { runs: IngestionRunSummary[] }) {
+  const runStatusClasses: Record<string, string> = {
+    completed: "bg-emerald-50 text-emerald-800 ring-emerald-200",
+    running: "bg-blue-50 text-blue-800 ring-blue-200",
+    failed: "bg-rose-50 text-rose-800 ring-rose-200",
+  };
+
+  return (
+    <section className="rounded-lg border border-slate-200 bg-white p-6 shadow-card">
+      <div className="flex flex-wrap items-center justify-between gap-3">
+        <h2 className="text-lg font-black tracking-tight text-aied-ink">Recent ingestion runs</h2>
+        <span className="text-xs font-semibold text-slate-400">Weekly crawl → draft → review</span>
+      </div>
+      {runs.length === 0 ? (
+        <p className="mt-3 text-sm text-slate-500">
+          No runs yet. Trigger `/api/cron/research-ingest?dryRun=1` to preview candidates or run the live cron to create drafts.
+        </p>
+      ) : (
+        <div className="mt-4 overflow-x-auto">
+          <table className="w-full min-w-[640px] text-left text-sm">
+            <thead>
+              <tr className="text-xs font-black uppercase tracking-wide text-slate-400">
+                <th className="pb-2 pr-4">Started</th>
+                <th className="pb-2 pr-4">Status</th>
+                <th className="pb-2 pr-4">Mode</th>
+                <th className="pb-2 pr-4">Candidates</th>
+                <th className="pb-2 pr-4">Drafted</th>
+                <th className="pb-2 pr-4">Skipped</th>
+                <th className="pb-2">Errors</th>
+              </tr>
+            </thead>
+            <tbody className="text-slate-700">
+              {runs.map((run) => (
+                <tr key={run.id} className="border-t border-slate-100">
+                  <td className="py-2 pr-4 font-semibold">{formatRunTime(run.startedAt)}</td>
+                  <td className="py-2 pr-4">
+                    <span className={`rounded-full px-2.5 py-0.5 text-xs font-black uppercase ring-1 ${runStatusClasses[run.status] ?? runStatusClasses.running}`}>
+                      {run.status}
+                    </span>
+                  </td>
+                  <td className="py-2 pr-4">{run.mode}</td>
+                  <td className="py-2 pr-4">{run.totalCandidates}</td>
+                  <td className="py-2 pr-4">{run.draftedCount}</td>
+                  <td className="py-2 pr-4">{run.skippedCount}</td>
+                  <td className="py-2 text-rose-700">
+                    {run.errorMessage ? run.errorMessage : run.sourceErrors.length > 0 ? `${run.sourceErrors.length} source error(s)` : "—"}
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+    </section>
+  );
+}
+
 export default async function AdminResearchNewsPage({ searchParams }: AdminResearchNewsPageProps) {
   const rawSearchParams = await searchParams;
   const status = first(rawSearchParams.status) ?? "draft";
-  const papers = await listAdminResearchPapers(status === "all" ? undefined : status);
+  const [papers, ingestionRuns] = await Promise.all([
+    listAdminResearchPapers(status === "all" ? undefined : status),
+    listRecentIngestionRuns(8),
+  ]);
 
   return (
     <main className="min-h-screen bg-slate-50 py-8">
@@ -205,6 +270,8 @@ export default async function AdminResearchNewsPage({ searchParams }: AdminResea
             ))}
           </div>
         </header>
+
+        {ingestionRuns !== null && <IngestionRuns runs={ingestionRuns} />}
 
         {papers === null ? (
           <section className="rounded-lg border border-amber-200 bg-amber-50 p-6 text-amber-900">

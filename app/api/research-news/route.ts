@@ -1,8 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { getDictionary, normalizeLocale } from "@/lib/i18n";
-import { filterPublishedResearchPapers, getResearchYears, isPaperType } from "@/lib/research-data";
+import { filterPublishedResearchPapers, getResearchYears } from "@/lib/research-data";
 import { PAPER_TYPES } from "@/lib/types";
-import { slugify } from "@/lib/utils";
 
 export const dynamic = "force-dynamic";
 
@@ -32,56 +31,19 @@ export async function GET(request: NextRequest) {
   });
 }
 
-export async function POST(request: NextRequest) {
-  const body = await request.json().catch(() => null);
-
-  if (!body || typeof body !== "object") {
-    return NextResponse.json({ error: "Invalid JSON body." }, { status: 400 });
-  }
-
-  const errors: string[] = [];
-  const requiredStringFields = ["title", "venue", "shortSummary", "fullSummary"];
-
-  for (const field of requiredStringFields) {
-    if (typeof body[field] !== "string" || body[field].trim().length === 0) {
-      errors.push(`${field} is required.`);
-    }
-  }
-
-  if (!Array.isArray(body.authors) || body.authors.some((author: unknown) => typeof author !== "string")) {
-    errors.push("authors must be an array of strings.");
-  }
-
-  const year = Number(body.year);
-  if (!Number.isInteger(year) || year < 1990 || year > 2100) {
-    errors.push("year must be a valid year.");
-  }
-
-  if (typeof body.type !== "string" || !isPaperType(body.type)) {
-    errors.push(`type must be one of: ${PAPER_TYPES.map((type) => type.value).join(", ")}.`);
-  }
-
-  if (errors.length > 0) {
-    return NextResponse.json({ errors }, { status: 400 });
-  }
-
-  const preview = {
-    id: `draft-${Date.now()}`,
-    slug: slugify(body.title),
-    title: body.title.trim(),
-    authors: body.authors,
-    venue: body.venue.trim(),
-    year,
-    type: body.type,
-    status: "accepted-as-mock-draft",
-  };
-
+// Research News drafts are created only by the automated ingestion pipeline
+// (GET /api/cron/research-ingest) and curated through the authenticated admin
+// review workflow (/admin/research-news). The previous public POST here never
+// persisted anything, so it is retired to avoid advertising a phantom write API.
+export function POST() {
   return NextResponse.json(
     {
-      message:
-        "Mock endpoint accepted the paper draft. Connect this route to a database, review workflow, and summarization pipeline before production use.",
-      preview,
+      status: "gone",
+      error:
+        "Public research draft creation has been removed. Drafts are produced by the weekly ingestion cron and curated in the admin review workflow.",
+      ingestion: "/api/cron/research-ingest",
+      review: "/admin/research-news",
     },
-    { status: 201 }
+    { status: 410 }
   );
 }

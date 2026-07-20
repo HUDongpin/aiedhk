@@ -8,7 +8,7 @@ function source(path: string) {
 }
 
 test("public research news list route is cacheable instead of force-dynamic", () => {
-  const pageSource = source("app/[locale]/research-news/page.tsx");
+  const pageSource = source("app/[locale]/news/page.tsx");
 
   assert.doesNotMatch(pageSource, /export\s+const\s+dynamic\s*=\s*["']force-dynamic["']/);
   assert.match(pageSource, /export\s+const\s+revalidate\s*=\s*300/);
@@ -52,7 +52,7 @@ test("summary audio player can use a static audio source without live TTS", () =
 });
 
 test("research detail page uses local summary audio without dynamic TTS fallback", () => {
-  const pageSource = source("app/[locale]/research-news/[slug]/page.tsx");
+  const pageSource = source("app/[locale]/news/[slug]/page.tsx");
 
   assert.match(pageSource, /summaryAudioSrc\s*=\s*typedLocale\s*===\s*["']en["']\s*\?\s*paper\.summaryAudio/);
   assert.doesNotMatch(pageSource, /summaryAudioEndpoint/);
@@ -68,11 +68,12 @@ test("summary audio player does not render the decorative waveform square", () =
 });
 
 test("research detail source link appears beside the author metadata before topic tags", () => {
-  const pageSource = source("app/[locale]/research-news/[slug]/page.tsx");
-  const sourceLinkIndex = pageSource.indexOf("href={paper.sourceUrl}");
+  const pageSource = source("app/[locale]/news/[slug]/page.tsx");
+  const sourceLinkIndex = pageSource.indexOf("sourceLinks.map");
   const tagListIndex = pageSource.indexOf("paper.tags.map");
 
-  assert.ok(sourceLinkIndex > 0, "research detail page should render the source link");
+  assert.match(pageSource, /paper\.sourceUrls\?\.length\s*\?\s*paper\.sourceUrls\s*:\s*\[\{\s*label:\s*dictionary\.common\.source,\s*url:\s*paper\.sourceUrl\s*\}\]/);
+  assert.ok(sourceLinkIndex > 0, "research detail page should render source links");
   assert.ok(tagListIndex > 0, "research detail page should render topic tags");
-  assert.ok(sourceLinkIndex < tagListIndex, "source link should sit before the topic tags in the hero metadata area");
+  assert.ok(sourceLinkIndex < tagListIndex, "source links should sit before the topic tags in the hero metadata area");
 });

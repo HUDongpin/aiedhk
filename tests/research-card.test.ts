@@ -43,6 +43,22 @@ test("research cards show the paper year without the published date", () => {
   assert.doesNotMatch(html, new RegExp(formatDate(item.createdAt, "en").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
 });
 
+test("industry news cards show the full publication date", () => {
+  const item = paper({
+    type: "policy-ethics",
+    createdAt: "2026-07-20",
+  });
+  const html = renderToStaticMarkup(
+    React.createElement(ResearchCard, {
+      paper: item,
+      locale: "en",
+      dictionary: getDictionary("en"),
+    })
+  );
+
+  assert.match(html, new RegExp(formatDate(item.createdAt, "en").replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+});
+
 test("research cards render full-height full-bleed cover media", () => {
   const item = paper();
   const html = renderToStaticMarkup(

@@ -2,6 +2,468 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-029",
+    slug: "news-chatgpt-voice-claude-sonnet-gemini-notebook-2026",
+    title: "News: ChatGPT Voice, Claude Sonnet 5 and Gemini Notebook expand AI interaction",
+    authors: ["OpenAI", "Anthropic", "Google"],
+    venue: "AI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "GPT-Live voice", "Claude Sonnet 5", "Gemini Notebook education"],
+    image: "/images/research/covers/aied-029-live-agent-notebook-2026.png",
+    imageAlt: "Editorial cover for live voice, agentic AI, and source-grounded notebook product news",
+    summaryImage: "/images/research/summary/aied-029-live-agent-notebook-summary.png",
+    summaryImageAlt:
+      "Learners and an educator supervise a voice conversation, an agentic workflow, and a source-grounded digital notebook.",
+    summaryAudio: "/audio/research/aied-029-live-agent-notebook-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news summary",
+    shortSummary:
+      "News roundup: OpenAI makes ChatGPT Voice more conversational with GPT-Live, Anthropic brings lower-cost agentic tool use to Claude Sonnet 5, and Google turns Gemini Notebook into a connected research-and-learning workspace.",
+    fullSummary: `This product-news roundup tracks three changes to the way people interact with AI. OpenAI's GPT-Live moves ChatGPT Voice toward continuous conversation. Anthropic's Claude Sonnet 5 makes tool-using, multi-step agents more widely available. Google has renamed NotebookLM as Gemini Notebook and is connecting the source-grounded research product more deeply to the Gemini ecosystem. For AIEDHK, the shared signal is that AI is no longer confined to a turn-by-turn chat box: it can listen continuously, act across tools, and maintain a working collection of sources.
+
+OpenAI launched GPT-Live on July 8 as the new voice-model family powering ChatGPT Voice. Its full-duplex design can listen and speak at the same time, decide whether to pause or respond many times per second, and handle interruptions more naturally than earlier turn-based voice systems. When a request needs web search, deeper reasoning, or agentic work, GPT-Live can delegate it to a frontier model in the background while maintaining the conversation. GPT-Live-1 and GPT-Live-1 mini are rolling out globally in ChatGPT, with API access planned later.
+
+That interaction model could support oral language practice, accessible hands-free learning, think-aloud explanation, and formative questioning. But conversational fluency can also make an answer feel more trustworthy than it is. Educators should therefore design voice activities that require learners to restate evidence, compare an answer with course materials, and demonstrate understanding after the conversation. OpenAI reports preference and capability evaluations, not independent evidence that GPT-Live improves learning, language development, or accessibility outcomes.
+
+Anthropic's June 30 release positions Claude Sonnet 5 as its most agentic Sonnet model yet. Anthropic says it can plan, use browsers and terminals, write and test code, and sustain complex work at a lower price than its larger Opus models. Sonnet 5 is the default for Claude Free and Pro accounts, is available across other plans, and is offered through Claude Code and the Claude API. Users can vary the effort level to balance cost, speed, and performance.
+
+For education, broader access to capable agents changes the assessment problem. A student can delegate research, coding, file changes, and verification steps that once left clearer evidence of personal effort. Agentic tools can still be educational when students must define the plan, constrain permissions, inspect each artifact, explain failures, and defend the final choices. Vendor safety tests and self-checking behavior are useful product signals, but they do not remove the need for sandboxing, data controls, provenance, or teacher review.
+
+Google's July 16 announcement brings an explicitly research-and-learning purpose into the roundup. NotebookLM is now Gemini Notebook: the standalone, source-grounded product remains focused on helping people learn and research, while gaining tighter connections to the Gemini app and, in future, Google Search. Google says more than 30 million people and 600,000 organizations use the product, including students who turn notes into audio and video summaries. A secure cloud computer is also rolling out so Gemini Notebook can write and execute code for analysis grounded in notebook sources.
+
+For Hong Kong schools and universities, these products invite three different pilots: voice for explanation and language interaction, agents for supervised project work, and notebooks for source-grounded inquiry. Each pilot needs its own evidence. Voice should be assessed for reasoning and inclusion, not naturalness alone. Agents should expose plans, actions, and human approvals. Notebooks should preserve citation checking and distinguish uploaded evidence from model-generated interpretation. The most important news is not that interfaces feel smoother or agents finish more tasks. It is that education must make learner agency, source quality, and accountable oversight visible as AI becomes more ambient and more capable.`,
+    keyTakeaways: [
+      "News: GPT-Live now powers a more continuous ChatGPT Voice experience that can handle interruptions and delegate deeper work while conversation continues.",
+      "Claude Sonnet 5 brings lower-cost planning and tool use across Claude, Claude Code, and the API, increasing the need for visible process evidence and human approval in assessed work.",
+      "Gemini Notebook keeps a source-grounded research-and-learning purpose while adding ecosystem connections and code execution, so educators should test citation quality and learner understanding separately from polished outputs.",
+    ],
+    whyItMatters:
+      "Industry news signal: voice, agentic action, and source-grounded notebooks are becoming mainstream AI interfaces, so AIEDHK should evaluate learner agency, provenance, permissions, inclusion, and durable understanding together.",
+    sourceUrl: "https://openai.com/index/introducing-gpt-live/",
+    sourceUrls: [
+      {
+        label: "OpenAI GPT-Live release",
+        url: "https://openai.com/index/introducing-gpt-live/",
+      },
+      {
+        label: "Anthropic Claude Sonnet 5 release",
+        url: "https://www.anthropic.com/news/claude-sonnet-5",
+      },
+      {
+        label: "Google Gemini Notebook announcement",
+        url: "https://blog.google/innovation-and-ai/products/gemini-notebook/notebooklm-gemini-notebook/",
+      },
+    ],
+    createdAt: "2026-07-20",
+  },
+  {
+    id: "aied-028",
+    slug: "structured-ai-tutoring-active-learning-physics-rct",
+    title: "AI tutoring outperforms in-class active learning: an RCT introducing a novel research-based design in an authentic educational setting",
+    authors: ["Greg Kestin", "Kelly Miller", "Anna Klales", "Timothy Milbourne", "Gregorio Ponti"],
+    venue: "Scientific Reports",
+    year: 2025,
+    type: "journal",
+    tags: ["structured AI tutoring", "active learning", "physics education"],
+    image: "/images/research/covers/aied-028-structured-ai-physics-tutor-2025.png",
+    imageAlt: "Editorial cover for a randomized comparison of structured AI tutoring and active-learning physics classes",
+    summaryImage: "/images/research/summary/aied-028-structured-ai-physics-tutor-summary.png",
+    summaryImageAlt:
+      "University physics learners compare a structured AI tutor with an active-learning classroom while working through fluid mechanics.",
+    summaryAudio: "/audio/research/aied-028-structured-ai-physics-tutor-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A crossover randomized trial with 194 Harvard undergraduates found that a carefully structured AI physics tutor produced larger immediate learning gains in less time than in-class active learning, while students also reported stronger engagement and motivation.",
+    fullSummary: `Kestin, Miller, Klales, Milbourne, and Ponti test whether a deliberately designed generative-AI tutor can match or exceed a strong classroom comparison rather than a passive lecture. Their open-access Scientific Reports article describes a randomized crossover experiment in a large introductory physics course at Harvard University. The central comparison is between an AI tutor built around established learning principles and an in-class active-learning lesson covering the same content.
+
+The study involved 194 undergraduates and two consecutive lessons on surface tension and fluid flow. Students were divided into two groups. In the first week, one group completed an AI-supported lesson at home while the other attended the active-learning class; the conditions were reversed in the second week. Both groups completed a pre-test and post-test for each topic. The researchers also measured time on task and asked students about engagement, enjoyment, motivation, and growth mindset.
+
+The tutor was not a generic chatbot. Physics instructors created question-specific prompts, structured the interaction to manage cognitive load, embedded content-rich explanations and videos, and required the model to scaffold the learner rather than simply provide answers. This design choice is crucial: the experiment evaluates a pedagogically engineered system operating inside a defined lesson, not unrestricted use of a general-purpose AI assistant.
+
+Students in the AI-tutored condition achieved higher post-test scores. The median post-test score was 4.5 for the AI group and 3.5 for the in-class group, against a combined pre-test median of 2.75. The authors report that median learning gains were more than twice as large with the AI tutor and that the difference was statistically significant. Regression analyses controlling for prior physics knowledge, course performance, ChatGPT experience, topic, test version, and time on task produced a large estimated effect. The authors place the effect between 0.73 and 1.3 standard deviations after addressing a ceiling effect.
+
+The AI condition was also faster for many learners. The classroom lesson provided about 60 minutes of learning time after tests, while the median AI-tutor time on task was 49 minutes; 70 percent of AI users spent less than 60 minutes. Students reported higher engagement in the AI condition and also rated enjoyment, motivation, and growth-mindset-related experience positively. The individualized pace and immediate feedback may help explain both the cognitive and affective results.
+
+The findings need careful boundaries. This was a short intervention covering two physics topics at one selective university. The comparison was not a full course, and the post-tests measured immediate mastery rather than long-term retention, transfer, collaboration, or independent problem solving. The result may depend on GPT-4, expert-written prompts, high-quality instructional videos, a tightly structured framework, and content that fits stepwise tutoring. The authors explicitly caution that the tutor may not outperform classroom active learning for complex synthesis or higher-order critical thinking.
+
+For AIEDHK, the paper offers a productive contrast to studies of unrestricted AI. The result does not show that any chatbot improves learning. It shows that pedagogical architecture can matter as much as model capability. Schools and universities considering AI tutors should document the tutor's instructional rules, compare it with a credible teaching practice, and measure retention and transfer after access is removed. A strong pilot would also examine who benefits, which learners disengage, how errors are handled, and how the tutor complements human discussion. The practical lesson is to evaluate a designed learning system—not merely access to a model.`,
+    keyTakeaways: [
+      "The randomized crossover study compared a structured AI tutor with in-class active learning across two physics lessons for 194 Harvard undergraduates.",
+      "AI-tutored students showed more than double the median immediate learning gain, often in less time, and reported stronger engagement and motivation.",
+      "The result depends on expert prompts, scaffolding, videos, and a bounded lesson; it does not establish long-term retention or show that unrestricted chatbots outperform good teaching.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the study shows that rigorous AI-tutor evaluation must treat pedagogy as part of the intervention and test retention, transfer, equity, and human complementarity beyond immediate post-test gains.",
+    sourceUrl: "https://doi.org/10.1038/s41598-025-97652-6",
+    createdAt: "2026-07-20",
+  },
+  {
+    id: "aied-027",
+    slug: "news-ai-learning-pathways-chatgpt-claude-code-gemini-education",
+    title: "News: OpenAI, Anthropic and Google build more scaffolded AI learning pathways",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "age-aware AI learning", "Claude Code education", "Gemini Education"],
+    image: "/images/research/covers/aied-027-ai-learning-pathways-2026.png",
+    imageAlt: "Editorial cover for guided, age-aware AI learning pathways across classroom study and coding",
+    summaryImage: "/images/research/summary/aied-027-ai-learning-pathways-summary.png",
+    summaryImageAlt:
+      "A teacher and learners review guided study, coding, and course-grounded learning activities while retaining human oversight.",
+    summaryAudio: "/audio/research/aied-027-ai-learning-pathways-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news summary",
+    shortSummary:
+      "News roundup: OpenAI adds age-aware study controls for teens, Anthropic brings Claude Code into an access-focused collegiate curriculum, and Google connects Gemini study notebooks to classroom materials and teacher insight.",
+    fullSummary: `This product-news roundup tracks a common direction across OpenAI, Anthropic, and Google: education products are becoming more scaffolded, context-aware, and connected to a learner's stage or course. OpenAI is adding teen-specific learning and safety controls to ChatGPT. Anthropic and CodePath are putting Claude and Claude Code inside a collegiate computer-science pathway. Google is turning Gemini study notebooks and Classroom connections into course-grounded learning environments. The products differ, but each moves beyond generic chatbot access toward a designed learning pathway.
+
+OpenAI's July 16 update combines learning features with age-aware safeguards. Parents with linked teen accounts can turn on Study Mode so that it is enabled by default in new chats. OpenAI has also added education-focused starter prompts for activities such as breaking down a topic, turning notes into a study guide, creating flashcards or practice questions, and checking evidence. These sit beside age prediction, parental controls, quiet-hour settings, break reminders, and stronger content protections. OpenAI says interactive mathematics and science experiences have expanded to more than 300 topics, but the more important product signal for schools is the attempt to connect guided learning with family-level controls and healthy-use boundaries.
+
+Anthropic's February partnership with CodePath addresses a different transition: learning to build with AI in higher education and early-career preparation. CodePath says Claude and Claude Code will be integrated into courses including Foundations of AI Engineering, Applications of AI Engineering, and an open-source capstone, reaching more than 20,000 students across community colleges, state schools, and historically Black colleges and universities. A prior pilot asked more than 100 students to use Claude Code on real open-source projects. The partnership also includes public research into how AI changes coding education and economic opportunity.
+
+That access focus matters because Anthropic reports that more than 40 percent of CodePath students come from families earning under US$50,000 a year. Yet access to an agentic coding tool is not itself a learning outcome. The curriculum must still make planning, debugging, testing, code reading, provenance, and independent explanation visible. This is especially important because current research distinguishes successful task completion from durable understanding: a learner can produce working code with AI support while learning no more than a peer using conventional resources.
+
+Google's June education releases add a third model. Study notebooks in Gemini are designed as adaptive spaces grounded in a learner's goals and materials. In Google Classroom, students can create study guides, quizzes, and Guided Learning activities; teachers will be able to assign course-grounded study notebooks and review signals about where a class or individual learner may need more help. Google also announced a connected Classroom app in Gemini for educators, using assignments, grades, and materials to support progress analysis and tailored activities. Google says Workspace for Education data is not used to train its AI models, while availability depends on account type, age, language, device, and rollout stage.
+
+For Hong Kong schools and universities, the combined product signal is not that one platform has solved AI-supported education. It is that vendors are competing on the surrounding learning architecture: age protections, guided interaction, curriculum integration, authentic projects, teacher context, and institutional controls. Procurement and pilots should therefore examine more than model capability. They should test whether scaffolds preserve productive struggle, whether teachers can inspect and override outputs, whether connected data are minimized and governed, and whether students can demonstrate understanding without the tool.
+
+These announcements remain vendor news, not independent proof of improved attainment, wellbeing, or equity. A responsible pilot should define a learning purpose, map the data flow, document which tasks may be delegated, and compare product activity with independent evidence of knowledge and transfer. The strongest shared opportunity is to make AI fluency concrete: learners should practice describing goals, evaluating evidence, reviewing code or explanations, and deciding when not to delegate. The risk is that polished pathways make assistance feel educational even when cognition has been outsourced.`,
+    keyTakeaways: [
+      "News: OpenAI is pairing teen learning features with parental Study Mode controls, education-focused starter prompts, break reminders, and age-aware safeguards.",
+      "Anthropic and CodePath are integrating Claude and Claude Code into collegiate AI courses and open-source projects, with an explicit focus on access and career pathways.",
+      "Gemini Education is connecting adaptive study notebooks and Classroom materials to student practice and teacher insight, making data governance and independent learning measures essential.",
+    ],
+    whyItMatters:
+      "Industry news signal: major AI platforms are shifting from generic chatbot access toward designed learning pathways, so AIEDHK should evaluate scaffolding, age protections, curriculum fit, data governance, and demonstrated understanding together.",
+    sourceUrl: "https://openai.com/index/why-teens-deserve-access-safe-ai/",
+    sourceUrls: [
+      {
+        label: "OpenAI teen learning and safety update",
+        url: "https://openai.com/index/why-teens-deserve-access-safe-ai/",
+      },
+      {
+        label: "Anthropic and CodePath partnership",
+        url: "https://www.anthropic.com/news/anthropic-codepath-partnership",
+      },
+      {
+        label: "Google Gemini Education student updates",
+        url: "https://blog.google/products-and-platforms/products/education/iste-students-2026/",
+      },
+      {
+        label: "Google Gemini Education educator updates",
+        url: "https://blog.google/products-and-platforms/products/education/iste-2026-educator-updates/",
+      },
+    ],
+    createdAt: "2026-07-19",
+  },
+  {
+    id: "aied-026",
+    slug: "ai-supported-programming-performance-learning-dissociation",
+    title: "Less stress, better scores, same learning: The dissociation of performance and learning in AI-supported programming education",
+    authors: ["Patrick Bassner", "Ben Lenk-Ostendorf", "Ramona Beinstingel", "Tobias Wasner", "Stephan Krusche"],
+    venue: "Computers and Education: Artificial Intelligence",
+    year: 2026,
+    type: "journal",
+    tags: ["AI-supported programming", "scaffolded tutoring", "performance-learning gap"],
+    image: "/images/research/covers/aied-026-ai-programming-performance-learning-2026.png",
+    imageAlt: "Editorial cover for a randomized comparison of AI support in university programming education",
+    summaryImage: "/images/research/summary/aied-026-ai-programming-learning-summary.png",
+    summaryImageAlt:
+      "University programming students work with scaffolded AI, unrestricted AI, and conventional resources while a lecturer observes.",
+    summaryAudio: "/audio/research/aied-026-ai-programming-learning-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A randomized trial with 275 programming students finds that scaffolded and unrestricted AI support improved exercise performance and reduced frustration, but neither condition produced stronger knowledge gains than conventional web resources.",
+    fullSummary: `Bassner, Lenk-Ostendorf, Beinstingel, Wasner, and Krusche examine a central problem in AI-supported education: does better performance while using AI mean that students have learned more? Their open-access study reports a three-arm randomized controlled trial in an introductory programming course at the Technical University of Munich. The design compares two forms of AI assistance with a no-AI control and measures task success, conceptual learning, cognitive load, frustration, and motivation.
+
+The 275 participants completed a 90-minute exercise on concurrency in which they implemented a parallel sum using threading. One group used Iris, a scaffolded tutor designed to provide calibrated hints while withholding complete solutions. A second group used unrestricted ChatGPT, which could return full solutions. The control group used conventional web resources without an AI assistant. This contrast is valuable because it separates the presence of generative AI from the instructional design wrapped around it.
+
+The researchers measured performance through automated test coverage for the programming exercise. Learning was assessed through pre- and post-knowledge tests and a code-comprehension task. Validated scales captured intrinsic, germane, and extraneous cognitive load, frustration, and intrinsic motivation. These separate measures let the study test whether students who complete more of the exercise also show greater conceptual gains, rather than treating a working submission as sufficient evidence of learning.
+
+Both AI-supported groups achieved substantially higher exercise scores than the control group. The score distributions differed: ChatGPT users clustered toward high task scores, control participants clustered lower, and Iris users were spread more widely across the performance range. Students in both AI conditions also reported less frustration and lower extraneous and germane cognitive load than the control group, while intrinsic cognitive load did not differ. Participants rated ChatGPT as easier to use and more helpful.
+
+The learning results tell a more cautious story. Neither AI condition produced larger pre-to-post knowledge gains or a code-comprehension advantage over conventional resources. In this short programming exercise, generative AI therefore functioned mainly as a performance aid. The scaffolded Iris tutor did show one distinctive benefit: it increased intrinsic motivation, while unrestricted ChatGPT did not. The authors describe the attraction of easy, helpful assistance without additional learning as a comfort trap, where learners' preferences and immediate success can diverge from pedagogical effectiveness.
+
+The study should not be generalized beyond its boundaries. It examines one 90-minute concurrency task in one introductory university programming context, and its learning measures focus on knowledge change and code comprehension around that activity. Longer courses, different domains, repeated tutor use, or designs that require explanation and transfer may produce different outcomes. The open dataset and analysis materials strengthen transparency and make replication or secondary analysis possible, but broader evidence is still needed.
+
+For AIEDHK, the practical implication is to separate assistance metrics from learning metrics. A school or university pilot should not infer understanding from completion rate, code quality, reduced frustration, or positive user ratings alone. AI-supported tasks can require students to predict program behavior, explain a generated solution, debug a novel case, compare alternatives, and complete an independent transfer assessment. Scaffolded hints may better preserve motivation and productive activity than unrestricted answer delivery, but their value still needs to be demonstrated through learning evidence. The paper's most important contribution is a clear warning: when AI makes work easier, assessment must work harder to reveal what the learner can actually understand and do.`,
+    keyTakeaways: [
+      "The randomized trial assigned 275 introductory programming students to scaffolded Iris hints, unrestricted ChatGPT, or conventional web resources during a 90-minute concurrency exercise.",
+      "Both AI groups completed more of the task and reported less frustration, but neither showed stronger knowledge gains or code comprehension than the no-AI control.",
+      "Only the scaffolded tutor increased intrinsic motivation, supporting hint-first designs and independent assessments that distinguish polished performance from durable understanding.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the study demonstrates why AI-assisted completion, low frustration, and user preference cannot stand in for learning evidence; pilots need scaffolded tasks plus independent measures of explanation, transfer, and retention.",
+    sourceUrl: "https://doi.org/10.1016/j.caeai.2025.100537",
+    sourceUrls: [
+      {
+        label: "Open-access journal article",
+        url: "https://doi.org/10.1016/j.caeai.2025.100537",
+      },
+      {
+        label: "Open dataset and analysis materials",
+        url: "https://doi.org/10.5281/zenodo.16905779",
+      },
+    ],
+    createdAt: "2026-07-19",
+  },
+  {
+    id: "aied-025",
+    slug: "news-openai-interactive-learning-anthropic-claude-reflection",
+    title: "News: OpenAI and Anthropic add tools for active learning and reflective AI use",
+    authors: ["OpenAI", "Anthropic"],
+    venue: "AI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "ChatGPT interactive learning", "Claude reflection"],
+    image: "/images/research/covers/aied-025-interactive-learning-reflection-2026.png",
+    imageAlt: "Editorial cover for interactive learning in ChatGPT and reflective AI use in Claude",
+    summaryImage: "/images/research/summary/aied-025-interactive-learning-reflection-summary.png",
+    summaryImageAlt:
+      "A university learner explores an interactive science model while a teacher reviews a restrained reflection map of AI-use patterns and human study goals.",
+    summaryAudio: "/audio/research/aied-025-interactive-learning-reflection-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news summary",
+    shortSummary:
+      "News item: OpenAI's interactive math and science explanations and Anthropic's Claude reflection dashboard point toward AI products that support experimentation, metacognition, and deliberate limits on delegation.",
+    fullSummary: `This product-news roundup is useful for AIEDHK because OpenAI and Anthropic are adding features that address two different parts of learning with AI: understanding a difficult concept and reflecting on how much of one's work should be delegated. OpenAI's March 2026 update adds interactive visual explanations for more than 70 core mathematics and science concepts in ChatGPT. Anthropic's July 2026 beta adds a reflection dashboard to Claude that summarizes usage patterns, prompts users to examine the role AI plays in their lives, and offers tools such as quiet hours and break reminders. Together, the products suggest a move beyond answer generation toward active exploration and metacognitive oversight.
+
+OpenAI's feature turns selected formulas and relationships into manipulable visual modules. A learner can adjust variables, change a formula, and immediately see how graphs or outcomes respond. The initial list is most relevant to high-school and university learners and includes topics across algebra, geometry, mechanics, electricity, thermodynamics, and statistics. OpenAI says the experience is rolling out globally to logged-in users across all plans. The design builds on Study Mode and quizzes, but it adds a concrete representational layer: students can test a relationship rather than only read an explanation of it.
+
+The educational promise is strongest when interaction is tied to prediction and explanation. Moving a variable can make an abstract relationship visible, but visual motion alone does not guarantee conceptual understanding. A teacher can ask students to predict what will happen before changing a control, explain why the graph changed, compare the result with a symbolic derivation, and transfer the principle to a new problem. OpenAI also acknowledges that research on AI and learning is still developing. The product announcement is therefore a design signal, not evidence that the modules improve durable learning across subjects or learner groups.
+
+Anthropic's reflection feature addresses a different problem: users may become productive with AI without noticing what they repeatedly delegate or what they still want to do themselves. With memory enabled, Claude can summarize themes, usage patterns, and task types across the previous one, three, six, or twelve months. It periodically asks questions such as which activity a person wants to keep doing even if Claude could do it faster. The dashboard also frames recommendations through Anthropic's 4D AI Fluency model: delegation, description, discernment, and diligence. Users can set quiet hours or schedule a nudge to take a break.
+
+Anthropic says the reflection does not use incognito chats, underlying files from connected tools, or conversations linked to health integrations, and that the resulting insights are not used for other purposes. Even so, institutions should examine what conversation metadata is available, how memory settings affect the feature, and whether students understand that the dashboard is a vendor-generated interpretation rather than an objective learning record. Reflection prompts can support agency, but they should not become surveillance or a substitute for teacher-guided self-assessment.
+
+For Hong Kong educators, the combined lesson is to design for active cognition and reflective boundaries. Interactive modules should require prediction, reasoning, and transfer. Usage reflection should help learners decide what to delegate, what to verify, and what to practice independently. Both products remain early vendor releases, so schools should pilot them with explicit learning goals, accessibility checks, privacy review, and independent measures of understanding. The important news is not that AI interfaces have gained more features. It is that mainstream products are beginning to make learning activity and human oversight visible parts of the interface.`,
+    keyTakeaways: [
+      "News: ChatGPT now offers interactive visual explanations for more than 70 mathematics and science concepts, allowing learners to manipulate variables and observe changing relationships.",
+      "Claude's reflection beta summarizes AI-use patterns, applies the 4D AI Fluency framework, and adds user-controlled quiet hours and break reminders.",
+      "Educators should pair interactive tools with prediction and transfer tasks, and use reflection features to strengthen agency without turning vendor analytics into surveillance or learning evidence.",
+    ],
+    whyItMatters:
+      "Industry news signal: OpenAI and Anthropic are making experimentation and reflection visible product features, giving AIEDHK a timely test case for designing AI use around active reasoning, metacognition, privacy, and human agency.",
+    sourceUrl: "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt/",
+    sourceUrls: [
+      {
+        label: "OpenAI interactive math and science learning",
+        url: "https://openai.com/index/new-ways-to-learn-math-and-science-in-chatgpt/",
+      },
+      {
+        label: "Anthropic Claude reflection beta",
+        url: "https://www.anthropic.com/news/reflect-with-claude",
+      },
+    ],
+    createdAt: "2026-07-17",
+  },
+  {
+    id: "aied-024",
+    slug: "gpt4-feedback-student-activation-learning-outcomes-higher-education",
+    title: "GPT-4 feedback increases student activation and learning outcomes in higher education",
+    authors: ["Stephan Geschwind", "Johann Graf Lambsdorff", "Deborah Voss", "Veronika Hackl"],
+    venue: "International Journal of Artificial Intelligence in Education",
+    year: 2026,
+    type: "journal",
+    tags: ["AI feedback", "student activation", "higher education"],
+    image: "/images/research/covers/aied-024-gpt4-feedback-2026.png",
+    imageAlt: "Editorial cover for a higher-education experiment with GPT-4 feedback",
+    summaryImage: "/images/research/summary/aied-024-gpt4-feedback-summary.png",
+    summaryImageAlt:
+      "University students revise macroeconomics answers at a tutorial table while lecturer, peer, and AI feedback pathways remain visibly distinct.",
+    summaryAudio: "/audio/research/aied-024-gpt4-feedback-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A 2026 IJAIED field experiment finds that individualized GPT-4 feedback sustained voluntary participation and improved the content of students' open-ended macroeconomics answers more than lecturer-only or peer-feedback conditions.",
+    fullSummary: `Geschwind, Lambsdorff, Voss, and Hackl investigate whether generative AI can make individualized feedback more scalable in large university courses. Their 2026 open-access IJAIED article reports a lab-in-the-field experiment conducted in undergraduate macroeconomics tutorial classes over one semester. Students answered eight open-ended questions and experienced one of three feedback arrangements: classroom-level lecturer feedback, additional individual feedback from peers, or additional individual feedback generated by GPT-4. The study asks whether the feedback changes student activation and the quality of subsequent answers, rather than only whether students say they like AI.
+
+All groups received lecturer discussion of a sample solution and adaptive feedback on two selected student answers. In the peer-feedback condition, students anonymously rated another student's answer for content and style and wrote suggestions for improvement. In the AI-feedback condition, GPT-4 provided individual scores and qualitative suggestions in a comparable structure. Both individual-feedback formats were designed around three familiar feedback functions: looking back at current performance, clarifying the goal through a sample solution, and pointing forward to improvement.
+
+The researchers operationalized activation in two ways. First, they tracked voluntary participation across the eight tasks; tutorial participation did not count toward the final examination, although students who completed at least seven tasks entered a raffle. Second, they used answer length as an indicator of the effort invested in a task. For learning outcomes, GPT-4 rated the content and style of answers on five-point scales. To make treatment comparisons more consistent, the model rated answers from all three conditions after the course in three separate iterations, and the researchers averaged those ratings.
+
+The AI-feedback condition produced the clearest activation pattern. Participation remained higher over time than in the lecturer-only condition, while peer feedback performed only marginally better than lecturer feedback. Students receiving AI feedback also wrote the longest answers. Because attrition was voluntary and not random, the authors did not rely only on simple averages: their task-to-task analysis used 479 repeated comparisons in which the same student participated in the same condition on consecutive relevant tasks.
+
+For learning outcomes, AI feedback was associated with the strongest improvement in content ratings. Peer feedback did not produce the same advantage, which the authors connect to differences in reliability and completeness: peers sometimes failed to provide feedback, while the AI returned it consistently. The study found no comparable treatment effect on writing style. That distinction matters because it suggests that the intervention supported substantive engagement with macroeconomic answers without automatically improving every dimension of academic writing.
+
+The paper is promising but should be interpreted carefully. The setting was one subject area and one university course, participation was voluntary, attrition differed across conditions, and the outcome measure was improvement in open-ended answers rather than a broad examination of long-term retention or transfer. GPT-4 generated feedback in one condition and also served as the common post-course rater, even though the authors used repeated ratings and prior reliability work to strengthen the measure. These choices make the study more informative than a satisfaction survey, but they do not establish that AI feedback will outperform expert human feedback in every context.
+
+For AIEDHK, the practical lesson is to focus on feedback system design. Individual AI feedback may sustain participation when it is timely, structured, connected to a sample solution, and followed by opportunities to revise. Educators should preserve lecturer oversight, test feedback validity, measure learning with independent assessments, and compare the intervention with realistic alternatives. The contribution is not a claim that GPT-4 replaces teachers. It is evidence that carefully structured AI feedback can extend the reach of tutorial support while keeping course goals and human judgment visible.`,
+    keyTakeaways: [
+      "The semester-long field experiment compared lecturer-level feedback, individual peer feedback, and individual GPT-4 feedback across eight open-ended macroeconomics tasks.",
+      "GPT-4 feedback sustained the highest voluntary participation, elicited the longest answers, and produced the strongest improvement in content ratings; no treatment effect appeared for writing style.",
+      "The findings are promising but bounded by one course, non-random attrition, and GPT-4-rated outcomes, so replication with independent assessments and diverse contexts is needed.",
+    ],
+    whyItMatters:
+      "For AIEDHK, this study provides field evidence that structured, timely AI feedback can extend individualized support and student activation, while also showing why lecturer oversight and independent outcome measures must remain part of the design.",
+    sourceUrl: "https://doi.org/10.1016/j.ijaied.2026.100014",
+    createdAt: "2026-07-17",
+  },
+  {
+    id: "aied-023",
+    slug: "news-anthropic-claude-for-teachers-k12",
+    title: "News: Anthropic launches Claude for Teachers for US K-12 educators",
+    authors: ["Anthropic"],
+    venue: "Anthropic Education",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "Claude for Teachers", "K-12 education"],
+    image: "/images/research/covers/aied-023-claude-for-teachers-2026.png",
+    imageAlt: "Editorial cover for Anthropic's Claude for Teachers launch",
+    summaryImage: "/images/research/summary/aied-023-claude-for-teachers-summary.png",
+    summaryImageAlt:
+      "A teacher plans a standards-aligned lesson with differentiated activity materials, privacy safeguards, and scheduled AI support in an empty K-12 classroom.",
+    summaryAudio: "/audio/research/aied-023-claude-for-teachers-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news summary",
+    shortSummary:
+      "News item: Anthropic's Claude for Teachers gives verified US K-12 educators free access to premium Claude capabilities, standards-linked curricula, teaching skills, and teacher-only agentic workflows.",
+    fullSummary: `Anthropic's July 14 launch of Claude for Teachers is significant Industry news for AIEDHK because it packages generative and agentic AI around teachers' work rather than direct student use. Verified K-12 educators in the United States can receive free access to premium Claude capabilities, a library of teaching skills, and evidence-based curricular resources connected to academic standards in all 50 states. Anthropic says the product is intended to narrow the gap between effective instructional practices and the time teachers have to plan, differentiate, assess, and respond to learners.
+
+The product's curricular connection is central to the announcement. Claude for Teachers uses a Learning Commons connector to access state standards, the smaller competencies beneath each standard, and typical learning progressions. It can also draw on resources including OpenSciEd and Illustrative Mathematics. In practice, a teacher can request a lesson based on high-quality instructional materials, review the generated plan, and revise student-facing resources before using them. A differentiation skill can adapt the same material for learners at different readiness levels while preserving appropriate scaffolds and extension.
+
+Claude for Teachers also includes Claude Code and Cowork, bringing agentic workflows into teacher planning. Anthropic gives examples such as analyzing a teacher-provided folder of roster, diagnostic, attendance, and observation data to support instructional decisions, or scheduling a repeated task that reviews daily exit tickets and prepares an adapted plan for the next day. These examples show the product moving beyond one-off content generation toward ongoing work across files, data, tools, and time. That could reduce routine workload, but it also makes teacher review, data minimization, and clear responsibility essential.
+
+Anthropic presents the service as educator-only, consistent with Claude's 18-and-over policy. The announcement says Claude for Teachers data is not used for model training, student information is covered by a K-12 Data Processing Addendum designed for FERPA compliance, and teachers control what they share. It also notes that this launch is for individual educators; a separate offering for schools and districts is still forthcoming. Verified educators who sign up by June 30, 2027 can receive a full year of free access.
+
+The wider launch includes an AI Fluency for K-12 Teachers course, an open-source repository of teaching skills, new connectors, and plans for an evaluation pilot with Detroit Public Schools Community District. These are useful signals because they put curriculum alignment, teacher learning, privacy, and evaluation beside product access. However, this remains a vendor announcement, not independent evidence that the product improves learning or teacher wellbeing. The quality of the outcome will depend on curriculum fidelity, teacher judgment, local policy, data practices, and whether saved time is actually redirected toward students.
+
+For Hong Kong schools, the immediate product is geographically limited, but the design pattern is relevant. Teacher-facing AI is becoming an integrated workspace linked to standards, instructional materials, class evidence, and recurring workflows. Schools evaluating similar systems should ask whether local curricula and languages are represented, whether teachers can inspect and revise every output, what student data can be connected, and how impact will be evaluated. The important news is not simply free access to Claude. It is the emergence of a governed teacher workbench in which instructional expertise must remain visibly in charge.`,
+    keyTakeaways: [
+      "News: Claude for Teachers gives verified US K-12 educators free premium access, standards-linked curricula, and teaching skills built around lesson planning and differentiation.",
+      "The product includes Claude Code and Cowork for teacher-directed class-data analysis and scheduled recurring workflows, extending AI beyond one-off content generation.",
+      "The launch foregrounds teacher-only use, FERPA-oriented data protections, AI fluency, open-source skills, and evaluation, but independent learning-impact evidence is still needed.",
+    ],
+    whyItMatters:
+      "Industry news signal: Claude for Teachers shows teacher-facing AI becoming a standards-connected workbench, giving Hong Kong educators a concrete model to assess for curriculum fit, privacy, teacher control, and evidence of impact.",
+    sourceUrl: "https://www.anthropic.com/news/claude-for-teachers",
+    createdAt: "2026-07-15",
+  },
+  {
+    id: "aied-022",
+    slug: "technology-enhanced-clil-systematic-review-empirical-studies",
+    title: "Technology-enhanced content and language integrated learning: A systematic review of empirical studies",
+    authors: ["Dongpin Hu", "Juanjuan Chen", "Yan Li", "Minhong Wang"],
+    venue: "Educational Research Review",
+    year: 2025,
+    type: "review",
+    tags: ["systematic review", "CLIL", "technology-enhanced language learning"],
+    image: "/images/research/covers/aied-022-technology-enhanced-clil-review-2025.png",
+    imageAlt: "Editorial cover for a systematic review of technology-enhanced CLIL",
+    summaryImage: "/images/research/summary/aied-022-technology-enhanced-clil-review-summary.png",
+    summaryImageAlt:
+      "Education researchers synthesize international evidence on technology-supported content and language learning while a CLIL science lesson takes place nearby.",
+    summaryAudio: "/audio/research/aied-022-technology-enhanced-clil-review-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A systematic review of 20 SSCI journal articles maps seven technology types in CLIL and finds limited, uncertain evidence for gains in content knowledge and language achievement.",
+    fullSummary: `Hu, Chen, Li, and Wang review how technology has been used in content and language integrated learning, or CLIL, where students learn a subject through a non-native language. The paper addresses an important AIED question: does adding digital technology help learners manage the dual demands of understanding subject content and developing language? Rather than assuming that technology is beneficial, the authors map what has been studied, which tools have been used, what outcomes have been measured, and which designs offer useful examples for practice.
+
+The review searched Web of Science for English-language SSCI journal articles published from 2014 to 2023. From 390 records, the authors retained 20 empirical studies after title, abstract, and full-text screening. Two researchers screened and coded the studies independently, resolving disagreements through discussion; coding agreement was high, with a Kappa value of 0.91. The review classified education level, learning mode, subject domain, learners' first language, language of instruction, language skills, technology type, and cognitive or affective outcomes. For comparative evidence, it also synthesized nine experiments from seven controlled studies using a random-effects model.
+
+The evidence base is concentrated. Fourteen of the 20 studies were conducted in Asia, five in Europe, and one in South America. Three quarters involved tertiary education, and 90 percent used English as the language of instruction. Productive language skills such as speaking and writing received more attention than reading and listening, although many papers did not specify a language-skill focus. The authors identify seven technology categories: telecollaboration tools, online learning platforms, multimedia, virtual learning environments, social-network applications, language tools, and intelligent conversation tools. Telecollaboration was most common, while intelligent chatbots appeared in only one included study.
+
+The outcome evidence is more cautious than the technology range might suggest. All 20 studies reported cognitive outcomes, commonly language knowledge or subject-content knowledge, while eight examined affective outcomes. Only one addressed collaboration and communication, and none assessed higher-order thinking as an outcome. Across the controlled studies, the estimated effect on content knowledge was small at 0.29, with a 95 percent confidence interval from -0.07 to 0.66. The estimated effect on language achievement was 0.16, with a confidence interval from -0.03 to 0.35. Because both intervals include zero and the number of experiments is small, neither estimate provides firm evidence of a positive overall effect.
+
+Three exemplary cases make the design implications more concrete: cooperative digital storytelling in a Taiwanese primary school, an educational chatbot in a Greek secondary-school history unit, and a cloud learning environment in a mainland Chinese university course. Across these examples, technology is most useful when it supports rich input, scaffolding, interaction, purposeful learner output, higher-order activity, and balanced development of both content and language. The chatbot case also showed that novelty or student preference did not automatically produce better achievement.
+
+For Hong Kong educators, the review argues for design discipline. Technology should serve explicit content and language goals, with scaffolds that manage the cognitive load of learning subject matter through another language. Evaluation should include motivation, self-efficacy, interaction, and durable language development, not only immediate knowledge tests. The review is limited to English-language SSCI articles in one database, includes only 20 studies, and groups some EMI work with CLIL, so its estimates should not be treated as final. Its strongest contribution is a practical warning: effective TECLIL depends on pedagogy and evidence, not the presence of a digital tool alone.`,
+    keyTakeaways: [
+      "The review retained 20 empirical SSCI journal articles from 390 Web of Science records and identified seven technology categories used in CLIL.",
+      "Estimated effects were small and uncertain: 0.29 for content knowledge and 0.16 for language achievement, with confidence intervals that included zero.",
+      "Effective TECLIL should balance content and language goals through rich input, scaffolding, interaction, learner output, and evaluation of cognitive and affective outcomes.",
+    ],
+    whyItMatters:
+      "For AIEDHK, this review shows that technology-enhanced bilingual learning needs explicit pedagogy, cognitive-load support, and stronger outcome evidence; access to digital tools alone does not guarantee content or language gains.",
+    sourceUrl: "https://doi.org/10.1016/j.edurev.2025.100677",
+    createdAt: "2026-07-15",
+  },
+  {
+    id: "aied-021",
+    slug: "news-openai-anthropic-ai-workbenches-chatgpt-claude-science",
+    title: "News: OpenAI and Anthropic turn AI assistants into governed workbenches",
+    authors: ["OpenAI", "Anthropic"],
+    venue: "AI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "ChatGPT Work", "Claude Science", "Claude Code"],
+    image: "/images/research/covers/aied-021-ai-workbenches-openai-anthropic-2026.png",
+    imageAlt: "Editorial cover for OpenAI and Anthropic AI workbench product news",
+    summaryImage: "/images/research/summary/aied-021-ai-workbenches-openai-anthropic-summary.png",
+    summaryImageAlt:
+      "Editorial scene of educators, researchers, and developers supervising agentic AI workflows across classroom, science, coding, and governance contexts.",
+    summaryAudio: "/audio/research/aied-021-ai-workbenches-openai-anthropic-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word summary",
+    shortSummary:
+      "News item: OpenAI's GPT-5.6 rollout across ChatGPT Work and Codex, alongside Anthropic's Claude Science and Claude Code, shows AI assistants becoming auditable workbench infrastructure.",
+    fullSummary: `This product-news roundup is useful for AIEDHK because OpenAI and Anthropic are both moving AI assistants away from simple chat and toward governed workbenches for extended tasks. OpenAI's current GPT-5.6 guidance describes Sol as a model for complex work across coding, knowledge work, research, cybersecurity, science, computer use, and design. It also says GPT-5.6 availability now spans Work in ChatGPT, Codex, and the OpenAI API. Anthropic's June 30 launch of Claude Science uses similar workbench language for scientific research: a coordinated environment that can integrate tools, produce auditable artifacts, manage compute, and preserve enough history for validation and reproduction. Together, these updates mark a practical product shift that education leaders should track closely.
+
+The OpenAI side matters because GPT-5.6 is not only a stronger answer generator. In managed workspaces, Work in ChatGPT can use Sol, Terra, and Luna, while Codex connects the model family to coding and software workflows. That changes how students, teachers, researchers, and administrators may experience AI. A learner may ask for help with a project plan, data analysis, literature search, code review, or presentation, and the system may increasingly coordinate multiple steps rather than return a single response. For education, that makes process evidence more important: what sources were used, which files changed, which commands ran, and what the human user accepted or rejected.
+
+The Anthropic side makes the same direction visible in research and software. Claude Science is presented as an AI workbench for scientists that integrates common research tools, generates figures and manuscripts with code-backed artifacts, accesses local or remote compute, and uses reviewer agents to check citations, calculations, and traceability. Claude Code is positioned for work directly in a codebase through terminal, IDE, Slack, web, and other surfaces. These products are not education tools in the narrow classroom sense, but they are likely to shape research training, programming education, graduate supervision, and project-based learning because they model how expert work can be delegated, checked, and revised with agents.
+
+The caution is that product capability is not the same as learning impact. A workbench that can complete a workflow can also hide the planning, debugging, reading, and judgment that students need to practice. Stronger agentic systems may make final artifacts look more polished while weakening understanding if educators do not require explanation, version history, source review, and oral defense. They also raise governance questions about connected tools, data residency, institutional permissions, code execution, sensitive research files, and accountability when an agent's output is wrong but persuasive.
+
+For Hong Kong schools and universities, the practical response is to teach workbench literacy, not only prompt literacy. Students need to learn how to define tasks, constrain tools, inspect intermediate outputs, verify citations, review code diffs, and document human decisions. Teachers need assessment formats that reward process records and reflective critique. Institutions need policies for managed workspaces, local data, research compute, and acceptable delegation. The important news signal is therefore not simply that OpenAI and Anthropic have new products. It is that mainstream AI products are becoming environments for delegated action, and AIED practice must make human oversight, reproducibility, and learning evidence central from the start.`,
+    keyTakeaways: [
+      "News: OpenAI is making GPT-5.6 available across Work in ChatGPT, Codex, and the API, while Anthropic has launched Claude Science and continues to position Claude Code as a multi-surface coding agent.",
+      "AI assistants are becoming workbenches that can coordinate research, coding, compute, artifacts, and review rather than only produce chat responses.",
+      "AIED adoption should teach workbench literacy: task framing, tool constraints, process evidence, source verification, code review, and accountable human judgment.",
+    ],
+    whyItMatters:
+      "News signal: OpenAI and Anthropic product moves show agentic AI becoming educational and research infrastructure, so AIEDHK should evaluate them through evidence, reproducibility, governance, and learner understanding.",
+    sourceUrl: "https://help.openai.com/en/articles/20001354-gpt-5-6-in-chatgpt-codex-and-the-api",
+    sourceUrls: [
+      {
+        label: "OpenAI GPT-5.6",
+        url: "https://help.openai.com/en/articles/20001354-gpt-5-6-in-chatgpt-codex-and-the-api",
+      },
+      {
+        label: "Anthropic Claude Science",
+        url: "https://www.anthropic.com/news/claude-science-ai-workbench",
+      },
+      {
+        label: "Claude Code",
+        url: "https://claude.com/product/claude-code",
+      },
+    ],
+    createdAt: "2026-07-13",
+  },
+  {
+    id: "aied-020",
+    slug: "generative-ai-higher-education-ethical-behavioral-chatgpt-adoption",
+    title: "Generative AI in higher education: ethical and behavioral factors influencing students' intentions to use ChatGPT",
+    authors: ["Nina Rizun", "Ovidiu Niculae Bordean", "Anastasija Nikiforova", "Ioana Natalia Beleiu", "Aleksandra Revina"],
+    venue: "Computers and Education Open",
+    year: 2026,
+    type: "journal",
+    tags: ["ChatGPT", "AI ethics", "higher education"],
+    image: "/images/research/covers/aied-020-chatgpt-ethics-adoption-2026.png",
+    imageAlt: "Editorial cover for ethical and behavioral factors in students' ChatGPT adoption",
+    summaryImage: "/images/research/summary/aied-020-chatgpt-ethics-adoption-summary.png",
+    summaryImageAlt:
+      "Editorial classroom scene showing students evaluating generative AI adoption through privacy, explainability, trust, social influence, and academic integrity.",
+    summaryAudio: "/audio/research/aied-020-chatgpt-ethics-adoption-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word summary",
+    shortSummary:
+      "A 2026 open-access study of 344 European students connects ChatGPT adoption in higher education with explainability, privacy, trust, social influence, and perceived control.",
+    fullSummary: `Rizun, Bordean, Nikiforova, Beleiu, and Revina study a practical question for universities: what makes students intend to use ChatGPT for academic tasks, and how do ethical concerns fit into that decision? The paper is useful for AIEDHK because it does not treat generative AI adoption as a simple preference or novelty effect. Instead, it connects student intention with ethical trust factors, technology acceptance, planned behavior, and social influence. That gives educators a better vocabulary for discussing why students adopt AI tools and what kinds of support or safeguards may actually change behavior.
+
+The study develops and tests an integrated model using survey data from 344 students in Estonia, Germany, Poland, and Romania. Its framework combines Fairness, Accountability, Transparency and Ethics in AI, the Technology Acceptance Model, the Theory of Planned Behavior, and the Unified Theory of Acceptance and Use of Technology. This combination matters because higher education use of ChatGPT is both technical and social. Students judge whether the tool is useful, whether they feel capable of using it, whether teachers and peers normalize its use, and whether they trust the system's privacy, explainability, and fairness.
+
+One important finding is that ethical concerns shape trust, but trust itself does not directly drive students' intention to use ChatGPT. Explainability and privacy are reported as the strongest predictors of trust, while trust significantly affects perceived performance. In plain terms, students may care about whether ChatGPT feels understandable and privacy-respecting, but their decision to use it is more strongly shaped by whether they believe it will help them perform and whether they feel able and socially permitted to use it. That is a useful warning for institutions that rely only on abstract ethics statements.
+
+The paper also emphasizes social influence and perceived behavioral control as key adoption drivers. University professors matter because their guidance helps define whether ChatGPT use is legitimate, expected, risky, or academically inappropriate. Perceived control matters because students who feel capable of using ChatGPT are more likely to adopt it. For AIEDHK, this suggests that responsible AI adoption cannot be handled only through bans or general policy notices. Students need concrete examples, boundaries, guided practice, and assessment rules that explain what good use looks like in a course.
+
+The practical implication for Hong Kong higher education is that AI ethics and AI literacy should be designed together. Privacy, explainability, academic integrity, and fairness need to be taught through actual learning tasks, not isolated compliance messages. Teachers need course-level guidance so students know when AI use is permitted, when it must be disclosed, and how it should support learning rather than replace it. Product teams should also notice the model's message: trust is built through explainability and privacy, but adoption depends on performance, social norms, and student confidence. AIED systems should therefore make responsible use easy to understand, easy to practice, and visible enough for teachers to support.`,
+    keyTakeaways: [
+      "The study links ChatGPT adoption with ethics, technology acceptance, planned behavior, and social influence rather than treating usage as novelty alone.",
+      "Explainability and privacy strengthen trust, but social influence and perceived behavioral control are stronger practical drivers of student adoption.",
+      "Universities should combine AI ethics, AI literacy, course-level guidance, and transparent assessment rules if they want responsible ChatGPT use.",
+    ],
+    whyItMatters:
+      "AIEDHK can use this paper to design AI adoption guidance that connects student confidence, teacher norms, privacy, explainability, and academic integrity instead of treating ethics as a separate policy layer.",
+    sourceUrl: "https://doi.org/10.1016/j.caeo.2026.100336",
+    createdAt: "2026-07-13",
+  },
+  {
     id: "aied-019",
     slug: "news-openai-gpt-5-6-codex-in-chatgpt-agentic-learning",
     title: "News: OpenAI launches GPT-5.6 and brings Codex into ChatGPT",

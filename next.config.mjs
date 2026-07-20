@@ -9,54 +9,64 @@ const nextConfig = {
 
     return [
       {
-        source: "/research-news",
-        destination: "/en/research-news",
+        source: "/academy",
+        destination: "/en/academy",
         permanent: false,
+      },
+      {
+        source: "/academy/:slug*",
+        destination: "/en/academy/:slug*",
+        permanent: false,
+      },
+      {
+        source: "/research-news",
+        destination: "/en/news",
+        permanent: true,
       },
       {
         source: "/research-news/:slug*",
-        destination: "/en/research-news/:slug*",
-        permanent: false,
+        destination: "/en/news/:slug*",
+        permanent: true,
       },
       {
         source: "/research",
-        destination: "/en/research-news",
+        destination: "/en/news",
         permanent: false,
       },
       {
         source: "/research/:slug*",
-        destination: "/en/research-news/:slug*",
+        destination: "/en/news/:slug*",
         permanent: false,
       },
       {
         source: "/news",
-        destination: "/en/research-news",
+        destination: "/en/news",
         permanent: false,
       },
       {
         source: "/news/:slug*",
-        destination: "/en/research-news/:slug*",
+        destination: "/en/news/:slug*",
         permanent: false,
       },
       {
         source: `/:locale(${localePattern})/research`,
-        destination: "/:locale/research-news",
+        destination: "/:locale/news",
         permanent: false,
       },
       {
         source: `/:locale(${localePattern})/research/:slug*`,
-        destination: "/:locale/research-news/:slug*",
+        destination: "/:locale/news/:slug*",
         permanent: false,
       },
       {
-        source: `/:locale(${localePattern})/news`,
-        destination: "/:locale/research-news",
-        permanent: false,
+        source: `/:locale(${localePattern})/research-news`,
+        destination: "/:locale/news",
+        permanent: true,
       },
       {
-        source: `/:locale(${localePattern})/news/:slug*`,
-        destination: "/:locale/research-news/:slug*",
-        permanent: false,
+        source: `/:locale(${localePattern})/research-news/:slug*`,
+        destination: "/:locale/news/:slug*",
+        permanent: true,
       },
     ];
   },

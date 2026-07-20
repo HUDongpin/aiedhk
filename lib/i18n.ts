@@ -318,6 +318,11 @@ export interface AcademyDictionary {
   trackFieldLabel: string;
   levelFieldLabel: string;
   noResults: string;
+  newsletter: {
+    eyebrow: string;
+    title: string;
+    description: string;
+  };
 }
 
 export type Dictionary = Omit<BaseDictionary, "nav"> & {
@@ -1117,7 +1122,7 @@ for (const locale of ["fr", "pt", "de", "ar", "ko", "ja", "hi", "ru", "id", "bn"
   baseDictionaries[locale] = makeRomanceDictionary(locale);
 }
 
-const academyTranslations: Record<Locale, { nav: string; copy: AcademyDictionary }> = {
+const academyTranslations: Record<Locale, { nav: string; copy: Omit<AcademyDictionary, "newsletter"> }> = {
   en: { nav: "Academy", copy: { eyebrow: "Academy", title: "Build durable foundations in AI and learning science.", intro: "Paired, reviewed lessons connect essential AI knowledge with educational theory for thoughtful practice.", searchPlaceholder: "Search title, topic, summary, or core idea", resultCount: "lessons", allTracks: "All tracks", allLevels: "All levels", tracks: { "ai-knowledge": "AI Knowledge", "educational-theory": "Educational Theory" }, levels: { basics: "Basics", core: "Core" }, backToAcademy: "Back to Academy", summaryHeading: "Full lesson summary", coreIdeas: "3 core ideas", educationConnection: "Education connection", relatedConcepts: "3 related concepts", relatedLessons: "Related lessons", sources: "Sources", readingTimeLabel: "Estimated reading time", minuteAbbreviation: "min", searchFieldLabel: "Search Academy lessons", trackFieldLabel: "Filter by track", levelFieldLabel: "Filter by level", noResults: "No lessons matched the current filters." } },
   "zh-hant": { nav: "學院", copy: { eyebrow: "學院", title: "建立人工智能與學習科學的穩固基礎。", intro: "經審閱的配對課程把核心 AI 知識與教育理論連結到審慎實踐。", searchPlaceholder: "搜尋標題、主題、摘要或核心概念", resultCount: "節課", allTracks: "全部軌道", allLevels: "全部程度", tracks: { "ai-knowledge": "AI 知識", "educational-theory": "教育理論" }, levels: { basics: "基礎", core: "核心" }, backToAcademy: "返回學院", summaryHeading: "完整課程摘要", coreIdeas: "3 個核心概念", educationConnection: "教育連結", relatedConcepts: "3 個相關概念", relatedLessons: "相關課程", sources: "來源", readingTimeLabel: "預計閱讀時間", minuteAbbreviation: "分鐘", searchFieldLabel: "搜尋學院課程", trackFieldLabel: "按軌道篩選", levelFieldLabel: "按程度篩選", noResults: "目前篩選條件下沒有符合的課程。" } },
   "zh-hans": { nav: "学院", copy: { eyebrow: "学院", title: "建立人工智能与学习科学的坚实基础。", intro: "经审阅的配对课程将核心 AI 知识与教育理论连接到审慎实践。", searchPlaceholder: "搜索标题、主题、摘要或核心概念", resultCount: "节课", allTracks: "全部方向", allLevels: "全部程度", tracks: { "ai-knowledge": "AI 知识", "educational-theory": "教育理论" }, levels: { basics: "基础", core: "核心" }, backToAcademy: "返回学院", summaryHeading: "完整课程摘要", coreIdeas: "3 个核心概念", educationConnection: "教育联系", relatedConcepts: "3 个相关概念", relatedLessons: "相关课程", sources: "来源", readingTimeLabel: "预计阅读时间", minuteAbbreviation: "分钟", searchFieldLabel: "搜索学院课程", trackFieldLabel: "按方向筛选", levelFieldLabel: "按程度筛选", noResults: "当前筛选条件下没有匹配的课程。" } },
@@ -1134,11 +1139,28 @@ const academyTranslations: Record<Locale, { nav: string; copy: AcademyDictionary
   bn: { nav: "একাডেমি", copy: { eyebrow: "একাডেমি", title: "AI ও শিক্ষাবিজ্ঞানে দৃঢ় ভিত্তি গড়ুন।", intro: "পর্যালোচিত যুগ্ম পাঠ অপরিহার্য AI জ্ঞানকে শিক্ষা তত্ত্বের সঙ্গে যুক্ত করে।", searchPlaceholder: "শিরোনাম, বিষয়, সারাংশ বা মূল ধারণা খুঁজুন", resultCount: "পাঠ", allTracks: "সব ট্র্যাক", allLevels: "সব স্তর", tracks: { "ai-knowledge": "AI জ্ঞান", "educational-theory": "শিক্ষা তত্ত্ব" }, levels: { basics: "ভিত্তি", core: "মূল" }, backToAcademy: "একাডেমিতে ফিরুন", summaryHeading: "সম্পূর্ণ পাঠ সারাংশ", coreIdeas: "৩টি মূল ধারণা", educationConnection: "শিক্ষার সংযোগ", relatedConcepts: "৩টি সম্পর্কিত ধারণা", relatedLessons: "সম্পর্কিত পাঠ", sources: "উৎস", readingTimeLabel: "আনুমানিক পড়ার সময়", minuteAbbreviation: "মিনিট", searchFieldLabel: "একাডেমির পাঠ খুঁজুন", trackFieldLabel: "ট্র্যাক দিয়ে ফিল্টার করুন", levelFieldLabel: "স্তর দিয়ে ফিল্টার করুন", noResults: "কোনো পাঠ বর্তমান ফিল্টারের সঙ্গে মেলেনি।" } },
 };
 
+const academyNewsletterCopy: Record<Locale, AcademyDictionary["newsletter"]> = {
+  en: { eyebrow: "Keep learning", title: "Connect PedaNova Academy lessons with the latest AIED technologies and learning theories", description: "Get one carefully curated AIED update each week to extend what you learn in the Academy." },
+  "zh-hant": { eyebrow: "持續學習", title: "把 PedaNova 學院課程連結至最新 AIED 技術與學習理論", description: "每週獲取一則精選 AIED 更新，延伸你在學院所學的內容。" },
+  "zh-hans": { eyebrow: "持续学习", title: "将 PedaNova 学院课程连接到最新 AIED 技术与学习理论", description: "每周获取一则精选 AIED 更新，拓展你在学院所学的内容。" },
+  es: { eyebrow: "Sigue aprendiendo", title: "Conecta las lecciones de PedaNova Academy con las últimas tecnologías AIED y teorías del aprendizaje", description: "Recibe cada semana una actualización AIED cuidadosamente seleccionada para ampliar lo que aprendes en la Academia." },
+  fr: { eyebrow: "Continuez à apprendre", title: "Reliez les leçons de PedaNova Academy aux dernières technologies AIED et théories de l’apprentissage", description: "Recevez chaque semaine une actualité AIED soigneusement sélectionnée pour prolonger vos apprentissages dans l’Académie." },
+  pt: { eyebrow: "Continue a aprender", title: "Ligue as lições da PedaNova Academy às mais recentes tecnologias AIED e teorias da aprendizagem", description: "Receba semanalmente uma atualização AIED cuidadosamente selecionada para aprofundar o que aprende na Academia." },
+  de: { eyebrow: "Weiterlernen", title: "Verbinden Sie die Lektionen der PedaNova Academy mit den neuesten AIED-Technologien und Lerntheorien", description: "Erhalten Sie jede Woche ein sorgfältig kuratiertes AIED-Update, das Ihr Lernen in der Akademie vertieft." },
+  ar: { eyebrow: "واصل التعلّم", title: "اربط دروس أكاديمية PedaNova بأحدث تقنيات الذكاء الاصطناعي في التعليم ونظريات التعلّم", description: "احصل كل أسبوع على تحديث مختار بعناية حول أبحاث الذكاء الاصطناعي في التعليم لتوسيع ما تتعلمه في الأكاديمية." },
+  ko: { eyebrow: "배움을 이어가세요", title: "PedaNova Academy 수업을 최신 AIED 기술 및 학습 이론과 연결하세요", description: "매주 엄선된 AIED 업데이트를 받아 아카데미에서 배운 내용을 확장하세요." },
+  ja: { eyebrow: "学びを続ける", title: "PedaNova Academyのレッスンを最新のAIED技術と学習理論につなげる", description: "厳選されたAIEDの最新情報を毎週受け取り、アカデミーでの学びを深めましょう。" },
+  hi: { eyebrow: "सीखना जारी रखें", title: "PedaNova Academy के पाठों को नवीनतम AIED तकनीकों और अधिगम सिद्धांतों से जोड़ें", description: "अकादमी में सीखी बातों को आगे बढ़ाने के लिए हर सप्ताह सावधानी से चुना गया एक AIED अपडेट पाएँ।" },
+  ru: { eyebrow: "Продолжайте учиться", title: "Свяжите уроки PedaNova Academy с новейшими технологиями AIED и теориями обучения", description: "Получайте раз в неделю тщательно отобранный обзор AIED, чтобы углублять знания из Академии." },
+  id: { eyebrow: "Terus belajar", title: "Hubungkan pelajaran PedaNova Academy dengan teknologi AIED dan teori pembelajaran terbaru", description: "Dapatkan satu pembaruan AIED pilihan setiap minggu untuk memperluas pembelajaran Anda di Akademi." },
+  bn: { eyebrow: "শেখা চালিয়ে যান", title: "PedaNova Academy-এর পাঠকে সাম্প্রতিক AIED প্রযুক্তি ও শিখন তত্ত্বের সঙ্গে যুক্ত করুন", description: "একাডেমিতে শেখা বিষয়কে আরও বিস্তৃত করতে প্রতি সপ্তাহে যত্নসহকারে নির্বাচিত একটি AIED আপডেট পান।" },
+};
+
 export const dictionaries = Object.fromEntries(
   locales.map((locale) => [locale, {
     ...baseDictionaries[locale],
     nav: { ...baseDictionaries[locale].nav, academy: academyTranslations[locale].nav },
-    academy: academyTranslations[locale].copy,
+    academy: { ...academyTranslations[locale].copy, newsletter: academyNewsletterCopy[locale] },
   }])
 ) as Record<Locale, Dictionary>;
 

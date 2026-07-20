@@ -5,12 +5,14 @@ import React from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import AcademyFilters from "@/components/AcademyFilters";
 import AcademyExplorerView, { academyPageHref } from "@/components/AcademyExplorerView";
+import ResearchNewsletterSignup from "@/components/ResearchNewsletterSignup";
 import { filterAcademyLessonList } from "@/lib/academy-filter";
 import { getAcademyLessons } from "@/lib/academy-data";
-import { getDictionary } from "@/lib/i18n";
+import { getDictionary, locales } from "@/lib/i18n";
 
 const academyCardSource = readFileSync("components/AcademyCard.tsx", "utf8");
 const academyDetailSource = readFileSync("app/[locale]/academy/[slug]/page.tsx", "utf8");
+const academyPageSource = readFileSync("app/[locale]/academy/page.tsx", "utf8");
 
 test("Academy artwork uses responsive Next images and lazy-loads the below-fold summary", () => {
   assert.match(academyCardSource, /import Image from "next\/image"/);
@@ -67,4 +69,29 @@ test("active Academy pagination exposes the current page to assistive technology
   }));
 
   assert.match(html, /aria-current="page"[^>]*href="\/en\/academy\?page=2"[^>]*>2<\/a>/);
+});
+
+test("Academy ends with a localized wide newsletter invitation", () => {
+  for (const locale of locales) {
+    const copy = getDictionary(locale).academy.newsletter;
+    assert.ok(copy.eyebrow.trim(), `${locale} newsletter eyebrow should be localized`);
+    assert.ok(copy.title.trim(), `${locale} newsletter title should be localized`);
+    assert.ok(copy.description.trim(), `${locale} newsletter description should be localized`);
+  }
+
+  const dictionary = getDictionary("en");
+  const html = renderToStaticMarkup(React.createElement(ResearchNewsletterSignup, {
+    locale: "en",
+    sourcePath: "/en/academy",
+    copy: { ...dictionary.research.newsletter, ...dictionary.academy.newsletter, privacyNote: "" },
+    variant: "wide",
+  }));
+
+  assert.match(academyPageSource, /sourcePath={`\/\$\{typedLocale\}\/academy`}/);
+  assert.match(academyPageSource, /variant="wide"/);
+  assert.match(html, /Keep learning/);
+  assert.match(html, /Connect PedaNova Academy lessons with the latest AIED technologies and learning theories/);
+  assert.match(html, /you@example\.com/);
+  assert.match(html, />Subscribe<\/button>/);
+  assert.match(html, /lg:text-5xl/);
 });

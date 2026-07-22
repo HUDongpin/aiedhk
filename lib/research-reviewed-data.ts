@@ -2,6 +2,120 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-033",
+    slug: "news-openai-presence-claude-tag-gemini-education-governed-agents",
+    title: "News: OpenAI Presence, Claude Tag and Gemini Education move AI into governed institutional workflows",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news", "OpenAI Presence and ChatGPT Edu", "Claude Tag", "Gemini for Education"],
+    image: "/images/research/covers/aied-033-governed-institutional-ai-agents-2026.png",
+    imageAlt: "Editorial cover for educators and institutional teams supervising connected AI agents, permissions, and human escalation",
+    summaryImage: "/images/research/summary/aied-033-governed-institutional-ai-agents-summary.png",
+    summaryImageAlt:
+      "A teacher, administrator, student representative, and technology lead inspect an AI workflow with approval, collaboration, and learning-governance checkpoints.",
+    summaryAudio: "/audio/research/aied-033-governed-institutional-ai-agents-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news summary",
+    shortSummary:
+      "News roundup: OpenAI Presence adds policy-bound actions and human escalation, Claude Tag brings a shared agent into team channels, and Gemini for Education combines learning purposes with administrator control and visibility.",
+    fullSummary: `This product-news roundup tracks a new institutional question: not merely whether an AI can complete a task, but how an organization can decide what the system may access, which actions it may take, and when a person must intervene. OpenAI's July 22 launch of Presence packages policies, permissions, evaluations, guardrails, approved actions, and escalation rules around voice and chat agents. Anthropic's Claude Tag brings a shared, proactive Claude into selected team channels. Google's current Gemini for Education offer pairs teaching, learning, and work purposes with administrator-managed access and visibility. Together, the products make governance part of the interface rather than a policy document that sits elsewhere.
+
+OpenAI describes Presence as an enterprise product for deploying agents into customer and internal workflows. Each deployment begins with a defined job and receives only the knowledge and system access needed for that job. The organization specifies what the agent can do, what requires approval, and when a person should take over. Before launch, simulations and graders test common requests, edge cases, tool use, policy compliance, and escalation. After launch, production sessions and handoffs provide evidence for improvement, while Codex can propose changes that teams test and approve.
+
+That design is relevant to education even though Presence is not marketed as a classroom tutor. Universities and school systems increasingly consider agents for IT support, admissions, student services, library help, and administrative enquiries. In those settings, a fluent answer is not enough. Institutions need to know which record was consulted, whether the user was verified, what action occurred, and why a case was escalated. OpenAI's July 15 release notes add a directly education-specific signal: apps with sync now support ChatGPT Edu workspaces that use Enterprise Key Management. Connected data can therefore sit inside stronger workspace controls, but institutions still need to minimize access, test failure cases, and keep consequential decisions with authorized people.
+
+Anthropic's Claude Tag takes a different route to institutional AI. In its current beta for Claude Enterprise and Team customers, a team can invite Claude into selected Slack channels, connect approved tools, data, and codebases, and delegate multi-step work in a shared thread. Anthropic presents this as an evolution of Claude Code: the agent can break work into stages, operate asynchronously, schedule tasks, retain channel-scoped context, and, when enabled, flag relevant developments proactively. Administrators can separate identities, memories, information, and tools by channel so that one team's Claude does not expose another team's context.
+
+For educational organizations, that shared visibility may be valuable. A curriculum team could see how an agent assembled resources, an IT group could review a troubleshooting trail, or a research lab could coordinate routine checks. The risks are equally concrete. Ambient monitoring can collect more context than participants expect, long-lived memory can preserve mistakes, and a visible thread may create false confidence that someone has reviewed every action. A safe pilot should define the agent's role, restrict connectors, label automated contributions, set retention rules, and name the human owner for approvals and corrections.
+
+Gemini for Education provides an explicitly educational comparison. Google's current product page describes Gemini as supporting three purposes: teaching, learning, and work. Educators can plan lessons and differentiate materials; learners can deepen understanding, practise for assessments, and receive writing feedback; staff can use a managed assistant within an education environment. The institutional layer includes administrator control over access, usage visibility, Vault search and export, and enterprise-grade data protection. Google also distinguishes the standalone Gemini for Education service from Google AI Pro for Education, which expands access to Gemini, NotebookLM, and AI inside Workspace apps.
+
+For Hong Kong schools and universities, the combined product signal is that AI adoption is becoming an identity, permission, memory, and escalation problem as much as a model-selection problem. A responsible evaluation should begin with a specific educational or service purpose, map every data source and tool, test refusal and handoff behaviour, log consequential actions, and measure whether people can understand and challenge the agent's work. Vendor announcements demonstrate product direction, not independent evidence of educational benefit or regulatory compliance in a local setting. The opportunity is to make routine support more responsive while keeping teachers, students, and authorized staff in control. The danger is to mistake configurable guardrails for completed governance.`,
+    keyTakeaways: [
+      "News: OpenAI Presence wraps voice and chat agents in defined jobs, restricted access, simulations, policy checks, approved actions, and human escalation; ChatGPT Edu also gains synced-app support in EKM workspaces.",
+      "Claude Tag brings a shared evolution of Claude Code into selected team channels, with scoped tools and memory, asynchronous work, and optional proactive behaviour that require explicit ownership and retention rules.",
+      "Gemini for Education frames AI around teaching, learning, and institutional work while giving administrators access controls and usage visibility, so educational purpose and data governance must be evaluated together.",
+    ],
+    whyItMatters:
+      "Industry news signal: institutional AI is becoming connected, persistent, and action-oriented, so AIEDHK should evaluate permissions, identity, memory, escalation, audit trails, local data rules, and meaningful human control alongside educational usefulness.",
+    sourceUrl: "https://openai.com/index/introducing-openai-presence/",
+    sourceUrls: [
+      {
+        label: "OpenAI Presence launch",
+        url: "https://openai.com/index/introducing-openai-presence/",
+      },
+      {
+        label: "OpenAI ChatGPT product release notes",
+        url: "https://openai.com/products/release-notes/",
+      },
+      {
+        label: "Anthropic Claude Tag launch",
+        url: "https://www.anthropic.com/news/introducing-claude-tag",
+      },
+      {
+        label: "Google Gemini for Education",
+        url: "https://edu.google.com/intl/ALL_us/ai/gemini-for-education/",
+      },
+    ],
+    createdAt: "2026-07-23",
+  },
+  {
+    id: "aied-032",
+    slug: "genai-self-regulated-learning-secondary-school-rct",
+    title: "Enhancing School Students' Self-Regulated Learning through Generative AI Support: A Randomized Controlled Trial",
+    authors: ["Tim Fütterer", "Lisa Bardach", "Jochen Kuhn", "Stefan Daniel Keller", "Peter Gerjets"],
+    venue: "Educational Psychology Review",
+    year: 2026,
+    type: "journal",
+    tags: ["self-regulated learning", "secondary education", "randomized controlled trial"],
+    image: "/images/research/covers/aied-032-genai-self-regulated-learning-rct-2026.png",
+    imageAlt: "Editorial cover for a secondary-school randomized trial of motivational and cognitive generative-AI learning prompts",
+    summaryImage: "/images/research/summary/aied-032-genai-self-regulated-learning-rct-summary.png",
+    summaryImageAlt:
+      "Three secondary students use different AI-supported learning pathways while a teacher supervises a regular classroom lesson.",
+    summaryAudio: "/audio/research/aied-032-genai-self-regulated-learning-rct-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A preregistered three-arm trial with 371 German students in Grades 7–9 found limited advantages for theory-informed GPT-4o prompts over standard ChatGPT, highlighting that meaningful engagement and implementation quality matter more than adding prompts alone.",
+    fullSummary: `Fütterer, Bardach, Kuhn, Keller, and Gerjets test whether theory-informed generative-AI prompts can strengthen self-regulated learning in authentic secondary-school lessons. Their open-access article in Educational Psychology Review is valuable because it uses a preregistered randomized design, runs inside regular physics and English classes, and compares two pedagogical interventions with a strong control condition that still had access to standard ChatGPT. The study therefore asks whether carefully targeted prompting adds value beyond ordinary chatbot use, not whether any AI access is better than none.
+
+The sample included 371 students in Grades 7 to 9 from secondary schools in Baden-Württemberg, Germany. The students' mean age was 13.92 years, 54 percent were female, and 45 percent reported a migration background. They were randomly assigned at the individual level to one of three conditions: GPT-supported reflection on the personal utility of the learning content, GPT-supported prompting to use an elaboration strategy through learning by explaining, or a standard ChatGPT control without the pedagogical prompts. The systems all used GPT-4o, so the experimental difference came from the instructional design rather than the underlying model.
+
+Students worked through six 45-minute sessions during regular lessons in April and May 2025. The platform presented subject tasks alongside the chatbot. In the utility-value condition, the system connected content to students' everyday lives, interests, and aspirations. In the cognitive-strategy condition, it encouraged students to explain concepts and elaborate their understanding. The control offered a general conversational assistant. Teachers provided technical support and supervised implementation but did not normally give content help. The prompts, preregistration, data, supplementary materials, and reproducible analysis code are publicly available through the study's OSF materials.
+
+The researchers measured perceived utility value, self-reported strategy use, tested performance on learning by explaining, maintained interest, effort, and domain-specific knowledge before and after the intervention. The main result was cautious. Utility value developed more favourably in the utility-reflection condition than in the cognitive-strategy condition. Yet the utility condition did not differ significantly from standard ChatGPT, and the pattern mainly reflected a decline in the cognitive-strategy group rather than a clear increase in utility value. There were no significant advantages of either pedagogical intervention over the control for effort, domain knowledge, or elaboration-based strategy use.
+
+The subject comparison was also null: intervention effects did not differ significantly between physics and English. Exploratory analyses offered a more useful design clue. Students who interacted more meaningfully with the GPT tended to show more sustained interest and higher domain-specific post-test scores. Teacher observations suggested that some students treated the chatbot primarily as an answer source rather than engaging with its motivational or explanatory scaffolds. Requiring a minimal interaction was therefore not equivalent to securing productive learning dialogue.
+
+Several limitations matter. Thirty-five percent of students had no post-test data, although the authors used intention-to-treat analyses, multiple imputation, and complier-effect checks. The convenience sample came from one German state. The intervention was brief, and some measured strategies may need longer practice before change becomes visible. Standard ChatGPT was also a strong control, so the study cannot establish how any of the GPT conditions compare with equivalent lessons without a chatbot. The paper consequently supports restraint rather than a simple claim that pedagogical prompts work or fail.
+
+For AIEDHK, the practical lesson is that an educational system cannot rely on the presence of a theory-informed prompt. Designers must align the prompt, learner expectations, activity, response demands, and outcome measure. A useful school pilot would teach students why the agent asks them to reflect or explain, examine the substance of their interaction rather than message counts, and include independent assessments of knowledge and strategy use. Longer studies should test retention, transfer, subgroup differences, and gradual fading of support. The paper's strongest contribution is showing that meaningful engagement is an implementation condition: a well-written prompt has little educational value if learners continue to use the system only to obtain answers.`,
+    keyTakeaways: [
+      "The preregistered trial randomly assigned 371 German students in Grades 7–9 to GPT-supported utility reflection, GPT-supported learning-by-explaining prompts, or standard ChatGPT across physics and English lessons.",
+      "Theory-informed prompts produced limited advantages: utility value developed more favourably than in the cognitive-strategy condition, but neither intervention outperformed standard ChatGPT on effort, domain knowledge, or strategy use.",
+      "Meaningful GPT engagement was associated with more sustained interest and higher post-test knowledge in exploratory analyses, showing why interaction quality, learner expectations, and independent assessment matter.",
+    ],
+    whyItMatters:
+      "For AIEDHK, this authentic school RCT shows that adding pedagogical prompts is not enough; effective GenAI support requires aligned tasks, substantive learner engagement, measurable learning outcomes, and designs that preserve student agency.",
+    sourceUrl: "https://doi.org/10.1007/s10648-026-10133-8",
+    sourceUrls: [
+      {
+        label: "Open-access journal article",
+        url: "https://link.springer.com/article/10.1007/s10648-026-10133-8",
+      },
+      {
+        label: "Preregistration",
+        url: "https://doi.org/10.17605/OSF.IO/VBSQ4",
+      },
+      {
+        label: "Open data and supplementary materials",
+        url: "https://doi.org/10.17605/OSF.IO/Y6KFS",
+      },
+    ],
+    createdAt: "2026-07-23",
+  },
+  {
     id: "aied-031",
     slug: "news-chatgpt-sites-claude-creative-gemini-education-building-2026",
     title: "News: ChatGPT Sites, Claude creative tools and Gemini Education turn learners into builders",

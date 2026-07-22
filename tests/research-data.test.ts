@@ -24,11 +24,11 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains thirty-one curated Research News items", () => {
+test("research news fallback contains thirty-three curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 31);
-  assert.equal(papers[0]?.slug, "news-chatgpt-sites-claude-creative-gemini-education-building-2026");
+  assert.equal(papers.length, 33);
+  assert.equal(papers[0]?.slug, "news-openai-presence-claude-tag-gemini-education-governed-agents");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
@@ -134,6 +134,8 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-033",
+      "aied-032",
       "aied-031",
       "aied-030",
       "aied-029",

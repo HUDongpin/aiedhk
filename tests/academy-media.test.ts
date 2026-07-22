@@ -13,9 +13,9 @@ function publicFile(assetPath: string) {
   return path.join(projectRoot, "public", assetPath.slice(1));
 }
 
-test("Academy lessons directly reference twelve valid, distinct local PNG images", async () => {
+test("Academy lessons directly reference sixteen valid, distinct 1600x1000 PNG images", async () => {
   const lessons = getAcademyLessons("en");
-  assert.equal(lessons.length, 6);
+  assert.equal(lessons.length, 8);
 
   const hashes = new Set<string>();
   for (const lesson of lessons) {
@@ -36,21 +36,19 @@ test("Academy lessons directly reference twelve valid, distinct local PNG images
 
       const width = bytes.readUInt32BE(16);
       const height = bytes.readUInt32BE(20);
-      const aspectRatio = width / height;
-      assert.ok(width >= 1500, `${assetPath} width ${width} must be at least 1500`);
-      assert.ok(height >= 900, `${assetPath} height ${height} must be at least 900`);
-      assert.ok(aspectRatio >= 1.55 && aspectRatio <= 1.65, `${assetPath} aspect ratio ${aspectRatio} must be 16:10-like`);
+      assert.equal(width, 1600, `${assetPath} width must be normalized to 1600`);
+      assert.equal(height, 1000, `${assetPath} height must be normalized to 1000`);
 
       hashes.add(createHash("sha256").update(bytes).digest("hex"));
     }
   }
 
-  assert.equal(hashes.size, 12, "all Academy cover and summary images must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 16, "all Academy cover and summary images must have unique SHA-256 hashes");
 });
 
-test("Academy lessons directly reference six valid local M4A narrations", async () => {
+test("Academy lessons directly reference eight valid local M4A narrations", async () => {
   const lessons = getAcademyLessons("en");
-  assert.equal(lessons.length, 6);
+  assert.equal(lessons.length, 8);
   const hashes = new Set<string>();
 
   for (const lesson of lessons) {
@@ -67,5 +65,5 @@ test("Academy lessons directly reference six valid local M4A narrations", async 
     hashes.add(createHash("sha256").update(bytes).digest("hex"));
   }
 
-  assert.equal(hashes.size, 6, "all Academy narrations must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 8, "all Academy narrations must have unique SHA-256 hashes");
 });

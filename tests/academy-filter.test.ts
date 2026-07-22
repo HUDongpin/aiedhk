@@ -24,8 +24,8 @@ test("Academy track and level filters combine and pagination clamps to the avail
     pageSize: 1,
   });
 
-  assert.equal(result.total, 2);
-  assert.equal(result.totalPages, 2);
-  assert.equal(result.page, 2);
+  assert.equal(result.total, 3);
+  assert.equal(result.totalPages, 3);
+  assert.equal(result.page, 3);
   assert.deepEqual(result.items.map((item) => item.id), ["academy-001"]);
 });

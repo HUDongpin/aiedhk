@@ -223,4 +223,78 @@ In education, the perspective supports inquiry, discussion, project work, format
     ],
     createdAt: "2026-07-20T08:00:00.000Z",
   },
+  {
+    id: "academy-007",
+    slug: "training-validation-and-test-data",
+    title: "Training, Validation, and Test Data",
+    track: "ai-knowledge",
+    level: "basics",
+    tags: ["training data", "validation data", "model evaluation"],
+    image: "/images/academy/covers/academy-007-training-validation-and-test-data.png",
+    imageAlt: "An educator and adult learner compare three distinct fields of blue, cyan, and coral data points in a bright university studio",
+    summaryImage: "/images/academy/summary/academy-007-training-validation-and-test-data.png",
+    summaryImageAlt: "A large blue training field flows through a cyan validation field toward a separate coral test field",
+    summaryAudio: "/audio/academy/academy-007-training-validation-and-test-data-summary.m4a",
+    summaryAudioTitle: "Listen to Training, Validation, and Test Data",
+    shortSummary: "Why machine-learning projects separate data for fitting, development decisions, and a final independent check of generalization.",
+    fullSummary: `A machine-learning model should do more than remember the examples used to build it. It should generalize: perform usefully on relevant cases it has not encountered before. Training, validation, and test data support different parts of that argument. They are not three kinds of information by nature. They are separate roles assigned to examples so that learning, development decisions, and final evaluation do not all rely on the same evidence.
+
+The training set is the data used to fit the model. During training, an algorithm repeatedly compares predictions with an objective, calculates error, and adjusts model parameters. A flexible model can reduce training error by capturing real patterns, but it can also fit noise or accidental details. A very low training loss therefore shows that the model has adapted to its training examples; by itself, it does not show that the model will work for new learners, schools, or future data.
+
+The validation set provides evidence during development. Teams use it to compare candidate models, tune hyperparameters, choose features, set thresholds, or decide when to stop training. Because these choices respond to validation results, the validation set indirectly influences the finished system even though its examples do not update model parameters in the usual training loop. Repeated experimentation can gradually overfit the validation evidence. Cross-validation can use several rotating training and validation folds when data are scarce, but an untouched final test set is still valuable.
+
+The test set is reserved for an independent estimate after the main choices have been made. Looking at test results and then redesigning the model turns that test set into another validation set. Data leakage creates a similar problem when information from validation or test examples enters training through duplicate records, preprocessing, feature construction, or related people appearing across splits. Random splitting is not always appropriate. A time-based split may better represent future use, and group-based splitting can keep records from one student or school together. There is no universal percentage for each set; size and design should reflect the population, task, dependencies, and uncertainty that matter.
+
+Educational AI makes these distinctions concrete. Suppose a system predicts which practice item a learner should receive next. Training data may fit the prediction model, validation data may guide thresholds and design choices, and test data should estimate performance on genuinely unseen learners or contexts. Results should also be examined across relevant groups, because a strong average can hide weak performance for particular students. A clean split cannot repair biased labels or an unrepresentative dataset, and historical test performance does not guarantee future validity when conditions change. The central discipline is evidential independence: separate the examples that teach the model from the examples that guide its design and from the examples used to support the final claim.`,
+    coreIdeas: [
+      "Training data fits model parameters, while low training error alone cannot establish performance on unseen cases.",
+      "Validation data guides development choices; repeated tuning can overfit it, so final test evidence should remain independent.",
+      "Split design must prevent leakage and reflect real deployment structure, including time, groups, representation, and change.",
+    ],
+    educationConnection: "When evaluating educational AI, ask whether learners, schools, time periods, and preprocessing were separated in ways that make the reported test result relevant to the intended classroom use.",
+    relatedConcepts: ["Generalization", "Overfitting", "Data leakage"],
+    sourceUrls: [
+      { label: "Google ML: dividing datasets", url: "https://developers.google.com/machine-learning/crash-course/overfitting/dividing-datasets" },
+      { label: "Scikit-learn: cross-validation", url: "https://scikit-learn.org/stable/modules/cross_validation.html" },
+      { label: "TensorFlow: overfit and underfit", url: "https://www.tensorflow.org/tutorials/keras/overfit_and_underfit" },
+    ],
+    createdAt: "2026-07-23T08:00:00.000Z",
+  },
+  {
+    id: "academy-008",
+    slug: "working-memory-and-long-term-memory",
+    title: "Working Memory and Long-Term Memory",
+    track: "educational-theory",
+    level: "basics",
+    tags: ["working memory", "long-term memory", "instructional design"],
+    image: "/images/academy/covers/academy-008-working-memory-and-long-term-memory.png",
+    imageAlt: "An adult learner arranges a small set of geometric models with an educator in a sunlit university learning studio",
+    summaryImage: "/images/academy/summary/academy-008-working-memory-and-long-term-memory.png",
+    summaryImageAlt: "Four active objects on a small workspace exchange organized forms with an expansive curved archive",
+    summaryAudio: "/audio/academy/academy-008-working-memory-and-long-term-memory-summary.m4a",
+    summaryAudioTitle: "Listen to Working Memory and Long-Term Memory",
+    shortSummary: "How a limited active workspace interacts with durable organized knowledge during comprehension, problem solving, encoding, and retrieval.",
+    fullSummary: `Working memory and long-term memory describe different but interacting functions. Working memory keeps a limited amount of information temporarily available for thought and action. It supports tasks such as following a sentence, comparing two quantities, or holding an intermediate result while solving a problem. Long-term memory preserves knowledge and experience beyond the immediate moment. It includes facts and events that can be consciously recalled as well as skills and influences that may operate without deliberate recollection.
+
+Working memory is not simply a small storage box. In Baddeley’s multicomponent framework, a central executive coordinates attention alongside systems specialized for verbal and visuospatial material, with an episodic buffer integrating information across sources and long-term memory. Other theories draw the boundaries differently. Cowan describes working memory partly as currently activated long-term knowledge, with a more restricted focus of attention. Researchers continue to debate components and limits, but agree that only a modest amount of unfamiliar material can remain readily usable at once.
+
+Long-term memory has far greater capacity, yet it is not a perfect recording. Information must be encoded, organized, and later retrieved; attention, meaning, prior knowledge, practice, cues, and interference affect those processes. Retrieval is reconstructive, so confidence does not guarantee accuracy. What a learner already knows can radically change a task’s demand. A novice may need to hold several disconnected elements in working memory, whereas an expert retrieves an organized schema and treats those elements as one meaningful chunk. Chunking is therefore powerful when the chunks represent knowledge already learned, not when items are merely grouped visually.
+
+Learning depends on movement in both directions. Relevant long-term knowledge is retrieved into the active workspace to interpret new information. New relationships can then be encoded into long-term memory through explanation, meaningful practice, retrieval, and connections to prior knowledge. Repeating material can help keep it active briefly, but durable learning usually requires more than maintenance. Learners need to make sense of ideas and successfully bring them back after some forgetting. Forgetting can reflect weak encoding, interference, or difficulty retrieving a memory in the current context rather than complete erasure.
+
+Instruction should respect the limited workspace while deliberately building the knowledge that makes future thinking efficient. Teachers can keep essential information visible, break complex tasks into coherent steps, connect examples to familiar schemas, and remove distracting detail. They can then ask learners to retrieve, explain, compare, and apply ideas without the original support. Digital and AI tools can offer prompts or reminders, but constant assistance may let a learner complete a task without storing a usable mental model. A strong design alternates supported processing with opportunities for independent recall and transfer. The practical goal is not to avoid mental effort. It is to use working memory for relationships worth learning and to organize those relationships into long-term knowledge that can guide later judgment.`,
+    coreIdeas: [
+      "Working memory temporarily maintains and manipulates a limited amount of currently relevant information.",
+      "Long-term memory stores organized knowledge and experience, but encoding and retrieval are selective and reconstructive.",
+      "Prior knowledge changes effective task demand because retrieved schemas let many elements function as meaningful chunks.",
+    ],
+    educationConnection: "Keep essential relationships manageable and visible, connect them to prior knowledge, then use retrieval, explanation, and transfer tasks to build independently usable long-term knowledge.",
+    relatedConcepts: ["Attention", "Schema theory", "Retrieval practice"],
+    sourceUrls: [
+      { label: "Cowan on long-term, short-term, and working memory", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC2657600/" },
+      { label: "Baddeley on working memory", url: "https://doi.org/10.1038/nrn1201" },
+      { label: "OpenStax: how memory functions", url: "https://openstax.org/books/psychology-2e/pages/8-1-how-memory-functions" },
+    ],
+    createdAt: "2026-07-23T08:00:00.000Z",
+  },
 ];

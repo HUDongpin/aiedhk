@@ -1,11 +1,8 @@
-import { execFile } from "node:child_process";
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readFile, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
-import { promisify } from "node:util";
+import { put } from "@vercel/blob";
 import { resolveDashScopeTtsConfig, synthesizeDashScopeTtsWithRetry } from "@/lib/dashscope-tts";
 import { reviewedResearchPapers } from "@/lib/research-reviewed-data";
-
-const execFileAsync = promisify(execFile);
 
 async function main() {
   const ids = (process.env.RESEARCH_AUDIO_SOURCE_IDS ?? "")
@@ -37,22 +34,15 @@ async function main() {
 
     if (process.env.RESEARCH_AUDIO_BLOB_EXPORT === "1") {
       const pathname = `automation-exports/2026-07-24/${id}.source.mp3`;
-      const { stdout } = await execFileAsync("npx", [
-        "--yes",
-        "vercel@56.5.0",
-        "blob",
-        "put",
-        outputPath,
-        "--access",
-        "public",
-        "--pathname",
-        pathname,
-        "--add-random-suffix",
-        "false",
-        "--allow-overwrite",
-        "true",
-      ]);
-      console.log(`${id}: exported temporary source ${stdout.trim()}`);
+      const token = process.env.BLOB_READ_WRITE_TOKEN;
+      if (!token) throw new Error("BLOB_READ_WRITE_TOKEN is required for temporary export");
+      const blob = await put(pathname, await readFile(outputPath), {
+        access: "public",
+        addRandomSuffix: false,
+        allowOverwrite: true,
+        token,
+      });
+      console.log(`${id}: exported temporary source ${blob.url}`);
     }
   }
 }

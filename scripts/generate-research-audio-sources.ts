@@ -37,7 +37,9 @@ async function main() {
 
     if (process.env.RESEARCH_AUDIO_BLOB_EXPORT === "1") {
       const pathname = `automation-exports/2026-07-24/${id}.source.mp3`;
-      const { stdout } = await execFileAsync("vercel", [
+      const { stdout } = await execFileAsync("npx", [
+        "--yes",
+        "vercel@56.5.0",
         "blob",
         "put",
         outputPath,

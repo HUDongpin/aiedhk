@@ -20,6 +20,8 @@
 .DS_Store
 *.pem
 All API Keys*.docx
+.agents/
+skills-lock.json
 .playwright-cli/
 /output/
 /outputs/

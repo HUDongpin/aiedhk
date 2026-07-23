@@ -59,6 +59,17 @@ test("each launch lesson has complete reviewed copy and unique stable media refe
   }
 });
 
+test("Academy alt text does not normalize banned particle-heavy or fake-person art direction", () => {
+  const lessons = getAcademyLessons("en");
+  const bannedVisualTerms =
+    /\b(particles?|granules?|beads?|pebbles?|point clouds?|scatter fields?|confetti|glitter|stippling|swarms?|dotted meshes?|cut-paper|clay figures?|cartoons?|mannequins?|waxy people)\b/i;
+
+  for (const lesson of lessons) {
+    assert.doesNotMatch(lesson.imageAlt, bannedVisualTerms, `${lesson.id} cover alt text describes a banned visual style`);
+    assert.doesNotMatch(lesson.summaryImageAlt, bannedVisualTerms, `${lesson.id} summary alt text describes a banned visual style`);
+  }
+});
+
 test("unreviewed locales fall back to English lesson text without leaking English audio", () => {
   const english = getAcademyLessons("en")[0];
   const traditionalChinese = getAcademyLessons("zh-hant")[0];

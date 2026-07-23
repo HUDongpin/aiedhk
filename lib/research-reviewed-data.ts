@@ -2,6 +2,136 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-035",
+    slug: "news-chatgpt-powerpoint-claude-microsoft-365-gemini-classroom",
+    title: "News report: ChatGPT, Claude and Gemini bring AI into presentations, files and classroom context",
+    authors: ["OpenAI", "Anthropic", "Google for Education", "FII Institute"],
+    venue: "AI Product and Industry Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news report", "ChatGPT for PowerPoint", "Claude for Microsoft 365", "Gemini for Education"],
+    image: "/images/research/covers/aied-035-workspace-native-learning-tools-2026.png",
+    imageAlt:
+      "Editorial cover of educators reviewing an AI-assisted presentation, a revised document, and a curriculum activity inside a university learning-design studio",
+    summaryImage: "/images/research/summary/aied-035-workspace-native-learning-tools-summary.png",
+    summaryImageAlt:
+      "An educator checks source notes and authorship while a teaching team revises slides, documents, and a classroom activity across connected workspaces.",
+    summaryAudio: "/audio/research/aied-035-workspace-native-learning-tools-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news report",
+    shortSummary:
+      "News report: ChatGPT now works natively in PowerPoint, Claude spans Microsoft 365 files, and Gemini connects teacher-led learning activities to Classroom context, moving AI assistance closer to the artifacts educators and learners must still verify.",
+    fullSummary: `This product-news report tracks a practical change in educational AI: the assistant is moving from a separate chat window into the presentation, document, spreadsheet, inbox, and course environment where work is produced. OpenAI's ChatGPT for PowerPoint, Anthropic's Claude for Microsoft 365, and Google's new Gemini and Classroom connections all reduce the friction of moving source material into an AI system and bringing the result back. That convenience can support preparation and revision, but it also makes authorship, source checking, privacy, and evidence of learning harder to see unless educators design them into the workflow.
+
+OpenAI's current ChatGPT for PowerPoint guidance describes a PowerPoint-native sidebar that preserves editable slide structure. It can draft a presentation from notes, documents, spreadsheets, or other source material; add or revise slides in an existing deck; answer questions about the presentation's story and gaps; and adapt the result for a particular audience. The experience is available through the Microsoft Marketplace for accounts with access. Because the output remains editable, an educator or learner can inspect and change individual elements instead of accepting a flattened image or exported file.
+
+For education, that editability is useful but not sufficient. A generated deck can look coherent while misrepresenting a source, inventing a link between ideas, weakening disciplinary language, or hiding what the learner actually understands. A stronger use would require a source map, an explanation of the intended audience, a record of major revisions, accessibility checks, and a short oral defence of the final structure. Teachers can also compare the generated sequence with their learning objectives and ask whether visuals clarify a concept or merely decorate it.
+
+Anthropic's Claude for Microsoft 365 extends the workspace-native pattern across Excel, PowerPoint, Word, and Outlook. Anthropic says context can carry between open files and applications: Claude can inspect a document, update a spreadsheet model, build slides in an existing template, revise Word content with tracked changes, and prepare an Outlook draft that still waits for the user to send. The Excel, PowerPoint, and Word experiences are generally available on paid Claude plans, while Outlook remains in beta. Organizations can also connect through Microsoft Foundry, Amazon Bedrock, or Google Cloud Vertex AI.
+
+In a university or school office, cross-file context could help a team turn curriculum notes into a briefing, compare programme data, revise a policy, or prepare parent and staff communication. The same continuity raises governance questions. A conversation that carries from inbox to document to deck may combine information with different access rules. Institutions need to define which accounts and files are in scope, minimize personal data, preserve tracked changes, and keep consequential messages behind an explicit human send or approval step. Students should not be asked to place identifiable peer data or confidential assessment material into an assistant simply because it is embedded in familiar software.
+
+Google's June education update provides the most explicitly instructional comparison. It frames Gemini's education purpose around keeping educators in the lead, grounding activities in curriculum, and giving teachers actionable insight into student work. Teacher-led Guided Learning can provide a focused, curriculum-informed study space; study notebooks can create short lessons and adaptive quiz preparation; and NotebookLM can turn approved class materials into flash cards, audio, and other interactive supports. Google also launched a Classroom app in Gemini that can use assignments, grades, and class materials to help an educator examine progress and draft tailored activities. Google states that Workspace for Education data is not used to train its AI models, and notes that the Classroom app is currently available globally in English for Workspace for Education users over 18.
+
+An independent June 2026 industry report from the FII Institute and the Center for Sustainable Development at Columbia University places these products in a broader educational frame. It names ChatGPT, Claude, and Gemini as leading general-purpose systems used by teachers for lesson planning, assessment, and materials, and by students for research, writing, coding, and conceptual understanding. More importantly, the report argues that education must continue cultivating non-negotiable human capacities such as agency, judgment, responsibility, critical thinking, and sustained reflection rather than treating efficiency as the learning goal.
+
+For Hong Kong schools and universities, the combined signal is that AI governance must follow the work into everyday files and course systems. A useful pilot should begin with a bounded task, approved source material, clear data rules, and a rubric that separates artifact quality from learner understanding. It should record what the assistant changed, require people to verify claims and calculations, preserve an independent performance component, and measure whether the workflow saves time without weakening learning or professional judgment. Vendor pages document product capabilities, not independent evidence of educational benefit. The opportunity is a more inspectable drafting and revision process; the risk is making delegation so seamless that no one can later explain who decided what.`,
+    keyTakeaways: [
+      "News: ChatGPT for PowerPoint can draft, revise, and analyse editable presentations from source material, so assessment should make source mapping, revision history, accessibility, and oral explanation visible.",
+      "Claude for Microsoft 365 carries context across Excel, PowerPoint, Word, and Outlook while preserving native edits and human send controls, creating both workflow benefits and cross-file privacy responsibilities.",
+      "Gemini for Education connects teacher-led Guided Learning, study notebooks, NotebookLM, and Classroom context to curriculum-based activities, while an industry report stresses that judgment, agency, and critical thinking remain non-delegable.",
+    ],
+    whyItMatters:
+      "Industry news report: AI assistance is becoming native to the files and course contexts where educational work is created, so AIEDHK should evaluate provenance, privacy, revision evidence, independent mastery, and meaningful human approval alongside convenience.",
+    sourceUrl: "https://help.openai.com/en/articles/20001242-chatgpt-for-powerpoint",
+    sourceUrls: [
+      {
+        label: "OpenAI ChatGPT for PowerPoint guidance",
+        url: "https://help.openai.com/en/articles/20001242-chatgpt-for-powerpoint",
+      },
+      {
+        label: "Anthropic Claude for Microsoft 365",
+        url: "https://claude.com/claude-for-microsoft-365",
+      },
+      {
+        label: "Google educator-led Gemini and Classroom update",
+        url: "https://blog.google/products-and-platforms/products/education/iste-2026-educator-updates/",
+      },
+      {
+        label: "FII Institute education with AI industry report",
+        url: "https://fii-institute.org/wp-content/uploads/2026/06/8131-R6-Education-ReportV2.pdf",
+      },
+    ],
+    createdAt: "2026-07-24",
+  },
+  {
+    id: "aied-034",
+    slug: "llm-feedback-low-knowledge-middle-school-math-rct",
+    title: "A Large Scale Randomized Control Trial Showing LLM Generated Feedback Helps Low-Knowledge Middle School Math Students with Short-Term Learning",
+    authors: [
+      "Eamon Worden",
+      "Luca Dang",
+      "Wen-Chiang Ivan Lim",
+      "Sarah Miller",
+      "Jiayi Zhang",
+      "Aaron Haim",
+      "Adam Sales",
+      "Ashish Gurung",
+      "Neil Heffernan",
+    ],
+    venue: "ACM Learning @ Scale",
+    year: 2026,
+    type: "conference",
+    tags: ["LLM-generated feedback", "middle school mathematics", "randomized controlled trial"],
+    image: "/images/research/covers/aied-034-llm-math-feedback-rct-2026.png",
+    imageAlt:
+      "Editorial cover of a middle-school learner using targeted mathematical feedback while a teacher reviews the learning process",
+    summaryImage: "/images/research/summary/aied-034-llm-math-feedback-rct-summary.png",
+    summaryImageAlt:
+      "A misconception-targeted feedback pipeline links a student's incorrect mathematics answer to a concise hint, a new attempt, and a later problem.",
+    summaryAudio: "/audio/research/aied-034-llm-math-feedback-rct-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "Two large randomized trials in ASSISTments found that concise, misconception-targeted LLM feedback improved immediate correction and short-term transfer over correctness-only feedback, with the transfer benefit concentrated among lower-knowledge seventh-grade mathematics students.",
+    fullSummary: `Worden and colleagues provide unusually large causal evidence about LLM-generated feedback in authentic middle-school mathematics practice. Their 2026 ACM Learning @ Scale paper reports two randomized controlled trials embedded in ASSISTments. The first compared AI-generated feedback with business as usual, where students saw only whether an answer was correct. The second compared the same AI-generated approach with feedback previously written by experienced teachers. Across the studies, the authors report a combined 21,478 students working on hundreds of problems, making this one of the largest field evaluations of LLM-generated instructional feedback to date.
+
+The intervention targeted common wrong answers in seventh-grade Illustrative Mathematics fill-in problems. The team first identified incorrect responses submitted by at least 100 students over the preceding five years. Problems containing images were excluded after preliminary tests exposed hallucination risks. Qwen-235B then generated feedback for 3,862 common wrong answers across 653 problems. The goal was not to reveal the solution. Each message acknowledged meaningful progress where possible, identified or responded to the likely error, and offered a concise next-step hint in no more than three sentences.
+
+Human expertise shaped the pipeline before deployment. Two experienced educators advised on the desired task- and process-level feedback, reviewed examples, and helped refine the prompt over five rounds. The final 20-shot prompt covered multiple mathematical skills and misconception patterns. GPT-4.1-mini then served as an automated quality filter for mathematical correctness, grade-level fit, and pedagogical quality. A manual check found a roughly one-percent hallucination rate in the generated set; the identified message and other feedback flagged by the judge were removed. Students also saw a warning that guidance might be AI-written and could be wrong, with a route to report mistakes.
+
+Both trials ran from August 2025 through January 31, 2026. Randomization occurred when a student loaded an eligible problem. The researchers measured two outcomes with mixed-effects logistic regression: whether the learner corrected the current problem on the next attempt, and whether the learner solved the following problem correctly on the first attempt without hints or explanations. The second measure was treated as evidence of near-term transfer or improved self-regulation, although it cannot distinguish those mechanisms.
+
+Study 1 included 87,270 observations from 20,706 unique students, 556 problems, and 1,577 classes. Compared with correctness-only feedback, AI feedback increased the odds of a correct next attempt by 16 percent (odds ratio 1.16, 95 percent confidence interval 1.12 to 1.19). It also increased the odds of first-attempt success on the following problem by 7 percent (odds ratio 1.07, 95 percent confidence interval 1.02 to 1.13). A post-hoc knowledge-group analysis located that transfer benefit among students who had answered zero or one of the previous five problems correctly. Their odds increased by 7 percent, while the medium- and high-knowledge groups showed no detectable benefit.
+
+Study 2 contained 12,950 observations from 6,055 unique students, 97 problems, and 594 classes. The researchers found no statistically discernible difference between AI-generated and teacher-written feedback. For next-attempt correction, the estimated odds ratio was 1.10 but the confidence interval crossed one (0.98 to 1.25). For next-problem success, the estimate was 0.98 with a confidence interval of 0.87 to 1.09. These results are consistent with similar performance, but the smaller sample and wider intervals do not prove strict equivalence. They do show that carefully designed AI feedback was not detectably worse on the measured short-term outcomes.
+
+The study's practical contribution is a human-AI production model rather than an argument for removing teachers. Educators defined the pedagogical form, examples anchored the generation, an automated judge filtered scale output, and the feedback was cached for repeated delivery. The authors estimate that current frontier services could generate a cached message for about five to ten US cents, with the cost amortized when common wrong answers recur. The most frequent wrong answer in the study appeared more than 3,400 times.
+
+Important limits narrow the claim. Per-problem randomization meant many students encountered both conditions, preventing a clean test of sustained exposure. Outcomes covered immediate correction and the next problem, not delayed retention. The study involved one platform, one seventh-grade curriculum, text-only fill-in items, and no demographic data for subgroup analysis. It also combined conceptual misconceptions, procedural errors, and slips. For AIEDHK, the result supports targeted, verified feedback for struggling learners, alongside longer-term assessment, error-type diagnosis, demographic fairness checks, multimodal evaluation, and different feedback styles for students who may benefit more from productive struggle or metacognitive prompts.`,
+    keyTakeaways: [
+      "The two ASSISTments trials deployed 3,862 concise Qwen-generated feedback messages for common wrong answers after educator-led prompt design and automated quality filtering.",
+      "Against correctness-only feedback, AI feedback raised next-attempt odds by 16 percent and next-problem odds by 7 percent; the transfer benefit appeared only for learners with zero or one correct answer among their previous five problems.",
+      "AI-generated and teacher-written feedback showed no statistically discernible difference on the measured short-term outcomes, but the study does not establish long-term retention, broad generalizability, or strict equivalence.",
+    ],
+    whyItMatters:
+      "For AIEDHK, this large field experiment shows that verified, misconception-targeted LLM feedback can extend instructional support for struggling learners, while also showing why human design, quality control, proficiency-sensitive scaffolding, and independent long-term learning measures remain essential.",
+    sourceUrl: "https://doi.org/10.1145/3774398.3811594",
+    sourceUrls: [
+      {
+        label: "ACM article and DOI",
+        url: "https://doi.org/10.1145/3774398.3811594",
+      },
+      {
+        label: "Author-provided accepted manuscript",
+        url: "https://drive.google.com/file/d/1uypyoqpYQ0nt-0BzbRXmohEKZUgVs_Ej/view?usp=sharing",
+      },
+      {
+        label: "Open materials and analysis",
+        url: "https://osf.io/q7jmy/overview",
+      },
+    ],
+    createdAt: "2026-07-24",
+  },
+  {
     id: "aied-033",
     slug: "news-openai-presence-claude-tag-gemini-education-governed-agents",
     title: "News: OpenAI Presence, Claude Tag and Gemini Education move AI into governed institutional workflows",

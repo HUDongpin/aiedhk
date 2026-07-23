@@ -1,7 +1,11 @@
+import { execFile } from "node:child_process";
 import { mkdir, writeFile } from "node:fs/promises";
 import { dirname, join } from "node:path";
+import { promisify } from "node:util";
 import { resolveDashScopeTtsConfig, synthesizeDashScopeTtsWithRetry } from "@/lib/dashscope-tts";
 import { reviewedResearchPapers } from "@/lib/research-reviewed-data";
+
+const execFileAsync = promisify(execFile);
 
 async function main() {
   const ids = (process.env.RESEARCH_AUDIO_SOURCE_IDS ?? "")
@@ -30,6 +34,24 @@ async function main() {
 
     await writeFile(outputPath, Buffer.from(await response.arrayBuffer()));
     console.log(`${id}: generated secure build audio source`);
+
+    if (process.env.RESEARCH_AUDIO_BLOB_EXPORT === "1") {
+      const pathname = `automation-exports/2026-07-24/${id}.source.mp3`;
+      const { stdout } = await execFileAsync("vercel", [
+        "blob",
+        "put",
+        outputPath,
+        "--access",
+        "public",
+        "--pathname",
+        pathname,
+        "--add-random-suffix",
+        "false",
+        "--allow-overwrite",
+        "true",
+      ]);
+      console.log(`${id}: exported temporary source ${stdout.trim()}`);
+    }
   }
 }
 

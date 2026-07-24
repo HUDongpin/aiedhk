@@ -2,6 +2,124 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-037",
+    slug: "news-chatgpt-health-claude-reflect-gemini-education-personal-context",
+    title: "News report: ChatGPT Health, Claude Reflect and Gemini Education make personal context consequential",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news report", "Health in ChatGPT", "Claude Reflect", "Gemini for Education"],
+    image: "/images/research/covers/aied-037-personal-context-reflective-ai-products-2026.png",
+    imageAlt:
+      "Editorial cover of an adult learner and educator reviewing permissioned health context, AI-use reflection, and learning evidence across three supervised digital workspaces",
+    summaryImage: "/images/research/summary/aied-037-personal-context-reflective-ai-products-summary.png",
+    summaryImageAlt:
+      "A learner and educator inspect what personal context an AI may use, how AI delegation patterns are changing, and whether learning evidence supports personalization.",
+    summaryAudio: "/audio/research/aied-037-personal-context-reflective-ai-products-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news report",
+    shortSummary:
+      "News report: Health in ChatGPT connects permissioned personal records, Claude Reflect visualizes AI-use patterns and boundaries, and Gemini for Education links guided learning and teacher scaffolding to outcome measurement, making context, consent and independent evidence central product questions.",
+    fullSummary: `This product-news report follows a common shift across OpenAI, Anthropic, and Google: AI products are becoming more useful by accumulating personal context, but that same context makes permission, interpretation, and evidence more consequential. OpenAI's new Health in ChatGPT can connect health records and activity data to conversations. Anthropic's Claude Reflect summarizes how a person has been using AI and invites them to reconsider what they delegate. Google's current Gemini for Education work combines guided learning, teacher-facing scaffolding, product training, and impact studies. The products serve different domains, yet each asks users and institutions to decide what context an AI may use, what should remain human work, and how benefit should be measured.
+
+OpenAI launched Health in ChatGPT for logged-in adults in the United States on July 23. Users can choose to connect Apple Health and supported medical records, including records from participating hospital systems, One Medical, or Function Health. With permission, ChatGPT can compare a new result with earlier tests, summarize changes since an appointment, relate sleep or activity patterns to a routine, and help a user prepare questions for a clinician. The context can also be used outside the dedicated Health area when it is relevant to another conversation.
+
+The permissions and limits are as important as the capability. OpenAI says connected medical information and conversations that use it are not used to train foundation models or target advertising. By default, ChatGPT asks before using connected health information, and a user can approve one request, allow ongoing access, disconnect a source, or use Temporary Chat. OpenAI also states that the product can make mistakes and does not replace qualified medical judgment. For health-professions education and public health literacy, this suggests a useful teaching pattern: learners can practice translating records into questions and explanations, but must verify the original source, distinguish education from diagnosis, and understand when escalation to a professional is required.
+
+Anthropic's July 9 Claude Reflect beta addresses context from another direction. Instead of using personal information to answer a new question, Reflect summarizes a user's Claude activity over one, three, six, or twelve months. It surfaces recurring topics, usage patterns, and types of tasks, then prompts the user to consider whether that activity matches their goals. The dashboard can ask what the person still wants to do themselves even if Claude could do it faster, and it includes optional quiet hours and break reminders.
+
+Reflect organizes suggestions through Anthropic's four-part AI Fluency Framework: delegation, description, discernment, and diligence. In educational terms, these categories move AI literacy beyond prompt technique. A learner should decide whether to delegate, describe a goal precisely, judge the output, and remain accountable for the result. The beta is available to Free, Pro, and Max users who have memory enabled. Anthropic says it excludes incognito chats and underlying files from connected tools, leaves conversations involving health integrations out of the insights, and keeps the reflection information within the feature. Those boundaries also show why an institution should not infer learning or wellbeing from a usage dashboard without informed consent and a clear assessment purpose.
+
+Google's May education update provides the most direct learning-outcomes comparison. Google describes Gemini for Education as supporting Guided Learning for students, content creation and scaffolding for educators, and product onboarding and AI-fluency training for institutions. It reported an eight-week preregistered randomized trial across 48 classrooms and nearly 1,800 Grade 7 and 8 mathematics learners in Sierra Leone. Google says Guided Learning increased scores on external assessments by 0.26 standard deviations, with larger gains among learners who reached the intended usage threshold. It also reported a separate Italian implementation involving 700 educators, 9,000 students, and more than 560 teaching activities, where teachers used Gemini for Education to personalize materials and reported substantial administrative time savings.
+
+These Google findings describe an important product purpose—guided study and teacher-led personalization—but they should not be treated as universal proof. The Sierra Leone technical report provides a stronger causal design than a product testimonial, while the Italian implementation relies on different measures and reported practice. Both need careful reading, independent replication, subgroup analysis, and long-term tests. They also contrast with other higher-education experiments in which well-grounded chatbots produced no measurable learning gain. Product effectiveness depends on pedagogy, dosage, comparison condition, learner population, outcome measure, and what users do outside the tool.
+
+For Hong Kong schools and universities, the combined signal is to govern context as part of pedagogy. A pilot should show students what information is connected, request the minimum necessary permissions, preserve a route to inspect and correct the source, and define which decisions remain with a teacher, clinician, or learner. Reflection dashboards can support metacognition only when they invite judgment rather than surveillance. Personalized learning claims should be tied to preregistered measures, independent assessments, retention, equity, and transparent limits. More context can make an AI response feel personally relevant; the educational task is to ensure that relevance remains consented, interpretable, and supported by evidence.`,
+    keyTakeaways: [
+      "News: Health in ChatGPT can use permissioned health records and activity data across conversations, while preserving user controls and explicitly positioning the product as support rather than a replacement for professional care.",
+      "Claude Reflect turns AI-use history into a user-controlled reflection dashboard built around delegation, description, discernment, diligence, quiet hours, and decisions about what should remain human work.",
+      "Gemini for Education connects Guided Learning, teacher scaffolding, training, and impact measurement, but vendor-reported results still require design-specific interpretation and independent evidence.",
+    ],
+    whyItMatters:
+      "Industry news report: as AI products use more personal and longitudinal context, AIEDHK should evaluate consent, source visibility, professional escalation, metacognitive agency, and learning evidence together rather than treating personalization as benefit by default.",
+    sourceUrl: "https://openai.com/index/health-in-chatgpt/",
+    sourceUrls: [
+      {
+        label: "OpenAI Health in ChatGPT launch",
+        url: "https://openai.com/index/health-in-chatgpt/",
+      },
+      {
+        label: "Anthropic Claude Reflect announcement",
+        url: "https://www.anthropic.com/news/reflect-with-claude",
+      },
+      {
+        label: "Google Gemini Education impact and training report",
+        url: "https://blog.google/products-and-platforms/products/education/measuring-the-impact-of-ai-on-teaching-and-learning/",
+      },
+    ],
+    createdAt: "2026-07-25",
+  },
+  {
+    id: "aied-036",
+    slug: "rag-chatbots-higher-education-expectations-evidence-rct",
+    title: "AI chatbots in higher education: Comparing expectations to evidence",
+    authors: ["Andrew Thoeni", "Luke K. Fryer"],
+    venue: "Computers in Human Behavior Reports",
+    year: 2026,
+    type: "journal",
+    tags: ["RAG chatbot", "randomized field experiment", "higher education"],
+    image: "/images/research/covers/aied-036-rag-chatbot-null-effects-2026.png",
+    imageAlt:
+      "Editorial cover of undergraduate learners and a lecturer examining a course-grounded RAG chatbot alongside flat learning and motivation outcome traces",
+    summaryImage: "/images/research/summary/aied-036-rag-chatbot-null-effects-summary.png",
+    summaryImageAlt:
+      "A semester-long comparison links a course-grounded chatbot and conventional study support to measures of interest, self-efficacy, engagement, and test performance.",
+    summaryAudio: "/audio/research/aied-036-rag-chatbot-null-effects-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A semester-long randomized field experiment with 454 undergraduates found that access to a course-grounded RAG chatbot did not significantly improve interest, self-efficacy, engagement, or test performance, despite students reporting that they liked the tool.",
+    fullSummary: `Thoeni and Fryer test a claim that universities increasingly encounter in product demonstrations: if a generative-AI chatbot is grounded in trusted course content, available whenever students need it, and capable of answering questions or generating practice, will it improve learning? Their 2026 open-access article in Computers in Human Behavior Reports reports a semester-long randomized field experiment rather than a satisfaction survey. The result is important precisely because it is negative: the retrieval-augmented generation, or RAG, chatbot did not produce a statistically significant improvement in any of the measured learning-related outcomes.
+
+The experiment took place in three sections of an introductory Principles of Marketing course at a state university in the southeastern United States. One section was asynchronous online, one was a small face-to-face class, and one was a large face-to-face class. After excluding students who dropped or were repeating the course, the study included 454 undergraduates: 231 in the control group and 223 in the treatment group. Students were randomly assigned within each class section after the add/drop period, helping balance the conditions across delivery mode and class size.
+
+The design covered a 16-week semester, with the chatbot intervention operating for 12 calendar weeks. Before treatment, all students completed the same course work and first test. The control group then continued receiving participation credit for study sessions using custom Quizlet flash cards. The treatment group received equivalent credit for at least one chatbot session per chapter, while retaining access to Quizlet without additional credit. Students in both groups could use their assigned support as often as they wished. This made the comparison closer to adding a course chatbot to realistic study options than to replacing instruction.
+
+The chatbot was more carefully constructed than a general-purpose chat window. It ran in a secure university Microsoft Azure environment using Copilot with GPT-4o. The RAG content included instructor-provided concepts, glossaries, learning objectives, and lecture transcripts organized by chapter, but not test questions or textbook content. System instructions gave the tutor goals, a conversational role, and functions for discussion, explanation, multilingual interaction, and short quizzes. The researchers tested its consistency and accuracy and reported that it answered 199 of 200 course test questions correctly, even though those questions were not included in its knowledge base.
+
+The outcomes came from several sources. Students completed pre- and post-treatment measures of individual interest and self-efficacy. Engagement included emotional, participation, performance, and skill scales, weekly self-reports, electronic-book usage, and chatbot session counts. Academic achievement was represented by standardized scores from a common first test before treatment and a common fourth test at the end of the term. The analyses used difference-in-differences models and controlled for gender, age, race, weekly job hours, and whether the course was face-to-face or asynchronous online.
+
+Across interest, self-efficacy, engagement, and test scores, the critical treatment-by-time interactions were not statistically significant. Self-efficacy rose slightly over the semester for students as a whole, and several engagement measures fell, but neither pattern was attributable to chatbot access. For achievement, the treatment-by-time interaction was also non-significant. In other words, the study did not find that adding the course-grounded chatbot changed the measured trajectory relative to the control condition.
+
+Students nevertheless viewed the tool positively. Treatment students reported high enjoyment, perceived help with course material, and interest in having a similar chatbot available in other courses. Their own ratings were more cautious about whether the chatbot improved grades or interest in marketing. This gap is one of the paper's most useful findings: liking an AI tutor, finding it convenient, or wanting continued access does not establish that it improves learning. Adoption and educational effectiveness must be evaluated separately.
+
+The null result also has boundaries. The study involved one introductory subject, one instructor, and three sections at one university. The control group had a legitimate study aid, which sets a more demanding comparison than no support. The chatbot did not remember prior sessions, limiting personalization and social continuity. The researchers could not fully capture how students changed their broader study habits, and the final test covered different course material from the baseline test even though scores were standardized. More advanced learners, other subjects, alternative tutoring strategies, or stronger integration with classroom activity could produce different results.
+
+For AIEDHK, the practical lesson is to evaluate a designed intervention before scaling a platform contract. A course-grounded chatbot may be accurate and popular yet still add no measurable benefit to existing study support. Pilots should define the expected mechanism, compare against a credible alternative, measure independent achievement and engagement over time, inspect actual usage and substitution effects, and test whether memory or personalization helps without creating unacceptable privacy costs. The paper does not show that RAG tutors can never work. It shows that grounding and availability alone are insufficient evidence of learning value.`,
+    keyTakeaways: [
+      "The 16-week randomized field experiment included 454 undergraduates across asynchronous and face-to-face marketing sections, comparing added RAG-chatbot access with established Quizlet study support.",
+      "The course-grounded GPT-4o chatbot was accurate on 199 of 200 test questions, yet produced no statistically significant improvement in interest, self-efficacy, engagement, or standardized test performance.",
+      "Students liked the chatbot and wanted similar access elsewhere, demonstrating why satisfaction, adoption, and learning impact must be measured as separate outcomes.",
+    ],
+    whyItMatters:
+      "For AIEDHK, this field experiment warns institutions not to equate an accurate, popular, course-grounded chatbot with educational value; procurement and pilots need credible comparisons, independent outcomes, usage evidence, and tests of durable learning.",
+    sourceUrl: "https://doi.org/10.1016/j.chbr.2026.101061",
+    sourceUrls: [
+      {
+        label: "Open-access journal article and DOI",
+        url: "https://doi.org/10.1016/j.chbr.2026.101061",
+      },
+      {
+        label: "Publisher article page",
+        url: "https://www.sciencedirect.com/science/article/pii/S2451958826001351",
+      },
+      {
+        label: "Open full manuscript record",
+        url: "https://osf.io/preprints/osf/24tg7_v1",
+      },
+    ],
+    createdAt: "2026-07-25",
+  },
+  {
     id: "aied-035",
     slug: "news-chatgpt-powerpoint-claude-microsoft-365-gemini-classroom",
     title: "News report: ChatGPT, Claude and Gemini bring AI into presentations, files and classroom context",

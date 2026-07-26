@@ -143,8 +143,6 @@ export interface AcademyLesson {
   tags: string[];
   image: string;
   imageAlt: string;
-  summaryImage: string;
-  summaryImageAlt: string;
   summaryAudio: string;
   summaryAudioTitle: string;
   shortSummary: string;
@@ -160,7 +158,6 @@ export interface AcademyLessonLocalization {
   title: string;
   tags: string[];
   imageAlt?: string;
-  summaryImageAlt?: string;
   shortSummary: string;
   fullSummary: string;
   coreIdeas: [string, string, string];

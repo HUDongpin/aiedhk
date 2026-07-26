@@ -24,11 +24,13 @@
 - Each Academy lesson must use exactly one image asset and display it only once on the lesson detail page, not as separate cover and summary images. The same asset may also be used as the lesson-card thumbnail outside the lesson detail page.
 - Keep all generated Academy images that have not yet been published on `www.aied.hk`; do not delete them. For future lesson releases, first select and publish a suitable image from this unpublished-image inventory. Once that inventory is exhausted, begin generating new images in accordance with the one-image-per-lesson rule.
 - For all new Academy page images, use the owner-defined `真人质感风格`: show real teachers and learners visibly participating in a warm, bright, friendly, and immediately understandable teaching scene.
+- Academy imagery that includes people must satisfy a racial- and ethnic-diversity requirement. Multi-person scenes must include teachers and learners from visibly different racial or ethnic backgrounds; single-person scenes must rotate representation across the Academy catalog. Do not default to an all-Asian cast, and avoid tokenism or stereotypes.
 - Abstract geometric compositions and exhibition-installation-style imagery are not permitted for new Academy page images.
 - Dense decorative fields of particles, granules, beads, pebbles, point clouds, scatter marks, confetti, glitter, stippling, dotted meshes, swarms, and other high-frequency micro-elements are forbidden.
 - Sparse, semantically meaningful diagram nodes or ordinary photographed details are allowed. The rejection target is the high-density particle aesthetic, not every isolated dot.
 - The `真人质感风格` itself is approved; only particle-heavy props or overlays within that photography are forbidden.
 - Use low-density compositions with generous negative space and a controlled object count.
+- Visible paper, cards, notebooks, worksheets, and whiteboards must contain credible lesson-related content; they must not be blank. Prefer meaningful diagrams, sketches, or natural non-legible handwriting over generated readable text.
 - Teachers and learners must have credible real-person photographic texture, natural anatomy, skin, hair, hands, clothing, and expressions. Cut-paper, clay, vector, cartoon, mannequin-like, or visibly rendered people are forbidden. If photorealism is not reliable, reject and regenerate the image; do not fall back to an abstract no-human composition.
 - When the Fable 5 family is selected, its UI may inform restraint and hierarchy, but never copy Anthropic logos, wordmarks, butterflies, layouts, or proprietary assets.
 - Reject the lesson image if it violates the Academy art-direction contract.

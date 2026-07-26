@@ -13,37 +13,31 @@ function publicFile(assetPath: string) {
   return path.join(projectRoot, "public", assetPath.slice(1));
 }
 
-test("Academy lessons directly reference twenty-eight valid, distinct 1600x1000 PNG images", async () => {
+test("Academy lessons directly reference fourteen valid, distinct 1600x1000 PNG images", async () => {
   const lessons = getAcademyLessons("en");
   assert.equal(lessons.length, 14);
 
   const hashes = new Set<string>();
   for (const lesson of lessons) {
-    const declaredImages = [
-      { kind: "cover", assetPath: lesson.image, expectedDirectory: "/images/academy/covers/" },
-      { kind: "summary", assetPath: lesson.summaryImage, expectedDirectory: "/images/academy/summary/" },
-    ];
+    const assetPath = lesson.image;
+    assert.ok(assetPath, `${lesson.id} must directly reference one lesson image`);
+    assert.ok(assetPath.startsWith("/images/academy/covers/"), `${assetPath} must stay in /images/academy/covers/`);
+    assert.equal(path.extname(assetPath), ".png");
+    assert.ok(path.basename(assetPath).includes(lesson.id), `${assetPath} must contain ${lesson.id}`);
 
-    for (const { kind, assetPath, expectedDirectory } of declaredImages) {
-      assert.ok(assetPath, `${lesson.id} must directly reference a ${kind} image`);
-      assert.ok(assetPath.startsWith(expectedDirectory), `${assetPath} must stay in ${expectedDirectory}`);
-      assert.equal(path.extname(assetPath), ".png");
-      assert.ok(path.basename(assetPath).includes(lesson.id), `${assetPath} must contain ${lesson.id}`);
+    const bytes = await readFile(publicFile(assetPath));
+    assert.ok(bytes.subarray(0, 8).equals(pngSignature), `${assetPath} must have a PNG signature`);
+    assert.equal(bytes.subarray(12, 16).toString("ascii"), "IHDR", `${assetPath} must begin with IHDR`);
 
-      const bytes = await readFile(publicFile(assetPath));
-      assert.ok(bytes.subarray(0, 8).equals(pngSignature), `${assetPath} must have a PNG signature`);
-      assert.equal(bytes.subarray(12, 16).toString("ascii"), "IHDR", `${assetPath} must begin with IHDR`);
+    const width = bytes.readUInt32BE(16);
+    const height = bytes.readUInt32BE(20);
+    assert.equal(width, 1600, `${assetPath} width must be normalized to 1600`);
+    assert.equal(height, 1000, `${assetPath} height must be normalized to 1000`);
 
-      const width = bytes.readUInt32BE(16);
-      const height = bytes.readUInt32BE(20);
-      assert.equal(width, 1600, `${assetPath} width must be normalized to 1600`);
-      assert.equal(height, 1000, `${assetPath} height must be normalized to 1000`);
-
-      hashes.add(createHash("sha256").update(bytes).digest("hex"));
-    }
+    hashes.add(createHash("sha256").update(bytes).digest("hex"));
   }
 
-  assert.equal(hashes.size, 28, "all Academy cover and summary images must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 14, "all Academy lesson images must have unique SHA-256 hashes");
 });
 
 test("Academy lessons directly reference fourteen valid local M4A narrations", async () => {

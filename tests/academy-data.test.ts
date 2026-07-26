@@ -78,7 +78,6 @@ test("each launch lesson has complete reviewed copy and unique stable media refe
   assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 14);
   assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 14);
   assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 14);
-  assert.equal(new Set(lessons.map((lesson) => lesson.summaryImage)).size, 14);
   assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 14);
 
   for (const lesson of lessons) {
@@ -88,10 +87,8 @@ test("each launch lesson has complete reviewed copy and unique stable media refe
     assert.equal(lesson.relatedConcepts.length, 3);
     assert.ok(lesson.sourceUrls.length >= 2 && lesson.sourceUrls.length <= 4);
     assert.ok(lesson.sourceUrls.every((source) => /^https:\/\//.test(source.url)));
-    assert.ok(lesson.imageAlt.trim().length > 20, `${lesson.id} must include literal cover alt text`);
-    assert.ok(lesson.summaryImageAlt.trim().length > 20, `${lesson.id} must include literal summary alt text`);
+    assert.ok(lesson.imageAlt.trim().length > 20, `${lesson.id} must include literal image alt text`);
     assert.match(lesson.image, new RegExp(`^/images/academy/covers/${lesson.id}-.+\\.png$`));
-    assert.match(lesson.summaryImage, new RegExp(`^/images/academy/summary/${lesson.id}-.+\\.png$`));
     assert.match(lesson.summaryAudio, new RegExp(`^/audio/academy/${lesson.id}-.+-summary\\.m4a$`));
   }
 });
@@ -102,8 +99,7 @@ test("Academy alt text does not normalize banned particle-heavy or fake-person a
     /\b(particles?|granules?|beads?|pebbles?|point clouds?|scatter fields?|confetti|glitter|stippling|swarms?|dotted meshes?|cut-paper|clay figures?|cartoons?|mannequins?|waxy people)\b/i;
 
   for (const lesson of lessons) {
-    assert.doesNotMatch(lesson.imageAlt, bannedVisualTerms, `${lesson.id} cover alt text describes a banned visual style`);
-    assert.doesNotMatch(lesson.summaryImageAlt, bannedVisualTerms, `${lesson.id} summary alt text describes a banned visual style`);
+    assert.doesNotMatch(lesson.imageAlt, bannedVisualTerms, `${lesson.id} image alt text describes a banned visual style`);
   }
 });
 

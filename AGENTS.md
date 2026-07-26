@@ -16,7 +16,7 @@
 
 - Before generating Academy artwork, read `docs/academy-art-direction.md` and the installed `design-taste-frontend` Taste Skill.
 - For all new Academy page images, including both cover and summary illustrations, use the owner-defined `真人质感风格`: show real teachers and learners visibly participating in a warm, bright, friendly, and immediately understandable teaching scene.
-- Abstract geometric compositions and exhibition-installation-style imagery are not permitted for new Academy page images. Fable 5 and the Taste Skill may inform restraint, hierarchy, and layout only; they must not be used to justify abstract subject matter.
+- Abstract geometric compositions and exhibition-installation-style imagery are not permitted for new Academy page images.
 - Dense decorative fields of particles, granules, beads, pebbles, point clouds, scatter marks, confetti, glitter, stippling, dotted meshes, swarms, and other high-frequency micro-elements are forbidden.
 - Sparse, semantically meaningful diagram nodes or ordinary photographed details are allowed. The rejection target is the high-density particle aesthetic, not every isolated dot.
 - The `真人质感风格` itself is approved; only particle-heavy props or overlays within that photography are forbidden.

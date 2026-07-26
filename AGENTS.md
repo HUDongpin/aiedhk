@@ -15,7 +15,9 @@
 ## Academy Illustration Art Direction
 
 - Before generating Academy artwork, read `docs/academy-art-direction.md` and the installed `design-taste-frontend` Taste Skill.
-- For all new Academy page images, including both cover and summary illustrations, use the owner-defined `真人质感风格`: show real teachers and learners visibly participating in a warm, bright, friendly, and immediately understandable teaching scene.
+- Each Academy lesson must use exactly one image asset and display it only once on the lesson detail page, not as separate cover and summary images. The same asset may also be used as the lesson-card thumbnail outside the lesson detail page.
+- Keep all Academy images that have already been generated; do not delete them. When publishing future lessons, select one suitable image from the existing image pool. Generate exactly one new image only when no existing image is suitable.
+- For all new Academy page images, use the owner-defined `真人质感风格`: show real teachers and learners visibly participating in a warm, bright, friendly, and immediately understandable teaching scene.
 - Abstract geometric compositions and exhibition-installation-style imagery are not permitted for new Academy page images.
 - Dense decorative fields of particles, granules, beads, pebbles, point clouds, scatter marks, confetti, glitter, stippling, dotted meshes, swarms, and other high-frequency micro-elements are forbidden.
 - Sparse, semantically meaningful diagram nodes or ordinary photographed details are allowed. The rejection target is the high-density particle aesthetic, not every isolated dot.
@@ -23,6 +25,6 @@
 - Use low-density compositions with generous negative space and a controlled object count.
 - Teachers and learners must have credible real-person photographic texture, natural anatomy, skin, hair, hands, clothing, and expressions. Cut-paper, clay, vector, cartoon, mannequin-like, or visibly rendered people are forbidden. If photorealism is not reliable, reject and regenerate the image; do not fall back to an abstract no-human composition.
 - When the Fable 5 family is selected, its UI may inform restraint and hierarchy, but never copy Anthropic logos, wordmarks, butterflies, layouts, or proprietary assets.
-- Reject both lesson images if either the cover or summary illustration violates the Academy art-direction contract.
+- Reject the lesson image if it violates the Academy art-direction contract.
 
 Run `npm run hygiene:check` before handoff and `npm run release:verify` before release/deploy.

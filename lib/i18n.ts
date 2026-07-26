@@ -104,7 +104,7 @@ const enDictionary = {
   },
   home: {
     eyebrow: "AI in Education Hub of Knowledge",
-    heroTitle: "Hong Kong as an AIED Hub for research, product innovation, and learning impact.",
+    heroTitle: "An AIED Hub for research, product innovation, and learning impact.",
     heroText:
       "AIEDHK is a multilingual information platform for AI in Education R&D. It connects global research intelligence with local classroom practice, product experiments, and responsible innovation.",
     primaryCta: "Explore Research News",

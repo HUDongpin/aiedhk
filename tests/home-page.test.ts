@@ -6,7 +6,7 @@ import HomePage from "@/app/[locale]/page";
 test("home hero headline uses a lower responsive font size", async () => {
   const html = renderToStaticMarkup(await HomePage({ params: Promise.resolve({ locale: "en" }) }));
 
-  assert.match(html, /Hong Kong as an AIED Hub for research, product innovation, and learning impact\./);
+  assert.match(html, /An AIED Hub for research, product innovation, and learning impact\./);
   assert.match(html, /<h1 class="[^"]*\btext-4xl\b[^"]*\bsm:text-5xl\b[^"]*\blg:text-6xl\b[^"]*">/);
   assert.doesNotMatch(html, /\blg:text-7xl\b/);
 });

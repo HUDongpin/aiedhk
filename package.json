@@ -12,7 +12,8 @@
     "seed:research": "tsx scripts/seed-research-papers.ts",
     "translate:research": "tsx scripts/translate-reviewed-papers.ts",
     "hygiene:check": "node scripts/check-worktree-clean.mjs",
-    "release:verify": "npm run hygiene:check && npm test && npm run build && npm run typecheck && npm run hygiene:check"
+    "hygiene:overlap": "node scripts/check-worktree-overlap.mjs",
+    "release:verify": "npm run hygiene:check && npm run hygiene:overlap && npm test && npm run build && npm run typecheck && npm run hygiene:overlap && npm run hygiene:check"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",

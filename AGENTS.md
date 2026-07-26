@@ -15,7 +15,7 @@
 ## News and Academy Listing Card Numbering
 
 - On every News and Academy landing or listing page, including localized and paginated routes such as `/en/academy?page=1`, every article or lesson card must display that item's identifier in the card's top-right corner.
-- Use a concise content-label-plus-number format with a zero-padded two-digit sequence, such as `Conference Paper 01` or `AI Knowledge 01`. The wording and visual treatment may be refined to match the item's content type and page design, but both the label and number must remain visible.
+- Use a concise content-label-plus-number format with a minimum two-digit, zero-padded sequence, such as `Conference Paper 01` or `AI Knowledge 01`. Use two digits for `01` through `99`, three digits for `100` through `999`, four digits for `1000` through `9999`, and continue expanding the number of digits as the sequence grows. The wording and visual treatment may be refined to match the item's content type and page design, but both the label and full number must remain visible.
 - Keep each identifier stable for its item across locales, pagination, filtering, and future releases; do not restart numbering on each page or derive the identifier from the card's current on-screen position.
 
 ## Academy Illustration Art Direction

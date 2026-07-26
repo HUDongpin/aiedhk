@@ -51,6 +51,12 @@ test("summary audio player can use a static audio source without live TTS", () =
   assert.match(playerSource, /const \[audioSrc,\s*setAudioSrc\]\s*=\s*useState\(src\s*\?\?\s*""\)/);
 });
 
+test("static summary audio uses a provider-neutral status label", () => {
+  const playerSource = source("components/SummaryAudioPlayer.tsx");
+
+  assert.match(playerSource, /src\s*\?\s*"Audio summary"\s*:\s*"CosyVoice summary"/);
+});
+
 test("research detail page uses local summary audio without dynamic TTS fallback", () => {
   const pageSource = source("app/[locale]/news/[slug]/page.tsx");
 

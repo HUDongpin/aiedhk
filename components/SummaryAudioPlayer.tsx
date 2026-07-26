@@ -34,6 +34,7 @@ export default function SummaryAudioPlayer({ src, ttsEndpoint, title = "Listen t
   const canSeek = status === "ready" && duration > 0 && Boolean(audioSrc);
   const hasPlaybackSource = Boolean(audioSrc || ttsEndpoint);
   const isPreparing = status === "loading" && !audioSrc && Boolean(ttsEndpoint);
+  const readyLabel = src ? "Audio summary" : "CosyVoice summary";
   const statusLabel =
     status === "error"
       ? "Audio unavailable"
@@ -43,7 +44,7 @@ export default function SummaryAudioPlayer({ src, ttsEndpoint, title = "Listen t
           ? "Buffering"
           : isPlaying
             ? "Now playing"
-            : "CosyVoice summary";
+            : readyLabel;
 
   useEffect(() => {
     if (audioRef.current) audioRef.current.playbackRate = playbackRate;

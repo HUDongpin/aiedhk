@@ -12,6 +12,12 @@
 - Research News automation must check existing entries for duplicates first, commit reviewed data and static audio together, and deploy only from a clean commit.
 - Each Research News article must have a different cover image; do not reuse the same cover file or visually duplicate cover art across articles.
 
+## News and Academy Listing Card Numbering
+
+- On every News and Academy landing or listing page, including localized and paginated routes such as `/en/academy?page=1`, every article or lesson card must display that item's identifier in the card's top-right corner.
+- Use a concise content-label-plus-number format with a zero-padded two-digit sequence, such as `Conference Paper 01` or `AI Knowledge 01`. The wording and visual treatment may be refined to match the item's content type and page design, but both the label and number must remain visible.
+- Keep each identifier stable for its item across locales, pagination, filtering, and future releases; do not restart numbering on each page or derive the identifier from the card's current on-screen position.
+
 ## Academy Illustration Art Direction
 
 - Before generating Academy artwork, read `docs/academy-art-direction.md` and the installed `design-taste-frontend` Taste Skill.

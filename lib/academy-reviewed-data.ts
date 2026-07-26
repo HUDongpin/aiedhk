@@ -297,4 +297,226 @@ Instruction should respect the limited workspace while deliberately building the
     ],
     createdAt: "2026-07-23T08:00:00.000Z",
   },
+  {
+    id: "academy-009",
+    slug: "supervised-unsupervised-reinforcement-learning",
+    title: "Supervised, Unsupervised, and Reinforcement Learning",
+    track: "ai-knowledge",
+    level: "basics",
+    tags: ["supervised learning", "unsupervised learning", "reinforcement learning"],
+    image: "/images/academy/covers/academy-009-supervised-unsupervised-reinforcement-learning.png",
+    imageAlt: "Three adult learners compare paired ceramic tiles, grouped wooden forms, and a small wheeled robot at separate stations in a daylight learning laboratory",
+    summaryImage: "/images/academy/summary/academy-009-supervised-unsupervised-reinforcement-learning.png",
+    summaryImageAlt: "An educator guides three adult learners through matched examples, grouped objects, and a feedback path with a small robot",
+    summaryAudio: "/audio/academy/academy-009-supervised-unsupervised-reinforcement-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Supervised, Unsupervised, and Reinforcement Learning",
+    shortSummary: "How three major learning settings differ in the feedback they provide, the patterns they seek, and the claims their results can support.",
+    fullSummary: `Supervised, unsupervised, and reinforcement learning describe three different ways of organizing a learning problem. They are not competing labels for the same method. Each specifies what experience is available to a system and what kind of signal guides improvement. Knowing the difference helps educators ask a practical question before discussing algorithms: what information tells the system that it is doing better?
+
+In supervised learning, examples are paired with target outputs. A model may learn to classify an image, estimate a score, or predict whether a learner will answer an item correctly. Classification predicts categories, while regression predicts quantities. Training compares predictions with known targets and adjusts the model to reduce error. The targets are often called labels, but they are not automatically ground truth. A label may reflect a human judgment, a measurement process, or a historical decision with its own uncertainty and bias. Evaluation therefore needs separate data and attention to how the labels were produced.
+
+Unsupervised learning begins without a target output for every example. The system looks for structure in the inputs, such as clusters, lower-dimensional representations, unusual cases, or recurring associations. A grouping can help people explore a large collection, but the algorithm does not discover a single correct interpretation of the world. Results depend on the selected features, similarity measure, model assumptions, and number of groups. A cluster of students, for example, should not be treated as a natural ability category simply because a procedure separated their records.
+
+Reinforcement learning concerns an agent that takes actions in an environment and receives rewards or other evaluative signals over time. The goal is to learn a policy for choosing actions that leads to greater expected return. This setting introduces delayed consequences and the exploration problem: the agent must sometimes try uncertain actions to learn whether they are useful. Reward design is consequential. A tutoring agent rewarded only for immediate correctness might give excessive hints, while a reward that considers later independent performance could support a different policy.
+
+Real systems can combine these settings. A model may learn representations without labels, refine them with supervised examples, and then use feedback from interaction. The correct choice depends on the decision, available evidence, acceptable risk, and evaluation plan. In education, the names do not guarantee validity. Teams still need representative data, independent testing, subgroup analysis, privacy protection, and accountable human review. Practitioners should also ask how often feedback arrives, whether it is delayed or incomplete, how errors affect future decisions, and who can challenge an automated result. These operational details can matter as much as the algorithm family. The most useful distinction is the feedback structure: targets guide supervised learning, patterns in inputs guide unsupervised learning, and consequences across actions guide reinforcement learning.`,
+    coreIdeas: [
+      "Supervised learning uses target outputs, while label quality and evaluation design limit what its predictions mean.",
+      "Unsupervised learning organizes input structure without a single target, so its patterns depend on chosen representations and assumptions.",
+      "Reinforcement learning improves action policies from consequences over time, making exploration and reward design central concerns.",
+    ],
+    educationConnection: "Before adopting an educational AI system, identify its learning setting, the signal that guides it, and whether that signal represents the learning outcome educators actually value.",
+    relatedConcepts: ["Classification and regression", "Clustering", "Reward design"],
+    sourceUrls: [
+      { label: "Scikit-learn: supervised learning", url: "https://scikit-learn.org/stable/supervised_learning.html" },
+      { label: "Scikit-learn: unsupervised learning", url: "https://scikit-learn.org/stable/unsupervised_learning.html" },
+      { label: "Sutton and Barto, Reinforcement Learning", url: "https://mitpress.mit.edu/9780262039246/reinforcement-learning/" },
+    ],
+    createdAt: "2026-07-24T08:00:00.000Z",
+  },
+  {
+    id: "academy-010",
+    slug: "retrieval-practice",
+    title: "Retrieval Practice",
+    track: "educational-theory",
+    level: "basics",
+    tags: ["retrieval practice", "memory", "formative assessment"],
+    image: "/images/academy/covers/academy-010-retrieval-practice.png",
+    imageAlt: "An adult learner writes from memory on a blank sheet beside a closed book and laptop at a quiet library table",
+    summaryImage: "/images/academy/summary/academy-010-retrieval-practice.png",
+    summaryImageAlt: "An educator encourages two adult learners to recall and sketch a process while their books remain closed",
+    summaryAudio: "/audio/academy/academy-010-retrieval-practice-summary.m4a",
+    summaryAudioTitle: "Listen to Retrieval Practice",
+    shortSummary: "Why trying to recall knowledge can strengthen later access, reveal gaps, and support transfer when prompts and feedback are designed well.",
+    fullSummary: `Retrieval practice means deliberately bringing previously learned information to mind instead of only looking at it again. A learner might answer a question without notes, explain a concept from memory, sketch a process, or solve a problem after the worked example is removed. The defining action is attempted recall. A quiz can create retrieval practice, but testing is not the goal by itself. The instructional purpose is to strengthen usable knowledge and show what still needs attention.
+
+Research comparing retrieval with additional study has repeatedly found that successful recall can improve later retention. One explanation is that retrieval strengthens and reorganizes the routes used to access knowledge. It can also make future learning more effective by clarifying which ideas are secure and which are incomplete. The immediate experience can be misleading: rereading often feels fluent because the material is visible, while recall feels harder because support has been removed. That difficulty can be productive when the learner has enough prior learning to make a serious attempt.
+
+Effective retrieval practice varies in form. Free recall asks learners to produce what they know with little prompting. Cued recall provides a question, image, key term, or partial structure. Recognition asks learners to identify an answer, which usually supplies more support. Prompts should match the desired future performance. Remembering a definition may require a different prompt from explaining a causal relationship or choosing a strategy in a new problem. Retrieval should recur after some forgetting and across different contexts rather than appearing once at the end of a unit.
+
+Feedback matters, especially after an unsuccessful or incomplete attempt. Learners need a chance to compare their response with an accurate explanation and then retrieve again later. Low-stakes conditions reduce the temptation to treat every error as a judgment of ability. Teachers should avoid turning retrieval practice into rapid-fire grading that rewards speed, public comparison, or isolated facts at the expense of reasoning. The technique is also not a substitute for initial teaching, worked examples, discussion, or supported practice.
+
+Digital and AI tools can schedule prompts, vary examples, and invite explanations, but they should not quietly reveal the answer before retrieval occurs. Generated questions also require review for accuracy, ambiguity, and alignment with the curriculum. Learners can also rate their confidence before feedback, which helps separate secure knowledge from guesses and gives teachers evidence for the next instructional decision. Later recall should confirm the change. A useful sequence is simple: learn with appropriate support, remove some support, attempt retrieval, receive informative feedback, and revisit the idea after a delay. The aim is not to make learning feel difficult for its own sake. It is to help knowledge become available when notes, hints, and familiar wording are absent.`,
+    coreIdeas: [
+      "Retrieval practice requires an attempt to recall or use knowledge without simply restudying the visible answer.",
+      "Well-spaced retrieval can strengthen later access and reveal gaps, even when it feels harder than rereading.",
+      "Prompts, feedback, stakes, and alignment with future performance determine whether retrieval supports meaningful learning.",
+    ],
+    educationConnection: "Use brief low-stakes recall, explanation, or problem-solving prompts after initial teaching, then provide accurate feedback and revisit the same ideas after a delay.",
+    relatedConcepts: ["Testing effect", "Desirable difficulties", "Feedback"],
+    sourceUrls: [
+      { label: "Roediger and Karpicke on test-enhanced learning", url: "https://doi.org/10.1111/j.1467-9280.2006.01693.x" },
+      { label: "Karpicke and Blunt on retrieval practice", url: "https://doi.org/10.1126/science.1199327" },
+      { label: "Dunlosky and colleagues on effective learning techniques", url: "https://doi.org/10.1177/1529100612453266" },
+    ],
+    createdAt: "2026-07-24T08:00:00.000Z",
+  },
+  {
+    id: "academy-011",
+    slug: "features-labels-and-representations",
+    title: "Features, Labels, and Learned Representations",
+    track: "ai-knowledge",
+    level: "basics",
+    tags: ["features", "labels", "representations"],
+    image: "/images/academy/covers/academy-011-features-labels-and-learned-representations.png",
+    imageAlt: "Two education researchers compare a small set of physical objects through clear measuring frames and a separate stack of blank category cards on a pale studio table",
+    summaryImage: "/images/academy/summary/academy-011-features-labels-and-learned-representations.png",
+    summaryImageAlt: "An educator helps two adult learners compare physical objects, feature cards, blank category cards, and transparent color layers",
+    summaryAudio: "/audio/academy/academy-011-features-labels-and-learned-representations-summary.m4a",
+    summaryAudioTitle: "Listen to Features, Labels, and Learned Representations",
+    shortSummary: "How models turn observations into inputs and targets, then build internal representations that support prediction while preserving human assumptions.",
+    fullSummary: `Machine-learning systems do not encounter a learner, essay, image, or classroom in the same way a person does. They receive representations of observations. Features are the input variables made available to a model, while labels are target values used in many supervised learning tasks. A row in a dataset might contain features such as prior attempts, response time, item history, or encoded text, with a label indicating a later outcome. These choices define what the system can notice and what it is asked to predict.
+
+Some features are selected or constructed directly. Numerical values may be scaled, categories encoded, and text converted into counts or vectors. Feature engineering can make relevant structure easier for a model to use, but it also embeds judgments about what matters. A convenient variable may act as a proxy for socioeconomic status, language background, disability, or institutional opportunity. A timestamp, identifier, or post-outcome record can leak information that would not be available when the system is actually used. High predictive accuracy cannot repair a feature set that makes the intended decision invalid or unfair.
+
+Labels deserve equal scrutiny. They may come from measurements, expert judgments, administrative records, or earlier decisions. A label such as engagement, risk, quality, or mastery is not self-defining. It operationalizes a concept through a particular process. If teachers referred some students for support more often than others, a model trained to reproduce those referrals may learn the referral pattern rather than an independent need. Missing, noisy, delayed, and inconsistently applied labels all shape the learned result.
+
+Modern neural networks often learn internal representations instead of relying only on hand-designed features. During training, successive transformations organize inputs into patterns useful for the objective. An embedding represents an item as a vector so that relationships can be expressed through position and distance. Useful representations can capture regularities that transfer across tasks, but they are not neutral summaries. They reflect the training data, architecture, objective, and feedback. A compact representation may also hide which original details influenced a decision.
+
+Educational evaluation should trace the whole chain from observation to representation to output. Teams should document when each feature becomes available, how labels were created, which groups are represented, and whether performance changes across settings. They should test for leakage, unstable proxies, and distribution shift. Data documentation should preserve these decisions so later reviewers can reconstruct why a representation was considered appropriate. Teachers do not need to inspect every parameter to ask strong questions. What evidence entered the system? What target defined success? What was compressed or omitted? A model learns from the version of reality encoded in its features, labels, and objective, not from the full educational situation those variables are intended to represent.`,
+    coreIdeas: [
+      "Features encode the observations a model can use, and their selection carries assumptions about relevance, timing, and fairness.",
+      "Labels operationalize a target through human and institutional processes, so they may contain noise, bias, or leakage.",
+      "Learned representations organize inputs for an objective, but they still reflect the data and decisions that produced them.",
+    ],
+    educationConnection: "When reviewing educational AI, document the origin and timing of every major feature, how the target label was defined, and what important classroom context the representation leaves out.",
+    relatedConcepts: ["Feature engineering", "Embeddings", "Data leakage"],
+    sourceUrls: [
+      { label: "Google ML: numerical data and features", url: "https://developers.google.com/machine-learning/crash-course/numerical-data" },
+      { label: "Google ML: embeddings", url: "https://developers.google.com/machine-learning/crash-course/embeddings" },
+      { label: "Deep Learning book: representation learning", url: "https://www.deeplearningbook.org/contents/representation.html" },
+    ],
+    createdAt: "2026-07-25T08:00:00.000Z",
+  },
+  {
+    id: "academy-012",
+    slug: "spacing-and-interleaving",
+    title: "Spacing and Interleaving",
+    track: "educational-theory",
+    level: "basics",
+    tags: ["spacing", "interleaving", "practice design"],
+    image: "/images/academy/covers/academy-012-spacing-and-interleaving.png",
+    imageAlt: "An educator and adult learner move between four separated stations that alternate coral construction and navy pattern tasks",
+    summaryImage: "/images/academy/summary/academy-012-spacing-and-interleaving.png",
+    summaryImageAlt: "An educator guides three adult learners as they alternate coral and navy geometry tasks and revisit examples from earlier practice",
+    summaryAudio: "/audio/academy/academy-012-spacing-and-interleaving-summary.m4a",
+    summaryAudioTitle: "Listen to Spacing and Interleaving",
+    shortSummary: "How distributing practice across time and mixing related problem types can improve retention, discrimination, and flexible strategy selection.",
+    fullSummary: `Spacing and interleaving are ways of organizing practice rather than new kinds of content. Spacing distributes encounters with an idea across time instead of concentrating them in one session. Interleaving mixes related topics, examples, or problem types instead of completing a long block of one type before moving to the next. The two can be combined, but they address different learning demands. Spacing creates opportunities to retrieve after some forgetting, while interleaving requires learners to distinguish among possibilities and select an appropriate approach.
+
+Massed practice can produce rapid improvement during a lesson because the same information and procedure remain active. That fluency may not last. When practice is spaced, the learner has to reconstruct more of the knowledge on a later occasion. This effort can strengthen retention and reveal what was not securely learned. There is no universal best interval. Useful spacing depends on how long the knowledge should be retained, the complexity of the material, prior knowledge, and whether learners can still make a meaningful attempt when the idea returns.
+
+Blocked practice reduces the need to decide what kind of problem is present because the current section often announces the method. Interleaving removes that cue. A mathematics learner who sees several equation types mixed together must first identify the structure and then choose a method. This can slow initial performance and feel less orderly, yet it may improve later discrimination and transfer. Interleaving is most useful when categories are confusable or strategy selection matters. Randomly mixing unrelated tasks can instead create unnecessary switching and overload.
+
+Good design therefore preserves coherence. Teachers can introduce a concept with clear explanation and focused examples, then revisit it across later lessons and mix it with closely related alternatives. Brief cumulative questions, comparison tasks, and delayed practice sets can provide both spacing and interleaving. Feedback should explain not only whether an answer is correct but why a particular strategy fits. Learners may need a visible overview at first, followed by progressively fewer cues as their discrimination improves.
+
+Digital systems can schedule review and vary practice, but simple frequency rules are not enough. An adaptive tool should avoid treating every error as evidence that the interval was too long, because errors can arise from misunderstanding, ambiguous prompts, or inaccessible design. It should also avoid endless review of easy items that crowds out deeper application. Teachers should inspect the sequence as a curriculum, not only as an algorithmic queue. The schedule should remain understandable to learners and teachers. The central principle is purposeful return: revisit important knowledge after time has passed, and place it beside related knowledge so learners practice deciding what applies. Difficulty is valuable only when it supports durable, flexible learning rather than confusion.`,
+    coreIdeas: [
+      "Spacing distributes practice across time so learners reconstruct knowledge after some forgetting instead of relying on immediate fluency.",
+      "Interleaving mixes related cases so learners practice discrimination and strategy selection rather than following blocked cues.",
+      "Intervals and mixtures must remain coherent, supported, and aligned with the knowledge learners need to retain and transfer.",
+    ],
+    educationConnection: "After focused initial instruction, revisit core ideas in later lessons and mix them with related alternatives that require learners to identify which concept or strategy applies.",
+    relatedConcepts: ["Distributed practice", "Discrimination learning", "Transfer"],
+    sourceUrls: [
+      { label: "Cepeda and colleagues on distributed practice", url: "https://doi.org/10.1037/0033-2909.132.3.354" },
+      { label: "Kang on spaced repetition", url: "https://doi.org/10.1177/2372732215624708" },
+      { label: "Rohrer on interleaving practice", url: "https://doi.org/10.1007/s10648-012-9201-3" },
+    ],
+    createdAt: "2026-07-25T08:00:00.000Z",
+  },
+  {
+    id: "academy-013",
+    slug: "what-neural-networks-learn",
+    title: "What Neural Networks Learn",
+    track: "ai-knowledge",
+    level: "basics",
+    tags: ["neural networks", "features", "model interpretation"],
+    image: "/images/academy/covers/academy-013-what-neural-networks-learn.png",
+    imageAlt: "An educator and adult learner compare a coral object with transparent overlays showing its outline, shape, and recognizable pattern",
+    summaryImage: "/images/academy/summary/academy-013-what-neural-networks-learn.png",
+    summaryImageAlt: "An educator guides three adult learners in comparing a coral object, its outline, its shape, and a possible background shortcut",
+    summaryAudio: "/audio/academy/academy-013-what-neural-networks-learn-summary.m4a",
+    summaryAudioTitle: "Listen to What Neural Networks Learn",
+    shortSummary: "How training adjusts network parameters to build task-oriented representations, and why useful prediction does not guarantee human-like concepts.",
+    fullSummary: `A neural network learns by adjusting numerical parameters so that its outputs better satisfy a training objective. It does not store a neat textbook of rules inside each unit. The learned parameters define a function that transforms inputs through a sequence of layers. During training, optimization changes those parameters in response to error signals. What emerges can support accurate predictions, but the internal organization is distributed across many units and shaped by the task the network was rewarded for performing.
+
+Layers are often described as learning a hierarchy of features. In an image model, early computations may respond to local contrasts or orientations, while later computations combine information across larger regions. In a language model, representations can encode patterns involving words, syntax, topics, and longer contexts. This description is useful but incomplete. A unit may respond to several unrelated patterns, and a meaningful concept may be represented across many units. The same architecture trained on different data or objectives can organize information differently.
+
+The training objective determines which distinctions are useful. If a model is trained to predict an outcome, it may discover any regularity that reduces error, including shortcuts people did not intend. An image classifier can rely on backgrounds, watermarks, or camera artifacts. An educational model can rely on school identifiers, response opportunities, or patterns of missing data instead of the learner process designers hoped to measure. The network has no independent commitment to causal explanation, fairness, or educational meaning. It follows the statistical incentives present in its data and objective.
+
+Interpretability methods provide partial views. Feature visualization can generate inputs that strongly activate a unit or direction. Attribution methods estimate which parts of an input influenced an output. Probes test whether certain information can be recovered from a representation. These tools can reveal patterns and support hypotheses, but they do not automatically explain the complete computation or establish why a model behaves as it does in every case. Human-readable images and labels can also tempt observers to see a clean concept where the representation is more mixed.
+
+For educational use, the practical question is not whether a network thinks like a person. It is whether the learned function remains valid for the intended learners, settings, and decisions. Teams should test plausible shortcuts, compare subgroups, examine failures, and evaluate changes over time. Repeated evaluation with new cohorts can show whether a representation remains useful or has become tied to local conditions that no longer hold. Teachers should receive evidence about capabilities and limits rather than anthropomorphic claims about understanding. Neural networks can learn powerful representations, but those representations are task-oriented products of data, architecture, objectives, and optimization. Their usefulness must be demonstrated through independent evidence and accountable use.`,
+    coreIdeas: [
+      "Neural-network learning adjusts distributed parameters to optimize an objective rather than storing one human-readable rule per unit.",
+      "Internal representations can organize useful features across layers, but units and concepts rarely have a simple one-to-one correspondence.",
+      "Data and objectives can reward shortcuts, so interpretation and independent evaluation are necessary before educational use.",
+    ],
+    educationConnection: "Ask which patterns a model could exploit besides the intended learning construct, then test those shortcuts and failures across learners, schools, and changing conditions.",
+    relatedConcepts: ["Distributed representations", "Feature visualization", "Shortcut learning"],
+    sourceUrls: [
+      { label: "Distill: feature visualization", url: "https://distill.pub/2017/feature-visualization/" },
+      { label: "Stanford CS231n: convolutional networks", url: "https://cs231n.github.io/convolutional-networks/" },
+      { label: "Deep Learning book: representation learning", url: "https://www.deeplearningbook.org/contents/representation.html" },
+    ],
+    createdAt: "2026-07-26T08:00:00.000Z",
+  },
+  {
+    id: "academy-014",
+    slug: "dual-coding-and-multimedia-learning",
+    title: "Dual Coding and Multimedia Learning",
+    track: "educational-theory",
+    level: "basics",
+    tags: ["dual coding", "multimedia learning", "instructional design"],
+    image: "/images/academy/covers/academy-014-dual-coding-and-multimedia-learning.png",
+    imageAlt: "An educator and adult learner coordinate a simple physical process model with a concise spoken explanation in a bright media studio",
+    summaryImage: "/images/academy/summary/academy-014-dual-coding-and-multimedia-learning.png",
+    summaryImageAlt: "An educator helps three adult learners connect a spoken explanation with picture cards and a hand-drawn visual sequence",
+    summaryAudio: "/audio/academy/academy-014-dual-coding-and-multimedia-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Dual Coding and Multimedia Learning",
+    shortSummary: "How words and meaningful visuals can support coordinated mental models when instructional media manages attention, load, and accessibility.",
+    fullSummary: `Dual coding theory proposes that people can represent information through partly distinct verbal and nonverbal systems. Multimedia learning research examines how learners build understanding from words and pictures while working memory is limited and prior knowledge varies. Together, these traditions support a careful claim: relevant verbal and visual representations can complement one another when learners select, organize, and connect them. They do not support decorating every explanation with pictures or assigning students to fixed visual and verbal learning styles.
+
+Words can be spoken or written. Visuals can include diagrams, photographs, graphs, animation, or demonstrations. Their educational value depends on what each representation contributes. A diagram may make spatial relations visible, while narration explains a causal sequence. A graph may show a pattern that a paragraph then interprets. Learning requires coordination across representations, not mere exposure to two formats. If the picture and words communicate unrelated ideas, compete for attention, or require excessive searching, adding media can make understanding harder.
+
+Several multimedia design principles address this risk. Coherence means removing material that does not support the learning goal. Signaling highlights the organization of essential information without turning the page into decoration. Spatial and temporal contiguity place corresponding words and visuals near one another and present related events at useful times. Segmenting gives learners manageable units and control over pace. Redundancy needs careful treatment: narrating an explanation while displaying the same full paragraph can overload visual and verbal processing, while concise labels or accessible transcripts may still be necessary.
+
+The design should follow the task. A realistic image can establish context, but a simplified diagram may better reveal hidden structure. An animation can show change over time, yet learners may need controls, pauses, and a static reference for review. Teachers can ask learners to explain how a visual maps to the verbal account, complete a partially worked diagram, or create their own representation and justify it. These activities make integration visible instead of assuming that students automatically connect the parts.
+
+Accessibility is part of multimedia quality. Images need meaningful alternatives, audio needs captions or transcripts, color cannot carry the only distinction, and controls must work with keyboards and assistive technology. AI tools can draft diagrams, narration, and alternative text, but generated media requires review for factual correspondence, unnecessary detail, bias, and accessibility. Learners should have time to inspect the relationship, control the pace, and return to a representation when an explanation depends on it. The medium should serve the idea rather than become the lesson's main attraction. The goal is not maximum stimulation. It is representational fit: choose words and visuals that each do useful work, reduce avoidable load, and help learners build one coherent mental model they can explain and apply.`,
+    coreIdeas: [
+      "Words and meaningful visuals can provide complementary representations that learners must actively organize and connect.",
+      "Coherence, signaling, contiguity, segmenting, and careful redundancy help multimedia manage limited attention and working memory.",
+      "Effective multimedia is task-aligned and accessible, not evidence for fixed learning styles or decorative media abundance.",
+    ],
+    educationConnection: "Pair each explanation with a visual that contributes necessary structure, place corresponding information together, remove decorative detail, and ask learners to explain the connection.",
+    relatedConcepts: ["Cognitive theory of multimedia learning", "Coherence principle", "Accessibility"],
+    sourceUrls: [
+      { label: "Clark and Paivio on dual coding theory", url: "https://doi.org/10.1007/BF01320076" },
+      { label: "Cambridge Handbook of Multimedia Learning", url: "https://doi.org/10.1017/9781108894333" },
+      { label: "Mayer and Moreno on multimedia learning", url: "https://doi.org/10.1207/S15326985EP3801_6" },
+    ],
+    createdAt: "2026-07-26T08:00:00.000Z",
+  },
 ];

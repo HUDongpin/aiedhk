@@ -2,25 +2,56 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("Academy publishes exactly eight ordered reviewed English lessons", () => {
+test("Academy publishes exactly fourteen ordered reviewed English lessons", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.equal(lessons.length, 8);
+  assert.equal(lessons.length, 14);
   assert.deepEqual(
     lessons.map((lesson) => lesson.id),
-    ["academy-007", "academy-008", "academy-006", "academy-005", "academy-004", "academy-003", "academy-002", "academy-001"]
+    [
+      "academy-013",
+      "academy-014",
+      "academy-011",
+      "academy-012",
+      "academy-009",
+      "academy-010",
+      "academy-007",
+      "academy-008",
+      "academy-006",
+      "academy-005",
+      "academy-004",
+      "academy-003",
+      "academy-002",
+      "academy-001",
+    ]
   );
   assert.deepEqual(
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 4);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 4);
+  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 7);
+  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 7);
   assert.deepEqual(
-    new Set(lessons.filter((lesson) => ["academy-007", "academy-008"].includes(lesson.id)).map((lesson) => lesson.track)),
+    new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
   assert.ok(lessons.every((lesson) => lesson.level === "basics" || lesson.level === "core"));
+});
+
+test("Academy catch-up publishes one curriculum pair for each missed July 24-26 run", () => {
+  const lessons = getAcademyLessons("en");
+  const catchUpDates = new Map([
+    ["2026-07-24T08:00:00.000Z", ["academy-009", "academy-010"]],
+    ["2026-07-25T08:00:00.000Z", ["academy-011", "academy-012"]],
+    ["2026-07-26T08:00:00.000Z", ["academy-013", "academy-014"]],
+  ]);
+
+  for (const [createdAt, expectedIds] of catchUpDates) {
+    assert.deepEqual(
+      lessons.filter((lesson) => lesson.createdAt === createdAt).map((lesson) => lesson.id),
+      expectedIds
+    );
+  }
 });
 
 test("each launch lesson has complete reviewed copy and unique stable media references", () => {
@@ -34,15 +65,21 @@ test("each launch lesson has complete reviewed copy and unique stable media refe
     "Constructivism and Active Knowledge Building",
     "Training, Validation, and Test Data",
     "Working Memory and Long-Term Memory",
+    "Supervised, Unsupervised, and Reinforcement Learning",
+    "Retrieval Practice",
+    "Features, Labels, and Learned Representations",
+    "Spacing and Interleaving",
+    "What Neural Networks Learn",
+    "Dual Coding and Multimedia Learning",
   ];
 
   assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));
-  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 8);
-  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 8);
-  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 8);
-  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 8);
-  assert.equal(new Set(lessons.map((lesson) => lesson.summaryImage)).size, 8);
-  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 8);
+  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 14);
+  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 14);
+  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 14);
+  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 14);
+  assert.equal(new Set(lessons.map((lesson) => lesson.summaryImage)).size, 14);
+  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 14);
 
   for (const lesson of lessons) {
     const wordCount = lesson.fullSummary.trim().split(/\s+/).length;

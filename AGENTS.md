@@ -15,12 +15,13 @@
 ## Academy Illustration Art Direction
 
 - Before generating Academy artwork, read `docs/academy-art-direction.md` and the installed `design-taste-frontend` Taste Skill.
-- Academy has three approved visual families: Fable 5-informed editorial abstraction, Taste Skill-directed visual design, and the owner-defined `真人质感风格` (credible editorial photography of real people and real environments).
+- For all new Academy page images, including both cover and summary illustrations, use the owner-defined `真人质感风格`: show real teachers and learners visibly participating in a warm, bright, friendly, and immediately understandable teaching scene.
+- Abstract geometric compositions and exhibition-installation-style imagery are not permitted for new Academy page images. Fable 5 and the Taste Skill may inform restraint, hierarchy, and layout only; they must not be used to justify abstract subject matter.
 - Dense decorative fields of particles, granules, beads, pebbles, point clouds, scatter marks, confetti, glitter, stippling, dotted meshes, swarms, and other high-frequency micro-elements are forbidden.
 - Sparse, semantically meaningful diagram nodes or ordinary photographed details are allowed. The rejection target is the high-density particle aesthetic, not every isolated dot.
 - The `真人质感风格` itself is approved; only particle-heavy props or overlays within that photography are forbidden.
 - Use low-density compositions with generous negative space and a controlled object count.
-- If people appear, they must have credible real-person photographic texture, natural anatomy, skin, hair, hands, clothing, and expressions. Cut-paper, clay, vector, cartoon, mannequin-like, or visibly rendered people are forbidden; use an abstract no-human composition instead if photorealism is not reliable.
+- Teachers and learners must have credible real-person photographic texture, natural anatomy, skin, hair, hands, clothing, and expressions. Cut-paper, clay, vector, cartoon, mannequin-like, or visibly rendered people are forbidden. If photorealism is not reliable, reject and regenerate the image; do not fall back to an abstract no-human composition.
 - When the Fable 5 family is selected, its UI may inform restraint and hierarchy, but never copy Anthropic logos, wordmarks, butterflies, layouts, or proprietary assets.
 - Reject both lesson images if either the cover or summary illustration violates the Academy art-direction contract.
 

@@ -9,7 +9,8 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "
 
 async function loadOverlapModule() {
   try {
-    return await import("../scripts/check-worktree-overlap.mjs");
+    const modulePath = ["../scripts", "check-worktree-overlap.mjs"].join("/");
+    return await import(modulePath);
   } catch (error) {
     assert.fail(`worktree overlap checker is unavailable: ${String(error)}`);
   }

@@ -519,4 +519,80 @@ Accessibility is part of multimedia quality. Images need meaningful alternatives
     ],
     createdAt: "2026-07-26T08:00:00.000Z",
   },
+  {
+    id: "academy-015",
+    slug: "prompts-context-and-model-responses",
+    title: "Prompts, Context, and Model Responses",
+    track: "ai-knowledge",
+    level: "basics",
+    tags: ["prompt design", "context", "model responses"],
+    image: "/images/academy/covers/academy-015-prompts-context-and-model-responses.png",
+    imageAlt: "An educator and two adult learners compare a printed task brief with model responses on a laptop in a bright classroom",
+    summaryImage: "/images/academy/summary/academy-015-prompts-context-and-model-responses.png",
+    summaryImageAlt: "An educator points to an open reference book while three adult learners review four prompt cards beside a laptop",
+    summaryAudio: "/audio/academy/academy-015-prompts-context-and-model-responses-summary.m4a",
+    summaryAudioTitle: "Listen to Prompts, Context, and Model Responses",
+    shortSummary: "How prompts and surrounding context shape probabilistic model responses, and why clear task design still requires verification and human judgment.",
+    fullSummary: `A prompt is the information given to an AI model when asking it to produce a response. It may include a question, an instruction, examples, background material, formatting requirements, and earlier messages in a conversation. The model also receives other context supplied by the application, such as system instructions, retrieved documents, or tool results. A useful distinction is that the prompt is what a user deliberately contributes, while the context is the wider collection of information available to the model for that turn. This distinction helps users ask whether missing or hidden information may have shaped the result.
+
+A language model does not interpret a prompt as a person interprets a shared intention. It uses the available tokens to estimate likely continuations according to patterns learned during training and later alignment. Small wording changes can shift which patterns become relevant, so two similar requests may produce different answers. Responses can also vary because generation may involve sampling. A polished answer therefore shows what the model produced under particular conditions, not a stable fact stored behind the interface.
+
+Clear prompting makes the task and evaluation criteria easier to infer. A practical prompt can name the goal, audience, relevant evidence, constraints, and desired form. Examples can demonstrate a category or style when description alone is ambiguous. Breaking a complex task into stages can help users inspect assumptions before asking for a final product. However, adding instructions without purpose can create conflict or bury the important material. Prompt quality is not measured by length. It is measured by whether the model receives the information needed for the task and whether the result can be checked.
+
+Context has limits. Models process a finite context window, and applications may truncate, summarize, or selectively retrieve material before a request reaches the model. Even when information fits, the model may not use every part equally well. Position, relevance, duplication, and competing instructions can affect the response. Users should place essential evidence close to the task, label sources clearly, and remove irrelevant material. Sensitive personal or institutional information should not be included unless the tool, purpose, consent, and data protections are appropriate.
+
+In education, prompting is best treated as a form of task design followed by evaluation. Teachers can ask learners to state the purpose of a prompt, compare several responses, identify which details changed the result, and verify claims against course sources. A prompt can request uncertainty, citations, or alternative explanations, but those requests do not guarantee truthful answers. Reliable use requires checking the output for accuracy, bias, completeness, and fit with the learner. The goal is not to discover a magical phrase. It is to communicate a well-defined task, provide relevant context, observe the response critically, and revise both the request and the human judgment applied to the result.`,
+    coreIdeas: [
+      "A prompt is the user's contribution, while context includes all information made available to the model for the current response.",
+      "Clear goals, relevant evidence, constraints, and examples are more useful than unnecessary prompt length or supposed magical phrases.",
+      "Prompting can improve relevance but cannot guarantee truth, so outputs still require evidence-based human evaluation.",
+    ],
+    educationConnection: "Ask learners to identify a prompt's goal and context, compare resulting responses, and verify important claims against course sources before revising their request.",
+    relatedConcepts: ["Prompt design", "Context window", "Output evaluation"],
+    sourceUrls: [
+      { label: "Anthropic: how Claude Code works", url: "https://code.claude.com/docs/en/how-claude-code-works" },
+      { label: "Liu and colleagues: prompt methods survey", url: "https://arxiv.org/abs/2107.13586" },
+      { label: "Brown and colleagues: few-shot language models", url: "https://arxiv.org/abs/2005.14165" },
+      { label: "Liu and colleagues: long-context use", url: "https://aclanthology.org/2024.tacl-1.9/" },
+    ],
+    createdAt: "2026-07-29T08:00:00.000Z",
+  },
+  {
+    id: "academy-016",
+    slug: "scaffolding-and-the-zone-of-proximal-development",
+    title: "Scaffolding and the Zone of Proximal Development",
+    track: "educational-theory",
+    level: "basics",
+    tags: ["scaffolding", "zone of proximal development", "guided participation"],
+    image: "/images/academy/covers/academy-016-scaffolding-and-the-zone-of-proximal-development.png",
+    imageAlt: "An educator gives a single hint card to two adult learners working through a challenging task in a bright classroom",
+    summaryImage: "/images/academy/summary/academy-016-scaffolding-and-the-zone-of-proximal-development.png",
+    summaryImageAlt: "An educator stands back while one adult learner completes a concept map and another checks a worked example",
+    summaryAudio: "/audio/academy/academy-016-scaffolding-and-the-zone-of-proximal-development-summary.m4a",
+    summaryAudioTitle: "Listen to Scaffolding and the Zone of Proximal Development",
+    shortSummary: "How responsive support helps learners complete challenging work, then fades as competence, strategy use, and independent responsibility develop.",
+    fullSummary: `Scaffolding is temporary support that helps a learner participate in a task that would be difficult to complete independently. The support might include a worked example, a cue, a question, a partial solution, a checklist, modeling, or feedback. Good scaffolding does not simply make work easier. It makes important thinking possible while preserving a meaningful role for the learner. As understanding grows, support is adjusted and gradually removed so that responsibility shifts toward independent performance.
+
+The zone of proximal development describes the distance between what a learner can currently do alone and what the learner can do with capable guidance or collaboration. It is not a fixed score or a permanent label attached to a person. The zone depends on the task, prior knowledge, available tools, language, relationships, and quality of assistance. A learner may need substantial support for one concept and little support for another. Teachers therefore discover the useful level of support through interaction, not through assumption.
+
+Effective scaffolding is contingent. The teacher first attends to what the learner is trying, where progress stops, and which misconception or missing step is involved. Support then responds to that evidence. A prompt may be enough when the learner has a plan but overlooks a detail. Modeling may be more suitable when the process itself is unfamiliar. If support remains too weak, the learner may stay stuck. If it is too strong, the teacher or tool completes the intellectual work and loses evidence of what the learner can now do. The learner's response remains the evidence that determines whether support should continue, change form, or begin to fade.
+
+Fading is the planned reduction of help as competence develops. It can involve removing steps from a template, delaying hints, shifting from demonstration to questioning, or asking learners to explain and check their own decisions. Fading should follow demonstrated progress rather than a rigid timetable. Transfer of responsibility is successful when learners can select strategies, monitor results, and seek targeted help in a new situation. Productive struggle remains bounded: challenge should invite reasoning without turning confusion into the main activity.
+
+Digital and AI systems can offer hints, examples, and conversational guidance, but frequent assistance is not automatically scaffolding. A system must respond to learner evidence, avoid revealing answers too quickly, and create opportunities for independent performance. Teachers can compare assisted and unassisted work, ask learners to explain how a hint changed their reasoning, and review whether support is fading. They should also consider accessibility and cultural or linguistic differences in how help is offered and interpreted. The central design question is not how much support to provide in general. It is which support enables this learner to take the next meaningful step, and when that support should be withdrawn.`,
+    coreIdeas: [
+      "Scaffolding is temporary support for meaningful learner participation, not simply assistance that makes a task easier.",
+      "Effective support is contingent on evidence from the learner's current performance and the demands of the particular task.",
+      "Fading transfers strategy selection, monitoring, and responsibility to the learner as independent competence develops.",
+    ],
+    educationConnection: "Observe where a learner's progress stops, provide the smallest useful support, and compare assisted with independent performance before deciding whether to adapt or fade the help.",
+    relatedConcepts: ["Contingent support", "Fading", "Learner agency"],
+    sourceUrls: [
+      { label: "Wood, Bruner, and Ross on tutoring", url: "https://acamh.onlinelibrary.wiley.com/doi/abs/10.1111/j.1469-7610.1976.tb00381.x" },
+      { label: "Van de Pol and colleagues on scaffolding", url: "https://link.springer.com/article/10.1007/s10648-010-9127-6" },
+      { label: "Reiser on scaffolding complex learning", url: "https://www.tandfonline.com/doi/abs/10.1207/s15327809jls1303_2" },
+      { label: "Vygotsky: Mind in Society", url: "https://books.google.com/books?id=RxjjUefze_oC" },
+    ],
+    createdAt: "2026-07-29T08:00:00.000Z",
+  },
 ];

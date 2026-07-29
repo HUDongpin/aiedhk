@@ -116,5 +116,17 @@ export const academyCurriculumV1: { version: 1; pairs: AcademyCurriculumPair[] }
 
 export function getNextUnpublishedAcademyPair(existingSlugs: Iterable<string>) {
   const published = new Set(existingSlugs);
-  return academyCurriculumV1.pairs.find((pair) => pair.topics.some((topic) => !published.has(topic.slug)));
+
+  for (const pair of academyCurriculumV1.pairs) {
+    const publishedCount = pair.topics.filter((topic) => published.has(topic.slug)).length;
+    if (publishedCount === pair.topics.length) continue;
+    if (publishedCount > 0) {
+      throw new Error(
+        `Academy curriculum pair ${pair.order} is partially published; stop before selecting another pair.`
+      );
+    }
+    return pair;
+  }
+
+  return undefined;
 }

@@ -840,7 +840,7 @@ Educators can improve long-context tasks by selecting relevant material, dividin
     level: "core",
     tags: ["conceptual change", "prior conceptions", "model revision"],
     image: "/images/academy/covers/academy-024-conceptual-change.png",
-    imageAlt: "A South Asian educator and Black and East Asian adult learners compare two working heat-transfer models with a thermal camera and filled scientific diagrams",
+    imageAlt: "A Black learner, South Asian educator, and East Asian learner compare red and amber heat-transfer models around a glass-enclosed metal rod",
     summaryAudio: "/audio/academy/academy-024-conceptual-change-summary.m4a",
     summaryAudioTitle: "Listen to Conceptual Change",
     shortSummary: "How learners reorganize persistent explanations, why contradictory facts are insufficient, and how prediction, evidence, model comparison, and transfer support change.",

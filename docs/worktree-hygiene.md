@@ -38,6 +38,14 @@ Run `npm run hygiene:overlap` before integrating concurrent work. The check comp
 - `idle-unintegrated`: the worktree is clean but still has a unique patch. It is reported for follow-up but does not claim that someone is currently writing there.
 - `prunable`: the registered worktree is missing or already marked prunable.
 
+Before editing a clean candidate worktree, declare every planned shared path so the check cannot miss an overlap merely because the candidate has no diff yet. Repeat `--path` for each repo-relative path:
+
+```bash
+npm run hygiene:overlap -- --path <repo-relative-path> --path <another-repo-relative-path>
+```
+
+The report keeps historical branch overlap visible, but only `dirty-overlap` represents an uncommitted path collision and blocks the check.
+
 `release:verify` runs the overlap check before and after the build so a newly introduced active-writer collision cannot pass silently.
 
 ## Verification

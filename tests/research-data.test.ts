@@ -24,13 +24,48 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains thirty-seven curated Research News items", () => {
+test("research news fallback contains forty-seven curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 37);
-  assert.equal(papers[0]?.slug, "news-chatgpt-health-claude-reflect-gemini-education-personal-context");
+  assert.equal(papers.length, 47);
+  assert.equal(papers[0]?.slug, "news-anthropic-mcp-2026-07-28-institutional-connectors");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
+});
+
+test("the five-date backlog contains exactly one research paper and one clearly labeled product-news item per day", () => {
+  const papers = getResearchPapers("en");
+  const expectedByDate = new Map([
+    ["2026-07-22", ["aied-040", "aied-041"]],
+    ["2026-07-26", ["aied-038", "aied-039"]],
+    ["2026-07-27", ["aied-042", "aied-043"]],
+    ["2026-07-28", ["aied-044", "aied-045"]],
+    ["2026-07-29", ["aied-046", "aied-047"]],
+  ]);
+
+  for (const [date, expectedIds] of expectedByDate) {
+    const entries = papers.filter((paper) => paper.createdAt === date);
+    assert.deepEqual(entries.map((paper) => paper.id).sort(), expectedIds);
+
+    const productNews = entries.filter((paper) => paper.type === "policy-ethics");
+    const research = entries.filter((paper) => paper.type !== "policy-ethics");
+    assert.equal(productNews.length, 1, `${date} should contain one product-news item`);
+    assert.equal(research.length, 1, `${date} should contain one research paper`);
+    assert.match(
+      `${productNews[0]?.title} ${productNews[0]?.tags.join(" ")}`,
+      /news/i,
+      `${date} product news should be explicitly labeled`,
+    );
+  }
+});
+
+test("backlog identifiers aied-038 through aied-047 are continuous and non-duplicated", () => {
+  const ids = getResearchPapers("en")
+    .map((paper) => Number.parseInt(paper.id.replace("aied-", ""), 10))
+    .filter((id) => id >= 38 && id <= 47)
+    .sort((a, b) => a - b);
+
+  assert.deepEqual(ids, [38, 39, 40, 41, 42, 43, 44, 45, 46, 47]);
 });
 
 test("technology-enhanced CLIL systematic review is classified as Review", () => {
@@ -134,12 +169,22 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-047",
+      "aied-046",
+      "aied-045",
+      "aied-044",
+      "aied-043",
+      "aied-042",
+      "aied-039",
+      "aied-038",
       "aied-037",
       "aied-036",
       "aied-035",
       "aied-034",
       "aied-033",
       "aied-032",
+      "aied-041",
+      "aied-040",
       "aied-031",
       "aied-030",
       "aied-029",
@@ -186,6 +231,21 @@ test("static summary media assets are available locally", () => {
     assert.ok(width >= 1500, `${paper.summaryImage} should have enough horizontal detail`);
     assert.ok(height >= 900, `${paper.summaryImage} should have enough vertical detail`);
     assert.equal(audioBuffer.toString("ascii", 4, 8), "ftyp", `${paper.summaryAudio} should be an MP4/M4A media file`);
+  }
+});
+
+test("backlog entries aied-038 through aied-047 have non-empty local M4A audio", () => {
+  const backlog = getResearchPapers("en").filter((paper) => {
+    const id = Number.parseInt(paper.id.replace("aied-", ""), 10);
+    return id >= 38 && id <= 47;
+  });
+
+  assert.equal(backlog.length, 10);
+  for (const paper of backlog) {
+    assert.ok(paper.summaryAudio, `${paper.id} should declare summary audio`);
+    const audioBuffer = readFileSync(localPublicPath(paper.summaryAudio));
+    assert.equal(audioBuffer.toString("ascii", 4, 8), "ftyp", `${paper.summaryAudio} should be an M4A file`);
+    assert.ok(audioBuffer.byteLength > 100_000, `${paper.summaryAudio} should contain audible narration`);
   }
 });
 

@@ -2,6 +2,448 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-047",
+    slug: "news-anthropic-mcp-2026-07-28-institutional-connectors",
+    title: "Anthropic product news: MCP 2026-07-28 brings stateless, governed connectors to Claude",
+    authors: ["Anthropic", "Model Context Protocol"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "MCP 2026-07-28", "institutional AI governance"],
+    image: "/images/research/covers/aied-047-mcp-governed-institutional-connectors-2026.png",
+    imageAlt:
+      "Editorial cover of a diverse university technology team connecting approved learning systems through a controlled institutional gateway",
+    summaryImage: "/images/research/summary/aied-047-mcp-governed-institutional-connectors-summary.png",
+    summaryImageAlt:
+      "An educator, administrator and security lead review authorization scopes, task approval and audit evidence for a stateless AI connector.",
+    summaryAudio: "/audio/research/aied-047-mcp-governed-institutional-connectors-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word product news report",
+    shortSummary:
+      "Product news: Anthropic says the July 28, 2026 Model Context Protocol specification introduces a stateless core, versioned Apps and Tasks extensions, and stronger OAuth-based authorization; schools still need least-privilege access, human approval and auditable data governance.",
+    fullSummary: `This product-news report examines Anthropic's announcement of the Model Context Protocol specification dated July 28, 2026. MCP is an open protocol for connecting AI applications to external tools and data sources. Anthropic describes this as the fifth major specification release and says support will roll out across Claude. For education institutions, the practical question is not whether a connector makes an assistant more capable, but whether the connection can be governed safely and inspected when it touches student, staff or research data.
+
+The headline architectural change is a stateless core. Earlier integrations could require a server to retain protocol state for each client session. Under the new design, a server can handle each request without maintaining that conversational state. This may simplify deployment, scaling and recovery for institutional connector services. It does not make the connected data stateless, anonymous or risk-free. The learning platform, identity provider, model service and audit system may still retain records under their own policies.
+
+The release also moves richer capabilities into standardized, versioned extensions. MCP Apps can return interactive interfaces inside a host application, while Tasks can support work that continues asynchronously. Versioning can help administrators know which capabilities a connector expects, and extensions can evolve without forcing every implementation into the protocol's core. In an educational setting, however, an embedded interface or background task can still trigger consequential actions. A user should be able to see what will happen, review the relevant inputs and outputs, and approve or cancel an action before records, grades, messages or files are changed.
+
+Anthropic says the specification hardens authorization around OAuth 2.0 and OpenID Connect. That direction is useful because institutions already rely on identity, consent and access-control systems. A compliant sign-in flow is only a starting point. Schools and universities should use narrowly scoped permissions, separate read from write access, restrict connectors by role and course context, revoke access promptly, and record which human or service identity initiated each action. Tokens should not become a shortcut around existing retention, safeguarding or procurement controls.
+
+The announcement reports more than 400 million monthly software-development-kit downloads and says Claude's connector directory lists more than 950 MCP servers. These are vendor-reported adoption indicators, not independent evidence of security, reliability or educational value. A large ecosystem increases choice but also expands the review surface. Each connector needs an owner, a current data-flow map, a support path, version monitoring and a tested removal procedure.
+
+For Hong Kong institutions, a sensible pilot begins with low-risk, read-only material such as a curated public resource collection. Administrators can document the data classification, permitted users, authorization scopes, logging location and incident response before adding private learning records. They should test prompt injection from connected content, mistaken tool selection, over-broad retrieval, stale permissions and failures during long-running tasks. Any move to write into a learning management, assessment or student-information system should require explicit human confirmation and an audit trail that a reviewer can understand.
+
+This announcement is product and infrastructure news, not evidence that MCP improves learning outcomes. Its educational significance lies in the possibility of replacing one-off integrations with a clearer, interoperable contract. The benefit will depend on whether institutions pair that contract with least privilege, transparent approvals, meaningful logs and ongoing connector review. Stateless infrastructure may reduce server complexity; it does not remove institutional responsibility for the state and consequences of student data.`,
+    keyTakeaways: [
+      "Product news: MCP 2026-07-28 introduces a stateless core and versioned extensions for interactive Apps and asynchronous Tasks.",
+      "OAuth 2.0 and OpenID Connect strengthen the authorization framework, but institutions still need narrow scopes, role controls, revocation, transparent approvals and readable audit trails.",
+      "Vendor-reported ecosystem growth and easier integration do not demonstrate security or learning impact; institutions should begin with low-risk, read-only pilots and test connector failure modes.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the new MCP specification offers a more structured foundation for connecting AI assistants to institutional systems, while making governance, least-privilege access and human approval—not connector count—the decisive educational safeguards.",
+    sourceUrl: "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+    sourceUrls: [
+      {
+        label: "Anthropic announcement for the MCP 2026-07-28 specification",
+        url: "https://claude.com/blog/bringing-mcp-2026-07-28-to-claude",
+      },
+    ],
+    createdAt: "2026-07-29",
+  },
+  {
+    id: "aied-046",
+    slug: "chatgpt-student-learning-outcomes-meta-analysis-35-experiments",
+    title: "ChatGPT's impact on student learning outcomes: a meta-analysis of 35 experimental studies",
+    authors: ["Xinning Wu", "Pei Zhu", "Jinliang Zhang", "Mengwei Yin", "Yingxi Wang"],
+    venue: "Humanities and Social Sciences Communications",
+    year: 2026,
+    type: "review",
+    tags: ["ChatGPT", "meta-analysis", "learning outcomes"],
+    image: "/images/research/covers/aied-046-chatgpt-learning-outcomes-meta-analysis-2026.png",
+    imageAlt:
+      "Editorial cover of researchers comparing experimental learning outcomes across classrooms with a transparent forest-plot-inspired evidence display",
+    summaryImage: "/images/research/summary/aied-046-chatgpt-learning-outcomes-meta-analysis-summary.png",
+    summaryImageAlt:
+      "A research team reviews 35 experiments, separating cognitive and non-cognitive outcomes while highlighting substantial between-study variation.",
+    summaryAudio: "/audio/research/aied-046-chatgpt-learning-outcomes-meta-analysis-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A 2026 meta-analysis of 35 experimental studies and 4,193 participants reported a moderate average positive effect of ChatGPT on learning outcomes, but very high heterogeneity means the pooled result should guide conditional design questions rather than a universal effectiveness claim.",
+    fullSummary: `Wu and colleagues synthesize experimental evidence on ChatGPT and student learning outcomes. Their 2026 open-access meta-analysis includes 35 studies published from 2022 through 2024, 4,193 participants, and 134 effect sizes. The paper asks not only whether ChatGPT-supported instruction is associated with better outcomes, but also whether subject, duration, education level, instructional mode, and knowledge type help explain why results differ.
+
+The authors searched Chinese and English databases for experimental or quasi-experimental studies that compared a ChatGPT-supported condition with another instructional condition and reported sufficient quantitative data. Twenty-eight included studies were written in English and seven in Chinese. Two researchers independently coded study features, with a reported kappa of 0.851. A seven-item quality checklist covered design, active controls, pre-post measures, instrument reliability, baseline equivalence, and clarity of methods and interventions; the average quality score was 6.11 out of seven.
+
+Using a random-effects model and Hedges' g, the pooled effect on student learning outcomes was 0.670, with a 95 percent confidence interval from 0.495 to 0.844. The authors interpret this as a moderate positive effect. Only three of the 35 studies had negative effect sizes. When outcomes were divided into categories, the pooled estimate was 0.872 for cognitive outcomes and 0.539 for non-cognitive outcomes.
+
+The headline average conceals substantial variation. The overall Q statistic was 409.067 and I-squared was 91.444 percent, indicating that most observed variation reflected real differences among studies rather than sampling error alone. A pooled number under this level of heterogeneity should not be read as the result any classroom can expect. It is better treated as a prompt to examine instructional conditions, tasks, measures, and implementation.
+
+Moderator analyses found significant differences by subject, experimental duration, and instructional mode. Education level and the distinction between declarative and procedural knowledge were not significant moderators in the authors' coding. These results suggest that how ChatGPT is embedded in teaching may matter more than simply providing access. However, moderator categories combine diverse interventions, and observational comparisons between study subgroups do not have the causal strength of random assignment within one experiment.
+
+The authors used a funnel plot, fail-safe analysis, and Begg's test and reported no significant publication bias. That is reassuring but not definitive, especially in a new field with rapidly changing products, many small studies, and heterogeneous outcomes. The search window ended in 2024, so the synthesis describes earlier versions of ChatGPT and early adoption practices rather than the full 2026 product environment.
+
+Outcome classification also deserves caution. The cognitive category combines achievement, problem solving, creativity, critical thinking, and social skills, while the non-cognitive category combines engagement, interest, motivation, and self-efficacy. These constructs are not interchangeable. A strong average for a broad category does not establish durable knowledge, independent performance, or higher-order reasoning in every subject.
+
+For Hong Kong schools and universities, the review supports moving beyond the question, “Does ChatGPT work?” A stronger evaluation specifies the learning goal, comparison practice, teacher role, duration, allowed assistance, and independent post-test. It should record fidelity, examine subgroups, and test whether gains persist when ChatGPT is removed. The meta-analysis is encouraging evidence that well-designed uses can help, but its very high heterogeneity makes context and pedagogy the central finding.`,
+    keyTakeaways: [
+      "The review synthesized 35 experimental or quasi-experimental studies, 4,193 participants and 134 effect sizes from English- and Chinese-language literature.",
+      "The random-effects pooled estimate was Hedges' g = 0.670, with larger pooled effects for cognitive than non-cognitive outcomes.",
+      "I-squared exceeded 91 percent, so the average should not be generalized without examining subject, duration, instructional design, measures and independent transfer.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the paper provides a useful quantitative signal that ChatGPT-supported designs can improve outcomes, while making a context-specific evaluation framework essential because effects vary sharply across studies and early product generations.",
+    sourceUrl: "https://doi.org/10.1038/s41599-026-07019-z",
+    sourceUrls: [
+      {
+        label: "Open-access journal article and DOI",
+        url: "https://doi.org/10.1038/s41599-026-07019-z",
+      },
+      {
+        label: "Nature article page",
+        url: "https://www.nature.com/articles/s41599-026-07019-z",
+      },
+    ],
+    createdAt: "2026-07-29",
+  },
+  {
+    id: "aied-045",
+    slug: "news-gemini-synthid-media-verification-education",
+    title: "Gemini product news: SynthID verification gives schools a media-provenance check, not a truth detector",
+    authors: ["Google for Education", "Google DeepMind"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "Gemini media verification", "AI literacy"],
+    image: "/images/research/covers/aied-045-gemini-media-verification-education-2026.png",
+    imageAlt:
+      "Editorial cover of students and a media-literacy teacher inspecting the provenance of an image and short video in a bright school newsroom",
+    summaryImage: "/images/research/summary/aied-045-gemini-media-verification-education-summary.png",
+    summaryImageAlt:
+      "A classroom verification workflow separates watermark detection, source context, factual checking and a final human judgment.",
+    summaryAudio: "/audio/research/aied-045-gemini-media-verification-education-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word product news report",
+    shortSummary:
+      "Product news: Google Workspace for Education directs learners and educators to upload media to Gemini and ask whether SynthID identifies Google AI generation or editing; the signal can support provenance lessons but cannot establish accuracy, intent or human authorship when absent.",
+    fullSummary: `This product-news report examines a concrete media-literacy tool in Google's education ecosystem. Google announced that educators and learners can upload an image or video to the Gemini app and ask whether it was created or edited using Google AI. Gemini checks for SynthID, Google's invisible watermark, and returns context about whether a supported signal is detected. The feature sits alongside new security and administrative controls for Google Workspace for Education.
+
+The product addresses a real classroom problem: visual and audiovisual media can now be generated or edited with little visible evidence of origin. Asking students to judge authenticity from surface appearance alone is increasingly unreliable. A machine-readable provenance signal gives a lesson a better starting point because students can inspect evidence attached to or embedded in the media rather than relying only on intuition.
+
+SynthID is designed as an imperceptible watermark embedded by supported Google generative systems. Google's January education announcement described verification for images and videos in Gemini and said audio and non-Google model support were planned. A broader May update expanded verification across Gemini, Search, Chrome and other Google surfaces and added work on C2PA Content Credentials. These systems are complementary: a watermark can survive some transformations, while signed metadata can carry richer information about origin and editing history.
+
+The limits are as important as the positive result. Detecting SynthID indicates that supported Google AI was involved; it does not prove that the depicted event is false, that the use was deceptive, or that every part of a composite was generated. Conversely, no detected signal does not prove that a human made the media. The file may come from another model, predate watermarking, have a damaged signal, or have undergone transformations that reduce detection.
+
+For assessment, schools should therefore avoid turning one verifier result into an misconduct verdict. A student may legitimately use an approved generative tool, and a misleading image may be made without any generative AI. Provenance is one evidentiary layer. A fair review also examines assignment rules, process records, cited sources, editing history, the student's explanation, and whether the content itself is accurate.
+
+The strongest educational use is a comparison exercise. Learners can inspect a verified Google-generated image, an ordinary photograph with camera metadata, an edited composite, and a file with no supported signal. They can record what the tool actually says, distinguish origin from truth, cross-check claims against primary sources, and explain the residual uncertainty. This teaches a transferable verification habit rather than a single detector shortcut.
+
+Privacy and data handling also matter because verification requires an upload. Institutions should avoid submitting sensitive student media, faces, confidential documents, or safeguarding evidence without an approved process. Teachers need a clear rule for which accounts may use the feature, what the service retains, and what alternative process is available when uploading is inappropriate.
+
+For Hong Kong schools and universities, Gemini verification can become a useful component of digital and AI literacy if it is framed carefully. Build a protocol that separates four questions: Was a supported provenance signal found? What does the signal establish? Is the content factually reliable in context? What human judgment or further evidence is required? The feature makes provenance more inspectable, but it does not automate truth, authorship, or disciplinary decisions.`,
+    keyTakeaways: [
+      "Product news: Gemini can inspect uploaded images and videos for SynthID signals associated with media created or edited by supported Google AI systems.",
+      "A detected watermark is evidence about origin, not proof that content is false or deceptive; a non-detection is not proof of human authorship.",
+      "Schools should combine provenance checks with source verification, process evidence, privacy rules and human review, especially before any assessment or disciplinary decision.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the feature offers a teachable, evidence-based media-literacy workflow, provided institutions explicitly separate provenance from truth and never treat a vendor detector as a complete authorship or misconduct judgment.",
+    sourceUrl: "https://blog.google/products-and-platforms/products/education/security-ai-features/",
+    sourceUrls: [
+      {
+        label: "Google Workspace for Education media-verification announcement",
+        url: "https://blog.google/products-and-platforms/products/education/security-ai-features/",
+      },
+      {
+        label: "Google update on SynthID and Content Credentials verification",
+        url: "https://blog.google/innovation-and-ai/products/identifying-ai-generated-media-online/",
+      },
+    ],
+    createdAt: "2026-07-28",
+  },
+  {
+    id: "aied-044",
+    slug: "genai-collaborative-project-language-learning-achievement-autonomy",
+    title: "GenAI-supported collaborative project-based language learning: effects on EFL undergraduates' achievement and autonomy",
+    authors: ["Safaa M. Abdelhalim", "Maram Othman Almaneea"],
+    venue: "Asian-Pacific Journal of Second and Foreign Language Education",
+    year: 2026,
+    type: "journal",
+    tags: ["project-based language learning", "EFL achievement", "learner autonomy"],
+    image: "/images/research/covers/aied-044-genai-collaborative-efl-projects-2026.png",
+    imageAlt:
+      "Editorial cover of a diverse university EFL team planning and revising a collaborative multimedia project with visible teacher guidance",
+    summaryImage: "/images/research/summary/aied-044-genai-collaborative-efl-projects-summary.png",
+    summaryImageAlt:
+      "Students divide project roles, compare language revisions and reflect on autonomy while keeping AI suggestions subject to group judgment.",
+    summaryAudio: "/audio/research/aied-044-genai-collaborative-efl-projects-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A 12-week quasi-experiment with 53 Saudi female computer-science undergraduates linked GenAI-supported collaborative language projects to larger gains in reading, vocabulary, writing and learner autonomy, with no differential grammar effect and important limits from two intact classes.",
+    fullSummary: `Abdelhalim and Almaneea investigate whether generative AI adds educational value when it is embedded in collaborative project-based language learning rather than offered as an individual chatbot. Their 2026 open-access study followed 53 first-year female computer-science students in a required English course at a Saudi university for 12 weeks. The design combined quantitative achievement and autonomy measures with qualitative reflections from the experimental group.
+
+Two intact classes were selected by convenience. One class of 28 students completed sustained collaborative projects supported by generative AI; the other class of 25 received the same syllabus and contact time through conventional individual and pair activities with instructor feedback. Because students were not individually randomized and the experimental condition changed both pedagogy and technology, the study estimates the effect of the combined project-based, collaborative, GenAI-supported design rather than the isolated effect of AI.
+
+English achievement was measured with parallel pre- and post-tests covering reading, vocabulary, grammar, and writing. The researchers reported acceptable reliability and used calibrated independent raters for writing. Learner autonomy was measured through a 16-item questionnaire covering awareness, motivation, intentionality, self-regulation, and critical ability. Its internal consistency was high, although construct validation was exploratory because the sample was small.
+
+Linear mixed-effects models found significant time-by-group interactions for reading, vocabulary, writing, and total achievement. The total-score interaction estimate was 6.387, with p below .001. Grammar improved in both conditions, but the interaction was not significant, suggesting general course progression rather than a distinctive intervention effect. The experimental class's post-test gains were more consistent, while the control class showed little overall change.
+
+All five autonomy dimensions and the total autonomy score also showed significant time-by-group interactions favoring the experimental condition. The largest reported patterns were in motivation, self-regulation, and critical ability. Student reflections described shared planning, role distribution, peer assistance with prompting, iterative revision, confidence, and greater awareness of learning strategies. They also identified technical problems, uncertainty about tool choice, and concern about over-reliance.
+
+The intervention appears stronger than unsupervised tool access. Students worked in teams, received an instructor-led orientation, negotiated project decisions, and had to evaluate and revise generated material. Those features may explain why autonomy increased instead of being displaced. They also mean a school cannot reproduce the reported outcome by merely enabling a chatbot account.
+
+Several limitations narrow the claim. The sample came from one institution, one course, two intact classes, and one gender group. Baseline scores were broadly comparable but not created by individual random assignment. The control group did not receive an equivalent collaborative project without GenAI, so technology and pedagogy remain confounded. The autonomy instrument was locally developed, and the study did not report a delayed AI-free test that would establish durable transfer.
+
+For Hong Kong language programmes, the practical lesson is to pilot a bounded collaborative project, not generic AI access. Define roles, require a shared prompt and revision log, make learners justify which suggestions they accept, and include teacher checkpoints. Compare the intervention with a similarly collaborative non-AI project, assess individual language performance after the project, and revisit outcomes later without AI. The study offers promising evidence for a carefully scaffolded package while leaving the causal contribution of GenAI itself unresolved.`,
+    keyTakeaways: [
+      "The 12-week mixed-methods study compared two intact classes totaling 53 first-year female EFL learners, with 28 in a GenAI-supported collaborative project condition.",
+      "Reading, vocabulary, writing, total achievement and all measured autonomy dimensions improved more in the experimental class, while the grammar interaction was not significant.",
+      "Because project pedagogy, collaboration and GenAI changed together in a small convenience sample, the findings do not isolate the effect of the technology or establish delayed independent transfer.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the study supports testing GenAI inside structured, teacher-guided collaborative projects with visible revision and reflection, while requiring a stronger comparison design and individual AI-free assessments before attributing gains to the tool.",
+    sourceUrl: "https://doi.org/10.1186/s40862-026-00430-8",
+    sourceUrls: [
+      {
+        label: "Open-access journal article and DOI",
+        url: "https://doi.org/10.1186/s40862-026-00430-8",
+      },
+      {
+        label: "Springer Nature article page",
+        url: "https://link.springer.com/article/10.1186/s40862-026-00430-8",
+      },
+    ],
+    createdAt: "2026-07-28",
+  },
+  {
+    id: "aied-043",
+    slug: "news-anthropic-role-based-claude-certifications",
+    title: "Anthropic product news: Four role-based Claude certifications move AI fluency toward verified assessment",
+    authors: ["Anthropic"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "Claude certifications", "AI workforce assessment"],
+    image: "/images/research/covers/aied-043-claude-role-certifications-2026.png",
+    imageAlt:
+      "Editorial cover of a diverse professional learning cohort completing supervised practical AI tasks while assessors review role-specific evidence",
+    summaryImage: "/images/research/summary/aied-043-claude-role-certifications-summary.png",
+    summaryImageAlt:
+      "Four role pathways connect practical Claude use, development, architecture and governance to supervised evidence and review.",
+    summaryAudio: "/audio/research/aied-043-claude-role-certifications-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word product news report",
+    shortSummary:
+      "Product news: Anthropic expanded its partner certification programme to four role-specific Claude credentials delivered through supervised, identity-verified exams, a stronger signal than course attendance but still a vendor-defined measure of applied capability.",
+    fullSummary: `This product-news report examines Anthropic's July 23 expansion of the Claude Certification Program. The company introduced three new credentials alongside an existing architecture credential, creating four role-based paths for people who use, build with, or govern Claude in enterprise work. Anthropic presents the programme as a move from training participation toward supervised evidence of job-relevant capability.
+
+The four credentials span different levels of work. Claude Certified Associate: Foundations targets practical everyday use for consultants, project leads, and mixed business or technical roles. Claude Certified Developer: Foundations covers building applications with the Claude API, tool use, and agent development. Claude Certified Architect: Foundations addresses the design and construction of Claude-based agent systems. Claude Certified Architect: Professional is the advanced pathway for integration architecture, governance, and evaluation at enterprise scale.
+
+Anthropic says every certification exam is proctored and identity verified. Pearson Professional Assessments delivers the exams, and successful candidates receive a digital badge through Credly by Pearson. Preparation courses are available in the Anthropic Partner Academy, but the credential is awarded for passing the exam rather than simply completing a course. That distinction is educationally important because participation, confidence, and demonstrated performance are different constructs.
+
+The launch is already operating at substantial scale. Anthropic reported that more than 36,000 consultants across more than 1,300 organizations had received certification since March, while more than 400,000 people had completed Claude training through the free partner platform in 2026. Large consulting firms announced targets ranging from thousands to tens of thousands of certified staff. These are company-reported participation and commitment figures, not independent evidence that certification improves job performance.
+
+Role alignment is a useful design choice. A general AI-literacy badge can hide whether a learner can frame a business task, build a safe tool-using application, design an architecture, or evaluate governance controls. Separate credentials make the intended capability more legible to employers and candidates. The progression from foundation to professional levels also suggests a pathway rather than a one-off introductory workshop.
+
+Important validity questions remain. The official announcement explains the roles, proctoring, identity verification, and delivery partners, but it does not publish full blueprints, item-level psychometrics, pass rates, accessibility audits, predictive-validity studies, or independent outcome evaluations. A supervised vendor exam can reduce impersonation and casual badge collection, yet it may still privilege familiarity with one product ecosystem and may not measure transfer to unfamiliar models or institutional constraints.
+
+There is also a governance tension because certification counts contribute to partner-network standing and customer selection. That creates strong incentives for firms to certify large cohorts. Institutions should therefore distinguish the number of badges from the quality, recency, and observed application of skills. Hiring or procurement should combine a credential with work samples, scenario-based interviews, references, and evidence of responsible deployment.
+
+For Hong Kong universities and professional-learning providers, the programme is a useful benchmark for assessment design rather than a curriculum to copy wholesale. Define roles first, map observable tasks and governance decisions to each role, require practical evidence, verify identity, publish accommodations, and review items as products change. Include model-agnostic competencies such as source checking, risk escalation, privacy, evaluation and transfer. Anthropic's release makes AI capability more assessable, but a credible credential must remain transparent, current and broader than product familiarity.`,
+    keyTakeaways: [
+      "Product news: Anthropic now presents four Claude credentials covering practical use, development, foundation-level architecture and professional architecture with governance and evaluation.",
+      "Exams are delivered through Pearson Professional Assessments with proctoring and identity verification, separating certification from course attendance.",
+      "The announcement reports large participation figures but does not itself establish predictive validity, accessibility, cross-model transfer or improved workplace outcomes.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the programme is a useful case of role-specific, supervised AI-skills assessment, while reminding universities and employers to demand transparent blueprints, practical evidence, accessibility and model-agnostic transfer before treating a vendor badge as proof of competence.",
+    sourceUrl: "https://claude.com/blog/four-role-based-claude-certifications",
+    sourceUrls: [
+      {
+        label: "Anthropic announcement of four role-based Claude certifications",
+        url: "https://claude.com/blog/four-role-based-claude-certifications",
+      },
+      {
+        label: "Anthropic Partner Network overview",
+        url: "https://claude.com/partners",
+      },
+    ],
+    createdAt: "2026-07-27",
+  },
+  {
+    id: "aied-042",
+    slug: "human-centered-genai-feedback-scientific-argumentation",
+    title: "Human-centered GenAI feedback design in higher education: a multisite experiment on direct, reflective, and hybrid approaches to scientific argumentation",
+    authors: ["Huseyin Ates"],
+    venue: "International Journal of Educational Technology in Higher Education",
+    year: 2026,
+    type: "journal",
+    tags: ["GenAI feedback", "scientific argumentation", "AI-free transfer"],
+    image: "/images/research/covers/aied-042-human-centered-genai-feedback-2026.png",
+    imageAlt:
+      "Editorial cover of first-year science students comparing peer, direct AI, reflective and hybrid feedback while revising evidence-based arguments",
+    summaryImage: "/images/research/summary/aied-042-human-centered-genai-feedback-summary.png",
+    summaryImageAlt:
+      "A four-path feedback study highlights self-evaluation, peer critique, AI feedback uptake and a later supervised AI-free transfer task.",
+    summaryAudio: "/audio/research/aied-042-human-centered-genai-feedback-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A cluster-randomized field experiment with 1,176 first-year science students found that direct GenAI feedback improved immediate arguments, while reflective and hybrid designs produced stronger uptake, self-regulation and delayed AI-free transfer.",
+    fullSummary: `Ates tests a question that is more useful than whether generative AI can produce feedback: which feedback design helps students revise now and perform later without AI? The 2026 open-access study used a multisite, cluster-randomized, longitudinal field experiment in introductory biology, chemistry, and physics courses. It compared peer feedback, direct GenAI feedback, reflective GenAI feedback, and a hybrid sequence of self-evaluation, peer feedback, and GenAI critique.
+
+The analytic sample included 1,176 first-year undergraduates in 48 course sections across four universities. Sections, rather than individual students, were assigned to conditions. The four groups were broadly comparable at baseline on demographics, prior knowledge, argumentation, achievement, feedback literacy, and previous GenAI experience. Attrition did not differ significantly by condition, and implementation audits indicated that 95.8 percent of applicable instructional steps were delivered as planned.
+
+Students completed three cycles of drafting and revision around scientific arguments. Quality was scored on claims, relevance and sufficiency of evidence, coherence of reasoning, and treatment of limitations or alternative explanations. The study also measured conceptual learning, feedback uptake, self-regulated learning during revision, and a delayed transfer task completed individually under supervision without the GenAI tool or internet-enabled devices.
+
+Direct GenAI feedback outperformed peer feedback on immediate argument-quality gain. Yet both reflective and hybrid feedback produced stronger immediate gains than direct AI feedback, and the hybrid condition had the highest adjusted mean. The hybrid-versus-reflective difference was not statistically significant. Revision-depth analyses followed the same pattern, suggesting that improvements were not limited to surface editing.
+
+The differences became more educationally consequential beyond the revised product. Hybrid feedback significantly outperformed direct GenAI feedback on conceptual learning. The reflective contrast was positive but did not remain statistically significant after adjustment. On delayed AI-free transfer, both reflective and hybrid conditions significantly outperformed direct GenAI feedback, with no significant difference between them.
+
+Process evidence helps explain the pattern. Reflective and hybrid designs produced higher feedback uptake and self-regulated learning than direct GenAI feedback. Multilevel mediation models found significant indirect pathways through uptake, self-regulation, and their sequence for argument gain and delayed transfer. The results support the interpretation that students learned more when the design required them to judge and work with feedback rather than simply receive a polished critique.
+
+The study is unusually strong for educational GenAI research because it spans institutions, randomizes clusters, checks implementation, uses manually scored disciplinary work, and includes a delayed AI-free outcome. It also preserves important boundaries: submitted work had to remain the student's own, students received guidance on ethical use and data-entry limits, and monitoring was restricted to the study platform.
+
+Limits remain. Cluster assignment leaves only 48 randomized units, the author conducted all major study functions, and the intervention focused on first-year science argumentation. The paper cannot establish that the same sequence will transfer to other disciplines, age groups, commercial tools, or longer periods. Self-regulated learning was partly measured through self-report, even though revision traces provided complementary evidence.
+
+For Hong Kong higher education, the strongest design implication is sequencing. Ask students to assess their draft against criteria before seeing AI critique, incorporate peer evidence, require a rationale for accepted and rejected suggestions, and test later on a new task without AI. The study suggests that feedback becomes learning when students retain evaluative judgment and ownership, not when the system merely produces more comments.`,
+    keyTakeaways: [
+      "The cluster-randomized study followed 1,176 first-year students in 48 sections across four universities and three science disciplines.",
+      "Direct GenAI feedback improved immediate argument quality over peer feedback, but reflective and hybrid designs produced stronger uptake and self-regulated learning.",
+      "Reflective and hybrid feedback outperformed direct GenAI feedback on delayed supervised AI-free transfer, making learner judgment and revision process central to the result.",
+    ],
+    whyItMatters:
+      "For AIEDHK, this is strong evidence for designing AI feedback around self-evaluation, peer critique, traceable uptake and later AI-free transfer rather than equating faster automated comments with durable learning.",
+    sourceUrl: "https://doi.org/10.1186/s41239-026-00614-9",
+    sourceUrls: [
+      {
+        label: "Open-access journal article and DOI",
+        url: "https://doi.org/10.1186/s41239-026-00614-9",
+      },
+      {
+        label: "Springer Nature article page",
+        url: "https://link.springer.com/article/10.1186/s41239-026-00614-9",
+      },
+    ],
+    createdAt: "2026-07-27",
+  },
+  {
+    id: "aied-039",
+    slug: "news-chatgpt-work-claude-cowork-gemini-cross-device-learning",
+    title: "News report: ChatGPT Work, Claude Cowork and Gemini extend guided work across devices and classrooms",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news report", "ChatGPT Work", "Claude Cowork", "Gemini for Education"],
+    image: "/images/research/covers/aied-039-cross-device-ai-workspaces-learning-2026.png",
+    imageAlt:
+      "Editorial cover of a learner and educator carrying a supervised AI project from a campus workstation to a mobile device and a teacher-led classroom activity",
+    summaryImage: "/images/research/summary/aied-039-cross-device-ai-workspaces-learning-summary.png",
+    summaryImageAlt:
+      "A continuous, reviewable project thread connects desktop work, mobile approval and a curriculum-grounded classroom study activity.",
+    summaryAudio: "/audio/research/aied-039-cross-device-ai-workspaces-learning-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news report",
+    shortSummary:
+      "News report: ChatGPT Work now carries cloud tasks and Projects across devices, Claude Cowork is moving to web and mobile with background work and approval prompts, and Gemini is connecting adaptive study notebooks to teacher-led Classroom activities.",
+    fullSummary: `This product-news report follows a shift that is easy to overlook when attention stays on model benchmarks: AI work is becoming portable, persistent, and connected to the places where people learn. OpenAI's current ChatGPT desktop update lets cloud Work conversations and Project context move across web, mobile, and desktop. Anthropic is extending Claude Cowork from the desktop to web and mobile while delegated work continues in the background and consequential decisions return to the user. Google is linking adaptive study notebooks in Gemini with NotebookLM and teacher-led activities in Google Classroom. Together, these products make continuity across devices and institutional contexts a central design question for AI in education.
+
+OpenAI's July 16 release notes describe a clearer desktop separation between Chat for conversational help and Work for longer, end-to-end tasks. Chat and Work conversations now share a unified recent-items view, existing ChatGPT Projects appear in the desktop app, and users can begin a cloud Work conversation on one surface and continue it on web, mobile, or desktop. Local Work conversations remain on the computer. The distinction is important for schools and universities: a project can preserve approved files, prior instructions, and work history across settings, but local and cloud tasks do not have the same data boundary.
+
+For teaching and academic work, that continuity could support a research project that begins in a seminar, continues during independent study, and returns for review without repeatedly rebuilding context. Faculty and staff could also carry a multi-step analysis or drafting workflow between office and campus devices. Yet convenience can obscure what the system retained, which files shaped the result, and whether a mobile review was substantial. Institutions should label cloud and local work clearly, define which project materials may sync, and require process evidence when the task is assessed.
+
+Anthropic's July 7 Claude Cowork announcement presents a similar transition. Cowork can operate across connected files, calendars, email, messaging, the web, and other tools until a delegated task is complete. The new web and mobile rollout, beginning in beta with Max users and expanding to more plans, allows a person to start work at a desk, monitor or redirect it from a phone, and retrieve the result elsewhere. Background and scheduled tasks can continue when the original device is offline. When the system reaches a decision reserved for the user, it sends the question to the phone; Anthropic says the output remains subject to human review and approval.
+
+This design could help a teacher monitor a long-running resource search or let a project team review a draft between meetings. It also makes oversight more demanding. A notification is not proof that a person understood the preceding steps, and approval on a small screen can encourage superficial checking. The desktop retains the fuller Cowork experience, including local files and browser use, so capability and risk differ by surface. Educational pilots should identify which tools and records are available on each device, preserve an auditable plan and action history, and reserve enough time and screen space for meaningful review.
+
+Google's June education release provides the most explicitly pedagogical version of portable continuity. Study notebooks in the Gemini app begin with a learner's goal or uploaded course materials and a diagnostic quiz. Gemini then creates bite-sized lessons and updates the plan as quiz results and new materials arrive. The notebooks can connect with NotebookLM for source-grounded questions, flashcards, and other study artifacts. Google also announced no-cost ACT and GRE practice tests, with performance broken down by topic to guide subsequent study.
+
+The institutional bridge is Google Classroom. Google says students of all ages will be able to use Gemini in Classroom for study guides, quizzes, and Guided Learning grounded in course materials. Teachers will be able to assign a study notebook from Classroom and receive insights about where an individual learner or class may need support. The release is staged: study notebooks launched first for adult personal accounts, were scheduled to reach school-issued accounts later, and were desktop-only at announcement, with mobile support planned for later in the summer. Those limits matter when institutions evaluate access and equity.
+
+None of these announcements establishes that cross-device persistence improves learning. Continuity may reduce setup friction, but it may also weaken stopping points where learners normally recall, reorganize, and explain what they know. Background agents can complete work while the learner is absent; adaptive notebooks can personalize activity while concealing why the pathway changed. Product evaluation should therefore measure independent understanding, not only completion speed, engagement, or the smoothness of handoff.
+
+For Hong Kong schools and universities, the practical response is to design continuity with boundaries. A pilot should map what context follows the user, distinguish local from cloud storage, restrict connectors, show students when an agent continues without them, and require review on an appropriate device before anything consequential is submitted. Teachers should be able to inspect sources, intermediate actions, diagnostic evidence, and changes to an adaptive plan. Portability can make support more available, but educational value depends on whether learners remain able to pause, question, reconstruct, and take responsibility for the work.`,
+    keyTakeaways: [
+      "News: ChatGPT Work now synchronizes cloud work across web, mobile and desktop and brings Projects into the desktop app, while local conversations remain device-bound.",
+      "Claude Cowork is expanding to web and mobile so background and scheduled work can continue across devices, but meaningful human approval still requires visible process evidence and adequate review conditions.",
+      "Gemini study notebooks adapt lessons and quizzes to learner evidence and connect to teacher-led Classroom activities, with staged availability that schools should evaluate for access, privacy and learning impact.",
+    ],
+    whyItMatters:
+      "Industry news report: as AI projects, agents and adaptive study pathways persist across devices, AIEDHK should evaluate context boundaries, connector permissions, device equity, review quality and independent learning rather than treating seamless continuity as educational value by default.",
+    sourceUrl: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    sourceUrls: [
+      {
+        label: "OpenAI ChatGPT desktop and Work release notes",
+        url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      },
+      {
+        label: "Anthropic Claude Cowork web and mobile announcement",
+        url: "https://claude.com/blog/cowork-web-mobile",
+      },
+      {
+        label: "Google Gemini study notebooks and Classroom announcement",
+        url: "https://blog.google/products-and-platforms/products/education/iste-students-2026/",
+      },
+      {
+        label: "Google teacher-led Gemini and Classroom product details",
+        url: "https://blog.google/products-and-platforms/products/education/iste-2026-educator-updates/",
+      },
+    ],
+    createdAt: "2026-07-26",
+  },
+  {
+    id: "aied-038",
+    slug: "ai-tools-english-learning-motivation-network-meta-analysis",
+    title: "Impact of artificial intelligence tools on learning motivation in English instruction: A network meta-analysis",
+    authors: ["Liwei Hsu", "Yu-Chun Wang"],
+    venue: "Asian-Pacific Journal of Second and Foreign Language Education",
+    year: 2026,
+    type: "review",
+    tags: ["network meta-analysis", "English learning motivation", "AI-assisted language learning"],
+    image: "/images/research/covers/aied-038-ai-tools-english-learning-motivation-2026.png",
+    imageAlt:
+      "Editorial cover of English-language learners comparing conversational practice, writing feedback and adaptive language-app pathways in a university seminar",
+    summaryImage: "/images/research/summary/aied-038-ai-tools-english-learning-motivation-summary.png",
+    summaryImageAlt:
+      "Learners and a teacher examine three evidence pathways for chatbots, writing assistants and language-learning applications while keeping the indirect comparison visible.",
+    summaryAudio: "/audio/research/aied-038-ai-tools-english-learning-motivation-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A 2026 network meta-analysis of 16 studies and 1,923 learners found medium-to-large motivational effects for AI-supported English instruction, but the ranking of language apps, chatbots and writing assistants rests entirely on indirect comparisons.",
+    fullSummary: `Hsu and Wang synthesize a fast-growing but fragmented literature on whether artificial-intelligence tools strengthen motivation in English instruction. Their 2026 open-access network meta-analysis compares generative-AI chatbots, AI writing assistants, and AI language-learning applications with traditional instruction. The paper is timely for AIEDHK because it reports encouraging effects while also showing why product rankings must be interpreted cautiously: every AI category was compared directly with conventional teaching, but none of the included studies directly compared one AI category with another.
+
+The authors searched Web of Science Core Collection, Scopus, ERIC, PsycINFO, and Google Scholar for peer-reviewed English-language studies published from January 2015 through December 2025. The initial search returned 2,156 records. After duplicate removal, title and abstract screening, and full-text eligibility checks, 16 studies met the criteria. Together they included 1,923 K-12 and university learners, with individual samples ranging from 50 to 412 and a median of 85. Fourteen studies were conducted in university settings and two in K-12 education.
+
+The evidence base was geographically concentrated. Nine studies came from China, three from Iran, and one each from the United Arab Emirates, Algeria, Nigeria, and the United States. Eleven studies examined chatbot or conversational systems, two examined AI language-learning applications, and three examined AI writing assistants. Interventions lasted from six weeks to one semester, with a median duration of eight weeks. Fourteen studies used traditional instruction as the comparison condition.
+
+The review process used independent screening by two reviewers, with Cohen's kappa values of 0.87 for titles and abstracts and 0.92 for full-text eligibility. A quarter of extracted data was double-coded, producing an intraclass correlation of 0.94. The authors assessed randomized trials with the Cochrane RoB 2 tool and quasi-experiments with ROBINS-I. Because blinding is difficult in educational technology studies, many studies had moderate risk in performance-related domains.
+
+Using a frequentist random-effects network model, the authors calculated standardized mean differences as Hedges' g. All three AI categories showed statistically significant positive effects on learning motivation compared with traditional instruction. AI language-learning applications produced the largest pooled estimate, g equals 0.907 with a 95 percent confidence interval from 0.752 to 1.063. Generative-AI chatbots followed at g equals 0.824, with a confidence interval from 0.690 to 0.959. AI writing assistants produced g equals 0.692, with a wider interval from 0.417 to 0.967.
+
+The ranking analysis placed language-learning applications first, chatbots second, and writing assistants third. Yet that order is preliminary. The evidence network was star-shaped: all direct comparisons connected an AI intervention to traditional instruction, so every AI-to-AI comparison was inferred through the common control. Confidence intervals for the pairwise comparisons among AI categories overlapped, and none of those differences was statistically significant. The two language-app studies and three writing-assistant studies also provide much thinner evidence than the eleven chatbot studies.
+
+Several robustness checks were reassuring within those boundaries. Overall heterogeneity was moderate, with I-squared of 42.3 percent. Node-splitting tests did not identify significant inconsistency, and Egger's regression did not indicate significant funnel-plot asymmetry. Removing three studies with elevated risk of bias changed each category's effect by less than 0.06. These checks support the overall finding that AI-supported approaches can improve motivation relative to the included comparison conditions, but they do not turn indirect category rankings into head-to-head evidence.
+
+The study also identifies mechanisms worth testing rather than assuming. Language-learning applications may support competence and autonomy through adaptive difficulty, progress markers, and self-paced practice. Chatbots may reduce anxiety by offering a low-stakes conversational partner. Writing assistants can provide task-specific feedback but may create a more transactional experience. The authors organize these possibilities into an AI-Scaffolded English-Medium Instruction framework: foundational language practice, task-specific writing support, and interactive conversational engagement, with teacher involvement across the levels.
+
+Important limits remain. Measures of motivation varied across studies. The median intervention lasted only eight weeks, so novelty and longer-term motivational decline are uncertain. Most studies were recent, and initial enthusiasm could inflate effects. The geographic concentration, particularly the nine Chinese studies, limits generalization to other educational systems. Motivation is also not the same as language proficiency, knowledge retention, or independent performance after support is removed.
+
+For Hong Kong schools and universities, the useful conclusion is not to select a product category from the ranking table. A stronger pilot would begin with a specific motivational barrier, choose a tool whose interaction design addresses that barrier, compare it with a credible existing practice, and measure both motivation and independent learning over time. Teacher scaffolding, proficiency differences, equitable access, and intentional fading of assistance should be part of the intervention. The paper supports thoughtful AI-assisted English learning, but it also makes the next research need clear: direct, multi-arm comparisons that test which tools help which learners, under which teaching conditions, and whether the gains persist.`,
+    keyTakeaways: [
+      "The open-access network meta-analysis synthesized 16 studies with 1,923 learners, including 11 chatbot studies, two language-app studies and three writing-assistant studies.",
+      "Each AI category outperformed traditional instruction on learning motivation, with pooled Hedges' g estimates of 0.907 for language apps, 0.824 for chatbots and 0.692 for writing assistants.",
+      "The category ranking is preliminary because all AI-to-AI comparisons were indirect, the smaller categories had few studies, interventions were short and the evidence was geographically concentrated.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the review supports targeted AI-assisted English-learning pilots while warning against product-category league tables without direct comparisons, durable learning measures, teacher scaffolding and evidence that motivation survives after support is faded.",
+    sourceUrl: "https://doi.org/10.1186/s40862-026-00421-9",
+    sourceUrls: [
+      {
+        label: "Open-access journal article and DOI",
+        url: "https://doi.org/10.1186/s40862-026-00421-9",
+      },
+      {
+        label: "Springer Nature article page",
+        url: "https://link.springer.com/article/10.1186/s40862-026-00421-9",
+      },
+    ],
+    createdAt: "2026-07-26",
+  },
+  {
     id: "aied-037",
     slug: "news-chatgpt-health-claude-reflect-gemini-education-personal-context",
     title: "News report: ChatGPT Health, Claude Reflect and Gemini Education make personal context consequential",
@@ -362,6 +804,118 @@ For AIEDHK, the practical lesson is that an educational system cannot rely on th
       },
     ],
     createdAt: "2026-07-23",
+  },
+  {
+    id: "aied-041",
+    slug: "news-openai-chatgpt-deep-research-source-verification",
+    title: "OpenAI product news: ChatGPT Deep Research makes source review part of the learning workflow",
+    authors: ["OpenAI"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "ChatGPT Deep Research", "source literacy"],
+    image: "/images/research/covers/aied-041-chatgpt-deep-research-source-review-2026.png",
+    imageAlt:
+      "Editorial cover of students and a librarian reviewing primary sources beside a transparent multi-step AI research plan",
+    summaryImage: "/images/research/summary/aied-041-chatgpt-deep-research-source-review-summary.png",
+    summaryImageAlt:
+      "A research question passes through planning, source selection, citation checking and learner-authored synthesis before submission.",
+    summaryAudio: "/audio/research/aied-041-chatgpt-deep-research-source-review-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word product news report",
+    shortSummary:
+      "Product news: OpenAI's current Deep Research guidance distinguishes quick search from a multi-step, cited investigation, offering a useful research scaffold only when learners inspect primary sources, document decisions and produce their own synthesis.",
+    fullSummary: `This product-news report examines how OpenAI currently positions search and Deep Research in ChatGPT. An April 2026 OpenAI Academy guide distinguishes quick web search from a slower, multi-step process for complex questions. Search retrieves recent facts and links; Deep Research plans an investigation, searches and refines queries, synthesizes information, and produces a documented report with source links.
+
+The distinction matters for education because a single chat interface can conceal very different levels of work. A quick search may be appropriate for locating a recent press release or a specific data point. An open-ended literature question, policy comparison, or institutional decision requires multiple sources, competing explanations, explicit scope, and traceable evidence. OpenAI's guide says Deep Research is intended for the second class of task and may take several minutes while it explores the question.
+
+The product can provide a useful scaffold when a learner supplies a clear goal, audience, timeframe, and criteria. A visible research plan can turn an ambiguous prompt into subquestions. Citations can make claims inspectable, and follow-up prompts can expose gaps or competing interpretations. These are workflow affordances, however, not guarantees that the sources are authoritative, complete, or correctly represented.
+
+OpenAI explicitly advises users to review linked sources and notes that web search does not replace specialist or subscription databases. That warning is central in academic settings. A cited response can still rely on a secondary summary when a primary paper is available, miss literature outside the public web, or attach a plausible link to a claim it does not support. Citation presence should therefore be treated as an invitation to audit, not as a quality mark.
+
+Assessment design must also account for delegation. If Deep Research chooses the questions, sources, comparisons, and wording, a polished report may reveal little about the learner's understanding. Teachers can preserve evidence of learning by requiring a pre-search question map, a source-selection rationale, an annotated claim-to-source table, notes on excluded evidence, and a final oral or written explanation completed without the tool.
+
+Libraries remain essential. Students should search disciplinary indexes and institutional collections when the public web is incomplete, verify publication and retraction status, follow citations backward, and compare the generated synthesis with the underlying methods and results. Deep Research can reduce navigation cost, but it cannot decide what counts as sufficient evidence for a discipline or assignment.
+
+Privacy and permissions need the same visibility as citations. Learners should not upload identifiable student records, unpublished research, protected assessment items, or confidential partner documents unless the institution has approved the account, data terms, and retention controls. A report should record which uploaded or connected sources the system was allowed to use.
+
+For Hong Kong schools and universities, a strong pilot would compare three conditions on the same inquiry: manual search, standard ChatGPT search, and Deep Research. Evaluate source quality, claim accuracy, coverage, time, correction behavior, and the learner's independent explanation. The goal is not to reward the longest report. It is to determine whether the workflow improves source literacy and judgment.
+
+Deep Research makes documented synthesis easier to produce. Its educational value depends on whether the learner remains responsible for framing the question, checking the evidence, recognizing missing sources, and defending the conclusion. Used that way, the product can support research apprenticeship; used as an invisible report generator, it can bypass it.`,
+    keyTakeaways: [
+      "Product news: OpenAI distinguishes quick ChatGPT search from Deep Research, which plans and executes a multi-step investigation and returns a cited report.",
+      "Citations improve inspectability but do not establish source quality, completeness or correct interpretation, and specialist databases remain necessary.",
+      "Educational use should preserve a learner-generated question map, source rationale, claim-to-source audit and independent explanation so delegation does not replace research judgment.",
+    ],
+    whyItMatters:
+      "For AIEDHK, Deep Research can scaffold evidence work only when citations, source permissions, disciplinary databases and independent learner reasoning are made visible parts of the task rather than hidden behind a polished report.",
+    sourceUrl: "https://openai.com/academy/search-and-deep-research/",
+    sourceUrls: [
+      {
+        label: "OpenAI Academy guide to ChatGPT search and Deep Research",
+        url: "https://openai.com/academy/search-and-deep-research/",
+      },
+      {
+        label: "OpenAI introduction to Deep Research",
+        url: "https://openai.com/index/introducing-deep-research/",
+      },
+    ],
+    createdAt: "2026-07-22",
+  },
+  {
+    id: "aied-040",
+    slug: "classroom-ai-grade-specific-large-language-model-teachers",
+    title: "Classroom AI: large language models as grade-specific teachers",
+    authors: ["Jio Oh", "Steven Euijong Whang", "James Evans", "Jindong Wang"],
+    venue: "npj Artificial Intelligence",
+    year: 2026,
+    type: "journal",
+    tags: ["grade-specific language models", "readability alignment", "adaptive explanation"],
+    image: "/images/research/covers/aied-040-classroom-ai-grade-specific-llms-2026.png",
+    imageAlt:
+      "Editorial cover of a diverse teacher team comparing age-appropriate explanations for the same science question across six learner levels",
+    summaryImage: "/images/research/summary/aied-040-classroom-ai-grade-specific-llms-summary.png",
+    summaryImageAlt:
+      "Six explanation pathways progress from lower elementary to adult language while accuracy and human judgment remain separately checked.",
+    summaryAudio: "/audio/research/aied-040-classroom-ai-grade-specific-llms-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A 2026 study fine-tuned language models for six educational levels and improved grade-alignment success by 35.64 percentage points over prompting, but its 208 raters were not the target children and the work did not test classroom learning.",
+    fullSummary: `Oh and colleagues address a persistent weakness in educational language models: asking a model to “explain this to a third grader” does not reliably produce an explanation matched to that grade. Their 2026 open-access study introduces a framework for building grade-specific models across six levels, from lower elementary through college and adult education, and evaluates alignment, accuracy, and human judgments.
+
+The pipeline begins with open-ended questions across 54 subjects in eight educational fields. Multiple language models help generate questions and candidate answers. The researchers vary word difficulty, sentence length, and target audience, then classify responses with an integrated voting procedure based on seven established readability formulas. The resulting labeled question-answer pairs are used to fine-tune a separate model for each educational level.
+
+The six targets are lower elementary, grades one to two; middle elementary, grades three to four; upper elementary, grades five to six; middle school, grades seven to nine; high school, grades ten to twelve; and college or adult. This is more specific than one generic “simple” setting and recognizes that sentence structure, vocabulary, and explanation depth should change across development.
+
+Across four evaluation datasets, the grade-specific models improved the rate of hitting the intended level by an average of 35.64 percentage points compared with prompt-only baselines. The improvement also appeared on a held-out Automated Readability Index. Accuracy on the study's multiple-choice educational benchmark remained comparable to the base model, suggesting that stronger grade alignment did not require a large loss of correctness in that test.
+
+Human studies included 208 English-speaking participants across two surveys. Participants ranked six answers by perceived grade difficulty and rated question difficulty, answer comprehensibility, and accuracy. Intended and perceived rankings showed a Kendall correlation of 0.76 in one survey. Participants generally viewed outputs as understandable at the intended levels, although difficult concepts could remain unsuitable for younger learners even when the language was simplified.
+
+That caveat points to the study's central limit. The raters had completed high school and most were undergraduate or graduate students; they were not representative samples of children in the six target bands. Adult judgments about what a young learner can understand are useful but cannot replace studies with the learners themselves. Readability also measures linguistic form more readily than conceptual prerequisites, misconceptions, cultural relevance, curiosity, or learning.
+
+The training data were substantially generated and labeled through model-assisted procedures. Readability formulas can reward short words and sentences without ensuring a sound pedagogical explanation. The paper evaluates output alignment and benchmark accuracy, not whether pupils learn, retain, transfer, or benefit equitably in a real classroom. Separate grade-specific models may also become outdated as base models and curricula change.
+
+For Hong Kong schools, the framework is best treated as an engineering advance that requires educational validation. A pilot should compare prompt-only and adapted explanations on curriculum-linked questions, recruit actual learners and teachers from the target age and language groups, test misconceptions and delayed learning, and inspect Cantonese and Chinese readability separately rather than importing English formulas. Teachers should retain control over topic appropriateness and prerequisite knowledge.
+
+The study shows that systematic adaptation can outperform a simple audience prompt. It does not show that a model is a grade-specific teacher. A credible educational deployment still needs child-centered evaluation, curriculum alignment, multilingual validation, safeguarding, teacher orchestration, and evidence that clearer language produces deeper understanding.`,
+    keyTakeaways: [
+      "The framework builds six grade-specific models using generated question-answer data classified through seven integrated readability metrics.",
+      "Grade-level target success improved by an average of 35.64 percentage points over prompt-only methods while benchmark accuracy was broadly maintained.",
+      "The 208 raters were high-school graduates, mostly university students, and the study measured output alignment rather than classroom learning with children.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the work demonstrates that age adaptation needs systematic design beyond a simple prompt, while showing why real learners, multilingual curricula, conceptual prerequisites and delayed learning outcomes must validate any claim of a grade-specific teacher.",
+    sourceUrl: "https://doi.org/10.1038/s44387-026-00081-7",
+    sourceUrls: [
+      {
+        label: "Open-access journal article and DOI",
+        url: "https://doi.org/10.1038/s44387-026-00081-7",
+      },
+      {
+        label: "Nature article page",
+        url: "https://www.nature.com/articles/s44387-026-00081-7",
+      },
+    ],
+    createdAt: "2026-07-22",
   },
   {
     id: "aied-031",

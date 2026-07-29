@@ -54,6 +54,22 @@ test("the flagship article aied-025 is fully localized into both Chinese scripts
   }
 });
 
+test("new backlog articles use the explicit English fallback until a reviewed localization exists", () => {
+  const backlogIds = Array.from({ length: 10 }, (_, index) => `aied-${String(index + 38).padStart(3, "0")}`);
+  const englishById = new Map(getResearchPapers("en").map((paper) => [paper.id, paper]));
+
+  for (const locale of ["zh-hant", "zh-hans"] as const) {
+    const localizedById = new Map(getResearchPapers(locale).map((paper) => [paper.id, paper]));
+
+    for (const id of backlogIds) {
+      assert.equal(getReviewedLocalization(id, locale), undefined, `${id} should not claim an unreviewed ${locale} translation`);
+      assert.equal(localizedById.get(id)?.title, englishById.get(id)?.title);
+      assert.equal(localizedById.get(id)?.fullSummary, englishById.get(id)?.fullSummary);
+      assert.equal(localizedById.get(id)?.whyItMatters, englishById.get(id)?.whyItMatters);
+    }
+  }
+});
+
 test("generateResearchLocalization returns a flagged English fallback without AI credentials", async () => {
   const prevKey = process.env.AI_API_KEY;
   const prevUrl = process.env.AI_BASE_URL;

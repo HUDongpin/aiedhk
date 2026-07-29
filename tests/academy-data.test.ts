@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import path from "node:path";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
@@ -110,6 +112,14 @@ test("Academy alt text does not normalize banned particle-heavy or fake-person a
     assert.doesNotMatch(lesson.imageAlt, bannedVisualTerms, `${lesson.id} cover alt text describes a banned visual style`);
     assert.doesNotMatch(lesson.summaryImageAlt, bannedVisualTerms, `${lesson.id} summary alt text describes a banned visual style`);
   }
+});
+
+test("Academy art direction requires concept-rich technology photography instead of plain classroom staging", () => {
+  const contract = readFileSync(path.join(process.cwd(), "docs/academy-art-direction.md"), "utf8");
+
+  assert.match(contract, /concept-rich technology editorial photography/i);
+  assert.match(contract, /Do not default to generic beige classrooms/i);
+  assert.match(contract, /do not fall back to an abstract no-human composition/i);
 });
 
 test("unreviewed locales fall back to English lesson text without leaking English audio", () => {

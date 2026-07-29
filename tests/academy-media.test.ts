@@ -7,6 +7,12 @@ import { getAcademyLessons } from "@/lib/academy-data";
 
 const projectRoot = process.cwd();
 const pngSignature = Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]);
+const ownerRejectedImageHashes = new Set([
+  "c617fd26e1d64c6f88ce3c42c4f66a83a9bc66b9a484e600d49a010f8f0855cb",
+  "e47d37de4a1dc8ef44546afc17cdc0b691c3ffa919aeb7597387f3c9cffa72db",
+  "375d7ac2bcf129cbdc98d5862b74961286782bc5d3ad0441bbbe631847bd01e7",
+  "955e2d13ddf090c4b4f5b92560a4b6a55afedc91d0ed3a9318cb9ed20e1102b0",
+]);
 
 function publicFile(assetPath: string) {
   assert.ok(assetPath.startsWith("/"), `expected a root-relative asset path: ${assetPath}`);
@@ -39,7 +45,12 @@ test("Academy lessons directly reference thirty-two valid, distinct 1600x1000 PN
       assert.equal(width, 1600, `${assetPath} width must be normalized to 1600`);
       assert.equal(height, 1000, `${assetPath} height must be normalized to 1000`);
 
-      hashes.add(createHash("sha256").update(bytes).digest("hex"));
+      const hash = createHash("sha256").update(bytes).digest("hex");
+      assert.ok(
+        !ownerRejectedImageHashes.has(hash),
+        `${assetPath} is an owner-rejected plain-classroom Academy image and must be replaced`
+      );
+      hashes.add(hash);
     }
   }
 

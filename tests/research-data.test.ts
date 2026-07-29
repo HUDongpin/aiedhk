@@ -46,6 +46,10 @@ test("the five-date backlog contains exactly one research paper and one clearly 
   for (const [date, expectedIds] of expectedByDate) {
     const entries = papers.filter((paper) => paper.createdAt === date);
     assert.deepEqual(entries.map((paper) => paper.id).sort(), expectedIds);
+    for (const paper of entries) {
+      const wordCount = paper.fullSummary.trim().split(/\s+/).length;
+      assert.ok(wordCount >= 480 && wordCount <= 600, `${paper.id} should keep the 500-word detail-page contract`);
+    }
 
     const productNews = entries.filter((paper) => paper.type === "policy-ethics");
     const research = entries.filter((paper) => paper.type !== "policy-ethics");

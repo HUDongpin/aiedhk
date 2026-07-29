@@ -14,15 +14,21 @@ const academyCardSource = readFileSync("components/AcademyCard.tsx", "utf8");
 const academyDetailSource = readFileSync("app/[locale]/academy/[slug]/page.tsx", "utf8");
 const academyPageSource = readFileSync("app/[locale]/academy/page.tsx", "utf8");
 
-test("Academy artwork uses responsive Next images and lazy-loads the below-fold summary", () => {
+test("Academy uses one responsive image asset per lesson and displays it once on detail pages", () => {
   assert.match(academyCardSource, /import Image from "next\/image"/);
   assert.match(academyCardSource, /<Image[\s\S]*?fill[\s\S]*?sizes=/);
   assert.doesNotMatch(academyCardSource, /<img\b/);
 
   assert.match(academyDetailSource, /import Image from "next\/image"/);
   assert.match(academyDetailSource, /<Image[\s\S]*?preload[\s\S]*?sizes=/);
-  assert.match(academyDetailSource, /<Image[\s\S]*?summaryImage[\s\S]*?loading="lazy"[\s\S]*?sizes=/);
+  assert.equal((academyDetailSource.match(/<Image\b/g) ?? []).length, 1);
+  assert.doesNotMatch(academyDetailSource, /summaryImage/);
   assert.doesNotMatch(academyDetailSource, /<img\b/);
+});
+
+test("Academy listing cards display each lesson's stable identifier", () => {
+  assert.match(academyCardSource, /lesson\.listingIdentifier/);
+  assert.match(academyCardSource, /aria-label={`Lesson identifier \$\{lesson\.listingIdentifier}`}/);
 });
 
 test("Academy filters expose q, track, and level controls plus a complete reset", () => {
@@ -52,7 +58,7 @@ test("Academy uses six-card pages and pagination preserves every filter query", 
   const result = filterAcademyLessonList(lessons, { page: 1 });
 
   assert.equal(result.items.length, 6);
-  assert.equal(result.totalPages, 6);
+  assert.equal(result.totalPages, 8);
   assert.equal(
     academyPageHref("en", { q: "memory", track: "educational-theory", level: "core" }, 2),
     "/en/academy?q=memory&track=educational-theory&level=core&page=2"

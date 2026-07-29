@@ -48,7 +48,6 @@ function localizeLesson(lesson: AcademyLesson, localeInput: string): AcademyLess
     ...localization,
     tags: localization.tags.length ? localization.tags : lesson.tags,
     imageAlt: localization.imageAlt ?? lesson.imageAlt,
-    summaryImageAlt: localization.summaryImageAlt ?? lesson.summaryImageAlt,
     summaryAudio: localization.summaryAudio ?? "",
     summaryAudioTitle: localization.summaryAudioTitle ?? "",
   };

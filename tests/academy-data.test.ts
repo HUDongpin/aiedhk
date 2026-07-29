@@ -2,13 +2,17 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("Academy publishes exactly fourteen ordered reviewed English lessons", () => {
+test("Academy publishes exactly eighteen ordered reviewed English lessons", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.equal(lessons.length, 14);
+  assert.equal(lessons.length, 18);
   assert.deepEqual(
     lessons.map((lesson) => lesson.id),
     [
+      "academy-017",
+      "academy-018",
+      "academy-015",
+      "academy-016",
       "academy-013",
       "academy-014",
       "academy-011",
@@ -29,21 +33,23 @@ test("Academy publishes exactly fourteen ordered reviewed English lessons", () =
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 7);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 7);
+  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 9);
+  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 9);
   assert.deepEqual(
-    new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014"].includes(lesson.id)).map((lesson) => lesson.track)),
+    new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016", "academy-017", "academy-018"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
   assert.ok(lessons.every((lesson) => lesson.level === "basics" || lesson.level === "core"));
 });
 
-test("Academy catch-up publishes one curriculum pair for each missed July 24-26 run", () => {
+test("Academy publishes one curriculum pair for each July 24-28 run", () => {
   const lessons = getAcademyLessons("en");
   const catchUpDates = new Map([
     ["2026-07-24T08:00:00.000Z", ["academy-009", "academy-010"]],
     ["2026-07-25T08:00:00.000Z", ["academy-011", "academy-012"]],
     ["2026-07-26T08:00:00.000Z", ["academy-013", "academy-014"]],
+    ["2026-07-27T08:00:00.000Z", ["academy-015", "academy-016"]],
+    ["2026-07-28T08:00:00.000Z", ["academy-017", "academy-018"]],
   ]);
 
   for (const [createdAt, expectedIds] of catchUpDates) {
@@ -71,20 +77,26 @@ test("each launch lesson has complete reviewed copy and unique stable media refe
     "Spacing and Interleaving",
     "What Neural Networks Learn",
     "Dual Coding and Multimedia Learning",
+    "Prompts, Context, and Model Responses",
+    "Scaffolding and the Zone of Proximal Development",
+    "AI Errors, Uncertainty, and Hallucination",
+    "Metacognition and Self-Regulated Learning",
   ];
 
   assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));
-  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 14);
-  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 14);
-  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 14);
-  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 14);
-  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 14);
+  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 18);
+  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 18);
+  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 18);
+  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 18);
+  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 18);
+  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 18);
 
   for (const lesson of lessons) {
     const wordCount = lesson.fullSummary.trim().split(/\s+/).length;
     assert.ok(wordCount >= 450 && wordCount <= 550, `${lesson.id} has ${wordCount} summary words`);
     assert.equal(lesson.coreIdeas.length, 3);
     assert.equal(lesson.relatedConcepts.length, 3);
+    assert.match(lesson.listingIdentifier, /^(AI Knowledge|Educational Theory) \d{2,}$/);
     assert.ok(lesson.sourceUrls.length >= 2 && lesson.sourceUrls.length <= 4);
     assert.ok(lesson.sourceUrls.every((source) => /^https:\/\//.test(source.url)));
     assert.ok(lesson.imageAlt.trim().length > 20, `${lesson.id} must include literal image alt text`);

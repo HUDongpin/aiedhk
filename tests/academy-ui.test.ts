@@ -26,6 +26,11 @@ test("Academy uses one responsive image asset per lesson and displays it once on
   assert.doesNotMatch(academyDetailSource, /<img\b/);
 });
 
+test("Academy listing cards display each lesson's stable identifier", () => {
+  assert.match(academyCardSource, /lesson\.listingIdentifier/);
+  assert.match(academyCardSource, /aria-label={`Lesson identifier \$\{lesson\.listingIdentifier}`}/);
+});
+
 test("Academy filters expose q, track, and level controls plus a complete reset", () => {
   const html = renderToStaticMarkup(React.createElement(AcademyFilters, {
     locale: "en",
@@ -53,7 +58,7 @@ test("Academy uses six-card pages and pagination preserves every filter query", 
   const result = filterAcademyLessonList(lessons, { page: 1 });
 
   assert.equal(result.items.length, 6);
-  assert.equal(result.totalPages, 5);
+  assert.equal(result.totalPages, 6);
   assert.equal(
     academyPageHref("en", { q: "memory", track: "educational-theory", level: "core" }, 2),
     "/en/academy?q=memory&track=educational-theory&level=core&page=2"

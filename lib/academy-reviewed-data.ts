@@ -3,6 +3,7 @@ import type { AcademyLesson } from "@/lib/types";
 export const reviewedAcademyLessons: AcademyLesson[] = [
   {
     id: "academy-001",
+    listingIdentifier: "AI Knowledge 01",
     slug: "what-artificial-intelligence-is",
     title: "What Artificial Intelligence Is",
     track: "ai-knowledge",
@@ -31,13 +32,14 @@ For learners, the strongest starting point is neither excitement nor fear but pr
     relatedConcepts: ["Machine learning", "Algorithmic bias", "Human oversight"],
     sourceUrls: [
       { label: "OECD AI principles", url: "https://oecd.ai/en/ai-principles" },
-      { label: "NIST AI Risk Management Framework", url: "https://www.nist.gov/itl/ai-risk-management-framework" },
+      { label: "NIST Generative AI Profile", url: "https://doi.org/10.6028/NIST.AI.600-1" },
       { label: "UNESCO guidance for generative AI in education", url: "https://unesdoc.unesco.org/ark:/48223/pf0000386693" },
     ],
     createdAt: "2026-07-15T08:00:00.000Z",
   },
   {
     id: "academy-002",
+    listingIdentifier: "AI Knowledge 02",
     slug: "machine-learning-deep-learning-generative-ai",
     title: "Machine Learning, Deep Learning, and Generative AI",
     track: "ai-knowledge",
@@ -73,6 +75,7 @@ In education, the distinctions guide better decisions. A teacher might use a con
   },
   {
     id: "academy-003",
+    listingIdentifier: "AI Knowledge 03",
     slug: "how-large-language-models-generate-text",
     title: "How Large Language Models Generate Text",
     track: "ai-knowledge",
@@ -108,6 +111,7 @@ For education, mechanism matters. Students should understand why clear prose can
   },
   {
     id: "academy-004",
+    listingIdentifier: "Educational Theory 01",
     slug: "behaviorism-learning-through-consequences",
     title: "Behaviorism and Learning Through Consequences",
     track: "educational-theory",
@@ -143,6 +147,7 @@ A balanced teacher uses behaviorist tools transparently and selectively. The des
   },
   {
     id: "academy-005",
+    listingIdentifier: "Educational Theory 02",
     slug: "cognitive-load-theory",
     title: "Cognitive Load Theory",
     track: "educational-theory",
@@ -178,6 +183,7 @@ In classrooms, cognitive load theory encourages diagnosis before redesign. What 
   },
   {
     id: "academy-006",
+    listingIdentifier: "Educational Theory 03",
     slug: "constructivism-active-knowledge-building",
     title: "Constructivism and Active Knowledge Building",
     track: "educational-theory",
@@ -213,6 +219,7 @@ In education, the perspective supports inquiry, discussion, project work, format
   },
   {
     id: "academy-007",
+    listingIdentifier: "AI Knowledge 04",
     slug: "training-validation-and-test-data",
     title: "Training, Validation, and Test Data",
     track: "ai-knowledge",
@@ -248,6 +255,7 @@ Educational AI makes these distinctions concrete. Suppose a system predicts whic
   },
   {
     id: "academy-008",
+    listingIdentifier: "Educational Theory 04",
     slug: "working-memory-and-long-term-memory",
     title: "Working Memory and Long-Term Memory",
     track: "educational-theory",
@@ -283,6 +291,7 @@ Instruction should respect the limited workspace while deliberately building the
   },
   {
     id: "academy-009",
+    listingIdentifier: "AI Knowledge 05",
     slug: "supervised-unsupervised-reinforcement-learning",
     title: "Supervised, Unsupervised, and Reinforcement Learning",
     track: "ai-knowledge",
@@ -318,6 +327,7 @@ Real systems can combine these settings. A model may learn representations witho
   },
   {
     id: "academy-010",
+    listingIdentifier: "Educational Theory 05",
     slug: "retrieval-practice",
     title: "Retrieval Practice",
     track: "educational-theory",
@@ -353,6 +363,7 @@ Digital and AI tools can schedule prompts, vary examples, and invite explanation
   },
   {
     id: "academy-011",
+    listingIdentifier: "AI Knowledge 06",
     slug: "features-labels-and-representations",
     title: "Features, Labels, and Learned Representations",
     track: "ai-knowledge",
@@ -388,6 +399,7 @@ Educational evaluation should trace the whole chain from observation to represen
   },
   {
     id: "academy-012",
+    listingIdentifier: "Educational Theory 06",
     slug: "spacing-and-interleaving",
     title: "Spacing and Interleaving",
     track: "educational-theory",
@@ -423,6 +435,7 @@ Digital systems can schedule review and vary practice, but simple frequency rule
   },
   {
     id: "academy-013",
+    listingIdentifier: "AI Knowledge 07",
     slug: "what-neural-networks-learn",
     title: "What Neural Networks Learn",
     track: "ai-knowledge",
@@ -458,6 +471,7 @@ For educational use, the practical question is not whether a network thinks like
   },
   {
     id: "academy-014",
+    listingIdentifier: "Educational Theory 07",
     slug: "dual-coding-and-multimedia-learning",
     title: "Dual Coding and Multimedia Learning",
     track: "educational-theory",
@@ -490,5 +504,149 @@ Accessibility is part of multimedia quality. Images need meaningful alternatives
       { label: "Mayer and Moreno on multimedia learning", url: "https://doi.org/10.1207/S15326985EP3801_6" },
     ],
     createdAt: "2026-07-26T08:00:00.000Z",
+  },
+  {
+    id: "academy-015",
+    listingIdentifier: "AI Knowledge 08",
+    slug: "prompts-context-and-model-responses",
+    title: "Prompts, Context, and Model Responses",
+    track: "ai-knowledge",
+    level: "basics",
+    tags: ["prompt design", "context", "model responses"],
+    image: "/images/academy/covers/academy-015-prompts-context-and-model-responses.png",
+    imageAlt: "A racially diverse educator and two adult learners compare a prompt-flow worksheet with model-response panels on a laptop",
+    summaryAudio: "/audio/academy/academy-015-prompts-context-and-model-responses-summary.m4a",
+    summaryAudioTitle: "Listen to Prompts, Context, and Model Responses",
+    shortSummary: "How prompts and surrounding context shape probabilistic model responses, and why clear task design still requires verification and human judgment.",
+    fullSummary: `A prompt is the information given to an AI model when asking it to produce a response. It may include a question, an instruction, examples, background material, formatting requirements, and earlier messages in a conversation. The model also receives other context supplied by the application, such as system instructions, retrieved documents, or tool results. A useful distinction is that the prompt is what a user deliberately contributes, while the context is the wider collection of information available to the model for that turn. This distinction helps users ask whether missing or hidden information may have shaped the result.
+
+A language model does not interpret a prompt as a person interprets a shared intention. It uses the available tokens to estimate likely continuations according to patterns learned during training and later alignment. Small wording changes can shift which patterns become relevant, so two similar requests may produce different answers. Responses can also vary because generation may involve sampling. A polished answer therefore shows what the model produced under particular conditions, not a stable fact stored behind the interface.
+
+Clear prompting makes the task and evaluation criteria easier to infer. A practical prompt can name the goal, audience, relevant evidence, constraints, and desired form. Examples can demonstrate a category or style when description alone is ambiguous. Breaking a complex task into stages can help users inspect assumptions before asking for a final product. However, adding instructions without purpose can create conflict or bury the important material. Prompt quality is not measured by length. It is measured by whether the model receives the information needed for the task and whether the result can be checked.
+
+Context has limits. Models process a finite context window, and applications may truncate, summarize, or selectively retrieve material before a request reaches the model. Even when information fits, the model may not use every part equally well. Position, relevance, duplication, and competing instructions can affect the response. Users should place essential evidence close to the task, label sources clearly, and remove irrelevant material. Sensitive personal or institutional information should not be included unless the tool, purpose, consent, and data protections are appropriate.
+
+In education, prompting is best treated as a form of task design followed by evaluation. Teachers can ask learners to state the purpose of a prompt, compare several responses, identify which details changed the result, and verify claims against course sources. A prompt can request uncertainty, citations, or alternative explanations, but those requests do not guarantee truthful answers. Reliable use requires checking the output for accuracy, bias, completeness, and fit with the learner. The goal is not to discover a magical phrase. It is to communicate a well-defined task, provide relevant context, observe the response critically, and revise both the request and the human judgment applied to the result.`,
+    coreIdeas: [
+      "A prompt is the user's contribution, while context includes all information made available to the model for the current response.",
+      "Clear goals, relevant evidence, constraints, and examples are more useful than unnecessary prompt length or supposed magical phrases.",
+      "Prompting can improve relevance but cannot guarantee truth, so outputs still require evidence-based human evaluation.",
+    ],
+    educationConnection: "Ask learners to identify a prompt's goal and context, compare resulting responses, and verify important claims against course sources before revising their request.",
+    relatedConcepts: ["Prompt design", "Context window", "Output evaluation"],
+    sourceUrls: [
+      { label: "Liu and colleagues: prompt methods survey", url: "https://doi.org/10.1145/3560815" },
+      { label: "Brown and colleagues: few-shot language models", url: "https://arxiv.org/abs/2005.14165" },
+      { label: "Liu and colleagues: long-context use", url: "https://doi.org/10.1162/tacl_a_00638" },
+    ],
+    createdAt: "2026-07-27T08:00:00.000Z",
+  },
+  {
+    id: "academy-016",
+    listingIdentifier: "Educational Theory 08",
+    slug: "scaffolding-and-the-zone-of-proximal-development",
+    title: "Scaffolding and the Zone of Proximal Development",
+    track: "educational-theory",
+    level: "basics",
+    tags: ["scaffolding", "zone of proximal development", "guided participation"],
+    image: "/images/academy/covers/academy-016-scaffolding-and-the-zone-of-proximal-development.png",
+    imageAlt: "A racially diverse educator and two adult learners use a filled concept map and graduated hints to solve a challenging task",
+    summaryAudio: "/audio/academy/academy-016-scaffolding-and-the-zone-of-proximal-development-summary.m4a",
+    summaryAudioTitle: "Listen to Scaffolding and the Zone of Proximal Development",
+    shortSummary: "How responsive support helps learners complete challenging work, then fades as competence, strategy use, and independent responsibility develop.",
+    fullSummary: `Scaffolding is temporary support that helps a learner participate in a task that would be difficult to complete independently. The support might include a worked example, a cue, a question, a partial solution, a checklist, modeling, or feedback. Good scaffolding does not simply make work easier. It makes important thinking possible while preserving a meaningful role for the learner. As understanding grows, support is adjusted and gradually removed so that responsibility shifts toward independent performance.
+
+The zone of proximal development describes the distance between what a learner can currently do alone and what the learner can do with capable guidance or collaboration. It is not a fixed score or a permanent label attached to a person. The zone depends on the task, prior knowledge, available tools, language, relationships, and quality of assistance. A learner may need substantial support for one concept and little support for another. Teachers therefore discover the useful level of support through interaction, not through assumption.
+
+Effective scaffolding is contingent. The teacher first attends to what the learner is trying, where progress stops, and which misconception or missing step is involved. Support then responds to that evidence. A prompt may be enough when the learner has a plan but overlooks a detail. Modeling may be more suitable when the process itself is unfamiliar. If support remains too weak, the learner may stay stuck. If it is too strong, the teacher or tool completes the intellectual work and loses evidence of what the learner can now do. The learner's response remains the evidence that determines whether support should continue, change form, or begin to fade.
+
+Fading is the planned reduction of help as competence develops. It can involve removing steps from a template, delaying hints, shifting from demonstration to questioning, or asking learners to explain and check their own decisions. Fading should follow demonstrated progress rather than a rigid timetable. Transfer of responsibility is successful when learners can select strategies, monitor results, and seek targeted help in a new situation. Productive struggle remains bounded: challenge should invite reasoning without turning confusion into the main activity.
+
+Digital and AI systems can offer hints, examples, and conversational guidance, but frequent assistance is not automatically scaffolding. A system must respond to learner evidence, avoid revealing answers too quickly, and create opportunities for independent performance. Teachers can compare assisted and unassisted work, ask learners to explain how a hint changed their reasoning, and review whether support is fading. They should also consider accessibility and cultural or linguistic differences in how help is offered and interpreted. The central design question is not how much support to provide in general. It is which support enables this learner to take the next meaningful step, and when that support should be withdrawn.`,
+    coreIdeas: [
+      "Scaffolding is temporary support for meaningful learner participation, not simply assistance that makes a task easier.",
+      "Effective support is contingent on evidence from the learner's current performance and the demands of the particular task.",
+      "Fading transfers strategy selection, monitoring, and responsibility to the learner as independent competence develops.",
+    ],
+    educationConnection: "Observe where a learner's progress stops, provide the smallest useful support, and compare assisted with independent performance before deciding whether to adapt or fade the help.",
+    relatedConcepts: ["Contingent support", "Fading", "Learner agency"],
+    sourceUrls: [
+      { label: "Wood, Bruner, and Ross on tutoring", url: "https://doi.org/10.1111/j.1469-7610.1976.tb00381.x" },
+      { label: "Van de Pol and colleagues on scaffolding", url: "https://doi.org/10.1007/s10648-010-9127-6" },
+      { label: "Reiser on scaffolding complex learning", url: "https://doi.org/10.1207/S15327809JLS1303_1" },
+    ],
+    createdAt: "2026-07-27T08:00:00.000Z",
+  },
+  {
+    id: "academy-017",
+    listingIdentifier: "AI Knowledge 09",
+    slug: "ai-errors-uncertainty-and-hallucination",
+    title: "AI Errors, Uncertainty, and Hallucination",
+    track: "ai-knowledge",
+    level: "basics",
+    tags: ["AI errors", "uncertainty", "hallucination"],
+    image: "/images/academy/covers/academy-017-ai-errors-uncertainty-and-hallucination.png",
+    imageAlt: "A racially diverse educator and two adult learners verify an AI response against annotated source documents and an evidence checklist",
+    summaryAudio: "/audio/academy/academy-017-ai-errors-uncertainty-and-hallucination-summary.m4a",
+    summaryAudioTitle: "Listen to AI Errors, Uncertainty, and Hallucination",
+    shortSummary: "How to distinguish AI errors, hallucination, and uncertainty, evaluate evidence, and match verification and oversight to educational consequences.",
+    fullSummary: `An AI error is an output that fails to meet a relevant requirement. The requirement may concern factual accuracy, reasoning, classification, safety, fairness, citation, or fit with the task. Different failures need different responses. A spelling error can be corrected directly, while an unsupported medical recommendation or an unfair educational decision requires stronger safeguards. Calling every failure a hallucination hides these differences and can make evaluation less precise. This approach also prevents a single label from obscuring whether the problem came from missing evidence, poor instructions, or unsuitable system design.
+
+Hallucination usually refers to generated content that appears plausible but is unsupported, inconsistent with the provided evidence, or false. A language model produces likely token sequences rather than checking every statement against the world. It may invent a reference, combine details from different sources, or continue an incorrect premise in fluent language. Retrieval and tools can provide better evidence, but they do not guarantee that the model will use it faithfully. A cited source must still be opened and compared with the claim.
+
+Uncertainty concerns what is not known and how strongly a conclusion is supported. Some AI systems provide probability scores, yet a high score is not automatically a reliable probability of correctness. Calibration asks whether predictions made with a stated confidence are correct at a corresponding rate across suitable cases. Generative systems often express confidence through language that may not match factual reliability. Asking a model to state uncertainty can be useful for reflection, but its verbal caution or confidence should not replace external evidence.
+
+Evaluation should begin with the intended use. Teams can build test cases that represent common inputs, difficult boundaries, different learner groups, and conditions likely to change. They can record error types rather than relying only on an average score. For high-impact uses, people need clear routes to review, override, and challenge outputs. Monitoring after release matters because data, user behavior, and system components can change. Good documentation separates observed performance from assumptions and states where evidence is limited.
+
+In education, teachers can turn uncertain outputs into disciplined inquiry without normalizing inaccuracy. Learners can mark claims that require verification, trace quotations to original sources, compare answers with course materials, and explain why an error matters. Teachers should not ask students to detect failures without giving them adequate subject knowledge, time, and access to evidence. Institutions should match oversight to consequences: brainstorming carries different risk from grading, placement, or wellbeing advice. The practical habit is to pause before trusting fluency, identify the claim being made, locate independent support, and decide who remains accountable. AI literacy includes knowing that useful systems can still be wrong, uncertainty can be poorly communicated, and responsible use depends on evidence and human judgment.`,
+    coreIdeas: [
+      "AI errors include different failures of accuracy, reasoning, safety, fairness, citation, or task fit and should not all be called hallucinations.",
+      "Fluent language and stated confidence are not reliable measures of truth, so claims and citations require independent checking.",
+      "Evaluation and human oversight should reflect the intended use, affected learners, likely error types, and consequences of failure.",
+    ],
+    educationConnection: "Give learners adequate subject knowledge and credible sources, then ask them to classify errors, verify claims, and explain how the consequence of a mistake should change the required oversight.",
+    relatedConcepts: ["Calibration", "Grounding", "Human oversight"],
+    sourceUrls: [
+      { label: "Ji and colleagues: hallucination survey", url: "https://doi.org/10.1145/3571730" },
+      { label: "Guo and colleagues on calibration", url: "https://proceedings.mlr.press/v70/guo17a.html" },
+      { label: "NIST AI Risk Management Framework", url: "https://www.nist.gov/itl/ai-risk-management-framework" },
+    ],
+    createdAt: "2026-07-28T08:00:00.000Z",
+  },
+  {
+    id: "academy-018",
+    listingIdentifier: "Educational Theory 09",
+    slug: "metacognition-and-self-regulated-learning",
+    title: "Metacognition and Self-Regulated Learning",
+    track: "educational-theory",
+    level: "basics",
+    tags: ["metacognition", "self-regulated learning", "learning strategies"],
+    image: "/images/academy/covers/academy-018-metacognition-and-self-regulated-learning.png",
+    imageAlt: "A racially diverse educator and two adult learners review a filled planning, monitoring, and reflection worksheet beside completed study notes",
+    summaryAudio: "/audio/academy/academy-018-metacognition-and-self-regulated-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Metacognition and Self-Regulated Learning",
+    shortSummary: "How learners plan, monitor, and evaluate their learning, and how teachers and AI tools can strengthen rather than replace self-regulation.",
+    fullSummary: `Metacognition is knowledge and regulation of one's own thinking and learning. It includes understanding what a task demands, recognizing the limits of current knowledge, selecting a strategy, monitoring progress, and evaluating the result. Self-regulated learning is a broader process that also includes goals, motivation, emotion, behavior, and management of time or resources. The concepts overlap, but they are not identical. Metacognitive monitoring helps learners decide when and how to regulate their learning.
+
+Self-regulation is often described as a cycle. Before a task, learners interpret requirements, set goals, choose strategies, and anticipate obstacles. During performance, they monitor comprehension, effort, and progress, then adjust what they are doing. Afterward, they compare the outcome with suitable criteria and reflect on causes. That reflection shapes the next attempt. The phases are not a simple checklist. Learners may move back and forth as new information, feedback, or difficulty changes the task.
+
+Monitoring can be inaccurate. Familiar material may feel learned because it is easy to reread, while the learner cannot retrieve or apply it without cues. Confidence can also be too low when effortful practice feels difficult even though it is productive. Effective learners use observable evidence rather than feeling alone. They test recall, explain an idea, solve a new problem, compare work with criteria, and inspect errors. Feedback is most useful when it helps them identify the gap and choose a next action, not merely receive a score.
+
+Teachers can make regulation visible by modeling how an expert plans, checks, and revises. Prompts such as "What is your goal?", "What evidence supports this step?", and "What will you try next?" can focus attention on decisions. Supports should be concise and gradually withdrawn so that reflection does not become another form completed for compliance. Strategy instruction should connect a method to the conditions in which it works. Learners need opportunities to choose, adapt, and explain strategies across different tasks. Over time, learners should become less dependent on prompts and more capable of initiating these questions for themselves.
+
+Digital and AI tools can support planning, generate practice questions, organize feedback, or invite reflection, but they can also weaken regulation if they make every decision or provide answers before learners attempt the work. A useful design preserves learner agency and creates checkpoints for prediction, independent effort, verification, and revision. Teachers can ask students to document what assistance they used and how their judgment changed. Data dashboards may inform monitoring, but traces such as clicks or time do not directly reveal understanding or motivation. The educational aim is not constant self-surveillance. It is increasingly accurate awareness and purposeful control: learners know what they are trying to achieve, gather evidence about progress, select an appropriate response, and carry that knowledge into future learning.`,
+    coreIdeas: [
+      "Metacognition concerns knowledge and regulation of thinking, while self-regulated learning also includes motivation, emotion, behavior, goals, and resources.",
+      "Planning, monitoring, strategy adjustment, and reflection form a recurring cycle informed by evidence rather than feelings of familiarity alone.",
+      "Teaching and digital tools should make regulation visible while preserving independent effort, learner choice, and eventual control.",
+    ],
+    educationConnection: "Model how to plan, monitor, and revise, then give learners opportunities to gather evidence, choose strategies, explain changes, and complete later attempts with less prompting.",
+    relatedConcepts: ["Metacognitive monitoring", "Strategy selection", "Learner agency"],
+    sourceUrls: [
+      { label: "Flavell on metacognitive monitoring", url: "https://doi.org/10.1037/0003-066X.34.10.906" },
+      { label: "Zimmerman on self-regulated learning", url: "https://doi.org/10.1207/s15430421tip4102_2" },
+      { label: "Panadero review of self-regulated learning", url: "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.00422/full" },
+    ],
+    createdAt: "2026-07-28T08:00:00.000Z",
   },
 ];

@@ -18,7 +18,7 @@ test("versioned Academy curriculum supplies at least thirty ordered cross-track 
 
 test("curriculum helper returns the first unpublished pair and stops at queue exhaustion", () => {
   const launchSlugs = getAcademyLessons("en").map((lesson) => lesson.slug);
-  assert.equal(getNextUnpublishedAcademyPair(launchSlugs)?.order, 8);
+  assert.equal(getNextUnpublishedAcademyPair(launchSlugs)?.order, 10);
 
   const allSlugs = academyCurriculumV1.pairs.flatMap((pair) => pair.topics.map((topic) => topic.slug));
   assert.equal(getNextUnpublishedAcademyPair(allSlugs), undefined);

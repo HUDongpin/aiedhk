@@ -85,8 +85,8 @@ export default async function AcademyDetailPage({ params }: AcademyDetailPagePro
           <p className="text-sm font-black uppercase tracking-[0.24em] text-aied-blue">{dictionary.academy.summaryHeading}</p>
           <figure className="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50" lang={presentation.contentHtmlLang} dir={presentation.contentDir}>
             <Image
-              src={lesson.summaryImage}
-              alt={lesson.summaryImageAlt}
+              src={lesson.image}
+              alt=""
               width={1600}
               height={1000}
               loading="lazy"

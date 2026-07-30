@@ -2,6 +2,128 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-039",
+    slug: "news-chatgpt-work-claude-cowork-gemini-cross-device-learning",
+    title: "News report: ChatGPT Work, Claude Cowork and Gemini extend guided work across devices and classrooms",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["news report", "ChatGPT Work", "Claude Cowork", "Gemini for Education"],
+    image: "/images/research/covers/aied-039-cross-device-ai-workspaces-learning-2026.png",
+    imageAlt:
+      "Editorial cover of a learner and educator carrying a supervised AI project from a campus workstation to a mobile device and a teacher-led classroom activity",
+    summaryImage: "/images/research/summary/aied-039-cross-device-ai-workspaces-learning-summary.png",
+    summaryImageAlt:
+      "A continuous, reviewable project thread connects desktop work, mobile approval and a curriculum-grounded classroom study activity.",
+    summaryAudio: "/audio/research/aied-039-cross-device-ai-workspaces-learning-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word news report",
+    shortSummary:
+      "News report: ChatGPT Work now carries cloud tasks and Projects across devices, Claude Cowork is moving to web and mobile with background work and approval prompts, and Gemini is connecting adaptive study notebooks to teacher-led Classroom activities.",
+    fullSummary: `This product-news report follows a shift that is easy to overlook when attention stays on model benchmarks: AI work is becoming portable, persistent, and connected to the places where people learn. OpenAI's current ChatGPT desktop update lets cloud Work conversations and Project context move across web, mobile, and desktop. Anthropic is extending Claude Cowork from the desktop to web and mobile while delegated work continues in the background and consequential decisions return to the user. Google is linking adaptive study notebooks in Gemini with NotebookLM and teacher-led activities in Google Classroom. Together, these products make continuity across devices and institutional contexts a central design question for AI in education.
+
+OpenAI's July 16 release notes describe a clearer desktop separation between Chat for conversational help and Work for longer, end-to-end tasks. Chat and Work conversations now share a unified recent-items view, existing ChatGPT Projects appear in the desktop app, and users can begin a cloud Work conversation on one surface and continue it on web, mobile, or desktop. Local Work conversations remain on the computer. The distinction is important for schools and universities: a project can preserve approved files, prior instructions, and work history across settings, but local and cloud tasks do not have the same data boundary.
+
+For teaching and academic work, that continuity could support a research project that begins in a seminar, continues during independent study, and returns for review without repeatedly rebuilding context. Faculty and staff could also carry a multi-step analysis or drafting workflow between office and campus devices. Yet convenience can obscure what the system retained, which files shaped the result, and whether a mobile review was substantial. Institutions should label cloud and local work clearly, define which project materials may sync, and require process evidence when the task is assessed.
+
+Anthropic's July 7 Claude Cowork announcement presents a similar transition. Cowork can operate across connected files, calendars, email, messaging, the web, and other tools until a delegated task is complete. The new web and mobile rollout, beginning in beta with Max users and expanding to more plans, allows a person to start work at a desk, monitor or redirect it from a phone, and retrieve the result elsewhere. Background and scheduled tasks can continue when the original device is offline. When the system reaches a decision reserved for the user, it sends the question to the phone; Anthropic says the output remains subject to human review and approval.
+
+This design could help a teacher monitor a long-running resource search or let a project team review a draft between meetings. It also makes oversight more demanding. A notification is not proof that a person understood the preceding steps, and approval on a small screen can encourage superficial checking. The desktop retains the fuller Cowork experience, including local files and browser use, so capability and risk differ by surface. Educational pilots should identify which tools and records are available on each device, preserve an auditable plan and action history, and reserve enough time and screen space for meaningful review.
+
+Google's June education release provides the most explicitly pedagogical version of portable continuity. Study notebooks in the Gemini app begin with a learner's goal or uploaded course materials and a diagnostic quiz. Gemini then creates bite-sized lessons and updates the plan as quiz results and new materials arrive. The notebooks can connect with NotebookLM for source-grounded questions, flashcards, and other study artifacts. Google also announced no-cost ACT and GRE practice tests, with performance broken down by topic to guide subsequent study.
+
+The institutional bridge is Google Classroom. Google says students of all ages will be able to use Gemini in Classroom for study guides, quizzes, and Guided Learning grounded in course materials. Teachers will be able to assign a study notebook from Classroom and receive insights about where an individual learner or class may need support. The release is staged: study notebooks launched first for adult personal accounts, were scheduled to reach school-issued accounts later, and were desktop-only at announcement, with mobile support planned for later in the summer. Those limits matter when institutions evaluate access and equity.
+
+None of these announcements establishes that cross-device persistence improves learning. Continuity may reduce setup friction, but it may also weaken stopping points where learners normally recall, reorganize, and explain what they know. Background agents can complete work while the learner is absent; adaptive notebooks can personalize activity while concealing why the pathway changed. Product evaluation should therefore measure independent understanding, not only completion speed, engagement, or the smoothness of handoff.
+
+For Hong Kong schools and universities, the practical response is to design continuity with boundaries. A pilot should map what context follows the user, distinguish local from cloud storage, restrict connectors, show students when an agent continues without them, and require review on an appropriate device before anything consequential is submitted. Teachers should be able to inspect sources, intermediate actions, diagnostic evidence, and changes to an adaptive plan. Portability can make support more available, but educational value depends on whether learners remain able to pause, question, reconstruct, and take responsibility for the work.`,
+    keyTakeaways: [
+      "News: ChatGPT Work now synchronizes cloud work across web, mobile and desktop and brings Projects into the desktop app, while local conversations remain device-bound.",
+      "Claude Cowork is expanding to web and mobile so background and scheduled work can continue across devices, but meaningful human approval still requires visible process evidence and adequate review conditions.",
+      "Gemini study notebooks adapt lessons and quizzes to learner evidence and connect to teacher-led Classroom activities, with staged availability that schools should evaluate for access, privacy and learning impact.",
+    ],
+    whyItMatters:
+      "Industry news report: as AI projects, agents and adaptive study pathways persist across devices, AIEDHK should evaluate context boundaries, connector permissions, device equity, review quality and independent learning rather than treating seamless continuity as educational value by default.",
+    sourceUrl: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+    sourceUrls: [
+      {
+        label: "OpenAI ChatGPT desktop and Work release notes",
+        url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes",
+      },
+      {
+        label: "Anthropic Claude Cowork web and mobile announcement",
+        url: "https://claude.com/blog/cowork-web-mobile",
+      },
+      {
+        label: "Google Gemini study notebooks and Classroom announcement",
+        url: "https://blog.google/products-and-platforms/products/education/iste-students-2026/",
+      },
+      {
+        label: "Google teacher-led Gemini and Classroom product details",
+        url: "https://blog.google/products-and-platforms/products/education/iste-2026-educator-updates/",
+      },
+    ],
+    createdAt: "2026-07-31",
+  },
+  {
+    id: "aied-038",
+    slug: "ai-tools-english-learning-motivation-network-meta-analysis",
+    title: "Impact of artificial intelligence tools on learning motivation in English instruction: A network meta-analysis",
+    authors: ["Liwei Hsu", "Yu-Chun Wang"],
+    venue: "Asian-Pacific Journal of Second and Foreign Language Education",
+    year: 2026,
+    type: "review",
+    tags: ["network meta-analysis", "English learning motivation", "AI-assisted language learning"],
+    image: "/images/research/covers/aied-038-ai-tools-english-learning-motivation-2026.png",
+    imageAlt:
+      "Editorial cover of English-language learners comparing conversational practice, writing feedback and adaptive language-app pathways in a university seminar",
+    summaryImage: "/images/research/summary/aied-038-ai-tools-english-learning-motivation-summary.png",
+    summaryImageAlt:
+      "Learners and a teacher examine three evidence pathways for chatbots, writing assistants and language-learning applications while keeping the indirect comparison visible.",
+    summaryAudio: "/audio/research/aied-038-ai-tools-english-learning-motivation-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A 2026 network meta-analysis of 16 studies and 1,923 learners found medium-to-large motivational effects for AI-supported English instruction, but the ranking of language apps, chatbots and writing assistants rests entirely on indirect comparisons.",
+    fullSummary: `Hsu and Wang synthesize a fast-growing but fragmented literature on whether artificial-intelligence tools strengthen motivation in English instruction. Their 2026 open-access network meta-analysis compares generative-AI chatbots, AI writing assistants, and AI language-learning applications with traditional instruction. The paper is timely for AIEDHK because it reports encouraging effects while also showing why product rankings must be interpreted cautiously: every AI category was compared directly with conventional teaching, but none of the included studies directly compared one AI category with another.
+
+The authors searched Web of Science Core Collection, Scopus, ERIC, PsycINFO, and Google Scholar for peer-reviewed English-language studies published from January 2015 through December 2025. The initial search returned 2,156 records. After duplicate removal, title and abstract screening, and full-text eligibility checks, 16 studies met the criteria. Together they included 1,923 K-12 and university learners, with individual samples ranging from 50 to 412 and a median of 85. Fourteen studies were conducted in university settings and two in K-12 education.
+
+The evidence base was geographically concentrated. Nine studies came from China, three from Iran, and one each from the United Arab Emirates, Algeria, Nigeria, and the United States. Eleven studies examined chatbot or conversational systems, two examined AI language-learning applications, and three examined AI writing assistants. Interventions lasted from six weeks to one semester, with a median duration of eight weeks. Fourteen studies used traditional instruction as the comparison condition.
+
+The review process used independent screening by two reviewers, with Cohen's kappa values of 0.87 for titles and abstracts and 0.92 for full-text eligibility. A quarter of extracted data was double-coded, producing an intraclass correlation of 0.94. The authors assessed randomized trials with the Cochrane RoB 2 tool and quasi-experiments with ROBINS-I. Because blinding is difficult in educational technology studies, many studies had moderate risk in performance-related domains.
+
+Using a frequentist random-effects network model, the authors calculated standardized mean differences as Hedges' g. All three AI categories showed statistically significant positive effects on learning motivation compared with traditional instruction. AI language-learning applications produced the largest pooled estimate, g equals 0.907 with a 95 percent confidence interval from 0.752 to 1.063. Generative-AI chatbots followed at g equals 0.824, with a confidence interval from 0.690 to 0.959. AI writing assistants produced g equals 0.692, with a wider interval from 0.417 to 0.967.
+
+The ranking analysis placed language-learning applications first, chatbots second, and writing assistants third. Yet that order is preliminary. The evidence network was star-shaped: all direct comparisons connected an AI intervention to traditional instruction, so every AI-to-AI comparison was inferred through the common control. Confidence intervals for the pairwise comparisons among AI categories overlapped, and none of those differences was statistically significant. The two language-app studies and three writing-assistant studies also provide much thinner evidence than the eleven chatbot studies.
+
+Several robustness checks were reassuring within those boundaries. Overall heterogeneity was moderate, with I-squared of 42.3 percent. Node-splitting tests did not identify significant inconsistency, and Egger's regression did not indicate significant funnel-plot asymmetry. Removing three studies with elevated risk of bias changed each category's effect by less than 0.06. These checks support the overall finding that AI-supported approaches can improve motivation relative to the included comparison conditions, but they do not turn indirect category rankings into head-to-head evidence.
+
+The study also identifies mechanisms worth testing rather than assuming. Language-learning applications may support competence and autonomy through adaptive difficulty, progress markers, and self-paced practice. Chatbots may reduce anxiety by offering a low-stakes conversational partner. Writing assistants can provide task-specific feedback but may create a more transactional experience. The authors organize these possibilities into an AI-Scaffolded English-Medium Instruction framework: foundational language practice, task-specific writing support, and interactive conversational engagement, with teacher involvement across the levels.
+
+Important limits remain. Measures of motivation varied across studies. The median intervention lasted only eight weeks, so novelty and longer-term motivational decline are uncertain. Most studies were recent, and initial enthusiasm could inflate effects. The geographic concentration, particularly the nine Chinese studies, limits generalization to other educational systems. Motivation is also not the same as language proficiency, knowledge retention, or independent performance after support is removed.
+
+For Hong Kong schools and universities, the useful conclusion is not to select a product category from the ranking table. A stronger pilot would begin with a specific motivational barrier, choose a tool whose interaction design addresses that barrier, compare it with a credible existing practice, and measure both motivation and independent learning over time. Teacher scaffolding, proficiency differences, equitable access, and intentional fading of assistance should be part of the intervention. The paper supports thoughtful AI-assisted English learning, but it also makes the next research need clear: direct, multi-arm comparisons that test which tools help which learners, under which teaching conditions, and whether the gains persist.`,
+    keyTakeaways: [
+      "The open-access network meta-analysis synthesized 16 studies with 1,923 learners, including 11 chatbot studies, two language-app studies and three writing-assistant studies.",
+      "Each AI category outperformed traditional instruction on learning motivation, with pooled Hedges' g estimates of 0.907 for language apps, 0.824 for chatbots and 0.692 for writing assistants.",
+      "The category ranking is preliminary because all AI-to-AI comparisons were indirect, the smaller categories had few studies, interventions were short and the evidence was geographically concentrated.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the review supports targeted AI-assisted English-learning pilots while warning against product-category league tables without direct comparisons, durable learning measures, teacher scaffolding and evidence that motivation survives after support is faded.",
+    sourceUrl: "https://doi.org/10.1186/s40862-026-00421-9",
+    sourceUrls: [
+      {
+        label: "Open-access journal article and DOI",
+        url: "https://doi.org/10.1186/s40862-026-00421-9",
+      },
+      {
+        label: "Springer Nature article page",
+        url: "https://link.springer.com/article/10.1186/s40862-026-00421-9",
+      },
+    ],
+    createdAt: "2026-07-31",
+  },
+  {
     id: "aied-037",
     slug: "news-chatgpt-health-claude-reflect-gemini-education-personal-context",
     title: "News report: ChatGPT Health, Claude Reflect and Gemini Education make personal context consequential",

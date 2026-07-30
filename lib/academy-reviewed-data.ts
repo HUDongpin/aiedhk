@@ -804,7 +804,7 @@ In education, schema theory cautions against both content-free discovery and one
     level: "core",
     tags: ["transformers", "self-attention", "context windows"],
     image: "/images/academy/covers/academy-023-transformers-attention-and-context-windows.png",
-    imageAlt: "A Black educator and South Asian and White adult learners trace a few large token panels through a transparent attention-routing apparatus in a bright technology studio",
+    imageAlt: "A Black educator and South Asian and White adult learners inspect six object-image panels and cyan attention paths inside a movable glass context frame",
     summaryAudio: "/audio/academy/academy-023-transformers-attention-and-context-windows-summary.m4a",
     summaryAudioTitle: "Listen to Transformers, Attention, and Context Windows",
     shortSummary: "How transformer layers route information with self-attention, what a context window actually contains, and why more context does not guarantee faithful use.",

@@ -49,6 +49,8 @@ test("summary audio player can use a static audio source without live TTS", () =
 
   assert.match(playerSource, /src=\{audioSrc\s*\|\|\s*undefined\}/);
   assert.match(playerSource, /const \[audioSrc,\s*setAudioSrc\]\s*=\s*useState\(src\s*\?\?\s*""\)/);
+  assert.match(playerSource, /"Audio summary"/);
+  assert.doesNotMatch(playerSource, /"CosyVoice summary"/);
 });
 
 test("research detail page uses local summary audio without dynamic TTS fallback", () => {

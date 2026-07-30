@@ -43,7 +43,7 @@ export default function SummaryAudioPlayer({ src, ttsEndpoint, title = "Listen t
           ? "Buffering"
           : isPlaying
             ? "Now playing"
-            : "CosyVoice summary";
+            : "Audio summary";
 
   useEffect(() => {
     if (audioRef.current) audioRef.current.playbackRate = playbackRate;

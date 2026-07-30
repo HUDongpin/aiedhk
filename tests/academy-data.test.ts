@@ -4,15 +4,21 @@ import path from "node:path";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("Academy publishes exactly sixteen ordered reviewed English lessons", () => {
+test("Academy publishes exactly twenty-six ordered reviewed English lessons", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.equal(lessons.length, 16);
+  assert.equal(lessons.length, 26);
   assert.deepEqual(
     lessons.map((lesson) => lesson.id),
     [
+      "academy-025",
+      "academy-026",
       "academy-015",
       "academy-016",
+      "academy-023",
+      "academy-024",
+      "academy-021",
+      "academy-022",
       "academy-013",
       "academy-014",
       "academy-011",
@@ -21,6 +27,10 @@ test("Academy publishes exactly sixteen ordered reviewed English lessons", () =>
       "academy-010",
       "academy-007",
       "academy-008",
+      "academy-019",
+      "academy-020",
+      "academy-017",
+      "academy-018",
       "academy-006",
       "academy-005",
       "academy-004",
@@ -33,22 +43,27 @@ test("Academy publishes exactly sixteen ordered reviewed English lessons", () =>
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 8);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 8);
+  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 13);
+  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 13);
   assert.deepEqual(
-    new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016"].includes(lesson.id)).map((lesson) => lesson.track)),
+    new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016", "academy-017", "academy-018", "academy-019", "academy-020", "academy-021", "academy-022", "academy-023", "academy-024"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
   assert.ok(lessons.every((lesson) => lesson.level === "basics" || lesson.level === "core"));
 });
 
-test("Academy publishes one curriculum pair per successful July release", () => {
+test("Academy publishes the scheduled curriculum pair for every completed July release and catch-up date", () => {
   const lessons = getAcademyLessons("en");
   const catchUpDates = new Map([
     ["2026-07-24T08:00:00.000Z", ["academy-009", "academy-010"]],
     ["2026-07-25T08:00:00.000Z", ["academy-011", "academy-012"]],
     ["2026-07-26T08:00:00.000Z", ["academy-013", "academy-014"]],
+    ["2026-07-21T08:00:00.000Z", ["academy-017", "academy-018"]],
+    ["2026-07-22T08:00:00.000Z", ["academy-019", "academy-020"]],
+    ["2026-07-27T08:00:00.000Z", ["academy-021", "academy-022"]],
+    ["2026-07-28T08:00:00.000Z", ["academy-023", "academy-024"]],
     ["2026-07-29T08:00:00.000Z", ["academy-015", "academy-016"]],
+    ["2026-07-30T08:00:00.000Z", ["academy-025", "academy-026"]],
   ]);
 
   for (const [createdAt, expectedIds] of catchUpDates) {
@@ -78,20 +93,32 @@ test("each launch lesson has complete reviewed copy and one unique stable image 
     "Dual Coding and Multimedia Learning",
     "Prompts, Context, and Model Responses",
     "Scaffolding and the Zone of Proximal Development",
+    "AI Errors, Uncertainty, and Hallucination",
+    "Metacognition and Self-Regulated Learning",
+    "Evaluating AI System Performance",
+    "Motivation, Self-Determination, and Agency",
+    "Embeddings and Semantic Similarity",
+    "Schema Theory",
+    "Transformers, Attention, and Context Windows",
+    "Conceptual Change",
+    "Retrieval-Augmented Generation",
+    "Situated Learning",
   ];
 
   assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));
-  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 16);
-  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 16);
-  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 16);
-  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 16);
-  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 16);
+  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 26);
+  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 26);
+  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 26);
+  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 26);
+  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 26);
+  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 26);
 
   for (const lesson of lessons) {
     const wordCount = lesson.fullSummary.trim().split(/\s+/).length;
     assert.ok(wordCount >= 450 && wordCount <= 550, `${lesson.id} has ${wordCount} summary words`);
     assert.equal(lesson.coreIdeas.length, 3);
     assert.equal(lesson.relatedConcepts.length, 3);
+    assert.match(lesson.listingIdentifier, /^(AI Knowledge|Educational Theory) \d{2,}$/);
     assert.ok(lesson.sourceUrls.length >= 2 && lesson.sourceUrls.length <= 4);
     assert.ok(lesson.sourceUrls.every((source) => /^https:\/\//.test(source.url)));
     assert.ok(lesson.imageAlt.trim().length > 20, `${lesson.id} must include literal image alt text`);
@@ -109,6 +136,32 @@ test("Academy alt text does not normalize banned particle-heavy or fake-person a
 
   for (const lesson of lessons) {
     assert.doesNotMatch(lesson.imageAlt, bannedVisualTerms, `${lesson.id} image alt text describes a banned visual style`);
+  }
+});
+
+test("Academy listing identifiers preserve the complete stable sequence for each track and locale", () => {
+  const english = getAcademyLessons("en");
+  const expectedByTrack = new Map([
+    ["ai-knowledge", { prefix: "AI Knowledge", count: 13 }],
+    ["educational-theory", { prefix: "Educational Theory", count: 13 }],
+  ]);
+
+  for (const [track, expected] of expectedByTrack) {
+    const identifiers = english
+      .filter((lesson) => lesson.track === track)
+      .map((lesson) => lesson.listingIdentifier)
+      .sort((a, b) => Number(a.match(/\d+$/)?.[0]) - Number(b.match(/\d+$/)?.[0]));
+    assert.deepEqual(
+      identifiers,
+      Array.from({ length: expected.count }, (_, index) => `${expected.prefix} ${String(index + 1).padStart(2, "0")}`),
+    );
+  }
+
+  for (const locale of ["zh-hant", "zh-hans", "ar"]) {
+    const localizedById = new Map(getAcademyLessons(locale).map((lesson) => [lesson.id, lesson.listingIdentifier]));
+    for (const lesson of english) {
+      assert.equal(localizedById.get(lesson.id), lesson.listingIdentifier, `${lesson.id} identifier must stay stable in ${locale}`);
+    }
   }
 });
 

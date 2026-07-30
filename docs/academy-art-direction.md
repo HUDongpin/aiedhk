@@ -1,6 +1,12 @@
 # Academy illustration art direction
 
-This contract applies to the single image asset assigned to every Academy lesson.
+This contract applies to every Academy lesson image, including its reuse as a listing-card thumbnail.
+
+## One-image publication model
+
+Each Academy lesson uses exactly one image asset. The lesson detail page displays that asset exactly once as the hero image; the same file may also appear as the lesson-card thumbnail. Do not publish a separate summary image or render the lesson asset a second time below the summary heading.
+
+Preserve previously generated Academy files on disk even when the site no longer references them. Before generating artwork for a future lesson, inspect the unpublished-image inventory and publish a suitable compliant asset first. Generate a new image only when that inventory has no suitable candidate. Every newly published lesson image must be a unique 1600x1000 PNG.
 
 ## Design read
 
@@ -10,7 +16,7 @@ Academy artwork is high-production editorial education imagery for teachers and 
 
 Use concept-rich technology editorial photography: credible real teachers and learners visibly investigate, build, compare, or explain one lesson-specific physical or optical apparatus in a contemporary lab, studio, maker space, or advanced learning environment. Use architectural depth, controlled contrast, refined materials, and a restrained luminous accent to make the lesson concept immediately legible.
 
-The desired result should feel like a carefully art-directed technology magazine feature, not an ordinary classroom snapshot. Each lesson uses this one composition in both its top hero and `Full Lesson Summary` image placement.
+The desired result should feel like a carefully art-directed technology magazine feature, not an ordinary classroom snapshot.
 
 Luminous elements must be sparse continuous surfaces, lines, planes, or a small number of large nodes. They may clarify the educational concept, but they must never become a dense particle field, dotted mesh, or decorative sci-fi overlay.
 
@@ -35,6 +41,10 @@ This owner-defined style uses credible editorial photography of real people in r
 Academy casting must be racially and ethnically diverse. Multi-person scenes must include teachers and learners from visibly different racial or ethnic backgrounds. Single-person scenes must rotate representation across the catalog. Do not default to an all-Asian cast, and avoid tokenism or stereotypes.
 
 The real-person photographic style and technology-studio setting are approved. Only dense particle installations or decorative micro-detail within that otherwise acceptable direction are forbidden.
+
+Multi-person scenes must include teachers and learners from visibly different racial or ethnic backgrounds. Single-person scenes must rotate representation across the Academy catalog. Do not default to an all-Asian cast, and avoid tokenism or stereotypes.
+
+Any visible paper, cards, notebooks, worksheets, or whiteboards must contain credible lesson-related diagrams, sketches, or natural non-legible handwriting. Do not leave these materials blank, and do not substitute generated readable prose.
 
 ## Rejected plain-classroom pattern
 
@@ -63,7 +73,6 @@ Sparse, semantically meaningful diagram nodes, isolated marks, or ordinary photo
 - Start with generous negative space and a controlled object count.
 - Use one concept-specific physical or optical apparatus as the visual anchor.
 - Use a restrained luminous accent with ivory, near-black, metal, glass, or natural wood materials.
-- Reuse the exact same lesson image in the top hero and `Full Lesson Summary` placement; only its rendered dimensions and responsive `sizes` may differ.
 - Make the lesson concept legible through scale, separation, direction, and hierarchy.
 - Show real teachers and learners visibly participating in the educational relationship.
 - Keep every visible teaching surface purposeful and nonblank without relying on generated readable text.
@@ -72,9 +81,9 @@ Sparse, semantically meaningful diagram nodes, isolated marks, or ordinary photo
 
 ## Publication checks
 
-- Assign exactly one image asset to each lesson and use it for both detail-page image placements, the listing card, and social sharing.
-- Keep decommissioned second-detail images in `public/images/academy/summary/` as unassigned future-cover inventory; do not delete them. Review this inventory before generating new artwork. When assigning one to a future lesson, preserve it by moving it into that lesson's canonical `public/images/academy/covers/` path.
-- Normalize the selected lesson image to a real 1600x1000 PNG.
+- Confirm the lesson has exactly one referenced image and the detail page renders it once.
+- Select a suitable unpublished image first; otherwise generate one new lesson-specific asset.
+- Normalize the lesson image to a real 1600x1000 PNG.
 - Write literal alt text that describes visible content.
 - Confirm every published Academy lesson image has a unique SHA-256 hash.
 - Inspect the final normalized image at full size.

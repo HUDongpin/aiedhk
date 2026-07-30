@@ -6,7 +6,7 @@ import { getAcademyLessons } from "@/lib/academy-data";
 test("Academy search spans only title, tags, short summary, core ideas, and education connection", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.deepEqual(filterAcademyLessonList(lessons, { q: "transformer" }).items.map((item) => item.id), ["academy-003"]);
+  assert.deepEqual(filterAcademyLessonList(lessons, { q: "transformer" }).items.map((item) => item.id), ["academy-023", "academy-003"]);
   assert.deepEqual(filterAcademyLessonList(lessons, { q: "reinforcement increases behavior" }).items.map((item) => item.id), ["academy-004"]);
   assert.deepEqual(filterAcademyLessonList(lessons, { q: "elicit prior ideas" }).items.map((item) => item.id), ["academy-006"]);
   assert.deepEqual(
@@ -24,8 +24,8 @@ test("Academy track and level filters combine and pagination clamps to the avail
     pageSize: 1,
   });
 
-  assert.equal(result.total, 7);
-  assert.equal(result.totalPages, 7);
-  assert.equal(result.page, 7);
+  assert.equal(result.total, 9);
+  assert.equal(result.totalPages, 9);
+  assert.equal(result.page, 9);
   assert.deepEqual(result.items.map((item) => item.id), ["academy-001"]);
 });

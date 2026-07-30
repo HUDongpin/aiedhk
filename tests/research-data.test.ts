@@ -24,13 +24,132 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains thirty-nine curated Research News items", () => {
+test("research news fallback contains forty-nine curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 39);
-  assert.equal(papers[0]?.slug, "news-chatgpt-work-claude-cowork-gemini-cross-device-learning");
+  assert.equal(papers.length, 49);
+  assert.equal(papers[0]?.slug, "news-openai-ai-skills-jam-k12-educators");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
+});
+
+test("the six-date backlog contains exactly one research paper and one clearly labeled product-news item per day", () => {
+  const papers = getResearchPapers("en");
+  const expectedByDate = new Map([
+    ["2026-07-22", ["aied-040", "aied-041"]],
+    ["2026-07-26", ["aied-038", "aied-039"]],
+    ["2026-07-27", ["aied-042", "aied-043"]],
+    ["2026-07-28", ["aied-044", "aied-045"]],
+    ["2026-07-29", ["aied-046", "aied-047"]],
+    ["2026-07-30", ["aied-048", "aied-049"]],
+  ]);
+
+  for (const [date, expectedIds] of expectedByDate) {
+    const entries = papers.filter((paper) => paper.createdAt === date);
+    assert.deepEqual(entries.map((paper) => paper.id).sort(), expectedIds);
+    for (const paper of entries) {
+      const wordCount = paper.fullSummary.trim().split(/\s+/).length;
+      if (paper.id === "aied-038" || paper.id === "aied-039") {
+        assert.ok(wordCount >= 700, `${paper.id} should preserve its already-published long-form report`);
+      } else {
+        assert.ok(wordCount >= 480 && wordCount <= 600, `${paper.id} should keep the 500-word detail-page contract`);
+      }
+    }
+
+    const productNews = entries.filter((paper) => paper.type === "policy-ethics");
+    const research = entries.filter((paper) => paper.type !== "policy-ethics");
+    assert.equal(productNews.length, 1, `${date} should contain one product-news item`);
+    assert.equal(research.length, 1, `${date} should contain one research paper`);
+    assert.match(
+      `${productNews[0]?.title} ${productNews[0]?.tags.join(" ")}`,
+      /product news/i,
+      `${date} product news should be explicitly labeled`,
+    );
+  }
+});
+
+test("backlog identifiers aied-038 through aied-049 are continuous and non-duplicated", () => {
+  const ids = getResearchPapers("en")
+    .map((paper) => Number.parseInt(paper.id.replace("aied-", ""), 10))
+    .filter((id) => id >= 38 && id <= 49)
+    .sort((a, b) => a - b);
+
+  assert.deepEqual(ids, [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]);
+});
+
+test("reviewed Research News keeps identifiers, slugs, media paths, and primary sources unique", () => {
+  const papers = getResearchPapers("en");
+  const fields = [
+    ["id", papers.map((paper) => paper.id)],
+    ["slug", papers.map((paper) => paper.slug)],
+    ["cover", papers.map((paper) => paper.image)],
+    ["summary image", papers.map((paper) => paper.summaryImage)],
+    ["summary audio", papers.map((paper) => paper.summaryAudio)],
+    ["primary source", papers.map((paper) => paper.sourceUrl)],
+  ] as const;
+
+  for (const [label, values] of fields) {
+    assert.ok(values.every(Boolean), `${label} values must be present`);
+    assert.equal(new Set(values).size, papers.length, `${label} values must be unique`);
+  }
+});
+
+test("July 30 Research News entries retain their reviewed type, date, and canonical source", () => {
+  const byId = new Map(getResearchPapers("en").map((paper) => [paper.id, paper]));
+
+  assert.deepEqual(
+    {
+      type: byId.get("aied-048")?.type,
+      createdAt: byId.get("aied-048")?.createdAt,
+      sourceUrl: byId.get("aied-048")?.sourceUrl,
+    },
+    { type: "journal", createdAt: "2026-07-30", sourceUrl: "https://doi.org/10.3390/bs16071114" },
+  );
+  assert.deepEqual(
+    {
+      type: byId.get("aied-049")?.type,
+      createdAt: byId.get("aied-049")?.createdAt,
+      sourceUrl: byId.get("aied-049")?.sourceUrl,
+    },
+    {
+      type: "policy-ethics",
+      createdAt: "2026-07-30",
+      sourceUrl: "https://openai.com/index/k-12-educators-practical-skills/",
+    },
+  );
+});
+
+test("July 26 Research News retains the already-published evidence and product scope", () => {
+  const byId = new Map(getResearchPapers("en").map((paper) => [paper.id, paper]));
+  const motivationReview = byId.get("aied-038");
+  const crossDeviceReport = byId.get("aied-039");
+
+  assert.equal(motivationReview?.createdAt, "2026-07-26");
+  assert.ok((motivationReview?.fullSummary.trim().split(/\s+/).length ?? 0) >= 700);
+  assert.equal(motivationReview?.summaryAudioTitle, "Listen to the paper summary");
+  assert.equal(crossDeviceReport?.createdAt, "2026-07-26");
+  assert.deepEqual(crossDeviceReport?.authors, ["OpenAI", "Anthropic", "Google for Education"]);
+  assert.ok(crossDeviceReport?.sourceUrls?.some(({ url }) => url.includes("blog.google")));
+});
+
+test("the ChatGPT learning-outcomes meta-analysis keeps its canonical DOI", () => {
+  const paper = getResearchPapers("en").find((candidate) => candidate.id === "aied-046");
+
+  assert.equal(paper?.sourceUrl, "https://doi.org/10.1057/s41599-026-07019-z");
+  assert.ok(
+    paper?.sourceUrls?.some(({ url }) => url === "https://doi.org/10.1057/s41599-026-07019-z"),
+  );
+});
+
+test("Research News keeps original scheduled dates in descending order instead of update time", () => {
+  const timestamps = getResearchPapers("en").map((paper) => new Date(paper.createdAt).getTime());
+
+  for (let index = 1; index < timestamps.length; index += 1) {
+    assert.ok(
+      timestamps[index - 1] >= timestamps[index],
+      `item ${index + 1} must not appear ahead of an item with a later scheduled date`,
+    );
+  }
 });
 
 test("technology-enhanced CLIL systematic review is classified as Review", () => {
@@ -102,6 +221,29 @@ test("each reviewed paper has a different cover bitmap", () => {
   }
 });
 
+test("backlog cover and summary images use twenty-four distinct 1600x1000 bitmaps with id-aligned filenames", () => {
+  const backlog = getResearchPapers("en").filter((paper) => {
+    const id = Number.parseInt(paper.id.replace("aied-", ""), 10);
+    return id >= 38 && id <= 49;
+  });
+  const hashes = new Set<string>();
+
+  assert.equal(backlog.length, 12);
+  for (const paper of backlog) {
+    assert.ok(paper.summaryImage);
+    assert.ok(paper.image.includes(paper.id), `${paper.image} should include ${paper.id}`);
+    assert.ok(paper.summaryImage.includes(paper.id), `${paper.summaryImage} should include ${paper.id}`);
+    const coverPath = localPublicPath(paper.image);
+    const summaryPath = localPublicPath(paper.summaryImage);
+    assert.deepEqual(pngDimensions(coverPath), { width: 1600, height: 1000 });
+    assert.deepEqual(pngDimensions(summaryPath), { width: 1600, height: 1000 });
+    hashes.add(fileHash(coverPath));
+    hashes.add(fileHash(summaryPath));
+  }
+
+  assert.equal(hashes.size, 24, "every backlog cover and summary image must use a different bitmap");
+});
+
 test("visually duplicated News covers keep their dedicated replacement assets", () => {
   const papers = getResearchPapers("en");
   const nationalDeployments = papers.find((paper) => paper.id === "aied-014");
@@ -134,6 +276,14 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-049",
+      "aied-048",
+      "aied-047",
+      "aied-046",
+      "aied-045",
+      "aied-044",
+      "aied-043",
+      "aied-042",
       "aied-039",
       "aied-038",
       "aied-037",
@@ -142,6 +292,8 @@ test("static summary media assets are available locally", () => {
       "aied-034",
       "aied-033",
       "aied-032",
+      "aied-041",
+      "aied-040",
       "aied-031",
       "aied-030",
       "aied-029",
@@ -189,6 +341,25 @@ test("static summary media assets are available locally", () => {
     assert.ok(height >= 900, `${paper.summaryImage} should have enough vertical detail`);
     assert.equal(audioBuffer.toString("ascii", 4, 8), "ftyp", `${paper.summaryAudio} should be an MP4/M4A media file`);
   }
+});
+
+test("backlog entries aied-038 through aied-049 have non-empty local M4A audio", () => {
+  const backlog = getResearchPapers("en").filter((paper) => {
+    const id = Number.parseInt(paper.id.replace("aied-", ""), 10);
+    return id >= 38 && id <= 49;
+  });
+
+  assert.equal(backlog.length, 12);
+  const hashes = new Set<string>();
+  for (const paper of backlog) {
+    assert.ok(paper.summaryAudio, `${paper.id} should declare summary audio`);
+    const audioBuffer = readFileSync(localPublicPath(paper.summaryAudio));
+    assert.equal(audioBuffer.toString("ascii", 4, 8), "ftyp", `${paper.summaryAudio} should be an M4A file`);
+    assert.ok(audioBuffer.includes(Buffer.from("mdat")), `${paper.summaryAudio} should contain an MP4 media-data atom`);
+    assert.ok(audioBuffer.byteLength > 100_000, `${paper.summaryAudio} should contain audible narration`);
+    hashes.add(createHash("sha256").update(audioBuffer).digest("hex"));
+  }
+  assert.equal(hashes.size, 12, "all backlog narrations must have unique SHA-256 hashes");
 });
 
 test("reviewed papers use human-reviewed translations when present and fall back to English otherwise", () => {

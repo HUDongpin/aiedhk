@@ -11,6 +11,10 @@ interface ResearchCardProps {
 }
 
 export default function ResearchCard({ paper, locale, dictionary, featured = false }: ResearchCardProps) {
+  const numericId = /^aied-(\d+)$/.exec(paper.id)?.[1];
+  const stableNumber = numericId ? String(Number.parseInt(numericId, 10)).padStart(2, "0") : paper.id;
+  const listingIdentifier = `${dictionary.paperTypes[paper.type]} ${stableNumber}`;
+
   return (
     <article className="group overflow-hidden rounded-4xl border border-slate-200 bg-white shadow-card transition duration-300 hover:-translate-y-1 hover:shadow-soft">
       <Link
@@ -31,10 +35,15 @@ export default function ResearchCard({ paper, locale, dictionary, featured = fal
           />
         </div>
         <div className="flex h-full min-w-0 flex-col p-6 sm:p-7">
-          <div className="flex flex-wrap items-center gap-2 text-xs font-black uppercase tracking-[0.18em]">
-            <span className="rounded-full bg-aied-soft px-3 py-1 text-aied-blue">{dictionary.paperTypes[paper.type]}</span>
-            <span className="text-slate-400">
-              {paper.type === "policy-ethics" ? formatDate(paper.createdAt, locale) : paper.year}
+          <div className="flex items-start justify-between gap-4 text-xs font-black uppercase tracking-[0.18em]">
+            <div className="flex min-w-0 flex-wrap items-center gap-2">
+              <span className="rounded-full bg-aied-soft px-3 py-1 text-aied-blue">{dictionary.paperTypes[paper.type]}</span>
+              <span className="text-slate-400">
+                {paper.type === "policy-ethics" ? formatDate(paper.createdAt, locale) : paper.year}
+              </span>
+            </div>
+            <span className="shrink-0 text-right text-[0.68rem] leading-5 text-aied-blue" aria-label={`Article identifier ${listingIdentifier}`}>
+              {listingIdentifier}
             </span>
           </div>
           <h3 className="mt-4 text-xl font-black leading-tight tracking-tight text-aied-ink transition group-hover:text-aied-blue sm:text-2xl">

@@ -3,6 +3,7 @@ import type { AcademyLesson } from "@/lib/types";
 export const reviewedAcademyLessons: AcademyLesson[] = [
   {
     id: "academy-001",
+    listingIdentifier: "AI Knowledge 01",
     slug: "what-artificial-intelligence-is",
     title: "What Artificial Intelligence Is",
     track: "ai-knowledge",
@@ -38,6 +39,7 @@ For learners, the strongest starting point is neither excitement nor fear but pr
   },
   {
     id: "academy-002",
+    listingIdentifier: "AI Knowledge 02",
     slug: "machine-learning-deep-learning-generative-ai",
     title: "Machine Learning, Deep Learning, and Generative AI",
     track: "ai-knowledge",
@@ -73,6 +75,7 @@ In education, the distinctions guide better decisions. A teacher might use a con
   },
   {
     id: "academy-003",
+    listingIdentifier: "AI Knowledge 03",
     slug: "how-large-language-models-generate-text",
     title: "How Large Language Models Generate Text",
     track: "ai-knowledge",
@@ -108,6 +111,7 @@ For education, mechanism matters. Students should understand why clear prose can
   },
   {
     id: "academy-004",
+    listingIdentifier: "Educational Theory 01",
     slug: "behaviorism-learning-through-consequences",
     title: "Behaviorism and Learning Through Consequences",
     track: "educational-theory",
@@ -143,6 +147,7 @@ A balanced teacher uses behaviorist tools transparently and selectively. The des
   },
   {
     id: "academy-005",
+    listingIdentifier: "Educational Theory 02",
     slug: "cognitive-load-theory",
     title: "Cognitive Load Theory",
     track: "educational-theory",
@@ -178,6 +183,7 @@ In classrooms, cognitive load theory encourages diagnosis before redesign. What 
   },
   {
     id: "academy-006",
+    listingIdentifier: "Educational Theory 03",
     slug: "constructivism-active-knowledge-building",
     title: "Constructivism and Active Knowledge Building",
     track: "educational-theory",
@@ -213,6 +219,7 @@ In education, the perspective supports inquiry, discussion, project work, format
   },
   {
     id: "academy-007",
+    listingIdentifier: "AI Knowledge 04",
     slug: "training-validation-and-test-data",
     title: "Training, Validation, and Test Data",
     track: "ai-knowledge",
@@ -248,6 +255,7 @@ Educational AI makes these distinctions concrete. Suppose a system predicts whic
   },
   {
     id: "academy-008",
+    listingIdentifier: "Educational Theory 04",
     slug: "working-memory-and-long-term-memory",
     title: "Working Memory and Long-Term Memory",
     track: "educational-theory",
@@ -283,6 +291,7 @@ Instruction should respect the limited workspace while deliberately building the
   },
   {
     id: "academy-009",
+    listingIdentifier: "AI Knowledge 05",
     slug: "supervised-unsupervised-reinforcement-learning",
     title: "Supervised, Unsupervised, and Reinforcement Learning",
     track: "ai-knowledge",
@@ -318,6 +327,7 @@ Real systems can combine these settings. A model may learn representations witho
   },
   {
     id: "academy-010",
+    listingIdentifier: "Educational Theory 05",
     slug: "retrieval-practice",
     title: "Retrieval Practice",
     track: "educational-theory",
@@ -353,6 +363,7 @@ Digital and AI tools can schedule prompts, vary examples, and invite explanation
   },
   {
     id: "academy-011",
+    listingIdentifier: "AI Knowledge 06",
     slug: "features-labels-and-representations",
     title: "Features, Labels, and Learned Representations",
     track: "ai-knowledge",
@@ -388,6 +399,7 @@ Educational evaluation should trace the whole chain from observation to represen
   },
   {
     id: "academy-012",
+    listingIdentifier: "Educational Theory 06",
     slug: "spacing-and-interleaving",
     title: "Spacing and Interleaving",
     track: "educational-theory",
@@ -423,6 +435,7 @@ Digital systems can schedule review and vary practice, but simple frequency rule
   },
   {
     id: "academy-013",
+    listingIdentifier: "AI Knowledge 07",
     slug: "what-neural-networks-learn",
     title: "What Neural Networks Learn",
     track: "ai-knowledge",
@@ -458,6 +471,7 @@ For educational use, the practical question is not whether a network thinks like
   },
   {
     id: "academy-014",
+    listingIdentifier: "Educational Theory 07",
     slug: "dual-coding-and-multimedia-learning",
     title: "Dual Coding and Multimedia Learning",
     track: "educational-theory",
@@ -493,6 +507,7 @@ Accessibility is part of multimedia quality. Images need meaningful alternatives
   },
   {
     id: "academy-015",
+    listingIdentifier: "AI Knowledge 08",
     slug: "prompts-context-and-model-responses",
     title: "Prompts, Context, and Model Responses",
     track: "ai-knowledge",
@@ -529,6 +544,7 @@ In education, prompting is best treated as a form of task design followed by eva
   },
   {
     id: "academy-016",
+    listingIdentifier: "Educational Theory 08",
     slug: "scaffolding-and-the-zone-of-proximal-development",
     title: "Scaffolding and the Zone of Proximal Development",
     track: "educational-theory",
@@ -562,5 +578,366 @@ Digital and AI systems can offer hints, examples, and conversational guidance, b
       { label: "Vygotsky: Mind in Society", url: "https://books.google.com/books?id=RxjjUefze_oC" },
     ],
     createdAt: "2026-07-29T08:00:00.000Z",
+  },
+  {
+    id: "academy-017",
+    listingIdentifier: "AI Knowledge 09",
+    slug: "ai-errors-uncertainty-and-hallucination",
+    title: "AI Errors, Uncertainty, and Hallucination",
+    track: "ai-knowledge",
+    level: "basics",
+    tags: ["AI errors", "uncertainty", "hallucination"],
+    image: "/images/academy/covers/academy-017-ai-errors-uncertainty-and-hallucination.png",
+    imageAlt: "A Black educator, an East Asian learner, and a White learner inspect maps, evidence panels, magnifiers, and a confidence gauge on a three-part verification console",
+    summaryAudio: "/audio/academy/academy-017-ai-errors-uncertainty-and-hallucination-summary.m4a",
+    summaryAudioTitle: "Listen to AI Errors, Uncertainty, and Hallucination",
+    shortSummary: "How to distinguish AI errors, hallucination, and uncertainty, evaluate evidence, and match verification and oversight to educational consequences.",
+    fullSummary: `An AI error is an output that fails to meet a relevant requirement. The requirement may concern factual accuracy, reasoning, classification, safety, fairness, citation, or fit with the task. Different failures need different responses. A spelling error can be corrected directly, while an unsupported medical recommendation or an unfair educational decision requires stronger safeguards. Calling every failure a hallucination hides these differences and can make evaluation less precise. This approach also prevents a single label from obscuring whether the problem came from missing evidence, poor instructions, or unsuitable system design.
+
+Hallucination usually refers to generated content that appears plausible but is unsupported, inconsistent with the provided evidence, or false. A language model produces likely token sequences rather than checking every statement against the world. It may invent a reference, combine details from different sources, or continue an incorrect premise in fluent language. Retrieval and tools can provide better evidence, but they do not guarantee that the model will use it faithfully. A cited source must still be opened and compared with the claim.
+
+Uncertainty concerns what is not known and how strongly a conclusion is supported. Some AI systems provide probability scores, yet a high score is not automatically a reliable probability of correctness. Calibration asks whether predictions made with a stated confidence are correct at a corresponding rate across suitable cases. Generative systems often express confidence through language that may not match factual reliability. Asking a model to state uncertainty can be useful for reflection, but its verbal caution or confidence should not replace external evidence.
+
+Evaluation should begin with the intended use. Teams can build test cases that represent common inputs, difficult boundaries, different learner groups, and conditions likely to change. They can record error types rather than relying only on an average score. For high-impact uses, people need clear routes to review, override, and challenge outputs. Monitoring after release matters because data, user behavior, and system components can change. Good documentation separates observed performance from assumptions and states where evidence is limited.
+
+In education, teachers can turn uncertain outputs into disciplined inquiry without normalizing inaccuracy. Learners can mark claims that require verification, trace quotations to original sources, compare answers with course materials, and explain why an error matters. Teachers should not ask students to detect failures without giving them adequate subject knowledge, time, and access to evidence. Institutions should match oversight to consequences: brainstorming carries different risk from grading, placement, or wellbeing advice. The practical habit is to pause before trusting fluency, identify the claim being made, locate independent support, and decide who remains accountable. AI literacy includes knowing that useful systems can still be wrong, uncertainty can be poorly communicated, and responsible use depends on evidence and human judgment.`,
+    coreIdeas: [
+      "AI errors include different failures of accuracy, reasoning, safety, fairness, citation, or task fit and should not all be called hallucinations.",
+      "Fluent language and stated confidence are not reliable measures of truth, so claims and citations require independent checking.",
+      "Evaluation and human oversight should reflect the intended use, affected learners, likely error types, and consequences of failure.",
+    ],
+    educationConnection: "Give learners adequate subject knowledge and credible sources, then ask them to classify errors, verify claims, and explain how the consequence of a mistake should change the required oversight.",
+    relatedConcepts: ["Calibration", "Grounding", "Human oversight"],
+    sourceUrls: [
+      { label: "Ji and colleagues: hallucination survey", url: "https://doi.org/10.1145/3571730" },
+      { label: "Guo and colleagues on calibration", url: "https://proceedings.mlr.press/v70/guo17a.html" },
+      { label: "NIST Generative AI Profile", url: "https://doi.org/10.6028/NIST.AI.600-1" },
+    ],
+    createdAt: "2026-07-21T08:00:00.000Z",
+  },
+  {
+    id: "academy-018",
+    listingIdentifier: "Educational Theory 09",
+    slug: "metacognition-and-self-regulated-learning",
+    title: "Metacognition and Self-Regulated Learning",
+    track: "educational-theory",
+    level: "basics",
+    tags: ["metacognition", "self-regulated learning", "learning strategies"],
+    image: "/images/academy/covers/academy-018-metacognition-and-self-regulated-learning.png",
+    imageAlt: "An East Asian educator and Black and South Asian adult learners compare a wooden bridge model with planning, monitoring, and revision diagrams",
+    summaryAudio: "/audio/academy/academy-018-metacognition-and-self-regulated-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Metacognition and Self-Regulated Learning",
+    shortSummary: "How learners plan, monitor, and evaluate their learning, and how teachers and AI tools can strengthen rather than replace self-regulation.",
+    fullSummary: `Metacognition is knowledge and regulation of one's own thinking and learning. It includes understanding what a task demands, recognizing the limits of current knowledge, selecting a strategy, monitoring progress, and evaluating the result. Self-regulated learning is a broader process that also includes goals, motivation, emotion, behavior, and management of time or resources. The concepts overlap, but they are not identical. Metacognitive monitoring helps learners decide when and how to regulate their learning.
+
+Self-regulation is often described as a cycle. Before a task, learners interpret requirements, set goals, choose strategies, and anticipate obstacles. During performance, they monitor comprehension, effort, and progress, then adjust what they are doing. Afterward, they compare the outcome with suitable criteria and reflect on causes. That reflection shapes the next attempt. The phases are not a simple checklist. Learners may move back and forth as new information, feedback, or difficulty changes the task.
+
+Monitoring can be inaccurate. Familiar material may feel learned because it is easy to reread, while the learner cannot retrieve or apply it without cues. Confidence can also be too low when effortful practice feels difficult even though it is productive. Effective learners use observable evidence rather than relying on feelings alone. They test recall, explain an idea, solve a new problem, compare work with criteria, and inspect errors. Feedback is most useful when it helps them identify the gap and choose a next action, not merely receive a score.
+
+Teachers can make regulation visible by modeling how an expert plans, checks, and revises. Prompts such as "What is your goal?", "What evidence supports this step?", and "What will you try next?" can focus attention on decisions. Supports should be concise and gradually withdrawn so that reflection does not become another form completed for compliance. Strategy instruction should connect a method to the conditions in which it works. Learners need opportunities to choose, adapt, and explain strategies across different tasks. Over time, learners should become less dependent on prompts and more capable of initiating these questions for themselves.
+
+Digital and AI tools can support planning, generate practice questions, organize feedback, or invite reflection, but they can also weaken regulation if they make every decision or provide answers before learners attempt the work. A useful design preserves learner agency and creates checkpoints for prediction, independent effort, verification, and revision. Teachers can ask students to document what assistance they used and how their judgment changed. Data dashboards may inform monitoring, but traces such as clicks or time do not directly reveal understanding or motivation. The educational aim is not constant self-surveillance. It is increasingly accurate awareness and purposeful control: learners know what they are trying to achieve, gather evidence about progress, select an appropriate response, and carry that knowledge into future learning.`,
+    coreIdeas: [
+      "Metacognition concerns knowledge and regulation of thinking, while self-regulated learning also includes motivation, emotion, behavior, goals, and resources.",
+      "Planning, monitoring, strategy adjustment, and reflection form a recurring cycle informed by evidence rather than feelings of familiarity alone.",
+      "Teaching and digital tools should make regulation visible while preserving independent effort, learner choice, and eventual control.",
+    ],
+    educationConnection: "Model how to plan, monitor, and revise, then give learners opportunities to gather evidence, choose strategies, explain changes, and complete later attempts with less prompting.",
+    relatedConcepts: ["Metacognitive monitoring", "Strategy selection", "Learner agency"],
+    sourceUrls: [
+      { label: "Flavell on metacognitive monitoring", url: "https://doi.org/10.1037/0003-066X.34.10.906" },
+      { label: "Zimmerman on self-regulated learning", url: "https://doi.org/10.1207/s15430421tip4102_2" },
+      { label: "Panadero review of self-regulated learning", url: "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2017.00422/full" },
+    ],
+    createdAt: "2026-07-21T08:00:00.000Z",
+  },
+  {
+    id: "academy-019",
+    listingIdentifier: "AI Knowledge 10",
+    slug: "evaluating-ai-system-performance",
+    title: "Evaluating AI System Performance",
+    track: "ai-knowledge",
+    level: "basics",
+    tags: ["AI evaluation", "performance metrics", "model testing"],
+    image: "/images/academy/covers/academy-019-evaluating-ai-system-performance.png",
+    imageAlt: "A Black educator and an East Asian adult learner inspect repeated geometric test objects inside a three-compartment technology evaluation apparatus",
+    summaryAudio: "/audio/academy/academy-019-evaluating-ai-system-performance-summary.m4a",
+    summaryAudioTitle: "Listen to Evaluating AI System Performance",
+    shortSummary: "How to define an AI evaluation claim, select representative test data and useful metrics, inspect uneven failures, and monitor performance in context.",
+    fullSummary: `Evaluating an AI system begins by defining the decision or task it is meant to support. “Good performance” is not a property of a model in the abstract. It is a claim about a particular population, setting, output, and consequence. A writing-feedback tool, a plagiarism detector, and a model that recommends learning resources need different evidence. Evaluators should state the intended use, identify a reasonable baseline, specify unacceptable failures, and decide what improvement would be educationally meaningful before looking at a headline score. The evaluation plan should name the responsible reviewers and record decisions made before testing, reducing the temptation to choose a favorable metric after results are known.
+
+Evidence should come from data that are separate from the examples used to fit or tune the system. A representative test set needs cases resembling real use, including ordinary examples, difficult boundary cases, and groups likely to experience different outcomes. If the test set is narrow, outdated, duplicated, or contaminated by training data, an impressive result may not transfer. Evaluation should also document who is represented, how labels were produced, what disagreements occurred, and which conditions remain outside the evidence.
+
+The right metric depends on the error cost. Accuracy summarizes the proportion of correct classifications, but it can mislead when one class is rare. Precision asks how often positive predictions are correct; recall asks how many actual positive cases are found. Raising one may lower the other. A school screening tool that misses learners needing support creates a different harm from one that sends too many learners for review. Thresholds should therefore be chosen with affected people, workload, and consequences in view, not merely to maximize one number.
+
+Aggregate metrics can hide systematic weakness. Evaluators should inspect results across relevant subgroups, languages, topics, input quality, and changing conditions. They can test robustness with carefully designed variations, examine calibration when probabilities guide decisions, and conduct qualitative error analysis to learn why failures occur. Human evaluation is useful for open-ended outputs, but raters need clear criteria and agreement checks. Safety, accessibility, privacy, fairness, latency, and cost may be part of performance when they determine whether a system works responsibly in practice.
+
+Evaluation continues after release. User behavior, data, policies, and connected components change, so teams need monitoring, feedback channels, incident review, and criteria for pausing or revising the system. Model cards and similar documentation should distinguish measured results from assumptions and record limitations. In education, students can compare two systems on the same task, build a small test set, calculate several metrics, inspect errors, and argue which evidence matters. The central lesson is disciplined comparison: define the educational purpose, test under relevant conditions, interpret trade-offs, and keep accountable human judgment around consequential uses.`,
+    coreIdeas: [
+      "AI performance is a use-specific claim about a task, population, setting, baseline, and consequence rather than one universal score.",
+      "Representative held-out cases, multiple metrics, subgroup analysis, and qualitative error review reveal trade-offs hidden by aggregate accuracy.",
+      "Evaluation must continue after release through documentation, monitoring, feedback, incident review, and accountable human decisions.",
+    ],
+    educationConnection: "Have learners define a classroom AI task, build a small representative test set, compare accuracy, precision, recall, and error types, then justify which evidence matters for the consequences.",
+    relatedConcepts: ["Precision and recall", "Model cards", "Post-deployment monitoring"],
+    sourceUrls: [
+      { label: "Google ML: accuracy, precision, and recall", url: "https://developers.google.com/machine-learning/crash-course/classification/accuracy-precision-recall" },
+      { label: "NIST AI RMF Core", url: "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/" },
+      { label: "Model Cards for Model Reporting", url: "https://doi.org/10.1145/3287560.3287596" },
+    ],
+    createdAt: "2026-07-22T08:00:00.000Z",
+  },
+  {
+    id: "academy-020",
+    listingIdentifier: "Educational Theory 10",
+    slug: "motivation-self-determination-and-agency",
+    title: "Motivation, Self-Determination, and Agency",
+    track: "educational-theory",
+    level: "basics",
+    tags: ["motivation", "self-determination theory", "learner agency"],
+    image: "/images/academy/covers/academy-020-motivation-self-determination-and-agency.png",
+    imageAlt: "A Middle Eastern educator and Black and East Asian adult learners make meaningful choices at a branching project station while reviewing visible progress evidence",
+    summaryAudio: "/audio/academy/academy-020-motivation-self-determination-and-agency-summary.m4a",
+    summaryAudioTitle: "Listen to Motivation, Self-Determination, and Agency",
+    shortSummary: "How autonomy, competence, relatedness, and learner agency shape the quality of motivation—and how structure and AI can support meaningful choice.",
+    fullSummary: `Motivation is not only how much energy a learner shows; it also concerns why the learner acts. Self-determination theory distinguishes more autonomous motivation, in which activity is interesting or personally valued, from controlled motivation driven mainly by pressure, reward, guilt, or fear. A learner can work hard under either condition, yet the quality of engagement, persistence, and wellbeing may differ. Motivation also changes across tasks and contexts, so labels such as “motivated student” can conceal how teaching conditions shape participation. This distinction matters because visible compliance can resemble committed learning for a short period, even while the learner is avoiding risk, protecting self-worth, or waiting for external direction.
+
+Three psychological needs help explain supportive conditions. Autonomy is the experience of volition and meaningful choice, not the absence of structure or guidance. Competence is the sense that effective action is possible and developing, supported by optimally challenging work and informative feedback. Relatedness is feeling respected, included, and connected to others. These needs interact. Choice without enough knowledge can overwhelm, challenge without support can frustrate competence, and feedback delivered without care can weaken belonging even when technically accurate.
+
+Learner agency extends the picture from feeling motivated to contributing intentionally to learning. Agentic learners ask questions, express preferences, seek clarification, propose goals, and influence how activity develops. Agency does not mean that every request must be granted or that responsibility rests entirely on the learner. Teachers shape real possibilities through task design, explanations, routines, resources, and responsiveness. Productive classrooms combine clear expectations with room for learners to make consequential decisions and see how their actions affect progress.
+
+Autonomy-supportive teaching offers meaningful options within useful boundaries, explains the rationale for necessary constraints, acknowledges learners’ perspectives, and uses language that invites engagement rather than control. Competence grows when goals are clear, tasks are neither trivial nor impossible, strategies are teachable, and feedback identifies a workable next step. Relatedness grows through reliable care, fair participation, and collaborative norms. Rewards, points, or gamified features are not automatically harmful, but they can narrow attention when they become the main reason for doing work or signal that learning is merely compliance.
+
+AI tools can either support or displace motivation and agency. A tool may offer alternative explanations, adjustable practice, or feedback that helps a learner choose the next action. It may also make every decision, optimize for clicks, or deliver answers before independent effort. Educators can preserve agency by asking learners to set a goal, select among justified forms of assistance, attempt the task, evaluate the feedback, and decide what to revise. The aim is not unlimited choice. It is a structured environment in which learners understand purposes, experience growing capability and belonging, and increasingly direct their learning with evidence and responsibility.`,
+    coreIdeas: [
+      "The quality of motivation matters: autonomous reasons for learning differ from action driven mainly by pressure, reward, guilt, or fear.",
+      "Autonomy means volition within meaningful structure, while competence and relatedness support effective action and belonging.",
+      "Learner agency grows when students can contribute, choose, seek support, evaluate feedback, and increasingly direct consequential parts of learning.",
+    ],
+    educationConnection: "Offer meaningful choices within clear boundaries, explain necessary constraints, provide actionable feedback and belonging, then let learners decide how evidence should shape their next attempt.",
+    relatedConcepts: ["Autonomy support", "Psychological needs", "Agentic engagement"],
+    sourceUrls: [
+      { label: "Ryan and Deci on self-determination theory", url: "https://selfdeterminationtheory.org/SDT/documents/2000_RyanDeci_SDT.pdf" },
+      { label: "Niemiec and Ryan on autonomy in education", url: "https://doi.org/10.1177/1477878509104318" },
+      { label: "Reeve and Tseng on agentic engagement", url: "https://doi.org/10.1016/j.cedpsych.2011.05.002" },
+    ],
+    createdAt: "2026-07-22T08:00:00.000Z",
+  },
+  {
+    id: "academy-021",
+    listingIdentifier: "AI Knowledge 11",
+    slug: "embeddings-and-semantic-similarity",
+    title: "Embeddings and Semantic Similarity",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["embeddings", "semantic similarity", "vector search"],
+    image: "/images/academy/covers/academy-021-embeddings-and-semantic-similarity.png",
+    imageAlt: "A Latino educator and East Asian and Middle Eastern adult learners compare a riverbank query image with three candidates linked by sparse cyan similarity bands",
+    summaryAudio: "/audio/academy/academy-021-embeddings-and-semantic-similarity-summary.m4a",
+    summaryAudioTitle: "Listen to Embeddings and Semantic Similarity",
+    shortSummary: "How models represent words, sentences, images, and documents as vectors—and why computational similarity is useful but never neutral or self-validating.",
+    fullSummary: `An embedding is a learned numerical representation of an item such as a word, sentence, image, learner response, or document. Instead of storing the item as a human-readable definition, a model maps it to a vector: an ordered list of numbers in a multidimensional space. Training adjusts these numbers so that relationships useful for an objective become easier to compute. Embeddings are therefore not neutral coordinates waiting to be discovered. Their geometry reflects the data, model architecture, and task used to learn them.
+
+Semantic similarity is often estimated by comparing vectors. Cosine similarity measures the angle between two vectors, while dot product and distance-based measures capture related notions under different assumptions. Items with nearby representations may share topic, function, style, or usage. The meaning of “nearby” depends on the model. A space trained to predict neighboring words can organize language differently from one trained to match questions with relevant passages. Similarity is a model output, not a guarantee that two items are equivalent, true, or educationally appropriate. Different models can therefore produce different neighborhoods for the same material.
+
+Some embeddings assign one vector to each token regardless of context. Contextual models instead create different representations for a token according to surrounding language, helping distinguish meanings such as “bank” beside a river and “bank” in finance. Sentence and document embeddings compress larger units into fixed-size vectors that support rapid comparison. Systems can index many vectors and retrieve nearest neighbors efficiently. This enables semantic search, clustering, recommendation, duplicate detection, and retrieval-augmented generation, where selected documents enter a model’s current context.
+
+Compression creates trade-offs. A single vector cannot preserve every detail of a long text, and small wording or language changes may move an item unexpectedly. Training data can encode cultural stereotypes and uneven representation. High similarity can reflect superficial patterns or sensitive attributes rather than the concept an educator intends. Retrieval quality also depends on how text is divided, which model produces embeddings, how candidates are filtered, and how many results are returned. A plausible neighbor must still be checked against the original source and the task.
+
+In education, embeddings can help learners find related explanations, group open responses for teacher review, or connect questions with a curated resource collection. Evaluation should use authentic queries and judge whether retrieved items are relevant, diverse, accurate, and useful for the intended learners. Teachers can make the mechanism visible with a small activity: ask students to predict which phrases should be close, inspect model-ranked neighbors, and explain surprising matches or omissions. This turns a hidden vector operation into a critical literacy exercise. Embeddings offer efficient relational structure, but people must define the purpose, inspect failures, protect sensitive information, and decide whether computational similarity represents the kind of meaning the learning task requires.`,
+    coreIdeas: [
+      "Embeddings are task-shaped numerical representations whose geometry reflects training data, model design, and learning objectives.",
+      "Vector similarity can support search, clustering, recommendation, and retrieval, but closeness does not guarantee equivalence, truth, or educational value.",
+      "Authentic evaluation must inspect relevance, diversity, bias, compression losses, privacy, and the original sources behind retrieved items.",
+    ],
+    educationConnection: "Ask learners to predict which phrases or resources should be close, inspect an embedding model’s neighbors, and explain useful matches, surprising omissions, and task-specific risks.",
+    relatedConcepts: ["Vector space", "Cosine similarity", "Semantic retrieval"],
+    sourceUrls: [
+      { label: "Google ML: embeddings", url: "https://developers.google.com/machine-learning/crash-course/embeddings" },
+      { label: "Google ML: embedding space", url: "https://developers.google.com/machine-learning/crash-course/embeddings/embedding-space" },
+      { label: "Sentence-BERT", url: "https://aclanthology.org/D19-1410/" },
+    ],
+    createdAt: "2026-07-27T08:00:00.000Z",
+  },
+  {
+    id: "academy-022",
+    listingIdentifier: "Educational Theory 11",
+    slug: "schema-theory",
+    title: "Schema Theory",
+    track: "educational-theory",
+    level: "core",
+    tags: ["schema theory", "prior knowledge", "knowledge organization"],
+    image: "/images/academy/covers/academy-022-schema-theory.png",
+    imageAlt: "A White educator and Black and East Asian adult learners reorganize illustrated animal and plant cards across a three-part wooden knowledge frame",
+    summaryAudio: "/audio/academy/academy-022-schema-theory-summary.m4a",
+    summaryAudioTitle: "Listen to Schema Theory",
+    shortSummary: "How prior knowledge structures guide attention, inference, and memory—and how teaching can activate, differentiate, and revise those structures.",
+    fullSummary: `A schema is an organized knowledge structure that helps a person interpret information, anticipate relationships, and decide what deserves attention. Schemas develop through experience and can represent familiar situations, concepts, events, or roles. When reading a story about a restaurant, for example, prior knowledge about ordering, eating, and paying helps connect details that the text does not state. Learning is therefore not simply placing isolated facts into memory. New information is interpreted through structures the learner already brings.
+
+Schemas make thinking efficient. They guide attention, support inferences, organize recall, and reduce the effort needed to understand recurring patterns. They can also distort. People may overlook details that do not fit an active schema, fill gaps with expected information, or remember material in a schema-consistent way. Research showing that readers recall different details when adopting different perspectives illustrates that the same text can be organized through different knowledge structures. A schema is useful, but it is neither a complete record nor a fixed container.
+
+Prior knowledge strongly affects learning because it provides places to connect new ideas. When relevant knowledge is accurate and accessible, learners can understand and remember more. When it is incomplete or inappropriate, the same organizing power can support confident misunderstanding. Teachers need to discover what learners are using, not merely whether they have heard a term. Quick predictions, concept maps, examples and nonexamples, explanations, and comparison tasks can reveal relationships learners currently assume. Activation also matters: knowledge that exists but is not cued may not guide the current task.
+
+Instruction can help learners build and revise schemas. Teachers can begin with a familiar case, make the underlying structure explicit, compare it with varied cases, and ask learners to retrieve and apply the pattern later. Worked examples can highlight which features matter, while contrasting cases can prevent a schema from becoming too narrow. Diagrams and well-organized notes can show relations among ideas, but their value comes from meaningful structure rather than decoration. Learners also need opportunities to reorganize knowledge when exceptions or new evidence appear.
+
+In education, schema theory cautions against both content-free discovery and one-way transmission. Learners require enough guidance and examples to form productive structures, yet teachers must engage the meanings learners already hold. AI systems can activate prior knowledge with questions or propose analogies, but a generated analogy may emphasize the wrong relationship. A useful routine asks learners to state what they expect, examine a case, identify which prior pattern they used, and revise a diagram or explanation. The goal is flexible organization: knowledge that supports inference and transfer while remaining open to correction. Understanding schemas helps educators design sequences that connect, differentiate, retrieve, and refine ideas instead of treating every lesson as a fresh list of facts.`,
+    coreIdeas: [
+      "Schemas organize prior knowledge, guiding attention, inference, interpretation, and recall while also creating expectations that can distort memory.",
+      "Learning depends on which knowledge structures are available and activated, so a familiar term does not prove a productive schema is in use.",
+      "Varied examples, contrasting cases, retrieval, explanation, and reorganization help learners build flexible schemas that support transfer and correction.",
+    ],
+    educationConnection: "Elicit a prediction or concept map, compare varied cases, make the underlying relationship explicit, and ask learners to revise and apply their schema in a new context.",
+    relatedConcepts: ["Prior knowledge", "Knowledge organization", "Transfer"],
+    sourceUrls: [
+      { label: "Anderson on schema-directed processes", url: "https://eric.ed.gov/?id=ED142977" },
+      { label: "Anderson and Pichert on perspective and recall", url: "https://doi.org/10.1016/S0022-5371(78)90485-1" },
+      { label: "OpenStax: schemas and cognition", url: "https://openstax.org/books/psychology-2e/pages/7-1-what-is-cognition" },
+    ],
+    createdAt: "2026-07-27T08:00:00.000Z",
+  },
+  {
+    id: "academy-023",
+    listingIdentifier: "AI Knowledge 12",
+    slug: "transformers-attention-and-context-windows",
+    title: "Transformers, Attention, and Context Windows",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["transformers", "self-attention", "context windows"],
+    image: "/images/academy/covers/academy-023-transformers-attention-and-context-windows.png",
+    imageAlt: "A Black educator and South Asian and White adult learners inspect six object-image panels and cyan attention paths inside a movable glass context frame",
+    summaryAudio: "/audio/academy/academy-023-transformers-attention-and-context-windows-summary.m4a",
+    summaryAudioTitle: "Listen to Transformers, Attention, and Context Windows",
+    shortSummary: "How transformer layers route information with self-attention, what a context window actually contains, and why more context does not guarantee faithful use.",
+    fullSummary: `A transformer is a neural-network architecture designed to process relationships among tokens. Text first becomes tokens, and each token is mapped to an embedding. Because attention alone does not know order, the model also receives positional information. These representations pass through repeated layers that combine attention with feed-forward transformations, residual connections, and normalization. The architecture can process many positions in parallel during training, which helped make large language models practical at scale.
+
+Self-attention lets each position build a new representation by drawing selectively from other positions. The layer creates query, key, and value vectors. A query is compared with keys to produce weights, and those weights mix the corresponding values. Multiple attention heads can learn different relationship patterns, such as agreement, reference, or local context, although individual heads do not always have a simple human interpretation. Later layers transform the combined representations, allowing the network to construct increasingly context-sensitive features.
+
+For next-token generation, a causal mask prevents a position from attending to future tokens. The model predicts a continuation from the tokens currently available, chooses or samples a token, appends it, and repeats. Attention is not a database lookup and does not by itself verify facts. It is a learned routing operation inside a statistical model. The model’s parameters hold patterns acquired during training, while external retrieval can add documents to the prompt. These sources of information should not be confused.
+
+A context window is the finite number of tokens that a model can consider in one operation. It may contain instructions, conversation history, retrieved documents, and generated text. A longer window permits more material, but it is not permanent memory and does not guarantee that every detail will influence the answer. Evidence can be diluted, truncated, or used unevenly depending on its position and relevance. Research on long-context models has found that information in the middle can be harder to use than information near the beginning or end. Counting tokens also differs from counting words: a word may become one token or several, and images or other inputs can consume part of the available context budget.
+
+Educators can improve long-context tasks by selecting relevant material, dividing complex work into meaningful stages, labeling sources clearly, and asking for claims to be linked back to evidence. Students can compare answers when the same evidence is placed in different positions, then inspect which details were ignored or transformed. Sensitive information should not be added merely because a window is large. The practical mental model is limited computational attention: transformers create context-sensitive representations, and context windows define what can be available during a response. Human readers still decide what evidence belongs, whether it was used faithfully, and whether the result meets disciplinary standards.`,
+    coreIdeas: [
+      "Transformers create context-sensitive token representations through repeated self-attention and feed-forward layers with position information.",
+      "Attention is learned information routing, not factual verification, database lookup, consciousness, or a complete explanation of model behavior.",
+      "A context window limits what can be available during one operation; longer context is not permanent memory and may still be used unevenly.",
+    ],
+    educationConnection: "Let learners move the same evidence within a controlled prompt, compare outputs, trace claims back to sources, and explain why context length alone does not ensure faithful reasoning.",
+    relatedConcepts: ["Query-key-value attention", "Causal masking", "Long-context evaluation"],
+    sourceUrls: [
+      { label: "Attention Is All You Need", url: "https://arxiv.org/abs/1706.03762" },
+      { label: "The Annotated Transformer", url: "https://nlp.seas.harvard.edu/annotated-transformer/" },
+      { label: "Lost in the Middle", url: "https://aclanthology.org/2024.tacl-1.9/" },
+    ],
+    createdAt: "2026-07-28T08:00:00.000Z",
+  },
+  {
+    id: "academy-024",
+    listingIdentifier: "Educational Theory 12",
+    slug: "conceptual-change",
+    title: "Conceptual Change",
+    track: "educational-theory",
+    level: "core",
+    tags: ["conceptual change", "prior conceptions", "model revision"],
+    image: "/images/academy/covers/academy-024-conceptual-change.png",
+    imageAlt: "A Black learner, South Asian educator, and East Asian learner compare red and amber heat-transfer models around a glass-enclosed metal rod",
+    summaryAudio: "/audio/academy/academy-024-conceptual-change-summary.m4a",
+    summaryAudioTitle: "Listen to Conceptual Change",
+    shortSummary: "How learners reorganize persistent explanations, why contradictory facts are insufficient, and how prediction, evidence, model comparison, and transfer support change.",
+    fullSummary: `Conceptual change concerns learning that reorganizes an existing way of understanding, not merely adding another fact. Learners often enter a lesson with explanations built from everyday experience, previous teaching, language, and culture. These ideas may be productive in familiar settings even when they conflict with a disciplinary model. For example, a learner may treat force as something a moving object contains because that account seems to explain ordinary motion. Calling such thinking careless misses why it persists.
+
+New information does not automatically replace an established conception. Learners can memorize a formula while interpreting it through the old framework, compartmentalize school knowledge, or explain away conflicting evidence. Conceptual-change research has proposed that learners are more likely to revise when they recognize limits in the current account and encounter an alternative that is understandable, plausible, and useful. These conditions are helpful design questions, not a guaranteed linear recipe. Emotion, identity, trust, language, and classroom relationships also shape whether learners reconsider an idea. Change may be gradual, uneven, and context-specific; a learner can use a scientific account in one setting and return to an intuitive account in another.
+
+Some difficulties involve more than a missing proposition. Learners may assign a concept to the wrong kind of category, such as understanding heat as a material substance rather than a process of energy transfer. Others may organize many observations through a broader framework that resists piecemeal correction. Teachers therefore need diagnostic evidence about the structure of reasoning. A right answer on a familiar item may conceal an unchanged explanation, while a prediction, drawing, comparison, or transfer problem can reveal how ideas are connected.
+
+Instruction can support change by eliciting initial explanations before correction, creating a meaningful need to compare them with evidence, and making an alternative model explicit. Contrasting cases, demonstrations, simulations, analogies, discussion, and carefully sequenced questions can expose where each model succeeds or fails. Learners should explain why evidence matters, revise representations, and apply the new account to unfamiliar situations. Anomalies alone are insufficient: without guidance, a surprising result may be ignored, misread, or absorbed into the existing schema.
+
+In education, the aim is not to erase every intuitive idea but to build more powerful, appropriately bounded explanations. Teachers can treat learners’ reasoning respectfully while holding claims accountable to evidence. AI can generate alternative examples or simulate a dialogue, but it may invent misconceptions, overstate consensus, or provide a polished correction before the learner’s thinking is visible. A strong routine asks learners to predict, explain, test, compare models, revise, and transfer. Conceptual change is demonstrated when the learner can use the revised framework deliberately and explain its advantage, limitations, and relation to prior thinking—not when the learner simply repeats the teacher’s preferred sentence.`,
+    coreIdeas: [
+      "Conceptual change reorganizes an existing explanatory framework; learners’ prior conceptions are often coherent and useful in familiar contexts.",
+      "Contradictory information alone rarely produces change because evidence can be ignored, reinterpreted, compartmentalized, or absorbed into the old account.",
+      "Prediction, diagnostic explanation, guided model comparison, revision, and transfer provide stronger evidence of change than repeating a corrected statement.",
+    ],
+    educationConnection: "Elicit an explanation before correction, test its predictions against evidence, compare it with an explicit alternative model, then require revision and transfer to a new case.",
+    relatedConcepts: ["Prior conceptions", "Cognitive conflict", "Knowledge restructuring"],
+    sourceUrls: [
+      { label: "Posner and colleagues on conceptual change", url: "https://doi.org/10.1002/sce.3730660207" },
+      { label: "Vosniadou on conceptual change", url: "https://doi.org/10.1016/0959-4752(94)90018-3" },
+      { label: "Chi and colleagues on ontological categories", url: "https://doi.org/10.1016/0959-4752(94)90017-5" },
+      { label: "Duit and Treagust review", url: "https://doi.org/10.1080/09500690305016" },
+    ],
+    createdAt: "2026-07-28T08:00:00.000Z",
+  },
+  {
+    id: "academy-025",
+    listingIdentifier: "AI Knowledge 13",
+    slug: "retrieval-augmented-generation",
+    title: "Retrieval-Augmented Generation",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["retrieval-augmented generation", "evidence retrieval", "grounded generation"],
+    image: "/images/academy/covers/academy-025-retrieval-augmented-generation.png",
+    imageAlt: "A Black educator and White and South Asian adult learners trace geometric source sheets from an archive drawer through a glass evidence window to a response board",
+    summaryAudio: "/audio/academy/academy-025-retrieval-augmented-generation-summary.m4a",
+    summaryAudioTitle: "Listen to Retrieval-Augmented Generation",
+    shortSummary: "How retrieval-augmented generation selects external evidence for a model, where grounding can fail, and how people should evaluate retrieval and answers separately.",
+    fullSummary: `Retrieval-augmented generation, commonly called RAG, combines a generative model with an external collection of information. Instead of relying only on patterns stored in model parameters, the system first searches for material related to a question and then places selected passages into the model's current context. The model uses the question, instructions, and retrieved passages to compose a response. This design can make changing or specialized knowledge available without retraining the entire model, and it can provide evidence that a reader can inspect.
+
+A typical pipeline prepares documents before any question arrives. Files are cleaned, divided into chunks, described with metadata, and indexed. Many systems convert each chunk into an embedding so that a new query can be compared with candidate passages by semantic similarity. Keyword search, filters, rerankers, or hybrid retrieval may also be used. The highest-ranked passages enter the prompt, subject to a limited context budget. Every choice matters: chunk boundaries can separate a claim from its qualification, metadata can exclude relevant sources, and a similarity score can favor topically related text that does not answer the question.
+
+Retrieval and generation are separate stages with separate failure modes. The retriever may miss the best evidence, select an outdated version, or return duplicated and conflicting passages. The generator may ignore a retrieved qualification, merge claims from different sources, or produce a statement that no passage supports. A citation can point to a real document while still failing to support the sentence beside it. RAG therefore reduces some forms of unsupported generation but does not guarantee truth, completeness, or faithful citation.
+
+Evaluation should inspect the whole chain. Retrieval measures can ask whether relevant evidence appears among the selected passages and how highly it is ranked. Answer measures can examine accuracy, completeness, attribution, and whether each claim is entailed by its cited source. Testing should include ambiguous questions, missing evidence, adversarial documents, access restrictions, and cases where the collection contains no answer. Human reviewers need to see the query, retrieved passages, source dates, and final response rather than judging fluent output alone.
+
+In education, learners can build a small RAG activity from a bounded set of approved readings. They can predict which passages should be retrieved, compare keyword and semantic search, and mark every answer claim as supported, contradicted, or absent. Teachers should distinguish source quality from retrieval relevance and require students to open original documents. Sensitive records need access controls before indexing, not only after generation. Versioned source collections and reproducible test questions also help a class notice when retrieval quality changes after an index or model update. The useful mental model is evidence-assisted composition: retrieval changes what information is available, while accountable readers still decide whether the selected evidence is appropriate and whether the response represents it faithfully.`,
+    coreIdeas: [
+      "RAG retrieves external passages and places them in a generative model's current context rather than changing the model's parameters for every knowledge update.",
+      "Retrieval and generation fail differently, so relevant passages, faithful use, source quality, and claim-level support must be evaluated separately.",
+      "Citations and retrieved documents make inspection possible, but they do not guarantee that an answer is true, complete, current, or supported.",
+    ],
+    educationConnection: "Give learners a bounded source collection, let them compare retrieval methods, and require every generated claim to be traced to a passage that genuinely supports it.",
+    relatedConcepts: ["Dense retrieval", "Reranking", "Claim-level attribution"],
+    sourceUrls: [
+      { label: "Lewis and colleagues: Retrieval-Augmented Generation", url: "https://proceedings.neurips.cc/paper/2020/hash/6b493230205f780e1bc26945df7481e5-Abstract.html" },
+      { label: "Karpukhin and colleagues: Dense Passage Retrieval", url: "https://aclanthology.org/2020.emnlp-main.550/" },
+      { label: "Gao and colleagues: RAG survey", url: "https://arxiv.org/abs/2312.10997" },
+    ],
+    createdAt: "2026-07-30T08:00:00.000Z",
+  },
+  {
+    id: "academy-026",
+    listingIdentifier: "Educational Theory 13",
+    slug: "situated-learning",
+    title: "Situated Learning",
+    track: "educational-theory",
+    level: "core",
+    tags: ["situated learning", "legitimate peripheral participation", "authentic practice"],
+    image: "/images/academy/covers/academy-026-situated-learning.png",
+    imageAlt: "A South Asian mentor coaches a Black adult apprentice adjusting a bicycle brake while a White peer checks a mechanical diagram",
+    summaryAudio: "/audio/academy/academy-026-situated-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Situated Learning",
+    shortSummary: "How knowledge develops through participation in meaningful practice, how newcomers gain legitimate access, and why authentic activity requires guidance and reflection.",
+    fullSummary: `Situated learning treats knowing as connected to the activity, tools, language, relationships, and culture in which it is developed and used. This does not mean that learning happens only in a physical location or that abstract knowledge is unimportant. It means that concepts acquire meaning through participation in recognizable practices. A formula used to interpret evidence in a laboratory, for example, is learned differently from the same symbols copied without a purpose, audience, or standard of judgment.
+
+Lave and Wenger described learning through legitimate peripheral participation. A newcomer begins with limited but genuine access to a community's work, people, artifacts, and conversations. Peripheral does not mean trivial or excluded. It describes a position from which the learner can observe, contribute safely, receive feedback, and gradually take responsibility for more central activity. Participation changes both competence and identity: the learner is not only acquiring facts but becoming someone who can act, communicate, and judge within a practice.
+
+Good situated instruction therefore offers more than a realistic backdrop. Learners need consequential tasks, access to how experienced people reason, and support matched to their current participation. A mentor can model a process, explain decisions, coach performance, and gradually fade assistance. Peers can compare strategies and make tacit conventions discussable. Tools and representations should be used for the purposes they serve in the field. A simulated clinic, design brief, classroom case, or community investigation becomes educationally valuable when learners must interpret conditions, make decisions, justify actions, and respond to authentic feedback.
+
+Authenticity alone is not enough. Workplaces and communities can hide expertise, restrict newcomers, reproduce inequity, or expose learners to risk. An activity can look realistic while leaving students to imitate surface routines without understanding. Teachers must make participation legitimate, safe, inclusive, and intellectually visible. They should identify what learners can decide, which criteria matter, how feedback will be given, and when reflection will connect a local experience with broader concepts. Explicit comparison across cases helps learners see what transfers and what depends on context.
+
+Digital and AI-supported environments can extend participation when they connect learners with real problems, collaborators, records, and expert feedback. They can also simulate authority or complete the meaningful parts of a task before the learner participates. A useful design asks learners to use tools while preserving responsibility for diagnosis, choice, explanation, and revision. Participation records should show what the learner actually attempted, which feedback changed the work, and how responsibility increased across successive tasks. After activity, learners should reconstruct the reasoning, compare it with another setting, and explain how tools and social expectations shaped the result. Situated learning is strongest when access to practice expands over time and learners can both perform within a community and critically understand the practice they are joining.`,
+    coreIdeas: [
+      "Knowledge develops through participation in activities, tools, language, relationships, and cultural standards rather than as context-free information alone.",
+      "Legitimate peripheral participation gives newcomers real but supported access and a pathway toward fuller responsibility, competence, and identity.",
+      "Authentic activity needs modeling, coaching, inclusion, reflection, and comparison across cases; realism by itself does not guarantee learning or transfer.",
+    ],
+    educationConnection: "Design a genuine disciplinary task with a safe entry role, visible expert reasoning, coached participation, increasing responsibility, and reflection that compares the experience with another context.",
+    relatedConcepts: ["Communities of practice", "Cognitive apprenticeship", "Authentic assessment"],
+    sourceUrls: [
+      { label: "Lave and Wenger: Situated Learning", url: "https://doi.org/10.1017/CBO9780511815355" },
+      { label: "Brown, Collins, and Duguid on situated cognition", url: "https://doi.org/10.3102/0013189X018001032" },
+      { label: "Cambridge chapter on legitimate peripheral participation", url: "https://www.cambridge.org/highereducation/books/situated-learning/6915ABD21C8E4619F750A4D4ACA616CD/legitimate-peripheral-participation/28CD74BD15EBFABE881F24826917EC4C" },
+    ],
+    createdAt: "2026-07-30T08:00:00.000Z",
   },
 ];

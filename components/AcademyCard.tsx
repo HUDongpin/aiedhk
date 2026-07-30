@@ -26,10 +26,15 @@ export default function AcademyCard({ lesson, locale, dictionary }: AcademyCardP
           />
         </div>
         <div className="flex min-w-0 flex-col p-6 sm:p-7">
-          <div className="flex flex-wrap items-center gap-2 text-xs font-black uppercase tracking-[0.18em]">
-            <span className="rounded-full bg-aied-soft px-3 py-1 text-aied-blue">{dictionary.academy.tracks[lesson.track]}</span>
-            <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-slate-500">{dictionary.academy.levels[lesson.level]}</span>
-            <span className="text-slate-400">{formatDate(lesson.createdAt, locale)}</span>
+          <div className="flex items-start justify-between gap-4 text-xs font-black uppercase tracking-[0.18em]">
+            <div className="flex min-w-0 flex-wrap items-center gap-2">
+              <span className="rounded-full bg-aied-soft px-3 py-1 text-aied-blue">{dictionary.academy.tracks[lesson.track]}</span>
+              <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-slate-500">{dictionary.academy.levels[lesson.level]}</span>
+              <span className="text-slate-400">{formatDate(lesson.createdAt, locale)}</span>
+            </div>
+            <span className="shrink-0 text-right text-[0.68rem] leading-5 text-aied-blue" aria-label={`Lesson identifier ${lesson.listingIdentifier}`}>
+              {lesson.listingIdentifier}
+            </span>
           </div>
           <div lang={content.contentHtmlLang} dir={content.contentDir}>
             <h3 className="mt-4 text-xl font-black leading-tight tracking-tight text-aied-ink transition group-hover:text-aied-blue sm:text-2xl">{lesson.title}</h3>

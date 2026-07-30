@@ -136,6 +136,7 @@ export type AcademyLevel = (typeof ACADEMY_LEVELS)[number];
 
 export interface AcademyLesson {
   id: string;
+  listingIdentifier: string;
   slug: string;
   title: string;
   track: AcademyTrack;

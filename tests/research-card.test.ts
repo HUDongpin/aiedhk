@@ -74,3 +74,25 @@ test("research cards render full-height full-bleed cover media", () => {
   assert.match(html, /\bobject-cover\b/);
   assert.doesNotMatch(html, /\bobject-contain\b/);
 });
+
+test("research cards display a stable localized type-and-number identifier", () => {
+  const englishHtml = renderToStaticMarkup(
+    React.createElement(ResearchCard, {
+      paper: paper({ id: "aied-007", type: "conference" }),
+      locale: "en",
+      dictionary: getDictionary("en"),
+    })
+  );
+  const traditionalChineseHtml = renderToStaticMarkup(
+    React.createElement(ResearchCard, {
+      paper: paper({ id: "aied-107", type: "conference" }),
+      locale: "zh-hant",
+      dictionary: getDictionary("zh-hant"),
+    })
+  );
+
+  assert.match(englishHtml, /aria-label="Article identifier Conference Paper 07"/);
+  assert.match(englishHtml, />Conference Paper 07</);
+  assert.match(traditionalChineseHtml, /aria-label="Article identifier 會議論文 107"/);
+  assert.match(traditionalChineseHtml, />會議論文 107</);
+});

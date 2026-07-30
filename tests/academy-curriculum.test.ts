@@ -18,10 +18,22 @@ test("versioned Academy curriculum supplies at least thirty ordered cross-track 
 
 test("curriculum helper returns the first unpublished pair and stops at queue exhaustion", () => {
   const launchSlugs = getAcademyLessons("en").map((lesson) => lesson.slug);
-  assert.equal(getNextUnpublishedAcademyPair(launchSlugs)?.order, 8);
+  assert.equal(getNextUnpublishedAcademyPair(launchSlugs)?.order, 9);
 
   const allSlugs = academyCurriculumV1.pairs.flatMap((pair) => pair.topics.map((topic) => topic.slug));
   assert.equal(getNextUnpublishedAcademyPair(allSlugs), undefined);
+});
+
+test("curriculum helper stops when the next pair is only partially published", () => {
+  const publishedThroughPairSeven = academyCurriculumV1.pairs
+    .slice(0, 7)
+    .flatMap((pair) => pair.topics.map((topic) => topic.slug));
+  const firstSlugFromPairEight = academyCurriculumV1.pairs[7].topics[0].slug;
+
+  assert.throws(
+    () => getNextUnpublishedAcademyPair([...publishedThroughPairSeven, firstSlugFromPairEight]),
+    /pair 8 is partially published/
+  );
 });
 
 test("every published Academy lesson exactly matches its curriculum title, track, and level", () => {

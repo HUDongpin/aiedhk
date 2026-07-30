@@ -23,15 +23,18 @@ export function collectOverlapReport(currentPaths, worktrees) {
     const overlappingPaths = [...new Set(worktree.changedPaths ?? [])]
       .filter((file) => currentPathSet.has(file))
       .sort();
-    const item = { ...worktree, overlappingPaths };
+    const dirtyOverlappingPaths = [...new Set(worktree.dirtyPaths ?? [])]
+      .filter((file) => currentPathSet.has(file))
+      .sort();
+    const item = { ...worktree, overlappingPaths, dirtyOverlappingPaths };
 
     if (worktree.classification === "active-writer") {
       report.activeWriters.push(item);
-      if (overlappingPaths.length > 0) {
+      if (dirtyOverlappingPaths.length > 0) {
         report.blockers.push({
           path: worktree.path,
           branch: worktree.branch,
-          overlappingPaths,
+          overlappingPaths: dirtyOverlappingPaths,
         });
       }
     } else if (worktree.classification === "completed-clean") {
@@ -62,17 +65,21 @@ function git(args, cwd, { allowFailure = false } = {}) {
 
 function parseArguments(argv) {
   let baseRef = process.env.WORKTREE_OVERLAP_BASE || "origin/main";
+  const plannedPaths = [];
 
   for (let index = 0; index < argv.length; index += 1) {
     if (argv[index] === "--base" && argv[index + 1]) {
       baseRef = argv[index + 1];
+      index += 1;
+    } else if (argv[index] === "--path" && argv[index + 1]) {
+      plannedPaths.push(argv[index + 1]);
       index += 1;
     } else {
       throw new Error(`Unknown or incomplete argument: ${argv[index]}`);
     }
   }
 
-  return { baseRef };
+  return { baseRef, plannedPaths };
 }
 
 function parseWorktreeList(output) {
@@ -139,11 +146,29 @@ function uniquePaths(...collections) {
   return [...new Set(collections.flat())].sort();
 }
 
+function normalizePlannedPaths(plannedPaths, projectRoot) {
+  return plannedPaths.map((plannedPath) => {
+    const absolutePath = path.resolve(projectRoot, plannedPath);
+    const relativePath = path.relative(projectRoot, absolutePath);
+    const escapesProject =
+      relativePath === ".." ||
+      relativePath.startsWith(`..${path.sep}`) ||
+      path.isAbsolute(relativePath);
+
+    if (!relativePath || escapesProject) {
+      throw new Error(`Planned path must name a file inside the project: ${plannedPath}`);
+    }
+
+    return relativePath.split(path.sep).join("/");
+  });
+}
+
 function printWorktree(category, worktree) {
   const overlap = worktree.overlappingPaths.length;
+  const dirtyOverlap = worktree.dirtyOverlappingPaths?.length ?? 0;
   const dirty = worktree.dirtyPaths.length;
   console.log(
-    `[${category}] ${worktree.branch} @ ${worktree.path} (dirty=${dirty}, overlap=${overlap})`
+    `[${category}] ${worktree.branch} @ ${worktree.path} (dirty=${dirty}, overlap=${overlap}, dirty-overlap=${dirtyOverlap})`
   );
   for (const file of worktree.overlappingPaths) {
     console.log(`  ${file}`);
@@ -151,14 +176,16 @@ function printWorktree(category, worktree) {
 }
 
 function runOverlapCheck(argv = process.argv.slice(2)) {
-  const { baseRef } = parseArguments(argv);
+  const { baseRef, plannedPaths } = parseArguments(argv);
   const projectRoot = git(["rev-parse", "--show-toplevel"], process.cwd()).trim();
+  const normalizedPlannedPaths = normalizePlannedPaths(plannedPaths, projectRoot);
   const baseCommit = git(["rev-parse", "--verify", `${baseRef}^{commit}`], projectRoot).trim();
   const currentHead = git(["rev-parse", "HEAD"], projectRoot).trim();
   const currentRoot = realpathSync(projectRoot);
   const currentPaths = uniquePaths(
     committedPaths(baseRef, currentHead, projectRoot),
-    statusPaths(projectRoot)
+    statusPaths(projectRoot),
+    normalizedPlannedPaths
   );
   const worktrees = [];
 

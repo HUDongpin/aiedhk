@@ -768,7 +768,7 @@ In education, embeddings can help learners find related explanations, group open
     level: "core",
     tags: ["schema theory", "prior knowledge", "knowledge organization"],
     image: "/images/academy/covers/academy-022-schema-theory.png",
-    imageAlt: "A White educator and Black and East Asian adult learners reorganize a large lesson-specific knowledge frame with illustrated concepts and a filled diagram notebook",
+    imageAlt: "A White educator and Black and East Asian adult learners reorganize illustrated animal and plant cards across a three-part wooden knowledge frame",
     summaryAudio: "/audio/academy/academy-022-schema-theory-summary.m4a",
     summaryAudioTitle: "Listen to Schema Theory",
     shortSummary: "How prior knowledge structures guide attention, inference, and memory—and how teaching can activate, differentiate, and revise those structures.",

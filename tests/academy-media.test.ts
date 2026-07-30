@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
@@ -27,7 +27,7 @@ test("Academy lessons directly reference twenty-four valid, distinct 1600x1000 P
   const hashes = new Set<string>();
   for (const lesson of lessons) {
     const assetPath = lesson.image;
-    assert.ok(assetPath, `${lesson.id} must directly reference one image`);
+    assert.ok(assetPath, `${lesson.id} must directly reference one lesson image`);
     assert.ok(assetPath.startsWith("/images/academy/covers/"), `${assetPath} must stay in /images/academy/covers/`);
     assert.equal(path.extname(assetPath), ".png");
     assert.ok(path.basename(assetPath).includes(lesson.id), `${assetPath} must contain ${lesson.id}`);
@@ -50,6 +50,34 @@ test("Academy lessons directly reference twenty-four valid, distinct 1600x1000 P
   }
 
   assert.equal(hashes.size, 24, "all Academy lesson images must have unique SHA-256 hashes");
+});
+
+test("Academy keeps sixteen retired summary images as unassigned future-cover inventory", async () => {
+  const lessons = getAcademyLessons("en");
+  const activeHashes = new Set<string>();
+  for (const lesson of lessons) {
+    const bytes = await readFile(publicFile(lesson.image));
+    activeHashes.add(createHash("sha256").update(bytes).digest("hex"));
+  }
+
+  const inventoryDirectory = path.join(projectRoot, "public/images/academy/summary");
+  const inventoryNames = (await readdir(inventoryDirectory)).filter((name) => name.endsWith(".png")).sort();
+  assert.equal(inventoryNames.length, 16, "all retired second-detail images must remain available for future lessons");
+
+  const inventoryHashes = new Set<string>();
+  for (const name of inventoryNames) {
+    const assetPath = `/images/academy/summary/${name}`;
+    const bytes = await readFile(publicFile(assetPath));
+    assert.ok(bytes.subarray(0, 8).equals(pngSignature), `${assetPath} must have a PNG signature`);
+    assert.equal(bytes.readUInt32BE(16), 1600, `${assetPath} width must stay normalized to 1600`);
+    assert.equal(bytes.readUInt32BE(20), 1000, `${assetPath} height must stay normalized to 1000`);
+
+    const hash = createHash("sha256").update(bytes).digest("hex");
+    assert.equal(activeHashes.has(hash), false, `${assetPath} must remain unassigned by current lessons`);
+    inventoryHashes.add(hash);
+  }
+
+  assert.equal(inventoryHashes.size, 16, "future-cover inventory images must remain visually distinct");
 });
 
 test("Academy lessons directly reference twenty-four valid local M4A narrations", async () => {

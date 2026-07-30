@@ -38,6 +38,8 @@ Start from these Taste Skill defaults, then adapt them to the lesson:
 
 This owner-defined style uses credible editorial photography of real people in real educational or professional environments. Natural faces, anatomy, skin, hair, hands, clothing, expressions, light, and spatial detail are part of the style and are approved. The style does not require Fable 5 colors or Taste Skill geometry.
 
+Academy casting must be racially and ethnically diverse. Multi-person scenes must include teachers and learners from visibly different racial or ethnic backgrounds. Single-person scenes must rotate representation across the catalog. Do not default to an all-Asian cast, and avoid tokenism or stereotypes.
+
 The real-person photographic style and technology-studio setting are approved. Only dense particle installations or decorative micro-detail within that otherwise acceptable direction are forbidden.
 
 Multi-person scenes must include teachers and learners from visibly different racial or ethnic backgrounds. Single-person scenes must rotate representation across the Academy catalog. Do not default to an all-Asian cast, and avoid tokenism or stereotypes.
@@ -55,10 +57,12 @@ Do not generate or approve:
 - dense decorative fields of particles, granules, beads, pebbles, dots, or point clouds;
 - high-frequency scatter fields, confetti, glitter, stippling, swarms, or dotted meshes;
 - large collections of tiny repeated objects;
+- abstract geometric compositions or exhibition-installation-style imagery;
 - generic blue-purple AI gradients, uncontrolled neon glow, or glossy sci-fi surfaces with no lesson-specific meaning;
 - cut-paper, clay, vector, cartoon, mannequin-like, waxy, or visibly rendered people;
-- a reused, recolored, or lightly modified Academy or News image;
-- text, labels, numbers, logos, captions, or watermarks inside the artwork.
+- an image currently assigned to another Academy lesson or News article, except for a decommissioned image explicitly retained in the unassigned cover inventory;
+- text, labels, numbers, logos, captions, or watermarks inside the artwork;
+- blank paper, cards, notebooks, worksheets, or whiteboards; use meaningful lesson-related diagrams, sketches, or natural non-legible handwriting instead.
 
 Subtle material shading is acceptable. It must not read as a grain or particle effect.
 
@@ -71,6 +75,7 @@ Sparse, semantically meaningful diagram nodes, isolated marks, or ordinary photo
 - Use a restrained luminous accent with ivory, near-black, metal, glass, or natural wood materials.
 - Make the lesson concept legible through scale, separation, direction, and hierarchy.
 - Show real teachers and learners visibly participating in the educational relationship.
+- Keep every visible teaching surface purposeful and nonblank without relying on generated readable text.
 - Use the `真人质感风格`: credible editorial photographic realism with natural anatomy, skin, hair, hands, fabric, expressions, lighting, and environment.
 - If reliable real-person texture cannot be achieved, reject and regenerate the image; do not fall back to an abstract no-human composition.
 
@@ -80,8 +85,8 @@ Sparse, semantically meaningful diagram nodes, isolated marks, or ordinary photo
 - Select a suitable unpublished image first; otherwise generate one new lesson-specific asset.
 - Normalize the lesson image to a real 1600x1000 PNG.
 - Write literal alt text that describes visible content.
-- Confirm every Academy image has a unique SHA-256 hash.
-- Inspect the final normalized images at full size.
+- Confirm every published Academy lesson image has a unique SHA-256 hash.
+- Inspect the final normalized image at full size.
 - Keep responsive delivery through `next/image`.
 - Reject the lesson image if it violates this contract.
 

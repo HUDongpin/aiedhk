@@ -384,7 +384,7 @@ For Hong Kong schools and universities, a suitable pilot should map what context
     tags: ["network meta-analysis", "English learning motivation", "AI-assisted language learning"],
     image: "/images/research/covers/aied-038-ai-tools-english-learning-motivation-2026.png",
     imageAlt:
-      "Editorial cover of English-language learners comparing conversational practice, writing feedback and adaptive language-app pathways in a university seminar",
+      "A teacher and diverse university learners discuss a cyan three-branch overlay linking mobile, conversation and writing activities",
     summaryImage: "/images/research/summary/aied-038-ai-tools-english-learning-motivation-summary.png",
     summaryImageAlt:
       "Learners and a teacher examine three evidence pathways for chatbots, writing assistants and language-learning applications while keeping the indirect comparison visible.",

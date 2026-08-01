@@ -940,4 +940,78 @@ Digital and AI-supported environments can extend participation when they connect
     ],
     createdAt: "2026-07-30T08:00:00.000Z",
   },
+  {
+    id: "academy-027",
+    listingIdentifier: "AI Knowledge 14",
+    slug: "fine-tuning-instruction-tuning-and-preference-learning",
+    title: "Fine-Tuning, Instruction Tuning, and Preference Learning",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["fine-tuning", "instruction tuning", "preference learning"],
+    image: "/images/academy/covers/academy-027-fine-tuning-instruction-tuning-and-preference-learning.png",
+    imageAlt: "A Black educator and East Asian and Middle Eastern adult learners adjust a transparent three-stage training apparatus with blue and amber light paths in a Hong Kong lab",
+    summaryAudio: "/audio/academy/academy-027-fine-tuning-instruction-tuning-and-preference-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Fine-Tuning, Instruction Tuning, and Preference Learning",
+    shortSummary: "How pretrained models are adapted with task examples, natural-language instructions, and human preference comparisons, and why evaluation must match the intended use.",
+    fullSummary: `Fine-tuning adapts a pretrained model by continuing training on a more focused dataset and objective. Pretraining gives a model broad statistical patterns, while fine-tuning changes its parameters toward a particular task, domain, style, or behavior. This differs from prompting, which supplies temporary instructions without changing the model, and from retrieval, which adds external information to the current context. Full fine-tuning updates many or all parameters. Parameter-efficient methods such as LoRA instead train smaller added components, reducing memory and storage demands while leaving most pretrained weights fixed.
+
+Instruction tuning is supervised fine-tuning on examples that pair natural-language instructions with desired responses. A dataset may include summarizing, classifying, explaining, transforming, and answering tasks expressed in varied ways. Research on FLAN showed that training across many instruction-described tasks could improve zero-shot performance on unseen tasks. Instruction tuning helps a model recognize what a user is asking and follow common response conventions. It does not guarantee that the response is factual, current, safe, or appropriate for every learner. Those properties require separate evidence.
+
+Preference learning uses judgments about which outputs are better. In reinforcement learning from human feedback, people may first provide demonstrations, then rank candidate responses. A reward model learns from those rankings, and reinforcement learning adjusts the language model toward highly rewarded behavior. Direct Preference Optimization offers a simpler route that learns directly from preferred and rejected response pairs without training a separate reward model and running the same reinforcement-learning loop. In either case, the result reflects who supplied the comparisons, what criteria they used, and which situations the dataset represented. A preference signal is not a universal definition of quality.
+
+Adaptation creates trade-offs. Narrow data can improve specialized performance but encourage overfitting, reduce capabilities elsewhere, or amplify errors and exclusions in the examples. Training data may also contain private learner information or copyrighted material. Evaluation should therefore compare the base and adapted models on held-out tasks, relevant subgroups, safety cases, and realistic classroom conditions. Teams should document data provenance, intended use, version changes, and rollback criteria. Fine-tuning should not be chosen merely because it sounds more advanced; prompting or retrieval may be easier to inspect and update.
+
+In education, the adaptation method should follow the learning purpose. A school might tune a model to follow a feedback rubric, but teachers must test whether it preserves subject accuracy, offers useful next steps, treats learner groups fairly, and avoids replacing professional judgment. Students can compare a base model with an adapted version, identify which behaviors changed, and ask what examples or preferences may explain the difference. This makes a central lesson visible: model behavior is designed through data and objectives. Tailored style can be useful, but it is not proof of truth, pedagogical value, or accountability.`,
+    coreIdeas: [
+      "Fine-tuning changes a pretrained model's parameters for a focused purpose, while prompting and retrieval alter the information available without the same parameter update.",
+      "Instruction tuning learns from instruction-response examples, while preference learning uses comparisons to shape which behaviors a model favors.",
+      "Adapted models require task-specific, subgroup, safety, provenance, and base-model comparisons because preferred behavior is not automatically accurate or educationally sound.",
+    ],
+    educationConnection: "Compare a base and adapted model on authentic learner work, trace changed behavior to training examples or preference criteria, and keep teachers accountable for the final pedagogical decision.",
+    relatedConcepts: ["Supervised fine-tuning", "Human feedback", "Parameter-efficient adaptation"],
+    sourceUrls: [
+      { label: "FLAN: Finetuned Language Models Are Zero-Shot Learners", url: "https://arxiv.org/abs/2109.01652" },
+      { label: "Training language models to follow instructions with human feedback", url: "https://arxiv.org/abs/2203.02155" },
+      { label: "Direct Preference Optimization", url: "https://arxiv.org/abs/2305.18290" },
+      { label: "LoRA: Low-Rank Adaptation of Large Language Models", url: "https://arxiv.org/abs/2106.09685" },
+    ],
+    createdAt: "2026-08-01T08:00:00.000Z",
+  },
+  {
+    id: "academy-028",
+    listingIdentifier: "Educational Theory 14",
+    slug: "communities-of-practice",
+    title: "Communities of Practice",
+    track: "educational-theory",
+    level: "core",
+    tags: ["communities of practice", "social learning", "professional learning"],
+    image: "/images/academy/covers/academy-028-communities-of-practice.png",
+    imageAlt: "Four racially diverse adult educators and learners assemble a functional timber-and-metal mechanism together around a circular maker workbench",
+    summaryAudio: "/audio/academy/academy-028-communities-of-practice-summary.m4a",
+    summaryAudioTitle: "Listen to Communities of Practice",
+    shortSummary: "How people learn by sustaining a shared domain, relationships, and repertoire of practice, and how educators can support participation without manufacturing community.",
+    fullSummary: `A community of practice is a group of people who learn how to do something better through sustained interaction around a shared concern or activity. Wenger-Trayner describes three necessary elements: a domain that gives the group a common focus, a community whose members build relationships and learn together, and a practice made of shared ways of addressing recurring problems. A mailing list, staff category, online platform, or friendly gathering is not automatically a community of practice. Members must engage with one another as practitioners and develop something they can use.
+
+The concept grew from Lave and Wenger's account of situated learning and legitimate peripheral participation. Newcomers can begin at the edge of a practice through limited but genuine access to its people, tools, language, and work. They observe, contribute, receive feedback, and gradually take greater responsibility. Peripheral participation is not a remedial waiting room. When it is legitimate, it provides a pathway toward fuller participation and a developing identity. Experienced members also learn as they explain judgments, encounter new cases, and revise what the community considers competent practice.
+
+A practice includes more than written procedures. It can contain stories, cases, routines, tools, artifacts, vocabulary, standards, and tacit judgments about what counts as a good response. Joint problem solving turns individual experience into a shared repertoire. Members may carry ideas across boundaries, connecting one community with another. Yet communities can also reproduce hierarchy, exclude newcomers, normalize weak routines, or treat one group's experience as universal. Participation should therefore be examined for access, voice, recognition, power, and the quality of the practice being sustained.
+
+Educators cannot create a genuine community simply by announcing one or opening a discussion board. They can cultivate the conditions: recurring time, authentic problems, voluntary and meaningful contribution, visible expertise, mentorship, shared stewardship, and useful records of developing practice. Newcomers need real entry roles rather than observation forever. Facilitation can invite quieter members, connect questions with relevant experience, and keep disagreement focused on improving practice. Documentation should capture cases and reasoning without replacing the conversations and trust through which knowledge becomes usable.
+
+Communities of practice are valuable for teacher learning, laboratory work, design studios, professional placements, and cross-school improvement. AI can help search a case archive, summarize recurring questions, or connect members facing similar problems. It cannot supply mutual accountability, decide whose experience should count, or guarantee an inclusive learning trajectory. Evaluation should look beyond attendance and message counts. Useful evidence includes changes in practice, the quality and reuse of shared resources, widening participation, stronger professional judgment, and members' ability to explain how collective learning changed their work. The educational goal is not social activity alone, but a community that expands responsible participation while improving what its members can do together.`,
+    coreIdeas: [
+      "A community of practice combines a shared domain, relationships that support collective learning, and an evolving repertoire of practical knowledge.",
+      "Legitimate peripheral participation gives newcomers genuine entry into work and a pathway toward greater competence, responsibility, and identity.",
+      "Communities need cultivation and critical attention to access, power, inclusion, and practice quality; a platform or group label cannot create them by itself.",
+    ],
+    educationConnection: "Give educators or learners recurring authentic problems, legitimate newcomer roles, shared stewardship, mentorship, and evidence of how participation changes both practice and professional judgment.",
+    relatedConcepts: ["Legitimate peripheral participation", "Situated learning", "Professional identity"],
+    sourceUrls: [
+      { label: "Lave and Wenger: Situated Learning", url: "https://doi.org/10.1017/CBO9780511815355" },
+      { label: "Wenger: Communities of Practice", url: "https://doi.org/10.1017/CBO9780511803932" },
+      { label: "Wenger-Trayner introduction to communities of practice", url: "https://www.wenger-trayner.com/introduction-to-communities-of-practice/" },
+      { label: "IIEP-UNESCO Communities of Practice for education", url: "https://www.iiep.unesco.org/en/cop" },
+    ],
+    createdAt: "2026-08-01T08:00:00.000Z",
+  },
 ];

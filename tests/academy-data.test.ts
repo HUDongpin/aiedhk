@@ -4,13 +4,15 @@ import path from "node:path";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("Academy publishes exactly twenty-six ordered reviewed English lessons", () => {
+test("Academy publishes exactly twenty-eight ordered reviewed English lessons", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.equal(lessons.length, 26);
+  assert.equal(lessons.length, 28);
   assert.deepEqual(
     lessons.map((lesson) => lesson.id),
     [
+      "academy-027",
+      "academy-028",
       "academy-025",
       "academy-026",
       "academy-015",
@@ -43,8 +45,8 @@ test("Academy publishes exactly twenty-six ordered reviewed English lessons", ()
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 13);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 13);
+  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 14);
+  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 14);
   assert.deepEqual(
     new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016", "academy-017", "academy-018", "academy-019", "academy-020", "academy-021", "academy-022", "academy-023", "academy-024"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
@@ -52,7 +54,7 @@ test("Academy publishes exactly twenty-six ordered reviewed English lessons", ()
   assert.ok(lessons.every((lesson) => lesson.level === "basics" || lesson.level === "core"));
 });
 
-test("Academy publishes the scheduled curriculum pair for every completed July release and catch-up date", () => {
+test("Academy publishes the scheduled curriculum pair for every completed release and catch-up date", () => {
   const lessons = getAcademyLessons("en");
   const catchUpDates = new Map([
     ["2026-07-24T08:00:00.000Z", ["academy-009", "academy-010"]],
@@ -64,6 +66,7 @@ test("Academy publishes the scheduled curriculum pair for every completed July r
     ["2026-07-28T08:00:00.000Z", ["academy-023", "academy-024"]],
     ["2026-07-29T08:00:00.000Z", ["academy-015", "academy-016"]],
     ["2026-07-30T08:00:00.000Z", ["academy-025", "academy-026"]],
+    ["2026-08-01T08:00:00.000Z", ["academy-027", "academy-028"]],
   ]);
 
   for (const [createdAt, expectedIds] of catchUpDates) {
@@ -103,15 +106,17 @@ test("each launch lesson has complete reviewed copy and one unique stable image 
     "Conceptual Change",
     "Retrieval-Augmented Generation",
     "Situated Learning",
+    "Fine-Tuning, Instruction Tuning, and Preference Learning",
+    "Communities of Practice",
   ];
 
   assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));
-  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 26);
-  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 26);
-  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 26);
-  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 26);
-  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 26);
-  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 26);
+  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 28);
+  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 28);
+  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 28);
+  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 28);
+  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 28);
+  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 28);
 
   for (const lesson of lessons) {
     const wordCount = lesson.fullSummary.trim().split(/\s+/).length;
@@ -142,8 +147,8 @@ test("Academy alt text does not normalize banned particle-heavy or fake-person a
 test("Academy listing identifiers preserve the complete stable sequence for each track and locale", () => {
   const english = getAcademyLessons("en");
   const expectedByTrack = new Map([
-    ["ai-knowledge", { prefix: "AI Knowledge", count: 13 }],
-    ["educational-theory", { prefix: "Educational Theory", count: 13 }],
+    ["ai-knowledge", { prefix: "AI Knowledge", count: 14 }],
+    ["educational-theory", { prefix: "Educational Theory", count: 14 }],
   ]);
 
   for (const [track, expected] of expectedByTrack) {

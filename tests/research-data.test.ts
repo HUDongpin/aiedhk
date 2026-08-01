@@ -33,8 +33,8 @@ test("research news fallback contains fifty-one curated Research News items", ()
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
 
-test("August 1 Research News contains one new paper and one clearly labeled multi-vendor product report", () => {
-  const entries = getResearchPapers("en").filter((paper) => paper.createdAt === "2026-08-01");
+test("August 2 Research News contains one new paper and one clearly labeled multi-vendor product report", () => {
+  const entries = getResearchPapers("en").filter((paper) => paper.createdAt === "2026-08-02");
 
   assert.deepEqual(entries.map((paper) => paper.id), ["aied-051", "aied-050"]);
   assert.equal(entries.filter((paper) => paper.type === "policy-ethics").length, 1);
@@ -270,6 +270,17 @@ test("every News detail page reuses the same bitmap for cover and summary placem
   }
 });
 
+test("News detail template keeps exactly two primary article-content image renders", () => {
+  const detailPageSource = readFileSync(
+    join(process.cwd(), "app", "[locale]", "news", "[slug]", "page.tsx"),
+    "utf8",
+  );
+
+  assert.equal((detailPageSource.match(/<img\b/g) ?? []).length, 2);
+  assert.equal((detailPageSource.match(/src=\{paper\.image\}/g) ?? []).length, 1);
+  assert.equal((detailPageSource.match(/src=\{paper\.summaryImage\}/g) ?? []).length, 1);
+});
+
 test("visually duplicated News covers keep their dedicated replacement assets", () => {
   const papers = getResearchPapers("en");
   const nationalDeployments = papers.find((paper) => paper.id === "aied-014");
@@ -371,9 +382,9 @@ test("static summary media assets are available locally", () => {
   }
 });
 
-test("August 1 entries use four new id-aligned media bitmaps and two complete static narrations", () => {
-  const entries = getResearchPapers("en").filter((paper) => paper.createdAt === "2026-08-01");
-  const imageHashes = new Set<string>();
+test("August 2 entries use two unique master visuals across four id-aligned paths and two complete static narrations", () => {
+  const entries = getResearchPapers("en").filter((paper) => paper.createdAt === "2026-08-02");
+  const masterImageHashes = new Set<string>();
   const audioHashes = new Set<string>();
 
   assert.equal(entries.length, 2);
@@ -383,11 +394,15 @@ test("August 1 entries use four new id-aligned media bitmaps and two complete st
     assert.ok(paper.image.includes(paper.id));
     assert.ok(paper.summaryImage.includes(paper.id));
 
-    for (const imagePath of [paper.image, paper.summaryImage]) {
+    const imagePaths = [paper.image, paper.summaryImage];
+    for (const imagePath of imagePaths) {
       const localPath = localPublicPath(imagePath);
-      assert.deepEqual(pngDimensions(localPath), { width: 1600, height: 1000 });
-      imageHashes.add(fileHash(localPath));
+      assert.deepEqual(pngDimensions(localPath), { width: 1586, height: 992 });
     }
+    const coverHash = fileHash(localPublicPath(imagePaths[0]));
+    const summaryHash = fileHash(localPublicPath(imagePaths[1]));
+    assert.equal(summaryHash, coverHash, `${paper.id} should reuse one master bitmap in both placements`);
+    masterImageHashes.add(coverHash);
 
     const audioPath = localPublicPath(paper.summaryAudio);
     const audioBuffer = readFileSync(audioPath);
@@ -397,7 +412,7 @@ test("August 1 entries use four new id-aligned media bitmaps and two complete st
     audioHashes.add(createHash("sha256").update(audioBuffer).digest("hex"));
   }
 
-  assert.equal(imageHashes.size, 4, "the new cover and summary visuals must all be distinct");
+  assert.equal(masterImageHashes.size, 2, "each new article must keep its own unique master visual");
   assert.equal(audioHashes.size, 2, "the two narrations must be separately generated");
 });
 

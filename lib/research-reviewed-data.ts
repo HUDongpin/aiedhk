@@ -2,6 +2,132 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-051",
+    slug: "news-frontier-model-efficiency-teacher-led-learning-procurement",
+    title:
+      "AI product news: GPT-5.6 efficiency, Claude Opus 5 and Gemini's teacher-led tools reshape education procurement",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "frontier model economics", "teacher-led AI"],
+    image: "/images/research/covers/aied-051-model-efficiency-teacher-led-learning-2026.png",
+    imageAlt:
+      "A diverse university procurement and teaching team compares three restrained model pathways for routine work, complex analysis, and teacher-led learning",
+    summaryImage: "/images/research/summary/aied-051-model-efficiency-teacher-led-learning-summary.png",
+    summaryImageAlt:
+      "Educators map low-cost, high-reasoning, and curriculum-grounded AI tasks onto a transparent evaluation board with human approval gates",
+    summaryAudio: "/audio/research/aied-051-model-efficiency-teacher-led-learning-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word product news report",
+    shortSummary:
+      "Product news: OpenAI cut GPT-5.6 Luna and Terra prices and added a faster Sol mode, Anthropic released Claude Opus 5 for stronger long-running work, and Google is expanding teacher-led Gemini learning experiences; together they shift education procurement from choosing one flagship model to matching tasks, safeguards and evidence to different service tiers.",
+    fullSummary: `This product-news report connects three current developments that matter when schools and universities plan AI services. On July 30, OpenAI announced lower prices for GPT-5.6 Luna and Terra and a faster processing mode for Sol. Anthropic released Claude Opus 5 on July 24 as a stronger everyday model for coding, knowledge work and longer-running agents. Google for Education, meanwhile, is extending Gemini through teacher-led Guided Learning, study notebooks, NotebookLM activities and Classroom context. The common signal is not that one model now wins education. It is that institutions have more distinct combinations of capability, speed, cost and instructional control to evaluate.
+
+OpenAI says GPT-5.6 Luna's API price fell by 80 percent and Terra's by 20 percent. The published prices are $0.20 per million input tokens and $1.20 per million output tokens for Luna, and $2 and $12 respectively for Terra. The company also introduced Fast mode for Sol, offering up to 2.5 times the standard speed at twice the price. Terra and Luna remain available through ChatGPT Work, Codex and the API, and their use now consumes fewer credits in paid workspaces. For education, cheaper inference could make high-volume tasks such as document classification, first-pass resource tagging or routine code checks more affordable. Lower unit cost does not make every task appropriate for automation or remove the cost of review.
+
+Anthropic positions Claude Opus 5 as approaching Fable 5 capability at half the price while improving on Opus 4.8 for coding, professional analysis and scientific work. It is available across Claude platforms and the API at $5 per million input tokens and $25 per million output tokens, with a faster mode priced at twice the base rate. Anthropic also highlights stronger work verification, long-horizon task completion and life-science evaluations. These are vendor-reported results using several internal or partner benchmarks. They should inform a local evaluation plan, not be treated as independent proof that the model is accurate enough for research, assessment or student-facing advice.
+
+Google's education direction adds a different procurement dimension: who structures the learning activity. Its teacher-led Gemini plans allow educators to ground Guided Learning, adaptive study notebooks and NotebookLM activities in selected class materials, assign them through Classroom, and inspect student or class-level learning signals. The connected Classroom app can use assignments, grades and materials to help draft activities, while Google says Workspace for Education data is not used to train its AI models. These purposes are more instructionally specific than a general model tier, but they also raise questions about access, data minimization, teacher workload, the meaning of generated insights and whether adaptive activity improves independent learning.
+
+The three announcements should not be collapsed into a benchmark league table. OpenAI and Anthropic report results from different models, harnesses, effort settings and cost assumptions. Google describes product workflows rather than a comparable frontier-model evaluation. An institution should instead define task classes: low-risk routine processing, staff drafting, curriculum-grounded student practice, consequential analysis, and actions that change records or decisions. Each class needs its own quality threshold, latency requirement, budget, permitted data and human approval rule.
+
+For Hong Kong schools and universities, a practical pilot would compare total cost per reviewed outcome rather than price per token. Teams can run the same representative tasks across candidate services, record errors and revision time, test multilingual materials and accessibility, and verify retention, regional processing and administrator controls. Student-facing trials should add independent assessments that do not rely on the product and should preserve a non-AI route. Product economics can widen access, but only a task-level evidence and governance framework can show whether the resulting service is educationally worthwhile.`,
+    keyTakeaways: [
+      "Product news: OpenAI reduced GPT-5.6 Luna and Terra prices and introduced a premium Fast mode for Sol, expanding the range of cost, speed and capability choices available to institutions.",
+      "Anthropic's Opus 5 launch emphasizes stronger long-running and professional work, while Google's Gemini education roadmap emphasizes teacher-selected materials, Guided Learning, study notebooks and Classroom context.",
+      "Schools should compare total cost per reviewed educational outcome, not vendor benchmark headlines or token prices alone, and assign separate data, evaluation and approval rules to each task class.",
+    ],
+    whyItMatters:
+      "For AIEDHK, this product-news round-up shows why education AI procurement is becoming an instructional and governance design problem: institutions must match model tiers and teacher-led product workflows to evidence, risk, cost and human responsibility.",
+    sourceUrl: "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+    sourceUrls: [
+      {
+        label: "OpenAI GPT-5.6 price-performance update",
+        url: "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+      },
+      {
+        label: "Anthropic Claude Opus 5 product announcement",
+        url: "https://www.anthropic.com/news/claude-opus-5",
+      },
+      {
+        label: "Google for Education teacher-led Gemini and Classroom update",
+        url: "https://blog.google/products-and-platforms/products/education/iste-2026-educator-updates/",
+      },
+    ],
+    createdAt: "2026-08-01",
+  },
+  {
+    id: "aied-050",
+    slug: "genai-competency-asynchronous-modules-randomized-study",
+    title:
+      "Can asynchronous learning modules about generative AI increase students' knowledge, skills, and self-efficacy?",
+    authors: [
+      "Allison E. Connell Pensky",
+      "Lydia E. Eckstein",
+      "Michael C. Melville",
+      "Laura O. Pottmeyer",
+      "Zach Mineroff",
+      "Avi Chawla",
+      "Judy Brooks",
+      "Chad Hershock",
+      "Marsha C. Lovett",
+    ],
+    venue: "Computers & Education",
+    year: 2026,
+    type: "journal",
+    tags: ["generative AI competency", "randomized experiment", "source verification"],
+    image: "/images/research/covers/aied-050-genai-competency-modules-randomized-study-2026.png",
+    imageAlt:
+      "Diverse university students complete prompt, source-checking, and feedback activities in a bright learning studio while an instructor observes",
+    summaryImage: "/images/research/summary/aied-050-genai-competency-modules-randomized-study-summary.png",
+    summaryImageAlt:
+      "A learner moves through four evidence-based AI literacy stages while a separate muted branch marks the unresolved challenge of bias evaluation",
+    summaryAudio: "/audio/research/aied-050-genai-competency-modules-randomized-study-summary.m4a",
+    summaryAudioTitle: "Listen to the 500-word paper summary",
+    shortSummary:
+      "A large randomized study across 65 university course sections found that a 90-minute asynchronous GenAI course improved knowledge, prompting, fact- and source-checking skills, and self-efficacy across student groups, but did not significantly improve critical evaluation of bias in AI output.",
+    fullSummary: `Connell Pensky and colleagues evaluate whether a short, scalable learning intervention can improve university students' competence with generative AI. Their study tested a 90-minute set of open-access asynchronous modules containing explanations, practice and feedback. Rather than measuring whether students could produce more polished work with an AI tool, the researchers defined competence across knowledge, practical skills, attitudes and confidence needed to use generative AI appropriately.
+
+The experiment involved 1,368 undergraduate and graduate students in 65 sections of 53 courses at Carnegie Mellon University. The university's GAITAR@Scale account reports participation from 46 instructors. Course sections, rather than individual students, were assigned to treatment or control conditions. Students in treatment sections completed the modules between pre- and post-assessments, while control sections did not complete them during that interval. This design reduces the risk that students in one class receive different requirements, although section-level assignment means analyses must account for students being grouped within courses.
+
+The modules covered four connected areas. Students learned basic mechanisms behind generative AI and why training data matter; examined ethical risks and possible harms; considered how appropriate use changes with learners, tasks and goals; and practiced a decide, verify, cite and rectify workflow. Activities included prompting an AI study aid, identifying weak prompts, checking factual claims and sources through lateral reading, and interpreting what a system's output can and cannot establish. The intervention therefore combined conceptual explanation with observable verification behavior rather than offering a list of rules alone.
+
+Compared with the control condition, the treatment improved students' generative AI knowledge, prompt-engineering skill, fact- and source-checking skill, and self-efficacy. The authors also report that the gains were equitable across the demographic groups they examined, including birth sex, race and ethnicity, student level, first-generation status and academic discipline. This is important because a campus-wide AI literacy requirement should not widen an existing participation gap. It does not establish that every subgroup had identical experiences or that one module format will transfer unchanged to other institutions.
+
+One null result is especially useful: the modules did not significantly improve students' ability to critically evaluate possible bias in generative AI output. Bias evaluation may require more domain knowledge, richer cases, repeated comparison across systems, and explicit attention to who is represented or harmed. The finding argues against treating a single general AI literacy session as sufficient preparation for all ethical judgments. Institutions may need discipline-specific follow-up and assessments that require students to explain evidence and consequences, not merely recognize a warning label.
+
+The study measures near-term competency after a compact intervention. It does not by itself show durable retention, better course achievement, safer behavior in authentic high-stakes tasks, or improved learning when students later use AI independently. The paper also states that the authors do not have permission to share the study data. Replication across institutions, languages and access conditions would help determine which activities drive the gains and whether effects persist.
+
+For Hong Kong universities, the intervention offers a practical starting architecture: a common core on mechanisms and verification, followed by local examples tied to programme rules, multilingual sources, privacy and assessment. Evaluation should include an independent task before and after training, a delayed follow-up, and a separate bias-analysis component. The central contribution is evidence that brief instruction can improve several teachable competencies, alongside equally valuable evidence that bias judgment requires deeper learning than a 90-minute primer provided.`,
+    keyTakeaways: [
+      "The randomized study included 1,368 students across 65 sections of 53 university courses and tested a 90-minute asynchronous GenAI competency intervention.",
+      "The modules improved knowledge, prompt engineering, fact and source checking, and self-efficacy, with gains reported across the demographic groups examined.",
+      "Bias evaluation did not improve significantly, so institutions should add richer domain-specific cases, repeated practice and independent assessment rather than treating one primer as complete AI literacy training.",
+    ],
+    whyItMatters:
+      "For AIEDHK, the paper provides unusually scalable experimental evidence for a compact GenAI literacy curriculum while identifying a precise boundary: procedural verification can improve quickly, but critical judgment about bias needs deeper and more contextual instruction.",
+    sourceUrl: "https://doi.org/10.1016/j.compedu.2026.105640",
+    sourceUrls: [
+      {
+        label: "Computers & Education article and DOI",
+        url: "https://doi.org/10.1016/j.compedu.2026.105640",
+      },
+      {
+        label: "ScienceDirect article page",
+        url: "https://www.sciencedirect.com/science/article/pii/S0360131526000783",
+      },
+      {
+        label: "Carnegie Mellon open GenAI education modules",
+        url: "https://www.cmu.edu/teaching/gaitar/genaimodules/index.html",
+      },
+      {
+        label: "Carnegie Mellon GAITAR@Scale study summary",
+        url: "https://www.cmu.edu/teaching/gaitar/researchatscale.html",
+      },
+    ],
+    createdAt: "2026-08-01",
+  },
+  {
     id: "aied-049",
     slug: "news-openai-ai-skills-jam-k12-educators",
     title: "OpenAI product news: AI Skills Jam brings hands-on AI practice to K-12 educators",

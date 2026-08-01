@@ -16,7 +16,7 @@ export const reviewedResearchPapers: ResearchPaper[] = [
       "A diverse university procurement and teaching team compares three restrained model pathways for routine work, complex analysis, and teacher-led learning",
     summaryImage: "/images/research/summary/aied-051-model-efficiency-teacher-led-learning-summary.png",
     summaryImageAlt:
-      "Educators map low-cost, high-reasoning, and curriculum-grounded AI tasks onto a transparent evaluation board with human approval gates",
+      "A diverse university procurement and teaching team compares three restrained model pathways for routine work, complex analysis, and teacher-led learning",
     summaryAudio: "/audio/research/aied-051-model-efficiency-teacher-led-learning-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word product news report",
     shortSummary:
@@ -54,7 +54,7 @@ For Hong Kong schools and universities, a practical pilot would compare total co
         url: "https://blog.google/products-and-platforms/products/education/iste-2026-educator-updates/",
       },
     ],
-    createdAt: "2026-08-01",
+    createdAt: "2026-08-02",
   },
   {
     id: "aied-050",
@@ -81,7 +81,7 @@ For Hong Kong schools and universities, a practical pilot would compare total co
       "Diverse university students complete prompt, source-checking, and feedback activities in a bright learning studio while an instructor observes",
     summaryImage: "/images/research/summary/aied-050-genai-competency-modules-randomized-study-summary.png",
     summaryImageAlt:
-      "A learner moves through four evidence-based AI literacy stages while a separate muted branch marks the unresolved challenge of bias evaluation",
+      "Diverse university students complete prompt, source-checking, and feedback activities in a bright learning studio while an instructor observes",
     summaryAudio: "/audio/research/aied-050-genai-competency-modules-randomized-study-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -125,7 +125,7 @@ For Hong Kong universities, the intervention offers a practical starting archite
         url: "https://www.cmu.edu/teaching/gaitar/researchatscale.html",
       },
     ],
-    createdAt: "2026-08-01",
+    createdAt: "2026-08-02",
   },
   {
     id: "aied-049",

@@ -15,7 +15,7 @@ export const reviewedResearchPapers: ResearchPaper[] = [
       "Eight diverse adult educators work in three small groups with generic text-free laptops while a mentor guides a practical workshop discussion",
     summaryImage: "/images/research/summary/aied-049-openai-ai-skills-jam-k12-educators-summary.png",
     summaryImageAlt:
-      "Three diverse educators review a lesson draft against geometric curriculum, privacy, accessibility, and revision evidence beside a text-free continuing-learning path",
+      "Eight diverse adult educators work in three small groups with generic text-free laptops while a mentor guides a practical workshop discussion",
     summaryAudio: "/audio/research/aied-049-openai-ai-skills-jam-k12-educators-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word product news report",
     shortSummary:
@@ -63,7 +63,7 @@ The AI Skills Jam is therefore useful product and programme news, not evidence o
       "A pre-service chemistry teacher and instructor review a text-free AI-assisted lesson design while a separate intact class works with paper models behind glass",
     summaryImage: "/images/research/summary/aied-048-unscaffolded-genai-teacher-design-summary.png",
     summaryImageAlt:
-      "Two researchers compare two chemistry course portfolios, paired geometric response boards, and four neutral outcome trays on an evaluation table",
+      "A pre-service chemistry teacher and instructor review a text-free AI-assisted lesson design while a separate intact class works with paper models behind glass",
     summaryAudio: "/audio/research/aied-048-unscaffolded-genai-teacher-design-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -115,7 +115,7 @@ For Hong Kong teacher education, the practical implication is to evaluate instru
       "A Black IT lead, East Asian educator, and White governance officer inspect three geometric system modules linked through permission gates and a human approval control",
     summaryImage: "/images/research/summary/aied-047-mcp-governed-institutional-connectors-summary.png",
     summaryImageAlt:
-      "An administrator audits a geometric read-only path through scoped authorization, a locked identity token, and human approval while an amber write gate stays closed",
+      "A Black IT lead, East Asian educator, and White governance officer inspect three geometric system modules linked through permission gates and a human approval control",
     summaryAudio: "/audio/research/aied-047-mcp-governed-institutional-connectors-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word product news report",
     shortSummary:
@@ -163,7 +163,7 @@ This announcement is product and infrastructure news, not evidence that MCP impr
       "Four diverse researchers compare six separate geometric evidence trays beneath six cyan arrows pointing in different directions",
     summaryImage: "/images/research/summary/aied-046-chatgpt-learning-outcomes-meta-analysis-summary.png",
     summaryImageAlt:
-      "Two researchers inspect three uneven branches of cyan study tiles on a glass evidence map while an independent-assessment folder rests in front",
+      "Four diverse researchers compare six separate geometric evidence trays beneath six cyan arrows pointing in different directions",
     summaryAudio: "/audio/research/aied-046-chatgpt-learning-outcomes-meta-analysis-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -217,7 +217,7 @@ For Hong Kong schools and universities, the review supports moving beyond the qu
       "A Black teacher and East Asian and White secondary students compare image and video frames across a monitor and tablet with restrained cyan provenance markers",
     summaryImage: "/images/research/summary/aied-045-gemini-media-verification-education-summary.png",
     summaryImageAlt:
-      "Teacher and student hands compare four media cases with separate cyan provenance, amber context, and gray human-judgment tokens",
+      "A Black teacher and East Asian and White secondary students compare image and video frames across a monitor and tablet with restrained cyan provenance markers",
     summaryAudio: "/audio/research/aied-045-gemini-media-verification-education-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word product news report",
     shortSummary:
@@ -271,7 +271,7 @@ For Hong Kong schools and universities, Gemini verification can become a useful 
       "Four adult female students compare text-free geometric project revisions on paper and generic laptops while a female instructor observes",
     summaryImage: "/images/research/summary/aied-044-genai-collaborative-efl-projects-summary.png",
     summaryImageAlt:
-      "Three researchers compare two intact-class geometric evidence binders above a cyan timeline of exactly twelve unlabeled stage cards",
+      "Four adult female students compare text-free geometric project revisions on paper and generic laptops while a female instructor observes",
     summaryAudio: "/audio/research/aied-044-genai-collaborative-efl-projects-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -325,7 +325,7 @@ For Hong Kong language programmes, the practical lesson is to pilot a bounded co
       "Four diverse adult candidates complete separate workflow, hardware, architecture, and governance tasks as a proctor observes",
     summaryImage: "/images/research/summary/aied-043-claude-role-certifications-summary.png",
     summaryImageAlt:
-      "Three reviewers examine four distinct workflow, application, architecture, and governance evidence boards while a credential disc sits aside",
+      "Four diverse adult candidates complete separate workflow, hardware, architecture, and governance tasks as a proctor observes",
     summaryAudio: "/audio/research/aied-043-claude-role-certifications-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word product news report",
     shortSummary:
@@ -379,7 +379,7 @@ For Hong Kong universities and professional-learning providers, the programme is
       "Three diverse university science students compare three diagram drafts beside a text-free laptop feedback view linked by one cyan revision path",
     summaryImage: "/images/research/summary/aied-042-human-centered-genai-feedback-summary.png",
     summaryImageAlt:
-      "Researchers inspect four color-coded evidence lanes while an adult student completes a separate diagram task with laptops closed",
+      "Three diverse university science students compare three diagram drafts beside a text-free laptop feedback view linked by one cyan revision path",
     summaryAudio: "/audio/research/aied-042-human-centered-genai-feedback-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -435,7 +435,7 @@ For Hong Kong higher education, the strongest design implication is sequencing. 
       "An East Asian educator points to a reviewable project timeline on a desktop while a Black adult learner holds the same supervised workflow on a phone",
     summaryImage: "/images/research/summary/aied-039-cross-device-ai-workspaces-learning-summary.png",
     summaryImageAlt:
-      "High-angle view of a Black adult learner reviewing a phone approval between a desktop workstation and an East Asian educator with a South Asian learner checking printed evidence; a closed folder remains off the cyan route.",
+      "An East Asian educator points to a reviewable project timeline on a desktop while a Black adult learner holds the same supervised workflow on a phone",
     summaryAudio: "/audio/research/aied-039-cross-device-ai-workspaces-learning-summary.m4a",
     summaryAudioTitle: "Listen to the product news report",
     shortSummary:
@@ -499,7 +499,7 @@ For Hong Kong schools and universities, the practical response is to design cont
       "A teacher and diverse university learners discuss a cyan three-branch overlay linking mobile, conversation and writing activities",
     summaryImage: "/images/research/summary/aied-038-ai-tools-english-learning-motivation-summary.png",
     summaryImageAlt:
-      "Overhead view of diverse educators and adult learners reviewing study papers around a central evidence folder, with three cyan arrows linking the shared comparison to separate activity stations.",
+      "A teacher and diverse university learners discuss a cyan three-branch overlay linking mobile, conversation and writing activities",
     summaryAudio: "/audio/research/aied-038-ai-tools-english-learning-motivation-summary.m4a",
     summaryAudioTitle: "Listen to the paper summary",
     shortSummary:
@@ -557,7 +557,7 @@ For Hong Kong schools and universities, the useful conclusion is not to select a
       "Editorial cover of an adult learner and educator reviewing permissioned health context, AI-use reflection, and learning evidence across three supervised digital workspaces",
     summaryImage: "/images/research/summary/aied-037-personal-context-reflective-ai-products-summary.png",
     summaryImageAlt:
-      "A learner and educator inspect what personal context an AI may use, how AI delegation patterns are changing, and whether learning evidence supports personalization.",
+      "Editorial cover of an adult learner and educator reviewing permissioned health context, AI-use reflection, and learning evidence across three supervised digital workspaces",
     summaryAudio: "/audio/research/aied-037-personal-context-reflective-ai-products-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word news report",
     shortSummary:
@@ -615,7 +615,7 @@ For Hong Kong schools and universities, the combined signal is to govern context
       "Editorial cover of undergraduate learners and a lecturer examining a course-grounded RAG chatbot alongside flat learning and motivation outcome traces",
     summaryImage: "/images/research/summary/aied-036-rag-chatbot-null-effects-summary.png",
     summaryImageAlt:
-      "A semester-long comparison links a course-grounded chatbot and conventional study support to measures of interest, self-efficacy, engagement, and test performance.",
+      "Editorial cover of undergraduate learners and a lecturer examining a course-grounded RAG chatbot alongside flat learning and motivation outcome traces",
     summaryAudio: "/audio/research/aied-036-rag-chatbot-null-effects-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -675,7 +675,7 @@ For AIEDHK, the practical lesson is to evaluate a designed intervention before s
       "Editorial cover of educators reviewing an AI-assisted presentation, a revised document, and a curriculum activity inside a university learning-design studio",
     summaryImage: "/images/research/summary/aied-035-workspace-native-learning-tools-summary.png",
     summaryImageAlt:
-      "An educator checks source notes and authorship while a teaching team revises slides, documents, and a classroom activity across connected workspaces.",
+      "Editorial cover of educators reviewing an AI-assisted presentation, a revised document, and a curriculum activity inside a university learning-design studio",
     summaryAudio: "/audio/research/aied-035-workspace-native-learning-tools-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word news report",
     shortSummary:
@@ -747,7 +747,7 @@ For Hong Kong schools and universities, the combined signal is that AI governanc
       "Editorial cover of a middle-school learner using targeted mathematical feedback while a teacher reviews the learning process",
     summaryImage: "/images/research/summary/aied-034-llm-math-feedback-rct-summary.png",
     summaryImageAlt:
-      "A misconception-targeted feedback pipeline links a student's incorrect mathematics answer to a concise hint, a new attempt, and a later problem.",
+      "Editorial cover of a middle-school learner using targeted mathematical feedback while a teacher reviews the learning process",
     summaryAudio: "/audio/research/aied-034-llm-math-feedback-rct-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -804,7 +804,7 @@ Important limits narrow the claim. Per-problem randomization meant many students
     imageAlt: "Editorial cover for educators and institutional teams supervising connected AI agents, permissions, and human escalation",
     summaryImage: "/images/research/summary/aied-033-governed-institutional-ai-agents-summary.png",
     summaryImageAlt:
-      "A teacher, administrator, student representative, and technology lead inspect an AI workflow with approval, collaboration, and learning-governance checkpoints.",
+      "Editorial cover for educators and institutional teams supervising connected AI agents, permissions, and human escalation",
     summaryAudio: "/audio/research/aied-033-governed-institutional-ai-agents-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word news summary",
     shortSummary:
@@ -863,7 +863,7 @@ For Hong Kong schools and universities, the combined product signal is that AI a
     imageAlt: "Editorial cover for a secondary-school randomized trial of motivational and cognitive generative-AI learning prompts",
     summaryImage: "/images/research/summary/aied-032-genai-self-regulated-learning-rct-summary.png",
     summaryImageAlt:
-      "Three secondary students use different AI-supported learning pathways while a teacher supervises a regular classroom lesson.",
+      "Editorial cover for a secondary-school randomized trial of motivational and cognitive generative-AI learning prompts",
     summaryAudio: "/audio/research/aied-032-genai-self-regulated-learning-rct-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -919,7 +919,7 @@ For AIEDHK, the practical lesson is that an educational system cannot rely on th
       "Three adult researchers compare source diagrams at a library archive table as sparse cyan evidence lines converge on an organized folder",
     summaryImage: "/images/research/summary/aied-041-chatgpt-deep-research-source-review-summary.png",
     summaryImageAlt:
-      "Three adult reviewers compare geometric claim and source tiles linked by cyan evidence paths while one raises an amber stop disc",
+      "Three adult researchers compare source diagrams at a library archive table as sparse cyan evidence lines converge on an organized folder",
     summaryAudio: "/audio/research/aied-041-chatgpt-deep-research-source-review-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word product news report",
     shortSummary:
@@ -975,7 +975,7 @@ Deep Research makes documented synthesis easier to produce. Its educational valu
       "Three education researchers compare six molecular and density diagrams around a central ice-and-water experiment",
     summaryImage: "/images/research/summary/aied-040-classroom-ai-grade-specific-llms-summary.png",
     summaryImageAlt:
-      "Two researchers sort six explanation cards beside separate reading-flow diagrams and molecular accuracy models in a laboratory",
+      "Three education researchers compare six molecular and density diagrams around a central ice-and-water experiment",
     summaryAudio: "/audio/research/aied-040-classroom-ai-grade-specific-llms-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -1030,7 +1030,7 @@ The study shows that systematic adaptation can outperform a simple audience prom
     imageAlt: "Editorial cover for learners building web, design, and multimedia projects with supervised AI tools",
     summaryImage: "/images/research/summary/aied-031-ai-creation-learning-studios-summary.png",
     summaryImageAlt:
-      "Students and an educator inspect an interactive website, a three-dimensional model, and a visual learning project while retaining human review.",
+      "Editorial cover for learners building web, design, and multimedia projects with supervised AI tools",
     summaryAudio: "/audio/research/aied-031-ai-creation-learning-studios-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word news summary",
     shortSummary:
@@ -1089,7 +1089,7 @@ For Hong Kong schools and universities, the combined product signal is a move fr
     imageAlt: "Editorial cover for a Hong Kong primary-school machine learning literacy course using trainable robots",
     summaryImage: "/images/research/summary/aied-030-primary-machine-learning-literacy-summary.png",
     summaryImageAlt:
-      "Primary learners compare robot training runs while a teacher connects their observations to supervised and reinforcement learning concepts.",
+      "Editorial cover for a Hong Kong primary-school machine learning literacy course using trainable robots",
     summaryAudio: "/audio/research/aied-030-primary-machine-learning-literacy-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -1140,7 +1140,7 @@ For AIEDHK, the practical lesson is to teach the mechanism beneath the interface
     imageAlt: "Editorial cover for live voice, agentic AI, and source-grounded notebook product news",
     summaryImage: "/images/research/summary/aied-029-live-agent-notebook-summary.png",
     summaryImageAlt:
-      "Learners and an educator supervise a voice conversation, an agentic workflow, and a source-grounded digital notebook.",
+      "Editorial cover for live voice, agentic AI, and source-grounded notebook product news",
     summaryAudio: "/audio/research/aied-029-live-agent-notebook-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word news summary",
     shortSummary:
@@ -1195,7 +1195,7 @@ For Hong Kong schools and universities, these products invite three different pi
     imageAlt: "Editorial cover for a randomized comparison of structured AI tutoring and active-learning physics classes",
     summaryImage: "/images/research/summary/aied-028-structured-ai-physics-tutor-summary.png",
     summaryImageAlt:
-      "University physics learners compare a structured AI tutor with an active-learning classroom while working through fluid mechanics.",
+      "Editorial cover for a randomized comparison of structured AI tutoring and active-learning physics classes",
     summaryAudio: "/audio/research/aied-028-structured-ai-physics-tutor-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -1236,7 +1236,7 @@ For AIEDHK, the paper offers a productive contrast to studies of unrestricted AI
     imageAlt: "Editorial cover for guided, age-aware AI learning pathways across classroom study and coding",
     summaryImage: "/images/research/summary/aied-027-ai-learning-pathways-summary.png",
     summaryImageAlt:
-      "A teacher and learners review guided study, coding, and course-grounded learning activities while retaining human oversight.",
+      "Editorial cover for guided, age-aware AI learning pathways across classroom study and coding",
     summaryAudio: "/audio/research/aied-027-ai-learning-pathways-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word news summary",
     shortSummary:
@@ -1295,7 +1295,7 @@ These announcements remain vendor news, not independent proof of improved attain
     imageAlt: "Editorial cover for a randomized comparison of AI support in university programming education",
     summaryImage: "/images/research/summary/aied-026-ai-programming-learning-summary.png",
     summaryImageAlt:
-      "University programming students work with scaffolded AI, unrestricted AI, and conventional resources while a lecturer observes.",
+      "Editorial cover for a randomized comparison of AI support in university programming education",
     summaryAudio: "/audio/research/aied-026-ai-programming-learning-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -1346,7 +1346,7 @@ For AIEDHK, the practical implication is to separate assistance metrics from lea
     imageAlt: "Editorial cover for interactive learning in ChatGPT and reflective AI use in Claude",
     summaryImage: "/images/research/summary/aied-025-interactive-learning-reflection-summary.png",
     summaryImageAlt:
-      "A university learner explores an interactive science model while a teacher reviews a restrained reflection map of AI-use patterns and human study goals.",
+      "Editorial cover for interactive learning in ChatGPT and reflective AI use in Claude",
     summaryAudio: "/audio/research/aied-025-interactive-learning-reflection-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word news summary",
     shortSummary:
@@ -1395,7 +1395,7 @@ For Hong Kong educators, the combined lesson is to design for active cognition a
     imageAlt: "Editorial cover for a higher-education experiment with GPT-4 feedback",
     summaryImage: "/images/research/summary/aied-024-gpt4-feedback-summary.png",
     summaryImageAlt:
-      "University students revise macroeconomics answers at a tutorial table while lecturer, peer, and AI feedback pathways remain visibly distinct.",
+      "Editorial cover for a higher-education experiment with GPT-4 feedback",
     summaryAudio: "/audio/research/aied-024-gpt4-feedback-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -1436,7 +1436,7 @@ For AIEDHK, the practical lesson is to focus on feedback system design. Individu
     imageAlt: "Editorial cover for Anthropic's Claude for Teachers launch",
     summaryImage: "/images/research/summary/aied-023-claude-for-teachers-summary.png",
     summaryImageAlt:
-      "A teacher plans a standards-aligned lesson with differentiated activity materials, privacy safeguards, and scheduled AI support in an empty K-12 classroom.",
+      "Editorial cover for Anthropic's Claude for Teachers launch",
     summaryAudio: "/audio/research/aied-023-claude-for-teachers-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word news summary",
     shortSummary:
@@ -1475,7 +1475,7 @@ For Hong Kong schools, the immediate product is geographically limited, but the 
     imageAlt: "Editorial cover for a systematic review of technology-enhanced CLIL",
     summaryImage: "/images/research/summary/aied-022-technology-enhanced-clil-review-summary.png",
     summaryImageAlt:
-      "Education researchers synthesize international evidence on technology-supported content and language learning while a CLIL science lesson takes place nearby.",
+      "Editorial cover for a systematic review of technology-enhanced CLIL",
     summaryAudio: "/audio/research/aied-022-technology-enhanced-clil-review-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word paper summary",
     shortSummary:
@@ -1514,7 +1514,7 @@ For Hong Kong educators, the review argues for design discipline. Technology sho
     imageAlt: "Editorial cover for OpenAI and Anthropic AI workbench product news",
     summaryImage: "/images/research/summary/aied-021-ai-workbenches-openai-anthropic-summary.png",
     summaryImageAlt:
-      "Editorial scene of educators, researchers, and developers supervising agentic AI workflows across classroom, science, coding, and governance contexts.",
+      "Editorial cover for OpenAI and Anthropic AI workbench product news",
     summaryAudio: "/audio/research/aied-021-ai-workbenches-openai-anthropic-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1565,7 +1565,7 @@ For Hong Kong schools and universities, the practical response is to teach workb
     imageAlt: "Editorial cover for ethical and behavioral factors in students' ChatGPT adoption",
     summaryImage: "/images/research/summary/aied-020-chatgpt-ethics-adoption-summary.png",
     summaryImageAlt:
-      "Editorial classroom scene showing students evaluating generative AI adoption through privacy, explainability, trust, social influence, and academic integrity.",
+      "Editorial cover for ethical and behavioral factors in students' ChatGPT adoption",
     summaryAudio: "/audio/research/aied-020-chatgpt-ethics-adoption-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1602,7 +1602,7 @@ The practical implication for Hong Kong higher education is that AI ethics and A
     imageAlt: "Editorial cover for the public GPT-5.6 launch and Codex inside ChatGPT",
     summaryImage: "/images/research/summary/aied-019-openai-gpt-5-6-codex-summary.png",
     summaryImageAlt:
-      "Science-editorial scene of learners and educators directing agentic AI workflows with planning, research, review, and human oversight.",
+      "Editorial cover for the public GPT-5.6 launch and Codex inside ChatGPT",
     summaryAudio: "/audio/research/aied-019-openai-gpt-5-6-codex-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1639,7 +1639,7 @@ For Hong Kong schools and universities, the practical response should be staged 
     imageAlt: "Editorial cover for OpenAI ChatGPT Education and learning outcomes measurement news",
     summaryImage: "/images/research/summary/aied-018-openai-learning-outcomes-summary.png",
     summaryImageAlt:
-      "Premium editorial illustration of ChatGPT Education, learning outcomes measurement, classroom evidence, teacher oversight, and responsible AI adoption.",
+      "Editorial cover for OpenAI ChatGPT Education and learning outcomes measurement news",
     summaryAudio: "/audio/research/aied-018-openai-learning-outcomes-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1676,7 +1676,7 @@ The broader signal is that ChatGPT Education is moving into a new phase: from ac
     imageAlt: "Editorial cover for metacognitive engagement in student-GenAI interaction",
     summaryImage: "/images/research/summary/aied-017-metacognitive-genai-engagement-summary.png",
     summaryImageAlt:
-      "Premium editorial illustration of students interacting with generative AI through motivation, roles, metacognitive monitoring, reflection, and strategy revision.",
+      "Editorial cover for metacognitive engagement in student-GenAI interaction",
     summaryAudio: "/audio/research/aied-017-metacognitive-genai-engagement-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1713,7 +1713,7 @@ The study also has practical implications for Hong Kong classrooms and universit
     imageAlt: "Editorial cover for OpenAI ChatGPT Education and AI capability gap news",
     summaryImage: "/images/research/summary/aied-016-openai-education-opportunity-summary.png",
     summaryImageAlt:
-      "Premium editorial illustration of ChatGPT Education, student AI capability building, institutional access, teacher support, and responsible opportunity.",
+      "Editorial cover for OpenAI ChatGPT Education and AI capability gap news",
     summaryAudio: "/audio/research/aied-016-openai-education-opportunity-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1750,7 +1750,7 @@ The broader lesson is that ChatGPT Education is becoming part of a policy conver
     imageAlt: "Editorial cover for ChatGPT-supported EFL writing and AI literacy",
     summaryImage: "/images/research/summary/aied-015-efl-chatgpt-ai-literacy-summary.png",
     summaryImageAlt:
-      "Premium editorial illustration of EFL writing with ChatGPT support, AI literacy, learner autonomy, revision, teacher mediation, and critical prompting.",
+      "Editorial cover for ChatGPT-supported EFL writing and AI literacy",
     summaryAudio: "/audio/research/aied-015-efl-chatgpt-ai-literacy-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1788,7 +1788,7 @@ For Hong Kong, the paper is especially relevant because English writing, multili
       "Education leaders planning national ChatGPT Edu deployments across connected campuses on a physical map",
     summaryImage: "/images/research/summary/aied-014-openai-countries-summary.png",
     summaryImageAlt:
-      "Premium editorial illustration of national ChatGPT Education deployment through institutions, teacher training, localization, evidence measurement, and governance.",
+      "Education leaders planning national ChatGPT Edu deployments across connected campuses on a physical map",
     summaryAudio: "/audio/research/aied-014-openai-countries-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1825,7 +1825,7 @@ The broader lesson is that ChatGPT Education is becoming a policy, procurement, 
     imageAlt: "Editorial cover for a review of generative AI in programming education",
     summaryImage: "/images/research/summary/aied-013-genai-programming-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of generative AI programming education with coding practice, assessment integrity, debugging, accessibility, and curriculum safeguards.",
+      "Editorial cover for a review of generative AI in programming education",
     summaryAudio: "/audio/research/aied-013-genai-programming-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1862,7 +1862,7 @@ The paper is especially relevant for Hong Kong because programming education is 
     imageAlt: "Editorial cover for a teacher-led ChatGPT education workspace",
     summaryImage: "/images/research/summary/aied-012-openai-teachers-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of a secure teacher AI workspace with lesson planning, collaboration, privacy controls, multilingual materials, and professional learning.",
+      "Editorial cover for a teacher-led ChatGPT education workspace",
     summaryAudio: "/audio/research/aied-012-openai-teachers-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1899,7 +1899,7 @@ The broader lesson is that AI in education is moving from experiment to managed 
     imageAlt: "Editorial cover for LLM feedback inside an intelligent tutoring system",
     summaryImage: "/images/research/summary/aied-011-reddig-llm-feedback-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of LLM-generated tutoring feedback passing through error diagnosis, helpfulness review, confidence gates, and teacher oversight.",
+      "Editorial cover for LLM feedback inside an intelligent tutoring system",
     summaryAudio: "/audio/research/aied-011-reddig-llm-feedback-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1936,7 +1936,7 @@ For AIEDHK, the article can become a practical checklist for LLM tutor design. A
     imageAlt: "Academic cover for a systematic review of AI applications in higher education",
     summaryImage: "/images/research/summary/aied-001-zawacki-richter-review-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of AI in higher education organized around educator agency, pedagogy, prediction, assessment, personalization, tutoring, and ethics.",
+      "Academic cover for a systematic review of AI applications in higher education",
     summaryAudio: "/audio/research/aied-001-zawacki-richter-review-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -1998,7 +1998,7 @@ For AIEDHK, this paper can anchor a why-review-matters narrative. It supports th
       "Student and teacher balancing learning support with privacy risks while reviewing large-language-model output",
     summaryImage: "/images/research/summary/aied-002-kasneci-llm-education-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of large language models in education balancing personalized support, teacher workflows, assessment, accessibility, privacy, bias, and transparency.",
+      "Student and teacher balancing learning support with privacy risks while reviewing large-language-model output",
     summaryAudio: "/audio/research/aied-002-kasneci-llm-education-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -2035,7 +2035,7 @@ This paper connects generative AI to AIED without pretending that generative AI 
     imageAlt: "Academic cover for a broad review of artificial intelligence in education",
     summaryImage: "/images/research/summary/aied-003-chen-ai-education-review-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of AI in education spanning administration, teacher instruction, student learning, feedback, scheduling, and adaptive pathways.",
+      "Academic cover for a broad review of artificial intelligence in education",
     summaryAudio: "/audio/research/aied-003-chen-ai-education-review-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -2072,7 +2072,7 @@ For AIEDHK, the paper can function as a landscape piece. It supports the Researc
     imageAlt: "Academic cover for the foundational Science paper on intelligent tutoring systems",
     summaryImage: "/images/research/summary/aied-004-anderson-its-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of classic intelligent tutoring architecture with domain models, learner models, pedagogical rules, feedback, and mastery progression.",
+      "Academic cover for the foundational Science paper on intelligent tutoring systems",
     summaryAudio: "/audio/research/aied-004-anderson-its-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -2109,7 +2109,7 @@ The paper also offers a useful contrast with today's large language models. LLMs
     imageAlt: "Academic cover for a review of educational data mining",
     summaryImage: "/images/research/summary/aied-005-romero-edm-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of educational data mining turning learning traces from platforms, tutors, classrooms, assessments, and forums into interpretable evidence.",
+      "Academic cover for a review of educational data mining",
     summaryAudio: "/audio/research/aied-005-romero-edm-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -2146,7 +2146,7 @@ The paper's future research directions remain relevant. It points toward more so
     imageAlt: "Academic cover for the foundational knowledge tracing paper",
     summaryImage: "/images/research/summary/aied-006-corbett-knowledge-tracing-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of knowledge tracing with hidden skill components, practice attempts, uncertainty, mastery updates, and adaptive next steps.",
+      "Academic cover for the foundational knowledge tracing paper",
     summaryAudio: "/audio/research/aied-006-corbett-knowledge-tracing-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -2183,7 +2183,7 @@ For AIEDHK, this paper can anchor the student-modelling theme. It is directly re
     imageAlt: "Academic cover for a review comparing human tutoring and intelligent tutoring systems",
     summaryImage: "/images/research/summary/aied-007-vanlehn-tutoring-effectiveness-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration comparing human tutoring, intelligent tutoring systems, noninteractive instruction, feedback granularity, and learning outcome evidence.",
+      "Academic cover for a review comparing human tutoring and intelligent tutoring systems",
     summaryAudio: "/audio/research/aied-007-vanlehn-tutoring-effectiveness-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -2220,7 +2220,7 @@ For AIEDHK, this paper is valuable because it links AI tutoring to evidence of l
     imageAlt: "Academic cover for Cognitive Tutors: Lessons Learned",
     summaryImage: "/images/research/summary/aied-008-cognitive-tutors-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of cognitive tutor development through cognitive models, model tracing, interface design, classroom use, and evidence cycles.",
+      "Academic cover for Cognitive Tutors: Lessons Learned",
     summaryAudio: "/audio/research/aied-008-cognitive-tutors-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -2257,7 +2257,7 @@ For AIEDHK, this paper is a strong historical and design reference. It can help 
     imageAlt: "Academic cover for a state of the field review on AI in higher education",
     summaryImage: "/images/research/summary/aied-009-crompton-higher-ed-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of the higher education AI research landscape with publication growth, assessment, prediction, AI assistants, tutoring, and learning management.",
+      "Academic cover for a state of the field review on AI in higher education",
     summaryAudio: "/audio/research/aied-009-crompton-higher-ed-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:
@@ -2294,7 +2294,7 @@ The review also highlights who AIED systems are intended to support. Most studie
     imageAlt: "Academic cover for an agenda-setting article on AIED roles and research issues",
     summaryImage: "/images/research/summary/aied-010-hwang-aied-agenda-summary.png",
     summaryImageAlt:
-      "Premium tabletop illustration of an AIED field agenda connecting student support, teacher support, decision making, assessment, analytics, ethics, and interdisciplinary design.",
+      "Academic cover for an agenda-setting article on AIED roles and research issues",
     summaryAudio: "/audio/research/aied-010-hwang-aied-agenda-summary.m4a",
     summaryAudioTitle: "Listen to the 500-word summary",
     shortSummary:

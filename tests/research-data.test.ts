@@ -221,27 +221,33 @@ test("each reviewed paper has a different cover bitmap", () => {
   }
 });
 
-test("backlog cover and summary images use twenty-four distinct 1600x1000 bitmaps with id-aligned filenames", () => {
-  const backlog = getResearchPapers("en").filter((paper) => {
-    const id = Number.parseInt(paper.id.replace("aied-", ""), 10);
-    return id >= 38 && id <= 49;
-  });
-  const hashes = new Set<string>();
+test("every News detail page reuses the same bitmap for cover and summary placements", () => {
+  const papers = getResearchPapers("en");
 
-  assert.equal(backlog.length, 12);
-  for (const paper of backlog) {
-    assert.ok(paper.summaryImage);
+  for (const paper of papers) {
+    assert.ok(paper.summaryImage, `${paper.slug} should keep a summary image path`);
+    assert.notEqual(paper.image, paper.summaryImage, `${paper.slug} should keep separate cover and summary paths`);
     assert.ok(paper.image.includes(paper.id), `${paper.image} should include ${paper.id}`);
     assert.ok(paper.summaryImage.includes(paper.id), `${paper.summaryImage} should include ${paper.id}`);
+
     const coverPath = localPublicPath(paper.image);
     const summaryPath = localPublicPath(paper.summaryImage);
-    assert.deepEqual(pngDimensions(coverPath), { width: 1600, height: 1000 });
-    assert.deepEqual(pngDimensions(summaryPath), { width: 1600, height: 1000 });
-    hashes.add(fileHash(coverPath));
-    hashes.add(fileHash(summaryPath));
+    assert.deepEqual(
+      pngDimensions(coverPath),
+      pngDimensions(summaryPath),
+      `${paper.slug} should use the same source dimensions for both image placements`,
+    );
+    assert.equal(
+      fileHash(coverPath),
+      fileHash(summaryPath),
+      `${paper.slug} should show the same bitmap in cover and summary placements`,
+    );
+    assert.equal(
+      paper.summaryImageAlt,
+      paper.imageAlt,
+      `${paper.slug} should describe the same scene in both image alt texts`,
+    );
   }
-
-  assert.equal(hashes.size, 24, "every backlog cover and summary image must use a different bitmap");
 });
 
 test("visually duplicated News covers keep their dedicated replacement assets", () => {

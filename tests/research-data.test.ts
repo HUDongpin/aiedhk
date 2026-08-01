@@ -24,13 +24,33 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains forty-nine curated Research News items", () => {
+test("research news fallback contains fifty-one curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 49);
-  assert.equal(papers[0]?.slug, "news-openai-ai-skills-jam-k12-educators");
+  assert.equal(papers.length, 51);
+  assert.equal(papers[0]?.slug, "news-frontier-model-efficiency-teacher-led-learning-procurement");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
+});
+
+test("August 1 Research News contains one new paper and one clearly labeled multi-vendor product report", () => {
+  const entries = getResearchPapers("en").filter((paper) => paper.createdAt === "2026-08-01");
+
+  assert.deepEqual(entries.map((paper) => paper.id), ["aied-051", "aied-050"]);
+  assert.equal(entries.filter((paper) => paper.type === "policy-ethics").length, 1);
+  assert.equal(entries.filter((paper) => paper.type !== "policy-ethics").length, 1);
+
+  const report = entries.find((paper) => paper.id === "aied-051");
+  assert.match(`${report?.title} ${report?.tags.join(" ")}`, /product news/i);
+  assert.deepEqual(report?.authors, ["OpenAI", "Anthropic", "Google for Education"]);
+  assert.ok(report?.sourceUrls?.some(({ url }) => url.includes("openai.com")));
+  assert.ok(report?.sourceUrls?.some(({ url }) => url.includes("anthropic.com")));
+  assert.ok(report?.sourceUrls?.some(({ url }) => url.includes("blog.google")));
+
+  const paper = entries.find((candidate) => candidate.id === "aied-050");
+  assert.equal(paper?.sourceUrl, "https://doi.org/10.1016/j.compedu.2026.105640");
+  assert.match(paper?.fullSummary ?? "", /1,368/);
+  assert.match(paper?.fullSummary ?? "", /did not significantly improve/i);
 });
 
 test("the six-date backlog contains exactly one research paper and one clearly labeled product-news item per day", () => {
@@ -276,6 +296,8 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-051",
+      "aied-050",
       "aied-049",
       "aied-048",
       "aied-047",
@@ -341,6 +363,36 @@ test("static summary media assets are available locally", () => {
     assert.ok(height >= 900, `${paper.summaryImage} should have enough vertical detail`);
     assert.equal(audioBuffer.toString("ascii", 4, 8), "ftyp", `${paper.summaryAudio} should be an MP4/M4A media file`);
   }
+});
+
+test("August 1 entries use four new id-aligned media bitmaps and two complete static narrations", () => {
+  const entries = getResearchPapers("en").filter((paper) => paper.createdAt === "2026-08-01");
+  const imageHashes = new Set<string>();
+  const audioHashes = new Set<string>();
+
+  assert.equal(entries.length, 2);
+  for (const paper of entries) {
+    assert.ok(paper.summaryImage);
+    assert.ok(paper.summaryAudio);
+    assert.ok(paper.image.includes(paper.id));
+    assert.ok(paper.summaryImage.includes(paper.id));
+
+    for (const imagePath of [paper.image, paper.summaryImage]) {
+      const localPath = localPublicPath(imagePath);
+      assert.deepEqual(pngDimensions(localPath), { width: 1600, height: 1000 });
+      imageHashes.add(fileHash(localPath));
+    }
+
+    const audioPath = localPublicPath(paper.summaryAudio);
+    const audioBuffer = readFileSync(audioPath);
+    assert.equal(audioBuffer.toString("ascii", 4, 8), "ftyp");
+    assert.ok(audioBuffer.includes(Buffer.from("mdat")));
+    assert.ok(audioBuffer.byteLength > 100_000);
+    audioHashes.add(createHash("sha256").update(audioBuffer).digest("hex"));
+  }
+
+  assert.equal(imageHashes.size, 4, "the new cover and summary visuals must all be distinct");
+  assert.equal(audioHashes.size, 2, "the two narrations must be separately generated");
 });
 
 test("backlog entries aied-038 through aied-049 have non-empty local M4A audio", () => {

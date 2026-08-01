@@ -975,7 +975,7 @@ In education, the adaptation method should follow the learning purpose. A school
       { label: "Direct Preference Optimization", url: "https://arxiv.org/abs/2305.18290" },
       { label: "LoRA: Low-Rank Adaptation of Large Language Models", url: "https://arxiv.org/abs/2106.09685" },
     ],
-    createdAt: "2026-08-01T08:00:00.000Z",
+    createdAt: "2026-07-31T08:00:00.000Z",
   },
   {
     id: "academy-028",
@@ -1012,6 +1012,6 @@ Communities of practice are valuable for teacher learning, laboratory work, desi
       { label: "Wenger-Trayner introduction to communities of practice", url: "https://www.wenger-trayner.com/introduction-to-communities-of-practice/" },
       { label: "IIEP-UNESCO Communities of Practice for education", url: "https://www.iiep.unesco.org/en/cop" },
     ],
-    createdAt: "2026-08-01T08:00:00.000Z",
+    createdAt: "2026-07-31T08:00:00.000Z",
   },
 ];

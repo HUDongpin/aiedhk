@@ -66,7 +66,7 @@ test("Academy publishes the scheduled curriculum pair for every completed releas
     ["2026-07-28T08:00:00.000Z", ["academy-023", "academy-024"]],
     ["2026-07-29T08:00:00.000Z", ["academy-015", "academy-016"]],
     ["2026-07-30T08:00:00.000Z", ["academy-025", "academy-026"]],
-    ["2026-08-01T08:00:00.000Z", ["academy-027", "academy-028"]],
+    ["2026-07-31T08:00:00.000Z", ["academy-027", "academy-028"]],
   ]);
 
   for (const [createdAt, expectedIds] of catchUpDates) {

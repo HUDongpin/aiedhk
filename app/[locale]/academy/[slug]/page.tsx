@@ -83,6 +83,17 @@ export default async function AcademyDetailPage({ params }: AcademyDetailPagePro
       <div className="mt-12 grid gap-8 lg:grid-cols-[1fr_340px]">
         <div className="rounded-4xl border border-slate-200 bg-white p-7 shadow-card sm:p-9">
           <p className="text-sm font-black uppercase tracking-[0.24em] text-aied-blue">{dictionary.academy.summaryHeading}</p>
+          <figure className="mt-6 overflow-hidden rounded-3xl border border-slate-200 bg-slate-50" lang={presentation.contentHtmlLang} dir={presentation.contentDir}>
+            <Image
+              src={lesson.image}
+              alt=""
+              width={1600}
+              height={1000}
+              loading="lazy"
+              sizes="(min-width: 1280px) 740px, (min-width: 1024px) calc(100vw - 404px), 100vw"
+              className="block h-auto w-full object-cover"
+            />
+          </figure>
           {lesson.summaryAudio ? <SummaryAudioPlayer src={lesson.summaryAudio} title={lesson.summaryAudioTitle} /> : null}
           <div className="research-summary mt-7 text-lg leading-8 text-aied-muted" lang={presentation.contentHtmlLang} dir={presentation.contentDir}>{lesson.fullSummary.split("\n\n").map((paragraph, index) => <p key={index}>{paragraph}</p>)}</div>
         </div>

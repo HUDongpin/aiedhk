@@ -2,9 +2,9 @@
 
 This contract applies to every Academy lesson image, including its reuse as a listing-card thumbnail.
 
-## One-image publication model
+## One-asset, two-placement publication model
 
-Each Academy lesson uses exactly one image asset. The lesson detail page displays that asset exactly once as the hero image; the same file may also appear as the lesson-card thumbnail. Do not publish a separate summary image or render the lesson asset a second time below the summary heading.
+Each Academy lesson uses exactly one image asset and one visual composition. The lesson detail page displays that same visual twice: once in the smaller top hero placement and once in the larger image placement beneath `Full Lesson Summary`. The two placements must use different rendered dimensions and responsive `sizes`. Do not publish a different summary composition or require a second source-image asset. The same file may also appear as the lesson-card thumbnail.
 
 Preserve previously generated Academy files on disk even when the site no longer references them. Before generating artwork for a future lesson, inspect the unpublished-image inventory and publish a suitable compliant asset first. Generate a new image only when that inventory has no suitable candidate. Every newly published lesson image must be a unique 1600x1000 PNG.
 
@@ -16,7 +16,7 @@ Academy artwork is high-production editorial education imagery for teachers and 
 
 Use concept-rich technology editorial photography: credible real teachers and learners visibly investigate, build, compare, or explain one lesson-specific physical or optical apparatus in a contemporary lab, studio, maker space, or advanced learning environment. Use architectural depth, controlled contrast, refined materials, and a restrained luminous accent to make the lesson concept immediately legible.
 
-The desired result should feel like a carefully art-directed technology magazine feature, not an ordinary classroom snapshot.
+The desired result should feel like a carefully art-directed technology magazine feature, not an ordinary classroom snapshot. Reuse the exact same visual in both detail-page placements; only its rendered size changes.
 
 Luminous elements must be sparse continuous surfaces, lines, planes, or a small number of large nodes. They may clarify the educational concept, but they must never become a dense particle field, dotted mesh, or decorative sci-fi overlay.
 
@@ -73,6 +73,7 @@ Sparse, semantically meaningful diagram nodes, isolated marks, or ordinary photo
 - Start with generous negative space and a controlled object count.
 - Use one concept-specific physical or optical apparatus as the visual anchor.
 - Use a restrained luminous accent with ivory, near-black, metal, glass, or natural wood materials.
+- Reuse the exact same lesson visual in the smaller top hero and larger `Full Lesson Summary` image placements; give the placements different responsive rendered dimensions.
 - Make the lesson concept legible through scale, separation, direction, and hierarchy.
 - Show real teachers and learners visibly participating in the educational relationship.
 - Keep every visible teaching surface purposeful and nonblank without relying on generated readable text.
@@ -81,7 +82,7 @@ Sparse, semantically meaningful diagram nodes, isolated marks, or ordinary photo
 
 ## Publication checks
 
-- Confirm the lesson has exactly one referenced image and the detail page renders it once.
+- Confirm the lesson has exactly one referenced image asset and the detail page renders that same visual twice: smaller in the top hero and larger beneath `Full Lesson Summary`.
 - Select a suitable unpublished image first; otherwise generate one new lesson-specific asset.
 - Normalize the lesson image to a real 1600x1000 PNG.
 - Write literal alt text that describes visible content.

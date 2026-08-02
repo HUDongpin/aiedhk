@@ -33,8 +33,8 @@ test("research news fallback contains fifty-one curated Research News items", ()
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
 
-test("August 2 Research News contains one new paper and one clearly labeled multi-vendor product report", () => {
-  const entries = getResearchPapers("en").filter((paper) => paper.createdAt === "2026-08-02");
+test("August 3 Research News contains one new paper and one clearly labeled multi-vendor product report", () => {
+  const entries = getResearchPapers("en").filter((paper) => paper.createdAt === "2026-08-03");
 
   assert.deepEqual(entries.map((paper) => paper.id), ["aied-051", "aied-050"]);
   assert.equal(entries.filter((paper) => paper.type === "policy-ethics").length, 1);
@@ -382,8 +382,8 @@ test("static summary media assets are available locally", () => {
   }
 });
 
-test("August 2 entries use two unique master visuals across four id-aligned paths and two complete static narrations", () => {
-  const entries = getResearchPapers("en").filter((paper) => paper.createdAt === "2026-08-02");
+test("August 3 entries use two unique master visuals across four id-aligned paths and two complete static narrations", () => {
+  const entries = getResearchPapers("en").filter((paper) => paper.createdAt === "2026-08-03");
   const masterImageHashes = new Set<string>();
   const audioHashes = new Set<string>();
 

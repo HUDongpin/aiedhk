@@ -54,7 +54,7 @@ For Hong Kong schools and universities, a practical pilot would compare total co
         url: "https://blog.google/products-and-platforms/products/education/iste-2026-educator-updates/",
       },
     ],
-    createdAt: "2026-08-02",
+    createdAt: "2026-08-03",
   },
   {
     id: "aied-050",
@@ -121,11 +121,11 @@ For Hong Kong universities, the intervention offers a practical starting archite
         url: "https://www.cmu.edu/teaching/gaitar/genaimodules/index.html",
       },
       {
-        label: "Carnegie Mellon GAITAR@Scale study summary",
-        url: "https://www.cmu.edu/teaching/gaitar/researchatscale.html",
+        label: "Carnegie Mellon GAITAR@Scale asynchronous-modules study summary",
+        url: "https://www.cmu.edu/teaching/gaitar/gaitaratscale/asynchronouslearningmodules.html",
       },
     ],
-    createdAt: "2026-08-02",
+    createdAt: "2026-08-03",
   },
   {
     id: "aied-049",

@@ -1160,4 +1160,78 @@ In education, a teacher might identify one essential concept, publish a rubric w
     ],
     createdAt: "2026-08-04T08:00:00.000Z",
   },
+  {
+    id: "academy-033",
+    listingIdentifier: "AI Knowledge 17",
+    slug: "knowledge-tracing-and-learner-models",
+    title: "Knowledge Tracing and Learner Models",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["knowledge tracing", "learner models", "adaptive learning"],
+    image: "/images/academy/covers/academy-033-knowledge-tracing-and-learner-models.png",
+    imageAlt: "A South Asian woman points to four glass chambers with amber disks while a Black man and East Asian woman study the connected learner-model apparatus",
+    summaryAudio: "/audio/academy/academy-033-knowledge-tracing-and-learner-models-summary.m4a",
+    summaryAudioTitle: "Listen to Knowledge Tracing and Learner Models",
+    shortSummary: "How digital learning systems estimate changing mastery from interaction records, why predictions remain uncertain, and how transparent learner models can support better decisions.",
+    fullSummary: `A learner model is a structured representation of what a system believes about a learner at a particular time. It may include estimates of knowledge, skills, strategies, goals, or engagement. Knowledge tracing is a narrower family of methods that updates an estimate of knowledge as a learner completes a sequence of tasks. The important word is estimate. Knowledge is not observed directly. The system observes evidence such as which item was attempted, whether the response was correct, how much time or help was used, and which knowledge components the item is assumed to require.
+
+Bayesian Knowledge Tracing represents each knowledge component with a probability that it has been learned. A classic model includes an initial mastery estimate, a probability of learning after an opportunity, and allowances for a correct guess or an incorrect slip. After each tagged response, the model updates its estimate and predicts later performance. This makes assumptions visible, but the result depends heavily on how items are mapped to skills. Extensions may represent forgetting, item difficulty, multiple strategies, or individual differences because a simple correct-or-incorrect sequence cannot capture every path to understanding.
+
+Deep Knowledge Tracing introduced recurrent neural networks that learn patterns across longer interaction sequences without requiring the same hand-specified state structure. Later models use attention, memory, graphs, or other architectures. Greater flexibility can improve prediction on some datasets, but a higher benchmark score does not automatically produce a more valid learner model. Comparisons can change with data splits, hyperparameters, baselines, and evaluation metrics. A model may also exploit repeated items or platform routines without representing durable knowledge. Useful evaluation asks about calibration, performance for new learners and items, transfer across contexts, and whether uncertainty is communicated.
+
+Predictions become educationally meaningful only through the decisions they inform. A tutor might choose the next practice item, while a dashboard might help a teacher identify a pattern worth investigating. These actions should not treat a low probability as a fixed trait or diagnosis. Missing practice, language demands, accessibility barriers, guessing, collaboration, and poor item design can all shape the record. Open learner models make selected evidence and inferences visible to learners, sometimes allowing them to question or correct the representation. This can support reflection and trust while improving model accuracy.
+
+In education, teachers and learners should use a learner model as a revisable hypothesis. A class can calculate a small Bayesian trace from several responses, change the guess or slip assumption, and observe how the estimated state moves. Learners can compare that trace with explanations, transfer tasks, and their own confidence, then identify evidence the model missed. Systems should minimize data collection, protect sensitive records, test for uneven errors, and preserve human review for consequential decisions. Knowledge tracing is valuable when it turns interaction history into a transparent prompt for better support, not when a probability replaces the learner or the teacher's judgment.`,
+    coreIdeas: [
+      "Knowledge tracing estimates an unobserved knowledge state from sequences of learner interactions, item-skill mappings, and explicit or learned assumptions.",
+      "Bayesian, deep, and other models represent learning differently, so predictive scores must be checked for calibration, leakage, transfer, baselines, and uncertainty.",
+      "Learner-model predictions should remain revisable, transparent, privacy-conscious evidence for support rather than fixed diagnoses or substitutes for learner and teacher judgment.",
+    ],
+    educationConnection: "Let learners calculate and challenge a simple knowledge trace, compare it with explanations and transfer evidence, and decide what additional evidence is needed before adapting instruction.",
+    relatedConcepts: ["Bayesian knowledge tracing", "Open learner models", "Adaptive learning"],
+    sourceUrls: [
+      { label: "Corbett and Anderson: Knowledge Tracing", url: "https://doi.org/10.1007/BF01099821" },
+      { label: "Piech and colleagues: Deep Knowledge Tracing", url: "https://proceedings.neurips.cc/paper_files/paper/2015/hash/bac9162b47c56fc8a4d2a519803d51b3-Abstract.html" },
+      { label: "Sarsa and colleagues: Empirical Evaluation of Deep Knowledge Tracing", url: "https://jedm.educationaldatamining.org/index.php/JEDM/article/view/553" },
+      { label: "Bull: Negotiated Learner Modelling", url: "https://link.springer.com/article/10.1186/s41039-016-0035-3" },
+    ],
+    createdAt: "2026-08-05T08:00:00.000Z",
+  },
+  {
+    id: "academy-034",
+    listingIdentifier: "Educational Theory 17",
+    slug: "formative-assessment",
+    title: "Formative Assessment",
+    track: "educational-theory",
+    level: "core",
+    tags: ["formative assessment", "feedback", "evidence of learning"],
+    image: "/images/academy/covers/academy-034-formative-assessment.png",
+    imageAlt: "A Black woman points to coral pendulum traces while a White man adjusts the counterweight and a Middle Eastern woman holds a board of hand-drawn curves",
+    summaryAudio: "/audio/academy/academy-034-formative-assessment-summary.m4a",
+    summaryAudioTitle: "Listen to Formative Assessment",
+    shortSummary: "How teachers and learners clarify goals, elicit evidence, interpret thinking, give actionable feedback, and adjust next steps while learning is still underway.",
+    fullSummary: `Formative assessment is a planned, ongoing process in which teachers and learners elicit and use evidence to move learning forward. It is not a particular quiz, app, worksheet, or grading category. An activity becomes formative when evidence gathered during learning changes what someone does next. The process connects an intended learning goal, evidence of current thinking, and an adjustment that helps close the gap. Students participate by understanding the goal, examining evidence, using feedback, and increasingly directing their own next steps.
+
+Strong formative practice begins with clear learning goals and success criteria grounded in the discipline. Teachers then design questions, discussions, observations, demonstrations, drafts, or exit tasks that can reveal how learners are reasoning. A correct answer may hide a misconception, while a carefully chosen explanation or contrasting case can expose it. Evidence should be broad enough that quiet, uncertain, multilingual, and disabled learners can show their thinking. Techniques that collect a response from every learner are often more informative than relying on volunteers, but the task still needs to distinguish among plausible understandings.
+
+Interpretation must lead to action. A teacher might revisit a prerequisite, compare two anonymous responses, change the example, form a short support group, or advance to a more demanding application. Feedback is formative when it is actionable and the learner has time to use it. Comments that locate the current work, clarify the goal, and identify a manageable next move are more useful than praise or a score alone. Peer feedback and self-assessment can expand this process when learners understand the criteria, practice giving evidence-based comments, and work in a respectful culture where emerging ideas are safe to share.
+
+Frequent testing is not automatically formative. If scores are recorded but teaching and learning continue unchanged, the loop remains open. The same task can be used formatively during instruction and summatively later, depending on purpose and response. Evidence on formative assessment is encouraging, including a large English secondary-school trial of a professional development programme, but results depend on implementation, subject, timing, and what teachers do with the evidence. No single routine works equally well in every classroom.
+
+In education, a useful cycle can fit inside one lesson. Clarify a goal, ask learners to predict and explain, display a small range of responses, and decide together what the evidence suggests. The teacher chooses a next move, learners revise or try a parallel problem, and both check whether understanding changed. AI tools can help group response patterns or propose follow-up questions, but teachers must verify interpretations, protect learner data, and notice minority reasoning that an aggregate may hide. Formative assessment closes the loop through responsive action. Its value lies not in collecting more data, but in making timely, disciplined changes with learners while improvement is still possible.`,
+    coreIdeas: [
+      "Formative assessment is an ongoing process, not a specific instrument, and evidence becomes formative only when it changes a next step in teaching or learning.",
+      "Clear goals, success criteria, well-designed elicitation, interpretation, actionable feedback, and opportunities to revise work together as an integrated cycle.",
+      "Students need inclusive ways to show thinking, participate in self- and peer assessment, use feedback, and share responsibility within a safe disciplinary learning culture.",
+    ],
+    educationConnection: "Clarify one goal, elicit an explanation from every learner, interpret a range of responses, choose a responsive next move, and provide immediate time to revise or try a parallel task.",
+    relatedConcepts: ["Assessment for learning", "Actionable feedback", "Self-assessment"],
+    sourceUrls: [
+      { label: "Black and Wiliam: Assessment and Classroom Learning", url: "https://assess.ucr.edu/sites/g/files/rcwecm2336/files/2019-02/blackwiliam_1998.pdf" },
+      { label: "CCSSO: Formative Assessment Resources", url: "https://learning.ccsso.org/supporting-state-assessment-systems" },
+      { label: "Education Endowment Foundation: Embedding Formative Assessment", url: "https://educationendowmentfoundation.org.uk/projects-and-evaluation/projects/embedding-formative-assessment" },
+      { label: "Education Endowment Foundation: Teacher Feedback Guidance", url: "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/feedback" },
+    ],
+    createdAt: "2026-08-05T08:00:00.000Z",
+  },
 ];

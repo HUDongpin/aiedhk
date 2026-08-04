@@ -4,13 +4,15 @@ import path from "node:path";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("Academy publishes exactly thirty-two ordered reviewed English lessons", () => {
+test("Academy publishes exactly thirty-four ordered reviewed English lessons", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.equal(lessons.length, 32);
+  assert.equal(lessons.length, 34);
   assert.deepEqual(
     lessons.map((lesson) => lesson.id),
     [
+      "academy-033",
+      "academy-034",
       "academy-031",
       "academy-032",
       "academy-029",
@@ -49,8 +51,8 @@ test("Academy publishes exactly thirty-two ordered reviewed English lessons", ()
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 16);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 16);
+  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 17);
+  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 17);
   assert.deepEqual(
     new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016", "academy-017", "academy-018", "academy-019", "academy-020", "academy-021", "academy-022", "academy-023", "academy-024"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
@@ -73,6 +75,7 @@ test("Academy publishes the scheduled curriculum pair for every completed releas
     ["2026-07-31T08:00:00.000Z", ["academy-027", "academy-028"]],
     ["2026-08-03T08:00:00.000Z", ["academy-029", "academy-030"]],
     ["2026-08-04T08:00:00.000Z", ["academy-031", "academy-032"]],
+    ["2026-08-05T08:00:00.000Z", ["academy-033", "academy-034"]],
   ]);
 
   for (const [createdAt, expectedIds] of catchUpDates) {
@@ -118,15 +121,17 @@ test("each launch lesson has complete reviewed copy and one unique stable image 
     "Social Learning and Modeling",
     "AI Agents, Tools, and Workflows",
     "Mastery Learning",
+    "Knowledge Tracing and Learner Models",
+    "Formative Assessment",
   ];
 
   assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));
-  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 32);
-  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 32);
-  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 32);
-  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 32);
-  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 32);
-  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 32);
+  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 34);
+  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 34);
+  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 34);
+  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 34);
+  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 34);
+  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 34);
 
   for (const lesson of lessons) {
     const wordCount = lesson.fullSummary.trim().split(/\s+/).length;
@@ -157,8 +162,8 @@ test("Academy alt text does not normalize banned particle-heavy or fake-person a
 test("Academy listing identifiers preserve the complete stable sequence for each track and locale", () => {
   const english = getAcademyLessons("en");
   const expectedByTrack = new Map([
-    ["ai-knowledge", { prefix: "AI Knowledge", count: 16 }],
-    ["educational-theory", { prefix: "Educational Theory", count: 16 }],
+    ["ai-knowledge", { prefix: "AI Knowledge", count: 17 }],
+    ["educational-theory", { prefix: "Educational Theory", count: 17 }],
   ]);
 
   for (const [track, expected] of expectedByTrack) {
@@ -189,12 +194,15 @@ test("Academy art direction requires concept-rich technology photography instead
 });
 
 test("unreviewed locales fall back to English lesson text without leaking English audio", () => {
-  const english = getAcademyLessons("en")[0];
-  const traditionalChinese = getAcademyLessons("zh-hant")[0];
+  const englishById = new Map(getAcademyLessons("en").map((lesson) => [lesson.id, lesson]));
 
-  assert.equal(traditionalChinese.title, english.title);
-  assert.equal(traditionalChinese.fullSummary, english.fullSummary);
-  assert.ok(english.summaryAudio);
-  assert.equal(traditionalChinese.summaryAudio, "");
-  assert.equal(traditionalChinese.summaryAudioTitle, "");
+  for (const traditionalChinese of getAcademyLessons("zh-hant")) {
+    const english = englishById.get(traditionalChinese.id);
+    assert.ok(english, `${traditionalChinese.id} must have reviewed English launch content`);
+    assert.equal(traditionalChinese.title, english.title);
+    assert.equal(traditionalChinese.fullSummary, english.fullSummary);
+    assert.ok(english.summaryAudio);
+    assert.equal(traditionalChinese.summaryAudio, "");
+    assert.equal(traditionalChinese.summaryAudioTitle, "");
+  }
 });

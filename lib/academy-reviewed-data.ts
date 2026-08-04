@@ -1086,4 +1086,78 @@ Models also transmit harmful routines, stereotypes, overconfidence, and unequal 
     ],
     createdAt: "2026-08-03T08:00:00.000Z",
   },
+  {
+    id: "academy-031",
+    listingIdentifier: "AI Knowledge 16",
+    slug: "agents-tools-and-workflows",
+    title: "AI Agents, Tools, and Workflows",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["AI agents", "tool use", "agentic workflows"],
+    image: "/images/academy/covers/academy-031-ai-agents-tools-and-workflows.png",
+    imageAlt: "A Black woman, an East Asian man, and a Middle Eastern woman operate a camera, mechanical gripper, and inspection light table connected by an amber line",
+    summaryAudio: "/audio/academy/academy-031-ai-agents-tools-and-workflows-summary.m4a",
+    summaryAudioTitle: "Listen to AI Agents, Tools, and Workflows",
+    shortSummary: "How AI agents combine models, context, tools, and action loops, why workflows mix fixed and adaptive steps, and where human control and verification remain essential.",
+    fullSummary: `An AI agent is a system that uses a model to pursue a goal through a sequence of decisions and actions. A chatbot may answer once from the context it receives. An agent can instead gather information, choose a tool, inspect the result, update its working context, and continue until it reaches a stopping condition. The model supplies language and decision capabilities, while a surrounding harness manages instructions, available tools, permissions, memory, execution, and the loop itself. Agency is therefore a property of the whole system, not of the model alone.
+
+A common agentic loop begins by understanding the task and collecting relevant context. The system then selects an action, invokes a tool, observes what happened, and decides what to do next. ReAct research showed how interleaving reasoning and actions can help language models use external information and adjust a plan. Coding agents illustrate the pattern clearly: they can search files, edit code, run tests, read failures, and revise the implementation. A useful stop is not simply a confident sentence. It is evidence that the requested outcome has been produced and checked.
+
+Tools are explicit interfaces to capabilities such as search, calculation, file access, databases, or laboratory equipment. Their descriptions and input schemas tell the agent what actions are possible. The Model Context Protocol offers a standard way for applications to expose tools, resources, and reusable prompts to AI clients. Standard connectivity does not guarantee good judgment or safe execution. A tool can return stale, malicious, ambiguous, or incomplete information, and a model can select the wrong tool or supply harmful arguments.
+
+A workflow organizes actions toward a repeatable outcome. Some steps should be deterministic, such as validating a file type or checking a numerical threshold. Other steps may benefit from agentic choice, such as deciding which source to inspect next. Strong systems combine both: fixed gates constrain important transitions, while the agent adapts within a bounded space. Reliability improves through least-privilege access, approvals for consequential actions, limits on time and tool use, structured logs, checkpoints, tests, and explicit failure and stop conditions. Tool outputs should be treated as untrusted input, especially when they can contain instructions aimed at redirecting the agent.
+
+In education, agents are most useful when learners can inspect meaningful decisions and artifacts. A class might give an agent a small approved source collection and a bounded research question, then record which tools it used, what evidence each tool returned, and why the final answer should be trusted. Learners can compare a fixed workflow with an adaptive agent, predict failure points, and design verification rules. They should evaluate observable actions and results rather than request private hidden reasoning. Teachers remain responsible for task design, data protection, accessibility, and high-impact decisions. The central lesson is controlled delegation: an agent can coordinate useful work, but people must define authority, examine evidence, and decide when the work is genuinely complete.`,
+    coreIdeas: [
+      "An AI agent combines a model with context, tools, permissions, memory, execution, and a loop that selects actions, observes results, and stops on evidence.",
+      "Workflows can mix deterministic gates with bounded agentic choices, while tool standards such as MCP provide connectivity rather than guaranteed reliability or safety.",
+      "Least privilege, approvals, budgets, logs, tests, verification, and explicit stop conditions keep delegated actions inspectable and accountable.",
+    ],
+    educationConnection: "Give learners a bounded task and approved tools, expose the action log and resulting artifacts, compare adaptive and fixed workflows, and require evidence-based verification before accepting completion.",
+    relatedConcepts: ["Agentic loop", "Tool calling", "Human oversight"],
+    sourceUrls: [
+      { label: "Claude Code: How Claude Code works", url: "https://code.claude.com/docs/en/how-claude-code-works" },
+      { label: "Yao and colleagues: ReAct", url: "https://openreview.net/forum?id=WE_vluYUL-X" },
+      { label: "Model Context Protocol architecture", url: "https://modelcontextprotocol.io/docs/learn/architecture" },
+      { label: "NIST lessons on tool use in agent systems", url: "https://www.nist.gov/news-events/news/2025/08/lessons-learned-consortium-tool-use-agent-systems" },
+    ],
+    createdAt: "2026-08-04T08:00:00.000Z",
+  },
+  {
+    id: "academy-032",
+    listingIdentifier: "Educational Theory 16",
+    slug: "mastery-learning",
+    title: "Mastery Learning",
+    track: "educational-theory",
+    level: "core",
+    tags: ["mastery learning", "formative assessment", "corrective instruction"],
+    image: "/images/academy/covers/academy-032-mastery-learning.png",
+    imageAlt: "A Latino man guides a Black woman aligning optical lenses while a White woman extends a teal beam through a prism",
+    summaryAudio: "/audio/academy/academy-032-mastery-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Mastery Learning",
+    shortSummary: "How clear outcomes, formative diagnosis, targeted correction, reassessment, and enrichment let learners reach important goals with different amounts of time and support.",
+    fullSummary: `Mastery learning organizes instruction around the expectation that most learners can reach important outcomes when they receive suitable time, feedback, and corrective support. Instead of allowing achievement to vary widely after everyone receives the same schedule and assistance, the approach holds core outcomes relatively constant and varies the path toward them. Bloom argued that differences in prior learning, pace, and support should not be treated as fixed limits on capability. Mastery does not mean perfection. It means meeting a clearly defined and educationally defensible criterion before later learning depends on that knowledge or skill.
+
+The cycle begins with precise objectives and high-quality initial instruction. A short formative assessment then diagnoses what each learner understands and where difficulty remains. This check is not mainly for grading. It guides a targeted correction connected to the specific error or prerequisite gap. Correction should offer a different route, such as a worked example, peer explanation, concrete representation, smaller practice sequence, or teacher conference, rather than simply repeating the first lesson. Learners then complete a parallel reassessment that examines the same outcome with different items. Those who already demonstrated mastery use the time for meaningful enrichment, extension, or application.
+
+Mastery learning is not identical to unlimited retakes, self-paced worksheets, or lowering the standard until everyone passes. A score threshold alone can hide fragile knowledge. Criteria should describe what competent performance looks like and include evidence of explanation, application, or transfer when those qualities matter. Teachers also need to distinguish a temporary performance boost from retained learning. Later checks can show whether learners remember and use the knowledge after support has faded. Some contemporary programs use the phrase teaching for mastery, but that broader curriculum tradition should not be assumed to implement Bloom's complete formative, corrective, reassessment, and enrichment cycle.
+
+Research reviews have generally found positive average effects, but results vary with implementation, subject, duration, assessment design, and comparison conditions. The Education Endowment Foundation currently rates the evidence security for mastery learning as low, which is a reason for careful local evaluation rather than rejection or overclaiming. Practical constraints matter. If assessments are vague, corrections arrive late, or every learner waits while a few repeat the same activity, the cycle can create bottlenecks. Schools need scheduled support, manageable objectives, reusable corrective resources, and ways to prevent additional help from becoming a stigma.
+
+In education, a teacher might identify one essential concept, publish a rubric with examples, teach it through a coherent sequence, and use a brief diagnostic before the next dependency. Learners receive correction matched to their evidence, while peers who are ready investigate an extension problem. A parallel task then checks mastery, and a later transfer task checks durability. AI can propose alternative examples or group error patterns, but teachers must verify accuracy, protect learner data, and decide what evidence is sufficient. The central commitment is equitable opportunity to learn: keep expectations meaningful, respond to evidence quickly, and change the support before concluding that a learner cannot succeed.`,
+    coreIdeas: [
+      "Mastery learning keeps important outcomes stable while varying time, feedback, and support so that learners can reach a clear criterion before dependent learning continues.",
+      "The full cycle combines strong initial instruction, diagnostic formative assessment, targeted corrective instruction, parallel reassessment, and meaningful enrichment.",
+      "Mastery requires defensible evidence, transfer and retention checks, equitable access to timely support, and local evaluation of implementation rather than unlimited retakes alone.",
+    ],
+    educationConnection: "Define one essential outcome and visible criterion, diagnose specific gaps, provide a genuinely different corrective route, reassess with a parallel task, and later test transfer while offering enrichment to ready learners.",
+    relatedConcepts: ["Formative assessment", "Corrective instruction", "Criterion-referenced assessment"],
+    sourceUrls: [
+      { label: "Bloom: Mastery Learning", url: "https://eric.ed.gov/?id=ED053419" },
+      { label: "Kulik and colleagues: Meta-analysis of mastery learning", url: "https://doi.org/10.3102/00346543060002265" },
+      { label: "Guskey: Lessons of Mastery Learning", url: "https://www.ascd.org/el/articles/lessons-of-mastery-learning" },
+      { label: "Education Endowment Foundation: Mastery learning", url: "https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/mastery-learning" },
+    ],
+    createdAt: "2026-08-04T08:00:00.000Z",
+  },
 ];

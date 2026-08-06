@@ -23,6 +23,11 @@ test("Academy reuses one responsive lesson image in two differently sized detail
   assert.match(academyDetailSource, /<Image[\s\S]*?preload[\s\S]*?sizes=/);
   assert.equal((academyDetailSource.match(/<Image\b/g) ?? []).length, 2);
   assert.equal((academyDetailSource.match(/src=\{lesson\.image\}/g) ?? []).length, 2);
+  const heroImageIndex = academyDetailSource.indexOf("src={lesson.image}");
+  const summaryHeadingIndex = academyDetailSource.indexOf("{dictionary.academy.summaryHeading}");
+  const summaryImageIndex = academyDetailSource.indexOf("src={lesson.image}", heroImageIndex + 1);
+  assert.ok(heroImageIndex >= 0 && heroImageIndex < summaryHeadingIndex);
+  assert.ok(summaryHeadingIndex < summaryImageIndex);
   assert.deepEqual(
     [...academyDetailSource.matchAll(/\bsizes="([^"]+)"/g)].map((match) => match[1]),
     [

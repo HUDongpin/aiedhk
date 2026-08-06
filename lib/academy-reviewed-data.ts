@@ -1234,4 +1234,78 @@ In education, a useful cycle can fit inside one lesson. Clarify a goal, ask lear
     ],
     createdAt: "2026-08-05T08:00:00.000Z",
   },
+  {
+    id: "academy-035",
+    listingIdentifier: "AI Knowledge 18",
+    slug: "recommendation-and-personalization-systems",
+    title: "Recommendation and Personalization Systems",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["recommender systems", "personalization", "ranking"],
+    image: "/images/academy/covers/academy-035-recommendation-and-personalization-systems.png",
+    imageAlt: "A Black woman turns a brass selector beside an East Asian man and White woman moving illuminated image panels through a recommendation apparatus",
+    summaryAudio: "/audio/academy/academy-035-recommendation-and-personalization-systems-summary.m4a",
+    summaryAudioTitle: "Listen to Recommendation and Personalization Systems",
+    shortSummary: "How recommender systems generate candidates, predict relevance, rank choices, and shape the learning evidence from which future personalization is built.",
+    fullSummary: `Recommendation and personalization systems select or order choices for a particular user, group, or context. They can suggest videos, books, practice items, courses, peers, or next activities when the available collection is too large to inspect directly. A recommendation is not a discovery of what someone truly wants or needs. It is a prediction made from representations of users, items, context, and an objective chosen by designers. Personalization changes what is presented; adaptation additionally changes a learning experience in response to evidence. Neither guarantees that the change is educationally beneficial.
+
+Content-based filtering recommends items whose features resemble items a user previously valued. Collaborative filtering instead learns from patterns of interaction across many users and items. Matrix factorization represents both sides with compact vectors and estimates preference from their relationship. Modern systems may use neural networks, language or image embeddings, knowledge graphs, rules, or hybrid combinations. Each method has blind spots. Collaborative methods struggle with new users and items, content methods can become too narrow, and interaction records may confuse curiosity, convenience, exposure, or accidental clicks with preference.
+
+Large systems commonly divide recommendation into stages. Candidate generation reduces a huge collection to a manageable set. A scoring model predicts a selected outcome for each candidate, then ranking or re-ranking chooses the final order while applying constraints such as diversity, freshness, prerequisites, accessibility, or safety. The objective matters as much as the model. Optimizing clicks, time, completion, challenge, or long-term learning can produce different lists. A technically accurate predictor can therefore serve the wrong purpose if its target does not represent the outcome that learners and educators value.
+
+Recommendation also changes the data used to train future recommendations. Items shown near the top receive more attention, so later interaction records partly reflect earlier rankings. This feedback loop can amplify popularity, narrow exposure, or make behavior more similar without improving value. Missing interaction is not proof of dislike, and high engagement is not proof of learning. Evaluation should combine offline ranking measures with prospective tests, educational outcomes, calibration, coverage, novelty, subgroup analysis, privacy review, and checks for unintended effects. Users need meaningful ways to inspect, correct, diversify, or reset the information shaping a profile.
+
+In education, a recommender might propose the next problem, resource, or collaborator, but the recommendation should remain a revisable proposal. Teachers and learners can compare two ranked lists produced by different objectives, identify which evidence moved an item upward, and ask what the system could not observe. They can test whether a suggestion respects readiness without trapping a learner in an assumed level. Designers should minimize data, protect sensitive profiles, document objectives, monitor who is underserved, and preserve human override for consequential choices. Responsible personalization expands useful options and supports agency. It does not quietly replace curriculum judgment, learner voice, or the right to encounter something unexpected.`,
+    coreIdeas: [
+      "Recommender systems represent users, items, and context, then use content-based, collaborative, or hybrid methods to predict which options may be relevant.",
+      "Production recommenders separate candidate generation, scoring, ranking, and re-ranking, and the chosen objective determines what the system actually promotes.",
+      "Exposure shapes later interaction data, so feedback loops, privacy, coverage, subgroup effects, user correction, and human override are central educational design concerns.",
+    ],
+    educationConnection: "Have learners compare recommendations produced by two objectives, trace which evidence shaped the order, identify missing context, and revise the list before using it for a learning decision.",
+    relatedConcepts: ["Collaborative filtering", "Ranking objectives", "Algorithmic feedback loops"],
+    sourceUrls: [
+      { label: "Koren, Bell, and Volinsky: Matrix Factorization Techniques", url: "https://doi.org/10.1109/MC.2009.263" },
+      { label: "Google Research: Deep Neural Networks for YouTube Recommendations", url: "https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/" },
+      { label: "Verbert and colleagues: Context-Aware Recommender Systems for Learning", url: "https://doi.org/10.1109/TLT.2012.11" },
+      { label: "Chaney and colleagues: Algorithmic Confounding in Recommendation Systems", url: "https://arxiv.org/abs/1710.11214" },
+    ],
+    createdAt: "2026-08-07T08:00:00.000Z",
+  },
+  {
+    id: "academy-036",
+    listingIdentifier: "Educational Theory 18",
+    slug: "feedback-for-learning",
+    title: "Feedback for Learning",
+    track: "educational-theory",
+    level: "core",
+    tags: ["feedback", "revision", "feedback literacy"],
+    image: "/images/academy/covers/academy-036-feedback-for-learning.png",
+    imageAlt: "An East Asian woman points to coral light bands while a Middle Eastern man steadies a wooden mechanism and a Black woman adjusts its brass joint",
+    summaryAudio: "/audio/academy/academy-036-feedback-for-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Feedback for Learning",
+    shortSummary: "How evidence becomes useful feedback when it clarifies a goal, guides a manageable next move, and gives the learner a real opportunity to revise.",
+    fullSummary: `Feedback for learning is information that helps a learner understand a current performance and take a productive next step toward a valued goal. It is not simply praise, correction, a grade, or any comment made after work. A useful feedback process connects three questions: Where am I going? How am I going? What should I do next? Its educational effect depends on what the learner notices, interprets, and uses. A perfectly written comment that arrives without time, trust, or opportunity for action may produce no learning at all.
+
+Feedback can address different levels. Task feedback identifies accuracy, completeness, or a specific feature of the work. Process feedback focuses on strategies, relationships, or methods that can improve performance. Self-regulation feedback helps learners monitor, seek evidence, choose a strategy, and judge progress. Comments about the person, such as broad praise or criticism, often provide little direction and can shift attention from the work to self-image. Effective feedback is grounded in clear goals, success criteria, sound instruction, and evidence of learner thinking. It should be specific enough to guide action without solving the entire task or overwhelming the learner.
+
+Timing and form depend on the learning problem. Immediate verification can prevent an error from being repeated during early practice, while delayed feedback can sometimes preserve productive thinking or support transfer. Spoken, written, peer, automated, and modeled feedback can all be useful when the message fits the task and the learner can act on it. More feedback is not always better. Dense marking, competing grades, vague advice, or too many targets can hide the highest-value next move. A manageable sequence often begins with one priority, an explanation or prompt, and a new chance to attempt related work.
+
+Learners also need feedback literacy. This includes appreciating the purpose of feedback, making judgments about quality, managing emotional responses, and taking action. Examining exemplars, comparing contrasting work, practicing peer review, and discussing criteria can strengthen those capacities. Peer feedback should not merely outsource teacher marking. Its value often lies in helping learners notice qualities, explain decisions, and apply those judgments to their own work. A respectful culture matters because uncertainty and revision require learners to expose unfinished thinking without expecting embarrassment or fixed labels.
+
+In education, a teacher might clarify one criterion, collect a small sample of work, and identify evidence of the current strategy. The learner then chooses one concrete revision, explains why it addresses the evidence, and applies it to the original or a parallel task. Both check whether the change improved the result. AI can help organize comments, compare drafts, or suggest prompts, but teachers must verify accuracy, protect data, and prevent fluent generic advice from replacing disciplinary judgment. Feedback closes a learning loop only when evidence leads to understandable action and the learner has agency, support, and time to complete that action.`,
+    coreIdeas: [
+      "Feedback supports learning when it connects a clear goal, trustworthy evidence of current performance, and a manageable next action that the learner can use.",
+      "Task, process, and self-regulation feedback serve different purposes, while person-focused praise, excessive detail, or a grade without guidance can divert attention from improvement.",
+      "Feedback literacy, exemplars, peer judgment, emotional safety, revision time, and learner agency determine whether information becomes meaningful action.",
+    ],
+    educationConnection: "Clarify one criterion, examine evidence in current work, agree on one actionable revision, give immediate time to apply it, and check the change on the original or a parallel task.",
+    relatedConcepts: ["Formative feedback", "Feedback literacy", "Self-regulated learning"],
+    sourceUrls: [
+      { label: "Hattie and Timperley: The Power of Feedback", url: "https://doi.org/10.3102/003465430298487" },
+      { label: "Shute: Focus on Formative Feedback", url: "https://doi.org/10.3102/0034654307313795" },
+      { label: "Carless and Boud: The Development of Student Feedback Literacy", url: "https://doi.org/10.1080/02602938.2018.1463354" },
+      { label: "Education Endowment Foundation: Teacher Feedback Guidance", url: "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/feedback" },
+    ],
+    createdAt: "2026-08-07T08:00:00.000Z",
+  },
 ];

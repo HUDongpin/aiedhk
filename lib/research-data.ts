@@ -14,7 +14,14 @@ import {
 
 export { RESEARCH_NEWS_CACHE_TAG, RESEARCH_NEWS_REVALIDATE_SECONDS } from "@/lib/research-cache";
 
-export const researchPapers: ResearchPaper[] = reviewedResearchPapers;
+// A News detail page deliberately renders the canonical hero bitmap twice: once
+// at the top and once with the full summary.  Keep the accessible descriptions
+// tied to that same scene even while the two id-aligned asset paths remain
+// distinct for delivery and layout.
+export const researchPapers: ResearchPaper[] = reviewedResearchPapers.map((paper) => ({
+  ...paper,
+  summaryImageAlt: paper.imageAlt,
+}));
 
 function localizedPaper(paper: ResearchPaper, localeInput: string): ResearchPaper {
   const locale = normalizeLocale(localeInput);
@@ -28,6 +35,7 @@ function localizedPaper(paper: ResearchPaper, localeInput: string): ResearchPape
     title: localization.title,
     tags: localization.tags.length > 0 ? localization.tags : paper.tags,
     imageAlt: localization.imageAlt ?? paper.imageAlt,
+    summaryImageAlt: localization.imageAlt ?? paper.imageAlt,
     shortSummary: localization.shortSummary,
     fullSummary: localization.fullSummary,
     keyTakeaways: localization.keyTakeaways,
@@ -80,7 +88,7 @@ export function withReviewedStaticEnhancements(paper: ResearchPaper): ResearchPa
     image: reviewedPaper.image,
     imageAlt: paper.imageAlt || reviewedPaper.imageAlt,
     summaryImage: paper.summaryImage ?? reviewedPaper.summaryImage,
-    summaryImageAlt: paper.summaryImageAlt ?? reviewedPaper.summaryImageAlt,
+    summaryImageAlt: paper.imageAlt || reviewedPaper.imageAlt,
     summaryAudio: paper.summaryAudio ?? reviewedPaper.summaryAudio,
     summaryAudioTitle: paper.summaryAudioTitle ?? reviewedPaper.summaryAudioTitle,
   };

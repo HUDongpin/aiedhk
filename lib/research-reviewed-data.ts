@@ -2,6 +2,82 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-051",
+    slug: "news-gpt56-claude-opus5-gemini-study-notebooks",
+    title: "Product news: GPT-5.6, Claude Opus 5 and Gemini study notebooks make task matching an educational design decision",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "GPT-5.6", "Claude Opus 5", "Gemini study notebooks", "AI governance"],
+    image: "/images/research/covers/aied-051-gpt56-opus5-gemini-study-notebooks-2026.png",
+    imageAlt: "A Black female lecturer, an East Asian male student, and a White female student plan and verify learning work around a shared task-routing board in a university learning-design studio",
+    summaryImage: "/images/research/summary/aied-051-gpt56-opus5-gemini-study-notebooks-summary.png",
+    summaryImageAlt: "A Black female lecturer, an East Asian male student, and a White female student plan and verify learning work around a shared task-routing board in a university learning-design studio",
+    summaryAudio: "/audio/research/aied-051-gpt56-claude-opus5-gemini-study-notebooks-summary.m4a",
+    summaryAudioTitle: "Listen to the product news report",
+    shortSummary: "Product news: OpenAI cut GPT-5.6 Terra and Luna prices while speeding Sol, Anthropic introduced Claude Opus 5 for longer-running knowledge work, and Google announced Gemini study notebooks that adapt lessons from learner goals and materials. The shared education question is not which model is best in general, but how a school matches a task to capability, cost, speed, evidence and human review.",
+    fullSummary: `This compact product-news report follows a practical change in AI adoption: product choices are increasingly presented as a portfolio rather than a single assistant. OpenAI's July 30 update lowers the price of GPT-5.6 Luna and Terra and adds a faster mode for Sol. Anthropic's July 24 Claude Opus 5 launch positions a more capable model for sustained coding, analysis and professional work. Google's June 25 education announcement introduces Gemini study notebooks, which use a learner's goal and uploaded materials to build diagnostic quizzes, short lessons, progress tracking and later adjustments. Together, the announcements make model selection and workflow design part of educational practice.
+
+OpenAI's announcement is mainly about price, speed and deployment options. Luna is positioned as a lower-cost, high-volume model; Terra as a balanced everyday model; and Sol as a higher-capability option with a faster premium mode. An education team could map those differences to work instead of treating all prompts equally: routine formatting or tagging may warrant a constrained low-cost workflow, while a consequential curriculum analysis may warrant a stronger model, source checking and a human sign-off. Lower cost can make useful experiments feasible, but it can also make it easier to automate poor decisions at scale.
+
+Anthropic describes Opus 5 as a stronger option for long-running agents, coding and knowledge work, with configurable effort. Its performance claims are vendor evidence, not classroom evidence. The educationally relevant capability is persistence across a complex task: examining a course repository, tracing an error in a learning resource, or proposing revisions while checking constraints. Such work should still have an accountable educator who sets the purpose, checks sources and approves changes. A capable agent can make a weak task appear complete, so institutions need evaluation criteria that include accuracy, privacy, accessibility and learning value.
+
+Google's study notebooks make the learner-facing side more explicit. The product announcement says learners can supply class materials, take a diagnostic quiz, receive bite-sized interactive lessons and have the plan update as results change. Google also says the notebooks can connect with NotebookLM and, in coming Classroom workflows, give teachers insight into where additional help may be needed. These are product capabilities and rollout plans, not independent proof of improved outcomes. Schools should ask what data are used, what a recommendation means, what learners can do without the tool and whether teachers can inspect or override the system.
+
+For Hong Kong schools and universities, the common lesson is to specify the learning or work outcome before selecting a model tier or adaptive feature. A pilot can define low-risk tasks, protect student data, state when AI output must be verified, retain student process evidence and compare time savings with quality and independent performance. Cost and speed are useful constraints, not educational objectives. The best workflow is one in which a student, teacher or reviewer can explain why the tool was used, what it contributed and what remained human judgment.`,
+    keyTakeaways: [
+      "Product news: OpenAI's GPT-5.6 update changes price, speed and model-tier choices; Anthropic's Opus 5 targets longer-running knowledge work; and Gemini study notebooks add an adaptive learner workflow.",
+      "Vendor capability claims and product rollouts do not by themselves establish improved learning outcomes.",
+      "Education teams should match model capability to task risk, cost, data sensitivity, verification needs and evidence of independent learning.",
+    ],
+    whyItMatters: "For AIEDHK, this report reframes fast-moving product updates as a task-design and governance problem: decide the educational outcome, choose the minimum capable tool, and make human review and learning evidence visible.",
+    sourceUrl: "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/",
+    sourceUrls: [
+      { label: "OpenAI: Advancing the price-performance frontier with GPT-5.6", url: "https://openai.com/index/advancing-the-price-performance-frontier-with-gpt-5-6/" },
+      { label: "Anthropic: Introducing Claude Opus 5", url: "https://www.anthropic.com/news/claude-opus-5" },
+      { label: "Google for Education: Supporting students with connected AI tools", url: "https://blog.google/products-and-platforms/products/education/iste-students-2026/" },
+    ],
+    createdAt: "2026-08-07",
+  },
+  {
+    id: "aied-050",
+    slug: "generative-ai-learning-impact-randomized-experiment",
+    title: "Experimental evidence on the learning impact of generative AI: gains persisted when students used it for explanation rather than automation",
+    authors: ["Zara Contractor", "Germán Reyes"],
+    venue: "arXiv working paper",
+    year: 2026,
+    type: "journal",
+    tags: ["generative AI", "randomized experiment", "higher education", "learning outcomes", "cognitive offloading"],
+    image: "/images/research/covers/aied-050-generative-ai-learning-experiment-2026.png",
+    imageAlt: "A university student compares an AI explanation with handwritten concept notes while an instructor and peers work in a seminar room",
+    summaryImage: "/images/research/summary/aied-050-generative-ai-learning-experiment-summary.png",
+    summaryImageAlt: "A university student compares an AI explanation with handwritten concept notes while an instructor and peers work in a seminar room",
+    summaryAudio: "/audio/research/aied-050-generative-ai-learning-experiment-summary.m4a",
+    summaryAudioTitle: "Listen to the paper summary",
+    shortSummary: "A randomized, proctored experiment reported that undergraduate access to off-the-shelf generative AI raised immediate factual and conceptual test performance by 0.27 standard deviations and that the gains persisted one week later. The working paper also finds a consequential usage pattern: students who used AI to explain concepts showed stronger delayed gains than students who used it to automate drafting.",
+    fullSummary: `Contractor and Reyes examine a question that is easy to obscure in product demonstrations: when students have access to a general-purpose generative-AI system while learning a new topic, do they learn more once the system is removed? Their July 2026 working paper reports a randomized experiment conducted in proctored, in-person undergraduate sessions. Participants studied an unfamiliar subject and wrote an analytical essay either with or without access to an off-the-shelf generative-AI tool. They then completed unaided assessments immediately and one week later. The study measures both knowledge tests and open-ended writing, so it separates short-term task performance from later independent learning more clearly than a satisfaction survey can.
+
+The authors report that AI access increased immediate factual and conceptual test scores by 0.27 standard deviations. They also report that the advantage persisted at the one-week assessment. That result matters because a common concern is that AI may improve the visible product while shifting effort away from understanding. In this setting, the reported knowledge gains did not disappear when students worked without the tool. The paper also reports little change in essay quality while AI was available, but better style and relevance in unaided writing one week later.
+
+The most useful finding is not a general claim that AI access is beneficial. The researchers distinguish augmentation-oriented use from automation-oriented use. Students who used the system to obtain explanations of concepts had stronger delayed gains than students who used it primarily to generate text. The paper links the result to reported changes in effort: AI users shifted time away from drafting and toward reading and searching for information, while also reporting greater learning enjoyment. These measures identify plausible mechanisms, but they do not prove every learner followed the same path or that every tool configuration will produce the same effect.
+
+The evidence needs careful interpretation. This is an arXiv working paper rather than a peer-reviewed journal article, and the results should not be generalized without replication. The task involved an unfamiliar topic, proctored in-person sessions and a specific assessment schedule; different courses, age groups, prompting supports, incentives or unrestricted home use may lead to different behavior. The paper's own results suggest that usage quality is central. Giving students a tool without a learning design can encourage either explanation, inquiry and revision or fast drafting with little durable understanding.
+
+For higher education and Hong Kong classrooms, a defensible pilot would make the augmentation route explicit. Teachers can ask students to request explanations, compare them with course sources, annotate what changed in their understanding and complete an independent follow-up task. Rubrics can reward source evaluation, reasoning and revision rather than polished first drafts. Process logs should support reflection rather than surveillance, and assessments should include moments when learners demonstrate what they can do unaided. The study offers a promising but provisional message: AI may support learning when it redirects effort toward sense-making, not when it quietly replaces it.`,
+    keyTakeaways: [
+      "In a randomized, proctored undergraduate experiment, AI access was associated with a reported 0.27-standard-deviation immediate knowledge-test gain that persisted one week later.",
+      "Students who used AI for conceptual explanations showed stronger delayed gains than students who used it mainly to automate drafting.",
+      "As an arXiv working paper in one setting, the evidence needs replication; it supports designing and testing explanation-first workflows rather than treating access as an intervention.",
+    ],
+    whyItMatters: "For AIEDHK, the paper gives a concrete, testable distinction between AI that helps learners explain and verify ideas and AI that merely produces a finished-looking draft; that distinction can guide assessment and pilot design.",
+    sourceUrl: "https://arxiv.org/abs/2607.08849",
+    sourceUrls: [
+      { label: "arXiv working paper: Experimental Evidence on the Learning Impact of Generative AI", url: "https://arxiv.org/abs/2607.08849" },
+    ],
+    createdAt: "2026-08-07",
+  },
+  {
     id: "aied-049",
     slug: "news-openai-ai-skills-jam-k12-educators",
     title: "OpenAI product news: AI Skills Jam brings hands-on AI practice to K-12 educators",

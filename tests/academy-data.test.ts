@@ -170,12 +170,13 @@ test("Academy listing identifiers preserve the complete stable sequence for each
   }
 });
 
-test("Academy art direction requires concept-rich technology photography instead of plain classroom staging", () => {
+test("Academy art direction requires one genuine teaching image with restrained visual density", () => {
   const contract = readFileSync(path.join(process.cwd(), "docs/academy-art-direction.md"), "utf8");
 
-  assert.match(contract, /concept-rich technology editorial photography/i);
-  assert.match(contract, /Do not default to generic beige classrooms/i);
-  assert.match(contract, /do not fall back to an abstract no-human composition/i);
+  assert.match(contract, /真人质感风格/);
+  assert.match(contract, /warm, bright, friendly, and immediately understandable/i);
+  assert.match(contract, /dense decorative fields of particles/i);
+  assert.match(contract, /display it only once on the lesson detail page/i);
 });
 
 test("unreviewed locales fall back to English lesson text without leaking English audio", () => {

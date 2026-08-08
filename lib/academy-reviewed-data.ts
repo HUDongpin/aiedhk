@@ -1308,4 +1308,77 @@ In education, a teacher might clarify one criterion, collect a small sample of w
     ],
     createdAt: "2026-08-07T08:00:00.000Z",
   },
+  {
+    id: "academy-037",
+    listingIdentifier: "AI Knowledge 19",
+    slug: "computer-vision-for-learning",
+    title: "Computer Vision for Learning",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["computer vision", "image recognition", "responsible AI"],
+    image: "/images/academy/covers/academy-037-computer-vision-for-learning.png",
+    imageAlt: "A Middle Eastern woman points to illuminated outlines of three solid shapes beneath an overhead camera while a Black man and East Asian woman compare the physical objects",
+    summaryAudio: "/audio/academy/academy-037-computer-vision-for-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Computer Vision for Learning",
+    shortSummary: "How computer vision turns pixels into predictions, how its tasks and evaluations differ, and why classroom uses require consent, fairness checks, and human judgment.",
+    fullSummary: `Computer vision is the field of computing that enables systems to process images or video and produce useful predictions. A digital image is first represented as an array of pixel values, not as objects with human meaning. A model may classify the whole image, locate objects with bounding boxes, separate regions through segmentation, estimate body keypoints, read characters, or track movement across frames. These are different tasks with different outputs. A camera records light, while a computer vision pipeline converts that record into a task-specific estimate.
+
+Earlier systems often relied on human-designed features such as edges, corners, color histograms, and geometric relationships. Modern systems usually learn representations from many examples using convolutional neural networks, vision transformers, or multimodal models. During training, labeled examples connect pixel patterns with target categories, locations, masks, or captions. Data augmentation can vary crops, lighting, and orientation to improve robustness. Yet a model does not automatically acquire a complete concept. It may depend on background cues, camera position, annotation conventions, or correlations that fail outside the training collection.
+
+Evaluation must match the intended task. Classification can be examined with accuracy, precision, recall, confusion matrices, and calibration. Detection and segmentation also depend on how predicted regions overlap reference annotations, often measured with intersection over union. A held-out benchmark such as COCO can support comparison, but benchmark performance does not guarantee reliable classroom performance. Schools have different cameras, lighting, languages, accessibility needs, learner demographics, and activities. Testing should therefore include realistic local conditions, difficult counterexamples, subgroup analysis, and explicit thresholds for uncertain predictions.
+
+Educational uses can include digitizing handwritten work, recognizing mathematical diagrams, supporting laboratory observation, creating descriptions for visual materials, or helping learners examine motion and spatial relationships. Risks grow when a system identifies people or infers attention, emotion, behavior, or ability from appearance. Such inferences may be scientifically weak, uneven across groups, intrusive, and difficult to challenge. Images can reveal faces, locations, disability, relationships, and classroom routines. Consent, data minimization, secure retention, accessibility, and meaningful alternatives should be designed before collection begins.
+
+In education, learners can build a small investigation with photographs of familiar objects under varied lighting and viewpoints. They define the categories, inspect errors, compare false positives and false negatives, and identify which visual cues the model may be using. They can then decide whether the evidence is adequate for a low-stakes learning aid and what a human reviewer must check. They should also document when the system declines to make a prediction. The central lesson is that computer vision does not simply see. It performs a specified measurement shaped by data, labels, objectives, and context. Responsible use keeps those choices visible and leaves consequential interpretations with people who can examine the learner, the setting, and evidence beyond the image.`,
+    coreIdeas: [
+      "Computer vision maps pixel arrays to task-specific predictions such as classes, bounding boxes, segments, keypoints, text, or tracked movement rather than understanding an image as a person does.",
+      "Learned visual representations depend on training examples, labels, context, and evaluation design, so benchmark performance must be supplemented with realistic local and subgroup testing.",
+      "Educational uses require consent, data minimization, accessibility, uncertainty handling, and human review, especially when images reveal identity or invite claims about attention, emotion, behavior, or ability.",
+    ],
+    educationConnection: "Have learners test the same object classifier across lighting, viewpoints, and backgrounds, inspect its errors and cues, then define a narrow low-stakes use with clear consent and human-review rules.",
+    relatedConcepts: ["Image classification", "Object detection and segmentation", "Algorithmic fairness"],
+    sourceUrls: [
+      { label: "Szeliski: Computer Vision, Second Edition", url: "https://szeliski.org/Book/" },
+      { label: "COCO: Common Objects in Context", url: "https://cocodataset.org/" },
+      { label: "NIST: Face Recognition Demographic Effects", url: "https://doi.org/10.6028/NIST.IR.8280" },
+    ],
+    createdAt: "2026-08-09T08:00:00.000Z",
+  },
+  {
+    id: "academy-038",
+    listingIdentifier: "Educational Theory 19",
+    slug: "deliberate-practice",
+    title: "Deliberate Practice",
+    track: "educational-theory",
+    level: "core",
+    tags: ["deliberate practice", "expertise", "feedback"],
+    image: "/images/academy/covers/academy-038-deliberate-practice.png",
+    imageAlt: "A Black woman coaches an East Asian violinist on hand position while a White cellist listens beside music stands and a metronome in a bright rehearsal room",
+    summaryAudio: "/audio/academy/academy-038-deliberate-practice-summary.m4a",
+    summaryAudioTitle: "Listen to Deliberate Practice",
+    shortSummary: "Why expertise grows through specific goals, demanding focused rehearsal, high-quality feedback, and repeated adjustment rather than experience or repetition alone.",
+    fullSummary: `Deliberate practice is structured activity designed specifically to improve a defined aspect of performance. It differs from simply repeating a familiar task, accumulating hours, completing routine exercises, or performing for an audience. A deliberate-practice task has a clear target just beyond the learner's current reliable performance. It demands focused attention, produces evidence about a weakness, and allows another attempt after feedback. The purpose is improvement rather than enjoyment, completion, or immediate success, although motivation and a supportive learning climate help people sustain the effort.
+
+The cycle begins by identifying a specific component of a complex skill. A musician might isolate one transition, a writer might revise the logic of one paragraph, and a teacher candidate might rehearse how to elicit reasoning after an incorrect answer. The learner attempts the component under conditions that make relevant differences visible. A knowledgeable teacher, coach, peer, recording, rubric, or well-designed task then provides information connected to the goal. The learner interprets that evidence, changes a strategy or action, and tries again. Repetition matters only when each attempt is informed by what happened before.
+
+Expert guidance is valuable because novices may not yet recognize the most important error, an effective practice sequence, or a useful model of high-quality performance. Feedback should be timely and precise enough to guide change without taking over the task. Difficulty should rise as control improves, and practice should include variation and later tests of transfer so that success is not tied to one cue or routine. Rest also matters. Sustained concentration is demanding, and exhausted repetition can stabilize mistakes rather than improve skill. Deliberate practice develops domain-specific representations and control, not a general shortcut to expertise.
+
+Research supports an association between structured practice and performance, but strong popular claims require caution. The original expertise research emphasized activities designed by teachers and methods that permit repeated correction. Later reviews found that measured deliberate practice explains only part of the variation in performance, with effects differing across music, games, sports, education, and professions. Prior knowledge, opportunity, instruction, health, motivation, resources, and the quality of measurement also matter. A fixed number of hours cannot guarantee expertise, and unequal access to coaching or protected practice time should not be mistaken for differences in potential.
+
+In education, a teacher can select one high-value move, show a credible model, and define observable success criteria. Learners rehearse briefly, receive one prioritized piece of evidence, explain the adjustment they will make, and immediately try a parallel version. A record of attempts helps them notice progress and decide when to increase difficulty, vary the context, or return to prerequisite knowledge. The same structure can strengthen academic problem solving, artistic performance, laboratory technique, language production, and teacher preparation. Deliberate practice is most educationally responsible when goals are meaningful, feedback is trustworthy, access is equitable, and focused rehearsal remains connected to flexible performance in authentic settings.`,
+    coreIdeas: [
+      "Deliberate practice targets a specific weakness just beyond current reliable performance and organizes focused attempts for improvement rather than repetition, completion, or performance alone.",
+      "A productive cycle uses clear criteria, informative attempts, knowledgeable feedback, immediate adjustment, rising challenge, variation, transfer checks, and adequate rest.",
+      "Structured practice contributes to expertise but does not explain all performance differences, so educators must avoid fixed-hour myths and address unequal access to coaching, time, and resources.",
+    ],
+    educationConnection: "Choose one high-value component, model the target, rehearse briefly, give one prioritized piece of evidence, require an immediate adjusted attempt, and later vary the context to check transfer.",
+    relatedConcepts: ["Expert performance", "Feedback cycles", "Transfer of learning"],
+    sourceUrls: [
+      { label: "Ericsson and colleagues: The Role of Deliberate Practice", url: "https://doi.org/10.1037/0033-295X.100.3.363" },
+      { label: "Ericsson and Harwell: Why the Original Definition Matters", url: "https://doi.org/10.3389/fpsyg.2019.02396" },
+      { label: "Macnamara and colleagues: Deliberate Practice Meta-analysis", url: "https://doi.org/10.1177/0956797614535810" },
+      { label: "Deans for Impact: Practice with Purpose", url: "https://www.deansforimpact.org/files/assets/practice-with-purpose.pdf" },
+    ],
+    createdAt: "2026-08-09T08:00:00.000Z",
+  },
 ];

@@ -2,6 +2,83 @@ import type { ResearchPaper } from "@/lib/types";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-053",
+    slug: "news-institutional-ai-research-learning-control",
+    title: "Product news: ChatGPT research access, self-hosted Claude Code and Gemini Classroom put institutions in the control loop",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "ChatGPT for Academic Researchers", "self-hosted Claude Code", "Gemini Classroom", "institutional AI governance"],
+    image: "/images/research/covers/aied-053-institutional-ai-research-learning-control-2026.png",
+    imageAlt: "A university researcher, platform engineer, and educator review an AI workflow beside a glass-walled campus compute room and an active seminar classroom",
+    summaryImage: "/images/research/summary/aied-053-institutional-ai-research-learning-control-summary.png",
+    summaryImageAlt: "A university researcher, platform engineer, and educator review an AI workflow beside a glass-walled campus compute room and an active seminar classroom",
+    summaryAudio: "/audio/research/aied-053-institutional-ai-research-learning-control-summary.m4a",
+    summaryAudioTitle: "Listen to the product news report",
+    shortSummary: "Product news: OpenAI is expanding GPT-5.6, ChatGPT Work and Codex access for academic researchers; Anthropic now lets Team and Enterprise organizations run Claude Code sessions on their own compute; and Google is connecting teacher-led Gemini activities to curriculum materials and classroom insight. Together, the releases make institutional control, evidence and review part of product design.",
+    fullSummary: `This product-news report tracks a shared institutional shift across three different AI ecosystems. OpenAI is offering selected academic researchers expanded access to GPT-5.6, ChatGPT Work and Codex. Anthropic has placed self-hosted Claude Code environments into public beta for organizations that need agent execution inside their own network. Google is bringing teacher-led Gemini, study-notebook and NotebookLM activities into Classroom with curriculum grounding and educator insight. The products serve research, software and teaching, but each makes the surrounding institution more responsible for access, data, workflow design and review.
+
+OpenAI's July 29 announcement starts ChatGPT for Academic Researchers with 10,000 researchers and aims to reach 100,000 through 2027. Participants at eligible institutions can receive GPT-5.6 models, expanded deep research, higher limits, larger context windows, research skills and connectors across ChatGPT, ChatGPT Work and Codex. OpenAI says the workspaces have business-grade privacy protections and that data are not used to train its models by default. The offer can widen access to capable tools, but free access and vendor benchmarks do not establish research quality. Institutions still need policies for confidential data, reproducible analysis, authorship, citation checking and disclosure of AI contribution.
+
+Anthropic's August 6 release addresses where agent work runs. Claude Code sessions can now execute on organization-provisioned infrastructure, close to internal services, toolchains and security controls, while users start them from web, mobile, desktop or a routine. Repository checkouts, build artifacts, secrets and created files remain on that infrastructure. A crucial boundary remains: prompts, responses and tool results are sent to Anthropic for inference, and transcripts are stored so sessions can continue across surfaces. Team and Enterprise organizations must operate fixed or on-demand runners, isolate sessions and maintain the environment. Self-hosting therefore changes the control surface; it does not make data-flow review unnecessary.
+
+Google's education release supplies the learner-facing comparison. Teacher-led Guided Learning, study notebooks and NotebookLM activities are designed to be grounded in selected class materials and to give teachers insight into individual and class interaction. The connected Classroom app in Gemini can use assignments, grades and materials to help educators analyze progress and draft activities. Google says Workspace for Education data are not used to train its AI models, while availability depends on account, language, platform and rollout stage. These are product claims and planned capabilities, not independent evidence of improved learning.
+
+For Hong Kong schools and universities, the common lesson is to evaluate the whole workflow rather than the model alone. A pilot should identify who may start an agent or learning activity, where code and student data move, what logs and artifacts remain available, how users challenge sources, and who approves consequential outputs. Research access can be paired with reproducibility records; self-hosted execution with explicit inference-data maps; and teacher-led tools with independent assessments of what students can do unaided. Institutional control is valuable only when it produces inspectable decisions, protected data and credible evidence of learning or research quality.`,
+    keyTakeaways: [
+      "Product news: OpenAI is widening GPT-5.6, ChatGPT Work and Codex access for academic researchers, while Anthropic now offers self-hosted execution for Claude Code sessions.",
+      "Gemini's teacher-led Classroom activities ground Guided Learning, study notebooks and NotebookLM in selected course materials and give educators interaction insights.",
+      "Local execution and managed workspaces change important control boundaries, but institutions still need data-flow maps, human approval, reproducibility and independent learning evidence.",
+    ],
+    whyItMatters: "For AIEDHK, these releases show that educational AI adoption is becoming an institutional systems-design problem: access, compute location, data movement, teacher authority and evidence must be designed together.",
+    sourceUrl: "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute",
+    sourceUrls: [
+      { label: "OpenAI: ChatGPT for Academic Researchers", url: "https://openai.com/index/chatgpt-for-academic-researchers/" },
+      { label: "Anthropic: Run Claude Code sessions on your own compute", url: "https://claude.com/blog/run-claude-code-sessions-on-your-own-compute" },
+      { label: "Google for Education: Building AI tailored for education", url: "https://blog.google/products-and-platforms/products/education/iste-2026-educator-updates/" },
+    ],
+    createdAt: "2026-08-08",
+  },
+  {
+    id: "aied-052",
+    slug: "genai-literacy-asynchronous-modules-experiment",
+    title: "A 90-minute GenAI literacy course improved knowledge, prompting, source checking and self-efficacy across 65 university sections",
+    authors: ["Allison E. Connell Pensky", "Lydia E. Eckstein", "Michael C. Melville", "Laura O. Pottmeyer", "Zach Mineroff", "Avi Chawla", "Judy Brooks", "Chad Hershock", "Marsha C. Lovett"],
+    venue: "Computers & Education",
+    year: 2026,
+    type: "journal",
+    tags: ["generative AI literacy", "randomized experiment", "higher education", "prompt engineering", "source evaluation"],
+    image: "/images/research/covers/aied-052-genai-literacy-modules-experiment-2026.png",
+    imageAlt: "Four diverse university students practise prompting and source checking with an instructor at a library learning table",
+    summaryImage: "/images/research/summary/aied-052-genai-literacy-modules-summary.png",
+    summaryImageAlt: "Four diverse university students practise prompting and source checking with an instructor at a library learning table",
+    summaryAudio: "/audio/research/aied-052-genai-literacy-modules-summary.m4a",
+    summaryAudioTitle: "Listen to the paper summary",
+    shortSummary: "In a large experiment involving 1,368 undergraduate and graduate students across 65 university course sections, a 90-minute asynchronous GenAI learning module improved knowledge of how the technology works, prompt-engineering performance, fact- and source-checking, and self-efficacy. It did not improve critical evaluation of bias, showing that short foundational training needs deeper practice for responsible judgment.",
+    fullSummary: `Connell Pensky and colleagues test a practical question for universities: can a short, reusable online course improve students' capacity to work with generative AI across disciplines? Their 2026 article in Computers & Education evaluates four asynchronous modules designed at Carnegie Mellon University. The approximately 90-minute sequence combined explanations, examples, practice and immediate feedback. It addressed how generative-AI systems work, why appropriate use depends on the person and task, ethical concerns, strategies for responsible educational use and students' confidence in applying those strategies.
+
+The study involved 1,368 undergraduate and graduate students in 65 sections of 53 courses taught by 46 instructors. Course sections, rather than individual students, were assigned to complete the modules between a pre-test and post-test or to a wait-list control condition. That design reduced the chance that students in one section would receive different versions of the intervention, while the analysis accounted for students being nested within courses. Measures included knowledge questions, self-efficacy ratings and authentic tasks for prompt engineering and output evaluation. A randomly selected subset of 174 students had authentic-task responses scored independently without raters knowing the condition or testing time.
+
+Students who completed the modules improved more than control students in knowledge of how large language models work, prompt-engineering skill and self-efficacy. The published abstract also reports gains in fact- and source-checking. Effects were not uniform across every outcome: the modules did not improve the skill of critically evaluating potential bias in generated output, and the university's study report found no added improvement in responsible-use knowledge or overall output analysis. This contrast is important. A concise module can build a useful foundation, but knowing model basics and writing a better prompt are not the same as judging fairness, omissions, evidence or downstream harm.
+
+The authors report that improvements were equitable across the examined categories of birth sex, race and ethnicity, student level, first-generation status and academic discipline. That finding means the analysis did not detect differential benefits across those groups in this setting; it does not prove that one module will remove every access or participation gap. The study was conducted at one university with volunteer instructors, and the post-test followed soon after the intervention. It therefore does not establish long-term retention, transfer into real coursework, changes in academic performance or responsible behavior when tools and incentives differ. Generative-AI products also change quickly, so examples and assessments require maintenance.
+
+For Hong Kong universities, the intervention offers a feasible starting architecture: a shared foundational module, embedded practice, immediate feedback and authentic tasks that require students to create prompts and inspect outputs. Institutions should add discipline-specific cases, multilingual examples and repeated source, bias and uncertainty checks across a semester. Evaluation should include delayed assessments, course artifacts and observed application, not completion rates alone. The result is encouraging precisely because it is bounded: short training can improve several competencies at scale, while critical judgment needs sustained, contextual practice.`,
+    keyTakeaways: [
+      "A 90-minute asynchronous intervention was tested with 1,368 students across 65 course sections assigned to module or wait-list conditions.",
+      "The modules improved GenAI knowledge, prompt engineering, fact- and source-checking, and self-efficacy, but did not improve critical evaluation of bias.",
+      "Universities can use short common modules as a foundation, then add discipline-specific practice and delayed assessment for judgment, transfer and durable learning.",
+    ],
+    whyItMatters: "For AIEDHK, the study offers scalable experimental evidence for foundational GenAI literacy while showing exactly where a one-off module stops: critical evaluation needs repeated, contextual and assessable practice.",
+    sourceUrl: "https://doi.org/10.1016/j.compedu.2026.105640",
+    sourceUrls: [
+      { label: "Computers & Education article", url: "https://doi.org/10.1016/j.compedu.2026.105640" },
+      { label: "Carnegie Mellon GAITAR@Scale study report", url: "https://www.cmu.edu/teaching/gaitar/gaitaratscale/asynchronouslearningmodules.html" },
+    ],
+    createdAt: "2026-08-08",
+  },
+  {
     id: "aied-051",
     slug: "news-gpt56-claude-opus5-gemini-study-notebooks",
     title: "Product news: GPT-5.6, Claude Opus 5 and Gemini study notebooks make task matching an educational design decision",

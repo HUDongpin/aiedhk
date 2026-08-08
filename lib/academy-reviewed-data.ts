@@ -1014,4 +1014,298 @@ Communities of practice are valuable for teacher learning, laboratory work, desi
     ],
     createdAt: "2026-07-31T08:00:00.000Z",
   },
+  {
+    id: "academy-029",
+    listingIdentifier: "AI Knowledge 15",
+    slug: "multimodal-ai",
+    title: "Multimodal AI",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["multimodal AI", "shared representations", "cross-modal learning"],
+    image: "/images/academy/covers/academy-029-multimodal-ai.png",
+    imageAlt: "A Black woman, an East Asian man, and a Middle Eastern woman examine a camera, speaker waveform, and textured plate connected through a glass prism",
+    summaryAudio: "/audio/academy/academy-029-multimodal-ai-summary.m4a",
+    summaryAudioTitle: "Listen to Multimodal AI",
+    shortSummary: "How AI connects text, images, audio, and other signals, where cross-modal evidence helps, and why educational use requires careful evaluation, access, and consent.",
+    fullSummary: `Multimodal AI processes and relates information from more than one modality, such as text, images, audio, video, sensor readings, or action. A modality is a way information is represented or sensed. A system may accept several modalities as inputs, produce one or more modalities as outputs, or learn connections among them. An image captioner, for example, receives pixels and produces language. A speech-enabled tutor may hear words, inspect a diagram, and answer in text or voice. Calling a system multimodal does not mean that it understands every channel equally well or combines them reliably.
+
+To connect modalities, a model usually converts each kind of input into numerical representations. Different encoders may process words, pixels, or sound before an alignment or fusion mechanism relates their representations. CLIP learned from image-caption pairs so that related images and language could be located near one another in a shared space. ImageBind showed how image-paired data could connect six modalities in one embedding space. Other systems, including language-image models such as PaLI, combine visual and textual components so that a model can answer questions, describe scenes, or interpret text visible in images. These architectures differ, so the label multimodal describes a family of designs rather than one technique.
+
+Combining channels can provide complementary evidence. Tone may change the interpretation of words, a diagram may clarify a verbal explanation, and depth may distinguish objects that look similar in a flat image. Yet more inputs do not guarantee better answers. A system may ignore one modality, over-rely on an easy cue, align events at the wrong time, or invent a connection between unrelated signals. Missing audio, ambiguous images, background noise, unfamiliar accents, and conflicting cues can expose weaknesses. Evaluation should therefore test each modality separately, meaningful combinations, missing-input conditions, and examples where the channels disagree.
+
+In education, multimodal systems can support activities that are difficult to represent through text alone. A learner might explain a science model aloud while pointing to a diagram, record a physical procedure, or receive a spoken description of a visual resource. Teachers can ask whether feedback refers to evidence the learner actually provided. Accessibility requires options rather than assumptions: captions, transcripts, image descriptions, keyboard control, and alternatives to speech or camera input should remain available. Voice, face, classroom video, and behavioral traces can be sensitive personal data, so collection needs a clear purpose, informed consent, limited retention, and appropriate human oversight.
+
+A productive learning task makes the modalities visible. Ask learners to identify what information came from the image, sound, text, or sensor; explain how the pieces support or contradict one another; and verify the system's claim against the original evidence. Start with bounded, low-stakes uses and compare performance across languages, devices, environments, and learner groups. Multimodal AI can widen how people express understanding, but it should not turn every activity into surveillance or replace teacher judgment. Its educational value comes from preserving learner agency while using several forms of evidence carefully.`,
+    coreIdeas: [
+      "Multimodal AI processes or produces more than one form of information and may align different encoders through shared representations or fusion mechanisms.",
+      "Complementary modalities can strengthen interpretation, but missing, conflicting, biased, or poorly aligned signals can also create new failure modes.",
+      "Educational value depends on accessible alternatives, evidence-aware tasks, privacy safeguards, and evaluation across modalities, settings, devices, and learner groups.",
+    ],
+    educationConnection: "Invite learners to submit or examine evidence in two or more forms, trace which claim comes from each modality, test conflicting or missing inputs, and keep non-camera and non-speech alternatives available.",
+    relatedConcepts: ["Shared representations", "Vision-language models", "Cross-modal evaluation"],
+    sourceUrls: [
+      { label: "Radford and colleagues: CLIP", url: "https://arxiv.org/abs/2103.00020" },
+      { label: "Girdhar and colleagues: ImageBind", url: "https://arxiv.org/abs/2305.05665" },
+      { label: "Chen and colleagues: PaLI", url: "https://arxiv.org/abs/2209.06794" },
+    ],
+    createdAt: "2026-08-03T08:00:00.000Z",
+  },
+  {
+    id: "academy-030",
+    listingIdentifier: "Educational Theory 15",
+    slug: "social-learning-and-modeling",
+    title: "Social Learning and Modeling",
+    track: "educational-theory",
+    level: "core",
+    tags: ["social learning", "modeling", "self-efficacy"],
+    image: "/images/academy/covers/academy-030-social-learning-and-modeling.png",
+    imageAlt: "A Black man demonstrates an articulated wooden arm while an East Asian woman and a White man reproduce the movement on smaller models",
+    summaryAudio: "/audio/academy/academy-030-social-learning-and-modeling-summary.m4a",
+    summaryAudioTitle: "Listen to Social Learning and Modeling",
+    shortSummary: "How observation becomes learning through attention, retention, practice, and motivation, and how teachers can model thinking without encouraging passive imitation.",
+    fullSummary: `Social learning and modeling explain how people can acquire knowledge, strategies, attitudes, and behavior by observing other people and the consequences of their actions. Observation can occur through a live demonstration, a peer, a recorded example, or another symbolic model. It is more than copying visible movements. Learners notice selected features, organize what they observed, anticipate possible results, and decide whether and how to act. Bandura's experiments also distinguished acquisition from performance: a learner may have learned a modeled response without displaying it until incentives, confidence, or circumstances change.
+
+Four connected processes help explain effective modeling. Attention determines what the learner notices, so a demonstration needs a clear goal, visible critical features, and limited distraction. Retention preserves the observed pattern through mental images, language, diagrams, or rehearsal. Production turns a representation into action and improves through practice, feedback, and correction. Motivation influences whether the learner performs what was learned, based partly on expected outcomes and observed consequences. These processes interact. Watching an expert complete a complex task once may create admiration without giving a novice enough structure to remember or reproduce the method.
+
+Social cognitive theory later emphasized reciprocal influence among personal factors, behavior, and environment. Learners are not passive recipients of models. Their prior knowledge, goals, emotions, and sense of efficacy shape what they attend to and attempt. Their actions also change the social environment by inviting feedback, help, or collaboration. A model can support agency when it reveals choices and self-correction, not merely a polished final performance. Seeing a similar peer succeed through effort and useful strategies may strengthen confidence, but credibility and relevance matter more than superficial similarity alone.
+
+For teaching, model the thinking as well as the action. A teacher solving a problem can name the goal, inspect evidence, try a strategy, notice an error, revise, and explain why the revision works. Learners can then rehearse a manageable part, compare their attempt with criteria, receive feedback, and gradually perform independently. Peer models can make varied strategies visible, especially when students discuss why approaches differ. Contrasting an effective example with a plausible mistake often reveals decision points that a flawless demonstration hides. Assessment should examine what learners can now explain or do, not assume that attentive watching produced mastery.
+
+Models also transmit harmful routines, stereotypes, overconfidence, and unequal expectations. Classrooms should not present one person, accent, culture, body, or communication style as the only image of competence. Digital creators and AI-generated demonstrations can appear authoritative while hiding errors or unrealistic performance. Teachers should select diverse credible models, verify the modeled process, make values and consequences discussable, and invite learners to question what deserves imitation. The goal is thoughtful participation: learners use observation to expand their repertoire, test actions in context, and eventually regulate their own practice rather than depend permanently on a model.`,
+    coreIdeas: [
+      "People can acquire strategies and behavior by observing live, peer, recorded, or symbolic models, even when learning is not immediately visible in performance.",
+      "Effective modeling supports attention, retention, production, and motivation while revealing goals, decisions, errors, correction, and consequences.",
+      "Learners and environments influence each other, so diverse credible models, guided practice, feedback, agency, and critical questioning matter.",
+    ],
+    educationConnection: "Demonstrate a real task with a think-aloud, make critical decisions and error correction visible, then move learners through observation, partial rehearsal, feedback, peer comparison, and independent performance.",
+    relatedConcepts: ["Observational learning", "Self-efficacy", "Vicarious reinforcement"],
+    sourceUrls: [
+      { label: "Bandura on modeled consequences and imitation", url: "https://doi.org/10.1037/h0022070" },
+      { label: "Bandura, Ross, and Ross on observational learning", url: "https://doi.org/10.1037/h0045925" },
+      { label: "Bandura: Social Cognitive Theory", url: "https://doi.org/10.1146/annurev.psych.52.1.1" },
+    ],
+    createdAt: "2026-08-03T08:00:00.000Z",
+  },
+  {
+    id: "academy-031",
+    listingIdentifier: "AI Knowledge 16",
+    slug: "agents-tools-and-workflows",
+    title: "AI Agents, Tools, and Workflows",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["AI agents", "tool use", "agentic workflows"],
+    image: "/images/academy/covers/academy-031-ai-agents-tools-and-workflows.png",
+    imageAlt: "A Black woman, an East Asian man, and a Middle Eastern woman operate a camera, mechanical gripper, and inspection light table connected by an amber line",
+    summaryAudio: "/audio/academy/academy-031-ai-agents-tools-and-workflows-summary.m4a",
+    summaryAudioTitle: "Listen to AI Agents, Tools, and Workflows",
+    shortSummary: "How AI agents combine models, context, tools, and action loops, why workflows mix fixed and adaptive steps, and where human control and verification remain essential.",
+    fullSummary: `An AI agent is a system that uses a model to pursue a goal through a sequence of decisions and actions. A chatbot may answer once from the context it receives. An agent can instead gather information, choose a tool, inspect the result, update its working context, and continue until it reaches a stopping condition. The model supplies language and decision capabilities, while a surrounding harness manages instructions, available tools, permissions, memory, execution, and the loop itself. Agency is therefore a property of the whole system, not of the model alone.
+
+A common agentic loop begins by understanding the task and collecting relevant context. The system then selects an action, invokes a tool, observes what happened, and decides what to do next. ReAct research showed how interleaving reasoning and actions can help language models use external information and adjust a plan. Coding agents illustrate the pattern clearly: they can search files, edit code, run tests, read failures, and revise the implementation. A useful stop is not simply a confident sentence. It is evidence that the requested outcome has been produced and checked.
+
+Tools are explicit interfaces to capabilities such as search, calculation, file access, databases, or laboratory equipment. Their descriptions and input schemas tell the agent what actions are possible. The Model Context Protocol offers a standard way for applications to expose tools, resources, and reusable prompts to AI clients. Standard connectivity does not guarantee good judgment or safe execution. A tool can return stale, malicious, ambiguous, or incomplete information, and a model can select the wrong tool or supply harmful arguments.
+
+A workflow organizes actions toward a repeatable outcome. Some steps should be deterministic, such as validating a file type or checking a numerical threshold. Other steps may benefit from agentic choice, such as deciding which source to inspect next. Strong systems combine both: fixed gates constrain important transitions, while the agent adapts within a bounded space. Reliability improves through least-privilege access, approvals for consequential actions, limits on time and tool use, structured logs, checkpoints, tests, and explicit failure and stop conditions. Tool outputs should be treated as untrusted input, especially when they can contain instructions aimed at redirecting the agent.
+
+In education, agents are most useful when learners can inspect meaningful decisions and artifacts. A class might give an agent a small approved source collection and a bounded research question, then record which tools it used, what evidence each tool returned, and why the final answer should be trusted. Learners can compare a fixed workflow with an adaptive agent, predict failure points, and design verification rules. They should evaluate observable actions and results rather than request private hidden reasoning. Teachers remain responsible for task design, data protection, accessibility, and high-impact decisions. The central lesson is controlled delegation: an agent can coordinate useful work, but people must define authority, examine evidence, and decide when the work is genuinely complete.`,
+    coreIdeas: [
+      "An AI agent combines a model with context, tools, permissions, memory, execution, and a loop that selects actions, observes results, and stops on evidence.",
+      "Workflows can mix deterministic gates with bounded agentic choices, while tool standards such as MCP provide connectivity rather than guaranteed reliability or safety.",
+      "Least privilege, approvals, budgets, logs, tests, verification, and explicit stop conditions keep delegated actions inspectable and accountable.",
+    ],
+    educationConnection: "Give learners a bounded task and approved tools, expose the action log and resulting artifacts, compare adaptive and fixed workflows, and require evidence-based verification before accepting completion.",
+    relatedConcepts: ["Agentic loop", "Tool calling", "Human oversight"],
+    sourceUrls: [
+      { label: "Claude Code: How Claude Code works", url: "https://code.claude.com/docs/en/how-claude-code-works" },
+      { label: "Yao and colleagues: ReAct", url: "https://openreview.net/forum?id=WE_vluYUL-X" },
+      { label: "Model Context Protocol architecture", url: "https://modelcontextprotocol.io/docs/learn/architecture" },
+      { label: "NIST lessons on tool use in agent systems", url: "https://www.nist.gov/news-events/news/2025/08/lessons-learned-consortium-tool-use-agent-systems" },
+    ],
+    createdAt: "2026-08-04T08:00:00.000Z",
+  },
+  {
+    id: "academy-032",
+    listingIdentifier: "Educational Theory 16",
+    slug: "mastery-learning",
+    title: "Mastery Learning",
+    track: "educational-theory",
+    level: "core",
+    tags: ["mastery learning", "formative assessment", "corrective instruction"],
+    image: "/images/academy/covers/academy-032-mastery-learning.png",
+    imageAlt: "A Latino man guides a Black woman aligning optical lenses while a White woman extends a teal beam through a prism",
+    summaryAudio: "/audio/academy/academy-032-mastery-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Mastery Learning",
+    shortSummary: "How clear outcomes, formative diagnosis, targeted correction, reassessment, and enrichment let learners reach important goals with different amounts of time and support.",
+    fullSummary: `Mastery learning organizes instruction around the expectation that most learners can reach important outcomes when they receive suitable time, feedback, and corrective support. Instead of allowing achievement to vary widely after everyone receives the same schedule and assistance, the approach holds core outcomes relatively constant and varies the path toward them. Bloom argued that differences in prior learning, pace, and support should not be treated as fixed limits on capability. Mastery does not mean perfection. It means meeting a clearly defined and educationally defensible criterion before later learning depends on that knowledge or skill.
+
+The cycle begins with precise objectives and high-quality initial instruction. A short formative assessment then diagnoses what each learner understands and where difficulty remains. This check is not mainly for grading. It guides a targeted correction connected to the specific error or prerequisite gap. Correction should offer a different route, such as a worked example, peer explanation, concrete representation, smaller practice sequence, or teacher conference, rather than simply repeating the first lesson. Learners then complete a parallel reassessment that examines the same outcome with different items. Those who already demonstrated mastery use the time for meaningful enrichment, extension, or application.
+
+Mastery learning is not identical to unlimited retakes, self-paced worksheets, or lowering the standard until everyone passes. A score threshold alone can hide fragile knowledge. Criteria should describe what competent performance looks like and include evidence of explanation, application, or transfer when those qualities matter. Teachers also need to distinguish a temporary performance boost from retained learning. Later checks can show whether learners remember and use the knowledge after support has faded. Some contemporary programs use the phrase teaching for mastery, but that broader curriculum tradition should not be assumed to implement Bloom's complete formative, corrective, reassessment, and enrichment cycle.
+
+Research reviews have generally found positive average effects, but results vary with implementation, subject, duration, assessment design, and comparison conditions. The Education Endowment Foundation currently rates the evidence security for mastery learning as low, which is a reason for careful local evaluation rather than rejection or overclaiming. Practical constraints matter. If assessments are vague, corrections arrive late, or every learner waits while a few repeat the same activity, the cycle can create bottlenecks. Schools need scheduled support, manageable objectives, reusable corrective resources, and ways to prevent additional help from becoming a stigma.
+
+In education, a teacher might identify one essential concept, publish a rubric with examples, teach it through a coherent sequence, and use a brief diagnostic before the next dependency. Learners receive correction matched to their evidence, while peers who are ready investigate an extension problem. A parallel task then checks mastery, and a later transfer task checks durability. AI can propose alternative examples or group error patterns, but teachers must verify accuracy, protect learner data, and decide what evidence is sufficient. The central commitment is equitable opportunity to learn: keep expectations meaningful, respond to evidence quickly, and change the support before concluding that a learner cannot succeed.`,
+    coreIdeas: [
+      "Mastery learning keeps important outcomes stable while varying time, feedback, and support so that learners can reach a clear criterion before dependent learning continues.",
+      "The full cycle combines strong initial instruction, diagnostic formative assessment, targeted corrective instruction, parallel reassessment, and meaningful enrichment.",
+      "Mastery requires defensible evidence, transfer and retention checks, equitable access to timely support, and local evaluation of implementation rather than unlimited retakes alone.",
+    ],
+    educationConnection: "Define one essential outcome and visible criterion, diagnose specific gaps, provide a genuinely different corrective route, reassess with a parallel task, and later test transfer while offering enrichment to ready learners.",
+    relatedConcepts: ["Formative assessment", "Corrective instruction", "Criterion-referenced assessment"],
+    sourceUrls: [
+      { label: "Bloom: Mastery Learning", url: "https://eric.ed.gov/?id=ED053419" },
+      { label: "Kulik and colleagues: Meta-analysis of mastery learning", url: "https://doi.org/10.3102/00346543060002265" },
+      { label: "Guskey: Lessons of Mastery Learning", url: "https://www.ascd.org/el/articles/lessons-of-mastery-learning" },
+      { label: "Education Endowment Foundation: Mastery learning", url: "https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/mastery-learning" },
+    ],
+    createdAt: "2026-08-04T08:00:00.000Z",
+  },
+  {
+    id: "academy-033",
+    listingIdentifier: "AI Knowledge 17",
+    slug: "knowledge-tracing-and-learner-models",
+    title: "Knowledge Tracing and Learner Models",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["knowledge tracing", "learner models", "adaptive learning"],
+    image: "/images/academy/covers/academy-033-knowledge-tracing-and-learner-models.png",
+    imageAlt: "A South Asian woman points to four glass chambers with amber disks while a Black man and East Asian woman study the connected learner-model apparatus",
+    summaryAudio: "/audio/academy/academy-033-knowledge-tracing-and-learner-models-summary.m4a",
+    summaryAudioTitle: "Listen to Knowledge Tracing and Learner Models",
+    shortSummary: "How digital learning systems estimate changing mastery from interaction records, why predictions remain uncertain, and how transparent learner models can support better decisions.",
+    fullSummary: `A learner model is a structured representation of what a system believes about a learner at a particular time. It may include estimates of knowledge, skills, strategies, goals, or engagement. Knowledge tracing is a narrower family of methods that updates an estimate of knowledge as a learner completes a sequence of tasks. The important word is estimate. Knowledge is not observed directly. The system observes evidence such as which item was attempted, whether the response was correct, how much time or help was used, and which knowledge components the item is assumed to require.
+
+Bayesian Knowledge Tracing represents each knowledge component with a probability that it has been learned. A classic model includes an initial mastery estimate, a probability of learning after an opportunity, and allowances for a correct guess or an incorrect slip. After each tagged response, the model updates its estimate and predicts later performance. This makes assumptions visible, but the result depends heavily on how items are mapped to skills. Extensions may represent forgetting, item difficulty, multiple strategies, or individual differences because a simple correct-or-incorrect sequence cannot capture every path to understanding.
+
+Deep Knowledge Tracing introduced recurrent neural networks that learn patterns across longer interaction sequences without requiring the same hand-specified state structure. Later models use attention, memory, graphs, or other architectures. Greater flexibility can improve prediction on some datasets, but a higher benchmark score does not automatically produce a more valid learner model. Comparisons can change with data splits, hyperparameters, baselines, and evaluation metrics. A model may also exploit repeated items or platform routines without representing durable knowledge. Useful evaluation asks about calibration, performance for new learners and items, transfer across contexts, and whether uncertainty is communicated.
+
+Predictions become educationally meaningful only through the decisions they inform. A tutor might choose the next practice item, while a dashboard might help a teacher identify a pattern worth investigating. These actions should not treat a low probability as a fixed trait or diagnosis. Missing practice, language demands, accessibility barriers, guessing, collaboration, and poor item design can all shape the record. Open learner models make selected evidence and inferences visible to learners, sometimes allowing them to question or correct the representation. This can support reflection and trust while improving model accuracy.
+
+In education, teachers and learners should use a learner model as a revisable hypothesis. A class can calculate a small Bayesian trace from several responses, change the guess or slip assumption, and observe how the estimated state moves. Learners can compare that trace with explanations, transfer tasks, and their own confidence, then identify evidence the model missed. Systems should minimize data collection, protect sensitive records, test for uneven errors, and preserve human review for consequential decisions. Knowledge tracing is valuable when it turns interaction history into a transparent prompt for better support, not when a probability replaces the learner or the teacher's judgment.`,
+    coreIdeas: [
+      "Knowledge tracing estimates an unobserved knowledge state from sequences of learner interactions, item-skill mappings, and explicit or learned assumptions.",
+      "Bayesian, deep, and other models represent learning differently, so predictive scores must be checked for calibration, leakage, transfer, baselines, and uncertainty.",
+      "Learner-model predictions should remain revisable, transparent, privacy-conscious evidence for support rather than fixed diagnoses or substitutes for learner and teacher judgment.",
+    ],
+    educationConnection: "Let learners calculate and challenge a simple knowledge trace, compare it with explanations and transfer evidence, and decide what additional evidence is needed before adapting instruction.",
+    relatedConcepts: ["Bayesian knowledge tracing", "Open learner models", "Adaptive learning"],
+    sourceUrls: [
+      { label: "Corbett and Anderson: Knowledge Tracing", url: "https://doi.org/10.1007/BF01099821" },
+      { label: "Piech and colleagues: Deep Knowledge Tracing", url: "https://proceedings.neurips.cc/paper_files/paper/2015/hash/bac9162b47c56fc8a4d2a519803d51b3-Abstract.html" },
+      { label: "Sarsa and colleagues: Empirical Evaluation of Deep Knowledge Tracing", url: "https://jedm.educationaldatamining.org/index.php/JEDM/article/view/553" },
+      { label: "Bull: Negotiated Learner Modelling", url: "https://link.springer.com/article/10.1186/s41039-016-0035-3" },
+    ],
+    createdAt: "2026-08-05T08:00:00.000Z",
+  },
+  {
+    id: "academy-034",
+    listingIdentifier: "Educational Theory 17",
+    slug: "formative-assessment",
+    title: "Formative Assessment",
+    track: "educational-theory",
+    level: "core",
+    tags: ["formative assessment", "feedback", "evidence of learning"],
+    image: "/images/academy/covers/academy-034-formative-assessment.png",
+    imageAlt: "A Black woman points to coral pendulum traces while a White man adjusts the counterweight and a Middle Eastern woman holds a board of hand-drawn curves",
+    summaryAudio: "/audio/academy/academy-034-formative-assessment-summary.m4a",
+    summaryAudioTitle: "Listen to Formative Assessment",
+    shortSummary: "How teachers and learners clarify goals, elicit evidence, interpret thinking, give actionable feedback, and adjust next steps while learning is still underway.",
+    fullSummary: `Formative assessment is a planned, ongoing process in which teachers and learners elicit and use evidence to move learning forward. It is not a particular quiz, app, worksheet, or grading category. An activity becomes formative when evidence gathered during learning changes what someone does next. The process connects an intended learning goal, evidence of current thinking, and an adjustment that helps close the gap. Students participate by understanding the goal, examining evidence, using feedback, and increasingly directing their own next steps.
+
+Strong formative practice begins with clear learning goals and success criteria grounded in the discipline. Teachers then design questions, discussions, observations, demonstrations, drafts, or exit tasks that can reveal how learners are reasoning. A correct answer may hide a misconception, while a carefully chosen explanation or contrasting case can expose it. Evidence should be broad enough that quiet, uncertain, multilingual, and disabled learners can show their thinking. Techniques that collect a response from every learner are often more informative than relying on volunteers, but the task still needs to distinguish among plausible understandings.
+
+Interpretation must lead to action. A teacher might revisit a prerequisite, compare two anonymous responses, change the example, form a short support group, or advance to a more demanding application. Feedback is formative when it is actionable and the learner has time to use it. Comments that locate the current work, clarify the goal, and identify a manageable next move are more useful than praise or a score alone. Peer feedback and self-assessment can expand this process when learners understand the criteria, practice giving evidence-based comments, and work in a respectful culture where emerging ideas are safe to share.
+
+Frequent testing is not automatically formative. If scores are recorded but teaching and learning continue unchanged, the loop remains open. The same task can be used formatively during instruction and summatively later, depending on purpose and response. Evidence on formative assessment is encouraging, including a large English secondary-school trial of a professional development programme, but results depend on implementation, subject, timing, and what teachers do with the evidence. No single routine works equally well in every classroom.
+
+In education, a useful cycle can fit inside one lesson. Clarify a goal, ask learners to predict and explain, display a small range of responses, and decide together what the evidence suggests. The teacher chooses a next move, learners revise or try a parallel problem, and both check whether understanding changed. AI tools can help group response patterns or propose follow-up questions, but teachers must verify interpretations, protect learner data, and notice minority reasoning that an aggregate may hide. Formative assessment closes the loop through responsive action. Its value lies not in collecting more data, but in making timely, disciplined changes with learners while improvement is still possible.`,
+    coreIdeas: [
+      "Formative assessment is an ongoing process, not a specific instrument, and evidence becomes formative only when it changes a next step in teaching or learning.",
+      "Clear goals, success criteria, well-designed elicitation, interpretation, actionable feedback, and opportunities to revise work together as an integrated cycle.",
+      "Students need inclusive ways to show thinking, participate in self- and peer assessment, use feedback, and share responsibility within a safe disciplinary learning culture.",
+    ],
+    educationConnection: "Clarify one goal, elicit an explanation from every learner, interpret a range of responses, choose a responsive next move, and provide immediate time to revise or try a parallel task.",
+    relatedConcepts: ["Assessment for learning", "Actionable feedback", "Self-assessment"],
+    sourceUrls: [
+      { label: "Black and Wiliam: Assessment and Classroom Learning", url: "https://assess.ucr.edu/sites/g/files/rcwecm2336/files/2019-02/blackwiliam_1998.pdf" },
+      { label: "CCSSO: Formative Assessment Resources", url: "https://learning.ccsso.org/supporting-state-assessment-systems" },
+      { label: "Education Endowment Foundation: Embedding Formative Assessment", url: "https://educationendowmentfoundation.org.uk/projects-and-evaluation/projects/embedding-formative-assessment" },
+      { label: "Education Endowment Foundation: Teacher Feedback Guidance", url: "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/feedback" },
+    ],
+    createdAt: "2026-08-05T08:00:00.000Z",
+  },
+  {
+    id: "academy-035",
+    listingIdentifier: "AI Knowledge 18",
+    slug: "recommendation-and-personalization-systems",
+    title: "Recommendation and Personalization Systems",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["recommender systems", "personalization", "ranking"],
+    image: "/images/academy/covers/academy-035-recommendation-and-personalization-systems.png",
+    imageAlt: "A Black woman turns a brass selector beside an East Asian man and White woman moving illuminated image panels through a recommendation apparatus",
+    summaryAudio: "/audio/academy/academy-035-recommendation-and-personalization-systems-summary.m4a",
+    summaryAudioTitle: "Listen to Recommendation and Personalization Systems",
+    shortSummary: "How recommender systems generate candidates, predict relevance, rank choices, and shape the learning evidence from which future personalization is built.",
+    fullSummary: `Recommendation and personalization systems select or order choices for a particular user, group, or context. They can suggest videos, books, practice items, courses, peers, or next activities when the available collection is too large to inspect directly. A recommendation is not a discovery of what someone truly wants or needs. It is a prediction made from representations of users, items, context, and an objective chosen by designers. Personalization changes what is presented; adaptation additionally changes a learning experience in response to evidence. Neither guarantees that the change is educationally beneficial.
+
+Content-based filtering recommends items whose features resemble items a user previously valued. Collaborative filtering instead learns from patterns of interaction across many users and items. Matrix factorization represents both sides with compact vectors and estimates preference from their relationship. Modern systems may use neural networks, language or image embeddings, knowledge graphs, rules, or hybrid combinations. Each method has blind spots. Collaborative methods struggle with new users and items, content methods can become too narrow, and interaction records may confuse curiosity, convenience, exposure, or accidental clicks with preference.
+
+Large systems commonly divide recommendation into stages. Candidate generation reduces a huge collection to a manageable set. A scoring model predicts a selected outcome for each candidate, then ranking or re-ranking chooses the final order while applying constraints such as diversity, freshness, prerequisites, accessibility, or safety. The objective matters as much as the model. Optimizing clicks, time, completion, challenge, or long-term learning can produce different lists. A technically accurate predictor can therefore serve the wrong purpose if its target does not represent the outcome that learners and educators value.
+
+Recommendation also changes the data used to train future recommendations. Items shown near the top receive more attention, so later interaction records partly reflect earlier rankings. This feedback loop can amplify popularity, narrow exposure, or make behavior more similar without improving value. Missing interaction is not proof of dislike, and high engagement is not proof of learning. Evaluation should combine offline ranking measures with prospective tests, educational outcomes, calibration, coverage, novelty, subgroup analysis, privacy review, and checks for unintended effects. Users need meaningful ways to inspect, correct, diversify, or reset the information shaping a profile.
+
+In education, a recommender might propose the next problem, resource, or collaborator, but the recommendation should remain a revisable proposal. Teachers and learners can compare two ranked lists produced by different objectives, identify which evidence moved an item upward, and ask what the system could not observe. They can test whether a suggestion respects readiness without trapping a learner in an assumed level. Designers should minimize data, protect sensitive profiles, document objectives, monitor who is underserved, and preserve human override for consequential choices. Responsible personalization expands useful options and supports agency. It does not quietly replace curriculum judgment, learner voice, or the right to encounter something unexpected.`,
+    coreIdeas: [
+      "Recommender systems represent users, items, and context, then use content-based, collaborative, or hybrid methods to predict which options may be relevant.",
+      "Production recommenders separate candidate generation, scoring, ranking, and re-ranking, and the chosen objective determines what the system actually promotes.",
+      "Exposure shapes later interaction data, so feedback loops, privacy, coverage, subgroup effects, user correction, and human override are central educational design concerns.",
+    ],
+    educationConnection: "Have learners compare recommendations produced by two objectives, trace which evidence shaped the order, identify missing context, and revise the list before using it for a learning decision.",
+    relatedConcepts: ["Collaborative filtering", "Ranking objectives", "Algorithmic feedback loops"],
+    sourceUrls: [
+      { label: "Koren, Bell, and Volinsky: Matrix Factorization Techniques", url: "https://doi.org/10.1109/MC.2009.263" },
+      { label: "Google Research: Deep Neural Networks for YouTube Recommendations", url: "https://research.google/pubs/deep-neural-networks-for-youtube-recommendations/" },
+      { label: "Verbert and colleagues: Context-Aware Recommender Systems for Learning", url: "https://doi.org/10.1109/TLT.2012.11" },
+      { label: "Chaney and colleagues: Algorithmic Confounding in Recommendation Systems", url: "https://arxiv.org/abs/1710.11214" },
+    ],
+    createdAt: "2026-08-07T08:00:00.000Z",
+  },
+  {
+    id: "academy-036",
+    listingIdentifier: "Educational Theory 18",
+    slug: "feedback-for-learning",
+    title: "Feedback for Learning",
+    track: "educational-theory",
+    level: "core",
+    tags: ["feedback", "revision", "feedback literacy"],
+    image: "/images/academy/covers/academy-036-feedback-for-learning.png",
+    imageAlt: "An East Asian woman points to coral light bands while a Middle Eastern man steadies a wooden mechanism and a Black woman adjusts its brass joint",
+    summaryAudio: "/audio/academy/academy-036-feedback-for-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Feedback for Learning",
+    shortSummary: "How evidence becomes useful feedback when it clarifies a goal, guides a manageable next move, and gives the learner a real opportunity to revise.",
+    fullSummary: `Feedback for learning is information that helps a learner understand a current performance and take a productive next step toward a valued goal. It is not simply praise, correction, a grade, or any comment made after work. A useful feedback process connects three questions: Where am I going? How am I going? What should I do next? Its educational effect depends on what the learner notices, interprets, and uses. A perfectly written comment that arrives without time, trust, or opportunity for action may produce no learning at all.
+
+Feedback can address different levels. Task feedback identifies accuracy, completeness, or a specific feature of the work. Process feedback focuses on strategies, relationships, or methods that can improve performance. Self-regulation feedback helps learners monitor, seek evidence, choose a strategy, and judge progress. Comments about the person, such as broad praise or criticism, often provide little direction and can shift attention from the work to self-image. Effective feedback is grounded in clear goals, success criteria, sound instruction, and evidence of learner thinking. It should be specific enough to guide action without solving the entire task or overwhelming the learner.
+
+Timing and form depend on the learning problem. Immediate verification can prevent an error from being repeated during early practice, while delayed feedback can sometimes preserve productive thinking or support transfer. Spoken, written, peer, automated, and modeled feedback can all be useful when the message fits the task and the learner can act on it. More feedback is not always better. Dense marking, competing grades, vague advice, or too many targets can hide the highest-value next move. A manageable sequence often begins with one priority, an explanation or prompt, and a new chance to attempt related work.
+
+Learners also need feedback literacy. This includes appreciating the purpose of feedback, making judgments about quality, managing emotional responses, and taking action. Examining exemplars, comparing contrasting work, practicing peer review, and discussing criteria can strengthen those capacities. Peer feedback should not merely outsource teacher marking. Its value often lies in helping learners notice qualities, explain decisions, and apply those judgments to their own work. A respectful culture matters because uncertainty and revision require learners to expose unfinished thinking without expecting embarrassment or fixed labels.
+
+In education, a teacher might clarify one criterion, collect a small sample of work, and identify evidence of the current strategy. The learner then chooses one concrete revision, explains why it addresses the evidence, and applies it to the original or a parallel task. Both check whether the change improved the result. AI can help organize comments, compare drafts, or suggest prompts, but teachers must verify accuracy, protect data, and prevent fluent generic advice from replacing disciplinary judgment. Feedback closes a learning loop only when evidence leads to understandable action and the learner has agency, support, and time to complete that action.`,
+    coreIdeas: [
+      "Feedback supports learning when it connects a clear goal, trustworthy evidence of current performance, and a manageable next action that the learner can use.",
+      "Task, process, and self-regulation feedback serve different purposes, while person-focused praise, excessive detail, or a grade without guidance can divert attention from improvement.",
+      "Feedback literacy, exemplars, peer judgment, emotional safety, revision time, and learner agency determine whether information becomes meaningful action.",
+    ],
+    educationConnection: "Clarify one criterion, examine evidence in current work, agree on one actionable revision, give immediate time to apply it, and check the change on the original or a parallel task.",
+    relatedConcepts: ["Formative feedback", "Feedback literacy", "Self-regulated learning"],
+    sourceUrls: [
+      { label: "Hattie and Timperley: The Power of Feedback", url: "https://doi.org/10.3102/003465430298487" },
+      { label: "Shute: Focus on Formative Feedback", url: "https://doi.org/10.3102/0034654307313795" },
+      { label: "Carless and Boud: The Development of Student Feedback Literacy", url: "https://doi.org/10.1080/02602938.2018.1463354" },
+      { label: "Education Endowment Foundation: Teacher Feedback Guidance", url: "https://educationendowmentfoundation.org.uk/education-evidence/guidance-reports/feedback" },
+    ],
+    createdAt: "2026-08-07T08:00:00.000Z",
+  },
 ];

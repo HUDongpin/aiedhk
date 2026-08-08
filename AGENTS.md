@@ -21,7 +21,7 @@
 ## Academy Illustration Art Direction
 
 - Before generating Academy artwork, read `docs/academy-art-direction.md` and the installed `design-taste-frontend` Taste Skill.
-- Each Academy lesson must use exactly one image asset and display it only once on the lesson detail page, not as separate cover and summary images. The same asset may also be used as the lesson-card thumbnail outside the lesson detail page.
+- Each Academy lesson must use exactly one image asset and render that same asset exactly twice on the lesson detail page: once as the smaller top hero and once as the larger image immediately beneath Full Lesson Summary. These are two responsive renders of one identical bitmap, not separate cover and summary images. The same asset must also be used for the lesson-card thumbnail and social sharing.
 - Keep all generated Academy images that have not yet been published on `www.aied.hk`; do not delete them. For future lesson releases, first select and publish a suitable image from this unpublished-image inventory. Once that inventory is exhausted, begin generating new images in accordance with the one-image-per-lesson rule.
 - For all new Academy page images, use the owner-defined `真人质感风格`: show real teachers and learners visibly participating in a warm, bright, friendly, and immediately understandable teaching scene.
 - Academy imagery that includes people must satisfy a racial- and ethnic-diversity requirement. Multi-person scenes must include teachers and learners from visibly different racial or ethnic backgrounds; single-person scenes must rotate representation across the Academy catalog. Do not default to an all-Asian cast, and avoid tokenism or stereotypes.

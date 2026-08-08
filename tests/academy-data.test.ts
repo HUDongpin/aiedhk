@@ -4,13 +4,15 @@ import path from "node:path";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("Academy publishes exactly twenty-eight ordered reviewed English lessons", () => {
+test("Academy publishes exactly thirty ordered reviewed English lessons", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.equal(lessons.length, 28);
+  assert.equal(lessons.length, 30);
   assert.deepEqual(
     lessons.map((lesson) => lesson.id),
     [
+      "academy-029",
+      "academy-030",
       "academy-027",
       "academy-028",
       "academy-025",
@@ -45,8 +47,8 @@ test("Academy publishes exactly twenty-eight ordered reviewed English lessons", 
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 14);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 14);
+  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 15);
+  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 15);
   assert.deepEqual(
     new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016", "academy-017", "academy-018", "academy-019", "academy-020", "academy-021", "academy-022", "academy-023", "academy-024"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
@@ -67,6 +69,7 @@ test("Academy publishes the scheduled curriculum pair for every completed releas
     ["2026-07-29T08:00:00.000Z", ["academy-015", "academy-016"]],
     ["2026-07-30T08:00:00.000Z", ["academy-025", "academy-026"]],
     ["2026-07-31T08:00:00.000Z", ["academy-027", "academy-028"]],
+    ["2026-08-03T08:00:00.000Z", ["academy-029", "academy-030"]],
   ]);
 
   for (const [createdAt, expectedIds] of catchUpDates) {
@@ -108,15 +111,17 @@ test("each launch lesson has complete reviewed copy and one unique stable image 
     "Situated Learning",
     "Fine-Tuning, Instruction Tuning, and Preference Learning",
     "Communities of Practice",
+    "Multimodal AI",
+    "Social Learning and Modeling",
   ];
 
   assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));
-  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 28);
-  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 28);
-  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 28);
-  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 28);
-  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 28);
-  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 28);
+  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 30);
+  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 30);
+  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 30);
+  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 30);
+  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 30);
+  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 30);
 
   for (const lesson of lessons) {
     const wordCount = lesson.fullSummary.trim().split(/\s+/).length;
@@ -147,8 +152,8 @@ test("Academy alt text does not normalize banned particle-heavy or fake-person a
 test("Academy listing identifiers preserve the complete stable sequence for each track and locale", () => {
   const english = getAcademyLessons("en");
   const expectedByTrack = new Map([
-    ["ai-knowledge", { prefix: "AI Knowledge", count: 14 }],
-    ["educational-theory", { prefix: "Educational Theory", count: 14 }],
+    ["ai-knowledge", { prefix: "AI Knowledge", count: 15 }],
+    ["educational-theory", { prefix: "Educational Theory", count: 15 }],
   ]);
 
   for (const [track, expected] of expectedByTrack) {
@@ -170,13 +175,14 @@ test("Academy listing identifiers preserve the complete stable sequence for each
   }
 });
 
-test("Academy art direction requires one genuine teaching image with restrained visual density", () => {
+test("Academy art direction requires one source image rendered twice with restrained visual density", () => {
   const contract = readFileSync(path.join(process.cwd(), "docs/academy-art-direction.md"), "utf8");
 
   assert.match(contract, /真人质感风格/);
   assert.match(contract, /warm, bright, friendly, and immediately understandable/i);
   assert.match(contract, /dense decorative fields of particles/i);
-  assert.match(contract, /display it only once on the lesson detail page/i);
+  assert.match(contract, /render that same bitmap exactly twice on the lesson detail page/i);
+  assert.match(contract, /do not add a second assigned image field or source file/i);
 });
 
 test("unreviewed locales fall back to English lesson text without leaking English audio", () => {

@@ -1014,4 +1014,76 @@ Communities of practice are valuable for teacher learning, laboratory work, desi
     ],
     createdAt: "2026-07-31T08:00:00.000Z",
   },
+  {
+    id: "academy-029",
+    listingIdentifier: "AI Knowledge 15",
+    slug: "multimodal-ai",
+    title: "Multimodal AI",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["multimodal AI", "shared representations", "cross-modal learning"],
+    image: "/images/academy/covers/academy-029-multimodal-ai.png",
+    imageAlt: "A Black woman, an East Asian man, and a Middle Eastern woman examine a camera, speaker waveform, and textured plate connected through a glass prism",
+    summaryAudio: "/audio/academy/academy-029-multimodal-ai-summary.m4a",
+    summaryAudioTitle: "Listen to Multimodal AI",
+    shortSummary: "How AI connects text, images, audio, and other signals, where cross-modal evidence helps, and why educational use requires careful evaluation, access, and consent.",
+    fullSummary: `Multimodal AI processes and relates information from more than one modality, such as text, images, audio, video, sensor readings, or action. A modality is a way information is represented or sensed. A system may accept several modalities as inputs, produce one or more modalities as outputs, or learn connections among them. An image captioner, for example, receives pixels and produces language. A speech-enabled tutor may hear words, inspect a diagram, and answer in text or voice. Calling a system multimodal does not mean that it understands every channel equally well or combines them reliably.
+
+To connect modalities, a model usually converts each kind of input into numerical representations. Different encoders may process words, pixels, or sound before an alignment or fusion mechanism relates their representations. CLIP learned from image-caption pairs so that related images and language could be located near one another in a shared space. ImageBind showed how image-paired data could connect six modalities in one embedding space. Other systems, including language-image models such as PaLI, combine visual and textual components so that a model can answer questions, describe scenes, or interpret text visible in images. These architectures differ, so the label multimodal describes a family of designs rather than one technique.
+
+Combining channels can provide complementary evidence. Tone may change the interpretation of words, a diagram may clarify a verbal explanation, and depth may distinguish objects that look similar in a flat image. Yet more inputs do not guarantee better answers. A system may ignore one modality, over-rely on an easy cue, align events at the wrong time, or invent a connection between unrelated signals. Missing audio, ambiguous images, background noise, unfamiliar accents, and conflicting cues can expose weaknesses. Evaluation should therefore test each modality separately, meaningful combinations, missing-input conditions, and examples where the channels disagree.
+
+In education, multimodal systems can support activities that are difficult to represent through text alone. A learner might explain a science model aloud while pointing to a diagram, record a physical procedure, or receive a spoken description of a visual resource. Teachers can ask whether feedback refers to evidence the learner actually provided. Accessibility requires options rather than assumptions: captions, transcripts, image descriptions, keyboard control, and alternatives to speech or camera input should remain available. Voice, face, classroom video, and behavioral traces can be sensitive personal data, so collection needs a clear purpose, informed consent, limited retention, and appropriate human oversight.
+
+A productive learning task makes the modalities visible. Ask learners to identify what information came from the image, sound, text, or sensor; explain how the pieces support or contradict one another; and verify the system's claim against the original evidence. Start with bounded, low-stakes uses and compare performance across languages, devices, environments, and learner groups. Multimodal AI can widen how people express understanding, but it should not turn every activity into surveillance or replace teacher judgment. Its educational value comes from preserving learner agency while using several forms of evidence carefully.`,
+    coreIdeas: [
+      "Multimodal AI processes or produces more than one form of information and may align different encoders through shared representations or fusion mechanisms.",
+      "Complementary modalities can strengthen interpretation, but missing, conflicting, biased, or poorly aligned signals can also create new failure modes.",
+      "Educational value depends on accessible alternatives, evidence-aware tasks, privacy safeguards, and evaluation across modalities, settings, devices, and learner groups.",
+    ],
+    educationConnection: "Invite learners to submit or examine evidence in two or more forms, trace which claim comes from each modality, test conflicting or missing inputs, and keep non-camera and non-speech alternatives available.",
+    relatedConcepts: ["Shared representations", "Vision-language models", "Cross-modal evaluation"],
+    sourceUrls: [
+      { label: "Radford and colleagues: CLIP", url: "https://arxiv.org/abs/2103.00020" },
+      { label: "Girdhar and colleagues: ImageBind", url: "https://arxiv.org/abs/2305.05665" },
+      { label: "Chen and colleagues: PaLI", url: "https://arxiv.org/abs/2209.06794" },
+    ],
+    createdAt: "2026-08-03T08:00:00.000Z",
+  },
+  {
+    id: "academy-030",
+    listingIdentifier: "Educational Theory 15",
+    slug: "social-learning-and-modeling",
+    title: "Social Learning and Modeling",
+    track: "educational-theory",
+    level: "core",
+    tags: ["social learning", "modeling", "self-efficacy"],
+    image: "/images/academy/covers/academy-030-social-learning-and-modeling.png",
+    imageAlt: "A Black man demonstrates an articulated wooden arm while an East Asian woman and a White man reproduce the movement on smaller models",
+    summaryAudio: "/audio/academy/academy-030-social-learning-and-modeling-summary.m4a",
+    summaryAudioTitle: "Listen to Social Learning and Modeling",
+    shortSummary: "How observation becomes learning through attention, retention, practice, and motivation, and how teachers can model thinking without encouraging passive imitation.",
+    fullSummary: `Social learning and modeling explain how people can acquire knowledge, strategies, attitudes, and behavior by observing other people and the consequences of their actions. Observation can occur through a live demonstration, a peer, a recorded example, or another symbolic model. It is more than copying visible movements. Learners notice selected features, organize what they observed, anticipate possible results, and decide whether and how to act. Bandura's experiments also distinguished acquisition from performance: a learner may have learned a modeled response without displaying it until incentives, confidence, or circumstances change.
+
+Four connected processes help explain effective modeling. Attention determines what the learner notices, so a demonstration needs a clear goal, visible critical features, and limited distraction. Retention preserves the observed pattern through mental images, language, diagrams, or rehearsal. Production turns a representation into action and improves through practice, feedback, and correction. Motivation influences whether the learner performs what was learned, based partly on expected outcomes and observed consequences. These processes interact. Watching an expert complete a complex task once may create admiration without giving a novice enough structure to remember or reproduce the method.
+
+Social cognitive theory later emphasized reciprocal influence among personal factors, behavior, and environment. Learners are not passive recipients of models. Their prior knowledge, goals, emotions, and sense of efficacy shape what they attend to and attempt. Their actions also change the social environment by inviting feedback, help, or collaboration. A model can support agency when it reveals choices and self-correction, not merely a polished final performance. Seeing a similar peer succeed through effort and useful strategies may strengthen confidence, but credibility and relevance matter more than superficial similarity alone.
+
+For teaching, model the thinking as well as the action. A teacher solving a problem can name the goal, inspect evidence, try a strategy, notice an error, revise, and explain why the revision works. Learners can then rehearse a manageable part, compare their attempt with criteria, receive feedback, and gradually perform independently. Peer models can make varied strategies visible, especially when students discuss why approaches differ. Contrasting an effective example with a plausible mistake often reveals decision points that a flawless demonstration hides. Assessment should examine what learners can now explain or do, not assume that attentive watching produced mastery.
+
+Models also transmit harmful routines, stereotypes, overconfidence, and unequal expectations. Classrooms should not present one person, accent, culture, body, or communication style as the only image of competence. Digital creators and AI-generated demonstrations can appear authoritative while hiding errors or unrealistic performance. Teachers should select diverse credible models, verify the modeled process, make values and consequences discussable, and invite learners to question what deserves imitation. The goal is thoughtful participation: learners use observation to expand their repertoire, test actions in context, and eventually regulate their own practice rather than depend permanently on a model.`,
+    coreIdeas: [
+      "People can acquire strategies and behavior by observing live, peer, recorded, or symbolic models, even when learning is not immediately visible in performance.",
+      "Effective modeling supports attention, retention, production, and motivation while revealing goals, decisions, errors, correction, and consequences.",
+      "Learners and environments influence each other, so diverse credible models, guided practice, feedback, agency, and critical questioning matter.",
+    ],
+    educationConnection: "Demonstrate a real task with a think-aloud, make critical decisions and error correction visible, then move learners through observation, partial rehearsal, feedback, peer comparison, and independent performance.",
+    relatedConcepts: ["Observational learning", "Self-efficacy", "Vicarious reinforcement"],
+    sourceUrls: [
+      { label: "Bandura on modeled consequences and imitation", url: "https://doi.org/10.1037/h0022070" },
+      { label: "Bandura, Ross, and Ross on observational learning", url: "https://doi.org/10.1037/h0045925" },
+      { label: "Bandura: Social Cognitive Theory", url: "https://doi.org/10.1146/annurev.psych.52.1.1" },
+    ],
+    createdAt: "2026-08-03T08:00:00.000Z",
+  },
 ];

@@ -4,21 +4,31 @@ import path from "node:path";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("Academy publishes exactly thirty-six ordered reviewed English lessons", () => {
+test("Academy publishes exactly forty-six ordered reviewed English lessons", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.equal(lessons.length, 36);
+  assert.equal(lessons.length, 46);
   assert.deepEqual(
     lessons.map((lesson) => lesson.id),
     [
+      "academy-037",
+      "academy-038",
+      "academy-045",
+      "academy-046",
       "academy-035",
       "academy-036",
+      "academy-043",
+      "academy-044",
       "academy-033",
       "academy-034",
       "academy-031",
       "academy-032",
       "academy-029",
       "academy-030",
+      "academy-041",
+      "academy-042",
+      "academy-039",
+      "academy-040",
       "academy-027",
       "academy-028",
       "academy-025",
@@ -53,8 +63,8 @@ test("Academy publishes exactly thirty-six ordered reviewed English lessons", ()
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 18);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 18);
+  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 23);
+  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 23);
   assert.deepEqual(
     new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016", "academy-017", "academy-018", "academy-019", "academy-020", "academy-021", "academy-022", "academy-023", "academy-024"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
@@ -79,6 +89,11 @@ test("Academy publishes the scheduled curriculum pair for every completed releas
     ["2026-08-04T08:00:00.000Z", ["academy-031", "academy-032"]],
     ["2026-08-05T08:00:00.000Z", ["academy-033", "academy-034"]],
     ["2026-08-07T08:00:00.000Z", ["academy-035", "academy-036"]],
+    ["2026-08-09T08:00:00.000Z", ["academy-037", "academy-038"]],
+    ["2026-08-01T08:00:00.000Z", ["academy-039", "academy-040"]],
+    ["2026-08-02T08:00:00.000Z", ["academy-041", "academy-042"]],
+    ["2026-08-06T08:00:00.000Z", ["academy-043", "academy-044"]],
+    ["2026-08-08T08:00:00.000Z", ["academy-045", "academy-046"]],
   ]);
 
   for (const [createdAt, expectedIds] of catchUpDates) {
@@ -128,15 +143,25 @@ test("each launch lesson has complete reviewed copy and one unique stable image 
     "Formative Assessment",
     "Recommendation and Personalization Systems",
     "Feedback for Learning",
+    "Computer Vision for Learning",
+    "Deliberate Practice",
+    "Speech Recognition and Synthesis",
+    "Transfer of Learning",
+    "Algorithmic Bias and Fairness",
+    "Achievement Goal Theory",
+    "Privacy, Security, and Educational Data",
+    "Control-Value Theory of Achievement Emotions",
+    "Explainability and Transparency",
+    "Cognitive Apprenticeship",
   ];
 
   assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));
-  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 36);
-  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 36);
-  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 36);
-  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 36);
-  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 36);
-  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 36);
+  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 46);
+  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 46);
+  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 46);
+  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 46);
+  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 46);
+  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 46);
 
   for (const lesson of lessons) {
     const wordCount = lesson.fullSummary.trim().split(/\s+/).length;
@@ -167,8 +192,8 @@ test("Academy alt text does not normalize banned particle-heavy or fake-person a
 test("Academy listing identifiers preserve the complete stable sequence for each track and locale", () => {
   const english = getAcademyLessons("en");
   const expectedByTrack = new Map([
-    ["ai-knowledge", { prefix: "AI Knowledge", count: 18 }],
-    ["educational-theory", { prefix: "Educational Theory", count: 18 }],
+    ["ai-knowledge", { prefix: "AI Knowledge", count: 23 }],
+    ["educational-theory", { prefix: "Educational Theory", count: 23 }],
   ]);
 
   for (const [track, expected] of expectedByTrack) {

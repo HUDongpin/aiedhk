@@ -1308,4 +1308,371 @@ In education, a teacher might clarify one criterion, collect a small sample of w
     ],
     createdAt: "2026-08-07T08:00:00.000Z",
   },
+  {
+    id: "academy-037",
+    listingIdentifier: "AI Knowledge 19",
+    slug: "computer-vision-for-learning",
+    title: "Computer Vision for Learning",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["computer vision", "image recognition", "responsible AI"],
+    image: "/images/academy/covers/academy-037-computer-vision-for-learning.png",
+    imageAlt: "A Middle Eastern woman points to illuminated outlines of three solid shapes beneath an overhead camera while a Black man and East Asian woman compare the physical objects",
+    summaryAudio: "/audio/academy/academy-037-computer-vision-for-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Computer Vision for Learning",
+    shortSummary: "How computer vision turns pixels into predictions, how its tasks and evaluations differ, and why classroom uses require consent, fairness checks, and human judgment.",
+    fullSummary: `Computer vision is the field of computing that enables systems to process images or video and produce useful predictions. A digital image is first represented as an array of pixel values, not as objects with human meaning. A model may classify the whole image, locate objects with bounding boxes, separate regions through segmentation, estimate body keypoints, read characters, or track movement across frames. These are different tasks with different outputs. A camera records light, while a computer vision pipeline converts that record into a task-specific estimate.
+
+Earlier systems often relied on human-designed features such as edges, corners, color histograms, and geometric relationships. Modern systems usually learn representations from many examples using convolutional neural networks, vision transformers, or multimodal models. During training, labeled examples connect pixel patterns with target categories, locations, masks, or captions. Data augmentation can vary crops, lighting, and orientation to improve robustness. Yet a model does not automatically acquire a complete concept. It may depend on background cues, camera position, annotation conventions, or correlations that fail outside the training collection.
+
+Evaluation must match the intended task. Classification can be examined with accuracy, precision, recall, confusion matrices, and calibration. Detection and segmentation also depend on how predicted regions overlap reference annotations, often measured with intersection over union. A held-out benchmark such as COCO can support comparison, but benchmark performance does not guarantee reliable classroom performance. Schools have different cameras, lighting, languages, accessibility needs, learner demographics, and activities. Testing should therefore include realistic local conditions, difficult counterexamples, subgroup analysis, and explicit thresholds for uncertain predictions.
+
+Educational uses can include digitizing handwritten work, recognizing mathematical diagrams, supporting laboratory observation, creating descriptions for visual materials, or helping learners examine motion and spatial relationships. Risks grow when a system identifies people or infers attention, emotion, behavior, or ability from appearance. Such inferences may be scientifically weak, uneven across groups, intrusive, and difficult to challenge. Images can reveal faces, locations, disability, relationships, and classroom routines. Consent, data minimization, secure retention, accessibility, and meaningful alternatives should be designed before collection begins.
+
+In education, learners can build a small investigation with photographs of familiar objects under varied lighting and viewpoints. They define the categories, inspect errors, compare false positives and false negatives, and identify which visual cues the model may be using. They can then decide whether the evidence is adequate for a low-stakes learning aid and what a human reviewer must check. They should also document when the system declines to make a prediction. The central lesson is that computer vision does not simply see. It performs a specified measurement shaped by data, labels, objectives, and context. Responsible use keeps those choices visible and leaves consequential interpretations with people who can examine the learner, the setting, and evidence beyond the image.`,
+    coreIdeas: [
+      "Computer vision maps pixel arrays to task-specific predictions such as classes, bounding boxes, segments, keypoints, text, or tracked movement rather than understanding an image as a person does.",
+      "Learned visual representations depend on training examples, labels, context, and evaluation design, so benchmark performance must be supplemented with realistic local and subgroup testing.",
+      "Educational uses require consent, data minimization, accessibility, uncertainty handling, and human review, especially when images reveal identity or invite claims about attention, emotion, behavior, or ability.",
+    ],
+    educationConnection: "Have learners test the same object classifier across lighting, viewpoints, and backgrounds, inspect its errors and cues, then define a narrow low-stakes use with clear consent and human-review rules.",
+    relatedConcepts: ["Image classification", "Object detection and segmentation", "Algorithmic fairness"],
+    sourceUrls: [
+      { label: "Szeliski: Computer Vision, Second Edition", url: "https://szeliski.org/Book/" },
+      { label: "COCO: Common Objects in Context", url: "https://cocodataset.org/" },
+      { label: "NIST: Face Recognition Demographic Effects", url: "https://doi.org/10.6028/NIST.IR.8280" },
+    ],
+    createdAt: "2026-08-09T08:00:00.000Z",
+  },
+  {
+    id: "academy-038",
+    listingIdentifier: "Educational Theory 19",
+    slug: "deliberate-practice",
+    title: "Deliberate Practice",
+    track: "educational-theory",
+    level: "core",
+    tags: ["deliberate practice", "expertise", "feedback"],
+    image: "/images/academy/covers/academy-038-deliberate-practice.png",
+    imageAlt: "A Black woman coaches an East Asian violinist on hand position while a White cellist listens beside music stands and a metronome in a bright rehearsal room",
+    summaryAudio: "/audio/academy/academy-038-deliberate-practice-summary.m4a",
+    summaryAudioTitle: "Listen to Deliberate Practice",
+    shortSummary: "Why expertise grows through specific goals, demanding focused rehearsal, high-quality feedback, and repeated adjustment rather than experience or repetition alone.",
+    fullSummary: `Deliberate practice is structured activity designed specifically to improve a defined aspect of performance. It differs from simply repeating a familiar task, accumulating hours, completing routine exercises, or performing for an audience. A deliberate-practice task has a clear target just beyond the learner's current reliable performance. It demands focused attention, produces evidence about a weakness, and allows another attempt after feedback. The purpose is improvement rather than enjoyment, completion, or immediate success, although motivation and a supportive learning climate help people sustain the effort.
+
+The cycle begins by identifying a specific component of a complex skill. A musician might isolate one transition, a writer might revise the logic of one paragraph, and a teacher candidate might rehearse how to elicit reasoning after an incorrect answer. The learner attempts the component under conditions that make relevant differences visible. A knowledgeable teacher, coach, peer, recording, rubric, or well-designed task then provides information connected to the goal. The learner interprets that evidence, changes a strategy or action, and tries again. Repetition matters only when each attempt is informed by what happened before.
+
+Expert guidance is valuable because novices may not yet recognize the most important error, an effective practice sequence, or a useful model of high-quality performance. Feedback should be timely and precise enough to guide change without taking over the task. Difficulty should rise as control improves, and practice should include variation and later tests of transfer so that success is not tied to one cue or routine. Rest also matters. Sustained concentration is demanding, and exhausted repetition can stabilize mistakes rather than improve skill. Deliberate practice develops domain-specific representations and control, not a general shortcut to expertise.
+
+Research supports an association between structured practice and performance, but strong popular claims require caution. The original expertise research emphasized activities designed by teachers and methods that permit repeated correction. Later reviews found that measured deliberate practice explains only part of the variation in performance, with effects differing across music, games, sports, education, and professions. Prior knowledge, opportunity, instruction, health, motivation, resources, and the quality of measurement also matter. A fixed number of hours cannot guarantee expertise, and unequal access to coaching or protected practice time should not be mistaken for differences in potential.
+
+In education, a teacher can select one high-value move, show a credible model, and define observable success criteria. Learners rehearse briefly, receive one prioritized piece of evidence, explain the adjustment they will make, and immediately try a parallel version. A record of attempts helps them notice progress and decide when to increase difficulty, vary the context, or return to prerequisite knowledge. The same structure can strengthen academic problem solving, artistic performance, laboratory technique, language production, and teacher preparation. Deliberate practice is most educationally responsible when goals are meaningful, feedback is trustworthy, access is equitable, and focused rehearsal remains connected to flexible performance in authentic settings.`,
+    coreIdeas: [
+      "Deliberate practice targets a specific weakness just beyond current reliable performance and organizes focused attempts for improvement rather than repetition, completion, or performance alone.",
+      "A productive cycle uses clear criteria, informative attempts, knowledgeable feedback, immediate adjustment, rising challenge, variation, transfer checks, and adequate rest.",
+      "Structured practice contributes to expertise but does not explain all performance differences, so educators must avoid fixed-hour myths and address unequal access to coaching, time, and resources.",
+    ],
+    educationConnection: "Choose one high-value component, model the target, rehearse briefly, give one prioritized piece of evidence, require an immediate adjusted attempt, and later vary the context to check transfer.",
+    relatedConcepts: ["Expert performance", "Feedback cycles", "Transfer of learning"],
+    sourceUrls: [
+      { label: "Ericsson and colleagues: The Role of Deliberate Practice", url: "https://doi.org/10.1037/0033-295X.100.3.363" },
+      { label: "Ericsson and Harwell: Why the Original Definition Matters", url: "https://doi.org/10.3389/fpsyg.2019.02396" },
+      { label: "Macnamara and colleagues: Deliberate Practice Meta-analysis", url: "https://doi.org/10.1177/0956797614535810" },
+      { label: "Deans for Impact: Practice with Purpose", url: "https://www.deansforimpact.org/files/assets/practice-with-purpose.pdf" },
+    ],
+    createdAt: "2026-08-09T08:00:00.000Z",
+  },
+  {
+    id: "academy-039",
+    listingIdentifier: "AI Knowledge 20",
+    slug: "speech-recognition-and-synthesis",
+    title: "Speech Recognition and Synthesis",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["speech recognition", "speech synthesis", "accessible learning"],
+    image: "/images/academy/covers/academy-039-speech-recognition-and-synthesis.png",
+    imageAlt: "A South Asian woman teacher guides a Black man using a studio microphone while an East Asian woman learner compares a waveform on a tablet with a notebook containing meaningful sound diagrams",
+    summaryAudio: "/audio/academy/academy-039-speech-recognition-and-synthesis-summary.m4a",
+    summaryAudioTitle: "Listen to Speech Recognition and Synthesis",
+    shortSummary: "How speech recognition turns audio into text, how speech synthesis turns text into sound, how both systems are evaluated, and why accent, accessibility, consent, and human review matter in education.",
+    fullSummary: `Speech recognition and speech synthesis connect spoken language with digital representations. Automatic speech recognition, or ASR, converts an audio signal into a sequence of words or other tokens. Text-to-speech, or TTS, works in the other direction by generating an audible waveform from text and instructions about language, speaker, or speaking style. Both tasks involve more than matching sounds with letters. Speech carries timing, accent, emotion, background noise, and overlapping voices, while written text leaves many features of pronunciation and expression unspecified.
+
+An ASR system first represents a recording as short frames or learned audio features. A model then estimates which linguistic units and sequences are plausible. Earlier systems often combined separate acoustic, pronunciation, and language models. End-to-end systems can learn a more direct mapping from audio to text, sometimes using connectionist temporal classification, attention, or encoder-decoder architectures. Modern large-scale models can learn from multilingual and weakly labeled recordings, but they still produce substitutions, deletions, and insertions. Word error rate summarizes those errors against a reference transcript. It is useful, yet it does not reveal whether mistakes change meaning, affect one speaker group more than another, or make a caption unusable for a particular learner.
+
+TTS systems typically convert text into an intermediate acoustic representation and then use a vocoder or related generator to produce a waveform. Neural systems such as Tacotron 2 showed how a sequence model could predict a mel spectrogram while a separate neural vocoder generated speech. Current systems may control voice, pace, emphasis, and language more flexibly. Natural-sounding output is not automatically accurate or appropriate. Evaluation should consider intelligibility, pronunciation, prosody, listener judgments, task success, and whether the system faithfully follows the source text. Synthetic speech can also imitate a person, so consent, disclosure, and safeguards against impersonation matter.
+
+In education, speech technology can support captions, searchable recordings, dictation, pronunciation practice, read-aloud access, and augmentative communication. A teacher might ask learners to compare an automatic transcript with the recording, label different error types, and investigate why proper names, technical terms, code-switching, or classroom noise caused difficulty. Learners can then correct the transcript and test whether the revision improves comprehension. For synthesis, they can compare several readings of the same sentence and explain how pacing or emphasis changes interpretation.
+
+Performance must be checked across the people and conditions that will actually use the system. Research on commercial ASR found substantial error disparities between recordings of Black and White speakers in the studied corpus, showing why one average score is insufficient. Schools should test accents, languages, ages, disabilities, microphones, and noise conditions; protect voice recordings as sensitive data; provide correction and opt-out routes; and keep human review for consequential uses. Speech systems can expand participation when they remain inspectable tools, not unquestioned judges of fluency, ability, identity, or intent.`,
+    coreIdeas: [
+      "Automatic speech recognition maps audio representations to linguistic sequences, while word error rate counts substitutions, deletions, and insertions but cannot capture every meaning, usability, or subgroup concern.",
+      "Text-to-speech systems turn text into an acoustic representation and waveform, and naturalness must be evaluated alongside intelligibility, pronunciation, fidelity, consent, and misuse risk.",
+      "Educational speech tools require testing across real accents and conditions, privacy protection for voice data, learner correction routes, accessibility review, and human oversight for consequential uses.",
+    ],
+    educationConnection: "Let learners compare a recording, an automatic transcript, and two synthesized readings, classify meaningful errors, revise the transcript, and explain how accent, noise, pacing, and emphasis affect educational use.",
+    relatedConcepts: ["Automatic speech recognition", "Text-to-speech", "Word error rate"],
+    sourceUrls: [
+      { label: "Graves and Jaitly: End-to-End Speech Recognition", url: "https://proceedings.mlr.press/v32/graves14.html" },
+      { label: "Shen and colleagues: Tacotron 2", url: "https://arxiv.org/abs/1712.05884" },
+      { label: "Radford and colleagues: Robust Speech Recognition", url: "https://arxiv.org/abs/2212.04356" },
+      { label: "Koenecke and colleagues: Racial Disparities in ASR", url: "https://doi.org/10.1073/pnas.1915768117" },
+    ],
+    createdAt: "2026-08-01T08:00:00.000Z",
+  },
+  {
+    id: "academy-040",
+    listingIdentifier: "Educational Theory 20",
+    slug: "transfer-of-learning",
+    title: "Transfer of Learning",
+    track: "educational-theory",
+    level: "core",
+    tags: ["transfer of learning", "adaptive expertise", "varied practice"],
+    image: "/images/academy/covers/academy-040-transfer-of-learning.png",
+    imageAlt: "A Middle Eastern man teacher guides a Black woman and an East Asian man as they compare a small bridge model with a larger bridge model beside a meaningful hand-drawn force sketch",
+    summaryAudio: "/audio/academy/academy-040-transfer-of-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Transfer of Learning",
+    shortSummary: "How prior learning helps or hinders new performance, why far transfer does not happen automatically, and how varied examples, principle-focused comparison, and future-learning assessments support flexible use.",
+    fullSummary: `Transfer of learning occurs when prior learning influences performance or further learning in a new situation. Positive transfer helps, negative transfer interferes, and apparent zero transfer means that earlier learning produces no detectable advantage on the chosen measure. Transfer is central to education because lessons are meant to matter beyond the exact worksheet, example, room, or assessment in which they were first learned. It should not be confused with simple repetition. A learner who reproduces the same procedure on an almost identical item may demonstrate retention without showing flexible use.
+
+Near and far transfer describe degrees of change between the learning and application situations. Barnett and Ceci's taxonomy separates what is transferred, such as a procedure or principle, from the contexts across which it travels, such as a new task, knowledge domain, physical setting, social setting, or time period. Distance is therefore multidimensional rather than a single label. A mathematics strategy used with different numbers is nearer than the same principle recognized in a science investigation, but either judgment depends on which features researchers treat as important.
+
+Transfer requires sufficient initial learning, yet practice alone does not guarantee it. Learners need organized knowledge, an understanding of underlying principles, and awareness of the conditions under which a principle applies. Knowledge can remain bound to the surface features of the original example, or it can be activated inappropriately because a new problem only looks similar. Multiple contrasting examples help learners distinguish deep structure from incidental details. Explanations, comparison, retrieval, and varied practice can make relevant relationships easier to notice. Teachers should also address misconceptions because prior knowledge can guide reasoning in an unproductive direction.
+
+Researchers measure transfer in different ways. A traditional test asks whether a learner solves a novel problem without assistance. Other approaches examine how quickly and effectively the learner uses feedback, resources, or instruction in a new domain. This preparation-for-future-learning perspective recognizes that adaptive expertise includes learning well when the answer is not already known. Actor-oriented research also asks what connections learners themselves construct, rather than counting only the solution anticipated by an expert. These measures can reveal productive reasoning that a single right-or-wrong transfer item misses.
+
+In education, teach for transfer deliberately. State the principle, use examples with different surface features, include a tempting nonexample, and ask learners to explain where the principle applies and where it does not. Later, present a new context and require learners to identify relevant prior knowledge before solving. A useful assessment can separate unaided performance from learning with a carefully chosen resource. Teachers should avoid promising broad benefits from one isolated activity. Transfer is specific, effortful, and supported by cues, knowledge, motivation, and context. The goal is not knowledge that travels automatically, but learners who can notice relationships, test an analogy, revise a strategy, and continue learning across settings.`,
+    coreIdeas: [
+      "Transfer can be positive, negative, or undetected, and near or far transfer depends on several dimensions separating the original learning and later application contexts.",
+      "Flexible transfer depends on sufficient initial learning, organized principles, conditions of applicability, contrasting examples, and the ability to look beyond misleading surface similarities.",
+      "Transfer assessment can examine both unaided novel performance and preparation for future learning, while instruction should deliberately cue comparison, explanation, varied practice, and revision.",
+    ],
+    educationConnection: "Teach one principle through varied examples and a tempting nonexample, then ask learners to identify and justify its use in a new context before comparing unaided transfer with learning from a selected resource.",
+    relatedConcepts: ["Near and far transfer", "Preparation for future learning", "Adaptive expertise"],
+    sourceUrls: [
+      { label: "Barnett and Ceci: Taxonomy for Far Transfer", url: "https://pubmed.ncbi.nlm.nih.gov/12081085/" },
+      { label: "National Research Council: Learning and Transfer", url: "https://www.nationalacademies.org/read/9853/chapter/6" },
+      { label: "Perkins and Salomon: Teaching for Transfer", url: "https://eric.ed.gov/?id=EJ376242" },
+      { label: "Lobato: Alternative Perspectives on Transfer", url: "https://doi.org/10.1207/s15327809jls1504_1" },
+    ],
+    createdAt: "2026-08-01T08:00:00.000Z",
+  },
+  {
+    id: "academy-041",
+    listingIdentifier: "AI Knowledge 21",
+    slug: "algorithmic-bias-and-fairness",
+    title: "Algorithmic Bias and Fairness",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["algorithmic bias", "fairness metrics", "sociotechnical systems"],
+    image: "/images/academy/covers/academy-041-algorithmic-bias-and-fairness.png",
+    imageAlt: "An East Asian woman teacher guides a Black woman and a South Asian man as they compare two sparse outcome diagrams with meaningful evidence cards on a classroom table",
+    summaryAudio: "/audio/academy/academy-041-algorithmic-bias-and-fairness-summary.m4a",
+    summaryAudioTitle: "Listen to Algorithmic Bias and Fairness",
+    shortSummary: "How bias can enter an AI system, why fairness has multiple competing definitions, and how disaggregated audits, community input, contestability, and process changes support responsible decisions.",
+    fullSummary: `Algorithmic bias occurs when a computational system produces or reinforces systematically different outcomes that are harmful, unjustified, or poorly aligned with its intended purpose. Bias can enter through the problem definition, data collection, labels, features, model objective, decision threshold, user interface, or the institutional process surrounding the model. It is not limited to a programmer expressing prejudice, and removing a protected attribute does not remove information correlated with that attribute. A system can be accurate on average while failing particular groups or intersections of groups.
+
+Fairness is a normative goal, not one universal statistic. Demographic parity asks whether groups receive a positive outcome at similar rates. Equal opportunity compares true positive rates for people who meet a relevant condition, while equalized odds also compares false positive rates. Calibration asks whether the same score has a similar meaning across groups. These criteria answer different moral and practical questions, and they can conflict when groups have different observed base rates or when labels reflect unequal conditions. Selecting a metric therefore requires a justified account of the decision, the harms of different errors, and the people who bear them.
+
+Evidence of disparity requires disaggregated evaluation. The Gender Shades study showed that commercial gender classification systems tested on a more balanced benchmark had much larger error rates for darker-skinned women than for lighter-skinned men. The lesson is broader than facial analysis: aggregate performance can hide intersectional failures, and benchmark composition shapes what developers notice. Testing should examine false positives, false negatives, calibration, uncertainty, missing data, accessibility, and performance across relevant subgroups. Small sample sizes and unstable categories also need to be reported rather than converted into confident claims.
+
+Technical mitigation can include improving data quality and coverage, revising labels or objectives, reweighting examples, constraining a model, adjusting thresholds, or changing how outputs are used. None of these steps proves that a system is fair. Fairness and Abstraction in Sociotechnical Systems warns that technical work can fail when it ignores the social process around a model, treats people as fixed categories, or assumes the modeled task is the real problem. Governance therefore includes affected-community input, documentation, contestability, monitoring after deployment, and the option not to automate.
+
+In education, learners can audit a small fictional admissions or support model. They should define the decision, calculate a confusion matrix for each subgroup, compare two fairness criteria, and identify who benefits or is harmed by each choice. They can then propose a non-model change, such as improving access to support or adding human review. Schools should not use a fairness score as permission for high-stakes automation. They need lawful purposes, data minimization, accessible explanations, appeal routes, and evidence that the overall process supports learners. Responsible practice asks not only whether predictions are statistically balanced, but whether the task, data, intervention, and accountability structure are educationally defensible.`,
+    coreIdeas: [
+      "Algorithmic bias can arise throughout a sociotechnical system, from problem definition and data to objectives, interfaces, deployment, and institutional response.",
+      "Fairness metrics such as demographic parity, equal opportunity, equalized odds, and calibration answer different questions and may conflict, so metric choice requires contextual justification.",
+      "Responsible evaluation combines disaggregated and intersectional testing with documentation, affected-community input, contestability, monitoring, human review, and the option not to automate.",
+    ],
+    educationConnection: "Let learners audit subgroup confusion matrices for a fictional educational decision, compare two fairness criteria, identify who bears each error, and propose both a model change and a non-model process change.",
+    relatedConcepts: ["Equalized odds", "Intersectional auditing", "Contestability"],
+    sourceUrls: [
+      { label: "NIST: Identifying and Managing Bias in AI", url: "https://doi.org/10.6028/NIST.SP.1270" },
+      { label: "Hardt, Price, and Srebro: Equality of Opportunity", url: "https://proceedings.neurips.cc/paper_files/paper/2016/hash/6a9659feb1216f14f7384ba499518b38-Abstract.html" },
+      { label: "Buolamwini and Gebru: Gender Shades", url: "https://proceedings.mlr.press/v81/buolamwini18a.html" },
+      { label: "Selbst and colleagues: Fairness and Abstraction", url: "https://doi.org/10.1145/3287560.3287598" },
+    ],
+    createdAt: "2026-08-02T08:00:00.000Z",
+  },
+  {
+    id: "academy-042",
+    listingIdentifier: "Educational Theory 21",
+    slug: "achievement-goal-theory",
+    title: "Achievement Goal Theory",
+    track: "educational-theory",
+    level: "core",
+    tags: ["achievement goals", "mastery orientation", "classroom goal structures"],
+    image: "/images/academy/covers/academy-042-achievement-goal-theory.png",
+    imageAlt: "A woman teacher points to a three-stage pathway diagram while a Black man and an East Asian woman review illustrated learning portfolios at a classroom table",
+    summaryAudio: "/audio/academy/academy-042-achievement-goal-theory-summary.m4a",
+    summaryAudioTitle: "Listen to Achievement Goal Theory",
+    shortSummary: "How learners define and pursue competence, how mastery and performance goals combine with approach and avoidance, and how classroom structures can support challenge, revision, and developable competence.",
+    fullSummary: `Achievement goal theory examines how people define and pursue competence in achievement settings. A goal is not merely a target score or a plan. It represents the purpose or standard that organizes attention, interpretation, emotion, and action during learning. Early work distinguished mastery goals, focused on developing competence and understanding, from performance goals, focused on demonstrating competence relative to others. The theory explains patterns of response, not fixed types of students. The same learner can adopt different goals across tasks and classrooms.
+
+Later models separated approach from avoidance. In the 2 x 2 framework, mastery-approach goals involve improving or mastering a task, while mastery-avoidance goals involve trying not to lose skill or misunderstand. Performance-approach goals involve demonstrating greater competence than others, while performance-avoidance goals involve trying not to appear incompetent. Approach and avoidance refer to direction, not to moral character. These goals can coexist. They also show different relationships with interest, strategy use, anxiety, persistence, and performance. Performance-approach goals may sometimes accompany strong achievement, so the theory does not support a simple claim that every form of competition is harmful.
+
+Goals are shaped by both personal interpretation and the learning environment. Classroom tasks, authority, recognition, grouping, evaluation, and timing communicate what counts as success. Public ranking, scarce rewards, and emphasis on being the best can make social comparison especially salient. Meaningful choices, challenging tasks, private feedback, opportunities to revise, and recognition of improvement can support a mastery structure. A slogan about effort is not enough if grading, pacing, and classroom talk continue to punish error or reward only quick public performance.
+
+Researchers measure achievement goals with questionnaires and experiments, but the labels and items used across studies have not always represented the same constructs. Meta-analytic work warns that measures can blur the goal's standard, such as task mastery or outperforming others, with reasons for pursuing it, such as interest or approval. Results should therefore be interpreted with attention to the exact definition, task, population, and outcome. Achievement goals are also only one part of motivation. Value, belonging, self-efficacy, emotion, prior success, material conditions, and relationships can change whether a learner engages.
+
+In education, teachers can audit the messages built into one assignment. Ask what learners are invited to improve, what evidence counts, who sees the comparison, whether mistakes can be revised, and whether several forms of competent work are recognized. Students can set a mastery-approach goal tied to a strategy and evidence, then reflect on progress rather than ranking themselves. This does not mean hiding standards or removing challenge. It means making competence developable, criteria understandable, and feedback usable. Achievement goal theory is most helpful when it guides design of a classroom climate, not when it labels a learner as mastery oriented or performance oriented forever.`,
+    coreIdeas: [
+      "Achievement goals describe how learners define competence, including mastery versus performance standards and approach versus avoidance directions, rather than fixed personality types.",
+      "Mastery-approach, mastery-avoidance, performance-approach, and performance-avoidance goals can coexist and relate differently to strategy use, emotion, persistence, interest, and achievement.",
+      "Tasks, authority, recognition, grouping, evaluation, and timing communicate classroom goal structures, so mastery support requires coherent opportunities for challenge, private feedback, choice, and revision.",
+    ],
+    educationConnection: "Audit one assignment for the competence messages carried by its task, feedback, comparison, and revision rules, then help learners set a mastery-approach goal tied to a strategy and observable evidence of progress.",
+    relatedConcepts: ["Mastery-approach goals", "Performance-avoidance goals", "Motivational climate"],
+    sourceUrls: [
+      { label: "Dweck and Leggett: Social-Cognitive Approach to Motivation", url: "https://doi.org/10.1037/0033-295X.95.2.256" },
+      { label: "Ames: Classroom Goals and Student Motivation", url: "https://doi.org/10.1037/0022-0663.84.3.261" },
+      { label: "Elliot and McGregor: 2 x 2 Achievement Goal Framework", url: "https://pubmed.ncbi.nlm.nih.gov/11300582/" },
+      { label: "Hulleman and colleagues: Meta-Analysis of Achievement Goal Measures", url: "https://doi.org/10.1037/a0018947" },
+    ],
+    createdAt: "2026-08-02T08:00:00.000Z",
+  },
+  {
+    id: "academy-043",
+    listingIdentifier: "AI Knowledge 22",
+    slug: "privacy-security-and-educational-data",
+    title: "Privacy, Security, and Educational Data",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["data privacy", "cybersecurity", "data governance"],
+    image: "/images/academy/covers/academy-043-privacy-security-and-educational-data.png",
+    imageAlt: "A White woman teacher guides a Black man holding a security key and an Asian woman learner as they trace a sparse data-flow diagram beside a notebook containing a meaningful system sketch",
+    summaryAudio: "/audio/academy/academy-043-privacy-security-and-educational-data-summary.m4a",
+    summaryAudioTitle: "Listen to Privacy, Security, and Educational Data",
+    shortSummary: "How educational data move through a lifecycle, why privacy and security solve related but different problems, and how purpose limits, minimization, safeguards, and accountable governance reduce risk.",
+    fullSummary: `Educational data are created whenever people teach, learn, assess, communicate, or use digital services. They include names and contact details, submitted work, scores, attendance, accessibility needs, messages, recordings, device information, click histories, and inferences produced by analytics or AI. A useful way to understand these data is as a lifecycle: collection, use, sharing, storage, access, correction, retention, and deletion. Risk can appear at every stage. A dataset does not become harmless merely because it has moved from a classroom application to a school system, research repository, model provider, or backup.
+
+Privacy and security are related but different. Privacy concerns how data processing can affect people, whether the purpose is appropriate, what choices and protections people have, and who is accountable. Security concerns protecting information and systems from unauthorized access, alteration, loss, or disruption. Strong security cannot make an unnecessary or unfair use appropriate. Likewise, a worthy educational purpose does not protect records from stolen credentials, insecure devices, or a poorly controlled vendor account. Responsible practice needs both privacy risk management and cybersecurity risk management.
+
+Governance should begin before collection. A school can state the educational purpose, identify each data element and data flow, and ask whether less sensitive information would accomplish the same task. It should assign decision owners, document who may access the information, examine service providers and onward sharing, set retention and deletion rules, and provide understandable notice and meaningful choices where appropriate. Consent is not a universal solution because power, age, jurisdiction, and whether participation is genuinely optional all matter. Pseudonyms can reduce direct exposure, but linked behavior, rare attributes, or outside datasets may still permit reidentification.
+
+Security translates the risk assessment into layered safeguards. Examples include least-privilege access, strong authentication, appropriate encryption, secure configuration, software updates, protected backups, monitoring, staff preparation, and tested plans to detect, contain, communicate, and recover from incidents. The safeguards should match the likely harm and the sensitivity, scale, and duration of processing. Records should not be retained indefinitely simply because storage is cheap. Deletion must also address copies, exports, and contractual obligations, while audit records should show whether promised controls are operating rather than existing only in policy.
+
+AI makes the lifecycle especially important because a system may derive predictions about knowledge, behavior, identity, or risk from ordinary learning traces. Learners and teachers should be able to distinguish observed data from inferred claims, challenge consequential errors, and know when a person will review a decision. In a classroom audit, students can map one learning tool from input to deletion, mark every person and organization that receives data, and test a proposed control against a realistic failure. They then decide what to stop collecting, what to protect, who is accountable, and what evidence would demonstrate improvement. The central principle is not to collect everything safely. It is to use only justified data for a clear educational purpose, protect them throughout their lifecycle, and remain answerable to the people affected.`,
+    coreIdeas: [
+      "Educational data include direct records, behavioral traces, media, and derived inferences, and privacy risk can arise at every stage from collection through deletion.",
+      "Privacy asks whether data processing and its effects are appropriate and accountable, while security protects information and systems from unauthorized access, alteration, loss, and disruption.",
+      "Purpose limitation, data minimization, mapped data flows, assigned responsibility, vendor oversight, layered safeguards, retention limits, incident readiness, and human review work together as governance.",
+    ],
+    educationConnection: "Map one educational tool from collection to deletion, identify observed and inferred data plus every recipient, test one realistic failure, then remove unjustified data and assign safeguards, review, and accountability.",
+    relatedConcepts: ["Data minimization", "Privacy risk management", "Cybersecurity governance"],
+    sourceUrls: [
+      { label: "NIST: Privacy Framework", url: "https://www.nist.gov/privacy-framework" },
+      { label: "NIST: Cybersecurity Framework 2.0", url: "https://doi.org/10.6028/NIST.CSWP.29" },
+      { label: "U.S. Department of Education: Data Security Checklist", url: "https://studentprivacy.ed.gov/resources/data-security-checklist" },
+    ],
+    createdAt: "2026-08-06T08:00:00.000Z",
+  },
+  {
+    id: "academy-044",
+    listingIdentifier: "Educational Theory 22",
+    slug: "control-value-theory-of-achievement-emotions",
+    title: "Control-Value Theory of Achievement Emotions",
+    track: "educational-theory",
+    level: "core",
+    tags: ["achievement emotions", "control appraisals", "value appraisals"],
+    image: "/images/academy/covers/academy-044-control-value-theory-of-achievement-emotions.png",
+    imageAlt: "A teacher works with two adult learners as they compare three diagram cards showing a block path, a bridge, and a rise-and-fall curve beside illustrated notebooks",
+    summaryAudio: "/audio/academy/academy-044-control-value-theory-of-achievement-emotions-summary.m4a",
+    summaryAudioTitle: "Listen to Control-Value Theory of Achievement Emotions",
+    shortSummary: "How learners' judgments of control and value shape distinct achievement emotions, how those emotions influence learning, and how teachers can change task conditions without labeling students.",
+    fullSummary: `Control-value theory explains emotions that are directly connected to achievement activities or achievement outcomes. Activity emotions concern doing the work, such as enjoyment, frustration, anger, or boredom while learning. Outcome emotions concern possible or completed success and failure, such as hope, anxiety, pride, relief, shame, or hopelessness. The theory does not treat emotion as an extra reaction outside learning. It places emotion within a system linking learners' interpretations of a situation, their motivation and strategies, their actions, and the results they experience.
+
+Two appraisals are central. Subjective control is a learner's judgment about whether actions and outcomes can be influenced. It can involve perceived competence, expectations that effort or a strategy will work, and beliefs about the causes of success or failure. Subjective value is the importance attached to the activity or outcome. A task may be valued because doing it is enjoyable or meaningful, because its result matters, or because success and failure have consequences. These are appraisals, not fixed properties of a learner or task. The same person can experience different control, value, and emotion in mathematics, writing, a particular test, or even different moments of one lesson.
+
+Patterns of control and value help explain distinct emotions without determining them mechanically. Enjoyment is more likely when an activity is valued and feels controllable. Hope and anxiety can both arise when an important future outcome remains uncertain, but they differ in the balance of expected success and failure. Hopelessness is associated with important failure that seems beyond control. Boredom can arise when an activity seems to lack value, including when underchallenge or overchallenge makes the activity feel meaningless. Emotions can also be classified by whether they are pleasant or unpleasant, activating or deactivating, and focused on an activity or outcome. This prevents the simplistic claim that every pleasant emotion helps and every unpleasant emotion harms.
+
+Achievement emotions can direct attention, change effort and motivation, influence strategy use, affect self-regulation, and contribute to performance. The relationships are reciprocal. Results and feedback can change later control and value appraisals, which then shape later emotions and action. Anxiety, for example, may prompt effort in some conditions while consuming attention or encouraging avoidance in others. Pride can support engagement, while relief may reduce immediate activation. Teachers should therefore examine the particular emotion, task, timing, and learner response rather than impose a single emotional ideal.
+
+Instruction can influence appraisals by making goals and success criteria clear, matching challenge with support, teaching usable strategies, providing informative feedback, allowing meaningful agency, and connecting work to credible purposes. This is not a license to diagnose personality from facial expression or demand that learners feel positive. A practical classroom inquiry uses separate evidence cards for the task, perceived control, perceived value, and reported emotion. Learners describe their own appraisals, the teacher checks patterns across class, study, and assessment contexts, and the group changes one condition. They might add a model, reduce an unnecessary threat, offer a meaningful choice, or explain why the work matters, then examine whether strategy use and emotion change. The goal is an environment in which learners can understand and regulate achievement emotions while teachers improve the conditions that help produce them.`,
+    coreIdeas: [
+      "Achievement emotions concern current learning activities or anticipated and completed outcomes, and they differ by object focus, pleasantness, and activation.",
+      "Learners' subjective judgments of control and value are central antecedents of distinct emotions, but these appraisals vary across domains, situations, and moments rather than defining a person.",
+      "Emotions influence attention, motivation, strategy use, self-regulation, and performance, while outcomes and feedback reciprocally reshape later appraisals, emotions, and action.",
+    ],
+    educationConnection: "Use separate task, control, value, and emotion evidence cards to identify one change in clarity, challenge, support, agency, or purpose, then examine how learners' reported emotions and strategies respond.",
+    relatedConcepts: ["Achievement emotions", "Control appraisals", "Value appraisals"],
+    sourceUrls: [
+      { label: "Pekrun: Control-Value Theory of Achievement Emotions", url: "https://doi.org/10.1007/s10648-006-9029-9" },
+      { label: "Pekrun and colleagues: Achievement Emotions Questionnaire", url: "https://doi.org/10.1016/j.cedpsych.2010.10.002" },
+      { label: "Lichtenfeld and colleagues: Achievement Emotions in Elementary School", url: "https://doi.org/10.1016/j.lindif.2011.04.009" },
+    ],
+    createdAt: "2026-08-06T08:00:00.000Z",
+  },
+  {
+    id: "academy-045",
+    listingIdentifier: "AI Knowledge 23",
+    slug: "explainability-and-transparency",
+    title: "Explainability and Transparency",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["explainable AI", "transparency", "human oversight"],
+    image: "/images/academy/covers/academy-045-explainability-and-transparency.png",
+    imageAlt: "A Black woman teacher guides a White man and East Asian woman as they trace sparse layers from evidence through highlighted features to an AI outcome",
+    summaryAudio: "/audio/academy/academy-045-explainability-and-transparency-summary.m4a",
+    summaryAudioTitle: "Listen to Explainability and Transparency",
+    shortSummary: "How explanations and transparent documentation reveal different parts of an AI system, what common explanation methods can show, and why evidence and human judgment remain necessary.",
+    fullSummary: `Explainability and transparency help people examine an AI system, but they answer different questions. Explainability concerns evidence or reasons related to an output or process. Transparency concerns access to relevant facts about the system, including its purpose, data, design, evaluation, limitations, owners, and human decision process. An explanation might show why one learner received a recommendation. Transparent documentation should also disclose what the recommendation system was designed to optimize, whose data informed it, how well it was tested, and who can change or challenge its use. Neither quality by itself proves that a system is accurate, fair, safe, or educationally valuable.
+
+Explanations can operate at different levels. A global explanation describes broad model behavior, while a local explanation addresses one prediction. Some models are sufficiently simple that a person can inspect how inputs determine outputs. More complex models often receive post hoc explanations created after a prediction. LIME, for example, fits a simpler model around one case to approximate nearby behavior. SHAP assigns contributions to features for a particular prediction within an additive explanation framework. Such methods can help developers debug models and help users notice influential evidence, but they explain the behavior captured by their assumptions and reference choices, not a complete humanlike chain of reasoning.
+
+A useful explanation should accompany an output, be meaningful to its intended recipient, correctly reflect the system process it claims to describe, and respect the system's knowledge limits. Those requirements are demanding. A visually persuasive explanation can be unstable, omit interactions, or encourage a causal interpretation of correlations. Different recipients also need different information. A developer may need error patterns and feature diagnostics, a teacher may need classroom relevant evidence and uncertainty, and a learner may need a clear account plus a way to correct inaccurate data. For consequential decisions, an interpretable model may be preferable to explaining a black box after the fact when it can meet the task requirements.
+
+Transparency extends beyond an explanation screen. Responsible documentation identifies intended and prohibited uses, data provenance and gaps, evaluation populations and metrics, subgroup results, uncertainty, update history, security and privacy controls, and the role of human review. It also makes governance visible: who approved the system, who monitors it, how a person reports harm, and whether an affected learner can obtain review. Publishing technical detail without an understandable route to action is not meaningful transparency. Conversely, a friendly feature chart without system documentation can hide important choices.
+
+In education, learners can investigate a fictional support model that predicts whether additional practice may help. They trace which evidence entered the model, compare a local explanation with the documented objective, and test whether small relevant changes alter the output consistently. They then list information the model cannot observe and decide what a teacher must verify before acting. The teacher treats the prediction as one source of evidence, invites the learner's account, and records the human rationale for any decision. This practice makes explanation a tool for disciplined inquiry rather than a decoration that automatically creates trust.`,
+    coreIdeas: [
+      "Explainability supplies evidence or reasons for outputs or processes, while transparency discloses system purpose, data, evaluation, limitations, governance, and human roles.",
+      "Local and global explanation methods can reveal model behavior, but their results depend on assumptions and do not automatically establish causal reasoning, fairness, accuracy, or safety.",
+      "Meaningful educational use matches information to its audience, tests the explanation, documents uncertainty and recourse, and keeps consequential judgment with accountable people.",
+    ],
+    educationConnection: "Ask learners to trace evidence through a model output, compare the explanation with system documentation, test its stability, identify missing context, and define the teacher review and learner recourse required before action.",
+    relatedConcepts: ["Model interpretability", "Feature attribution", "Algorithmic accountability"],
+    sourceUrls: [
+      { label: "NIST: Four Principles of Explainable Artificial Intelligence", url: "https://doi.org/10.6028/NIST.IR.8312" },
+      { label: "Ribeiro, Singh, and Guestrin: Explaining Classifier Predictions", url: "https://aclanthology.org/N16-3020/" },
+      { label: "Lundberg and Lee: A Unified Approach to Interpreting Model Predictions", url: "https://papers.nips.cc/paper/2017/hash/8a20a8621978632d76c43dfd28b67767-Abstract.html" },
+      { label: "Rudin: Use Interpretable Models for High Stakes Decisions", url: "https://doi.org/10.1038/s42256-019-0048-x" },
+    ],
+    createdAt: "2026-08-08T08:00:00.000Z",
+  },
+  {
+    id: "academy-046",
+    listingIdentifier: "Educational Theory 23",
+    slug: "cognitive-apprenticeship",
+    title: "Cognitive Apprenticeship",
+    track: "educational-theory",
+    level: "core",
+    tags: ["cognitive apprenticeship", "scaffolding", "situated learning"],
+    image: "/images/academy/covers/academy-046-cognitive-apprenticeship.png",
+    imageAlt: "An East Asian man teacher demonstrates a wooden joint while a Black woman learner holds a matching piece and a Middle Eastern man learner points to joint sketches in an open notebook",
+    summaryAudio: "/audio/academy/academy-046-cognitive-apprenticeship-summary.m4a",
+    summaryAudioTitle: "Listen to Cognitive Apprenticeship",
+    shortSummary: "How experts make thinking visible through modeling, coaching, scaffolding, articulation, reflection, and exploration as learners take increasing responsibility in meaningful practice.",
+    fullSummary: `Cognitive apprenticeship adapts features of craft apprenticeship to skills whose important processes are often hidden. A learner can watch a carpenter position a tool, but cannot directly see how an expert reader identifies a contradiction, how a scientist chooses a representation, or how a teacher interprets an unexpected answer. Cognitive apprenticeship makes such cognitive and metacognitive processes visible in meaningful activity. The expert demonstrates not only what to do but also what to notice, which strategy to choose, how to monitor progress, and how to respond when an approach fails. The learner then practises with support and assumes increasing responsibility.
+
+Six primary teaching methods organize this process, with fading built into the use of scaffolding. In modeling, the expert performs a task while externalizing decisions that would otherwise remain tacit. Coaching occurs as the learner works and the expert observes, diagnoses, prompts, challenges, and gives feedback. Scaffolding supplies temporary supports such as cues, checklists, partial solutions, or shared performance. Fading gradually removes those supports as control improves. Articulation asks learners to explain their knowledge, strategies, and reasons. Reflection helps them compare their process with an expert model, a peer approach, or an earlier attempt. Exploration invites learners to define and solve problems with greater independence.
+
+The learning environment matters as much as any single method. Tasks should be situated in purposes learners can understand and connected to the tools, language, and standards of a practice. A conceptual view of the whole task helps components make sense. Sequences can then increase complexity and diversity so learners integrate skills and recognize when a strategy transfers. A community of practice creates opportunities to observe several approaches, make unfinished thinking discussable, and use feedback as part of participation rather than as judgment from outside the work.
+
+Cognitive apprenticeship is not a fixed script or an argument that all instruction must imitate a workplace. Modeling can transmit weak practice if the model is not credible. Coaching can become control if learners never explain or choose. Scaffolding can create dependence if it is removed by schedule rather than evidence, while premature fading can leave novices guessing. Authentic activity also needs carefully selected tasks, explicit knowledge, equitable access to tools and expert attention, and time for varied practice. Reading and direct explanation remain useful, especially when integrated with opportunities to apply and examine ideas.
+
+In education, an expert teacher might model how to diagnose and repair a faulty circuit while speaking aloud about safety checks, evidence, and decision points. Learners first observe the whole process, then complete one meaningful repair with prompts. During coached practice, they explain each choice, compare their process with the model, and revise after feedback. The teacher withdraws the checklist and hints only when performance shows readiness, then changes the fault so the learner must select a strategy rather than copy steps. A final exploration asks learners to diagnose a new case and justify their plan. The same structure can support writing, mathematical problem solving, laboratory work, clinical reasoning, and teaching practice. Its central promise is visible thinking joined to guided participation, reflection, and growing autonomy.`,
+    coreIdeas: [
+      "Cognitive apprenticeship makes expert cognitive and metacognitive processes visible so learners can observe, enact, discuss, and refine them in meaningful activity.",
+      "Modeling, coaching, scaffolding and fading support guided performance, while articulation, reflection, and exploration develop awareness, comparison, transfer, and autonomy.",
+      "Whole tasks, increasing complexity and diversity, authentic purposes, credible models, equitable participation, and evidence based fading shape whether the approach supports independent expertise.",
+    ],
+    educationConnection: "Model one complete disciplinary task with visible thinking, coach a supported attempt, require articulation and reflection, then fade specific supports according to evidence before testing the strategy in a varied case.",
+    relatedConcepts: ["Situated cognition", "Scaffolding and fading", "Metacognitive modeling"],
+    sourceUrls: [
+      { label: "Collins, Brown, and Newman: Cognitive Apprenticeship Technical Report", url: "https://eric.ed.gov/?id=ED284181" },
+      { label: "Collins, Brown, and Holum: Making Thinking Visible", url: "https://www.aft.org/ae/winter1991/collins_brown_holum" },
+      { label: "Brown, Collins, and Duguid: Situated Cognition and the Culture of Learning", url: "https://doi.org/10.3102/0013189X018001032" },
+    ],
+    createdAt: "2026-08-08T08:00:00.000Z",
+  },
+
 ];

@@ -47,7 +47,7 @@ Sparse, semantically meaningful diagram nodes, isolated marks, or ordinary photo
 
 ## Publication checks
 
-- Assign exactly one image asset to each lesson and display it only once on the lesson detail page. The same asset may also serve as the listing-card and social-sharing image.
+- Assign exactly one image asset to each lesson and render that exact `lesson.image` twice on the lesson detail page: a smaller top hero and a larger placement immediately beneath `Full Lesson Summary`, with distinct responsive rendered dimensions. The same asset also serves as the listing-card and social-sharing image.
 - Preserve unreferenced existing Academy images; do not delete them. Use suitable unpublished inventory before generating a new image.
 - Normalize the selected lesson image to a real 1600x1000 PNG.
 - Write literal alt text that describes visible content.

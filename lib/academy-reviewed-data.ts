@@ -1674,5 +1674,79 @@ In education, an expert teacher might model how to diagnose and repair a faulty 
     ],
     createdAt: "2026-08-08T08:00:00.000Z",
   },
+  {
+    id: "academy-047",
+    listingIdentifier: "AI Knowledge 24",
+    slug: "human-in-the-loop-ai",
+    title: "Human-in-the-Loop AI",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["human-in-the-loop AI", "human oversight", "human-AI interaction"],
+    image: "/images/academy/covers/academy-047-human-in-the-loop-ai.png",
+    imageAlt: "A Black woman educator pauses a tabletop robotic arm with a control pendant while an East Asian man studies a shape sequence and a Middle Eastern woman corrects it with a green wooden cylinder",
+    summaryAudio: "/audio/academy/academy-047-human-in-the-loop-ai-summary.m4a",
+    summaryAudioTitle: "Listen to Human-in-the-Loop AI",
+    shortSummary: "How people contribute judgment before, during, and after AI actions, and how meaningful oversight requires clear roles, usable controls, evidence, authority, and accountability.",
+    fullSummary: `Human-in-the-loop AI is a way of designing a system so that people contribute judgment at defined points in its development or operation. The human may supply labels, clarify goals, review uncertain cases, approve a proposed action, correct an output, or decide when the system should stop. This arrangement is not a guarantee of safety and does not mean that every output needs manual approval. Its value depends on matching a human role to a real decision where contextual knowledge, ethical judgment, or accountability is needed.
+
+People can enter the loop while a model is being built. Domain experts may define useful labels, examine difficult examples, or resolve disagreements in training data. In active learning, a model selects informative cases for people to label rather than requesting labels for every case. Human feedback can also help shape preferences or improve a system after deployment. These contributions become new data, so they can introduce inconsistency or reproduce institutional bias as well as correct errors. Teams need labeling guidance, disagreement records, quality checks, and evidence about whose judgments are represented.
+
+Operational oversight can occur before, during, or after an AI action. A teacher might edit a generated lesson plan before students see it. A laboratory operator might monitor a robotic process and use an emergency stop. An auditor might inspect decisions, investigate complaints, and change the system later. Agentic tools illustrate the same pattern: a model gathers context, proposes or takes actions through tools, verifies results, and can be interrupted by the user. Permissions, previews, reversible actions, confidence signals, and escalation routes help people intervene at the right moment.
+
+A person in the interface is not automatically meaningful oversight. Reviewers need enough time, training, information, authority, and alternative options to challenge the system. Automation bias can lead people to accept confident-looking outputs, while frequent false alarms can make monitoring ineffective. A poorly designed process may ask a person to absorb blame without giving them control. Evaluation should therefore measure more than model accuracy. It should examine whether reviewers notice important errors, how often they override correctly, which groups experience missed harms, how quickly cases escalate, and whether the combined human-AI process improves the educational decision.
+
+In education, learners can practise with a fictional AI recommendation for a student's next activity. They inspect the evidence, uncertainty, missing context, and intended goal, then choose to accept, edit, reject, or escalate the recommendation. Groups compare decisions and identify what information changed their judgment. They also record why they intervened so later reviewers can examine patterns, disagreement, and consequences. The teacher makes clear who remains responsible and protects any real learner data. Human-in-the-loop design is strongest when it preserves agency and creates a usable path from machine output to informed human action, correction, and accountability.`,
+    coreIdeas: [
+      "Human-in-the-loop AI assigns people defined roles in data creation, system development, action review, correction, escalation, and accountability rather than treating human presence as a safety guarantee.",
+      "Human contributions can improve contextual fit and catch errors, but they also become data and decisions that require guidance, disagreement records, quality checks, and representative participation.",
+      "Meaningful oversight requires time, information, authority, usable controls, reversible actions, and evaluation of the combined human-AI process across errors, groups, and consequences.",
+    ],
+    educationConnection: "Give learners a fictional AI recommendation with evidence and uncertainty, ask them to accept, edit, reject, or escalate it, and compare which missing context and accountability rules changed their decisions.",
+    relatedConcepts: ["Human oversight", "Active learning", "Automation bias"],
+    sourceUrls: [
+      { label: "NIST: AI Risk Management and Human-AI Interaction", url: "https://airc.nist.gov/airmf-resources/airmf/appendices/app-c-ai-risk-management-and-human-ai-interaction/" },
+      { label: "Amershi and colleagues: Guidelines for Human-AI Interaction", url: "https://www.microsoft.com/en-us/research/wp-content/uploads/2019/01/Guidelines-for-Human-AI-Interaction-camera-ready.pdf" },
+      { label: "UNESCO: Guidance for Generative AI in Education and Research", url: "https://www.unesco.org/en/articles/guidance-generative-ai-education-and-research" },
+      { label: "Claude Code Docs: How Claude Code Works", url: "https://code.claude.com/docs/en/how-claude-code-works" },
+    ],
+    createdAt: "2026-08-10T08:00:00.000Z",
+  },
+  {
+    id: "academy-048",
+    listingIdentifier: "Educational Theory 24",
+    slug: "inquiry-based-learning",
+    title: "Inquiry-Based Learning",
+    track: "educational-theory",
+    level: "core",
+    tags: ["inquiry-based learning", "guided inquiry", "evidence-based explanation"],
+    image: "/images/academy/covers/academy-048-inquiry-based-learning.png",
+    imageAlt: "A Black woman teacher holds a pond-water sample while an East Asian man examines the tray with a magnifying lens and a White woman compares leaves beside a notebook of hand-drawn observations",
+    summaryAudio: "/audio/academy/academy-048-inquiry-based-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Inquiry-Based Learning",
+    shortSummary: "How learners investigate answerable questions, gather and interpret evidence, construct explanations, communicate claims, and reflect with guidance matched to their knowledge and task.",
+    fullSummary: `Inquiry-based learning organizes learning around questions, investigation, evidence, explanation, and reflection. Learners do more than receive a finished account. They identify or refine a question, decide what evidence could address it, collect or examine information, interpret patterns, and communicate a defensible conclusion. Inquiry is not defined by physical activity alone. Following a recipe without making decisions may be hands-on but not strongly inquiry based, while analyzing a historical archive or digital dataset can involve substantial inquiry. It is also not the same as leaving novices to discover everything without support.
+
+Inquiry often moves through connected phases. Orientation builds interest and establishes the problem. Conceptualization develops questions or hypotheses. Investigation includes exploration, experimentation, observation, or data interpretation. Conclusion connects evidence with the question, while discussion includes communication and reflection. These phases form a flexible cycle rather than a rigid sequence. New evidence may send learners back to revise a question, improve a method, or reconsider an explanation. Communication and reflection can occur throughout as learners make reasoning visible and compare interpretations.
+
+The amount and type of guidance should match learners, content, and purpose. Teachers may provide the initial question, model how to control variables, offer a data table, prompt comparison, or set checkpoints for explanation. As knowledge and skill grow, learners can make more decisions about questions, methods, representations, and standards of evidence. Research syntheses generally find benefits from inquiry-oriented instruction, but they also show that guidance matters. Support can reduce unproductive search, make disciplinary reasoning visible, and preserve attention for interpreting evidence. Guidance should enable thinking rather than replace it.
+
+A well-designed inquiry needs an answerable question, access to relevant evidence, and criteria for judging a claim. Learners may need prior knowledge before they can notice a meaningful pattern or design a fair comparison. Teachers should anticipate measurement error, alternative explanations, safety, accessibility, language demands, and unequal access to tools or participation. Group work can expand ideas, yet one confident participant can dominate decisions unless roles and discussion routines distribute responsibility. Assessment should examine the process as well as the final answer, including question quality, method, evidence use, revision, and reflection.
+
+In education, a class might investigate why two pond-water samples look different. Learners record observations, propose testable explanations, choose a small set of comparisons, and document uncertainty. The teacher provides safe tools and checkpoints, asks what evidence would count against each claim, and introduces needed domain knowledge at the moment it becomes useful. Groups represent findings, critique one another's reasoning, revise conclusions, and identify the next question. AI may help suggest questions or organize observations, but learners must verify outputs, protect data, and retain ownership of the investigation. Inquiry-based learning develops disciplined curiosity when freedom to investigate is joined with purposeful guidance and accountable use of evidence.`,
+    coreIdeas: [
+      "Inquiry-based learning engages learners in developing questions, investigating evidence, constructing explanations, communicating claims, and reflecting rather than merely completing hands-on procedures.",
+      "Orientation, conceptualization, investigation, conclusion, discussion, and reflection form a flexible cycle in which new evidence can prompt revision of questions, methods, or explanations.",
+      "Guidance should match prior knowledge and task demands, supporting disciplinary reasoning, safety, access, collaboration, evidence quality, revision, and growing learner responsibility.",
+    ],
+    educationConnection: "Let learners investigate differences between two pond-water samples, define an answerable question, choose evidence, critique competing explanations, revise a conclusion, and identify the next inquiry with teacher checkpoints.",
+    relatedConcepts: ["Guided discovery", "Scientific inquiry", "Epistemic agency"],
+    sourceUrls: [
+      { label: "National Academies: Inquiry in the National Science Education Standards", url: "https://www.nationalacademies.org/read/9596/chapter/3" },
+      { label: "Pedaste and colleagues: Phases of Inquiry-Based Learning", url: "https://doi.org/10.1016/j.edurev.2015.02.003" },
+      { label: "Lazonder and Harmsen: Guidance in Inquiry-Based Learning", url: "https://doi.org/10.3102/0034654315627366" },
+      { label: "Furtak and colleagues: Inquiry-Based Science Teaching Meta-Analysis", url: "https://doi.org/10.3102/0034654312457206" },
+    ],
+    createdAt: "2026-08-10T08:00:00.000Z",
+  },
 
 ];

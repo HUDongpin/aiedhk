@@ -24,21 +24,28 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains fifty-five curated Research News items", () => {
+test("research news fallback contains sixty-nine curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 55);
+  assert.equal(papers.length, 69);
   assert.equal(papers[0]?.slug, "news-transcription-memory-classroom-context");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
 
-test("the nine-date backlog contains exactly one research paper and one clearly labeled product-news item per day", () => {
+test("the sixteen-date backlog contains exactly one research paper and one clearly labeled product-news item per day", () => {
   const papers = getResearchPapers("en");
   const expectedByDate = new Map([
     ["2026-08-09", ["aied-054", "aied-055"]],
     ["2026-08-08", ["aied-052", "aied-053"]],
     ["2026-08-07", ["aied-050", "aied-051"]],
+    ["2026-08-06", ["aied-068", "aied-069"]],
+    ["2026-08-05", ["aied-066", "aied-067"]],
+    ["2026-08-04", ["aied-064", "aied-065"]],
+    ["2026-08-03", ["aied-062", "aied-063"]],
+    ["2026-08-02", ["aied-060", "aied-061"]],
+    ["2026-08-01", ["aied-058", "aied-059"]],
+    ["2026-07-31", ["aied-056", "aied-057"]],
     ["2026-07-22", ["aied-040", "aied-041"]],
     ["2026-07-26", ["aied-038", "aied-039"]],
     ["2026-07-27", ["aied-042", "aied-043"]],
@@ -71,13 +78,13 @@ test("the nine-date backlog contains exactly one research paper and one clearly 
   }
 });
 
-test("backlog identifiers aied-038 through aied-055 are continuous and non-duplicated", () => {
+test("backlog identifiers aied-038 through aied-069 are continuous and non-duplicated", () => {
   const ids = getResearchPapers("en")
     .map((paper) => Number.parseInt(paper.id.replace("aied-", ""), 10))
-    .filter((id) => id >= 38 && id <= 55)
+    .filter((id) => id >= 38 && id <= 69)
     .sort((a, b) => a - b);
 
-  assert.deepEqual(ids, [38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55]);
+  assert.deepEqual(ids, Array.from({ length: 32 }, (_, index) => index + 38));
 });
 
 test("reviewed Research News keeps identifiers, slugs, media paths, and primary sources unique", () => {
@@ -94,6 +101,33 @@ test("reviewed Research News keeps identifiers, slugs, media paths, and primary 
   for (const [label, values] of fields) {
     assert.ok(values.every(Boolean), `${label} values must be present`);
     assert.equal(new Set(values).size, papers.length, `${label} values must be unique`);
+  }
+});
+
+test("July 31 through August 6 backfill keeps its reviewed date, type, and primary source manifest", () => {
+  const byId = new Map(getResearchPapers("en").map((paper) => [paper.id, paper]));
+  const expected = [
+    ["aied-056", "2026-07-31", "journal", "https://doi.org/10.1073/pnas.2422633122"],
+    ["aied-057", "2026-07-31", "policy-ethics", "https://news.microsoft.com/source/asia/features/microsoft-elevate-for-educators-korea-2026-en/"],
+    ["aied-058", "2026-08-01", "journal", "https://arxiv.org/abs/2410.03017"],
+    ["aied-059", "2026-08-01", "policy-ethics", "https://workspaceupdates.googleblog.com/2026/07/expanded-language-support-for-gemini-in-Google-Docs.html"],
+    ["aied-060", "2026-08-02", "journal", "https://doi.org/10.1186/s40561-025-00385-2"],
+    ["aied-061", "2026-08-02", "policy-ethics", "https://digital-strategy.ec.europa.eu/en/news/commission-publishes-guidelines-transparency-obligations-providers-and-deployers-certain-ai-systems"],
+    ["aied-062", "2026-08-03", "journal", "https://doi.org/10.1186/s40594-025-00574-y"],
+    ["aied-063", "2026-08-03", "policy-ethics", "https://workspaceupdates.googleblog.com/2026/07/new-google-meet-take-notes-for-me-settings-for-admins-and-end-users.html"],
+    ["aied-064", "2026-08-04", "journal", "https://doi.org/10.1007/s11528-025-01123-8"],
+    ["aied-065", "2026-08-04", "policy-ethics", "https://openai.com/index/learn-teach-chatgpt-work-codex/"],
+    ["aied-066", "2026-08-05", "conference", "https://aclanthology.org/2025.naacl-industry.62/"],
+    ["aied-067", "2026-08-05", "policy-ethics", "https://workspaceupdates.googleblog.com/2026/07/use-gemini-in-google-forms-to-quickly-create-a-new-quiz.html"],
+    ["aied-068", "2026-08-06", "journal", "https://cepr.org/publications/dp21577"],
+    ["aied-069", "2026-08-06", "policy-ethics", "https://openai.com/index/improving-gpt-5-6-sol-in-chatgpt/"],
+  ] as const;
+
+  for (const [id, createdAt, type, sourceUrl] of expected) {
+    assert.deepEqual(
+      { createdAt: byId.get(id)?.createdAt, type: byId.get(id)?.type, sourceUrl: byId.get(id)?.sourceUrl },
+      { createdAt, type, sourceUrl },
+    );
   }
 });
 
@@ -279,6 +313,20 @@ test("static summary media assets are available locally", () => {
       "aied-052",
       "aied-051",
       "aied-050",
+      "aied-069",
+      "aied-068",
+      "aied-067",
+      "aied-066",
+      "aied-065",
+      "aied-064",
+      "aied-063",
+      "aied-062",
+      "aied-061",
+      "aied-060",
+      "aied-059",
+      "aied-058",
+      "aied-057",
+      "aied-056",
       "aied-049",
       "aied-048",
       "aied-047",
@@ -346,13 +394,13 @@ test("static summary media assets are available locally", () => {
   }
 });
 
-test("backlog entries aied-038 through aied-055 have non-empty local M4A audio", () => {
+test("backlog entries aied-038 through aied-069 have non-empty local M4A audio", () => {
   const backlog = getResearchPapers("en").filter((paper) => {
     const id = Number.parseInt(paper.id.replace("aied-", ""), 10);
-    return id >= 38 && id <= 55;
+    return id >= 38 && id <= 69;
   });
 
-  assert.equal(backlog.length, 18);
+  assert.equal(backlog.length, 32);
   const hashes = new Set<string>();
   for (const paper of backlog) {
     assert.ok(paper.summaryAudio, `${paper.id} should declare summary audio`);
@@ -362,7 +410,7 @@ test("backlog entries aied-038 through aied-055 have non-empty local M4A audio",
     assert.ok(audioBuffer.byteLength > 100_000, `${paper.summaryAudio} should contain audible narration`);
     hashes.add(createHash("sha256").update(audioBuffer).digest("hex"));
   }
-  assert.equal(hashes.size, 18, "all backlog narrations must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 32, "all backlog narrations must have unique SHA-256 hashes");
 });
 
 test("reviewed papers use human-reviewed translations when present and fall back to English otherwise", () => {

@@ -1,4 +1,5 @@
 import type { ResearchPaper } from "@/lib/types";
+import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill-20260731-0806";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
@@ -233,6 +234,7 @@ For higher education and Hong Kong classrooms, a defensible pilot would make the
     ],
     createdAt: "2026-08-07",
   },
+  ...researchNewsBackfill20260731To0806,
   {
     id: "aied-049",
     slug: "news-openai-ai-skills-jam-k12-educators",

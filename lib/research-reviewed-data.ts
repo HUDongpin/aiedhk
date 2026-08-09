@@ -12,6 +12,83 @@ import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-087",
+    slug: "news-agentic-browser-coding-learning-handoffs",
+    title: "Product news: OpenAI retires Atlas while Claude Code makes auto mode the default, turning agent handoffs into a learning-design issue",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "ChatGPT browser agents", "Claude Code auto mode", "Gemini for Education", "agent literacy"],
+    image: "/images/research/covers/aied-087-agentic-browser-coding-learning-handoffs-2026.png",
+    imageAlt: "A diverse university learning team reviews a browser research trail, a coding workflow and teacher-controlled study materials in a bright campus lab",
+    summaryImage: "/images/research/summary/aied-087-agentic-browser-coding-learning-handoffs-summary.png",
+    summaryImageAlt: "A diverse university learning team reviews a browser research trail, a coding workflow and teacher-controlled study materials in a bright campus lab",
+    summaryAudio: "/audio/research/aied-087-agentic-browser-coding-learning-handoffs-summary.m4a",
+    summaryAudioTitle: "Listen to the product news report",
+    shortSummary: "Product news: OpenAI ended Atlas on August 9 and is moving browser-based agent work into ChatGPT and Codex, while Anthropic will make classifier-governed auto mode the Claude Code default for Pro, Max and Team sessions. Gemini for Education supplies the learning-purpose comparison: teach, learn and work with managed data protections. Together, the products make handoffs, permissions and evidence part of AI literacy.",
+    fullSummary: `This product-news report follows a shift from assistants that suggest work to agents that navigate, code and act across a workflow. OpenAI scheduled Atlas to stop working on August 9, 2026, and is moving browser-based agent capabilities into ChatGPT and Codex. Anthropic announced that new Claude Code sessions on Pro, Max and Team plans will start in auto mode from August 14 unless a user or administrator has pinned another default. Google’s Gemini for Education provides the explicitly educational comparison: its published purposes are to help institutions teach, learn and work inside a managed environment. The common design question is where an agent should continue independently and where a person must take control.
+
+OpenAI’s transition guide says Atlas bookmarks, open tabs and browser history do not transfer automatically. Users were told to export or save important material and to treat cookies and session files as sensitive. The replacement direction is a more capable browser experience in ChatGPT and Codex, including multiple tabs, downloads, improved navigation and account-login support where available. For learners and researchers, migration is therefore not only a feature change. It is a reminder that an agent’s working context includes provenance, saved sources, authenticated sessions and records that may disappear when a product changes.
+
+Anthropic’s August 7 Claude Code update changes the permission model. Auto mode routes each tool call through a classifier intended to block irreversible, destructive or outside-environment actions. When blocked, Claude may find a safer path or ask for approval; repeated blocks return the session to manual review. Anthropic reports that, in a controlled test with 1,053 paid participants, people stopped 13.6 percent of inserted dangerous commands while auto mode stopped 89 percent. Those are vendor-reported results from a test environment, not proof that autonomous coding is safe in every school or production system. Enterprise and API deployments remain opt-in initially, and Anthropic still recommends human review for high-stakes infrastructure changes.
+
+Gemini for Education frames the purpose boundary directly. Google describes uses across teaching, learning and work: lesson planning, differentiated materials and assessment design; explanations, practice and writing feedback; and administrative or research support. It also describes a distinct under-18 experience, organizational data protections and administrator-managed access. These product claims do not establish learning gains, but they make a useful evaluation frame. A browser or coding agent should be attached to a defined educational purpose, not enabled merely because it can operate for longer.
+
+For Hong Kong schools and universities, a responsible pilot can make the handoff visible. Students might ask an agent to collect sources or test code in a limited workspace, then inspect its history, explain rejected actions and independently defend the final reasoning. Institutions should specify which accounts and data an agent may access, retain versioned artifacts, require approval for publishing or destructive actions and prepare an exit plan for product changes. Agent literacy now includes knowing what the system did, what safeguards actually ran and when fluent automation must yield to accountable human judgment.`,
+    keyTakeaways: [
+      "Product news: OpenAI ended Atlas and is moving browser-agent capabilities into ChatGPT and Codex, while Anthropic is making classifier-governed auto mode the Claude Code default for several plans.",
+      "Gemini for Education organizes AI purposes around teaching, learning and work, providing a useful purpose-first frame for evaluating browser and coding agents.",
+      "Education pilots should preserve source trails and versioned artifacts, constrain accounts and data, require approval for consequential actions and assess what learners can explain independently.",
+    ],
+    whyItMatters: "For AIEDHK, the updates make agent literacy concrete: educational quality depends on purposeful task boundaries, inspectable handoffs, protected data and evidence that a learner or educator can still justify the result.",
+    sourceUrl: "https://claude.com/blog/auto-mode-default-in-claude-code",
+    sourceUrls: [
+      { label: "OpenAI: Evolving Atlas into ChatGPT for browser-based agentic work", url: "https://help.openai.com/en/articles/20001371-evolving-atlas-into-chatgpt-for-browser-based-agentic-work" },
+      { label: "Anthropic: Auto mode is now the default in Claude Code", url: "https://claude.com/blog/auto-mode-default-in-claude-code" },
+      { label: "Google: AI and learning — a new chapter for students and educators", url: "https://blog.google/products-and-platforms/products/education/ai-and-learning/" },
+    ],
+    createdAt: "2026-08-10",
+  },
+  {
+    id: "aied-086",
+    slug: "pedagogical-suitability-index-llm-tutors",
+    title: "Pedagogical-fit feedback improved 51 of 62 weak AI-tutor responses, but scaffolding gains created trade-offs",
+    authors: ["Benjamin Barlog", "Hudson Craig", "Zedong Peng"],
+    venue: "IEEE 27th International Conference on Information Reuse and Integration for Data Science (IRI 2026)",
+    year: 2026,
+    type: "conference",
+    tags: ["AI tutors", "pedagogical fit", "scaffolding", "curriculum alignment", "LLM evaluation"],
+    image: "/images/research/covers/aied-086-pedagogical-suitability-ai-tutors-2026.png",
+    imageAlt: "A diverse group of computing students and an instructor compare AI tutoring responses with a prerequisite map and scaffolded Python exercises",
+    summaryImage: "/images/research/summary/aied-086-pedagogical-suitability-ai-tutors-summary.png",
+    summaryImageAlt: "A diverse group of computing students and an instructor compare AI tutoring responses with a prerequisite map and scaffolded Python exercises",
+    summaryAudio: "/audio/research/aied-086-pedagogical-suitability-ai-tutors-summary.m4a",
+    summaryAudioTitle: "Listen to the paper summary",
+    shortSummary: "Barlog, Craig and Peng evaluated ChatGPT, Gemini, Gemma 4 and Qwen 3 across 240 introductory-programming tutoring scenarios with a six-part Pedagogical Suitability Index. Baseline scores differed modestly, while targeted feedback improved 51 of 62 weak cases. The largest gain was scaffolding, but prerequisite ordering and Bloom-level alignment sometimes declined, showing why tutoring quality needs multiple measures rather than one composite score.",
+    fullSummary: `Barlog, Craig and Peng ask a sharper question than whether an AI tutor gives a correct answer: is the help appropriate for this learner at this point in a course? Their paper, presented at IEEE IRI 2026 and posted to arXiv on August 5, introduces the Pedagogical Suitability Index, or PSI. The study evaluates ChatGPT, Gemini, Gemma 4 and Qwen 3 in an introductory Python course. Across 30 scenarios, paired standard and deliberately defective student prompts and four models, the authors produced 240 tutor-response evaluations.
+
+PSI combines six equally weighted components: knowledge distance from the learner’s current foundation, prerequisite-order violations, scaffolding density, retention timing, avoidable cognitive load and alignment with the intended Bloom level. The course model included 85 Python concepts and their prerequisites. Scenarios represented two questions for each week of a 15-week course and included learner profiles, common misconceptions and eight prompt-defect categories such as missing context, vague errors and wrong terminology. Two former students rated the scenarios for realism and course fit, although this was a small validation step.
+
+Baseline PSI scores ranged from 0.557 to 0.638. ChatGPT scored highest in this implementation, followed by Qwen 3, Gemma 4 and Gemini, but the spread was modest and did not support a simple closed-versus-open model conclusion. Overall PSI barely changed under defective prompts, declining by 0.002, yet the sub-scores moved in different directions. Missing context reduced knowledge calibration and scaffolding while prerequisite ordering improved, suggesting that a stable composite can hide educationally important trade-offs.
+
+The researchers then selected 62 weak defective-prompt cases for one round of PSI-guided regeneration. The feedback included the original context, the first response, all six scores, a diagnosis and an improvement checklist. Fifty-one of 62 cases improved, or 82.3 percent, and mean PSI rose by 0.049. Scaffolding density produced the largest change, increasing by 0.272 as responses added worked examples, steps and comprehension checks. A single instructor judged 46 of 62 regenerations meaningfully better and 51 of 62 to have resolved the flagged weakness. However, prerequisite-order and Bloom-alignment scores declined on average, so adding visible support did not improve every pedagogical dimension.
+
+The evidence is promising but preliminary. PSI relies on keyword and regular-expression proxies, uses unvalidated equal weights and has two components with little discriminative power in this implementation. It covers one course, 30 scenarios, one model snapshot and no live student learning outcomes; manual review involved one expert and only the selected weak cases. The model names also describe tested product snapshots, not permanent rankings, so later versions should be re-evaluated rather than assumed to preserve the same order. For Hong Kong education, the practical lesson is to evaluate tutor responses against curriculum sequence, learner readiness and intended cognition, then inspect the components rather than trusting one score. A pilot should combine teacher review with authentic student interactions and independent measures of what learners understand and can transfer after the tutor is removed.`,
+    keyTakeaways: [
+      "Across 240 scenario-based evaluations, baseline PSI scores for four LLM tutors ranged from 0.557 to 0.638 and did not show a clean open-versus-closed model divide.",
+      "PSI-guided feedback improved 51 of 62 weak cases; scaffolding density increased most, while prerequisite-order and Bloom-alignment scores declined on average.",
+      "PSI is a theory-informed operational benchmark, not a validated learning measure; it needs broader courses, multiple raters, live learners and outcome evidence.",
+    ],
+    whyItMatters: "For AIEDHK, the study offers a usable evaluation idea and an equally important warning: pedagogical fit must be inspected as a profile of curriculum, scaffolding and cognitive trade-offs, then tested against actual learning.",
+    sourceUrl: "https://arxiv.org/abs/2608.05411",
+    sourceUrls: [
+      { label: "arXiv paper: Evaluating and Improving Pedagogical Fit in LLM-Based AI Tutors with the Pedagogical Suitability Index", url: "https://arxiv.org/abs/2608.05411" },
+      { label: "PSI supplementary materials", url: "https://doi.org/10.5281/zenodo.19603300" },
+    ],
+    createdAt: "2026-08-10",
+  },
+  {
     id: "aied-055",
     slug: "news-transcription-memory-classroom-context",
     title: "Product news: GPT Transcribe, Claude memory and Gemini Classroom make learning context persistent",

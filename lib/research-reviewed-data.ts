@@ -1,4 +1,13 @@
 import type { ResearchPaper } from "@/lib/types";
+import { researchNewsBackfill20260707To0709 } from "@/lib/research-news-backfill-20260707-0709";
+import {
+  researchNewsBackfill20260711To0712,
+  researchNewsBackfill20260714,
+} from "@/lib/research-news-backfill-20260711-0714";
+import {
+  researchNewsBackfill20260716,
+  researchNewsBackfill20260718,
+} from "@/lib/research-news-backfill-20260716-0718";
 import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill-20260731-0806";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
@@ -1567,6 +1576,7 @@ For AIEDHK, the practical implication is to separate assistance metrics from lea
     ],
     createdAt: "2026-07-19",
   },
+  ...researchNewsBackfill20260718,
   {
     id: "aied-025",
     slug: "news-openai-interactive-learning-anthropic-claude-reflection",
@@ -1657,6 +1667,7 @@ For AIEDHK, the practical lesson is to focus on feedback system design. Individu
     sourceUrl: "https://doi.org/10.1016/j.ijaied.2026.100014",
     createdAt: "2026-07-17",
   },
+  ...researchNewsBackfill20260716,
   {
     id: "aied-023",
     slug: "news-anthropic-claude-for-teachers-k12",
@@ -1735,6 +1746,7 @@ For Hong Kong educators, the review argues for design discipline. Technology sho
     sourceUrl: "https://doi.org/10.1016/j.edurev.2025.100677",
     createdAt: "2026-07-15",
   },
+  ...researchNewsBackfill20260714,
   {
     id: "aied-021",
     slug: "news-openai-anthropic-ai-workbenches-chatgpt-claude-science",
@@ -1823,6 +1835,7 @@ The practical implication for Hong Kong higher education is that AI ethics and A
     sourceUrl: "https://doi.org/10.1016/j.caeo.2026.100336",
     createdAt: "2026-07-13",
   },
+  ...researchNewsBackfill20260711To0712,
   {
     id: "aied-019",
     slug: "news-openai-gpt-5-6-codex-in-chatgpt-agentic-learning",
@@ -1860,6 +1873,7 @@ For Hong Kong schools and universities, the practical response should be staged 
     sourceUrl: "https://openai.com/index/gpt-5-6/",
     createdAt: "2026-07-10",
   },
+  ...researchNewsBackfill20260707To0709,
   {
     id: "aied-018",
     slug: "news-openai-learning-outcomes-measurement-suite-chatgpt-education",

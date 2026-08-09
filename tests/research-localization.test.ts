@@ -55,7 +55,7 @@ test("the flagship article aied-025 is fully localized into both Chinese scripts
 });
 
 test("new backlog articles use the explicit English fallback until a reviewed localization exists", () => {
-  const backlogIds = Array.from({ length: 32 }, (_, index) => `aied-${String(index + 38).padStart(3, "0")}`);
+  const backlogIds = Array.from({ length: 48 }, (_, index) => `aied-${String(index + 38).padStart(3, "0")}`);
   const englishById = new Map(getResearchPapers("en").map((paper) => [paper.id, paper]));
 
   for (const locale of ["zh-hant", "zh-hans"] as const) {

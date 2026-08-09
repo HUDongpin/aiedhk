@@ -1,6 +1,86 @@
 import type { ResearchPaper } from "@/lib/types";
+import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill-20260731-0806";
 
 export const reviewedResearchPapers: ResearchPaper[] = [
+  {
+    id: "aied-055",
+    slug: "news-transcription-memory-classroom-context",
+    title: "Product news: GPT Transcribe, Claude memory and Gemini Classroom make learning context persistent",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "GPT Transcribe", "Claude memory", "Gemini Classroom", "learning context governance"],
+    image: "/images/research/covers/aied-055-transcription-memory-classroom-context-2026.png",
+    imageAlt: "A Black female lecturer and two diverse university students review an audio transcript, curriculum binder and organized learning cards in a media studio",
+    summaryImage: "/images/research/summary/aied-055-transcription-memory-classroom-context-summary.png",
+    summaryImageAlt: "A Black female lecturer and two diverse university students review an audio transcript, curriculum binder and organized learning cards in a media studio",
+    summaryAudio: "/audio/research/aied-055-transcription-memory-classroom-context-summary.m4a",
+    summaryAudioTitle: "Listen to the product news report",
+    shortSummary: "Product news: OpenAI released GPT Transcribe and GPT Live Transcribe for file and streaming speech, Anthropic changed Claude memory into categorized entries that update across conversations, and Google is connecting Gemini learning activities to teacher-selected Classroom materials. Together, the products make consent, correction and purposeful forgetting central to educational AI design.",
+    fullSummary: `This product-news report follows a common design shift across OpenAI, Anthropic and Google: AI systems are becoming better at carrying context from one learning moment into the next. OpenAI's July 28 release adds GPT Transcribe for file transcription and final transcripts of committed Realtime turns, plus GPT Live Transcribe for low-latency streaming. Anthropic's July 10 Claude update replaces a daily memory summary with individual, categorized entries that Claude can read and update during conversations. Google's education products connect Gemini activities to selected course materials and teacher-led Classroom workflows. Each development can reduce friction, but each also creates a record that needs boundaries.
+
+OpenAI says both transcription models accept free-form context, keyword hints and multiple expected input languages. In education, those capabilities could support lecture capture, oral-language practice, interview analysis, accessibility notes or formative feedback on spoken explanations. Accuracy in a product release is not the same as accuracy for every classroom. Names, code-switching, accented speech, specialist vocabulary and noisy rooms can all affect transcripts. A school should keep the recording available for checking, label machine-generated text, let speakers correct errors and avoid treating a transcript as a neutral account of participation or understanding. Transcription also cannot reveal whether a speaker agrees with a recorded idea or merely repeats it, so interpretation should remain tied to the original activity and participant review.
+
+Anthropic's memory change addresses continuity from another direction. Categorized entries can help Claude retain a user's preferences, projects or recurring context without rebuilding one large daily summary. For a learner or teacher, that may make a long-running inquiry easier to resume. It also means users need to understand what was retained, how a mistaken entry is corrected, when an incognito interaction is more appropriate and when old context should be deleted. A memory that quietly carries an obsolete misconception, sensitive student detail or an instructor's provisional judgment can make later assistance feel personalized while remaining wrong or inappropriate.
+
+Google's teacher-led Gemini, study-notebook and NotebookLM activities provide the explicitly educational comparison. Google describes workflows grounded in teacher-selected class materials, with educators able to assign activities and review signals about where individuals or a class may need support. The purpose is not merely longer context; it is curriculum-bounded context under educator direction. Availability varies by account, age, language, device and rollout stage, and vendor descriptions are not independent evidence that learning improves.
+
+For Hong Kong schools and universities, the practical unit of evaluation should be the context lifecycle. Before a pilot, teams can specify who may record speech, what notice and consent are required, which materials may ground a task, what memory is visible to users, how corrections propagate, how long records remain and which decisions require a teacher. Learning evidence should include an independent oral or written task after assistance. Persistent context is useful when it helps learners revisit, explain and verify ideas; it becomes a liability when convenience hides provenance, error or surveillance.`,
+    keyTakeaways: [
+      "Product news: OpenAI's GPT Transcribe models add file and low-latency streaming transcription with context, keyword and language hints.",
+      "Claude's categorized memory and Gemini's teacher-selected Classroom context make correction, visibility, retention and purposeful forgetting product-design questions.",
+      "Education pilots should test transcript accuracy and independent learning while defining consent, provenance, teacher review and deletion before persistent context is enabled.",
+    ],
+    whyItMatters: "For AIEDHK, the releases show that educational AI quality depends on the full context lifecycle: capture, grounding, memory, correction, retention and an independent demonstration of learning.",
+    sourceUrl: "https://openai.com/products/release-notes/",
+    sourceUrls: [
+      { label: "OpenAI product release notes: GPT Transcribe and GPT Live Transcribe", url: "https://openai.com/products/release-notes/" },
+      { label: "Anthropic release notes: Updated memory for Claude", url: "https://support.claude.com/en/articles/12138966-release-notes" },
+      { label: "Google for Education: Building AI tailored for education", url: "https://blog.google/products-and-platforms/products/education/iste-2026-educator-updates/" },
+    ],
+    createdAt: "2026-08-09",
+  },
+  {
+    id: "aied-054",
+    slug: "generative-ai-education-productivity-gap-experiment",
+    title: "Generative AI closed three quarters of an education-based performance gap during assisted work, but effort shaped what carried forward",
+    authors: ["Guillermo Cruces", "Diego Fernández Meijide", "Sebastian Galiani", "Ramiro H. Gálvez", "María Lombardi"],
+    venue: "arXiv working paper",
+    year: 2026,
+    type: "journal",
+    tags: ["generative AI", "randomized experiment", "education inequality", "workplace learning", "human effort"],
+    image: "/images/research/covers/aied-054-education-productivity-gap-ai-effort-2026.png",
+    imageAlt: "Four diverse adults analyze a business problem with a laptop, charts and an unassisted written follow-up in a workforce-learning laboratory",
+    summaryImage: "/images/research/summary/aied-054-education-productivity-gap-ai-effort-summary.png",
+    summaryImageAlt: "Four diverse adults analyze a business problem with a laptop, charts and an unassisted written follow-up in a workforce-learning laboratory",
+    summaryAudio: "/audio/research/aied-054-education-productivity-gap-ai-effort-summary.m4a",
+    summaryAudioTitle: "Listen to the paper summary",
+    shortSummary: "In a preregistered randomized online experiment with 1,174 Argentine adults, GPT-4.1 assistance raised workplace-style problem-solving performance for both education groups and reduced the baseline gap from 0.548 to 0.139 standard deviations. Lower-education participants retained a modest gain after AI was removed, but stronger follow-up performance appeared when intensive assistance was paired with sustained human effort.",
+    fullSummary: `Cruces and colleagues ask whether generative AI widens or narrows performance differences associated with formal education. Their August 2026 arXiv working paper reports a preregistered online experiment with 1,174 adults aged 25 to 45 in Argentina. Participants were classified into lower- and higher-education groups using a preregistered threshold, then randomly assigned to complete an incentivized workplace-style business problem with or without an embedded GPT-4.1 assistant. Everyone then completed an immediate follow-up module without AI. This design distinguishes assisted task performance from what participants could articulate or recall once assistance was removed.
+
+The task required participants to read an email from a hypothetical manager, examine text, a figure and a table, diagnose a problem and propose a solution. It was self-contained and designed to draw on reading, data comprehension, reasoning, creative problem-solving and writing rather than specialized industry knowledge. In the control condition, higher-education participants outperformed lower-education participants by 0.548 standard deviations. With AI, the gap fell to 0.139 standard deviations, a reduction of about 75 percent. Relative to the lower-education control group, AI raised the overall task score by 1.242 standard deviations for lower-education participants and 0.834 for higher-education participants.
+
+The gap did not disappear. Chat-log analysis suggests that lower-education participants obtained substantial assistance, while higher-education participants used the assistant somewhat more effectively through more detailed prompts and more structured workflows. The follow-up also complicates a simple delegation explanation. Treated participants did not perform worse after AI was removed. Lower-education participants retained a modest 0.171-standard-deviation gain, while the higher-education estimate was small and not statistically significant. Yet a 0.200-standard-deviation education gap re-emerged in the unassisted follow-up.
+
+Effort is the educationally important mechanism. Intensive AI assistance predicted strong performance on the main task even when participants invested less of their own effort. Better unassisted follow-up performance, however, appeared when intensive assistance was combined with sustained task engagement. The study therefore separates effective performance from underlying human capital: AI can lower the expertise needed to complete a task, but durable understanding still depends on reading, evaluating, integrating and explaining information.
+
+The evidence is bounded. This is a working paper, not yet a peer-reviewed journal article. The experiment lasted about 21 minutes on average, used one business scenario, measured an immediate follow-up and recruited adults rather than school students. It does not establish long-term skill growth, labor-market outcomes or effects in other languages and institutions. The education-group threshold reflects the Argentine context, and the comparison does not show that formal education itself caused every observed difference in strategy or performance.
+
+For Hong Kong education and workforce training, pilots should report both assisted and independent outcomes. Learners can use AI to compare sources and draft a diagnosis, then complete an unaided explanation or transfer task. Access may reduce short-run gaps, but equitable learning requires supports that help every participant build the prompt, reasoning and verification practices that remain useful when the tool is gone.`,
+    keyTakeaways: [
+      "In a randomized experiment with 1,174 adults, AI reduced the education-based task-performance gap from 0.548 to 0.139 standard deviations, closing about 75 percent of it.",
+      "Lower-education participants retained a modest gain after AI was removed, but an unassisted gap re-emerged and higher-education users structured their AI use somewhat more effectively.",
+      "Intensive assistance improved the task product even with low effort; stronger follow-up performance required intensive assistance combined with sustained human engagement.",
+    ],
+    whyItMatters: "For AIEDHK, the study shows why equity claims need two measures: who performs better with AI and who can still explain, transfer and verify the work without it.",
+    sourceUrl: "https://arxiv.org/abs/2608.04198",
+    sourceUrls: [
+      { label: "arXiv working paper: Does generative AI narrow education-based productivity gaps?", url: "https://arxiv.org/abs/2608.04198" },
+      { label: "Preregistered trial record: AEA RCT Registry 0016607", url: "https://www.socialscienceregistry.org/trials/16607" },
+    ],
+    createdAt: "2026-08-09",
+  },
   {
     id: "aied-053",
     slug: "news-institutional-ai-research-learning-control",
@@ -154,6 +234,7 @@ For higher education and Hong Kong classrooms, a defensible pilot would make the
     ],
     createdAt: "2026-08-07",
   },
+  ...researchNewsBackfill20260731To0806,
   {
     id: "aied-049",
     slug: "news-openai-ai-skills-jam-k12-educators",

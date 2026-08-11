@@ -12,6 +12,113 @@ import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-089",
+    slug: "news-ai-actions-plugin-security-education-purpose",
+    title: "Product news: ChatGPT adds reservations while Claude scans plugins, making purpose and permission part of AI literacy",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "ChatGPT reservations", "Claude plugin scanning", "Gemini for Education", "AI action governance"],
+    image: "/images/research/covers/aied-089-ai-actions-plugin-security-education-purpose-2026.png",
+    imageAlt: "A diverse university team reviews an AI action confirmation, a plugin security check and purpose-bounded learning materials in a bright campus technology studio",
+    summaryImage: "/images/research/summary/aied-089-ai-actions-plugin-security-education-purpose-summary.png",
+    summaryImageAlt: "A diverse university team reviews an AI action confirmation, a plugin security check and purpose-bounded learning materials in a bright campus technology studio",
+    summaryAudio: "/audio/research/aied-089-ai-actions-plugin-security-education-purpose-summary.m4a",
+    summaryAudioTitle: "Listen to the product news report",
+    shortSummary: "Product news: ChatGPT can now find and complete restaurant reservations through supported partners, while Anthropic added beta scanning that classifies uploaded third-party skills and plugins as pass, warn or fail. Gemini for Education supplies the educational boundary: use AI for defined teaching, learning and work purposes inside an administrator-managed environment. Together, the releases make permissions, handoffs and purpose part of AI literacy.",
+    fullSummary: `This product-news report follows a practical shift from AI that recommends an answer to AI that can initiate an external action. OpenAI's August 10 ChatGPT update can surface restaurant availability and open a reservation flow. Anthropic's August enterprise beta scans newly uploaded or edited third-party skills and plugins. Google frames Gemini for Education around three purposes—teach, learn and work—inside an institutionally managed product. Together, the releases make the line between a helpful suggestion and an authorized action visible.
+
+OpenAI says users can specify a location, time, party size and preferences, then refine results before selecting a reservation. OpenTable availability is offered globally, Resy in the United States, and Yelp in the United States and Canada, subject to provider coverage. If a booking needs a name or email address, ChatGPT asks permission before filling those fields. Availability can change, so users must confirm the details. ChatGPT does not retain the completed reservation; later changes and cancellations go through the booking provider.
+
+The account boundary matters for education. OpenAI lists the feature across consumer ChatGPT plans using GPT-5.6 Sol and GPT-5.6 Luna, but not in ChatGPT Work or in Enterprise, Edu and Business workspaces. A personal-account capability should not be assumed to exist in an institutionally governed account. Although booking is not an education product, it gives students a concrete agentic-action case: a model proposes options, a third party supplies changing availability, personal information crosses a boundary with consent, and the provider holds the final record.
+
+Anthropic's beta addresses another link in that chain. Enterprise owners can enable scanning for new or edited third-party skills and plugins in Claude, Claude Cowork and enterprise marketplaces. Most scans take about one to two minutes and return pass, warn or fail. A warning requires acknowledgement; a failure blocks installation. The feature is off by default, and a failed item must be changed and resubmitted rather than overridden.
+
+The scan is a risk signal, not a quality certificate. It does not retroactively cover existing items, Claude-created skills, MCP-delivered skills, MCP servers or hooks, and it is unavailable in some customer-managed encryption, zero-data-retention and HIPAA configurations. A pass does not establish that a plugin is pedagogically accurate, accessible, privacy-minimizing or suitable for a learner. Schools still need a trusted source, permissions review and independent evaluation.
+
+Gemini for Education offers a purpose test before an action-capable tool is adopted. Google groups examples under teaching, learning and work: lesson and assessment design; explanations, practice and writing feedback; and communications, administration and research. It also describes administrator controls, a distinct under-18 experience, and institutional data that is not human-reviewed or used to train models. These are vendor-stated conditions, not evidence of learning gains, but they connect capability to purpose and account context.
+
+Hong Kong schools and universities can keep an action ledger for pilots: the teaching, learning or work purpose; account and plan; external service and data fields; user permission; human confirmation; authoritative receipt; and correction or cancellation route. Third-party skills should be tested with synthetic data even after a scan passes. Students can compare what an assistant proposed with what the external system recorded and identify where responsibility changed hands. AI literacy now includes understanding what was authorized, what crossed a boundary and who can undo the result.`,
+    keyTakeaways: [
+      "Product news: ChatGPT can now surface and complete supported restaurant reservations, with user confirmation and permission before selected personal details are shared.",
+      "Anthropic's enterprise beta scans new or edited third-party skills and plugins for malicious behavior, but its pass, warn and fail results do not cover every integration or establish pedagogical quality.",
+      "Gemini for Education's teach, learn and work purposes provide a useful adoption test: define the educational purpose, account boundary, data route, approval point and authoritative record before enabling action-capable AI.",
+    ],
+    whyItMatters: "For AIEDHK, the releases turn agent governance into a teachable workflow: institutions need purpose-bounded tools, inspectable permissions, trusted integrations, human confirmation and a clear route for correcting external actions.",
+    sourceUrl: "https://help.openai.com/en/articles/9237897-chatgpt-search",
+    sourceUrls: [
+      { label: "OpenAI: ChatGPT Search and restaurant reservation guidance", url: "https://help.openai.com/en/articles/9237897-chatgpt-search" },
+      { label: "OpenAI: ChatGPT release notes for August 10, 2026", url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes" },
+      { label: "Anthropic: Get started with skill and plugin scanning", url: "https://support.claude.com/en/articles/15927065-get-started-with-skill-and-plugin-scanning" },
+      { label: "Anthropic: Claude release notes for August 2026", url: "https://support.claude.com/en/articles/12138966-release-notes" },
+      { label: "Google for Education: Gemini for Education", url: "https://edu.google.com/ai/gemini-for-education/" },
+    ],
+    createdAt: "2026-08-12",
+  },
+  {
+    id: "aied-088",
+    slug: "teaching-monster-pedagogical-content-knowledge",
+    title: "AI lesson agents adapted detectably to learner personas, but delivery lagged content and an LLM judge misranked the leaders",
+    authors: [
+      "Yi-Cheng Lin",
+      "Yu-Kai Guo",
+      "Szu-Chi Chen",
+      "Bo-Han Feng",
+      "Yun-Man Hsu",
+      "Hsiang Hsieh",
+      "Yu-Jung Lin",
+      "Yue-Ling Wu",
+      "Jia-Kai Dong",
+      "An-Yu Cheng",
+      "Yu-Han Huang",
+      "Lok-Lam Ieong",
+      "Kuan-Yu Chen",
+      "Ming-Douo Tchouang",
+      "Shao-Hua Sun",
+      "Che Lin",
+      "Jian-Jiun Ding",
+      "Hung-yi Lee",
+    ],
+    venue: "Teaching Monster Challenge 2026 / arXiv preprint",
+    year: 2026,
+    type: "tool-dataset",
+    tags: ["pedagogical content knowledge", "instructional video", "learner adaptation", "multimodal AI agents", "LLM-as-judge"],
+    image: "/images/research/covers/aied-088-teaching-monster-pedagogical-content-knowledge-2026.png",
+    imageAlt: "A diverse secondary-school learning team compares two AI-generated STEM lesson videos against learner personas, visual scaffolds and teacher review notes",
+    summaryImage: "/images/research/summary/aied-088-teaching-monster-pedagogical-content-knowledge-summary.png",
+    summaryImageAlt: "A diverse secondary-school learning team compares two AI-generated STEM lesson videos against learner personas, visual scaffolds and teacher review notes",
+    summaryAudio: "/audio/research/aied-088-teaching-monster-pedagogical-content-knowledge-summary.m4a",
+    summaryAudioTitle: "Listen to the paper summary",
+    shortSummary: "Lin and colleagues benchmarked end-to-end AI instructional-video agents with learner personas across secondary STEM. Seventy-seven teams produced 1,612 preliminary videos: content accuracy and lesson logic were stronger than visual delivery and learner adaptation, 17% of videos received a critical-fact-error flag, and the automated judge's ranking of the ten strongest systems correlated poorly with crowd judgment. Human raters could detect persona adaptation, but the study evaluated teaching-quality proxies rather than learning gains.",
+    fullSummary: `Lin and colleagues ask whether an AI agent that generates a complete lesson can also transform subject matter for a particular learner. They frame that capacity as pedagogical content knowledge: representing a concept in a form that fits a learner's age, prior knowledge, attention and gaps. The first Teaching Monster Challenge turns this idea into an end-to-end instructional-video benchmark. Each system receives a course requirement and free-text learner persona and must create one complete video without human intervention.
+
+The benchmark covers Advanced Placement-aligned Physics, Biology, Computer Science and Mathematics at secondary level. Some items hold the topic constant while changing the learner persona, making adaptation observable. Systems were evaluated on content accuracy, pedagogical logic, learner adaptability, and engagement and multimodal presentation. An automated multimodal LLM judge screened submissions, crowd raters compared shortlisted systems blindly, and teachers, school leaders and university professors formed the final expert panel.
+
+The challenge operated at substantial scale. Forty-six teams generated 1,696 warm-up videos. In the preliminary phase, 77 teams generated 1,612 videos for 32 released items. A 22-item automated rubric advanced ten teams; 59 Prolific raters then contributed 246 pairwise comparisons. The top three systems generated 48 videos for 16 final items. Ten experts reviewed the finalists, with each subject assigned two subject specialists and one pedagogy specialist. Award candidates also submitted reproducible system images to verify the no-human-in-the-loop pipeline.
+
+Content accuracy and pedagogical logic scored higher than engagement and learner adaptability. The authors recorded 6,699 negative flags: 39 percent visual delivery, 27 percent learner adaptation, 16 percent content, 8 percent narration and 10 percent count-based explanation errors. Ineffective visual representation appeared in one third of videos; missing scaffolding in 29 percent, jargon overload in 23 percent and prerequisite gaps in 22 percent. About 17 percent received a critical-fact-error flag. These automated flags are not learning outcomes, but they show how a polished lesson can remain overloaded or mismatched.
+
+A separate study tested whether adaptation was perceptible. Sixty-nine Prolific raters contributed 214 ratings after watching a video and choosing its intended learner from three candidates. A persona-independent retrieval baseline stayed at chance, while shortlisted AI systems were identified above it. The human-video comparison was identified more often than the AI group, although the difference was not statistically significant. The agents therefore adapted in detectable ways, but their broader scores suggest that adaptation was often incomplete.
+
+The benchmark also exposes an evaluation problem. Among the ten shortlisted systems, the automated judge's ranking agreed poorly with the crowd ranking: Spearman's rho was -0.17. Scores clustered near the top of the five-point scale. Repeated automated ratings were reasonably stable, so the issue was not merely rerun randomness; the rubric separated a weak tail but did not distinguish leaders as people did. The authors therefore treat automated screening and human comparative judgment as complementary stages.
+
+The boundaries are important. The study evaluates English-language, AP-aligned STEM videos rather than interactive tutoring, classroom implementation or measured learning gains. The final panel mainly reflects Taiwan's education system, and fixed topics, time limits and 2026 systems constrain generalization. The automated judge's flags are not ground truth. For Hong Kong education, the benchmark works best as an audit template: hold a topic constant, vary a bilingual learner profile, inspect whether examples, pacing, prerequisites and visuals truly change, then measure unassisted understanding and transfer with real learners.`,
+    keyTakeaways: [
+      "Seventy-seven teams generated 1,612 preliminary STEM lesson videos; content accuracy and pedagogical logic were stronger than engagement and learner adaptation.",
+      "Human raters could identify the intended learner above a persona-independent baseline, showing detectable adaptation, but the study measured teaching-quality proxies rather than learning gains.",
+      "The automated judge was useful for screening weak submissions but its top-ten ranking correlated poorly with crowd judgment (Spearman rho = -0.17), supporting a staged human-plus-AI evaluation design.",
+    ],
+    whyItMatters: "For AIEDHK, the benchmark makes personalization testable: compare the same lesson across learner profiles, audit scaffolding, pacing, prerequisites and multimodal signaling, and reserve final claims for independent human judgment and measured learning.",
+    sourceUrl: "https://arxiv.org/abs/2608.08852",
+    sourceUrls: [
+      { label: "arXiv paper: Findings of the First Teaching Monster Challenge", url: "https://arxiv.org/abs/2608.08852" },
+      { label: "Full HTML paper", url: "https://arxiv.org/html/2608.08852v1" },
+      { label: "Teaching Monster Challenge", url: "https://teaching.monster/" },
+    ],
+    createdAt: "2026-08-12",
+  },
+  {
     id: "aied-087",
     slug: "news-agentic-browser-coding-learning-handoffs",
     title: "Product news: OpenAI retires Atlas while Claude Code makes auto mode the default, turning agent handoffs into a learning-design issue",

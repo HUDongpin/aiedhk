@@ -24,18 +24,19 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains eighty-five curated Research News items", () => {
+test("research news fallback contains eighty-seven curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 85);
-  assert.equal(papers[0]?.slug, "news-transcription-memory-classroom-context");
+  assert.equal(papers.length, 87);
+  assert.equal(papers[0]?.slug, "news-agentic-browser-coding-learning-handoffs");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
 
-test("the twenty-four-date backlog contains exactly one research paper and one clearly labeled product-news item per day", () => {
+test("the twenty-five-date backlog contains exactly one research paper and one clearly labeled product-news item per day", () => {
   const papers = getResearchPapers("en");
   const expectedByDate = new Map([
+    ["2026-08-10", ["aied-086", "aied-087"]],
     ["2026-08-09", ["aied-054", "aied-055"]],
     ["2026-08-08", ["aied-052", "aied-053"]],
     ["2026-08-07", ["aied-050", "aied-051"]],
@@ -86,13 +87,13 @@ test("the twenty-four-date backlog contains exactly one research paper and one c
   }
 });
 
-test("backlog identifiers aied-038 through aied-085 are continuous and non-duplicated", () => {
+test("backlog identifiers aied-038 through aied-087 are continuous and non-duplicated", () => {
   const ids = getResearchPapers("en")
     .map((paper) => Number.parseInt(paper.id.replace("aied-", ""), 10))
-    .filter((id) => id >= 38 && id <= 85)
+    .filter((id) => id >= 38 && id <= 87)
     .sort((a, b) => a - b);
 
-  assert.deepEqual(ids, Array.from({ length: 48 }, (_, index) => index + 38));
+  assert.deepEqual(ids, Array.from({ length: 50 }, (_, index) => index + 38));
 });
 
 test("reviewed Research News keeps identifiers, slugs, media paths, and primary sources unique", () => {
@@ -384,6 +385,8 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-087",
+      "aied-086",
       "aied-055",
       "aied-054",
       "aied-053",
@@ -487,13 +490,13 @@ test("static summary media assets are available locally", () => {
   }
 });
 
-test("backlog entries aied-038 through aied-085 have non-empty local M4A audio", () => {
+test("backlog entries aied-038 through aied-087 have non-empty local M4A audio", () => {
   const backlog = getResearchPapers("en").filter((paper) => {
     const id = Number.parseInt(paper.id.replace("aied-", ""), 10);
-    return id >= 38 && id <= 85;
+    return id >= 38 && id <= 87;
   });
 
-  assert.equal(backlog.length, 48);
+  assert.equal(backlog.length, 50);
   const hashes = new Set<string>();
   for (const paper of backlog) {
     assert.ok(paper.summaryAudio, `${paper.id} should declare summary audio`);
@@ -503,7 +506,7 @@ test("backlog entries aied-038 through aied-085 have non-empty local M4A audio",
     assert.ok(audioBuffer.byteLength > 100_000, `${paper.summaryAudio} should contain audible narration`);
     hashes.add(createHash("sha256").update(audioBuffer).digest("hex"));
   }
-  assert.equal(hashes.size, 48, "all backlog narrations must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 50, "all backlog narrations must have unique SHA-256 hashes");
 });
 
 test("reviewed papers use human-reviewed translations when present and fall back to English otherwise", () => {

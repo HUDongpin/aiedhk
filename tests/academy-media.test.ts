@@ -20,9 +20,9 @@ function publicFile(assetPath: string) {
   return path.join(projectRoot, "public", assetPath.slice(1));
 }
 
-test("Academy lessons directly reference forty-eight valid, distinct 1600x1000 PNG images", async () => {
+test("Academy lessons directly reference fifty valid, distinct 1600x1000 PNG images", async () => {
   const lessons = getAcademyLessons("en");
-  assert.equal(lessons.length, 48);
+  assert.equal(lessons.length, 50);
 
   const hashes = new Set<string>();
   for (const lesson of lessons) {
@@ -49,7 +49,7 @@ test("Academy lessons directly reference forty-eight valid, distinct 1600x1000 P
     hashes.add(hash);
   }
 
-  assert.equal(hashes.size, 48, "all Academy lesson images must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 50, "all Academy lesson images must have unique SHA-256 hashes");
 });
 
 test("Academy keeps sixteen retired summary images as unassigned future-cover inventory", async () => {
@@ -80,9 +80,9 @@ test("Academy keeps sixteen retired summary images as unassigned future-cover in
   assert.equal(inventoryHashes.size, 16, "future-cover inventory images must remain visually distinct");
 });
 
-test("Academy lessons directly reference forty-eight valid local M4A narrations", async () => {
+test("Academy lessons directly reference fifty valid local M4A narrations", async () => {
   const lessons = getAcademyLessons("en");
-  assert.equal(lessons.length, 48);
+  assert.equal(lessons.length, 50);
   const hashes = new Set<string>();
 
   for (const lesson of lessons) {
@@ -99,5 +99,5 @@ test("Academy lessons directly reference forty-eight valid local M4A narrations"
     hashes.add(createHash("sha256").update(bytes).digest("hex"));
   }
 
-  assert.equal(hashes.size, 48, "all Academy narrations must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 50, "all Academy narrations must have unique SHA-256 hashes");
 });

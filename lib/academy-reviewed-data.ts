@@ -1748,5 +1748,79 @@ In education, a class might investigate why two pond-water samples look differen
     ],
     createdAt: "2026-08-10T08:00:00.000Z",
   },
+  {
+    id: "academy-049",
+    listingIdentifier: "AI Knowledge 25",
+    slug: "ai-safety-and-risk-management",
+    title: "AI Safety and Risk Management",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["AI safety", "risk management", "responsible AI"],
+    image: "/images/academy/covers/academy-049-ai-safety-and-risk-management.png",
+    imageAlt: "A Black woman educator points to an illustrated risk matrix while an East Asian man holds a red tile and a light-skinned woman holds an amber tile in a bright workshop",
+    summaryAudio: "/audio/academy/academy-049-ai-safety-and-risk-management-summary.m4a",
+    summaryAudioTitle: "Listen to AI Safety and Risk Management",
+    shortSummary: "How to identify, evaluate, reduce, monitor, and communicate AI risks across a system's lifecycle while preserving human agency and accountability.",
+    fullSummary: `AI safety is the practice of reducing unacceptable harm from AI systems while enabling worthwhile educational uses in practice. It is not a single technical feature and it does not promise zero risk. A hazard is a source of possible harm, such as disclosure of learner data or a biased recommendation. Risk considers both the likelihood of an event and the severity of its consequences in a particular context. The same model can therefore present different risks when it drafts a low-stakes example, recommends an intervention, or influences access to an educational opportunity.
+
+Risk management begins before a tool is selected. The NIST AI Risk Management Framework organizes continuous work through four connected functions: Govern, Map, Measure, and Manage. Governance establishes accountable roles, policies, documentation, and risk tolerances. Mapping describes the intended purpose, affected people, operating conditions, dependencies, and foreseeable misuse. Measurement tests performance, uncertainty, privacy, security, bias, accessibility, and human-AI interaction with evidence suited to the real setting. Management prioritizes risks, applies controls, decides whether deployment should proceed, and monitors what happens after release.
+
+Educational risks extend beyond an incorrect answer. They can include fabricated sources, unequal error rates, harmful stereotypes, exposure of personal information, insecure integrations, inappropriate content, loss of learner agency, automation bias, inaccessible design, and assessment results that no longer support their intended interpretation. Generative and agentic systems add risks because outputs vary and tools can act on files or services. An agentic loop that gathers context, takes action, and verifies results can be useful, but its permissions, data access, stopping points, and verification evidence must match the stakes.
+
+Effective controls are layered. A school can limit a system to a clearly defined use, minimize the data it receives, test representative scenarios, require human approval for consequential actions, restrict tool permissions, keep useful logs, make actions reversible, and prepare incident and appeal routes. Red-team exercises may reveal failure modes, but one benchmark or safety score cannot represent every learner, language, subject, or future condition. Residual risk should be documented rather than hidden, and controls should be re-evaluated when the model, users, data, or purpose changes.
+
+In education, learners can examine a fictional AI study adviser before it is adopted. They identify stakeholders, intended benefits, possible harms, and evidence gaps; rank each risk by likelihood and consequence; propose controls; and name the person accountable for monitoring and intervention. They then test cases involving ambiguous language, disability access, and sensitive data, record remaining uncertainty, and decide whether to proceed, redesign, limit, or reject the use. This exercise treats safety as disciplined inquiry and shared responsibility. The aim is not fear or blind trust, but proportionate judgment that keeps educational purpose, rights, equity, evidence, and human agency at the center.`,
+    coreIdeas: [
+      "AI risk depends on a system's purpose, people, context, likelihood of failure, and severity of consequences rather than on the model alone.",
+      "Govern, Map, Measure, and Manage connect accountability, contextual analysis, testing, controls, deployment decisions, and continuous monitoring across the lifecycle.",
+      "Layered safeguards, bounded permissions, verification, human authority, incident response, and documented residual risk support proportionate educational decisions.",
+    ],
+    educationConnection: "Ask learners to risk-assess a fictional AI study adviser, test diverse cases, propose layered controls, document residual uncertainty, and decide who can approve, interrupt, appeal, or stop its use.",
+    relatedConcepts: ["Trustworthy AI", "Risk assessment", "Human oversight"],
+    sourceUrls: [
+      { label: "NIST: Artificial Intelligence Risk Management Framework 1.0", url: "https://doi.org/10.6028/NIST.AI.100-1" },
+      { label: "NIST: Generative Artificial Intelligence Profile", url: "https://doi.org/10.6028/NIST.AI.600-1" },
+      { label: "UNESCO: Guidance for Generative AI in Education and Research", url: "https://unesdoc.unesco.org/ark:/48223/pf0000386693" },
+      { label: "Claude Code Docs: How Claude Code Works", url: "https://code.claude.com/docs/en/how-claude-code-works" },
+    ],
+    createdAt: "2026-08-12T08:00:00.000Z",
+  },
+  {
+    id: "academy-050",
+    listingIdentifier: "Educational Theory 25",
+    slug: "collaborative-learning",
+    title: "Collaborative Learning",
+    track: "educational-theory",
+    level: "core",
+    tags: ["collaborative learning", "social interdependence", "group learning"],
+    image: "/images/academy/covers/academy-050-collaborative-learning.png",
+    imageAlt: "A Black woman music teacher guides an East Asian violinist, a hijab-wearing clarinetist, and a White cellist rehearsing in a bright studio",
+    summaryAudio: "/audio/academy/academy-050-collaborative-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Collaborative Learning",
+    shortSummary: "How carefully structured joint activity can turn explanation, disagreement, coordination, and reflection into learning while keeping every participant responsible.",
+    fullSummary: `Collaborative learning places two or more learners in a situation where they work toward understanding, a solution, or a shared product through interaction. The label covers many scales and arrangements, so sitting people together is not enough to define the learning process. Collaboration becomes educationally meaningful when participants explain ideas, question evidence, negotiate interpretations, coordinate actions, and build on one another's contributions. These interactions can make thinking visible and create opportunities for elaboration, feedback, perspective taking, and mutual regulation that an individual task may not generate in the same way.
+
+Collaborative and cooperative learning overlap, but the distinction can clarify task design. In strongly collaborative work, learners jointly plan and organize activity, and each action changes what others can do next. In cooperative work, a larger task may be divided into components that are completed separately and later combined. Both can support learning. However, division of labour can become a weak relay if members never examine one another's reasoning, while unstructured collaboration can let one confident participant make every decision.
+
+Social interdependence theory explains why structure matters. Positive interdependence exists when learners understand that they can reach a valued goal only by supporting the group's progress. Structured cooperative approaches often pair this shared purpose with individual accountability, promotive interaction, interpersonal skills, and group reflection. Individual accountability does not oppose collaboration. It ensures that every learner prepares, contributes, and develops understanding rather than hiding behind a polished group product. Teachers can check this through individual explanations, rotating responsibilities, brief transfer tasks, or records of decisions and revisions.
+
+Evidence reviews generally report positive average effects, but results vary substantially across tasks, subjects, ages, grouping choices, implementation quality, and outcome measures. The Education Endowment Foundation rates the security of its collaborative-learning evidence as low despite a positive average estimate. This cautions against treating group work as an automatic intervention. Learners need explicit models of productive talk, accessible roles, enough prior knowledge, equitable access to materials, and norms for disagreement. Teachers should monitor who speaks, whose ideas are taken up, whether status differences silence participants, and whether the shared task actually requires interdependence.
+
+In education, a teacher can give groups a complex claim supported by incomplete and partly conflicting evidence. Each learner first records an interpretation, then the group must produce one explanation that identifies uncertainty and incorporates a challenge raised by every member. Roles rotate between evidence tracker, questioner, connector, and summarizer, but all learners must understand the final reasoning. The teacher listens for explanation and exclusion, prompts quieter voices without assigning permanent identities, and ends with an individual application to a new case. Groups then review which interactions changed their thinking and what they would improve. Collaborative learning succeeds when joint work deepens each learner's understanding and when responsibility, dialogue, inclusion, and reflection are designed into the task rather than left to chance.`,
+    coreIdeas: [
+      "Collaborative learning depends on interactions such as explanation, questioning, negotiation, coordination, and mutual regulation, not merely on physical grouping.",
+      "Positive interdependence and individual accountability can make a shared goal require contribution while ensuring that every learner develops and demonstrates understanding.",
+      "Task design, productive-talk routines, equitable participation, teacher monitoring, individual checks, and group reflection determine whether collaboration supports learning.",
+    ],
+    educationConnection: "Design a shared evidence task in which every learner contributes a challenge, roles rotate, the group explains one defensible conclusion, individuals transfer the reasoning, and the team reflects on participation and revision.",
+    relatedConcepts: ["Social interdependence", "Dialogic teaching", "Peer learning"],
+    sourceUrls: [
+      { label: "Dillenbourg: What Do You Mean by Collaborative Learning?", url: "https://tecfa.unige.ch/tecfa/teaching/aei/papiers/Dillenbourg.pdf" },
+      { label: "National Academies: How People Learn II", url: "https://nap.nationalacademies.org/read/24783/chapter/10" },
+      { label: "Johnson and Johnson: Social Interdependence Theory and Cooperative Learning", url: "https://doi.org/10.3102/0013189X09339057" },
+      { label: "Education Endowment Foundation: Collaborative Learning Approaches", url: "https://educationendowmentfoundation.org.uk/education-evidence/teaching-learning-toolkit/collaborative-learning-approaches" },
+    ],
+    createdAt: "2026-08-12T08:00:00.000Z",
+  },
 
 ];

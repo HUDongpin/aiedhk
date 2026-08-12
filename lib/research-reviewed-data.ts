@@ -12,6 +12,90 @@ import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-091",
+    slug: "news-source-grounded-ai-workflows-education",
+    title: "Product news: ChatGPT, Claude Code and Gemini Classroom make source-grounded AI work easier to inspect",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "ChatGPT document grounding", "Claude Code workflow integrity", "Gemini Classroom", "AI workflow literacy"],
+    image: "/images/research/covers/aied-091-source-grounded-ai-workflows-education-2026.png",
+    imageAlt: "A diverse university class reviews source-linked documents, an inspectable coding handoff and an editable assessment rubric with a teacher in a bright learning studio",
+    summaryImage: "/images/research/summary/aied-091-source-grounded-ai-workflows-education-summary.png",
+    summaryImageAlt: "A diverse university class reviews source-linked documents, an inspectable coding handoff and an editable assessment rubric with a teacher in a bright learning studio",
+    summaryAudio: "/audio/research/aied-091-source-grounded-ai-workflows-education-summary.m4a",
+    summaryAudioTitle: "Listen to the product news report",
+    shortSummary: "Product news: ChatGPT now preserves pasted formatting, reuses saved files and grounds answers more closely in attached documents; Claude Code tightened cross-session reliability and hardened synced skills; and Gemini Classroom is expanding guided prompts while drafting editable rubrics from assignment context. Together, the updates make provenance, review criteria and human revision central to AI workflow literacy.",
+    fullSummary: `This product-news report follows a practical design shift across OpenAI, Anthropic and Google: AI work is moving from disposable prompts toward reusable, inspectable workflows. OpenAI's August 7 ChatGPT update makes documents and saved files easier to carry into a conversation. Anthropic's August 11 Claude Code release strengthens the integrity of work that crosses sessions, machines and skill packages. Google is expanding Gemini in Classroom and adding assignment-grounded rubric drafting. The common educational question is whether context remains visible enough for a learner or teacher to check, revise and defend the result.
+
+OpenAI says formatted text pasted from Google Docs or another ChatGPT conversation now keeps headings, emphasis, links and lists on the web. Users can add files already stored in their Library without uploading them again, select several Library items and search folders, file names and conversation titles more easily. The same release says ChatGPT makes better use of attached documents for summarization, detail retrieval, review and drafting. These are workflow improvements, not guarantees of source fidelity. A reused file can be outdated, a preserved link can be ignored, and a fluent answer can still misread the evidence.
+
+Anthropic's Claude Code 2.1.228 release focuses on less visible but consequential reliability. It fixes cross-session messaging that could start without an inbox, prevents project-memory contents from being removed during session cleanup and avoids deleting a plugin cache whose only version is a symlinked development checkout. It also hardens skills synchronized from Claude's hosted service so they cannot shadow local commands or MCP prompts, and shows cross-session message senders and bodies inline. For collaborative coding or research, those details affect whether provenance, configuration and handoffs survive a longer workflow.
+
+Google supplies the explicitly educational layer. Starting August 10, Gemini in Classroom is expanding to K-12 and higher-education students of all ages when administrators have already granted the required Gemini services. Contextualized starter prompts provide a guided entry point. A separate Classroom update lets educators draft a rubric from an assignment's context, review and edit the proposed criteria, and then attach it to the assignment; that rubric feature is limited to users over 18. Gemini for Education more broadly frames its purposes as helping institutions teach, learn and work inside administrator-managed environments.
+
+None of these vendor release notes demonstrates better learning. They describe availability and intended behavior, not independent accuracy, accessibility, workload or outcome evidence. Persistent context can also preserve a mistaken source, unsafe instruction or unsuitable criterion. Schools should therefore distinguish a product's ability to retain context from a learner's ability to understand it.
+
+For Hong Kong schools and universities, a source-grounded pilot can require a visible source list, versioned inputs, named handoff points and an editable rubric before AI-assisted work is accepted. Students can annotate which file supported each claim, compare an AI draft with the original evidence and complete a short unaided explanation. Teachers can record what they changed in generated criteria and why. The useful product direction is not continuity by itself; it is continuity that remains inspectable, correctable and educationally purposeful.`,
+    keyTakeaways: [
+      "Product news: ChatGPT now preserves document structure, reuses saved files and improves attached-file grounding, while Claude Code strengthens cross-session and skill-package integrity.",
+      "Gemini in Classroom is expanding guided prompts to students of all ages under administrator-managed access, and educators over 18 can draft and edit assignment-context rubrics.",
+      "Reusable AI context should remain source-linked, versioned, reviewable and paired with an independent demonstration of what the learner understands.",
+    ],
+    whyItMatters: "For AIEDHK, the updates make workflow literacy concrete: educational AI should preserve provenance, expose handoffs and criteria, support human revision and leave learners able to justify the final work independently.",
+    sourceUrl: "https://code.claude.com/docs/en/changelog",
+    sourceUrls: [
+      { label: "OpenAI: ChatGPT release notes for August 7, 2026", url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes" },
+      { label: "Anthropic: Claude Code changelog for version 2.1.228", url: "https://code.claude.com/docs/en/changelog" },
+      { label: "Google Workspace: Gemini in Classroom expands with contextualized student prompts", url: "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html" },
+      { label: "Google Workspace: Gemini drafts editable Classroom rubrics from assignment context", url: "https://workspaceupdates.googleblog.com/2026/08/streamlining-rubric-generation-in-Google-Classroom-with-Gemini.html" },
+      { label: "Google for Education: Gemini for Education", url: "https://edu.google.com/ai/gemini-for-education/" },
+    ],
+    createdAt: "2026-08-13",
+  },
+  {
+    id: "aied-090",
+    slug: "ai-generated-interactive-fiction-education-pilot",
+    title: "AI-generated learning stories were clear and well paced, but their quizzes did not belong in the plot",
+    authors: ["Finn Rogosch", "Andreas Schrader"],
+    venue: "EDULEARN26 Proceedings",
+    year: 2026,
+    type: "conference",
+    tags: ["interactive fiction", "educational games", "generative AI", "narrative coherence", "higher education"],
+    image: "/images/research/covers/aied-090-ai-generated-interactive-fiction-education-2026.png",
+    imageAlt: "A diverse group of university students explores a branching media-technology learning story while an instructor traces where quiz choices connect to the narrative",
+    summaryImage: "/images/research/summary/aied-090-ai-generated-interactive-fiction-education-summary.png",
+    summaryImageAlt: "A diverse group of university students explores a branching media-technology learning story while an instructor traces where quiz choices connect to the narrative",
+    summaryAudio: "/audio/research/aied-090-ai-generated-interactive-fiction-education-summary.m4a",
+    summaryAudioTitle: "Listen to the paper summary",
+    shortSummary: "Rogosch and Schrader tested AI-generated interactive-fiction episodes with 22 STEM higher-education participants. The five-to-ten-minute stories were rated clear and appropriately long, but story-content coherence averaged below the neutral midpoint and engagement sat near it. Participants most often questioned why characters suddenly demanded technical answers, showing that a playable educational story can still fail to integrate its learning task.",
+    fullSummary: `Rogosch and Schrader examine a useful intermediate question about generative AI in educational games. Before measuring whether an AI-generated story improves learning, can learners follow it, accept its length and experience the educational content as part of the story? Their EDULEARN26 paper evaluates short, choice-driven interactive-fiction episodes for higher education. The work deliberately studies perceived quality rather than knowledge gains, treating clarity, coherence and engagement as prerequisites for a later learning-outcome trial.
+
+The authors used SINE, a domain-agnostic pipeline that combines an open-weight language model with deterministic validation and repair. They fixed the pipeline around Qwen3 14B, then created 20 media-technology content seeds covering sampling, quantization and compression. Three generations per seed produced a controlled pool; after automated playability and validation filters, 48 scenarios remained. The validator checked reachability and content fidelity, but it could not decide whether a technical question felt causally necessary inside the plot. Each participant received one English-language episode intended to take five to ten minutes. The prompt configuration and content base were held constant so variation came mainly from narrative generation.
+
+Twenty-two adults with a STEM higher-education connection completed the online study: eight students, eleven university staff members and three recent graduates. They played 19 distinct scenario files, then answered a short German-language questionnaire. Ten positive Likert items measured narrative clarity, story-content coherence, engagement and length acceptance. Gameplay telemetry recorded duration and quiz responses, while an open prompt gathered comments. The analysis was descriptive because the sample was small.
+
+Clarity and length were the strongest results. Narrative clarity averaged 4.11 on the five-point scale and length acceptance 4.14; median playtime was 5.7 minutes. Engagement averaged 3.08, with its confidence interval spanning the neutral midpoint. Story-content coherence was the bottleneck at 2.92, with most of its confidence interval below neutral. First-try quiz accuracy averaged 0.71, and correlations between perceived quality and gameplay measures were small to moderate and not statistically significant. Low coherence therefore was not simply a reaction to getting answers wrong.
+
+Ten participants left comments. Six questioned the artificial in-story motivation for quiz prompts: characters appeared to demand technical knowledge without a believable narrative reason. Others noted abrupt changes of location or character, obvious distractors, repeated questions and missing story consequences for wrong answers. Positive remarks appeared alongside these criticisms, suggesting that participants accepted the interactive-fiction format while rejecting the seam between the plot and the quiz.
+
+The evidence is intentionally limited. This was a convenience sample from one institution, one STEM sub-domain, one pipeline-model configuration and one exposure. Adapted scales were not fully validated, qualitative coding used one unblinded rater and no learning outcome was measured. For AIEDHK, the design lesson is nevertheless concrete: technical playability and verbatim quiz fidelity are weak proxies for educational integration. A better pilot should make questions causally necessary to the story, give choices meaningful consequences, use semantic rather than verbatim content checks, review complete paths with educators and learners, and only then test independent knowledge and transfer.`,
+    keyTakeaways: [
+      "Twenty-two STEM higher-education participants rated AI-generated interactive fiction highly for narrative clarity and length, but only near neutral for engagement.",
+      "Story-content coherence was the weakest dimension, and six of ten commenters said quiz prompts lacked a believable reason to exist inside the story.",
+      "The pilot measured perceived quality rather than learning; integrated choices, meaningful consequences and independent outcome tests are still required.",
+    ],
+    whyItMatters: "For AIEDHK, the study separates a runnable learning game from a pedagogically integrated one: educational content must shape the story's decisions and consequences before engagement or learning claims are credible.",
+    sourceUrl: "https://arxiv.org/abs/2608.10818",
+    sourceUrls: [
+      { label: "arXiv paper: AI-Generated Interactive Fiction for Educational Use", url: "https://arxiv.org/abs/2608.10818" },
+      { label: "EDULEARN26 proceedings DOI", url: "https://doi.org/10.21125/edulearn.2026.1075" },
+      { label: "Open study data and stimuli", url: "https://doi.org/10.5281/zenodo.19857227" },
+    ],
+    createdAt: "2026-08-13",
+  },
+  {
     id: "aied-089",
     slug: "news-ai-actions-plugin-security-education-purpose",
     title: "Product news: ChatGPT adds reservations while Claude scans plugins, making purpose and permission part of AI literacy",

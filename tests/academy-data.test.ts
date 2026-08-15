@@ -4,13 +4,15 @@ import path from "node:path";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("Academy publishes exactly fifty ordered reviewed English lessons", () => {
+test("Academy publishes at least fifty-two ordered reviewed English lessons", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.equal(lessons.length, 50);
+  assert.ok(lessons.length >= 52);
   assert.deepEqual(
     lessons.map((lesson) => lesson.id),
     [
+      "academy-051",
+      "academy-052",
       "academy-049",
       "academy-050",
       "academy-047",
@@ -67,8 +69,8 @@ test("Academy publishes exactly fifty ordered reviewed English lessons", () => {
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 25);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 25);
+  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 26);
+  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 26);
   assert.deepEqual(
     new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016", "academy-017", "academy-018", "academy-019", "academy-020", "academy-021", "academy-022", "academy-023", "academy-024"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
@@ -100,6 +102,7 @@ test("Academy publishes the scheduled curriculum pair for every completed releas
     ["2026-08-08T08:00:00.000Z", ["academy-045", "academy-046"]],
     ["2026-08-10T08:00:00.000Z", ["academy-047", "academy-048"]],
     ["2026-08-12T08:00:00.000Z", ["academy-049", "academy-050"]],
+    ["2026-08-16T08:00:00.000Z", ["academy-051", "academy-052"]],
   ]);
 
   for (const [createdAt, expectedIds] of catchUpDates) {
@@ -163,15 +166,17 @@ test("each launch lesson has complete reviewed copy and one unique stable image 
     "Inquiry-Based Learning",
     "AI Safety and Risk Management",
     "Collaborative Learning",
+    "Benchmarking and Evaluation Design",
+    "Universal Design for Learning",
   ];
 
   assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));
-  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, 50);
-  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, 50);
-  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, 50);
-  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, 50);
-  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, 50);
-  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, 50);
+  assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, lessons.length);
+  assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, lessons.length);
+  assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, lessons.length);
+  assert.equal(new Set(lessons.map((lesson) => lesson.title)).size, lessons.length);
+  assert.equal(new Set(lessons.map((lesson) => lesson.image)).size, lessons.length);
+  assert.equal(new Set(lessons.map((lesson) => lesson.summaryAudio)).size, lessons.length);
 
   for (const lesson of lessons) {
     const wordCount = lesson.fullSummary.trim().split(/\s+/).length;
@@ -202,8 +207,8 @@ test("Academy alt text does not normalize banned particle-heavy or fake-person a
 test("Academy listing identifiers preserve the complete stable sequence for each track and locale", () => {
   const english = getAcademyLessons("en");
   const expectedByTrack = new Map([
-    ["ai-knowledge", { prefix: "AI Knowledge", count: 25 }],
-    ["educational-theory", { prefix: "Educational Theory", count: 25 }],
+    ["ai-knowledge", { prefix: "AI Knowledge", count: english.filter((lesson) => lesson.track === "ai-knowledge").length }],
+    ["educational-theory", { prefix: "Educational Theory", count: english.filter((lesson) => lesson.track === "educational-theory").length }],
   ]);
 
   for (const [track, expected] of expectedByTrack) {

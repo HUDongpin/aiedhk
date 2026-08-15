@@ -66,7 +66,7 @@ test("Academy uses six-card pages and pagination preserves every filter query", 
   const result = filterAcademyLessonList(lessons, { page: 1 });
 
   assert.equal(result.items.length, 6);
-  assert.equal(result.totalPages, 17);
+  assert.equal(result.totalPages, Math.ceil(lessons.length / 6));
   assert.equal(
     academyPageHref("en", { q: "memory", track: "educational-theory", level: "core" }, 2),
     "/en/academy?q=memory&track=educational-theory&level=core&page=2"

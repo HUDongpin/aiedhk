@@ -1822,5 +1822,79 @@ In education, a teacher can give groups a complex claim supported by incomplete 
     ],
     createdAt: "2026-08-12T08:00:00.000Z",
   },
+  {
+    id: "academy-051",
+    listingIdentifier: "AI Knowledge 26",
+    slug: "benchmarking-and-evaluation-design",
+    title: "Benchmarking and Evaluation Design",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["AI evaluation", "benchmark design", "educational validity"],
+    image: "/images/academy/covers/academy-051-benchmarking-and-evaluation-design.png",
+    imageAlt: "A Black woman educator points to one of three tablets showing matching geometric tasks while an East Asian man and a hijab-wearing woman compare results beside a hand-drawn line chart in a bright Hong Kong workshop",
+    summaryAudio: "/audio/academy/academy-051-benchmarking-and-evaluation-design-summary.m4a",
+    summaryAudioTitle: "Listen to Benchmarking and Evaluation Design",
+    shortSummary: "How to design AI evaluations whose tasks, data, metrics, comparisons, and uncertainty support a specific educational decision rather than a misleading score.",
+    fullSummary: `A benchmark is a standardized collection of tasks, cases, procedures, and scoring rules used to compare AI systems under stated conditions. Evaluation is the broader process of deciding what should be measured, why it matters, which evidence is credible, and how results will inform action. A benchmark score can be useful, but it is never the system itself. It represents performance on selected items, with particular prompts, settings, graders, and metrics. Changing any of these can change the result, so a leaderboard position cannot establish that a model is best for every educational purpose.
+
+Good evaluation design begins with a claim and a decision. Evaluators specify the intended use, users, context, consequences, and capabilities or risks that matter. A writing-feedback tool might need evidence about factual accuracy, feedback quality, reading level, bias, privacy, and teacher control. A benchmark built only from short multiple-choice questions would miss several of those requirements. The evaluation should therefore sample tasks that resemble the intended setting, include relevant languages and learner populations, and document important conditions such as model version, prompt format, tools, retrieval sources, and human review.
+
+Metrics must match the construct. Exact-match accuracy works for some questions, while open responses may require a rubric, expert judgment, or several complementary measures. HELM demonstrates a multi-metric approach that considers factors beyond accuracy, including calibration, robustness, fairness, bias, toxicity, and efficiency. Tradeoffs should remain visible instead of being collapsed into one unexplained total. Test sets also need protection from leakage and excessive tuning. If examples or close variants appear in training data, or teams repeatedly redesign against the same test results, the score may exaggerate performance on genuinely new cases.
+
+AI outputs can vary across runs, items differ in difficulty, and human raters may disagree. Results are therefore estimates with uncertainty. NIST distinguishes performance on a fixed benchmark from generalized performance across a wider population of related items. Repeated trials, confidence intervals, subgroup analysis, and transparent statistical assumptions can help people judge whether an observed difference is meaningful. Evaluators should also inspect failures qualitatively, because two systems with the same average may fail in very different ways. Independent review and post-deployment monitoring matter when real conditions change.
+
+In education, learners can evaluate three fictional tutoring systems for one classroom purpose. They define success before seeing results, build a small set of representative cases, choose separate measures for correctness, explanation quality, accessibility, and harmful behavior, then run each system consistently. Groups compare averages, variation, subgroup patterns, and concrete failures. They finally recommend adoption, limitation, redesign, or rejection and state what the benchmark cannot prove. This activity teaches that evaluation is an argument from evidence, not a contest to produce the highest number. A responsible benchmark makes its intended claim, scope, uncertainty, and limitations clear enough for others to challenge and reproduce.`,
+    coreIdeas: [
+      "A benchmark compares systems on standardized tasks, while evaluation connects those results to a specific claim, use context, affected population, and decision.",
+      "Representative cases, construct-aligned metrics, controlled procedures, protected test data, multiple criteria, and documented system settings make comparisons more valid and reproducible.",
+      "Repeated trials, uncertainty estimates, subgroup analysis, qualitative failure review, independent assessment, and monitoring limit overconfident conclusions from one average score.",
+    ],
+    educationConnection: "Ask learners to define a classroom AI decision, build representative test cases and multiple metrics, compare three systems consistently, inspect uncertainty and failures, and state what their evidence cannot support.",
+    relatedConcepts: ["Construct validity", "Test data leakage", "Uncertainty quantification"],
+    sourceUrls: [
+      { label: "NIST AI 800-3: Expanding the AI Evaluation Toolbox", url: "https://doi.org/10.6028/NIST.AI.800-3" },
+      { label: "Stanford CRFM: Holistic Evaluation of Language Models", url: "https://arxiv.org/abs/2211.09110" },
+      { label: "NIST AI RMF: Measure Function", url: "https://airc.nist.gov/airmf-resources/airmf/5-sec-core/" },
+      { label: "NIST: Generative AI Profile", url: "https://doi.org/10.6028/NIST.AI.600-1" },
+    ],
+    createdAt: "2026-08-16T08:00:00.000Z",
+  },
+  {
+    id: "academy-052",
+    listingIdentifier: "Educational Theory 26",
+    slug: "universal-design-for-learning",
+    title: "Universal Design for Learning",
+    track: "educational-theory",
+    level: "core",
+    tags: ["Universal Design for Learning", "learner variability", "inclusive design"],
+    image: "/images/academy/covers/academy-052-universal-design-for-learning.png",
+    imageAlt: "A Black man teacher guides a wheelchair-using White woman and a South Asian man with headphones as they explore a raised solar-system model and matching orbit board in a warm learning studio",
+    summaryAudio: "/audio/academy/academy-052-universal-design-for-learning-summary.m4a",
+    summaryAudioTitle: "Listen to Universal Design for Learning",
+    shortSummary: "How proactive design can reduce barriers through flexible engagement, representation, and action while keeping learning goals rigorous and evaluating whether options actually help.",
+    fullSummary: `Universal Design for Learning, or UDL, is a framework for designing goals, assessments, methods, materials, and environments in anticipation of learner variability. Instead of waiting for one standard pathway to exclude someone and then repairing it, educators examine likely barriers early and create purposeful options. UDL does not mean making every lesson different for every learner, lowering expectations, or offering unlimited choice. It aims to preserve a worthwhile learning goal while increasing the ways learners can access the task, participate, use support, and demonstrate relevant understanding.
+
+CAST Guidelines 3.0 organizes UDL around multiple means of engagement, representation, and action and expression. Engagement concerns access to purpose, belonging, interest, effort, persistence, collaboration, and emotional capacity. Representation concerns how learners perceive and make sense of language, symbols, media, perspectives, and knowledge. Action and expression concerns interaction, communication, strategy, and ways to show learning. These areas interact rather than forming a fixed sequence. The current guidelines emphasize learner agency and barriers connected to identity, bias, and exclusion as well as disability and access.
+
+Effective options remain aligned with the goal. If the goal is to explain planetary motion, learners might inspect a raised orbit model, hear a carefully described explanation, and study a clear diagram. They might then explain the relationship orally, in writing, through a labeled model, or with accessible technology, provided each response supplies comparable evidence about the target concept. If decoding scientific notation is itself the goal, removing all notation would change what is being assessed. Teachers therefore distinguish the intended knowledge or skill from incidental demands that block learners without contributing useful evidence.
+
+UDL complements, but does not replace, accessibility standards, assistive technology, individualized accommodations, specialist expertise, or direct teaching. More formats do not automatically create better learning, and UDL should not be confused with assigning instruction according to unsupported learning-style categories. Options need usable navigation, accurate captions and descriptions, compatible documents, clear language, explicit instruction, and feedback. Teachers should ask learners which barriers remain and examine participation and learning evidence. CAST describes the guidelines as suggestions, not a prescription or checklist.
+
+Research warrants both interest and caution. A meta-analysis of controlled studies reported a moderate average achievement benefit for UDL-based instruction, but the included interventions, learners, settings, and implementation varied. Critical reviews also question whether all claims attached to the guidelines have direct empirical support. Educators should therefore treat UDL as a design framework to test thoughtfully, not as an automatic guarantee. In education, learners can redesign one science activity by naming the fixed goal, identifying barriers, creating two purposeful access or response options, and checking each option against the same success criteria. They then gather user feedback and performance evidence, revise the design, and document which barriers still require individual support.`,
+    coreIdeas: [
+      "UDL proactively designs for learner variability by separating rigorous learning goals from avoidable barriers in methods, materials, environments, and assessments.",
+      "Multiple means of engagement, representation, and action and expression provide purposeful options that must remain aligned with the same learning goal and success evidence.",
+      "UDL complements accessibility and individualized support, requires explicit teaching and evaluation, and should be applied as a revisable framework rather than a checklist or guarantee.",
+    ],
+    educationConnection: "Have learners identify the fixed goal and avoidable barriers in one activity, create aligned options for access and response, test them with users and common criteria, then document remaining support needs.",
+    relatedConcepts: ["Accessibility", "Learner agency", "Inclusive assessment"],
+    sourceUrls: [
+      { label: "CAST: Universal Design for Learning Guidelines 3.0", url: "https://udlguidelines.cast.org/" },
+      { label: "CAST: UDL Guidelines Frequently Asked Questions", url: "https://udlguidelines.cast.org/more/frequently-asked-questions/" },
+      { label: "King-Sears and colleagues: UDL Achievement Meta-Analysis", url: "https://doi.org/10.1016/j.tate.2022.103956" },
+      { label: "Boysen: Critical Analysis of the UDL Evidence Base", url: "https://doi.org/10.1177/14782103241255428" },
+    ],
+    createdAt: "2026-08-16T08:00:00.000Z",
+  },
 
 ];

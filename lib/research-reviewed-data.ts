@@ -12,6 +12,91 @@ import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-093",
+    slug: "news-ai-account-context-literacy",
+    title: "Product news: ChatGPT quizzes and Claude Code 2.1.233 sharpen the need for supervised AI learning workflows",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "ChatGPT interactive quizzes", "Claude Code 2.1.233", "Gemini for Education", "supervised AI workflows"],
+    image: "/images/research/covers/aied-093-ai-account-context-literacy-2026.png",
+    imageAlt: "A university instructor and two students compare quiz, cloud-session and managed-learning safeguards across three laptops in a bright classroom",
+    summaryImage: "/images/research/summary/aied-093-ai-account-context-literacy-summary.png",
+    summaryImageAlt: "A university instructor and two students compare quiz, cloud-session and managed-learning safeguards across three laptops in a bright classroom",
+    summaryAudio: "/audio/research/aied-093-ai-account-context-literacy-summary.m4a",
+    summaryAudioTitle: "Listen to the product news report",
+    shortSummary: "Product news: ChatGPT added interactive quizzes for consumer and Edu plans, project-memory controls and a Think option for Free and Go users. Claude Code 2.1.233 strengthened cloud-session continuity, serverless MCP connections, accessibility and resource limits. Gemini for Education supplies the managed school context for teaching, learning and work. Together, the updates make supervision, evidence and learner agency more important than feature availability alone.",
+    fullSummary: `This product-news report connects three current developments around supervised AI learning workflows. OpenAI's August 14 ChatGPT update adds interactive quizzes and more control over project memory. Anthropic's August 14 Claude Code 2.1.233 release improves the reliability, accountability and accessibility of agent work. Google's Gemini for Education provides a managed education environment for teaching, learning and institutional work. The shared question is not whether these systems can complete more tasks, but whether learners and educators can see, challenge and control how the work is done.
+
+OpenAI says users can now ask ChatGPT to quiz them and answer interactive questions directly in a conversation. The feature is available on consumer plans and Edu plans on web and mobile. Eligible unshared projects can also switch between default and project-only memory after creation, while shared projects remain project-only. Free and Go users on the web gain a Think option for harder questions. These changes may support retrieval practice and more deliberate reasoning, but a quiz interface does not establish that questions are accurate, appropriately difficult or aligned with a curriculum. Teachers still need to review the prompts, require explanations for answers and check whether later performance transfers without assistance.
+
+Claude Code 2.1.233 addresses a different layer of supervision. It adds GitLab merge-request support to worktree workflows and an opt-in gateway setting that can forward signed-in user identity so a proxy can attribute spending. Linux administrators can set memory limits for Bash commands, reducing the chance that a runaway build stalls a session. The release also fixes cloud sessions being marked lost while awaiting permission, repeated MCP reconnections against serverless services, and missing notification hooks for permission prompts in desktop and editor environments. Screen-reader interaction with the effort selector is improved, and argument substitution is hardened against unintended template expansion.
+
+For programming education and research labs, these details matter because an agent's output is only one part of the evidence. A sound workflow should preserve who initiated the task, which branch or merge request was used, what resource limits applied, which permission was requested and where a person reviewed the result. Reliability improvements do not prove code correctness or learning; they make it more feasible to maintain an auditable process.
+
+Gemini for Education offers the explicit institutional comparison. Google describes a no-cost service for qualifying institutions that supports teaching, learning and work, with administrator controls and reporting. Learners can create quizzes, practice tests, study guides and prototypes in Gemini Canvas, while the service is covered by education terms and Google says data is not human reviewed or used to train AI models. Those are product boundaries, not independent evidence of educational benefit.
+
+For Hong Kong schools and universities, the practical response is to pair every AI workflow with a supervision record. Students can save quiz questions, corrections and unaided follow-up performance. Coding teams can record identity, permissions, resource limits, branches and human approvals. Administrators can document which managed service and data rules apply. The opportunity is richer practice and more dependable agent work; the safeguard is making judgment, provenance and independent mastery visible.`,
+    keyTakeaways: [
+      "Product news: ChatGPT added interactive conversational quizzes for consumer and Edu plans, editable project-memory settings and a Think option for Free and Go users.",
+      "Claude Code 2.1.233 strengthened cloud-session continuity, serverless MCP connections, resource controls, permission notifications and screen-reader interaction.",
+      "Gemini for Education supports managed teaching, learning and work; schools should still make prompts, evidence, permissions, data treatment and human review visible.",
+    ],
+    whyItMatters: "For AIEDHK, this product news makes supervised AI workflow literacy concrete: feature access should be paired with visible evidence, permissions, provenance, human review and independent demonstrations of learning.",
+    sourceUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.233",
+    sourceUrls: [
+      { label: "OpenAI: ChatGPT release notes for August 14, 2026", url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes" },
+      { label: "Anthropic: Claude Code 2.1.233 release", url: "https://github.com/anthropics/claude-code/releases/tag/v2.1.233" },
+      { label: "Anthropic: Claude Code changelog", url: "https://code.claude.com/docs/en/changelog" },
+      { label: "Google for Education: Gemini for Education", url: "https://edu.google.com/ai/gemini-for-education/" },
+    ],
+    createdAt: "2026-08-14",
+  },
+  {
+    id: "aied-092",
+    slug: "socratic-tutor-withholding-contract",
+    title: "A guarded LLM tutor reached its withholding targets in scripted tests, but student learning remains unmeasured",
+    authors: ["Yusuf Pisan"],
+    venue: "arXiv preprint",
+    year: 2026,
+    type: "tool-dataset",
+    tags: ["Socratic tutoring", "answer withholding", "programming education", "LLM guardrails", "automated evaluation"],
+    image: "/images/research/covers/aied-092-socratic-tutor-withholding-contract-2026.png",
+    imageAlt: "A Black university student debugs from her own notes while an instructor supports her beside a graduated cyan help ladder whose final solution rung is locked",
+    summaryImage: "/images/research/summary/aied-092-socratic-tutor-withholding-contract-summary.png",
+    summaryImageAlt: "A Black university student debugs from her own notes while an instructor supports her beside a graduated cyan help ladder whose final solution rung is locked",
+    summaryAudio: "/audio/research/aied-092-socratic-tutor-withholding-contract-summary.m4a",
+    summaryAudioTitle: "Listen to the paper summary",
+    shortSummary: "Pisan reports a deployed programming tutor that places an eight-rung help ceiling outside the generating LLM, strips solution code deterministically and judges risky replies against a per-turn contract. Across roughly two dozen scripted turns per calibration run, earnest-reply revisions fell from 43% to 0% and audited ceiling compliance rose from about 77% to 100% after measurement and policy defects were repaired. The evaluation used synthetic personas, not students, so it establishes contract compliance rather than durable learning.",
+    fullSummary: `Yusuf Pisan studies a counterintuitive requirement for an educational language model: a capable tutor sometimes needs to withhold an answer it already knows. The August 2026 arXiv preprint reports a deployed architecture for undergraduate data-structures courses and a method for calibrating Socratic behavior. Its evidence concerns engineering compliance under scripted pressure, not student learning. No human participants or student data were used in the reported evaluation.
+
+The system represents help as an eight-rung ladder. It begins with acknowledgement and clarification, then moves through relevant concepts, a leading question, a verbal approach, a worked example on another problem and incomplete pseudocode. A full compilable solution sits at the final rung and requires an instructor-controlled mode. For each turn, the system computes the maximum rung the tutor may use.
+
+The binding limit is enforced outside the generating model. A non-LLM policy core reads trusted learner state but never the student's prose, so prompt injection cannot directly raise the help ceiling. Mastery estimates, prerequisites and exam state shape the contract. A deterministic detector removes C++ solution code, including some encoded attempts. On risky turns, a separate LLM judge checks the contract, draft and retrieved sources without seeing the raw student request; it can allow, request revision or block. Compiler and test results provide correctness facts outside the model, and the system logs the contract, verdict, help level, latency and cost.
+
+Calibration combines more than five hundred deterministic tests with four acceptance gates: no solution reveal, limited over-blocking of earnest help, at least 95% compliance with the help ceiling under adversarial pressure, and no exam compromise through injection or grader failure. Four scripted personas represent an earnest but stuck learner, a repeated answer seeker, a social engineer and a prompt injector. A billed live loop drives roughly two dozen turns through the production pipeline and a stronger model re-audits risky replies.
+
+The initial numbers exposed why diagnostic evidence matters. Earnest-reply revisions were 43%, while measured ceiling compliance was 54%. The auditor had not received the retrieved sources, so it mislabeled legitimate citations; the author estimates true initial compliance was about 77%. Persisting sources, tightening the code detector and adjusting the help floor for code-adjacent turns raised measured compliance to 96%, but earnest revisions remained at 43%. Recording a reason for every rejection then exposed fabricated citations, a missed code-attempt route, prose that named the exact bug and a judge that demanded citations for general programming facts. The final scripted run reported 0% earnest revisions and 100% ceiling compliance, while deterministic reveal and exam gates also passed.
+
+These results remain narrow. The suite is small and synthetic, both judge and auditor are LLMs, and known detector blind spots remain. The study did not measure usability, delayed transfer or tool-removed performance. A planned controlled study is therefore essential.
+
+For AIEDHK, the transferable lesson is to put irreversible pedagogical limits in inspectable code, test both adversarial and earnest cases, diagnose failures by cause and then measure whether learners can solve or explain the task without the tutor. Contract compliance is a prerequisite for the intended pedagogy, not evidence that the pedagogy improved learning.`,
+    keyTakeaways: [
+      "The deployed tutor computes an eight-rung help ceiling in a non-LLM policy core, then uses a deterministic code detector and an LLM judge to enforce each turn's contract.",
+      "Across small scripted suites, earnest-reply revisions fell from 43% to 0% and audited ceiling compliance rose from about 77% to 100% after measurement, grounding and routing defects were diagnosed by cause.",
+      "No students participated in the reported evaluation, so the final pass rates show synthetic contract compliance rather than learning, transfer, usability or long-term safety.",
+    ],
+    whyItMatters: "For AIEDHK, the paper shows how to make a pedagogical guardrail observable and testable outside the model, while reinforcing that compliance gates must be followed by independent, delayed learning evidence.",
+    sourceUrl: "https://arxiv.org/abs/2608.12292",
+    sourceUrls: [
+      { label: "arXiv paper: Teaching a Large Language Model Tutor to Withhold the Answer", url: "https://arxiv.org/abs/2608.12292" },
+      { label: "Full HTML paper", url: "https://arxiv.org/html/2608.12292" },
+      { label: "Prior randomized learning study cited by the paper", url: "https://doi.org/10.1073/pnas.2422633122" },
+    ],
+    createdAt: "2026-08-14",
+  },
+  {
     id: "aied-091",
     slug: "news-source-grounded-ai-workflows-education",
     title: "Product news: ChatGPT, Claude Code and Gemini Classroom make source-grounded AI work easier to inspect",

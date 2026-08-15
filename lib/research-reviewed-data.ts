@@ -12,6 +12,93 @@ import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-095",
+    slug: "news-reasoning-routing-supervised-agent-workflows",
+    title: "Product news: GPT-5.6 Sol Pro and Claude Code's Fable advisor make AI routing part of workflow literacy",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "GPT-5.6 Sol Pro", "Claude Code 2.1.232", "Fable 5 advisor", "Gemini for Education"],
+    image: "/images/research/covers/aied-095-reasoning-routing-supervised-agent-workflows-2026.png",
+    imageAlt: "A lecturer and two university students review three transparent workflow lanes for reasoning effort, an AI advisor and institution-managed learning in a bright computer lab",
+    summaryImage: "/images/research/summary/aied-095-reasoning-routing-supervised-agent-workflows-summary.png",
+    summaryImageAlt: "A lecturer and two university students review three transparent workflow lanes for reasoning effort, an AI advisor and institution-managed learning in a bright computer lab",
+    summaryAudio: "/audio/research/aied-095-reasoning-routing-supervised-agent-workflows-summary.m4a",
+    summaryAudioTitle: "Listen to the product news report",
+    shortSummary: "Product news: OpenAI's current ChatGPT guidance distinguishes GPT-5.6 Sol, Sol Pro, Terra and Luna by reasoning level, plan and product; Claude Code 2.1.232 turns on inherited-context subagent forking and restores Fable 5 as an optional advisor; and Gemini for Education frames managed AI across teaching, learning and institutional work. Together, the updates make model routing, context inheritance, cost consent and human review visible parts of AI workflow literacy.",
+    fullSummary: `This product-news report connects three current approaches to routing AI work. OpenAI's GPT-5.6 guidance, updated on August 15, maps models and reasoning levels to plans and products. Anthropic's Claude Code 2.1.232 changes how coding sessions delegate context and consult Fable 5. Google frames Gemini for Education across teaching, learning and institutional work. The common educational issue is whether users can tell which system handled a task, what context it inherited and where human judgment remains necessary.
+
+OpenAI says GPT-5.6 Sol supports complex work across coding, research, science, computer use and design, while Sol Pro is its highest-capability option for difficult or longer-running workflows. Eligible paid ChatGPT plans can choose Medium, High and Extra High reasoning with Sol; Pro uses Sol Pro. Free and Go users instead receive Luna and can select Think for harder questions. Terra, Sol and Luna also have different availability in Work, Codex and the API. OpenAI lists ChatGPT desktop 26.707.30751 and Codex CLI 0.144.0 as minimum versions for GPT-5.6 in Codex.
+
+These product labels are not learning levels. More reasoning can increase time, cost and apparent sophistication without ensuring that a response is correct, curriculum-aligned or educationally helpful. A course using several models should record the selected model, reasoning setting, account or workspace, source materials and any fallback that occurred. Students should still explain and verify the result without relying on the interface label as evidence.
+
+Anthropic's Claude Code 2.1.232 makes context routing more explicit. Subagent forking is on by default: a fork-type subagent inherits the conversation and prompt cache, while ordinary non-teammate agents launched interactively run in the background. Users can mention another named session and send it a message. For organizations with access, Fable 5 is again available as an advisor, with usage-credit consent configured through the model command. The same release strengthens repository trust, credential redaction and managed-policy validation.
+
+For student coding teams and research labs, inherited context can reduce repeated setup, but it can also carry stale assumptions, sensitive details or an incorrect plan into another agent. An advisor can provide a second view, but it is not an independent replication when both systems receive overlapping context. A defensible workflow should identify the parent session, inherited evidence, delegated scope, reviewer and acceptance test, while making any paid-model consent visible.
+
+Gemini for Education supplies the institutional comparison. Google describes one managed environment for educators, students and staff to teach, learn and work: planning lessons and assessments, receiving explanations and writing feedback, and supporting communications, administration and research. It also states that education data is not human reviewed or used to train AI models and offers administrator controls and reporting. Those are vendor-described product boundaries, not independent outcome evidence.
+
+For Hong Kong schools and universities, the practical pilot is a routing ledger. Record which model and reasoning level were used, what context moved between agents, who approved paid or high-capability routes, which institutional data rules applied and how a learner independently checked the output. The opportunity is flexible assistance; the safeguard is keeping routing, provenance, cost and mastery inspectable.`,
+    keyTakeaways: [
+      "Product news: GPT-5.6 Sol, Sol Pro, Terra and Luna differ by reasoning level, plan and product, so model and fallback routing should be recorded rather than inferred from a polished answer.",
+      "Claude Code 2.1.232 enables inherited-context subagent forking by default and restores Fable 5 as an optional advisor, making context boundaries and usage-credit consent important review points.",
+      "Gemini for Education organizes managed AI around teaching, learning and work; institutions should pair those purposes with provenance, human review and unaided evidence of mastery.",
+    ],
+    whyItMatters: "For AIEDHK, this product news turns model routing into a teachable governance skill: learners and institutions should be able to see which model acted, what context it inherited, who approved the route and how the output was independently checked.",
+    sourceUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.232",
+    sourceUrls: [
+      { label: "OpenAI: GPT-5.6 in ChatGPT", url: "https://help.openai.com/en/articles/20001354-gpt-5-6-in-chatgpt-codex-and-the-api" },
+      { label: "Anthropic: Claude Code 2.1.232 release", url: "https://github.com/anthropics/claude-code/releases/tag/v2.1.232" },
+      { label: "Anthropic: Claude Fable 5 and Claude Mythos 5", url: "https://www.anthropic.com/news/claude-fable-5-mythos-5" },
+      { label: "Google for Education: Gemini for Education", url: "https://edu.google.com/ai/gemini-for-education/" },
+    ],
+    createdAt: "2026-08-16",
+  },
+  {
+    id: "aied-094",
+    slug: "principal-trait-analysis-ai-collaboration-skills",
+    title: "Principal Trait Analysis linked AI-tutor dialogue patterns to outcomes, but not yet to transferable skills",
+    authors: ["Hunter McNichols", "Kai Du", "Andrew Lan"],
+    venue: "arXiv preprint",
+    year: 2026,
+    type: "tool-dataset",
+    tags: ["Principal Trait Analysis", "AI tutoring dialogue", "human-AI collaboration", "AI literacy assessment", "learning analytics"],
+    image: "/images/research/covers/aied-094-principal-trait-analysis-2026.png",
+    imageAlt: "A diverse group of university students and a lecturer examine clustered dialogue cards, a ten-trait matrix and an exam-progress chart in a bright learning analytics studio",
+    summaryImage: "/images/research/summary/aied-094-principal-trait-analysis-summary.png",
+    summaryImageAlt: "A diverse group of university students and a lecturer examine clustered dialogue cards, a ten-trait matrix and an exam-progress chart in a bright learning analytics studio",
+    summaryAudio: "/audio/research/aied-094-principal-trait-analysis-summary.m4a",
+    summaryAudioTitle: "Listen to the paper summary",
+    shortSummary: "McNichols, Du and Lan introduce Principal Trait Analysis, an LLM-assisted pipeline that turns human-AI conversation traces into interpretable behavioral traits. On 1,540 university AI-tutor sessions and 2,774 professional coding-agent sessions, selected traits added explanatory or predictive signal beyond prior performance. Conceptual questioning aligned positively with some exam outcomes, but cross-semester inconsistency, contradictory coefficients and mostly flat temporal patterns mean the traits cannot yet be treated as transferable AI collaboration skills.",
+    fullSummary: `Hunter McNichols, Kai Du and Andrew Lan ask whether effective human-AI collaboration can be studied from conversation traces without fixing a skill rubric in advance. Their August 2026 preprint introduces Principal Trait Analysis, or PTA, a data-driven pipeline inspired by principal component analysis. It produces interpretable descriptions of user behavior and scores each interaction against them. The authors call the outputs traits, not established skills, because a skill should improve with practice and generalize across tasks.
+
+PTA has four stages. First, a language model reads each session and proposes up to five observations about the human collaborator. Some passes are generic; others use theory lenses. For the student data, those lenses include self-regulated learning with ICAP, AI fluency, question sophistication and academic help-seeking. Second, text embeddings and clustering reduce thousands of observations to named candidate traits. Third, an LLM judge scores every session-trait pair from one to five. Finally, a greedy selection procedure chooses ten principal traits that capture score variance while limiting redundancy in both scores and textual meaning.
+
+The educational dataset, StudyChat, contains 1,540 AI-tutor conversations from 171 students in a university programming-based artificial-intelligence course across two semesters. Students completed seven assignments and three exams. PTA averaged traits from conversations before the second and third exams, giving 342 target outcomes. Because this sample was too small for a held-out split, the exam analysis is explanatory and in-sample. A second dataset contains 2,774 sessions between professional developers and coding agents; that larger analysis used collaborator-separated cross-validation and a difficulty-adjusted success model.
+
+Against a prior-performance baseline, ten theory-lens PTA traits added 0.103 R-squared in the Fall student cohort, with p=.028, but 0.066 in Spring, with p=.059. Generic traits added 0.102 in Fall, p=.030, and 0.056 in Spring, p=.132. Broad dialogue-act counts and Bloom-level scores were not significant additions in either semester. On the professional dataset, the trait sets added 0.035 to 0.048 held-out R-squared, both with p<.001.
+
+Interpretation requires restraint. Conceptual-understanding orientation and richly contextualized questions were positively associated with exam outcomes. Several apparently desirable behaviors, including active feedback engagement, explicit uncertainty and task-specific context, had negative coefficients. The authors suggest ability differences, help-seeking patterns, external confounding or over-aggressive clustering may explain such contradictions. A trait's wording therefore should not be converted directly into advice or a grading criterion.
+
+Temporal evidence is also limited. Conceptual-understanding orientation rose over the semester, but later assignments may simply have invited that behavior. Most other student traits were stable, and professional traits were stable or slightly declining. The method also relies on LLM-generated observations and judgments, lacks human validation of the final taxonomy and was tested only in coding contexts.
+
+For AIEDHK, PTA is most useful as a hypothesis generator for learning analytics. Institutions can derive candidate behaviors from current logs, preregister outcome tests, compare cohorts and inspect contradictory coefficients. Before calling any trait an AI literacy skill, researchers should demonstrate human coding validity, cross-course transfer, change with instruction and better prediction on genuinely held-out learners.`,
+    keyTakeaways: [
+      "PTA uses LLM observations, text clustering, session-level judgment and variance-aware selection to derive ten interpretable traits without fixing the taxonomy in advance.",
+      "The student analysis covered 1,540 tutor sessions from 171 learners; trait sets added significant explanatory value in Fall but did not generalize significantly to Spring.",
+      "Contradictory coefficients, in-sample exam models and mostly flat temporal patterns mean the outputs are candidate behavioral hypotheses, not validated or transferable AI literacy skills.",
+    ],
+    whyItMatters: "For AIEDHK, PTA offers a scalable way to generate hypotheses from AI-use logs, but its cautions are equally important: institutions should validate traits with humans, held-out learners, instructional change and cross-context transfer before using them for teaching or assessment.",
+    sourceUrl: "https://arxiv.org/abs/2608.11460",
+    sourceUrls: [
+      { label: "arXiv paper: Principal Trait Analysis", url: "https://arxiv.org/abs/2608.11460" },
+      { label: "Full HTML paper", url: "https://arxiv.org/html/2608.11460" },
+      { label: "StudyChat dataset paper cited by the authors", url: "https://doi.org/10.1145/3770668.3799273" },
+    ],
+    createdAt: "2026-08-16",
+  },
+  {
     id: "aied-093",
     slug: "news-ai-account-context-literacy",
     title: "Product news: ChatGPT quizzes and Claude Code 2.1.233 sharpen the need for supervised AI learning workflows",

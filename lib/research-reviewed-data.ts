@@ -12,6 +12,91 @@ import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill
 
 export const reviewedResearchPapers: ResearchPaper[] = [
   {
+    id: "aied-097",
+    slug: "news-connected-source-permission-review-workflows",
+    title: "Product news: ChatGPT's connected Drive Library and Claude Code 2.1.235 make source and permission review visible",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "ChatGPT Google Drive Library", "Claude Code 2.1.235", "source provenance", "Gemini for Education"],
+    image: "/images/research/covers/aied-097-connected-source-permission-review-workflows-2026.png",
+    imageAlt: "A faculty researcher and two university students inspect connected source cards, a permission checklist and an evidence map around a round table in a sunlit library",
+    summaryImage: "/images/research/summary/aied-097-connected-source-permission-review-workflows-summary.png",
+    summaryImageAlt: "A faculty researcher and two university students inspect connected source cards, a permission checklist and an evidence map around a round table in a sunlit library",
+    summaryAudio: "/audio/research/aied-097-connected-source-permission-review-workflows-summary.m4a",
+    summaryAudioTitle: "Listen to the product news report",
+    shortSummary: "Product news: ChatGPT now exposes connected Google Drive files in Library and beside a conversation; Claude Code 2.1.235 improves permission clarity, prompt-cache integrity and notebook-change review; and Gemini for Education frames connected AI around teaching, learning and institutional work. Together, the products make source boundaries, authorization and human verification central to AI workflow literacy.",
+    fullSummary: `This product-news report connects three current approaches to source-grounded AI work. OpenAI's August 13 ChatGPT update brings connected Google Drive content into Library. Anthropic's August 18 Claude Code 2.1.235 release tightens prompt, permission and notebook review behavior. Google positions Gemini for Education across teaching, learning and institutional work. The shared educational issue is whether users can identify the evidence an AI used, the authority it received and the review required before its output becomes course or research work.
+
+OpenAI says users with the Google Drive plugin connected can browse My Drive and files or folders shared directly with them from ChatGPT's Library. A file can be added from the composer or with an @ mention, and supported Google Docs, Sheets and Slides can remain open beside the conversation while ChatGPT summarizes, compares or creates material. Where supported and authorized, ChatGPT can update the source file. The rollout covers Plus, Pro, Enterprise, Edu, Healthcare and Business users on the web, but it initially excludes Shared Drives and some collaboration features.
+
+For education, convenience should not erase provenance. A cited Drive file may itself be outdated, shared under the wrong permissions or detached from a course's canonical version. When an AI can write back, the difference between reading, drafting and changing a source also becomes consequential. A defensible workflow should record the file owner, version, sharing scope, requested operation, generated change and person who accepted it.
+
+Claude Code 2.1.235 addresses related controls in an agentic coding environment. The release fixes full prompt-cache invalidation when a language server reconnects, reducing unintended loss of working context. It corrects a keyboard path that could approve an edit and grant session-wide permission when a user meant to close a comment field. Notebook approval dialogs now explain when existing cell content cannot be read instead of silently omitting it. Permission dialogs more closely match the scope of the grant, and large cross-session messages fail explicitly rather than disappearing. Optional prompt spellcheck and lower background cloud-session resource use are smaller usability additions.
+
+These changes do not prove that an agent's code or analysis is correct. They make the review boundary more legible. Students and researchers should still inspect the exact diff, run an independent test and separate a session's cached assumptions from evidence in the repository or dataset.
+
+Gemini for Education supplies the institutional comparison. Google describes educators using it to plan lessons, differentiate materials and create assessments; learners using it for explanations, practice and writing feedback; and staff using it for communications, administration and research. Google also describes administrator controls and education data that is not human reviewed or used to train AI models. Those are vendor-described product and data boundaries, not independent evidence of learning effectiveness.
+
+For Hong Kong schools and universities, the practical response is a source-and-permission ledger. Record each connected source, its owner and version, what the AI was allowed to read or change, which model or workspace acted, and the human check that followed. Connected tools can reduce friction, but educational trust depends on keeping evidence, authority and acceptance visible.`,
+    keyTakeaways: [
+      "Product news: ChatGPT's Google Drive connection can surface files in Library and beside a conversation, so source ownership, version and write-back authority should be recorded.",
+      "Claude Code 2.1.235 improves permission scope, notebook approval visibility and prompt-cache integrity, but users still need exact-diff review and independent tests.",
+      "Gemini for Education organizes AI around teaching, learning and work; institutions should pair those purposes with visible source provenance, authorization and human acceptance.",
+    ],
+    whyItMatters: "For AIEDHK, this product news turns connected-source governance into a teachable workflow: learners and institutions should be able to show what evidence was connected, what action was authorized, which context the AI used and how a person verified the result.",
+    sourceUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.235",
+    sourceUrls: [
+      { label: "OpenAI: ChatGPT release notes", url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes" },
+      { label: "Anthropic: Claude Code 2.1.235 release", url: "https://github.com/anthropics/claude-code/releases/tag/v2.1.235" },
+      { label: "Google for Education: Gemini for Education", url: "https://edu.google.com/ai/gemini-for-education/" },
+    ],
+    createdAt: "2026-08-19",
+  },
+  {
+    id: "aied-096",
+    slug: "lecture-video-curation-course-grounded-ai-help",
+    title: "Lecture-video curation grounded AI help in course material, but the pilot measured engagement rather than learning",
+    authors: ["Owen Tang", "Alexandra Vassar", "Jake Renzella"],
+    venue: "arXiv preprint",
+    year: 2026,
+    type: "tool-dataset",
+    tags: ["lecture video curation", "CS1", "retrieval-augmented generation", "course-grounded AI", "learning analytics"],
+    image: "/images/research/covers/aied-096-lecture-video-curation-course-grounded-ai-2026.png",
+    imageAlt: "A programming lecturer and two university students review an educator-verified lecture clip timeline, code diagrams and study notes in a bright computing studio",
+    summaryImage: "/images/research/summary/aied-096-lecture-video-curation-course-grounded-ai-summary.png",
+    summaryImageAlt: "A programming lecturer and two university students review an educator-verified lecture clip timeline, code diagrams and study notes in a bright computing studio",
+    summaryAudio: "/audio/research/aied-096-lecture-video-curation-course-grounded-ai-summary.m4a",
+    summaryAudioTitle: "Listen to the paper summary",
+    shortSummary: "Tang, Vassar and Renzella tested an alternative to open-ended AI answers: use LLMs to retrieve short, educator-delivered lecture clips for novice programming questions. Proprietary models produced relevant and sufficient selections across five benchmark queries, and a 903-student pilot showed repeat use and positive voluntary ratings. However, low overlap with one lecturer, LLM-only quality judgments and no learning-outcome measure mean the study demonstrates retrieval feasibility and engagement, not safer or better learning.",
+    fullSummary: `Owen Tang, Alexandra Vassar and Jake Renzella examine whether large language models can help novice programmers without generating a fresh answer. Their August 2026 preprint uses LLMs to retrieve short segments from recorded lectures in an introductory C course. The design aims to keep help inside educator-delivered material, reducing hallucination and complexity misalignment while sparing learners from searching multi-hour recordings.
+
+The pipeline begins with Whisper transcripts divided into timestamped partitions. GPT 5.4 Pro and Gemini 3.1 Pro use their native file-search tools; Qwen3.5 397B uses a custom retrieval system combining BM25 keyword search and FAISS semantic search. The models return lecture intervals rather than an open-ended explanation. Five test questions cover factual, conceptual and procedural demands from Bloom's revised taxonomy, including pointer syntax, linked-list memory allocation and debugging a memory leak.
+
+One course lecturer independently selected comparison intervals. The authors measured overlap, precision and recall, then asked Claude Sonnet 4.6, Gemini 3.1 Pro and Mistral Large to judge relevance, sufficiency, redundancy and extraneous material. A score counted only when the three judges were within one point. This creates a useful multi-judge check, but it is still automated evaluation rather than validation by learners or several educators.
+
+The proprietary models retrieved much of the lecturer's target material while casting a wider net. GPT averaged 0.78 recall, 0.53 precision and 0.31 intersection-over-union; Gemini averaged 0.60, 0.23 and 0.21. Both scored 4.87 out of 5 for relevance and just above 4 for sufficiency. Qwen's current configuration performed much worse on overlap and sufficiency. The models sometimes returned nearby foundations when the lecturer found no clip that directly answered a question. That can orient a learner, but it can also make a partial answer look complete.
+
+The deployment used Gemini 2.5 Pro as a supplementary tool in a ten-week C course with 903 enrolled students. During seven weeks it processed 343 prompts, and 58 percent of users returned. Clips had a median duration of 91 seconds. Voluntary feedback included 19 approvals and two disapprovals. Students most often searched foundational topics: arrays appeared in 48 queries, linked lists in 45 and pointers in 40.
+
+The evidence does not yet establish a learning benefit. The benchmark used only five questions and one lecturer. LLM judges could not see on-screen code, transcript errors may affect retrieval and the pilot tracked use rather than demographics, a comparison group, independent performance or learning gains. The authors explicitly call for human expert review and longitudinal outcome research.
+
+For AIEDHK, the study's strongest idea is architectural restraint: AI can route learners to approved explanations instead of replacing those explanations. A school pilot should add teacher-reviewed clips, visible no-answer states, learner ratings tied to actual segments, and unaided pre/post assessments. The system should be judged not only by whether students click and return, but by whether they later solve and explain programming problems independently. That outcome evidence remains the decisive safeguard for adoption.`,
+    keyTakeaways: [
+      "The system uses LLMs to retrieve timestamped, educator-delivered lecture clips instead of generating new programming answers, keeping help inside course material.",
+      "Across five queries, proprietary models scored highly for judged relevance and sufficiency despite low exact overlap with one lecturer; the tested Qwen configuration lagged on sufficiency.",
+      "The 903-student pilot showed repeat use and positive voluntary ratings, but no comparison group or learning measure means engagement cannot be interpreted as improved outcomes.",
+    ],
+    whyItMatters: "For AIEDHK, lecture curation offers a promising form of constrained AI assistance, but adoption should require teacher-validated segments, honest no-answer behavior and unaided learning measures rather than treating clicks, repeat use or LLM-judge scores as proof of learning.",
+    sourceUrl: "https://arxiv.org/abs/2608.16131",
+    sourceUrls: [
+      { label: "arXiv paper: LLM-driven lecture video curation", url: "https://arxiv.org/abs/2608.16131" },
+      { label: "Full HTML paper", url: "https://arxiv.org/html/2608.16131" },
+    ],
+    createdAt: "2026-08-19",
+  },
+  {
     id: "aied-095",
     slug: "news-reasoning-routing-supervised-agent-workflows",
     title: "Product news: GPT-5.6 Sol Pro and Claude Code's Fable advisor make AI routing part of workflow literacy",

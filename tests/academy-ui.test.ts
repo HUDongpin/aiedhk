@@ -14,22 +14,18 @@ const academyCardSource = readFileSync("components/AcademyCard.tsx", "utf8");
 const academyDetailSource = readFileSync("app/[locale]/academy/[slug]/page.tsx", "utf8");
 const academyPageSource = readFileSync("app/[locale]/academy/page.tsx", "utf8");
 
-test("Academy uses one responsive image asset per lesson and displays it twice at distinct detail sizes", () => {
+test("Academy uses one responsive image asset per lesson and displays it once on the detail page", () => {
   assert.match(academyCardSource, /import Image from "next\/image"/);
   assert.match(academyCardSource, /<Image[\s\S]*?fill[\s\S]*?sizes=/);
   assert.doesNotMatch(academyCardSource, /<img\b/);
 
   assert.match(academyDetailSource, /import Image from "next\/image"/);
   assert.match(academyDetailSource, /<Image[\s\S]*?preload[\s\S]*?sizes=/);
-  assert.equal((academyDetailSource.match(/<Image\b/g) ?? []).length, 2);
-  assert.equal((academyDetailSource.match(/src=\{lesson\.image\}/g) ?? []).length, 2);
+  assert.equal((academyDetailSource.match(/<Image\b/g) ?? []).length, 1);
+  assert.equal((academyDetailSource.match(/src=\{lesson\.image\}/g) ?? []).length, 1);
   const detailSizes = [...academyDetailSource.matchAll(/sizes="([^"]+)"/g)].map((match) => match[1]);
-  assert.equal(detailSizes.length, 2);
-  assert.equal(new Set(detailSizes).size, 2, "hero and summary renders must declare different responsive sizes");
-  assert.match(
-    academyDetailSource,
-    /src=\{lesson\.image\}[\s\S]*?summaryHeading[\s\S]*?src=\{lesson\.image\}[\s\S]*?lesson\.fullSummary/,
-  );
+  assert.equal(detailSizes.length, 1);
+  assert.match(academyDetailSource, /summaryHeading[\s\S]*?lesson\.fullSummary/);
   assert.doesNotMatch(academyDetailSource, /summaryImage/);
   assert.doesNotMatch(academyDetailSource, /<img\b/);
 });

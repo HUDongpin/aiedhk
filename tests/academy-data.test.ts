@@ -241,7 +241,7 @@ test("Academy art direction requires one genuine teaching image with restrained 
   assert.match(contract, /真人质感风格/);
   assert.match(contract, /warm, bright, friendly, and immediately understandable/i);
   assert.match(contract, /dense decorative fields of particles/i);
-  assert.match(contract, /render that same source image twice on every lesson detail page/i);
+  assert.match(contract, /display it only once on the lesson detail page/i);
 });
 
 test("unreviewed locales fall back to English lesson text without leaking English audio", () => {

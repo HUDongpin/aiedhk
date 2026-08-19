@@ -1896,5 +1896,79 @@ Research warrants both interest and caution. A meta-analysis of controlled studi
     ],
     createdAt: "2026-08-16T08:00:00.000Z",
   },
+  {
+    id: "academy-053",
+    listingIdentifier: "AI Knowledge 27",
+    slug: "open-and-closed-ai-models",
+    title: "Open and Closed AI Models",
+    track: "ai-knowledge",
+    level: "core",
+    tags: ["open source AI", "model openness", "AI licensing"],
+    image: "/images/academy/covers/academy-053-open-and-closed-ai-models.png",
+    imageAlt: "A South Asian woman educator and two adult learners compare an open computer chassis, a sealed computing appliance, and a text-free hand-drawn flow diagram in a bright studio",
+    summaryAudio: "/audio/academy/academy-053-open-and-closed-ai-models-summary.m4a",
+    summaryAudioTitle: "Listen to Open and Closed AI Models",
+    shortSummary: "How model weights, code, data information, licenses, deployment, documentation, and provider control shape openness, transparency, reuse, risk, and educational adoption.",
+    fullSummary: `An AI model may be described as open when people can access and reuse important parts of it, while a closed model is usually accessed through a provider-controlled product or application programming interface. The distinction is not a simple measure of quality, safety, or intelligence. A model includes an architecture, learned parameters or weights, and software for running inference. A complete AI system may also include data-processing code, training procedures, evaluation tools, interfaces, policies, and external services. Different developers release different combinations of these elements.
+
+The Open Source Initiative defines open source AI through freedoms to use, study, modify, and share a system, together with access to the preferred form for making modifications. Releasing downloadable weights alone is therefore not the same as releasing every component needed to understand or reproduce training. Some "open-weight" models provide parameters and inference code but limited information about training data. Others include code, detailed documentation, evaluation results, and licenses that permit broad modification and redistribution. Restrictions on commercial use, fields of use, or redistribution also matter. People should inspect the actual license and released artifacts instead of relying on a marketing label.
+
+Greater openness can support independent research, adaptation for languages or subjects, local deployment, and inspection of model behavior. A school might run a model within its own infrastructure, reduce the data sent to an external provider, or fine-tune it for a bounded task. Yet access to weights does not guarantee that a system is transparent, reproducible, accurate, fair, private, or secure. Training may require unavailable data and enormous computing resources. Public release can also create maintenance duties and misuse concerns. Users still need evaluation, threat analysis, documentation, and accountable deployment.
+
+Closed models can offer managed infrastructure, technical support, frequent updates, and integrated safeguards without requiring a school to operate complex systems. The provider may also monitor abuse and repair vulnerabilities centrally. In return, users may have less ability to inspect the model, reproduce changes, run it locally, or understand how an update altered performance. Pricing, service availability, data retention, tool permissions, and provider governance can become important dependencies. A closed provider can disclose strong documentation and evidence, just as an openly released model can remain poorly documented. Openness and transparency overlap, but they are not identical.
+
+In education, learners can compare two fictional tutoring systems for one real purpose. They create an evidence table covering weights, code, training-data information, license, deployment options, privacy, evaluation, accessibility, costs, update control, and support. They test both systems on representative tasks, record failures, and explain which tradeoffs matter for the intended learners and stakes. The goal is not to declare open or closed universally better. It is to make a justified selection based on released evidence, legal permissions, technical capacity, educational value, and responsibility for consequences.`,
+    coreIdeas: [
+      "Open and closed describe access to model components and legal permissions, not a simple ranking of capability, quality, safety, or intelligence.",
+      "Open weights, training code, data information, evaluation artifacts, licenses, and reproducibility can vary independently, so release claims need component-level evidence.",
+      "Educational selection should compare deployment, privacy, evaluation, costs, updates, support, technical capacity, and accountability alongside openness and transparency.",
+    ],
+    educationConnection: "Have learners compare two fictional tutoring systems through an evidence table of released components, permissions, deployment choices, evaluation, privacy, costs, and support, then justify a context-specific adoption decision.",
+    relatedConcepts: ["Open weights", "Model transparency", "AI licensing"],
+    sourceUrls: [
+      { label: "Open Source Initiative: Open Source AI Definition 1.0", url: "https://opensource.org/ai/open-source-ai-definition" },
+      { label: "White and colleagues: Model Openness Framework", url: "https://arxiv.org/abs/2403.13784" },
+      { label: "Stanford CRFM: Foundation Model Transparency Index", url: "https://crfm.stanford.edu/fmti/" },
+      { label: "Seger and colleagues: Framework for Openness in Foundation Models", url: "https://arxiv.org/abs/2405.15802" },
+    ],
+    createdAt: "2026-08-19T08:00:00.000Z",
+  },
+  {
+    id: "academy-054",
+    listingIdentifier: "Educational Theory 27",
+    slug: "culturally-responsive-pedagogy",
+    title: "Culturally Responsive Pedagogy",
+    track: "educational-theory",
+    level: "core",
+    tags: ["culturally responsive pedagogy", "cultural competence", "critical consciousness"],
+    image: "/images/academy/covers/academy-054-culturally-responsive-pedagogy.png",
+    imageAlt: "A Black woman educator uses an infrared thermometer while an East Asian man and a White wheelchair user study a hand-drawn neighborhood map during an outdoor heat and shade investigation",
+    summaryAudio: "/audio/academy/academy-054-culturally-responsive-pedagogy-summary.m4a",
+    summaryAudioTitle: "Listen to Culturally Responsive Pedagogy",
+    shortSummary: "How educators connect rigorous learning with students' cultural knowledge and community resources while avoiding stereotypes, examining power, and co-constructing relevant evidence-rich instruction.",
+    fullSummary: `Culturally responsive pedagogy connects rigorous learning with the cultural knowledge, prior experiences, communication practices, identities, and community resources that learners bring. It begins from the understanding that every classroom is culturally situated, including practices often treated as neutral or standard. Culture is not a fixed list of traits attached to a racial, ethnic, linguistic, or national group. It is dynamic, internally diverse, historically shaped, and lived differently by each person. Teachers therefore learn with students and communities rather than guessing what an identity means.
+
+Related traditions emphasize complementary purposes. Gloria Ladson-Billings described culturally relevant pedagogy through academic success, cultural competence, and critical consciousness. Geneva Gay emphasized using cultural knowledge, experiences, and frames of reference to make teaching more relevant and effective for ethnically diverse learners. Culturally sustaining pedagogy extends the stance by supporting linguistic and cultural pluralism rather than treating dominant practices as the only desired destination. These approaches do not lower expectations. They ask how demanding disciplinary learning can recognize learners' resources, expand their repertoires, and help them examine inequity.
+
+Responsive teaching requires more than adding diverse names, foods, festivals, or images to an unchanged lesson. Teachers study the communities they serve, reflect on their own assumptions, examine whose knowledge appears in materials, and build relationships that make revision possible. They can use examples from varied settings, invite more than one way to explain reasoning, connect academic concepts with community questions, and provide access to disciplinary language without devaluing home languages. Formative assessment helps teachers learn whether a connection supports understanding instead of assuming that it will.
+
+Stereotyping is a central risk. A learner should not be asked to represent an entire group or be assigned a supposedly cultural learning style. Participation choices, pronunciation, multilingual resources, discussion routines, and examples should be designed with learners, then checked for access and intellectual value. Teachers also need to notice classroom power: who speaks, whose evidence counts, who is positioned as knowledgeable, and whether disagreement can occur without humiliation. Critical consciousness adds questions about how knowledge and opportunity are produced, not only whether content feels familiar.
+
+In education, a class might investigate heat exposure around the school and nearby neighborhoods. Learners combine temperature measurements, shade observations, maps, community accounts, and historical land-use evidence. The teacher explicitly teaches the relevant science and data methods, helps groups test competing explanations, and ensures that personal experience is invited but never demanded. Learners examine whose locations and concerns are missing, create evidence-based explanations, and propose responses for a real audience. They then reflect on how their knowledge, identities, and collaboration shaped the inquiry. Culturally responsive pedagogy makes rigorous learning more connected and just when relevance is co-constructed, evidence remains central, and culture is treated as a living resource rather than a label.`,
+    coreIdeas: [
+      "Culturally responsive pedagogy connects rigorous disciplinary learning with learners' cultural knowledge, experiences, communication practices, identities, and community resources.",
+      "Culture is dynamic and internally diverse, so relevance must be co-constructed with learners rather than inferred from stereotypes or fixed group traits.",
+      "Academic success, cultural competence, critical consciousness, teacher self-reflection, equitable participation, and evidence-based revision work together in responsive practice.",
+    ],
+    educationConnection: "Build a local heat inquiry in which learners combine scientific measurement with community knowledge, examine missing perspectives, test explanations, propose responses, and reflect on how identity and collaboration shaped the evidence.",
+    relatedConcepts: ["Culturally relevant pedagogy", "Culturally sustaining pedagogy", "Funds of knowledge"],
+    sourceUrls: [
+      { label: "Ladson-Billings: Toward a Theory of Culturally Relevant Pedagogy", url: "https://doi.org/10.3102/00028312032003465" },
+      { label: "Gay: Preparing for Culturally Responsive Teaching", url: "https://doi.org/10.1177/0022487102053002003" },
+      { label: "Paris: Culturally Sustaining Pedagogy", url: "https://doi.org/10.3102/0013189X12441244" },
+      { label: "National Academies: How People Learn II", url: "https://doi.org/10.17226/24783" },
+    ],
+    createdAt: "2026-08-19T08:00:00.000Z",
+  },
 
 ];

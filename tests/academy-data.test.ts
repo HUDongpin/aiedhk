@@ -4,13 +4,15 @@ import path from "node:path";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("Academy publishes at least fifty-two ordered reviewed English lessons", () => {
+test("Academy publishes at least fifty-four ordered reviewed English lessons", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.ok(lessons.length >= 52);
+  assert.ok(lessons.length >= 54);
   assert.deepEqual(
     lessons.map((lesson) => lesson.id),
     [
+      "academy-053",
+      "academy-054",
       "academy-051",
       "academy-052",
       "academy-049",
@@ -69,8 +71,8 @@ test("Academy publishes at least fifty-two ordered reviewed English lessons", ()
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 26);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 26);
+  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 27);
+  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 27);
   assert.deepEqual(
     new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016", "academy-017", "academy-018", "academy-019", "academy-020", "academy-021", "academy-022", "academy-023", "academy-024"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
@@ -103,6 +105,7 @@ test("Academy publishes the scheduled curriculum pair for every completed releas
     ["2026-08-10T08:00:00.000Z", ["academy-047", "academy-048"]],
     ["2026-08-12T08:00:00.000Z", ["academy-049", "academy-050"]],
     ["2026-08-16T08:00:00.000Z", ["academy-051", "academy-052"]],
+    ["2026-08-19T08:00:00.000Z", ["academy-053", "academy-054"]],
   ]);
 
   for (const [createdAt, expectedIds] of catchUpDates) {
@@ -168,6 +171,8 @@ test("each launch lesson has complete reviewed copy and one unique stable image 
     "Collaborative Learning",
     "Benchmarking and Evaluation Design",
     "Universal Design for Learning",
+    "Open and Closed AI Models",
+    "Culturally Responsive Pedagogy",
   ];
 
   assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));

@@ -20,9 +20,9 @@ function publicFile(assetPath: string) {
   return path.join(projectRoot, "public", assetPath.slice(1));
 }
 
-test("Academy lessons directly reference at least fifty-four valid, distinct 1600x1000 PNG images", async () => {
+test("Academy lessons directly reference at least seventy valid, distinct 1600x1000 PNG images", async () => {
   const lessons = getAcademyLessons("en");
-  assert.ok(lessons.length >= 54);
+  assert.ok(lessons.length >= 70);
 
   const hashes = new Set<string>();
   for (const lesson of lessons) {
@@ -80,9 +80,9 @@ test("Academy keeps sixteen retired summary images as unassigned future-cover in
   assert.equal(inventoryHashes.size, 16, "future-cover inventory images must remain visually distinct");
 });
 
-test("Academy lessons directly reference at least fifty-four valid local M4A narrations", async () => {
+test("Academy lessons directly reference at least seventy valid local M4A narrations", async () => {
   const lessons = getAcademyLessons("en");
-  assert.ok(lessons.length >= 54);
+  assert.ok(lessons.length >= 70);
   const hashes = new Set<string>();
 
   for (const lesson of lessons) {

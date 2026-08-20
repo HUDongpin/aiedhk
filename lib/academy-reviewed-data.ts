@@ -1,6 +1,10 @@
 import type { AcademyLesson } from "@/lib/types";
+import { academyBackfill20260811To0815 } from "@/lib/academy-backfill-20260811-0815";
+import { academyBackfill20260817To0821 } from "@/lib/academy-backfill-20260817-0821";
 
 export const reviewedAcademyLessons: AcademyLesson[] = [
+  ...academyBackfill20260817To0821,
+  ...academyBackfill20260811To0815,
   {
     id: "academy-001",
     listingIdentifier: "AI Knowledge 01",

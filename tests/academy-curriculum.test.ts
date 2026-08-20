@@ -3,9 +3,9 @@ import test from "node:test";
 import { academyCurriculumV1, getNextUnpublishedAcademyPair } from "@/lib/academy-curriculum";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("versioned Academy curriculum supplies at least thirty ordered cross-track pairs", () => {
+test("versioned Academy curriculum supplies at least thirty-five ordered cross-track pairs", () => {
   assert.equal(academyCurriculumV1.version, 1);
-  assert.ok(academyCurriculumV1.pairs.length >= 30);
+  assert.ok(academyCurriculumV1.pairs.length >= 35);
   assert.deepEqual(academyCurriculumV1.pairs.map((pair) => pair.order), academyCurriculumV1.pairs.map((_, index) => index + 1));
 
   for (const pair of academyCurriculumV1.pairs) {
@@ -16,9 +16,9 @@ test("versioned Academy curriculum supplies at least thirty ordered cross-track 
   }
 });
 
-test("curriculum helper returns the first unpublished pair and stops at queue exhaustion", () => {
+test("curriculum helper reports queue exhaustion after every scheduled pair is published", () => {
   const launchSlugs = getAcademyLessons("en").map((lesson) => lesson.slug);
-  assert.equal(getNextUnpublishedAcademyPair(launchSlugs)?.order, 28);
+  assert.equal(getNextUnpublishedAcademyPair(launchSlugs), undefined);
 
   const allSlugs = academyCurriculumV1.pairs.flatMap((pair) => pair.topics.map((topic) => topic.slug));
   assert.equal(getNextUnpublishedAcademyPair(allSlugs), undefined);

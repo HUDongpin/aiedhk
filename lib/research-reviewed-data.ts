@@ -9,8 +9,10 @@ import {
   researchNewsBackfill20260718,
 } from "@/lib/research-news-backfill-20260716-0718";
 import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill-20260731-0806";
+import { researchNewsBackfill20260811To0821 } from "@/lib/research-news-backfill-20260811-0821";
 
-export const reviewedResearchPapers: ResearchPaper[] = [
+const reviewedResearchPaperSource: ResearchPaper[] = [
+  ...researchNewsBackfill20260811To0821,
   {
     id: "aied-097",
     slug: "news-connected-source-permission-review-workflows",
@@ -3092,3 +3094,9 @@ The paper also outlines research issues for the field. These include personaliza
     createdAt: "2026-06-06",
   },
 ];
+
+export const reviewedResearchPapers: ResearchPaper[] = reviewedResearchPaperSource.sort(
+  (a, b) =>
+    new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() ||
+    Number.parseInt(b.id.replace("aied-", ""), 10) - Number.parseInt(a.id.replace("aied-", ""), 10)
+);

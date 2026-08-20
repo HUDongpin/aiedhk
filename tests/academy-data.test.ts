@@ -4,19 +4,35 @@ import path from "node:path";
 import test from "node:test";
 import { getAcademyLessons } from "@/lib/academy-data";
 
-test("Academy publishes at least fifty-four ordered reviewed English lessons", () => {
+test("Academy publishes at least seventy ordered reviewed English lessons", () => {
   const lessons = getAcademyLessons("en");
 
-  assert.ok(lessons.length >= 54);
+  assert.ok(lessons.length >= 70);
   assert.deepEqual(
     lessons.map((lesson) => lesson.id),
     [
+      "academy-069",
+      "academy-070",
+      "academy-067",
+      "academy-068",
       "academy-053",
       "academy-054",
+      "academy-065",
+      "academy-066",
+      "academy-063",
+      "academy-064",
       "academy-051",
       "academy-052",
+      "academy-061",
+      "academy-062",
+      "academy-059",
+      "academy-060",
+      "academy-057",
+      "academy-058",
       "academy-049",
       "academy-050",
+      "academy-055",
+      "academy-056",
       "academy-047",
       "academy-048",
       "academy-037",
@@ -71,8 +87,8 @@ test("Academy publishes at least fifty-four ordered reviewed English lessons", (
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 27);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 27);
+  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 35);
+  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 35);
   assert.deepEqual(
     new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016", "academy-017", "academy-018", "academy-019", "academy-020", "academy-021", "academy-022", "academy-023", "academy-024"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
@@ -106,6 +122,14 @@ test("Academy publishes the scheduled curriculum pair for every completed releas
     ["2026-08-12T08:00:00.000Z", ["academy-049", "academy-050"]],
     ["2026-08-16T08:00:00.000Z", ["academy-051", "academy-052"]],
     ["2026-08-19T08:00:00.000Z", ["academy-053", "academy-054"]],
+    ["2026-08-11T08:00:00.000Z", ["academy-055", "academy-056"]],
+    ["2026-08-13T08:00:00.000Z", ["academy-057", "academy-058"]],
+    ["2026-08-14T08:00:00.000Z", ["academy-059", "academy-060"]],
+    ["2026-08-15T08:00:00.000Z", ["academy-061", "academy-062"]],
+    ["2026-08-17T08:00:00.000Z", ["academy-063", "academy-064"]],
+    ["2026-08-18T08:00:00.000Z", ["academy-065", "academy-066"]],
+    ["2026-08-20T08:00:00.000Z", ["academy-067", "academy-068"]],
+    ["2026-08-21T08:00:00.000Z", ["academy-069", "academy-070"]],
   ]);
 
   for (const [createdAt, expectedIds] of catchUpDates) {
@@ -173,6 +197,22 @@ test("each launch lesson has complete reviewed copy and one unique stable image 
     "Universal Design for Learning",
     "Open and Closed AI Models",
     "Culturally Responsive Pedagogy",
+    "Compute, Efficiency, and Environmental Cost",
+    "Learning Analytics and Assessment Validity",
+    "AI Governance in Education",
+    "Teacher Professional Judgment",
+    "Designing Responsible AI Learning Systems",
+    "Ethics, Care, and Human Flourishing in Education",
+    "Educational Data Governance and Data Quality",
+    "Teacher Professional Learning",
+    "Model Monitoring, Drift, and Incident Response",
+    "Student Voice and Learner Participation",
+    "Procuring and Evaluating Educational AI Vendors",
+    "Inclusive Pedagogy and Digital Accessibility",
+    "Participatory Design of Educational AI",
+    "Evidence-Informed Educational Decision Making",
+    "Evaluating the Learning Impact of AI",
+    "Implementation Science in Education",
   ];
 
   assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));

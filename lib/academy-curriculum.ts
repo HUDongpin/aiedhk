@@ -44,6 +44,11 @@ const aiTopics = [
   ["compute-efficiency-and-environmental-cost", "Compute, Efficiency, and Environmental Cost"],
   ["ai-governance-in-education", "AI Governance in Education"],
   ["designing-responsible-ai-learning-systems", "Designing Responsible AI Learning Systems"],
+  ["educational-data-governance-and-data-quality", "Educational Data Governance and Data Quality"],
+  ["model-monitoring-drift-and-incident-response", "Model Monitoring, Drift, and Incident Response"],
+  ["procuring-and-evaluating-educational-ai-vendors", "Procuring and Evaluating Educational AI Vendors"],
+  ["participatory-design-of-educational-ai", "Participatory Design of Educational AI"],
+  ["evaluating-the-learning-impact-of-ai", "Evaluating the Learning Impact of AI"],
 ] as const;
 
 const theoryTopics = [
@@ -77,6 +82,11 @@ const theoryTopics = [
   ["learning-analytics-and-assessment-validity", "Learning Analytics and Assessment Validity"],
   ["teacher-professional-judgment", "Teacher Professional Judgment"],
   ["ethics-care-and-human-flourishing-in-education", "Ethics, Care, and Human Flourishing in Education"],
+  ["teacher-professional-learning", "Teacher Professional Learning"],
+  ["student-voice-and-learner-participation", "Student Voice and Learner Participation"],
+  ["inclusive-pedagogy-and-digital-accessibility", "Inclusive Pedagogy and Digital Accessibility"],
+  ["evidence-informed-educational-decision-making", "Evidence-Informed Educational Decision Making"],
+  ["implementation-science-in-education", "Implementation Science in Education"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

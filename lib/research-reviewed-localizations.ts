@@ -1,5 +1,6 @@
 import type { Locale } from "@/lib/i18n";
 import type { ResearchPaperLocalization } from "@/lib/types";
+import { commentaryLocalizations20260907 } from "@/lib/research-news-commentary-localizations-20260907";
 
 /**
  * Human-reviewed, per-article translations of the curated Research News corpus,
@@ -12,6 +13,7 @@ import type { ResearchPaperLocalization } from "@/lib/types";
  * and then reviewed before being pasted here.
  */
 export const reviewedResearchPaperLocalizations: Record<string, Partial<Record<Locale, ResearchPaperLocalization>>> = {
+  ...commentaryLocalizations20260907,
   "aied-025": {
     "zh-hant": {
       title: "新聞：OpenAI 與 Anthropic 推出支援主動學習與反思式 AI 使用的工具",

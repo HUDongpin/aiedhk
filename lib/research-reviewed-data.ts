@@ -1,4 +1,5 @@
 import type { ResearchPaper } from "@/lib/types";
+import { researchNewsCommentary20260907 } from "@/lib/research-news-commentary-20260907";
 import { researchNewsBackfill20260707To0709 } from "@/lib/research-news-backfill-20260707-0709";
 import {
   researchNewsBackfill20260711To0712,
@@ -12,6 +13,7 @@ import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill
 import { researchNewsBackfill20260811To0821 } from "@/lib/research-news-backfill-20260811-0821";
 
 const reviewedResearchPaperSource: ResearchPaper[] = [
+  ...researchNewsCommentary20260907,
   ...researchNewsBackfill20260811To0821,
   {
     id: "aied-097",

@@ -3,7 +3,7 @@ import type { ResearchPaper } from "@/lib/types";
 // Editorial publication date is distinct from the vendors' launch dates.
 export const researchNewsCommentary20260907: ResearchPaper[] = [
   {
-    id: "aied-110",
+    id: "aied-112",
     slug: "news-astra-agi-education-learning-evidence",
     title: "Commentary: Astra's AGI claim puts evidence of human learning at the centre of education",
     authors: ["AIED.HK Editorial"],
@@ -11,11 +11,11 @@ export const researchNewsCommentary20260907: ResearchPaper[] = [
     year: 2026,
     type: "policy-ethics",
     tags: ["product news", "commentary", "GPT-6 Astra", "AGI", "assessment", "learner agency"],
-    image: "/images/research/covers/aied-110-astra-agi-learning-evidence-2026.png",
+    image: "/images/research/covers/aied-112-astra-agi-learning-evidence-2026.png",
     imageAlt: "A university student explains a geometry construction to a lecturer while a classmate follows and a laptop displays a related digital diagram",
-    summaryImage: "/images/research/summary/aied-110-astra-agi-learning-evidence-summary.png",
+    summaryImage: "/images/research/summary/aied-112-astra-agi-learning-evidence-summary.png",
     summaryImageAlt: "A university student explains a geometry construction to a lecturer while a classmate follows and a laptop displays a related digital diagram",
-    summaryAudio: "/audio/research/aied-110-astra-agi-learning-evidence-summary.m4a",
+    summaryAudio: "/audio/research/aied-112-astra-agi-learning-evidence-summary.m4a",
     summaryAudioTitle: "Listen to the commentary",
     shortSummary: "OpenAI launched GPT-6 Astra on 3 September 2026 amid claims about the arrival of AGI. This commentary treats that label as a claim, not an established consensus. For education, the immediate challenge is to distinguish what an AI can produce from what a learner can explain, question and transfer independently—and to use stronger agents to support that learning.",
     fullSummary: `OpenAI introduced GPT-6 Astra on 3 September 2026, presenting stronger capabilities in computer use, coding, research and professional work. The launch also intensified the debate over artificial general intelligence. In a launch briefing reported by Axios, OpenAI president Greg Brockman said he believed the company had reached AGI. That is a company leader's claim, not an independently established scientific consensus. This AIED.HK commentary asks what educators should change even while the label remains contested.
@@ -46,7 +46,7 @@ For Hong Kong's AIED community, a practical pilot would measure teacher time alo
     createdAt: "2026-09-07",
   },
   {
-    id: "aied-111",
+    id: "aied-113",
     slug: "news-fable-5-1-aied-research-teacher-workflows",
     title: "Commentary: Fable 5.1 brings longer AI workflows to AIED—and makes educational validation more important",
     authors: ["AIED.HK Editorial"],
@@ -54,11 +54,11 @@ For Hong Kong's AIED community, a practical pilot would measure teacher time alo
     year: 2026,
     type: "policy-ethics",
     tags: ["product news", "commentary", "Claude Fable 5.1", "AIED research", "teacher workflows", "evaluation"],
-    image: "/images/research/covers/aied-111-fable-5-1-aied-workflows-2026.png",
+    image: "/images/research/covers/aied-113-fable-5-1-aied-workflows-2026.png",
     imageAlt: "Three education and software colleagues review illustrated lesson cards, an annotated chart and a digital prototype in a bright university design studio",
-    summaryImage: "/images/research/summary/aied-111-fable-5-1-aied-workflows-summary.png",
+    summaryImage: "/images/research/summary/aied-113-fable-5-1-aied-workflows-summary.png",
     summaryImageAlt: "Three education and software colleagues review illustrated lesson cards, an annotated chart and a digital prototype in a bright university design studio",
-    summaryAudio: "/audio/research/aied-111-fable-5-1-aied-workflows-summary.m4a",
+    summaryAudio: "/audio/research/aied-113-fable-5-1-aied-workflows-summary.m4a",
     summaryAudioTitle: "Listen to the commentary",
     shortSummary: "Anthropic released Claude Fable 5.1 on 1 September 2026 with stronger long-running coding and knowledge-work capabilities and cheaper cache reads. For AIED, the opportunity is a faster cycle from teaching idea to reviewable prototype and research analysis. The test is whether teams can turn that speed into better pedagogy and credible evidence, while accounting for total cost, data conditions and human review.",
     fullSummary: `Anthropic released Claude Fable 5.1 on 1 September 2026, positioning it for demanding coding, knowledge work and sustained research. This is product news with an AIED.HK editorial interpretation, not an educational effectiveness study. The development matters to artificial intelligence in education because a model that can sustain a project may change how educators build, inspect and improve learning tools—not just how quickly they draft a lesson plan.

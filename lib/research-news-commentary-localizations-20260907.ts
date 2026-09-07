@@ -2,7 +2,7 @@ import type { Locale } from "@/lib/i18n";
 import type { ResearchPaperLocalization } from "@/lib/types";
 
 export const commentaryLocalizations20260907: Record<string, Partial<Record<Locale, ResearchPaperLocalization>>> = {
-  "aied-110": {
+  "aied-112": {
     "zh-hant": {
       title: "評論：Astra 的 AGI 主張，讓教育更需要看見人的真實學習",
       tags: ["產品新聞", "評論", "GPT-6 Astra", "AGI", "學習評估", "學習者自主性"],
@@ -54,7 +54,7 @@ export const commentaryLocalizations20260907: Record<string, Partial<Record<Loca
       whyItMatters: "AIED 需要把机器能力的提升，连接到可证明的人类能力成长。Astra 让评价设计、教师判断，以及完成作品与独立理解之间的区别，成为迫切的研究与实践问题。",
     },
   },
-  "aied-111": {
+  "aied-113": {
     "zh-hant": {
       title: "評論：Fable 5.1 把更長程的 AI 工作帶進 AIED，教育驗證更顯重要",
       tags: ["產品新聞", "評論", "Claude Fable 5.1", "AIED 研究", "教師工作流程", "成效驗證"],

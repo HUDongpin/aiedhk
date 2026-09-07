@@ -14,6 +14,91 @@ import { researchNewsBackfill20260811To0821 } from "@/lib/research-news-backfill
 
 const reviewedResearchPaperSource: ResearchPaper[] = [
   ...researchNewsCommentary20260907,
+  {
+    id: "aied-111",
+    slug: "news-tool-selection-workspace-boundaries-ai-learning",
+    title: "Product news: ChatGPT plugin ranking and Claude Code 2.1.239 make tool selection and workspace boundaries inspectable",
+    authors: ["OpenAI", "Anthropic", "Google for Education"],
+    venue: "AI Product and Learning Report",
+    year: 2026,
+    type: "policy-ethics",
+    tags: ["product news", "ChatGPT plugins", "Claude Code 2.1.239", "synced plugins", "Gemini for Education"],
+    image: "/images/research/covers/aied-111-tool-selection-workspace-boundaries-ai-learning-2026.png",
+    imageAlt: "A lecturer and two university students inspect ranked learning tools, separate cloud and local plugin cards, and a review ledger in a bright computing studio",
+    summaryImage: "/images/research/summary/aied-111-tool-selection-workspace-boundaries-ai-learning-summary.png",
+    summaryImageAlt: "A lecturer and two university students inspect ranked learning tools, separate cloud and local plugin cards, and a review ledger in a bright computing studio",
+    summaryAudio: "/audio/research/aied-111-tool-selection-workspace-boundaries-ai-learning-summary.m4a",
+    summaryAudioTitle: "Listen to the product news report",
+    shortSummary: "Product news: ChatGPT now ranks plugin recommendations partly by continued use after installation and adds more time-aware answers, while Claude Code 2.1.239 distinguishes cloud-synced plugins from local installations and makes a data-residency cost premium visible. Gemini for Education supplies the institutional purpose boundary across teaching, learning and work. Together, the updates make tool selection, context, cost and human review part of AI workflow literacy.",
+    fullSummary: `This product-news report connects three approaches to choosing and governing AI tools. OpenAI's August 21 ChatGPT update changes plugin discovery and several context-facing parts of the product. Anthropic's Claude Code 2.1.239 makes cloud-synced plugins and some infrastructure costs more visible. Google positions Gemini for Education around teaching, learning and institutional work. The shared educational question is whether users can see why a tool was selected, which workspace supplied it, what context shaped the result and who remains accountable for checking it.
+
+OpenAI says plugin recommendations on ChatGPT web and mobile now prioritize tools that people continue using after installation. Availability still depends on plan, region and workspace settings, and desktop is outside this update. ChatGPT also gained more awareness of a user's local time, faster loading for long web conversations and progressive display of interactive content. These changes may reduce friction, but popularity or retention is not evidence that a plugin is pedagogically appropriate, privacy-preserving or accurate for a specific course.
+
+In education, recommendation should be treated as a prompt for inspection rather than an endorsement. A teacher or student should identify the plugin owner, requested permissions, connected data, expected output, accessibility, cost and removal path before installation. Time-aware answers can make deadlines or study plans more relevant, but users should still state the authoritative timetable and time zone when consequences matter. Progressive rendering improves responsiveness; it does not mean an unfinished interactive artifact is ready to use.
+
+Claude Code 2.1.239 addresses related boundaries in agentic development. Plugins synchronized from claude.ai are labelled with a synced namespace, can be enabled or disabled explicitly, and do not replace a locally installed plugin with the same name. The release also includes the 1.1-times United States-only-inference premium in cost estimates for data-residency workspaces. Other fixes preserve plan mode across idle cloud-worker restarts and recover remote MCP servers after transient reconnect failures.
+
+These controls improve legibility without proving correct execution. A synced plugin and a local plugin can carry different instructions, capabilities or trust assumptions even when their names resemble each other. A visible cost estimate helps budgeting but does not establish that a data-residency choice satisfies institutional policy. Student teams should record the exact plugin identity, source, version, workspace, permissions, data route, estimated cost, actual artifact and acceptance test.
+
+Gemini for Education supplies the institutional comparison. Google describes educators using it to plan and differentiate lessons and create assessments; learners using it for explanations, practice and writing feedback; and staff using it for communications, administration and research. Google also describes administrator controls and education data that is not human reviewed or used to train AI models. These are vendor-described capabilities and protections, not independent evidence of learning impact.
+
+For AIEDHK, the practical response is a tool-selection ledger. Before an AI extension enters a course or research workflow, record why it was recommended, who approved it, which account and data it can access, where it came from, what it costs and how its output will be verified. Product interfaces are becoming better at showing selection and context boundaries; institutions should turn those signals into explicit, teachable review practice.`,
+    keyTakeaways: [
+      "Product news: ChatGPT plugin recommendations now consider continued use, but recommendation rank should not replace a course-specific review of permissions, evidence and accessibility.",
+      "Claude Code 2.1.239 separates cloud-synced plugin identities from local installations and surfaces a data-residency cost premium, making source and cost boundaries more inspectable.",
+      "Gemini for Education organizes AI around teaching, learning and work; institutions should pair those purposes with an approved tool, data and human-review ledger.",
+    ],
+    whyItMatters: "For AIEDHK, this product news turns tool selection into a visible governance skill: learners and institutions should be able to explain why a plugin appeared, which workspace supplied it, what it may access, what it costs and how its output was independently checked.",
+    sourceUrl: "https://github.com/anthropics/claude-code/releases/tag/v2.1.239",
+    sourceUrls: [
+      { label: "OpenAI: ChatGPT release notes", url: "https://help.openai.com/en/articles/6825453-chatgpt-release-notes" },
+      { label: "Anthropic: Claude Code 2.1.239 release", url: "https://github.com/anthropics/claude-code/releases/tag/v2.1.239" },
+      { label: "Google for Education: Gemini for Education", url: "https://edu.google.com/ai/gemini-for-education/" },
+    ],
+    createdAt: "2026-08-23",
+  },
+  {
+    id: "aied-110",
+    slug: "dual-gatekeeping-pedagogically-grounded-ai-video",
+    title: "Dual gatekeeping improved ratings of AI-generated instructional video without testing student learning",
+    authors: ["Yearim Kim", "Njun Baek", "Nojun Kwak"],
+    venue: "CHI 2026 Workshop on Understanding and Engaging Critical Resistance to AI in Education",
+    year: 2026,
+    type: "conference",
+    tags: ["AI-generated video", "multimedia learning", "educator review", "pedagogical gatekeeping", "human-AI collaboration"],
+    image: "/images/research/covers/aied-110-dual-gatekeeping-pedagogically-grounded-ai-video-2026.png",
+    imageAlt: "A diverse group of educators reviews an instructional video storyboard, narration timeline, and multimedia-learning checks at a university media lab",
+    summaryImage: "/images/research/summary/aied-110-dual-gatekeeping-pedagogically-grounded-ai-video-summary.png",
+    summaryImageAlt: "A diverse group of educators reviews an instructional video storyboard, narration timeline, and multimedia-learning checks at a university media lab",
+    summaryAudio: "/audio/research/aied-110-dual-gatekeeping-pedagogically-grounded-ai-video-summary.m4a",
+    summaryAudioTitle: "Listen to the paper summary",
+    shortSummary: "Kim, Baek and Kwak present PedaCo, an AI-video workflow that lets educators revise scripts against multimedia-learning principles before synthesis and then checks the rendered video with automated pedagogical metrics. Twenty-three educators rated reviewed videos higher than baselines, while a 14-video comparison improved coherence and temporal alignment. The workshop study did not measure student learning or long-term teacher workload.",
+    fullSummary: `Yearim Kim, Njun Baek and Nojun Kwak study a common risk in AI-generated educational video: a polished output can still sequence ideas poorly, include distracting material or misalign narration and visuals. Their PedaCo system treats resistance to an AI draft as a designed part of authoring rather than a failure. It combines educator review before rendering with automated checks after video synthesis.
+
+The first gate operates at the script stage. Educators select criteria from Mayer's Cognitive Theory of Multimedia Learning, including coherence, signaling, redundancy, contiguity, segmenting and pre-training. An AI reviewer flags possible violations by principle, and the educator can reject, revise or regenerate the script. The system presents its comments as possible problems rather than final judgments. Reviewing text upstream is cheaper than repairing a pedagogical error after narration and visuals have been rendered.
+
+The second gate evaluates the finished video on five dimensions: coherence, redundancy, temporal contiguity, modality and image quality. The educator sees the scores and decides whether to accept the video or return to the script. The design intentionally reserves context-sensitive decisions, such as tone and learner appropriateness, for people while using automation for structural features that are easier to measure.
+
+The authors evaluated the workflow in two ways. In a within-subject study, 23 educators briefed on the multimedia-learning principles compared reviewed videos with videos generated without those guidelines across three topics representing causal, abstract and procedural demands. Mean ratings increased from 3.07 to 3.86 on a five-point scale. The paper reports statistically significant improvements across the principles, including large gains in prerequisite sequencing, removal of irrelevant material and overall instructional validity. Participants also rated production efficiency 4.26 out of five.
+
+A separate automated comparison used 14 videos covering seven science and philosophy topics, with two conditions per topic. Coherence rose from 0.646 to 0.729 and temporal contiguity from 0.273 to 0.294; both differences were statistically significant. Modality, redundancy and image quality did not differ significantly. The authors keep those measures as possible regression checks rather than claiming universal improvement.
+
+The evidence is promising but early. The paper is a four-page workshop report, the educator sample is small, and participants were already briefed on the framework used for judging. The study evaluates ratings and proxy metrics, not comprehension, retention, transfer or accessibility for learners. It also does not establish whether repeated review remains manageable during ordinary teaching or whether automated flags work equally well across languages, ages and subjects.
+
+For AIEDHK, the useful contribution is the placement of two explicit acceptance gates. A school or university could require a teacher-reviewed script before generation, then inspect timing, coherence, captions, accessibility and source accuracy on the final media. A stronger trial should compare student learning and teacher workload across workflows, pre-register outcomes, include bilingual materials and report disagreements between reviewers and metrics. PedaCo supports a practical principle: generated teaching media should remain "not yet" until both professional judgment and inspectable checks support its use.`,
+    keyTakeaways: [
+      "PedaCo places educator revision at the script stage and automated multimedia-learning checks after video synthesis, with people retaining final authority.",
+      "Twenty-three educators rated reviewed videos higher, and a 14-video comparison improved coherence and temporal alignment while three other automated metrics did not differ.",
+      "The workshop study measured expert ratings and proxy metrics rather than student learning, accessibility, transfer or sustained teacher workload.",
+    ],
+    whyItMatters: "For AIEDHK, PedaCo offers a concrete acceptance pattern for generated instructional media: review pedagogical structure before rendering, inspect the finished artifact afterward, and withhold classroom use until evidence and professional judgment agree.",
+    sourceUrl: "https://arxiv.org/abs/2608.19812",
+    sourceUrls: [
+      { label: "arXiv paper: dual gatekeeping for pedagogically grounded AI video", url: "https://arxiv.org/abs/2608.19812" },
+      { label: "Full HTML paper", url: "https://arxiv.org/html/2608.19812" },
+    ],
+    createdAt: "2026-08-23",
+  },
   ...researchNewsBackfill20260811To0821,
   {
     id: "aied-097",

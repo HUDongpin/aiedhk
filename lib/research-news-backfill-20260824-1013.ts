@@ -4226,5 +4226,604 @@ export const researchNewsBackfill20260824To1013: ResearchPaper[] = [
     "summaryImageAlt": "A counsellor and parent help a teenager review a next-step planning sheet and study cards while he records questions.",
     "summaryAudio": "/audio/research/aied-201-backfill-summary.m4a",
     "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-202",
+    "createdAt": "2026-10-08",
+    "title": "Teacher feedback VS AI-assisted peer feedback in L2 writing: A quasi-experimental study in a Chinese University",
+    "authors": [
+      "Jinfeng Tang",
+      "Ping Li",
+      "Rong Luo"
+    ],
+    "venue": "PLOS One",
+    "year": 2026,
+    "type": "journal",
+    "slug": "ai-assisted-peer-writing-feedback-over-two-tasks",
+    "tags": [
+      "Peer Learning",
+      "Writing Education",
+      "AI Feedback",
+      "Higher Education"
+    ],
+    "shortSummary": "An eight-week study compared teacher comments with peer feedback supported by DeepSeek in two university English classes. Both approaches supported better revised essays, but their improvement patterns and feedback focus differed. An initial vocabulary-diversity advantage for the AI-peer class did not persist into the second task, and sentence-complexity results were limited. Because intact classes received different teaching packages, the findings cannot separate AI's contribution from peer discussion or other class differences.",
+    "fullSummary": "A peer who discusses an essay with AI support is doing something different from a chatbot that comments directly on a student's work. A PLOS One study examines that combined activity across two university English classes. The results suggest that teacher feedback and AI-assisted peer feedback can produce different revision patterns, while also showing how easily broad claims about language development can outrun the measures collected.\n\nJinfeng Tang, Ping Li, and Rong Luo followed 61 second-year English majors at a university in central China for eight weeks. Two intact classes were selected from six using initial writing performance: thirty students received AI-assisted peer feedback and thirty-one received teacher feedback. The same instructor, teaching content, and lesson periods were maintained. This was a quasi-experiment, however, with no individual random assignment. A similar starting score does not remove every possible difference between classes.\n\nEach student completed two argumentative writing tasks, with an initial and revised draft for each, yielding 244 texts. Both feedback arrangements used a common checklist covering organization, argumentation, grammar, vocabulary, and technical details. In the experimental class, students worked in pairs and used DeepSeek to analyze a partner's draft, then discussed and negotiated the comments they would offer. The teacher supervised that process without directly supplying content feedback. The comparison class received the instructor's written comments and revision suggestions.\n\nTeacher feedback covered more issues in the first task, with 316 recorded suggestions compared with 185 in the AI-peer class. Its focus changed in the second task toward organization and argumentation. Essay scores improved under both approaches, but the reported revision gains followed different trajectories. The AI-peer class's gains were relatively stable across the two tasks, whereas the teacher-feedback class showed a larger initial gain and a smaller subsequent one. These are results for successive drafting and revision cycles, rather than evidence from a delayed independent transfer test.\n\nThe language-feature analyses were more qualified than a general statement that AI improved writing. The AI-peer class showed an initial lexical-diversity advantage, but the group difference was no longer significant in the second task. For syntactic complexity, the detailed results reported an overall improvement across the first revision cycle, without a significant group difference or interaction. In the second task, the reported time, group, and interaction effects were all non-significant. There was therefore no established advantage of one feedback mode for sentence complexity.\n\nFor teachers, the interesting design element is the discussion between classmates after consulting AI. Learners must decide which suggestions fit a partner's meaning and explain those choices. A classroom adaptation could retain a common rubric and ask students to document why they accepted or rejected a suggestion. That is an instructional implication, not a mechanism demonstrated by this study: it did not closely trace how learners internalized feedback or separate the effect of AI from peer negotiation.\n\nThe authors propose combining teacher, peer, and AI contributions. That hybrid was not itself tested here. The evidence comes from one institution, two non-randomized classes, two writing tasks, and platform-based writing scores. It supports further investigation of complementary feedback roles, while leaving durable writing development, independent performance, and the specific value added by the AI component unresolved.",
+    "keyTakeaways": [
+      "The intervention combined DeepSeek with peer discussion; it did not test AI feedback in isolation.",
+      "Initial lexical-diversity differences disappeared on the second task, and neither approach had a demonstrated syntactic-complexity advantage.",
+      "The proposed teacher-peer-AI hybrid is a future design suggestion, not a condition evaluated in this quasi-experiment."
+    ],
+    "whyItMatters": "Feedback quality depends on how learners interpret and negotiate comments. This study adds process-oriented classroom evidence, while reminding educators to distinguish revised text quality from lasting independent writing development.",
+    "sourceUrl": "https://doi.org/10.1371/journal.pone.0345976",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0345976"
+      },
+      {
+        "label": "Publisher full-text PDF",
+        "url": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0345976&type=printable"
+      }
+    ],
+    "image": "/images/research/covers/aied-202-backfill.png",
+    "imageAlt": "A student drafts an essay at a window ledge while a peer points to an argument map and a lecturer observes.",
+    "summaryImage": "/images/research/summary/aied-202-backfill-summary.png",
+    "summaryImageAlt": "A student drafts an essay at a window ledge while a peer points to an argument map and a lecturer observes.",
+    "summaryAudio": "/audio/research/aied-202-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-203",
+    "slug": "news-claude-dashboards-motion-inspectable-explainers",
+    "title": "Product news: Claude Dashboards and Motion make data and animations more inspectable for teaching",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude Motion",
+      "Claude Dashboards",
+      "data literacy",
+      "animated explanations",
+      "instructional design"
+    ],
+    "shortSummary": "Anthropic launched Claude Dashboards and Motion in beta on October 8, with different plan availability, while removing the beta label from Docs, Slides, and Design. Charts expose their underlying queries, and Motion produces editable animation code. OpenAI's learning visualisations and Gemini's classroom tools offer comparisons. For educators, the opportunity is to inspect how a visual was constructed and whether its movement or data presentation helps explain the intended relationship.",
+    "fullSummary": "Anthropic announced Claude Dashboards and Claude Motion on October 8, 2026. Dashboards is in beta on paid plans, while Motion is in beta on Team and Enterprise. The same announcement takes Docs, Slides, and Design out of beta. It highlights inspectable queries behind charts and editable code behind animations. These are useful features for educational review, but neither a live chart nor an attractive animation establishes that its explanation is correct.\n\nA dashboard turns a question into a set of data decisions. Which records are included? Which dates define the period? Is the value a count, a total, or an average? When those decisions are visible, students can compare the chart with the query and ask whether it answers the original question. The visible construction matters more than the impression of authority created by a polished display.\n\nA teaching example could use public transport data to compare travel patterns across days. Students would predict a pattern, inspect a generated chart, and check the definition of each category. If a value changes after a refresh, they would distinguish new data from a changed calculation. A small record of the source and refresh time can help them reconstruct the result instead of treating a moving display as a fixed finding.\n\nAnimation presents a different set of choices. Movement can draw attention to a relationship, but it can also imply a sequence or mechanism that the evidence does not support. Teachers might pause an explainer at key moments and ask what each transition means. A useful revision could slow one change, keep a reference object visible, or remove motion that adds interest without adding understanding. Editable code makes those choices possible to inspect.\n\nOpenAI's teen learning update also highlights visualisations and study activities. Gemini's course-connected tools help students work from their classroom material. Compared with these approaches, Anthropic's release focuses on producing data displays and animated explanations. The educational task should determine which representation is helpful. Sometimes a static diagram, a table, or a spoken explanation will make the relationship easier to examine. Learners could also redraw the key relationship themselves, making it easier to see whether they understood more than the animation's sequence.\n\nA school can test a short explainer with a concrete question rather than a general request for feedback. Can learners predict what happens next, identify the variable that changed, or apply the idea to another example? Their answers can reveal whether the animation's structure supports the intended reasoning. Liking the visual or remembering its colours is a different outcome and should not be reported as conceptual understanding.\n\nThe product update makes the construction of visuals more accessible to people who may not normally write queries or animation code. That can support teacher experimentation if the resulting artifacts remain open to checking. A strong teaching resource would preserve meaningful labels, explain its assumptions, and offer a way to revisit the underlying evidence. The goal is an explanation people can reason with, not simply a more elaborate object to watch.",
+    "keyTakeaways": [
+      "Dashboards and Motion launched in beta on October 8 with different plan availability.",
+      "Inspect the query or animation structure as well as the displayed result.",
+      "Evaluate whether learners can reason with the representation, separately from visual appeal."
+    ],
+    "whyItMatters": "Inspectable visual creation can support data and science teaching when educators connect design choices to the reasoning students need to practise.",
+    "sourceUrl": "https://claude.com/resources/articles/dashboards-and-motion",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Claude Dashboards and Motion — 2026-10-08",
+        "url": "https://claude.com/resources/articles/dashboards-and-motion"
+      },
+      {
+        "label": "OpenAI: Teens learning tools and College Planner plans — 2026-10-07",
+        "url": "https://openai.com/index/teens-learn-and-plan/"
+      },
+      {
+        "label": "Google Workspace: Gemini in Classroom expansion — 2026-08-04",
+        "url": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html"
+      }
+    ],
+    "createdAt": "2026-10-08",
+    "image": "/images/research/covers/aied-203-backfill.png",
+    "imageAlt": "A teacher and student arrange three graph-storyboard cards while a colleague adjusts matching animation frames on a laptop.",
+    "summaryImage": "/images/research/summary/aied-203-backfill-summary.png",
+    "summaryImageAlt": "A teacher and student arrange three graph-storyboard cards while a colleague adjusts matching animation frames on a laptop.",
+    "summaryAudio": "/audio/research/aied-203-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-204",
+    "createdAt": "2026-10-09",
+    "title": "Designing Safe and Relevant Generative Chats for Math Learning in Intelligent Tutoring Systems",
+    "authors": [
+      "Zachary Levonian",
+      "Owen Henkel",
+      "Chenglu Li",
+      "Millie-Ellen Postle"
+    ],
+    "venue": "Journal of Educational Data Mining",
+    "year": 2025,
+    "type": "journal",
+    "slug": "math-tutor-conversations-safety-and-groundedness",
+    "tags": [
+      "Intelligent Tutoring",
+      "Mathematics Education",
+      "AI Safety",
+      "Learning Design"
+    ],
+    "shortSummary": "More than 8,000 learners used a structured growth-mindset conversation inside a mathematics tutor, giving researchers a practical view of moderation and response quality. Monitoring found no overtly objectionable model outputs, but identified subtler failures to respond appropriately to concerning student messages. A separate study found that educators preferred moderately guided textbook-supported answers. Neither safety monitoring nor response preference establishes improved learning, and both findings depend on the particular system and evaluation context.",
+    "fullSummary": "An AI mathematics tutor needs to answer more than mathematical questions. Learners may joke, change the subject, or disclose something that calls for a careful response. A Journal of Educational Data Mining article examines these realities through two studies: a structured growth-mindset conversation deployed in the Rori tutor, and an offline evaluation of textbook-supported answers to conceptual mathematics questions. Its contribution is evidence about system behavior, rather than a test of mathematics achievement.\n\nZachary Levonian and colleagues first developed a conversational design using GPT-3.5, moderation checks on inputs and outputs, and predefined responses for different levels of concern. The design kept the exchange focused on a specific educational purpose. Researchers also used adversarial testing and ongoing review, recognizing that a moderation score alone cannot describe every inappropriate or unhelpful interaction. The work treats the surrounding system as part of the intervention, rather than assuming a model is safe by itself.\n\nA classroom usability phase involved 109 students across six classrooms and 252 conversations. A subsequent field deployment involved 8,168 users, 8,755 conversations, and 126,278 messages. Researchers reported no overtly objectionable generated outputs in their monitoring. That observation is useful, but it is bounded by this conversation format, model, user population, and review process. It cannot establish that unrestricted dialogue or another deployment would behave in the same way.\n\nThe more revealing issue concerned responses to student messages. In a review of unflagged conversations with elevated moderation scores, forty included material that warranted caution or correction. The system responded appropriately in thirty-seven, while three responses ignored or equivocated about the problem. A message can therefore avoid obviously prohibited content and still fail to provide an adequate educational response. The authors discuss the need for better handling of sensitive inputs and clearer pathways to human support.\n\nThe second study examined retrieval-augmented generation: supplying relevant textbook material when a model answers a question. Researchers selected 51 answerable conceptual or factual mathematics questions from a larger sample of student discussion posts. Nine educators and educational-technology designers compared answers produced with different amounts of guidance. They tended to prefer moderately guided answers over both unguided answers and strongly constrained ones. Greater resemblance to a source document did not automatically make an answer more useful.\n\nThis distinction matters for classroom design. A response may closely repeat a textbook yet fail to address the learner's confusion, while a more conversational answer may be preferred without being the strongest teaching choice. The study's preference judgments came from adults, not the students who asked the questions, and the evaluation concerned single-turn answers. It did not establish a relationship between those preferences and subsequent learning.\n\nFor developers and educators, the practical lesson is to evaluate several dimensions together: subject accuracy, relevance to the question, handling of student inputs, and the learning activity surrounding the exchange. The observed deployment supports the feasibility of a carefully structured conversation, while its exceptions show why monitoring must examine subtle failures as well as explicit harmful output. Broader claims about safety, student benefit, or instructional effectiveness require additional evidence in the intended setting.",
+    "keyTakeaways": [
+      "The large field deployment evaluated a structured conversation and its safeguards, not unrestricted chatbot safety.",
+      "Some concerning student messages received inadequate responses even when generated text was not overtly objectionable.",
+      "Textbook groundedness, adult response preference, and measured student learning are separate evaluation targets."
+    ],
+    "whyItMatters": "Educational dialogue needs both subject relevance and appropriate responses to learners. This study provides concrete design evidence while showing why safe-looking output and preferred answers are insufficient measures of educational success.",
+    "sourceUrl": "https://doi.org/10.5281/zenodo.14751365",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://jedm.educationaldatamining.org/index.php/JEDM/article/view/840"
+      },
+      {
+        "label": "Journal open-access full text",
+        "url": "https://jedm.educationaldatamining.org/index.php/JEDM/article/download/840/237"
+      },
+      {
+        "label": "Authors’ study code and data",
+        "url": "https://github.com/DigitalHarborFoundation/chatbot-safety"
+      },
+      {
+        "label": "Conceptual math retrieval study materials",
+        "url": "https://github.com/DigitalHarborFoundation/rag-for-math-qa"
+      }
+    ],
+    "image": "/images/research/covers/aied-204-backfill.png",
+    "imageAlt": "Two pupils discuss an upward quadratic graph with a teacher beside a tablet offering calm mathematical hints.",
+    "summaryImage": "/images/research/summary/aied-204-backfill-summary.png",
+    "summaryImageAlt": "Two pupils discuss an upward quadratic graph with a teacher beside a tablet offering calm mathematical hints.",
+    "summaryAudio": "/audio/research/aied-204-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-205",
+    "slug": "news-claude-haiku-5-5-bounded-educational-tasks",
+    "title": "Product news: Claude Haiku 5.5 expands fast, small-model options for narrowly defined educational tasks",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude Haiku 5.5",
+      "small models",
+      "education infrastructure",
+      "model evaluation",
+      "task routing"
+    ],
+    "shortSummary": "Anthropic released Claude Haiku 5.5 on October 7 for fast, high-volume work and added an adjustable effort setting. This October 9 report examines bounded educational uses such as organising public resource metadata. The same announcement lowers Sonnet 5.5 cache-read pricing. OpenAI's model guide and Gemini's learning context provide comparisons. Lower cost can broaden experimentation, but each task still needs checks for omissions, incorrect categories, and cases requiring a person.",
+    "fullSummary": "Anthropic released Claude Haiku 5.5 on October 7, 2026, positioning it for quick, repetitive, high-volume tasks. The model adds adjustable effort, and the announcement also lowers Sonnet 5.5 cache-read pricing. This October 9 report examines the implications for educational infrastructure. The company reports substantial efficiency improvements, but the practical value depends on the task, its error costs, and the review needed before an output is used.\n\nA smaller model may be useful for a narrowly specified stage of a larger process. A resource catalogue might need titles, dates, or subject labels extracted from public pages. Those fields can often be checked against the source more directly than an open-ended educational judgment. A team can define the permitted categories, retain the original link, and decide what happens when the source is ambiguous or incomplete.\n\nThe boundary is important. Assigning a topic label to a public document is different from deciding which student needs an intervention or whether an answer deserves a grade. Similar-looking classification tasks can have very different consequences. Educational developers should not move a consequential decision to a cheaper model simply because the interface accepts the same input format.\n\nA proposed pilot could use a small catalogue that staff have already reviewed. The model would extract specified fields, mark uncertainty, and leave missing information blank rather than invent it. Reviewers would examine omissions and false matches, including documents with similar titles or mixed languages. The result would show whether the task is sufficiently bounded for the model, not whether the model is universally reliable. For example, a missing publication date should remain distinct from a page update date, since substituting one for the other can distort a resource's apparent currency.\n\nOpenAI's October 2 model guide likewise recommends matching capability and effort to the workload. Gemini's course-context features illustrate a different concern: even a simple study interaction depends on supplying the right material. Compared with these approaches, Haiku 5.5 broadens the available building blocks. The application still needs a clear account of which information each stage receives and which decisions its output is allowed to influence.\n\nEfficiency should be measured across the whole process. A fast extraction that requires extensive correction may save little time. A well-defined task with a reliable uncertainty route may be more useful even if it returns fewer completed fields. Developers can compare total review effort, successful cases, and the treatment of unfamiliar inputs. They should also record the model and effort setting so later changes can be examined.\n\nFor teaching, this provides a practical lesson in decomposing a problem. Students can identify which stages are mechanical, which require interpretation, and where they would retain human judgment. They can then test their proposed division against realistic examples. Haiku 5.5's release makes more low-cost experimentation possible according to Anthropic's account. A sound educational use would make the boundaries of that experimentation clearer, rather than encourage every task to be automated because it has become cheaper.",
+    "keyTakeaways": [
+      "Haiku 5.5 launched October 7 for fast, bounded work, with adjustable effort and a related Sonnet cache-price update.",
+      "Distinguish simple resource processing from consequential judgments about learners.",
+      "Compare total reviewed task effort and uncertainty handling, not speed alone."
+    ],
+    "whyItMatters": "Small-model efficiency is most useful when developers can define a narrow task, verify its output, and keep consequential judgments appropriately reviewed.",
+    "sourceUrl": "https://www.anthropic.com/claude-haiku-5-5",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Introducing Claude Haiku 5.5 — 2026-10-07",
+        "url": "https://www.anthropic.com/claude-haiku-5-5"
+      },
+      {
+        "label": "OpenAI: Practical guide to the GPT-6 family — 2026-10-02",
+        "url": "https://openai.com/index/practical-guide-building-gpt-6/"
+      },
+      {
+        "label": "Google Workspace: Gemini in Classroom expansion — 2026-08-04",
+        "url": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html"
+      }
+    ],
+    "createdAt": "2026-10-09",
+    "image": "/images/research/covers/aied-205-backfill.png",
+    "imageAlt": "A librarian and two adult students sort resource cards and check missing catalogue fields while recording metadata notes.",
+    "summaryImage": "/images/research/summary/aied-205-backfill-summary.png",
+    "summaryImageAlt": "A librarian and two adult students sort resource cards and check missing catalogue fields while recording metadata notes.",
+    "summaryAudio": "/audio/research/aied-205-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-206",
+    "createdAt": "2026-10-10",
+    "title": "LeanTutor: Towards a Verified AI Mathematical Proof Tutor",
+    "authors": [
+      "Manooshree Patel",
+      "Rayna Bhattacharyya",
+      "Thomas Lu",
+      "Arnav Mehta",
+      "Niels Voss",
+      "Narges Norouzi",
+      "Gireeja Ranade"
+    ],
+    "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+    "year": 2026,
+    "type": "conference",
+    "slug": "leantutor-proof-checking-and-translation-boundary",
+    "tags": [
+      "Mathematics Education",
+      "Intelligent Tutoring",
+      "Formal Verification",
+      "AI Evaluation"
+    ],
+    "shortSummary": "LeanTutor connects a language model to the Lean theorem prover to support mathematical proof feedback. Its technical evaluation shows promising hints on a small selected benchmark, but also exposes a crucial boundary: a verifier can check the formal proof only after the learner's words have been translated correctly. The study did not test classroom learning, and feedback evaluation excluded failed translations. It is an early system design with explicit limitations, not a validated replacement for mathematics instruction.",
+    "fullSummary": "A mathematical proof tutor should be able to explain a mistake without inventing one. LeanTutor, presented in the AAAI proceedings' educational-AI track, explores a way to combine conversational language models with formal proof checking. The design is promising because it connects feedback to an external verifier. Its evaluation also shows why that connection does not automatically make the entire tutoring exchange correct.\n\nManooshree Patel and colleagues built three connected components. The first translates a natural-language proof into Lean, a language and system for checking mathematical reasoning. The second proposes a next proof step, and the third turns the resulting information into feedback that a learner can read. The intention is to let students work in ordinary mathematical language while the system uses formal structure behind the scenes.\n\nThe authors created PeanoBench, a dataset of 371 proofs based on elementary arithmetic tasks from the Natural Numbers Game. It includes correct proofs and deliberately altered proofs with missing steps. The natural-language versions were written by the paper's authors using different styles; they were not collected from a classroom of independent students. This makes the benchmark useful for controlled technical development while limiting how well it represents the variety of real learner explanations and errors.\n\nA central evaluation question was whether the translated formal proof faithfully represented the submitted reasoning. A proof that successfully compiles is not enough: the model might have silently replaced a student's argument with a different valid solution. The researchers therefore compared individual tactics and resulting proof states with reference translations. They found that providing a formal staff solution helped, but also that the model relied heavily on that reference. Alternative reasoning paths remained difficult to translate reliably.\n\nThe end-to-end feedback evaluation was deliberately narrow. From incorrect proofs that had been successfully translated, the researchers selected twenty-one for evaluation. Two external graduate evaluators with mathematics-teaching experience rated feedback without knowing its model source; each proof was rated by one evaluator. LeanTutor's hints and suggested next steps received higher average accuracy and relevance scores than the language-model baseline. Readability was broadly comparable, and explicit next-step responses predictably revealed more of the answer. These are descriptive feedback ratings on a selected subset, not estimates of student learning gains.\n\nThe selection boundary is particularly important. The feedback assessment excluded proofs whose translation failed. In practice, a Lean error could arise from a student's mathematical mistake or from the system's own mistranslation. Confusing those cases could produce incorrect corrective feedback. The prototype also assumes a close correspondence between ordinary-language proof steps and formal tactics, and it relies on an already formalized staff solution. Those assumptions become harder to sustain as proofs grow more complex.\n\nFor mathematics educators and developers, LeanTutor identifies a useful direction: combine fluent explanations with tools that can check parts of the reasoning, and evaluate the connections between them. The next evidence needed is broader testing on authentic student work, transparent handling of uncertain translations, and classroom studies of independent proof construction. The paper offers an architectural and benchmark contribution, with a carefully bounded demonstration. It does not establish that the tutor is universally correct, improves retained understanding, or is ready to replace human feedback.",
+    "keyTakeaways": [
+      "Formal verification checks the translated proof; it does not guarantee that the translation preserves a learner’s intended reasoning.",
+      "Feedback ratings came from twenty-one successfully translated incorrect proofs, excluding translation failures.",
+      "LeanTutor is a technical proof of concept, with no classroom learning or retention evaluation in this paper."
+    ],
+    "whyItMatters": "External verifiers can strengthen mathematical tutoring, but every step between a learner’s explanation and the verifier requires its own evidence. This prototype makes that boundary concrete.",
+    "sourceUrl": "https://doi.org/10.1609/aaai.v40i47.41514",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/view/41514"
+      },
+      {
+        "label": "AAAI/EAAI published full-text paper",
+        "url": "https://ojs.aaai.org/index.php/AAAI/article/download/41514/45475"
+      }
+    ],
+    "image": "/images/research/covers/aied-206-backfill.png",
+    "imageAlt": "A mathematics lecturer and peer discuss a university student's induction proof beside a laptop showing feedback on the next step.",
+    "summaryImage": "/images/research/summary/aied-206-backfill-summary.png",
+    "summaryImageAlt": "A mathematics lecturer and peer discuss a university student's induction proof beside a laptop showing feedback on the next step.",
+    "summaryAudio": "/audio/research/aied-206-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-207",
+    "slug": "news-chatgpt-intelligent-ui-interactive-reasoning",
+    "title": "Product news: ChatGPT Intelligent UI turns some answers into interactive learning experiences",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Intelligent UI",
+      "GPT-6",
+      "interactive explanations",
+      "learning design",
+      "visual reasoning"
+    ],
+    "shortSummary": "OpenAI introduced GPT-6 with Intelligent UI in ChatGPT on October 7, allowing responses to combine text, visuals, and interactive elements. This October 10 report focuses on educational use, while preserving the staged rollout and the distinction from Work and Codex. Anthropic's new visual tools and Gemini's Guided Vision offer comparisons. A useful interactive response should help learners predict, inspect, and explain a relationship rather than merely click through an attractive answer.",
+    "fullSummary": "OpenAI introduced GPT-6 with Intelligent UI in ChatGPT on October 7, 2026. Responses can combine text, visuals, and interactive elements according to the question, with a staged rollout across plans. The update concerns the Chat experience rather than changing the models in Work or Codex. This October 10 report focuses on the educational implications of an answer that can become an interface the learner manipulates.\n\nInteractivity can make a relationship easier to investigate. A learner might change an input, compare two cases, or reveal another part of a diagram. But the presence of a slider or button does not determine what the learner understands. The activity needs a question that gives the interaction purpose. Otherwise, a student can explore the controls without noticing the idea the representation was meant to explain.\n\nA proposed lesson could ask students to predict an outcome before changing a value. They would then compare the displayed result with their prediction and explain the difference. The teacher could introduce a new example outside the interface to see whether the explanation transfers. This preserves a role for reasoning before and after the interaction, rather than treating successful navigation as evidence of learning.\n\nGenerated interfaces also need checking as software and as explanations. A calculator may use the wrong formula; a diagram may omit a condition; a chart may label a variable ambiguously. Teachers can begin with examples whose behaviour they can verify directly. They should inspect extreme or missing inputs and ask whether the display communicates its assumptions. A smooth animation should not conceal an incorrect relationship.\n\nAnthropic's October Dashboards and Motion release similarly expands visual creation, with inspectable queries and editable animation code. Gemini Guided Vision provides a different form of access through conversational descriptions of visual information. Compared with these developments, OpenAI's Intelligent UI adapts the format of an answer inside the conversation. The useful representation depends on the learner's task and access needs, not on which format looks most sophisticated.\n\nStudents can participate in the review. They might identify a label that needs clarification, compare the generated interface with a textbook example, or propose an input that would reveal a mistake. A class can also discuss when a plain paragraph or a static table would be easier to understand. This makes interface choice part of the reasoning rather than an invisible decision made entirely by the model. An explanation of one deliberately chosen counterexample can be more informative than a long record of successful interactions.\n\nFor an educational pilot, the strongest evidence would connect the interaction with something the learner can explain or do afterwards. Engagement, speed, and preference can be recorded separately, without being presented as comprehension. Intelligent UI introduces a flexible response format with clear potential for exploration. Its educational value will depend on the questions built around it and on whether users can inspect, challenge, and carry the underlying idea beyond the generated interface.",
+    "keyTakeaways": [
+      "Intelligent UI was announced October 7 for the Chat experience with staged availability.",
+      "Build prediction and explanation around interaction, rather than treating clicks as learning evidence.",
+      "Check the generated interface's calculations, labels, assumptions, and unfamiliar inputs."
+    ],
+    "whyItMatters": "Interactive answers can support learning when the interface makes reasoning visible and learners can use the idea beyond the interaction itself.",
+    "sourceUrl": "https://openai.com/index/gpt-6-for-everyone/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: GPT-6 and Intelligent UI — 2026-10-07",
+        "url": "https://openai.com/index/gpt-6-for-everyone/"
+      },
+      {
+        "label": "Anthropic: Dashboards and Motion — 2026-10-08",
+        "url": "https://claude.com/resources/articles/dashboards-and-motion"
+      },
+      {
+        "label": "Google: Guided Vision in Gemini Live — 2026-10-01",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/"
+      }
+    ],
+    "createdAt": "2026-10-10",
+    "image": "/images/research/covers/aied-207-backfill.png",
+    "imageAlt": "A teacher and two teenagers compare a paper prediction about moving a parabola upward with an interactive graph on a tablet.",
+    "summaryImage": "/images/research/summary/aied-207-backfill-summary.png",
+    "summaryImageAlt": "A teacher and two teenagers compare a paper prediction about moving a parabola upward with an interactive graph on a tablet.",
+    "summaryAudio": "/audio/research/aied-207-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-208",
+    "createdAt": "2026-10-11",
+    "title": "Nonstandard English and the Automated Scoring of Open-Ended Math Problems",
+    "authors": [
+      "Abubakir Siedahmed",
+      "Jaclyn Ocumpaugh",
+      "Zelda Ferris",
+      "Dinesh Kodwani",
+      "Neil Heffernan",
+      "Eamon Worden"
+    ],
+    "venue": "Proceedings of the 18th International Conference on Educational Data Mining",
+    "year": 2025,
+    "type": "conference",
+    "slug": "math-scoring-dialect-and-prompt-sensitivity",
+    "tags": [
+      "Mathematics Assessment",
+      "Educational Equity",
+      "AI Evaluation",
+      "Language Diversity"
+    ],
+    "shortSummary": "A study of 394 authentic mathematics responses examined how GPT-4o scores language associated with African American Vernacular English. Changing one targeted dialect feature did not significantly alter scores, while changing the grading prompt did. The latter contrast also changed rubric wording, so it cannot cleanly establish that a dialect instruction removed bias. The study makes a useful case for testing content scoring carefully, with language variation and mathematical reasoning evaluated separately.",
+    "fullSummary": "An open-ended mathematics answer should be judged for its reasoning, without an irrelevant penalty for the variety of English a learner uses. An Educational Data Mining paper examines this problem with authentic student responses and GPT-4o. Its results reveal sensitivity to the grading prompt, but they do not provide a simple verdict that the model is either biased or fair across language varieties.\n\nAbubakir Siedahmed and colleagues selected responses from ASSISTments containing four grammatical features associated with African American Vernacular English: negative concord, subject-verb agreement leveling, preterit done, and habitual be. After cleaning and expert checking, the analysis included 394 responses across 349 mathematics problems from seventy-five schools. These features can also occur in other varieties of English. Individual student demographics were unavailable, so the study cannot identify the race or dialect identity of each response's author.\n\nFor each original response, the researchers constructed a comparison version by standardizing the targeted grammatical feature. This is a paired text comparison, not a comparison between separate groups of students. Other dialect features, spelling differences, or incomplete phrasing could remain in both versions. Preserving most of the original response helps keep the mathematical content comparable, but it also means that the comparison is not between fully standardized and wholly dialectal language.\n\nThe model scored both versions using two prompts and several temperature settings. One prompt gave grading instructions without referring to dialect. The other explicitly asked the model to treat standard English and dialect varieties equally. The principal paired comparisons found no significant difference between the original and modified responses under either prompt. That result does not establish equivalence or comprehensive fairness; the manipulation was limited, and some linguistic categories had relatively few examples.\n\nChanging the prompt raised scores for both text versions. The reported mean increase was 0.34 points for original responses and 0.26 points for the comparison responses on the zero-to-four scale. However, the published prompts contain another difference that matters to interpretation: the highest-score criterion in the first prompt required a complete explanation or justification, while the second omitted that phrase. Our reading of the displayed prompt table therefore identifies a possible scoring-rule confound. The observed increase cannot be cleanly attributed to the instruction about dialect alone.\n\nFor assessment teams, the useful lesson is methodological. A test of language-related scoring should hold the mathematical rubric constant, preserve the intended meaning of paired answers, and compare model decisions with careful human judgments. Raising scores is not automatically improving fairness or accuracy. An evaluation also needs to identify whether correct reasoning is recognized and whether the system applies the same substantive expectations across ways of expressing it.\n\nThe study opens a valuable line of inquiry in content assessment, beyond the more familiar case of essay grading. Its scope remains one model, selected linguistic features, and a restricted sample of mathematics responses. It did not measure learning gains or validate an operational grading policy. The paper's contribution is to make language variation and prompt sensitivity visible in a domain where educators might otherwise assume that only the mathematics matters.",
+    "keyTakeaways": [
+      "Standardizing one targeted dialect feature did not significantly change scores in this paired-response study.",
+      "The prompt comparison changed both dialect guidance and rubric wording, limiting causal interpretation of the score increase.",
+      "Fair assessment requires checking mathematical content, meaning-preserving language variation, and consistent scoring criteria together."
+    ],
+    "whyItMatters": "Automated mathematics scoring can be sensitive to language and instructions. Carefully controlled comparisons help distinguish fair recognition of reasoning from changes in grading strictness.",
+    "sourceUrl": "https://doi.org/10.5281/zenodo.15870175",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://educationaldatamining.org/EDM2025/proceedings/2025.EDM.long-papers.195/index.html"
+      },
+      {
+        "label": "Published proceedings full-text PDF",
+        "url": "https://educationaldatamining.org/EDM2025/proceedings/2025.EDM.long-papers.195/2025.EDM.long-papers.195.pdf"
+      },
+      {
+        "label": "Official DOI publication record",
+        "url": "https://zenodo.org/records/15870175"
+      }
+    ],
+    "image": "/images/research/covers/aied-208-backfill.png",
+    "imageAlt": "A student explains equivalent fraction bars to a listening teacher and classmate, with a tablet set aside.",
+    "summaryImage": "/images/research/summary/aied-208-backfill-summary.png",
+    "summaryImageAlt": "A student explains equivalent fraction bars to a listening teacher and classmate, with a tablet set aside.",
+    "summaryAudio": "/audio/research/aied-208-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-209",
+    "slug": "news-claude-dynamic-workflows-document-coverage",
+    "title": "Product news: Claude Managed Agents adds dynamic workflows for larger tasks, making coverage records more important",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude Managed Agents",
+      "dynamic workflows",
+      "document review",
+      "research infrastructure",
+      "coverage tracking"
+    ],
+    "shortSummary": "Anthropic's October 9 platform notes introduce dynamic workflows in beta for Claude Managed Agents. An agent can organise work into phases, run multiple agents, and combine results while the server executes the workflow in the background. This October 11 report considers large document collections. OpenAI's workflow guidance and Gemini's course-context tools provide comparisons: faster processing is useful only when reviewers can see which items were examined, omitted, or left unresolved.",
+    "fullSummary": "Anthropic's October 9, 2026 platform release notes introduce dynamic workflows in beta for Claude Managed Agents. An agent can write a programme that runs other agents in phases and combines their results, with execution continuing on the server. This October 11 report examines the implications for work involving many documents. The release expands orchestration; it does not establish that a large collection has been reviewed completely or interpreted correctly.\n\nScale changes the evidence a user needs. When reviewing a handful of files, a person may remember which one failed to open or contained an ambiguous section. Across hundreds of items, those details can disappear inside a polished synthesis. A useful system should preserve an item-level record of what was processed, what failed, and what requires another look. The final summary should not silently treat an unread document as irrelevant. A coverage table can list each source identifier, its processing status, and the reason an item needs review.\n\nA proposed university-library exercise could use a small, known collection of public reports. Students would define the fields to collect, then compare the workflow's coverage with a manually prepared inventory. Some files could deliberately be missing a date or contain an unclear title. The exercise would test how the system represents uncertainty and incomplete access, without requiring a large or sensitive dataset.\n\nThe order of phases also matters. Deduplicating documents before extraction is different from merging apparently similar findings afterwards. A mistake early in the process can remove evidence that a later stage never sees. Students can draw the sequence, identify dependencies, and explain which intermediate results should be retained. That makes orchestration a subject of inquiry rather than an invisible efficiency feature.\n\nOpenAI's practical GPT-6 guide similarly discusses independent work, updates, and completion evidence. Gemini's course-context tools offer a smaller-scale example of selecting the material an assistant should use. Compared with those approaches, Anthropic's new workflow mechanism addresses execution across many pieces. The core educational question remains whether the person can reconstruct how the final account was assembled from the available inputs.\n\nA review plan should include exclusions as well as outputs. Why was an item skipped? Was it a duplicate, inaccessible, outside the defined scope, or simply not processed before the run ended? Those are different conditions. A team can sample completed items and inspect every unresolved category, while preserving the distinction between a partial result and a complete collection. Adding more agents does not remove the need for that judgment.\n\nThe beta may help developers build larger research-support or administrative tools with less orchestration work of their own. For education, the useful outcome would be a process that is easier to audit and explain, not merely one that finishes sooner. A strong student or developer handoff would include the collection definition, coverage record, important intermediate decisions, and remaining gaps. That makes scale compatible with an honest account of what the system actually did.",
+    "keyTakeaways": [
+      "Dynamic workflows entered beta in the October 9 platform update and are reported here on October 11.",
+      "Preserve item-level coverage, failures, and reasons for exclusion when processing a collection.",
+      "Inspect phase dependencies and intermediate decisions before accepting a combined result."
+    ],
+    "whyItMatters": "Large AI workflows remain academically useful only when their speed is accompanied by a traceable account of the evidence included and left out.",
+    "sourceUrl": "https://platform.claude.com/docs/en/release-notes/overview",
+    "sourceUrls": [
+      {
+        "label": "Anthropic Platform: October 9 dynamic-workflow beta — 2026-10-09",
+        "url": "https://platform.claude.com/docs/en/release-notes/overview"
+      },
+      {
+        "label": "OpenAI: Practical guide to the GPT-6 family — 2026-10-02",
+        "url": "https://openai.com/index/practical-guide-building-gpt-6/"
+      },
+      {
+        "label": "Google Workspace: Gemini in Classroom expansion — 2026-08-04",
+        "url": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html"
+      }
+    ],
+    "createdAt": "2026-10-11",
+    "image": "/images/research/covers/aied-209-backfill.png",
+    "imageAlt": "A librarian and two university researchers compare annotated public reports with a monitor showing document-analysis coverage and unresolved items.",
+    "summaryImage": "/images/research/summary/aied-209-backfill-summary.png",
+    "summaryImageAlt": "A librarian and two university researchers compare annotated public reports with a monitor showing document-analysis coverage and unresolved items.",
+    "summaryAudio": "/audio/research/aied-209-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-210",
+    "createdAt": "2026-10-12",
+    "title": "Improving Generative AI Student Feedback: Direct Preference Optimization with Teachers in the Loop",
+    "authors": [
+      "Juliette Woodrow",
+      "Chris Piech",
+      "Sanmi Koyejo"
+    ],
+    "venue": "Proceedings of the 18th International Conference on Educational Data Mining",
+    "year": 2025,
+    "type": "conference",
+    "slug": "teacher-preferences-shape-ai-probability-feedback",
+    "tags": [
+      "Teacher Agency",
+      "AI Feedback",
+      "Higher Education",
+      "Learning at Scale"
+    ],
+    "shortSummary": "Teaching assistants' choices can help adapt AI feedback to a particular course. In a university probability course, researchers trained a model using comments that staff selected, edited, or wrote themselves. Experts preferred its feedback to GPT-4o in a blind comparison, while classroom staff still frequently wrote their own responses. The study demonstrates a feasible feedback workflow and stronger teacher preference, but it did not test whether students learned more or used the feedback more effectively.",
+    "fullSummary": "Helpful feedback depends on the course as well as the student's answer. Terminology, the level of explanation, and what an instructor expects a learner to attempt next all shape an appropriate response. An Educational Data Mining study explores whether a language model can learn those preferences from teaching assistants' ordinary grading decisions, while leaving the final feedback under human control.\n\nJuliette Woodrow, Chris Piech, and Sanmi Koyejo developed a workflow in a university probability course. For each student response, teaching assistants saw two AI-generated feedback suggestions. They could choose one, edit it, or write a new comment. Those choices became training examples for direct preference optimization, a method that increases the likelihood of responses people prefer. The updated model then supplied suggestions for a later assignment. The workflow concerned feedback text, not automatic assignment of the student's grade.\n\nThe implementation used a Llama 3.1 model adapted to the course, with GPT-4o helping identify relevant observations about the submitted work. Staff reviewed all generated feedback before it reached students. This distinction is central to the contribution: the system learned from actual instructional choices and operated within an existing review process. It was not evaluated as an autonomous tutor communicating unchecked comments to a class.\n\nA controlled evaluation involved ten current or former course staff. They compared feedback on anonymized submissions under blind, randomized presentation, without being told which models had produced it. The adapted model was preferred in 56.8 percent of comparisons, versus 40.2 percent for GPT-4o; in the remaining three percent, neither response was considered suitable. Evaluators also gave the adapted feedback higher insightfulness ratings. These findings concern expert judgments of feedback quality and fit, rather than student achievement.\n\nThe classroom deployment supplied a useful counterbalance to the controlled comparison. Across two course offerings with nearly three hundred students and more than ten teaching assistants per term, staff often wrote their own feedback. In one later deployment round, teacher-written comments accounted for 58.7 percent of responses, compared with 27.5 percent selected from the adapted model and 13.8 percent from GPT-4o. A model can outperform another model while still being only one source of useful comments in practice.\n\nThe researchers also reported an implementation failure: a formatting bug prevented models from seeing equations in one deployment round, which also had fewer problems contributing preference data. That episode underscores how interface and data handling can change feedback quality independently of model capability. Automated critic scores supplied additional evaluation, but such judgments remain proxies that need to be compared with human review and real student use.\n\nThe study did not assess whether learners acted on the comments, improved their revisions, or retained more understanding. Its findings come from one course, and an exploratory fairness analysis was too limited to establish equitable performance across learners. For teaching teams, the practical contribution is an adaptable review-and-learning workflow: retain the ability to reject suggestions, learn from expert edits, and track why comments are chosen. The next question is whether feedback that better matches staff preferences also supports better independent learning.",
+    "keyTakeaways": [
+      "The model learned from teaching assistants’ real selections and edits, with human review before feedback reached students.",
+      "Experts preferred the adapted feedback to GPT-4o, but staff still frequently wrote their own comments during deployment.",
+      "Teacher preference and operational feasibility were measured; student uptake, learning gains, and retention were not."
+    ],
+    "whyItMatters": "Teachers need AI suggestions that fit their subject and pedagogy. This study shows how their choices can guide adaptation while preserving the distinction between preferred comments and demonstrated learning benefits.",
+    "sourceUrl": "https://doi.org/10.5281/zenodo.15870266",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://educationaldatamining.org/EDM2025/proceedings/2025.EDM.short-papers.166/index.html"
+      },
+      {
+        "label": "Published proceedings full-text PDF",
+        "url": "https://educationaldatamining.org/edm2025/proceedings/2025.EDM.short-papers.166/2025.EDM.short-papers.166.pdf"
+      },
+      {
+        "label": "Authors’ project materials",
+        "url": "https://juliettewoodrow.github.io/dpo_feedback/"
+      },
+      {
+        "label": "Official DOI publication record",
+        "url": "https://zenodo.org/records/15870266"
+      }
+    ],
+    "image": "/images/research/covers/aied-210-backfill.png",
+    "imageAlt": "A teaching assistant, instructor and university student discuss two proposed feedback comments beside a probability tree for two coin tosses.",
+    "summaryImage": "/images/research/summary/aied-210-backfill-summary.png",
+    "summaryImageAlt": "A teaching assistant, instructor and university student discuss two proposed feedback comments beside a probability tree for two coin tosses.",
+    "summaryAudio": "/audio/research/aied-210-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-211",
+    "slug": "news-gemini-special-education-student-expression",
+    "title": "Teacher case: Gemini voice prompts and visual guides support student expression in an Indonesian classroom",
+    "authors": [
+      "Google"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Gemini",
+      "inclusive education",
+      "student expression",
+      "visual support",
+      "teacher practice"
+    ],
+    "shortSummary": "In an October 5 Google-published account, Indonesian teacher Eni Wulandari describes using Gemini for visual guides and helping students express ideas through voice prompts. This October 12 report examines the design choices in that practice, without generalising its reported benefits. OpenAI's voice tools and Anthropic's visual-creation features offer comparisons. The educational priority is the learner's intended meaning, choice, and access to several ways of participating.",
+    "fullSummary": "Indonesian teacher Eni Wulandari described her use of Gemini in a Google-published account on October 5, 2026. She reports creating visual guides and supporting students who have difficulty writing to express ideas through voice prompts and generated images. This October 12 article examines the practice as a teacher account. It does not establish an effect for all learners with disabilities or replace an individual understanding of each student's communication needs.\n\nThe important educational move is to offer another route for expressing an idea. A student may have a clear intention that is difficult to communicate through a particular written task. Voice, images, objects, or another supported form can make participation possible in a different way. The teacher still needs to check whether the resulting image represents what the student meant, rather than accepting the system's interpretation as the student's own.\n\nA simple activity could let a learner describe a familiar scene, inspect the generated image with support, and decide what should change. The teacher could ask about one element at a time and provide alternatives where needed. The process should preserve the learner's ability to reject a suggestion. For example, a learner may choose a different object or ask to remove a detail that changes the story. An attractive image is not successful communication if the student had little control over the meaning it conveys.\n\nVisual guides also need to be matched to their purpose. A picture that seems obvious to an adult may omit the action or relationship a learner needs to recognise. Teachers can compare the guide with the actual task, observe where confusion remains, and revise one feature at a time. They should retain other forms of explanation and support, rather than assume that adding an image solves the access problem.\n\nOpenAI's GPT-Live-1 API release offers developers more control over spoken interaction. Anthropic's Motion and document tools support the production of visual materials. Gemini's classroom example connects these broader capabilities with a specific teacher's practice. The products are not interchangeable interventions, and their availability or technical performance does not establish that they meet an individual learner's needs.\n\nAn inclusive review can focus on the student's choices and participation. Did the learner initiate an idea, recognise whether the output matched it, or request a meaningful revision? What support was needed, and was another method more useful? These observations can help the teacher refine the activity without reducing success to the number of images produced. They also keep the learner's agency visible alongside the technology.\n\nWulandari's account is valuable as a concrete example that colleagues can discuss and adapt cautiously. A school considering similar work should involve the learner and relevant support staff, use appropriate materials, and preserve several routes for communication. The aim is not to make every student interact with AI in the same way. It is to widen the ways students can express, question, and develop their own ideas, with technology serving the meaning they want to communicate.",
+    "keyTakeaways": [
+      "The source is an October 5 teacher account, reported October 12, rather than a general effectiveness study.",
+      "Check whether a generated image expresses the learner's intended meaning and can be meaningfully revised.",
+      "Evaluate participation and choice while retaining several routes for communication."
+    ],
+    "whyItMatters": "AI-supported expression is most inclusive when the learner remains the author of the meaning and can accept, reject, or reshape the output.",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/education/special-education-gemini/",
+    "sourceUrls": [
+      {
+        "label": "Google Teacher Voices: Eni Wulandari on Gemini — 2026-10-05",
+        "url": "https://blog.google/products-and-platforms/products/education/special-education-gemini/"
+      },
+      {
+        "label": "OpenAI: GPT-Live-1 API release — 2026-09-10",
+        "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+      },
+      {
+        "label": "Anthropic: Dashboards and Motion — 2026-10-08",
+        "url": "https://claude.com/resources/articles/dashboards-and-motion"
+      }
+    ],
+    "createdAt": "2026-10-12",
+    "image": "/images/research/covers/aied-211-backfill.png",
+    "imageAlt": "A child chooses between illustrated story settings while a teacher listens and an assistant presents two picture cards beside a tablet.",
+    "summaryImage": "/images/research/summary/aied-211-backfill-summary.png",
+    "summaryImageAlt": "A child chooses between illustrated story settings while a teacher listens and an assistant presents two picture cards beside a tablet.",
+    "summaryAudio": "/audio/research/aied-211-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-212",
+    "createdAt": "2026-10-13",
+    "title": "AI-Assisted Co-Creation: Bridging Skill Gaps in Student-Generated Content",
+    "authors": [
+      "Stanislav Pozdniakov",
+      "Jonathan Brazil",
+      "Mehrnoush Mohammadi",
+      "Mollie Dollinger",
+      "Shazia Sadiq",
+      "Hassan Khosravi"
+    ],
+    "venue": "Journal of Learning Analytics",
+    "year": 2025,
+    "type": "journal",
+    "slug": "student-created-questions-ai-feedback-uptake",
+    "tags": [
+      "Learning Analytics",
+      "Student Agency",
+      "AI Feedback",
+      "Assessment Design"
+    ],
+    "shortSummary": "Students often rated AI feedback positively when creating multiple-choice questions in RiPPLE, but visible revision followed in only about 35 percent of editing sessions. The study examined feedback, activity logs, and student comments across introductory university courses. Its findings separate liking a response from using it and from learning through it. They suggest that question-authoring activities need explicit support for evaluating feedback, alongside safeguards against inaccurate or irrelevant suggestions.",
+    "fullSummary": "Asking students to write assessment questions can reveal what they understand about a subject. AI feedback may help them improve the wording, answer choices, and explanations, but receiving a useful-looking comment is only the start of that process. A Journal of Learning Analytics study of RiPPLE shows a gap between positive reactions to AI feedback and the revisions visible in students' activity logs.\n\nStanislav Pozdniakov and colleagues examined an Australian university setting spanning introductory information-systems, economics, and health-sciences courses. Students created multiple-choice resources as part of assessment work, including a question, correct and incorrect options, and explanations. Once they had a draft, they could request AI feedback in a sidebar. The feedback summarized the resource, identified strengths, and suggested improvements. Students retained the option to proceed without adopting the advice or to disable assistance.\n\nThe research combined several sources of evidence rather than relying on a satisfaction survey alone. The authors analyzed 1,063 feedback instances linked to student-created questions, activity traces, 3,324 helpfulness ratings, and 601 comments. These are different analytic units, not a single sample size to apply to every result. The feedback analysis examined its focus, readability, and tone, while the logs examined the sequence of actions after students requested help.\n\nLearners generally responded positively: 79 percent of helpfulness ratings were positive, twelve percent neutral, and nine percent negative. Comments appreciated clarity, encouragement, and suggestions about question design or disciplinary explanation. Other comments identified incorrect information, repetition of changes already made, misunderstandings of the question's purpose, or advice that was difficult to act on. Positive sentiment therefore coexisted with concrete quality problems that students needed to recognize.\n\nVisible behavior was more selective. In approximately 65 percent of resource-creation sessions, the next step after feedback was self-assessment rather than editing. The authors summarized active attempts to revise as occurring in about 35 percent of sessions. When learners did revise, they often changed the question body or answer options. These logs show observable interaction patterns, but they cannot fully reveal whether a student considered and reasonably rejected a suggestion, felt satisfied with the draft, or overlooked a useful improvement.\n\nThe study does not establish that feedback caused better questions or improved subject knowledge. It lacked a randomized comparison for those outcomes, and helpfulness reports are not independent assessments of learning. The authors also used language models to help classify feedback content, with human checks and acknowledged disagreements; that analytical process carries its own uncertainty. Findings from this interface, prompt design, and university context should not automatically be extended to essays, projects, or younger learners.\n\nFor instructors, the practical opportunity is to connect AI comments with an explicit decision. Students could explain which suggestion they accepted, which they rejected, and why the final question better tests the intended concept. That would make judgment more visible without assuming every suggestion deserves adoption. It remains a teaching implication to test, not an intervention proven by this study. The research offers a realistic account of feedback reception and use, and a reminder that the path from a positive rating to stronger independent understanding still needs to be demonstrated.",
+    "keyTakeaways": [
+      "Most helpfulness ratings were positive, while visible revision followed in only about 35 percent of editing sessions.",
+      "No edit does not necessarily mean no engagement; learners may accept, reject, or overlook advice for different reasons.",
+      "The study describes feedback and activity patterns, without demonstrating causal gains in question quality or subject learning."
+    ],
+    "whyItMatters": "AI feedback only supports learning when students can judge and use it appropriately. Combining learner comments with activity traces helps course teams see where that process needs instructional support.",
+    "sourceUrl": "https://doi.org/10.18608/jla.2025.8601",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.learning-analytics.info/index.php/JLA/article/view/8601"
+      },
+      {
+        "label": "Published full text via ERIC",
+        "url": "https://files.eric.ed.gov/fulltext/EJ1465725.pdf"
+      },
+      {
+        "label": "Publisher PDF view",
+        "url": "https://learning-analytics.info/index.php/JLA/article/view/8601/7889"
+      }
+    ],
+    "image": "/images/research/covers/aied-212-backfill.png",
+    "imageAlt": "A university student revises a biology multiple-choice question while a classmate and lecturer consider feedback shown beside a simple animal-cell drawing.",
+    "summaryImage": "/images/research/summary/aied-212-backfill-summary.png",
+    "summaryImageAlt": "A university student revises a biology multiple-choice question while a classmate and lecturer consider feedback shown beside a simple animal-cell drawing.",
+    "summaryAudio": "/audio/research/aied-212-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-213",
+    "slug": "news-gemini-colab-oral-defence-assessment",
+    "title": "Teacher case: A Malaysian lecturer uses oral defence to assess students' judgment in Gemini-assisted coding",
+    "authors": [
+      "Google"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Gemini in Colab",
+      "assessment",
+      "data mining education",
+      "oral defence",
+      "human judgment"
+    ],
+    "shortSummary": "An October 5 teacher account from Universiti Putra Malaysia describes students using Gemini in Colab while defending their modelling choices in verbal interviews. This October 13 report considers the assessment design, not a proven improvement in attainment. OpenAI's software-testing cases and Anthropic's project coordination provide context: when AI can produce working code, educators need evidence of what students understand, can troubleshoot, and can justify in a changed situation.",
+    "fullSummary": "Nurfadhlina Mohd Sharef of Universiti Putra Malaysia described a change to assessment in an October 5, 2026 Google-published account. Her data-mining students use Gemini in Google Colab, while verbal interviews ask them to defend choices, troubleshoot, and identify questionable AI suggestions. This October 13 report examines that design. The short practitioner account does not provide a comparative study of attainment or establish that oral assessment is suitable in the same form for every learner.\n\nThe central problem is recognisable: a working model does not reveal all the reasoning that produced it. A student may have made careful decisions, accepted the first generated answer, or relied on a mixture of both. Asking for an explanation can make those differences more visible. The interview should focus on the decisions the course intends to assess, rather than become an unpredictable test of confidence or speaking style.\n\nA lecturer could ask why a particular variable was included, what an error message means, or how a result would change under a different assumption. The question should connect to the student's actual work. A useful answer may include uncertainty and a proposal for checking it. Students should not be rewarded merely for producing a confident defence of a weak choice.\n\nThe method also needs clear expectations. Learners can be told which kinds of reasoning they should be prepared to explain and what assistance is permitted during preparation. Relevant access needs and language demands should be considered when choosing the format. An alternative way to demonstrate the same understanding may be appropriate. The goal is valid evidence of judgment, not a single performance style imposed on everyone.\n\nOpenAI's recent Devin case separates a software demonstration from the scope of completed tests. Anthropic's redesigned projects coordinate several strands of AI work. Compared with these developments, the Gemini classroom account shifts attention to the human accepting and explaining the result. More capable coding assistance makes that distinction important: successful execution and a student's understanding are different claims with different evidence.\n\nA balanced assessment could combine the code, a small record of consequential decisions, and a focused follow-up conversation. Students might identify one AI suggestion they rejected and explain why, then adapt a part of the analysis to a new example. Reviewers can examine whether the explanation matches the implementation. A second assessor could review a sample of responses to check whether the criteria are being applied consistently. This also gives feedback that can guide the student's next attempt, rather than only produce a score.\n\nThe account offers a concrete idea for redesigning assessment as AI-assisted work becomes ordinary. Its value lies in making students' reasoning discussable, while leaving room to examine fairness, workload, and consistency across assessors. A useful local trial would document the questions asked, the criteria applied, and the difficulties encountered. The aim is an assessment in which learners can show what they know, how they check assistance, and where their own judgment changes the work.",
+    "keyTakeaways": [
+      "The October 5 source describes a lecturer's practice, not a controlled comparison of assessment outcomes.",
+      "Connect oral questions to the modelling decisions the course intends to assess.",
+      "Combine implementation, decision records, and accessible follow-up evidence of understanding."
+    ],
+    "whyItMatters": "Assessment can remain meaningful with AI-assisted coding when it examines the learner's judgment and understanding rather than only the finished program.",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/education/gemini-google-colab/",
+    "sourceUrls": [
+      {
+        "label": "Google Teacher Voices: Gemini and coding interviews — 2026-10-05",
+        "url": "https://blog.google/products-and-platforms/products/education/gemini-google-colab/"
+      },
+      {
+        "label": "OpenAI: Devin testing workflow with Astra — 2026-09-11",
+        "url": "https://openai.com/index/cognition-devin-testing-with-astra/"
+      },
+      {
+        "label": "Anthropic: Redesigned Claude Code projects — 2026-09-17",
+        "url": "https://claude.com/resources/articles/projects-redesigned"
+      }
+    ],
+    "createdAt": "2026-10-13",
+    "image": "/images/research/covers/aied-213-backfill.png",
+    "imageAlt": "A university student explains a simple shape-classification decision tree to a lecturer during a supportive coding assessment conversation.",
+    "summaryImage": "/images/research/summary/aied-213-backfill-summary.png",
+    "summaryImageAlt": "A university student explains a simple shape-classification decision tree to a lecturer during a supportive coding assessment conversation.",
+    "summaryAudio": "/audio/research/aied-213-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
   }
 ];

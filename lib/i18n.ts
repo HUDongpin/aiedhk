@@ -328,6 +328,7 @@ export interface AcademyDictionary {
 export type Dictionary = Omit<BaseDictionary, "nav"> & {
   nav: BaseDictionary["nav"] & { academy: string };
   academy: AcademyDictionary;
+  pagination: { label: string; previous: string; next: string; first: string; last: string };
 };
 
 const baseDictionaries: Record<Locale, BaseDictionary> = {
@@ -1156,11 +1157,29 @@ const academyNewsletterCopy: Record<Locale, AcademyDictionary["newsletter"]> = {
   bn: { eyebrow: "শেখা চালিয়ে যান", title: "PedaNova Academy-এর পাঠকে সাম্প্রতিক AIED প্রযুক্তি ও শিখন তত্ত্বের সঙ্গে যুক্ত করুন", description: "একাডেমিতে শেখা বিষয়কে আরও বিস্তৃত করতে প্রতিদিন যত্নসহকারে নির্বাচিত একটি AIED আপডেট পান।" },
 };
 
+const paginationCopy: Record<Locale, Dictionary["pagination"]> = {
+  en: { label: "Pagination", previous: "Previous", next: "Next", first: "First page", last: "Last page" },
+  "zh-hant": { label: "分頁導覽", previous: "上一頁", next: "下一頁", first: "第一頁", last: "最後一頁" },
+  "zh-hans": { label: "分页导航", previous: "上一页", next: "下一页", first: "第一页", last: "最后一页" },
+  es: { label: "Paginación", previous: "Anterior", next: "Siguiente", first: "Primera página", last: "Última página" },
+  fr: { label: "Pagination", previous: "Précédent", next: "Suivant", first: "Première page", last: "Dernière page" },
+  pt: { label: "Paginação", previous: "Anterior", next: "Seguinte", first: "Primeira página", last: "Última página" },
+  de: { label: "Seitennavigation", previous: "Zurück", next: "Weiter", first: "Erste Seite", last: "Letzte Seite" },
+  ar: { label: "التنقل بين الصفحات", previous: "السابق", next: "التالي", first: "الصفحة الأولى", last: "الصفحة الأخيرة" },
+  ko: { label: "페이지 탐색", previous: "이전", next: "다음", first: "첫 페이지", last: "마지막 페이지" },
+  ja: { label: "ページナビゲーション", previous: "前へ", next: "次へ", first: "最初のページ", last: "最後のページ" },
+  hi: { label: "पृष्ठ नेविगेशन", previous: "पिछला", next: "अगला", first: "पहला पृष्ठ", last: "अंतिम पृष्ठ" },
+  ru: { label: "Навигация по страницам", previous: "Назад", next: "Далее", first: "Первая страница", last: "Последняя страница" },
+  id: { label: "Navigasi halaman", previous: "Sebelumnya", next: "Berikutnya", first: "Halaman pertama", last: "Halaman terakhir" },
+  bn: { label: "পৃষ্ঠা নেভিগেশন", previous: "পূর্ববর্তী", next: "পরবর্তী", first: "প্রথম পৃষ্ঠা", last: "শেষ পৃষ্ঠা" },
+};
+
 export const dictionaries = Object.fromEntries(
   locales.map((locale) => [locale, {
     ...baseDictionaries[locale],
     nav: { ...baseDictionaries[locale].nav, academy: academyTranslations[locale].nav },
     academy: { ...academyTranslations[locale].copy, newsletter: academyNewsletterCopy[locale] },
+    pagination: paginationCopy[locale],
   }])
 ) as Record<Locale, Dictionary>;
 

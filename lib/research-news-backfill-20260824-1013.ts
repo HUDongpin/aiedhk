@@ -2976,7 +2976,7 @@ export const researchNewsBackfill20260824To1013: ResearchPaper[] = [
       "In 117 reviewed elements, eight mischaracterizations and two hallucinations appeared; editing left one mischaracterization and both hallucinations.",
       "No significant workload or usability advantage was established, and subsequent learner or clinical outcomes were not measured."
     ],
-    "whyItMatters": "AIEDHK can use AI to help capture observed feedback while requiring each important statement to remain grounded in the source interaction.More complete documentation should not be confused with verified accuracy or improved learner performance.",
+    "whyItMatters": "AIEDHK can use AI to help capture observed feedback while requiring each important statement to remain grounded in the source interaction. More complete documentation should not be confused with verified accuracy or improved learner performance.",
     "sourceUrl": "https://doi.org/10.2196/89996",
     "sourceUrls": [
       {
@@ -3637,6 +3637,594 @@ export const researchNewsBackfill20260824To1013: ResearchPaper[] = [
     "summaryImage": "/images/research/summary/aied-189-backfill-summary.png",
     "summaryImageAlt": "An instructor and two programming students compare test-result panels, including a failed check, with configuration notes and an annotated event-flow sketch.",
     "summaryAudio": "/audio/research/aied-189-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-190",
+    "createdAt": "2026-10-02",
+    "title": "Teacher, peer, or AI? Comparing effects of feedback sources in higher education",
+    "authors": [
+      "Joshua Weidlich",
+      "Flurin Gotsch",
+      "Kai Schudel",
+      "Claudia Marusic-Würscher",
+      "Jennifer Mazzarella",
+      "Hannah Bolten",
+      "Dario Bütler",
+      "Simon Luger",
+      "Bettina Wohlfender",
+      "Katharina Maag Merki"
+    ],
+    "venue": "Computers and Education Open",
+    "year": 2025,
+    "type": "journal",
+    "slug": "feedback-source-preference-and-revision-quality-diverge",
+    "tags": [
+      "Higher Education",
+      "AI Feedback",
+      "Peer Learning",
+      "Assessment"
+    ],
+    "shortSummary": "Students can welcome feedback without producing stronger revisions. A randomized university study compared teacher, peer, and language-model feedback while concealing its source from recipients. AI and peer comments were perceived as fairer than teacher comments, but teacher feedback supported better scientific argumentation than AI feedback. The findings separate the experience of receiving comments from the quality of the work that follows, with implications for evaluating automated feedback tools.",
+    "fullSummary": "Feedback tools often promise comments that students will find useful, fair, and easy to accept. A classroom experiment in Switzerland asks whether those reactions translate into better academic work. Its answer is qualified: learners' perceptions and the quality of their revisions did not move together. Teacher feedback supported stronger scientific argumentation than language-model feedback, even though students did not judge teacher comments more favorably.\n\nJoshua Weidlich and colleagues studied a real undergraduate assignment at the University of Zurich involving school quality, evaluation, and organizational development. Of 138 enrolled students, 90 contributed the complete information needed for the analysis: 31 in the teacher-feedback condition, 30 in the peer condition, and 29 in the AI condition. Students were assigned within five discussion groups, and the source of the received feedback was concealed. This reduced the likelihood that a label such as “teacher” or “AI” alone explained their reactions.\n\nAn especially useful design choice was that every student first provided peer feedback. Only the source of subsequently received feedback differed. Giving comments can itself promote reflection, so holding that experience constant helped the researchers concentrate on the receiving side of the process. Students then had a week to revise their submissions. The analysis considered initial submission quality and distinguished content, scientific argumentation, and formal quality instead of compressing everything into a single satisfaction score.\n\nThe perception results favored different sources on different measures. Students did not report a significant difference in usefulness. AI and peer feedback were rated as fairer than teacher feedback; peer comments received greater acceptance than teacher comments. Students were also more willing to engage with peer feedback than with either teacher or AI feedback. These distinctions matter: the study does not show that AI won every measure of student reception.\n\nThe revision results told a different story. Content quality did not differ significantly by feedback source. For scientific argumentation, however, the adjusted mean was 3.04 following teacher feedback and 2.59 following AI feedback, with a reported standardized difference of 0.82. Teacher and peer feedback also outperformed AI feedback on formal quality. The teacher and peer conditions did not differ significantly on the reported quality comparisons. Favorable reactions to machine-generated comments therefore did not establish equivalent revision support.\n\nFor lecturers, the practical implication is to evaluate the student's next action and resulting work, alongside the feedback itself. A pilot could examine whether comments help learners strengthen a claim, connect evidence to an argument, or apply an academic convention. Student acceptance remains useful information, but it answers a different question from whether a revision improved. Peer review also deserves consideration as a structured learning activity, rather than merely a cheaper substitute for expert comments.\n\nThe evidence is bounded by one course, a particular assignment and feedback configuration, and a complete-case sample smaller than the enrolled class. It measures revision quality over a short interval, not long-term learning or independent transfer. The findings support careful allocation of feedback roles; they do not establish that every teacher response will outperform every language model, or that positive learner experiences should be disregarded.",
+    "keyTakeaways": [
+      "Source-blind assignment separated reactions to comments from preconceived reactions to a teacher, peer, or AI label.",
+      "Teacher feedback supported better scientific argumentation than AI feedback, while content quality showed no significant source effect.",
+      "Feedback evaluation should include the quality of subsequent revisions, alongside usefulness, fairness, and acceptance."
+    ],
+    "whyItMatters": "Automated feedback can be pleasant to receive without supporting the strongest revision. Universities need evidence about what students change and learn, as well as whether they like the comments.",
+    "sourceUrl": "https://doi.org/10.1016/j.caeo.2025.100300",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.sciencedirect.com/science/article/pii/S266655732500059X"
+      },
+      {
+        "label": "University of Zurich: open full-text article",
+        "url": "https://www.ife.uzh.ch/dam/jcr%3A240d1fe5-81a5-4670-8e0d-b8ab9548d498/Weidlich%20et%20al_2025_Teacher%20peer%20or%20AI_Comparing%20effects%20of%20feedback%20sources%20in%20higher%20education.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-190-backfill.png",
+    "imageAlt": "A university student revises an essay using an evidence-to-claim sketch while a lecturer and peer discuss the feedback.",
+    "summaryImage": "/images/research/summary/aied-190-backfill-summary.png",
+    "summaryImageAlt": "A university student revises an essay using an evidence-to-claim sketch while a lecturer and peer discuss the feedback.",
+    "summaryAudio": "/audio/research/aied-190-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-191",
+    "slug": "news-gpt-6-guide-assignment-steering-learning",
+    "title": "Product news: OpenAI's GPT-6 guide treats clear assignments and steering as part of working with agents",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "GPT-6 guide",
+      "AI delegation",
+      "research workflows",
+      "task design",
+      "AI literacy"
+    ],
+    "shortSummary": "OpenAI published a practical GPT-6 guide on October 2 covering assignments, model choice, longer tasks, and review. This is guidance for using an existing model family, not another model launch. Anthropic's recent Sonnet release and Gemini's learning tools provide useful context. For educators, the guide offers a way to discuss how a person defines success, updates a task when circumstances change, and checks what the assistant actually completed.",
+    "fullSummary": "OpenAI published a practical guide to the GPT-6 family on October 2, 2026. It covers model selection, clear assignments, long-running work, and preparation for deployment. This is a guidance release for an existing family, not the announcement of another new model. Its educational relevance lies in the relationship between a person's instructions and the evidence needed to judge the work that follows.\n\nThe guide encourages users to state the desired result, relevant context, constraints, and completion conditions, while keeping instructions consistent across the workflow. That is a useful starting point for teaching delegation. A request can be detailed yet still leave the central decision unclear. Conversely, a short assignment can be effective when it identifies the purpose and the boundaries that matter.\n\nA research-methods class could compare two requests for the same supplied dataset. One asks for an impressive report; the other identifies the question, allowed transformations, and checks required before interpretation. Students would inspect how the outputs differ and which ambiguities remain. The exercise should not assume that better wording guarantees a correct analysis. It should show how task design makes the resulting work easier to assess.\n\nLonger work also needs a way to respond when circumstances change. A newly discovered error may alter the next step without invalidating every earlier result. Students can practise issuing a correction that states what changes and what remains valid. They should then check whether the assistant applied it to the appropriate work. A message sent during a task is not, by itself, evidence that the task has been corrected.\n\nAnthropic's Sonnet 5.5 release emphasises efficient work on well-defined tasks. Gemini's existing Guided Learning offers support organised around understanding a topic. Alongside OpenAI's guide, these developments suggest that AI literacy includes deciding the form of assistance needed. Sometimes the goal is a checked artifact; sometimes it is an explanation that leaves room for the learner to reason. The assignment should make that difference visible.\n\nFor a group project, participants could maintain a brief record of the goal, the evidence currently available, and the unresolved decisions. When they change direction, they would update that record rather than rely on a long sequence of informal messages. A peer could then examine whether the final output reflects the current assignment. For example, a revised deadline should not silently alter the dataset, while a corrected variable definition may require the analysis to be rerun. This provides a practical lesson in coordination that remains useful beyond any one provider's interface.\n\nThe guide also treats task success, latency, and cost as things to measure. Educational teams can add a further question: what understanding remains with the person using the assistant? A student might explain a rejected suggestion, reproduce a key check, or adapt the result to a new example. That makes the distinction between effective delegation and successful learning concrete. OpenAI's publication supplies current operational guidance; educators can use it to develop the judgment required to direct and evaluate assistance.",
+    "keyTakeaways": [
+      "The October 2 publication is practical guidance, not a fresh model launch.",
+      "Define the result and completion evidence, then verify that later corrections reached the relevant work.",
+      "Assess both the delegated artifact and the learner's ability to explain or adapt it."
+    ],
+    "whyItMatters": "Clear task direction becomes an educational capability when learners can connect their instructions, revisions, and acceptance decisions to observable evidence.",
+    "sourceUrl": "https://openai.com/index/practical-guide-building-gpt-6/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: Practical guide to the GPT-6 family — 2026-10-02",
+        "url": "https://openai.com/index/practical-guide-building-gpt-6/"
+      },
+      {
+        "label": "Anthropic: Claude Sonnet 5.5 launch — 2026-09-28",
+        "url": "https://www.anthropic.com/claude-sonnet-5-5"
+      },
+      {
+        "label": "Google: Advancing AI tools for learning — 2025-08-06",
+        "url": "https://blog.google/intl/en-au/products/explore-get-answers/advancing-our-ai-tools-for-learning/"
+      }
+    ],
+    "createdAt": "2026-10-02",
+    "image": "/images/research/covers/aied-191-backfill.png",
+    "imageAlt": "A lecturer and two students compare initial and clarified task briefs while updating a decision record beside a simple data table.",
+    "summaryImage": "/images/research/summary/aied-191-backfill-summary.png",
+    "summaryImageAlt": "A lecturer and two students compare initial and clarified task briefs while updating a decision record beside a simple data table.",
+    "summaryAudio": "/audio/research/aied-191-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-192",
+    "createdAt": "2026-10-03",
+    "title": "How Adding Metacognitive Requirements in Support of AI Feedback in Practice Exams Transforms Student Learning Behaviors",
+    "authors": [
+      "Mak Ahmad",
+      "Prerna Ravi",
+      "David Karger",
+      "Marc Facciotti"
+    ],
+    "venue": "Proceedings of the Twelfth ACM Conference on Learning @ Scale",
+    "year": 2025,
+    "type": "conference",
+    "slug": "biology-practice-exams-ai-feedback-metacognition",
+    "tags": [
+      "Learning at Scale",
+      "Biology Education",
+      "Metacognition",
+      "AI Feedback"
+    ],
+    "shortSummary": "A large biology course tested several forms of practice-exam feedback, including GPT-4o explanations and textbook links. No significant overall difference emerged in subsequent exam performance between feedback conditions. Students nevertheless described useful changes in how they reasoned, judged confidence, and studied. Because every condition required an explanation and confidence judgment, the trial cannot isolate those requirements as the cause of learning gains. It offers a careful distinction between reported study changes and measured achievement.",
+    "fullSummary": "Asking students to explain an answer and judge their confidence may change how they approach practice. Adding a generative-AI explanation is a separate instructional decision. A Learning @ Scale study in a large introductory biology course brings those choices into the same platform, while showing why favorable learner accounts should be interpreted separately from evidence of improved examination performance.\n\nMak Ahmad and colleagues investigated practice exams in a University of California, Davis course enrolling 1,002 first-year biology students. Across three midterms, the consenting participant counts were 541, 342, and 413; these are overlapping exam-specific groups, not three independent samples to add together. The study analyzed 28,313 student-question interactions. This setting gives the work practical relevance: feedback was embedded in preparation for real course assessments, rather than evaluated only through an isolated demonstration.\n\nThe platform offered four feedback conditions: correctness information alone, correctness with relevant textbook links, personalized GPT-4o feedback, and the combination of AI feedback with textbook links. Assignment varied within students across questions. A consistent allocation procedure connected students, questions, and exams, allowing learners to encounter the different forms of feedback. Actual midterm questions were linked to practice opportunities through their learning objectives, providing an outcome beyond whether students appreciated the interface.\n\nEvery condition also required students to explain their answer and report confidence. That common feature is central to interpreting the results. The comparison can address differences between the feedback packages on top of those requirements. It cannot establish what would have happened without the explanation and confidence prompts, because a corresponding condition was not included. Descriptions of greater reflection are therefore informative about learner experience, but they do not identify an experimentally isolated metacognitive effect.\n\nOn the main performance comparison, the researchers did not find a statistically significant overall effect of feedback condition on subsequent exam performance. The reported test had a p value of .093. Suggestive numerical patterns should not be promoted into a demonstrated achievement advantage for AI feedback. The absence of a significant result also does not prove that all packages are equivalent; uncertainty, implementation, exposure, and assessment alignment remain relevant to interpreting that finding.\n\nThe qualitative evidence was more encouraging about study behavior. A survey collected 279 responses, and 23 interviews involved 19 students, with four interviewed twice. Students described changes in reasoning, awareness of uncertain knowledge, preparation strategies, and engagement with explanatory resources. These accounts help explain which parts of the experience learners noticed. They provide plausible design ideas for future studies, while retaining the limitations of self-report and voluntary participation.\n\nFor course teams, the study suggests separating two evaluation questions: does a practice system elicit the thinking that instructors want, and does a particular feedback addition improve independent performance? A useful classroom pilot would preserve explanation and confidence data, examine how learners respond to corrections, and include an appropriate comparison for any claimed mechanism. Evidence from this single course, without a baseline biology assessment, cannot establish broad achievement gains or long-term retention. Its contribution is a realistic view of promising learning behaviors alongside a non-significant overall performance comparison.",
+    "keyTakeaways": [
+      "AI explanations and textbook links did not produce a significant overall exam-performance difference between feedback conditions.",
+      "All conditions required answer explanations and confidence judgments, so their independent contribution was not experimentally isolated.",
+      "Survey and interview accounts identify promising study behaviors, but should remain distinct from measured learning effects."
+    ],
+    "whyItMatters": "Course designers can use explanation and confidence prompts to make study behavior visible, while testing separately whether AI feedback adds value on independent assessments.",
+    "sourceUrl": "https://doi.org/10.1145/3698205.3729542",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://dl.acm.org/doi/10.1145/3698205.3729542"
+      },
+      {
+        "label": "Authors’ open full text, version 1",
+        "url": "https://arxiv.org/html/2505.13381v1"
+      },
+      {
+        "label": "arXiv version history and first-public date",
+        "url": "https://arxiv.org/abs/2505.13381"
+      }
+    ],
+    "image": "/images/research/covers/aied-192-backfill.png",
+    "imageAlt": "University learners and a tutor discuss a cell worksheet with written reasons and a confidence judgment beside a practice-question interface.",
+    "summaryImage": "/images/research/summary/aied-192-backfill-summary.png",
+    "summaryImageAlt": "University learners and a tutor discuss a cell worksheet with written reasons and a confidence judgment beside a practice-question interface.",
+    "summaryAudio": "/audio/research/aied-192-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-193",
+    "slug": "news-gemini-guided-vision-accessible-learning",
+    "title": "Product news: Gemini Guided Vision adds conversational visual assistance, with clear limits for educational use",
+    "authors": [
+      "Google"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Gemini Live",
+      "Guided Vision",
+      "accessibility",
+      "inclusive education",
+      "visual descriptions"
+    ],
+    "shortSummary": "Google launched Guided Vision in Gemini Live on October 1 for supported Android devices and regions. This October 3 report considers its potential for describing learning materials and supporting user-directed exploration. Google identifies it as an assistive utility that can make mistakes, not a navigation aid. OpenAI's accessibility case and Anthropic's document tools provide comparisons: access to content must be evaluated with the learner and should complement well-designed materials.",
+    "fullSummary": "Google launched Guided Vision in Gemini Live on October 1, 2026, offering conversational descriptions and spoken camera-reframing cues on supported Android devices. This October 3 report examines possible educational uses. Google says the feature was developed with the blind and low-vision community, and explicitly describes it as an assistive utility that can make mistakes. It is not intended to replace mobility aids or provide navigation and obstacle-detection guidance.\n\nIn a learning setting, the useful task might be much narrower: describing an object on a desk, reading a label, or helping a learner ask a follow-up question about visible material. The learner's purpose should determine the description. A broad account of everything in view may be less helpful than an answer about a particular feature, relationship, or piece of text.\n\nAn accessibility team could explore this with a small collection of familiar teaching objects and diagrams. A learner would choose what to inspect, ask for a description, and compare the response with another accessible representation. The team could note which details were useful, which were wrong, and what additional context was needed. This evaluates the interaction in a meaningful activity rather than assuming that a fluent description is sufficient. For example, reviewers could check whether the description preserves the direction of an arrow and the relationship between two labelled objects.\n\nVisual interpretation is not the same as understanding a lesson. A system may identify a shape yet miss the relationship a teacher intends students to examine. It may read a label correctly but describe an arrow ambiguously. Teachers should preserve accessible source materials and explanations that do not depend on one generated description. Learners should have a clear way to question the output and request a different form of support.\n\nOpenAI's recent accessibility profile described a person using ChatGPT to create reading adaptations. Anthropic's document and slide tools make additional materials easier to produce. Gemini Guided Vision approaches another part of the problem: accessing visual information through conversation. These developments can complement one another, but none relieves an educational institution of designing materials that are usable in the first place.\n\nA proposed classroom activity might ask learners to compare two descriptions of the same simple diagram. They could identify what each description makes clear and what it leaves uncertain, then suggest a better question. Participation should be voluntary and shaped with the people who use the support. It should not require a learner to demonstrate personal difficulties for classmates or to rely on an untested tool for a consequential task.\n\nThe feature's practical value will depend on the device, language, material, and context of use. A local review should therefore include the learner's judgment and alternatives that remain available when the assistant is wrong or unavailable. Guided Vision offers a new way to ask questions about visual information. An inclusive educational use would give learners more control over how they access a topic, while keeping the underlying content and the route to human support understandable.",
+    "keyTakeaways": [
+      "Guided Vision launched October 1 as an assistive visual tool, with explicit limits on navigation use.",
+      "Evaluate descriptions against the learner's purpose and an accessible source representation.",
+      "Keep alternatives and human support available when the generated description is wrong or insufficient."
+    ],
+    "whyItMatters": "Conversational visual assistance can broaden access when it is shaped with learners and complements accessible teaching materials.",
+    "sourceUrl": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/",
+    "sourceUrls": [
+      {
+        "label": "Google: Guided Vision in Gemini Live — 2026-10-01",
+        "url": "https://blog.google/innovation-and-ai/products/gemini-app/guided-vision-gemini-live/"
+      },
+      {
+        "label": "OpenAI Academy: Making websites easier to read — 2026-09-04",
+        "url": "https://academy.openai.com/public/blogs/making-websites-easier-to-read-with-chatgpt-2026-09-04"
+      },
+      {
+        "label": "Anthropic: Docs, Slides and unified Claude experience — 2026-09-16",
+        "url": "https://claude.com/resources/articles/cowork-is-now-claude"
+      }
+    ],
+    "createdAt": "2026-10-03",
+    "image": "/images/research/covers/aied-193-backfill.png",
+    "imageAlt": "A learner uses a phone to inspect a raised-line geometry card while a specialist and tutor compare it with a matching large-print version.",
+    "summaryImage": "/images/research/summary/aied-193-backfill-summary.png",
+    "summaryImageAlt": "A learner uses a phone to inspect a raised-line geometry card while a specialist and tutor compare it with a matching large-print version.",
+    "summaryAudio": "/audio/research/aied-193-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-194",
+    "createdAt": "2026-10-04",
+    "title": "Computer-assisted learning in the real world: How Khan Academy influences student math learning",
+    "authors": [
+      "Taryn Eames",
+      "Emma Brunskill",
+      "Bogdan Yamkovenko",
+      "Kodi Weatherholtz",
+      "Philip Oreopoulos"
+    ],
+    "venue": "Proceedings of the National Academy of Sciences",
+    "year": 2026,
+    "type": "journal",
+    "slug": "khan-academy-real-world-math-panel-evidence",
+    "tags": [
+      "Mathematics Education",
+      "Adaptive Learning",
+      "Learning Analytics",
+      "School Education"
+    ],
+    "shortSummary": "A large United States study links Khan Academy use with mathematics progress across roughly 214,000 students. Its observational design uses changes in classmates’ usage and extensive statistical controls, rather than random assignment. Average exposure was modest, and higher prior achievers appeared to benefit more. The findings highlight implementation and access to practice, while leaving uncertainty about causation. They concern established computer-assisted learning and should not be read as evidence for generative-AI chatbots.",
+    "fullSummary": "Large educational platforms can accumulate extensive usage records, but the scale of a dataset does not by itself establish what caused learning. A PNAS study of Khan Academy mathematics use examines that challenge through approximately 490,000 observations from 214,000 students, 11,000 teachers, and 1,000 schools. It reports positive relationships between use and mathematics progress, while making clear that its identification strategy depends on assumptions that a randomized trial would address differently.\n\nTaryn Eames and colleagues studied three United States school years, from 2020–2021 through 2022–2023, using mathematics assessment and platform data. The setting included grades three to eight in MAP Accelerator and captured Khan Academy activity beyond that product alone. This is evidence about computer-assisted mathematics learning, including structured practice and skill progression. The intervention was not a generative-AI chatbot, and the results cannot be transferred directly to conversational tutoring systems.\n\nStudents who voluntarily use a platform more may also differ in motivation, support, or prior skill. To reduce that selection problem, the researchers examined variation in the average use of other students taught by the same teacher, leaving each focal student's own use out of that measure. Models included student, teacher, school, and year-by-grade effects, with additional robustness analyses. The design attempts to capture changes in exposure associated with classroom practice, rather than treating a simple individual usage correlation as causal proof.\n\nEven with these controls, time-varying influences can remain. A teacher might alter mathematics instruction in ways that increase both platform use and achievement, or a school might introduce other support at the same time. The study cannot guarantee that all such changes are removed. Its estimates are therefore best understood as carefully modeled observational evidence, not the result of randomly assigning children to different doses of Khan Academy.\n\nAverage annual use was only 6.6 hours, approximately 11 minutes a week, associated in the model with a gain of 0.031 standard deviations in mathematics. Usage was highly uneven: about 24 percent of students recorded no use, and roughly 65 percent averaged under ten minutes a week. Only about one in ten reached the recommended 18 hours a year. These patterns suggest that access to software and sustained classroom implementation are different achievements.\n\nThe study also reports variation in estimated benefits. Students with stronger prior achievement appeared to gain more, and skill progression per hour differed across teachers' classes. Those findings invite closer examination of how practice is supported and which learners need additional help. They do not identify a specific teacher behavior as the cause. Similarly, estimates for greater weekly exposure are model projections, not results from a trial assigning that schedule; the data do not show exactly which classroom activities platform time replaced.\n\nFor schools, the useful question is how a practice tool fits within teaching, assessment, and support for learners who struggle. The dataset is proprietary, although replication code is available. Author affiliations and a subsequent correction disclose Khan Academy employment or unpaid advisory connections; the correction concerns competing interests rather than numerical results. The paper offers substantial real-world evidence for an established learning platform, with observational uncertainty and implementation differences that should remain visible in decisions about adoption.",
+    "keyTakeaways": [
+      "The large panel supports modeled associations between Khan Academy use and mathematics progress, not randomized causal evidence.",
+      "Average use was low and uneven; exposure and benefits differed across learners and classrooms.",
+      "This study concerns computer-assisted practice, and its findings should not be treated as a generative-AI tutoring result."
+    ],
+    "whyItMatters": "Platform adoption only becomes instruction when students receive useful, sustained practice. Large-scale usage evidence can reveal implementation gaps, provided its causal limits and learner differences remain explicit.",
+    "sourceUrl": "https://doi.org/10.1073/pnas.2507708123",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2507708123"
+      },
+      {
+        "label": "Published correction: competing-interest disclosure",
+        "url": "https://www.pnas.org/doi/10.1073/pnas.2604984123"
+      },
+      {
+        "label": "Public replication code record",
+        "url": "https://doi.org/10.5281/zenodo.17810869"
+      }
+    ],
+    "image": "/images/research/covers/aied-194-backfill.png",
+    "imageAlt": "A teacher and two primary pupils compare equivalent fraction bars on a worksheet beside a tablet practice activity.",
+    "summaryImage": "/images/research/summary/aied-194-backfill-summary.png",
+    "summaryImageAlt": "A teacher and two primary pupils compare equivalent fraction bars on a worksheet beside a tablet practice activity.",
+    "summaryAudio": "/audio/research/aied-194-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-195",
+    "slug": "news-openai-sbdc-local-ai-advisor-training",
+    "title": "Industry news: OpenAI and America's SBDC plan local advisor training to support small-business AI learning",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "community training",
+      "America's SBDC",
+      "adult learning",
+      "AI advisors",
+      "entrepreneurship"
+    ],
+    "shortSummary": "OpenAI's September 30 partnership with America's SBDC proposes training local advisors and supporting small businesses through workshops and follow-up. This October 4 report focuses on the learning model: help is embedded in an existing advisory relationship rather than limited to a one-off demonstration. Anthropic's small-business training and Gemini's educator resources offer comparisons. Planned reach should remain distinct from participation, sustained use, and demonstrated capability.",
+    "fullSummary": "OpenAI announced a partnership with America's SBDC on September 30, 2026 to expand practical AI learning through local business advisors. The initial plan combines advisor training, hands-on workshops, and follow-up support. This October 4 report focuses on that learning model. The announcement describes intended activity and reach; it does not establish that all proposed training has occurred or that participants have achieved a measured improvement in business performance.\n\nThe use of an existing advisory network is the distinctive feature. An advisor may already understand an owner's priorities, resources, and constraints. That context can help turn a broad interest in AI into a manageable task. It can also provide continuity after a workshop, when the owner encounters an unfamiliar input or discovers that a promising demonstration does not fit ordinary work.\n\nFor adult education, the first task should be useful and explainable. A participant might organise a set of fictional enquiries into a response plan or prepare a draft using supplied facts. The advisor can help identify what the assistant assumed and what the owner needs to check. The aim is to build confidence that rests on understanding, rather than on the speed or polish of the first output.\n\nFollow-up is where a training model can learn from reality. An owner may stop using a workflow because it takes too much preparation, because the underlying information is unreliable, or because another process works better. Those experiences should not disappear behind a count of people trained. A short conversation about what was retained, revised, or abandoned can reveal how the programme should change.\n\nAnthropic's September small-business expansion also combines workflows with workshops and partner learning. Google's Gemini-related educator training offers examples of moving from a short module to practical use. Compared with these resources, OpenAI's SBDC partnership places particular weight on local advisors. The approaches can be compared by the support available after an introduction, not only by the number of tools or sessions offered.\n\nA community provider could use a simple learning record: the participant's goal, the task attempted, a checked result, and a question for the next meeting. The record should be small enough to maintain during real work. A later exercise can change the input slightly and ask the participant to explain which parts of the workflow still apply. It could also note when a participant deliberately chose not to automate something. That decision can demonstrate sound judgment, especially when the task requires relationships, contextual knowledge, or responsibility that should remain with a person.\n\nFor colleges and entrepreneurship programmes, the partnership offers a current example of distributing AI support through people who already serve a community. Its eventual educational value will depend on the quality of those relationships and the evidence collected through practice. A useful report would distinguish training offered, participation, continued use, and capability demonstrated on a later task. That would show whether the initial opportunity became a durable form of support rather than another event that participants attended and forgot.",
+    "keyTakeaways": [
+      "The September 30 partnership is an initial training and support plan, not a completed outcome report.",
+      "Local advisors can help connect a workshop task with the participant's actual constraints.",
+      "Follow up on retained, revised, and abandoned workflows rather than reporting attendance alone."
+    ],
+    "whyItMatters": "Community-based AI learning can become more durable when participants have a trusted person to help them adapt a task after the first demonstration.",
+    "sourceUrl": "https://openai.com/index/helping-small-businesses-put-ai-to-work/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: Partnership with America's SBDC — 2026-09-30",
+        "url": "https://openai.com/index/helping-small-businesses-put-ai-to-work/"
+      },
+      {
+        "label": "Anthropic: Small-business workflows and training expansion — 2026-09-15",
+        "url": "https://claude.com/resources/articles/claude-for-small-business-launches-new-workflows-integrations-and-training-programs"
+      },
+      {
+        "label": "Google: AI Educator Series September update — 2026-09-03",
+        "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
+      }
+    ],
+    "createdAt": "2026-10-04",
+    "image": "/images/research/covers/aied-195-backfill.png",
+    "imageAlt": "An adviser and craft-business owner discuss a fictional customer-response plan while another learner records questions for a follow-up session.",
+    "summaryImage": "/images/research/summary/aied-195-backfill-summary.png",
+    "summaryImageAlt": "An adviser and craft-business owner discuss a fictional customer-response plan while another learner records questions for a follow-up session.",
+    "summaryAudio": "/audio/research/aied-195-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-196",
+    "createdAt": "2026-10-05",
+    "title": "Interacting with ChatGPT in essay writing: A study of L2 learners’ task motivation",
+    "authors": [
+      "Javad Zare",
+      "Ahmad Al-Issa",
+      "Fatemeh Ranjbaran Madiseh"
+    ],
+    "venue": "ReCALL",
+    "year": 2025,
+    "type": "journal",
+    "slug": "chatgpt-essay-writing-motivation-delayed-comparison",
+    "tags": [
+      "Language Learning",
+      "Writing Education",
+      "Learner Motivation",
+      "Generative AI"
+    ],
+    "shortSummary": "ChatGPT-supported essay activities increased immediate task motivation in a small study of university English learners. The comparison with peer-supported writing was significant just after instruction, but not at the one-month follow-up. The study measured motivation rather than improvement in writing competence. Its results suggest a possible short-term engagement benefit while showing why a lasting within-group increase should not be described as a lasting advantage over another teaching approach.",
+    "fullSummary": "A learner can feel more motivated to write after using ChatGPT without necessarily becoming a better writer, and an immediate motivational advantage may not remain statistically clear a month later. A ReCALL study of university English learners illustrates both distinctions. Its results support a short-term increase in task motivation, while the delayed comparison places an important boundary around claims of a lasting advantage.\n\nJavad Zare, Ahmad Al-Issa, and Fatemeh Ranjbaran Madiseh studied 69 Persian-speaking learners of English in Iran. Participants had a broadly comparable B1 proficiency level and were assessed for initial writing ability and motivation. The methods report random assignment to two instructional conditions. Over twelve twice-weekly sessions, the same teacher used a presentation, practice, and production sequence, while the support available during essay production differed.\n\nIn the experimental condition, students used ChatGPT-4 through the Chatgot service to develop ideas, receive comments on drafts, and address language problems. The activity was designed around support for students' own essays, rather than asking the system to supply a final essay for submission. In the comparison condition, students worked with peers on corresponding tasks. This contrast concerns two supported writing arrangements; it does not compare AI-assisted writing with receiving no help.\n\nThe researchers administered a task-motivation questionnaire before instruction, immediately afterward, and one month later. They also interviewed sixteen learners, eight from each condition, to understand their experiences. This combination provides both a numerical trajectory and accounts of how learners perceived feedback, interaction, and the writing process. The outcome, however, remained task motivation. The study did not collect the specific linguistic outcomes needed to establish gains in writing competence from the intervention.\n\nImmediately after the course, the AI-supported group showed higher motivation than the comparison group, with a reported p value of .004 and standardized difference of .722. Its mean rose from 91.67 before instruction to 107.38 afterward. The comparison group's mean moved from 90.73 to 94.89. Those results are consistent with a meaningful immediate difference in the measured motivational experience in this setting.\n\nAt the one-month follow-up, the picture was more restrained. The AI-supported group's mean was 103.51, while the comparison group's was 96.89, and the between-group difference was not statistically significant. Motivation in the AI condition remained above its own baseline, but that within-group result does not establish a persistent advantage over peer-supported learning. Both the comparison group and the passage of time matter when interpreting whether an instructional benefit lasts.\n\nFor language teachers, the findings support trying clearly bounded AI feedback activities while continuing to examine what learners can do independently. Motivation questionnaires, discussion of feedback use, and separately assessed writing tasks answer different questions. A stronger evaluation would track all three and include delayed work completed without assistance. This small, single-context study offers useful evidence about engagement, not proof of durable writing improvement. Novelty, self-report, learner proficiency, and the limited follow-up period constrain generalization. Its most useful contribution is a precise account of when the motivational difference was observed, and when the comparison no longer supported a clear advantage.",
+    "keyTakeaways": [
+      "The AI-supported condition showed a significant immediate motivation advantage over peer-supported writing.",
+      "The one-month between-group difference was not significant, despite the AI group remaining above its own baseline.",
+      "The outcomes concern task motivation; the study does not establish improved writing competence."
+    ],
+    "whyItMatters": "Motivational evidence can inform classroom design, but educators need separate assessments of retained writing skill and should distinguish an immediate benefit from a lasting comparative advantage.",
+    "sourceUrl": "https://doi.org/10.1017/S0958344025000035",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.cambridge.org/core/journals/recall/article/interacting-with-chatgpt-in-essay-writing-a-study-of-l2-learners-task-motivation/720D0AD1F515BDD36E44713A73B8EF3D"
+      },
+      {
+        "label": "Author institution: full-text PDF",
+        "url": "https://squ.elsevierpure.com/files/104766789/ReCALL_ChatGPT_in_essay_writing.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-196-backfill.png",
+    "imageAlt": "A language learner annotates her essay while a classmate and instructor discuss a claim-reason-example paragraph map.",
+    "summaryImage": "/images/research/summary/aied-196-backfill-summary.png",
+    "summaryImageAlt": "A language learner annotates her essay while a classmate and instructor discuss a claim-reason-example paragraph map.",
+    "summaryAudio": "/audio/research/aied-196-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-197",
+    "slug": "news-google-ted-teacher-ideas-classroom-evidence",
+    "title": "Industry news: Google and TED launch an educator idea search, putting teacher accounts of technology in the spotlight",
+    "authors": [
+      "Google"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "World Teachers' Day",
+      "TED",
+      "teacher voice",
+      "Gemini",
+      "professional inquiry"
+    ],
+    "shortSummary": "Google marked World Teachers' Day on October 5 with educator stories and a global idea search in partnership with TED. The initiative creates a route for teachers to share technology-informed practice, but a compelling story is not the same as evidence of an effect. OpenAI's educator learning paths and Anthropic's AI-learning guidance provide comparisons. Schools can use the moment to connect teacher voice with concrete classroom artifacts, limitations, and questions for further inquiry.",
+    "fullSummary": "Google announced a partnership with TED on October 5, 2026 to seek ideas from educators innovating with technology. Its World Teachers' Day collection also presents teachers' accounts of classroom practice, including uses of Gemini. Selected ideas may have an opportunity to reach the TED stage. The announcement is an invitation to share and develop ideas; it does not report a completed selection process or establish the effectiveness of the featured practices.\n\nTeacher voice matters because a product description cannot fully capture the conditions of a classroom. Teachers encounter varied prior knowledge, language needs, time constraints, and unexpected responses. Their accounts can show how a tool was adapted to a purpose and where it failed to fit. They can also reveal useful questions that a general benchmark would never ask.\n\nA strong professional story should make those conditions visible. What was the teacher trying to help students do? What material or interaction changed? What did the teacher observe, and what alternative explanation remains possible? These questions do not diminish the story. They help colleagues decide whether the idea is relevant to their own setting and what they would need to test before adapting it. A colleague should be able to distinguish what was actually observed from what the teacher hopes a future version of the activity might achieve.\n\nA school could invite teachers to share one small artifact alongside an account of practice. It might be a revised prompt, a student task, or two versions of an explanation. Colleagues could examine the learning objective and suggest what evidence would show that the change helped. The discussion can include a failed attempt or a decision to stop using a feature. Such accounts are valuable even when they do not make a dramatic presentation.\n\nOpenAI's recent Academy expansion includes a pathway for educators to review AI outputs against teaching objectives. Anthropic's Claude Academy approach emphasises deliberate delegation and continued human practice. Alongside Google's initiative, these resources show several ways of supporting teacher participation. The important distinction is between learning a provider's examples and contributing an informed account of one's own classroom decisions.\n\nStudents' perspectives should also inform the account where appropriate. A resource that feels efficient to a teacher may still confuse a learner, while a slower activity may provoke useful discussion. Teachers can gather selected work or brief feedback without presenting a single positive reaction as proof of impact. The aim is to make practice open to examination while respecting the people whose learning is being discussed.\n\nFor educational communities, the idea search is a timely invitation to articulate what technology is for. A persuasive contribution can connect an instructional problem, a concrete design choice, and an honest statement of what remains unknown. Google and TED offer a platform for those voices. Schools can strengthen the substance behind the stories by supporting collaborative inquiry, preserving examples, and treating revision as part of professional expertise rather than a weakness to hide.",
+    "keyTakeaways": [
+      "The October 5 announcement launches an idea search and story collection, not a completed evaluation or selection outcome.",
+      "Pair a teacher's account with a concrete artifact, context, and acknowledged limitations.",
+      "Use peer and learner perspectives to refine an idea before treating it as transferable practice."
+    ],
+    "whyItMatters": "Teacher stories become more useful to the profession when they make instructional reasoning and evidence open to discussion.",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/education/world-teachers-day-2026/",
+    "sourceUrls": [
+      {
+        "label": "Google: World Teachers' Day and TED idea search — 2026-10-05",
+        "url": "https://blog.google/products-and-platforms/products/education/world-teachers-day-2026/"
+      },
+      {
+        "label": "OpenAI: New Academy learning paths — 2026-09-21",
+        "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths/"
+      },
+      {
+        "label": "Anthropic: Approach to teaching and learning AI — 2026-08-20",
+        "url": "https://claude.com/resources/articles/anthropics-approach-to-teaching-and-learning-ai"
+      }
+    ],
+    "createdAt": "2026-10-05",
+    "image": "/images/research/covers/aied-197-backfill.png",
+    "imageAlt": "A teacher explains an annotated classroom activity to colleagues while a facilitator records reflections in a school-library discussion circle.",
+    "summaryImage": "/images/research/summary/aied-197-backfill-summary.png",
+    "summaryImageAlt": "A teacher explains an annotated classroom activity to colleagues while a facilitator records reflections in a school-library discussion circle.",
+    "summaryAudio": "/audio/research/aied-197-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-198",
+    "createdAt": "2026-10-06",
+    "title": "Evidence of impact and interpretational limits of generative AI in STEM education: A systematic review and meta-analysis on cognitive learning outcomes",
+    "authors": [
+      "Chiara Boolzen",
+      "Jochen Kuhn",
+      "Salome Flegr",
+      "Eva-Maria Rott",
+      "Niklas Stausberg",
+      "Stefan Küchemann"
+    ],
+    "venue": "Artificial Intelligence Review",
+    "year": 2026,
+    "type": "journal",
+    "slug": "stem-ai-learning-meta-analysis-publication-bias",
+    "tags": [
+      "STEM Education",
+      "Research Methods",
+      "Generative AI",
+      "Learning Outcomes"
+    ],
+    "shortSummary": "A STEM-focused review shows why a positive average effect can be a fragile guide to classroom decisions. Across 49 studies, the conventional pooled estimate favored generative AI, but a publication-bias adjustment moved the average close to zero with substantial uncertainty. Effects still varied widely across contexts. The result calls for better comparisons and clearer descriptions of what students actually do, rather than treating every AI-supported activity as the same intervention.",
+    "fullSummary": "Claims that generative AI improves learning often rest on a pooled average across very different studies. A systematic review in Artificial Intelligence Review shows how much that average can depend on publication bias and instructional comparisons. The conventional analysis favored AI-supported STEM learning, but an alternative analysis accounting for selective publication placed the overall estimate close to zero. Neither result describes every classroom or every use of AI.\n\nChiara Boolzen and colleagues searched ERIC, PsycINFO, and Web of Science, with the search updated on 7 May 2026, and added studies through citation tracking. The review included 85 studies involving learner interaction with generative AI and a comparison condition. Of these, 49 studies supplied 59 effect sizes suitable for the quantitative synthesis. The pooled outcomes were externally assessed cognitive performance, a useful boundary that separates demonstrated knowledge or skill from students' impressions of how much they learned.\n\nThe initial random-effects analysis produced Hedges' g of 0.839, conventionally interpreted as a large standardized difference. However, between-study variation was extreme: the reported I-squared was 96.32 percent, and the prediction interval ranged from −1.52 to 3.20. A prediction interval describes the spread of plausible effects across comparable future settings, rather than uncertainty around one overall mean. Here, it encompasses negative, negligible, and strongly positive outcomes.\n\nThe authors then used robust Bayesian meta-analysis, which combines models with different assumptions about effects, heterogeneity, and publication bias. The adjusted mean was 0.076, with a 95 percent credible interval from −0.37 to 0.79. This weakened the case for a broadly positive average. It should not be read as proof that AI never helps, or as a precise estimate of no effect: the interval remained wide, and considerable unexplained variation persisted after the adjustment.\n\nA central interpretive issue was what learners actually did in the intervention and comparison conditions. The review distinguished designs that changed students' cognitive activity, rather than classifying studies solely by whether AI was present. Differences in learning outcomes and in these instructional arrangements accounted for some variation. Yet the analyses did not establish a reliable combination of features that guaranteed a large benefit. Such comparisons across studies remain vulnerable to other differences between populations, tasks, and implementations.\n\nThe evidence base also had important weaknesses. None of the included studies received a low overall risk-of-bias rating under the review's assessment. Learner characteristics and interaction processes were often poorly reported, making it difficult to examine prompt quality, verification behavior, prior knowledge, or the amount of thinking delegated to a system. The review's own model choices, search coverage, coding, and assumptions about publication bias also shape its conclusions.\n\nFor educators, the paper offers a way to ask better questions of an attractive headline. What was the comparison activity? Was knowledge assessed independently? Did AI add useful practice or replace the activity students needed to learn? For researchers, it strengthens the case for transparent reporting, comparable instructional conditions, and publication of null results. The contribution is a more cautious interpretation of an uneven literature, with attention to the design of learning rather than a universal verdict about the technology.",
+    "keyTakeaways": [
+      "The conventional pooled effect was positive, but the publication-bias-adjusted average was close to zero with a wide credible interval.",
+      "Very high between-study variation makes a single average a weak forecast for a particular classroom.",
+      "Comparisons need to describe students’ cognitive activity, independent outcomes, and the instructional package around AI."
+    ],
+    "whyItMatters": "School and university decisions require evidence about specific learning designs. A pooled AI effect can obscure selective publication, weak comparisons, and substantial differences between learners and tasks.",
+    "sourceUrl": "https://doi.org/10.1007/s10462-026-11665-9",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://link.springer.com/article/10.1007/s10462-026-11665-9"
+      },
+      {
+        "label": "Publisher full-text PDF",
+        "url": "https://link.springer.com/content/pdf/10.1007/s10462-026-11665-9.pdf"
+      },
+      {
+        "label": "Preregistered review protocol",
+        "url": "https://aspredicted.org/hpbd-dk75.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-198-backfill.png",
+    "imageAlt": "Two educators and a learner compare circuit experiment sketches and written observations in a science classroom.",
+    "summaryImage": "/images/research/summary/aied-198-backfill-summary.png",
+    "summaryImageAlt": "Two educators and a learner compare circuit experiment sketches and written observations in a science classroom.",
+    "summaryAudio": "/audio/research/aied-198-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-199",
+    "slug": "news-claude-google-workspace-direct-editing",
+    "title": "Product news: Claude enters Google Docs, Sheets, and Slides in beta, bringing review closer to the file",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Google Workspace",
+      "Claude",
+      "document revision",
+      "spreadsheet literacy",
+      "teacher workflows"
+    ],
+    "shortSummary": "Anthropic launched Claude for Google Workspace in public beta on October 6, alongside connectors that create and edit Google files from Claude. The add-on can work with selected text, cells, or slides inside an open file. OpenAI's Word add-in and Gemini's course-context tools provide comparisons. For educational work, the benefit of fewer handoffs should be paired with clear edit scope, checked formulas, and a record of consequential changes.",
+    "fullSummary": "Anthropic launched Claude for Google Workspace in public beta on October 6, 2026 for paid Claude plans. The add-on works inside Google Docs, Sheets, and Slides, while separate beta connectors let Claude create and edit Google files from a conversation. The assistant can work with selected text, cells, or slides. This moves assistance closer to the artifact, but it also makes the scope of an edit more important because the source file itself can change.\n\nFor a teacher revising a handout, the intended change may be narrow: clarify an instruction without changing the question, adjust the reading level without removing the reasoning, or reorganise headings without altering the content. A useful request states both what should change and what should remain stable. The resulting edit should then be checked in the document, rather than accepted because the assistant describes it as an improvement.\n\nSpreadsheets require a different kind of review. A formula can produce a plausible value while selecting the wrong rows or treating missing entries as zero. In a teaching exercise, students could compare a generated calculation with a small manual example and explain any discrepancy. They should inspect the referenced cells and assumptions, not only the appearance of the chart. That turns direct editing into an opportunity to practise spreadsheet reasoning.\n\nPresentations add another boundary between content and form. A slide can look cleaner after a revision while losing a unit, a qualification, or the connection to its source. Students could be asked to identify one detail that must remain visible and explain why. A peer could review the edited slide against the underlying material. The goal is a clearer representation that still preserves the meaning of the evidence.\n\nOpenAI's ChatGPT for Word offers another in-document route for drafting and revision. Gemini in Classroom brings course and assignment context into study prompts. Compared with these tools, Anthropic's Workspace release offers a new way to work directly across familiar file types. The interfaces differ, but educators should still distinguish access to a file, permission to change it, and acceptance of the resulting content.\n\nA department can establish a modest review habit without making every small edit burdensome. Staff might keep an original version for substantial revisions, define the section or range involved, and record changes that affect interpretation or assessment. Formatting corrections need a different level of attention from changes to a grading formula or research conclusion. The review should follow the consequence of the edit.\n\nThe release is likely to interest teams already working in shared Google files, though beta status and local account controls remain relevant. A useful educational adoption would reduce mechanical copying while keeping the important decisions inspectable. Learners and teachers should be able to explain what the assistant changed, why the change was wanted, and how they checked the result. Familiar document software can then become a place to practise responsible revision, rather than a surface where fluent changes happen unnoticed.",
+    "keyTakeaways": [
+      "The October 6 launch is a public beta for paid Claude plans, with both an add-on and file-editing connectors.",
+      "Define which content may change and inspect the result in the actual document, sheet, or deck.",
+      "Match review effort to the consequence of an edit, especially for formulas and interpretations."
+    ],
+    "whyItMatters": "Direct AI editing can save mechanical work while making careful revision and spreadsheet reasoning more important to teach.",
+    "sourceUrl": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Claude in Google Docs, Sheets and Slides — 2026-10-06",
+        "url": "https://claude.com/resources/articles/claude-now-works-in-google-docs-sheets-and-slides"
+      },
+      {
+        "label": "OpenAI Help: ChatGPT for Word — 2026-09-17",
+        "url": "https://help.openai.com/en/articles/20001526-chatgpt-for-word"
+      },
+      {
+        "label": "Google Workspace: Gemini in Classroom expansion — 2026-08-04",
+        "url": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html"
+      }
+    ],
+    "createdAt": "2026-10-06",
+    "image": "/images/research/covers/aied-199-backfill.png",
+    "imageAlt": "School staff compare a lesson-sequence draft with a calculation-structure template and a selected spreadsheet range while recording checks.",
+    "summaryImage": "/images/research/summary/aied-199-backfill-summary.png",
+    "summaryImageAlt": "School staff compare a lesson-sequence draft with a calculation-structure template and a selected spreadsheet range while recording checks.",
+    "summaryAudio": "/audio/research/aied-199-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-200",
+    "createdAt": "2026-10-07",
+    "title": "From generative-AI feedback to sport skill learning: The roles of perceived competence and autonomous motivation in university physical education",
+    "authors": [
+      "Jiehao Dong",
+      "Zhen Zhang"
+    ],
+    "venue": "Frontiers in Psychology",
+    "year": 2026,
+    "type": "journal",
+    "slug": "basketball-ai-feedback-package-delayed-retention",
+    "tags": [
+      "Physical Education",
+      "AI Feedback",
+      "Randomized Trial",
+      "Learning Retention"
+    ],
+    "shortSummary": "A randomized university basketball study found better free-throw accuracy and technique after a structured AI feedback programme, including a test two weeks after feedback stopped. The comparison involved whole teaching packages: written personalized feedback and an action plan versus conventional oral instructor feedback. It therefore does not isolate an AI-specific effect. The delayed advantage reflected a higher retained skill level, while the study found no clear difference in the rate of forgetting.",
+    "fullSummary": "AI-supported learning research usually measures words, answers, or code. A university basketball trial instead examined a physical skill: free throws. Students assigned to a structured generative-AI feedback programme performed better than those receiving conventional instructor feedback, and the difference remained detectable two weeks after instruction. The important qualification is that the study compared complete feedback arrangements, not the source of an otherwise identical message.\n\nJiehao Dong and Zhen Zhang recruited 240 undergraduates and randomly assigned 120 to each condition during an eight-week physical-education unit. Both groups followed the same basketball curriculum, practice volume, technical rubric, and scheduled feedback frequency across sixteen sessions. The experimental package combined written AI-generated feedback, a standardized format, individualized explanation, an interface, and a brief action-intention step. The comparison package used the course's conventional oral instructor feedback.\n\nThe system worked from structured performance information, including recent shooting results and movement indicators, rather than inviting unrestricted chatbot conversation. Learners received guidance tied to a common technical rubric and a next action to attempt. This design connects the feedback to observable practice, but several features changed together. Written versus oral presentation, opportunities to reflect, personalization, novelty, and the action plan could all contribute to the difference alongside the generative model.\n\nSkill was assessed at baseline, immediately after instruction, and fourteen days later without technical feedback. Shooting accuracy came from thirty free throws under standardized conditions. Two independent instructors, unaware of the assigned condition, rated anonymized videos using a five-domain technique rubric. Delayed accuracy and technique were the co-primary outcomes, with the analysis requiring both to favor the experimental package after adjustment for multiple testing.\n\nBoth groups improved. Immediately after the programme, accuracy had increased by 18.6 percentage points in the AI-package group and 11.6 points in the comparison group. The model-estimated difference in improvement was 6.7 percentage points. At the delayed test, the adjusted advantage was 6.1 percentage points for shooting accuracy and 1.63 points for technique quality. Both delayed outcomes met the study's statistical criterion. Of the original 240 students, 229 completed the delayed assessment; analyses retained original group assignment and examined missing-data sensitivity.\n\nA higher score after two weeks is evidence of retained performance over that interval, but it is not evidence of slower forgetting. Both groups declined modestly after the immediate test, and the differences in their declines were not statistically detectable. The trial also found higher perceived competence and autonomous motivation in the experimental condition. Because the proposed psychological mediators were measured at the same mid-course occasion, their statistical associations cannot establish a causal sequence from competence to motivation to skill.\n\nFor physical-education teachers, the result makes a concrete feedback design worth examining: record a small set of relevant observations, explain a correction, and ask the learner to plan the next attempt. Whether AI is necessary for that design requires another comparison. The study concerns one basketball unit, a short retention interval, and a bundled intervention. It does not demonstrate transfer to other sports, durable long-term learning, or replacement of a teacher's observation and judgment.",
+    "keyTakeaways": [
+      "The complete AI feedback package improved shooting accuracy and technique relative to conventional oral feedback in this trial.",
+      "The advantage persisted at a fourteen-day test without feedback, but there was no clear difference in forgetting rates.",
+      "AI source, written format, personalization, and action planning were bundled; the study does not identify their separate effects."
+    ],
+    "whyItMatters": "Physical skill outcomes make feedback quality visible beyond learner satisfaction. The trial suggests a promising structured practice design while preserving the need to test which components produce the benefit.",
+    "sourceUrl": "https://doi.org/10.3389/fpsyg.2026.1965551",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1965551/full"
+      },
+      {
+        "label": "Published full-text PDF",
+        "url": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1965551/pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-200-backfill.png",
+    "imageAlt": "A university learner prepares a free throw while a coach holding a tablet shot sequence and a peer observe in a bright gym.",
+    "summaryImage": "/images/research/summary/aied-200-backfill-summary.png",
+    "summaryImageAlt": "A university learner prepares a free throw while a coach holding a tablet shot sequence and a peer observe in a bright gym.",
+    "summaryAudio": "/audio/research/aied-200-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-201",
+    "slug": "news-chatgpt-teens-study-tools-college-planner-preview",
+    "title": "Product news: ChatGPT adds teen study tools and previews a U.S.-focused College Planner",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "ChatGPT for Teens",
+      "College Planner",
+      "study tools",
+      "student agency",
+      "college preparation"
+    ],
+    "shortSummary": "OpenAI's October 7 update combines teen study tools with a forthcoming College Planner. The planner was not yet launched: its initial design targets U.S. students in grades 10–12 planning for four-year college, with wider coverage intended later. The announcement also discusses flashcards, quizzes, and note capture. Anthropic's teacher resources and Gemini's classroom tools provide comparisons, while reported usage should not be mistaken for demonstrated learning or admissions outcomes.",
+    "fullSummary": "OpenAI announced teen learning updates on October 7, 2026 and said College Planner would be added soon. The initial planned experience is for U.S. students in grades 10–12 who intend to attend a four-year college. Wider geographical and educational coverage is a future plan. The announcement therefore does not establish that College Planner is already available, or that students in Hong Kong can use a local admissions version.\n\nThe proposed planner brings application requirements, deadlines, and tasks into one place. Separately, the update describes study features including flashcards and quizzes from notes, plus multi-page photo capture on iOS. These serve different purposes: one organises a process, while the others support study activity. Neither should be treated as a substitute for deciding what a student wants to study, understanding a topic, or checking an institution's current requirements.\n\nFor college preparation, organisation can be a useful form of support. A student may know their goals yet struggle to keep track of several documents and dates. A counsellor can help the student distinguish a required step from a suggestion and identify where information must be confirmed with the institution. The student should remain involved in those decisions, rather than receive an apparently complete plan whose assumptions are difficult to inspect.\n\nFor study tools, the first check is whether the generated material represents the notes accurately. A flashcard can reinforce an oversimplified definition, and a quiz can offer a misleading answer. Teachers could ask students to review a small set, correct one weak item, and explain what knowledge it tests. A later task without the cards would help distinguish familiarity with the practice format from understanding that can be used elsewhere.\n\nAnthropic's teacher offering supports preparation and checks of understanding, while Gemini in Classroom connects learning prompts with selected course materials. These provide useful comparisons with OpenAI's update, but their intended users and access arrangements differ. Educators should evaluate the specific activity and available support rather than assume that a common label such as study tool describes the same experience across providers.\n\nOpenAI also shares early usage observations in the announcement. Activity measures can show that young people are using a feature; they do not establish improved comprehension, wellbeing, or admissions success. A school evaluating similar support could combine voluntary accounts of use with checked work and a clear route to teacher or counsellor help. Students who do not use the service should retain an equivalent way to complete the learning activity.\n\nThe update makes planning and practice more visible parts of the AI product agenda. Its educational promise is strongest when the tool helps a student ask a better question, organise the next step, or notice what they do not yet understand. The important boundary remains clear: a forthcoming planner is a proposed resource with a defined initial scope, while decisions about learning and future study continue to require the student's own judgment and human guidance.",
+    "keyTakeaways": [
+      "College Planner was forthcoming on October 7, initially designed for U.S. grades 10–12 and four-year college preparation.",
+      "Check generated study items against course material and assess understanding beyond the practice format.",
+      "Usage observations do not establish learning, wellbeing, or admissions effects."
+    ],
+    "whyItMatters": "Planning and practice tools can support students when availability is described accurately and organisation remains connected to understanding and human guidance.",
+    "sourceUrl": "https://openai.com/index/teens-learn-and-plan/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: Teens learning tools and College Planner plans — 2026-10-07",
+        "url": "https://openai.com/index/teens-learn-and-plan/"
+      },
+      {
+        "label": "Anthropic: School and district teacher offering — 2026-08-28",
+        "url": "https://claude.com/resources/articles/claude-for-teachers-now-available-for-schools-and-districts"
+      },
+      {
+        "label": "Google Workspace: Gemini in Classroom expansion — 2026-08-04",
+        "url": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html"
+      }
+    ],
+    "createdAt": "2026-10-07",
+    "image": "/images/research/covers/aied-201-backfill.png",
+    "imageAlt": "A counsellor and parent help a teenager review a next-step planning sheet and study cards while he records questions.",
+    "summaryImage": "/images/research/summary/aied-201-backfill-summary.png",
+    "summaryImageAlt": "A counsellor and parent help a teenager review a next-step planning sheet and study cards while he records questions.",
+    "summaryAudio": "/audio/research/aied-201-backfill-summary.m4a",
     "summaryAudioTitle": "Listen to the summary"
   }
 ];

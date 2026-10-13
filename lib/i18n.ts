@@ -213,7 +213,7 @@ const enDictionary = {
     principalLabel: "Principal",
     personTitle: "About Dr. Peter Hu Dongpin",
     personText:
-      "Dr. Peter Hu Dongpin is the initiator of AIEDHK. This section can introduce his AI in Education R&D interests, research-to-product approach, and work connecting educational needs with responsible AI systems.",
+      "Dr. Peter Hu Dongpin is the initiator of AIEDHK. He is currently seeking for a faculty position worldwide. Welcome contact.",
     focusTitle: "AIED R&D focus",
     focusItems: [
       "Personalized learning and teaching",

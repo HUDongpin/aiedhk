@@ -10,6 +10,8 @@ export type PaperType = (typeof PAPER_TYPES)[number]["value"];
 
 export interface ResearchPaper {
   id: string;
+  /** Stable reviewed content identifier, separate from a database row ID. */
+  contentId?: string;
   slug: string;
   title: string;
   authors: string[];

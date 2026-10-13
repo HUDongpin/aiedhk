@@ -11,7 +11,7 @@ interface ResearchCardProps {
 }
 
 export default function ResearchCard({ paper, locale, dictionary, featured = false }: ResearchCardProps) {
-  const numericId = /^aied-(\d+)$/.exec(paper.id)?.[1];
+  const numericId = /^aied-(\d+)$/.exec(paper.contentId ?? paper.id)?.[1];
   const stableNumber = numericId ? String(Number.parseInt(numericId, 10)).padStart(2, "0") : paper.id;
   const listingIdentifier = `${dictionary.paperTypes[paper.type]} ${stableNumber}`;
 

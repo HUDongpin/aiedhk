@@ -85,6 +85,7 @@ export function withReviewedStaticEnhancements(paper: ResearchPaper): ResearchPa
 
   return {
     ...paper,
+    contentId: reviewedPaper.id,
     image: reviewedPaper.image,
     imageAlt: paper.imageAlt || reviewedPaper.imageAlt,
     summaryImage: paper.summaryImage ?? reviewedPaper.summaryImage,

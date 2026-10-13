@@ -2258,6 +2258,400 @@ export const researchNewsBackfill20260824To1013: ResearchPaper[] = [
     "summaryAudioTitle": "Listen to the summary"
   },
   {
+    "id": "aied-162",
+    "createdAt": "2026-09-18",
+    "title": "Guided ChatGPT inquiry accompanied stronger thermodynamics scores, with teacher support built into the intervention",
+    "authors": [
+      "Tarik El Fathi",
+      "Aouatif Saad",
+      "Hayat Larhzil",
+      "Driss Lamri",
+      "El Mehdi Al Ibrahmi"
+    ],
+    "venue": "Disciplinary and Interdisciplinary Science Education Research",
+    "year": 2025,
+    "type": "journal",
+    "slug": "guided-chatgpt-inquiry-thermodynamics-conceptual-understanding",
+    "tags": [
+      "science education",
+      "thermodynamics",
+      "inquiry-based learning",
+      "conceptual understanding",
+      "AI-supported instruction"
+    ],
+    "shortSummary": "A quasi-experiment with 120 first-year engineering students compared conventional thermodynamics tutorials with guided ChatGPT inquiry. The AI-supported group achieved higher conceptual post-test scores and reported positive experiences, but the intervention also included prompt training, peer discussion and instructor feedback. Difficulties remained on quantitative topics. The study supports evaluating a complete instructional design; it does not isolate the chatbot's contribution or establish durable gains beyond one semester.",
+    "fullSummary": "An AI explanation of heat, work or entropy can sound clear while leaving a student's underlying misconception intact. Tarik El Fathi and colleagues investigated a teaching approach that required learners to question and evaluate those explanations rather than simply collect answers. Their thermodynamics study combined ChatGPT with a constructivist inquiry-based prompting framework. The educational object was a guided cycle of asking, checking and revising, with the instructor still responsible for clarifying concepts and addressing difficulties.\n\nThe quasi-experiment involved 120 first-year engineering students at Ibn Tofail University in Morocco during the autumn semester of 2023. Sixty students followed conventional instruction and sixty used the AI-supported approach. Groups were formed with comparable academic profiles and taught by the same instructor; the study was not an individually randomized trial. Conceptual understanding was assessed before and after teaching with a French adaptation of the Survey of Thermodynamic Processes and First and Second Laws. Weekly questionnaires also tracked experiences and acceptance of ChatGPT.\n\nBefore using the system, the intervention group completed three hours of training in constructing prompts, checking responses and refining questions. During the semester, both groups attended two-hour weekly tutorials. The AI-supported sessions included prompt refinement, evaluation of generated explanations, collaborative discussion and instructor feedback. The comparison group used worked examples, guided exercises and conventional problem solving. The matched tutorial schedule helps describe the comparison, but AI access was bundled with a distinctive teaching approach and preparation rather than varied as an isolated ingredient.\n\nThe intervention group achieved a higher conceptual post-test mean of 22.53, compared with 18.60 in the comparison group. Both groups improved, while the AI-supported group showed the larger gain. The authors reported clearer progress on some conceptual topics and persistent difficulty with areas involving quantitative reasoning, including engine efficiency and reversible processes. Exploratory analyses of item patterns suggested different conceptual structures across groups. Those statistical patterns may guide further investigation, but they do not directly show the structure of an individual learner's understanding.\n\nThe findings should remain specific to the instructional package and context. Convenience sampling at one institution, nonrandom allocation and a single semester limit causal attribution and generalization. The intervention used the available free ChatGPT service, whose behavior can change over time. Participants also had reliable computers and internet access during tutorials, conditions that may not hold elsewhere. Positive acceptance ratings are useful implementation evidence, but they cannot establish conceptual mastery, independent problem-solving skill or retention after the assistant is no longer available.\n\nFor AIEDHK, the practical next step would be a small science tutorial that preserves a learner's initial explanation, the AI response and the reason for a revision. Teachers could contrast conceptual questions with numerical problems and require students to check assumptions, units and physical plausibility. A delayed unaided test would help assess whether the learning persists. These are proposed extensions beyond the study. The useful lesson is to evaluate guided inquiry as a whole, with teacher review and independent performance checks, rather than attribute every observed improvement to access to a conversational model.",
+    "keyTakeaways": [
+      "The quasi-experiment compared 60 students per condition within a 120-student introductory thermodynamics course.",
+      "Higher conceptual scores accompanied an instructional package combining ChatGPT, prompt training, discussion and teacher feedback.",
+      "Nonrandom allocation, one institution and no delayed independent assessment limit claims about AI-specific or durable effects."
+    ],
+    "whyItMatters": "AIEDHK can use inquiry prompts to make scientific reasoning inspectable, while checking numerical work and later unaided understanding separately. The instructor-guided learning design matters as much as the presence of a chatbot.",
+    "sourceUrl": "https://doi.org/10.1186/s43031-025-00125-z",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://link.springer.com/article/10.1186/s43031-025-00125-z"
+      },
+      {
+        "label": "Publisher full PDF",
+        "url": "https://link.springer.com/content/pdf/10.1186/s43031-025-00125-z.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-162-backfill.png",
+    "imageAlt": "An instructor and two engineering students discuss a pressure-volume curve, an energy-balance sketch and unit checks beside a laptop question prompt.",
+    "summaryImage": "/images/research/summary/aied-162-backfill-summary.png",
+    "summaryImageAlt": "An instructor and two engineering students discuss a pressure-volume curve, an energy-balance sketch and unit checks beside a laptop question prompt.",
+    "summaryAudio": "/audio/research/aied-162-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-163",
+    "slug": "news-google-ai-educator-credit-pathways",
+    "title": "Industry news: Google announces credit pathways for AI educator training, linking short courses with formal recognition",
+    "authors": [
+      "Google"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Google AI Educator Series",
+      "professional learning",
+      "college credit",
+      "Gemini",
+      "teacher development"
+    ],
+    "shortSummary": "Google's September 18 announcement adds planned undergraduate, graduate, and continuing-education credit pathways around its AI Educator Series. The arrangements involve named partners and should not be read as universal credit recognition. Alongside Anthropic's AI-learning approach and OpenAI's community workshops, the update raises a practical question for teachers: what evidence of learning should travel with a badge or credit, and how can it inform classroom practice?",
+    "fullSummary": "Google announced new credit pathways for its AI Educator Series on September 18, 2026. The post describes forthcoming undergraduate credit through College Unbound, graduate credit through ISTE and Dominican University, and continuing-education recognition for Illinois educators through a local partner. It also points to the next day's training event. These are specified partnership arrangements, not a statement that every institution will recognise every badge or that all participants have already earned credit.\n\nThe development adds a different question to the discussion of short AI courses. A teacher may complete a useful session in a small amount of time, but formal recognition requires clarity about what was learned and how it was assessed. A badge, a continuing-education hour, and academic credit serve different purposes. Participants need to know which pathway they are pursuing and what evidence or further work the receiving institution expects.\n\nFor school leaders, the opportunity is to connect individual learning with a shared professional record. A teacher could retain a revised activity, the original learning objective, and a short account of how AI assistance was evaluated. That artifact can support discussion with colleagues even when the credential itself is recognised only within a particular programme. It also gives the teacher something more informative to revisit than a list of completed modules.\n\nGemini-related training can be examined through concrete teaching decisions. If a module introduces guided problem solving, the teacher might demonstrate how a prompt encourages a student to explain a step without supplying the whole solution. If it introduces inquiry, the teacher could show how students choose and check sources. These examples do not establish learning effects in advance; they make the intended practice sufficiently clear to review and improve.\n\nAnthropic's Claude Academy account similarly emphasises purposeful delegation and continued human practice. OpenAI's September community workshops for older adults illustrate another form of learning support, organised around everyday tasks. Compared with Google's credit pathways, these are different approaches to participation and recognition. A free workshop can be valuable without academic credit, while a credit-bearing course still needs activities that connect with the participant's work.\n\nAn institution could ask staff to share one change they made after training and one unresolved difficulty. A peer might review the material, try a related task, or suggest a different form of support. This creates a route from course participation to professional dialogue without assuming that a credential is a complete measure of competence. It also recognises the work of teachers who learn through practice, mentoring, or other providers.\n\nThe announcement is therefore useful news about recognition routes, with a clear geographical and institutional scope. Teachers considering credit should confirm the relevant pathway's requirements, costs, and recognition with its provider and their own institution. For a school's development plan, the more durable record is the combination of training, an inspectable teaching artifact, and reflection on its use. That evidence can support meaningful professional growth even as products, badges, and partnerships change.",
+    "keyTakeaways": [
+      "Google announced partner-specific credit pathways on September 18; recognition is not automatically universal.",
+      "Distinguish a badge, continuing-education recognition, and academic credit when choosing a learning route.",
+      "Retain a teaching artifact and reflection alongside the credential so colleagues can examine the practice."
+    ],
+    "whyItMatters": "Formal recognition is more useful when it is connected to visible teaching decisions rather than treated as a complete proxy for professional capability.",
+    "sourceUrl": "https://blog.google/products-and-platforms/products/education/college-credit-ai-educator-series/",
+    "sourceUrls": [
+      {
+        "label": "Google: College and continuing-education credit pathways — 2026-09-18",
+        "url": "https://blog.google/products-and-platforms/products/education/college-credit-ai-educator-series/"
+      },
+      {
+        "label": "Google: AI Educator Series September update — 2026-09-03",
+        "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
+      },
+      {
+        "label": "Anthropic: Approach to teaching and learning AI — 2026-08-20",
+        "url": "https://claude.com/resources/articles/anthropics-approach-to-teaching-and-learning-ai"
+      },
+      {
+        "label": "OpenAI: Helping older adults use AI — 2026-09-16",
+        "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life/"
+      }
+    ],
+    "createdAt": "2026-09-18",
+    "image": "/images/research/covers/aied-163-backfill.png",
+    "imageAlt": "An educator and two advisers compare a course-pathway sheet with an annotated classroom activity and its revised version.",
+    "summaryImage": "/images/research/summary/aied-163-backfill-summary.png",
+    "summaryImageAlt": "An educator and two advisers compare a course-pathway sheet with an annotated classroom activity and its revised version.",
+    "summaryAudio": "/audio/research/aied-163-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-164",
+    "createdAt": "2026-09-19",
+    "title": "Teachers welcomed an AI-enhanced autism-education platform, while student learning outcomes remain untested",
+    "authors": [
+      "Diana Gadzhimusieva",
+      "Santiago Meliá",
+      "Gonzalo Lorenzo Lledó",
+      "Seyed Shahabadin Nasabeh"
+    ],
+    "venue": "Education and Information Technologies",
+    "year": 2026,
+    "type": "journal",
+    "slug": "autism-education-lms-teacher-acceptance-pilot",
+    "tags": [
+      "inclusive education",
+      "autistic learners",
+      "teacher adoption",
+      "learning management systems",
+      "educational technology"
+    ],
+    "shortSummary": "A pilot evaluation of SpectrumSphere surveyed 30 educators about an AI-enhanced learning-management prototype intended to support autistic learners. Perceived usefulness, ease of use and technological confidence were associated with intentions to adopt the system. The study contributes evidence about teacher acceptance and proposed workflow integration, not demonstrated benefits for children. Its small regional survey cannot establish classroom effectiveness, sustained adoption or improvements in communication and academic learning.",
+    "fullSummary": "A learning platform can be promising to teachers before there is evidence that it improves outcomes for the learners it is meant to support. Diana Gadzhimusieva and colleagues make that distinction especially important in their development and pilot evaluation of SpectrumSphere. The proposed platform brings learner information, activity records and adaptive recommendations into a shared educational workflow for autistic students. The empirical evaluation, however, concerns educators' perceptions and intentions. It is an early implementation study, not a trial of effects on children's learning or development.\n\nThe researchers surveyed thirty educators from schools in Alicante and San Vicente del Raspeig, Spain. Participants worked across specialized, general and combined classroom settings. An online questionnaire contained demographic questions and fourteen items informed by an extended technology-acceptance model. The items addressed perceived usefulness, ease of use, confidence with technology, external support and intentions to use the platform. Responses were analyzed through correlations and regression models, providing a picture of relationships among educators' judgments within this small sample.\n\nThe system design aims to help teachers connect activities with curricular competence, maintain learner profiles and review progress across conventional and technology-supported tasks. It also proposes coordination with families and integration with tools such as robotics and immersive environments. These are design features and intended uses. Their presence in an architecture does not by itself demonstrate that recommendations are appropriate for a particular child, that records capture meaningful progress or that integrating more technologies improves an educational experience.\n\nTeachers generally expressed favorable views of the prototype. Perceived usefulness and ease of use were positively associated with intention to adopt it, while confidence in handling technology was also important. Not every proposed relationship was supported: perceived external control did not show a significant direct association with intention. These results suggest that usability and practical relevance deserve attention during development. They should not be described as causal drivers established by an experiment, because the perceptions and intentions were measured together rather than manipulated over time.\n\nThe evidence has several boundaries. Thirty self-selected educators from one region cannot represent the diversity of autistic learners, families or educational settings. Stated intention does not establish sustained classroom use, and favorable teacher ratings are not child-outcome measurements. The study did not test changes in communication, participation or academic achievement, nor did it provide a controlled comparison with existing support. The authors acknowledge possible selection bias, limited statistical power and the need for observations, usage records and longitudinal evaluation alongside survey evidence.\n\nFor AIEDHK, this stage of development calls for co-design and careful feasibility testing. Educators and families could examine whether records are understandable, recommendations can be challenged and the interface fits established support routines. Any subsequent study should define meaningful learner-specific goals and measure actual participation or learning while documenting support needs and burden. These are proposed next steps rather than findings of the pilot. The useful contribution is an educator-centered integration concept with preliminary acceptance evidence, while the case for benefit to learners remains a separate question requiring direct evaluation.",
+    "keyTakeaways": [
+      "The pilot surveyed 30 educators, not a sample of children receiving an evaluated learning intervention.",
+      "Usefulness, ease of use and technological confidence were associated with adoption intentions; one proposed external-support relationship was not significant.",
+      "The study does not establish learner outcomes, sustained use or comparative effectiveness of the platform."
+    ],
+    "whyItMatters": "AIEDHK can distinguish adoption evidence from benefit to learners when reviewing inclusive-education technology. A favorable teacher survey should lead to co-design and direct feasibility checks before claims about academic or developmental outcomes.",
+    "sourceUrl": "https://doi.org/10.1007/s10639-025-13888-9",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://link.springer.com/article/10.1007/s10639-025-13888-9"
+      },
+      {
+        "label": "Publisher full PDF",
+        "url": "https://link.springer.com/content/pdf/10.1007/s10639-025-13888-9.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-164-backfill.png",
+    "imageAlt": "A parent and two educators review an illustrated activity schedule and matching tablet routine options in an inclusive classroom.",
+    "summaryImage": "/images/research/summary/aied-164-backfill-summary.png",
+    "summaryImageAlt": "A parent and two educators review an illustrated activity schedule and matching tablet routine options in an inclusive classroom.",
+    "summaryAudio": "/audio/research/aied-164-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-165",
+    "slug": "news-claude-small-business-workflow-training",
+    "title": "Product news: Claude's small-business expansion connects reusable workflows with entrepreneurship training",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude for Small Business",
+      "entrepreneurship education",
+      "workplace learning",
+      "workflow design",
+      "AI literacy"
+    ],
+    "shortSummary": "Anthropic's September 15 update expands Claude for Small Business with workflows, integrations, and training activity. Reported here on September 19, it offers entrepreneurship educators a concrete set of tasks to examine, from proposals to recurring reports. OpenAI's agent tools and Gemini's educational training provide comparisons. The learning opportunity lies in defining a useful workflow, checking its inputs, and retaining the business decisions that a person must understand and own.",
+    "fullSummary": "Anthropic expanded Claude for Small Business on September 15, 2026, adding workflows, integrations, and a programme of workshops and partner webinars. This September 19 report considers the update as a resource for entrepreneurship and workplace learning. The company describes tasks such as preparing proposals and recurring reports, but the announcement's customer stories should not be treated as general estimates of business growth or educational effectiveness.\n\nA reusable workflow can make an unfamiliar business task easier to approach. It can also conceal assumptions that a learner needs to understand. A proposal may depend on the scope of work, the available capacity, and information supplied by a client. If the assistant fills in missing details without making them visible, a professional-looking document can become a poor basis for a decision. Learning to identify those missing details is part of the work.\n\nAn entrepreneurship class could use a fictional service business with a small set of supplied records. Students might turn an inquiry into a draft proposal, then highlight each statement supported by the records and each point requiring clarification. A peer could play the client and ask how the proposal changes when the deadline or scope changes. The task would assess interpretation and negotiation, not simply the speed of producing a template.\n\nRecurring reports create a different learning opportunity. Students need to define what a measure means before asking for a weekly summary. A total of inquiries, a count of confirmed jobs, and expected revenue describe different things. A useful workflow preserves those distinctions and explains missing information. If the source spreadsheet changes, the learner should know which part of the report must be checked again.\n\nOpenAI's Agents API provides infrastructure for longer tasks with tools and managed execution. Google's Gemini-related educator training offers examples of applying AI to inquiry and practical work. Compared with Anthropic's ready-made business workflows, these approaches provide different levels of structure. A course can use them to discuss when an existing workflow is suitable, when it needs adaptation, and when a simple manual process is easier to explain and maintain.\n\nThe training component is as important as the number of integrations. A learner should be able to describe what information a connector provides and which actions the workflow is permitted to take. Connecting an account should not become a substitute for understanding the business process. A classroom prototype can use fictional records and drafts, keeping real customer commitments and transactions outside the exercise while students learn the logic.\n\nFor a vocational or university programme, a useful final submission would include the workflow, an example input, a checked output, and a short explanation of one failure case. Students could also identify which judgment they deliberately kept for a person. Anthropic's expansion supplies current industry examples for that discussion. Its educational value depends on whether learners become better at framing, reviewing, and adapting work, rather than merely more comfortable pressing a button that produces it.",
+    "keyTakeaways": [
+      "The September 15 expansion combines practical workflows with training; customer stories are not general outcome estimates.",
+      "Use fictional business records to examine assumptions, missing information, and changes in scope.",
+      "Assess a learner's ability to explain and adapt the workflow, including a meaningful failure case."
+    ],
+    "whyItMatters": "Entrepreneurship education can use ready-made AI workflows to teach the reasoning behind a business process, provided that reasoning remains visible.",
+    "sourceUrl": "https://claude.com/resources/articles/claude-for-small-business-launches-new-workflows-integrations-and-training-programs",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Small-business workflows and training expansion — 2026-09-15",
+        "url": "https://claude.com/resources/articles/claude-for-small-business-launches-new-workflows-integrations-and-training-programs"
+      },
+      {
+        "label": "OpenAI: Agents API launch — 2026-09-10",
+        "url": "https://openai.com/index/introducing-the-agents-api/"
+      },
+      {
+        "label": "Google: AI Educator Series September update — 2026-09-03",
+        "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
+      }
+    ],
+    "createdAt": "2026-09-19",
+    "image": "/images/research/covers/aied-165-backfill.png",
+    "imageAlt": "An instructor and two adult learners compare a fictional catering inquiry, proposed menu workflow and weekly plan in a cafe-style training classroom.",
+    "summaryImage": "/images/research/summary/aied-165-backfill-summary.png",
+    "summaryImageAlt": "An instructor and two adult learners compare a fictional catering inquiry, proposed menu workflow and weekly plan in a cafe-style training classroom.",
+    "summaryAudio": "/audio/research/aied-165-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-166",
+    "createdAt": "2026-09-20",
+    "title": "A tailored mathematics chatbot increased situational interest without a significant overall learning-gain advantage",
+    "authors": [
+      "Cilia Ricarda Rücker",
+      "Sebastian Becker-Genschow"
+    ],
+    "venue": "Computers and Education Open",
+    "year": 2025,
+    "type": "journal",
+    "slug": "ada-mathematics-chatbot-interest-learning-gains",
+    "tags": [
+      "mathematics education",
+      "secondary education",
+      "domain-specific chatbots",
+      "situational interest",
+      "classroom research"
+    ],
+    "shortSummary": "A classroom study with 195 ninth-grade pupils compared the tailored ADA chatbot with conventional differentiated materials while learning a square-root method. Pupils using ADA reported stronger situational interest and favorable acceptance. Overall learning gains did not show a significant group-by-time advantage, and cognitive-load differences were also nonsignificant. The result supports studying motivational engagement separately from achievement, particularly when a new tool is introduced for a brief classroom sequence.",
+    "fullSummary": "A mathematics chatbot can make a lesson more interesting without producing a clear improvement in learning during a brief classroom sequence. Cilia Ricarda Rücker and Sebastian Becker-Genschow examined this distinction through ADA, a domain-specific assistant designed for secondary mathematics. Their study focused on the Heron method for approximating square roots and compared the chatbot with conventional differentiated materials. It offers a useful case of evaluating both the experience of learning and the knowledge students demonstrate, rather than treating enthusiasm as sufficient evidence of effectiveness.\n\nThe study involved 195 ninth-grade pupils from German secondary schools, with 102 in the chatbot condition and 93 in the comparison condition. Existing classes were allocated through cluster randomization. The classroom sequence used one period for the pre-test and a double period for the intervention and immediate post-test. The groups differed in prior knowledge despite the allocation procedure, so the analysis examined changes over time rather than relying only on post-test averages. This baseline imbalance is relevant to how confidently any difference can be attributed to the intervention.\n\nADA was configured around curricular content and pedagogical support. The study describes curated knowledge, retrieval and prompting intended to make responses more relevant to the topic. Pupils could seek help during the mathematical activity, while the comparison group received conventional materials for differentiation. Such a design concerns a tailored assistant embedded in a lesson, not unrestricted use of a general chatbot. The learning tasks progressed from recalling the method to applying it and considering how it might be optimized.\n\nPupils using ADA reported significantly greater situational interest and generally favorable judgments of usability and usefulness. The broader outcome pattern was more cautious. Differences in reported emotions and cognitive load did not reach significance. Although descriptive learning gains favored the chatbot group, the overall group-by-time interaction for performance was not significant, with a reported p value of .094. The findings therefore provide clearer evidence for immediate motivational engagement than for an overall achievement advantage. A favorable trend should remain a trend rather than be promoted into a confirmed effect.\n\nThe study was limited to brief exposure, one mathematical topic and a particular age group. It did not assess delayed retention or repeated use, and novelty could have contributed to interest. Detailed chat processes were not the main object of analysis, leaving uncertainty about which interactions helped or distracted learners. The paper also acknowledges that retrieval and tailored prompts cannot eliminate misleading output. These limits matter because perceived competence of an assistant may increase willingness to use it even when the learner is not well placed to judge its mathematical reliability.\n\nFor AIEDHK, a useful follow-up would compare interest, explanation quality and independent problem solving across several lessons. Teachers could inspect a sample of conversations for misleading hints and ask pupils to justify each step of a new calculation without the assistant. Interface design should also reduce the effort of switching between paper tasks and digital support. These are proposed extensions beyond the study. The practical contribution is a measured separation of engagement from achievement: a promising learning experience still needs evidence that students can retain, explain and apply the mathematics themselves.",
+    "keyTakeaways": [
+      "A brief classroom comparison involved 195 ninth-grade pupils, with existing classes allocated to ADA or conventional differentiated materials.",
+      "Situational interest favored ADA, but the overall group-by-time learning-performance interaction was not significant (p=.094).",
+      "Brief exposure, baseline differences and no delayed assessment limit claims about achievement and retention."
+    ],
+    "whyItMatters": "AIEDHK can evaluate a tailored chatbot as an instructional support while keeping engagement, trust and independent mathematical performance separate. Repeated lessons and delayed tests are needed before interpreting enthusiasm as durable benefit.",
+    "sourceUrl": "https://doi.org/10.1016/j.caeo.2025.100315",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://doi.org/10.1016/j.caeo.2025.100315"
+      },
+      {
+        "label": "Open author-institution full article",
+        "url": "https://kups.ub.uni-koeln.de/81246/1/1-s2.0-S2666557325000746-main.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-166-backfill.png",
+    "imageAlt": "Two students explain square-root estimates using number-line and square-area sketches while a teacher listens beside a laptop hint panel.",
+    "summaryImage": "/images/research/summary/aied-166-backfill-summary.png",
+    "summaryImageAlt": "Two students explain square-root estimates using number-line and square-area sketches while a teacher listens beside a laptop hint panel.",
+    "summaryAudio": "/audio/research/aied-166-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-167",
+    "slug": "news-older-adults-ai-skills-jam-lifelong-learning",
+    "title": "Industry news: OpenAI and OATS bring hands-on AI learning to older adults through community partners",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "lifelong learning",
+      "older adults",
+      "AI literacy",
+      "community education",
+      "ChatGPT"
+    ],
+    "shortSummary": "OpenAI's September 16 announcement describes free, in-person AI workshops with OATS from AARP across ten U.S. communities. This September 20 report examines the lifelong-learning design, rather than claiming completed outcomes. Anthropic's practical AI-learning guidance and Gemini's educator resources offer comparisons. Effective support should begin with a participant's own task, allow different paces and preferences, and help people decide when to question an answer or seek human assistance.",
+    "fullSummary": "OpenAI announced an Older Adults AI Skills Jam with Older Adults Technology Services from AARP on September 16, 2026. The programme brings free, in-person ChatGPT workshops to ten U.S. communities through local partners. This September 20 report considers the approach to lifelong learning. The announcement describes the programme's intended reach and activities; it does not supply an independently assessed account of what every participant learned or how they used the tools afterwards.\n\nThe community setting is significant. A familiar library or learning centre can provide a place to ask questions, practise with support, and return when something remains unclear. Participants will arrive with different experiences, interests, devices, and accessibility needs. Age alone does not define digital confidence. A useful session should let someone work on a meaningful task without assuming that all older adults need the same explanation or pace.\n\nEveryday tasks can provide a concrete starting point. A participant might want to organise a hobby project, understand the wording of a letter, or compare travel options. The instructor can help separate the task from the assistant's first suggestion. What information is missing? Which details need checking? What would make the result useful to this person? These questions allow the learner's purpose to guide the activity.\n\nOpenAI includes online-safety discussion in the workshop design. Educationally, that is an opportunity to practise pausing and checking rather than simply outsourcing suspicion to an AI verdict. A harmless sample message can contain an urgent request, an unclear sender, or an unexpected link. Participants can discuss what they would verify through another channel. An assistant's explanation can support that conversation without becoming the final authority on whether a message is genuine.\n\nAnthropic's Claude Academy approach also starts from practical problems and intentional choices about assistance. Gemini's educator training provides another set of examples for organising learning around real tasks. These resources serve different audiences, but they offer a useful comparison with OpenAI's community workshops: practical access works best when learners have time to experiment and a clear way to ask for help. A collection of features alone is not a learning pathway.\n\nA community provider could invite participants to leave with one small artifact they understand and can revise themselves. It might be a checked checklist, a plain-language draft, or a plan for a personal project. A later session could revisit whether the artifact remained useful and what new questions arose. Participants should also be able to decide that a particular task is better handled with a person or another tool.\n\nThe strongest evaluation would listen to varied experiences, including people who used the tool once, those who returned, and those who chose not to continue. It could examine confidence alongside the ability to identify an error and find appropriate support. The programme offers a visible investment in learning across the lifespan. Its broader lesson is that inclusive AI education requires patient, purposeful practice shaped by the learner, not a single definition of what technological participation should look like.",
+    "keyTakeaways": [
+      "The September 16 announcement describes a community workshop programme, not measured outcomes for every participant.",
+      "Begin with learners' own purposes and avoid assuming a single pace or need based on age.",
+      "Assess practical understanding, error recognition, and access to support alongside confidence."
+    ],
+    "whyItMatters": "Lifelong AI learning is more inclusive when community support helps people make their own informed choices about useful tasks and appropriate assistance.",
+    "sourceUrl": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: Helping older adults use AI — 2026-09-16",
+        "url": "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life/"
+      },
+      {
+        "label": "Anthropic: Approach to teaching and learning AI — 2026-08-20",
+        "url": "https://claude.com/resources/articles/anthropics-approach-to-teaching-and-learning-ai"
+      },
+      {
+        "label": "Google: AI Educator Series September update — 2026-09-03",
+        "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
+      }
+    ],
+    "createdAt": "2026-09-20",
+    "image": "/images/research/covers/aied-167-backfill.png",
+    "imageAlt": "Two older learners explain a balcony-gardening plan and tablet choices to a facilitator during a community-library learning session.",
+    "summaryImage": "/images/research/summary/aied-167-backfill-summary.png",
+    "summaryImageAlt": "Two older learners explain a balcony-gardening plan and tablet choices to a facilitator during a community-library learning session.",
+    "summaryAudio": "/audio/research/aied-167-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-168",
+    "createdAt": "2026-09-21",
+    "title": "A museum science program improved measured machine-learning knowledge, while some concepts and access gaps remained unresolved",
+    "authors": [
+      "Gabrielle Rabinowitz",
+      "Katherine S. Moore",
+      "Safinah Ali",
+      "Mark Weckel",
+      "Irene Lee",
+      "Preeti Gupta",
+      "Rachel Chaffee"
+    ],
+    "venue": "International Journal of STEM Education",
+    "year": 2025,
+    "type": "journal",
+    "slug": "museum-machine-learning-science-youth-curriculum",
+    "tags": [
+      "AI literacy",
+      "informal science learning",
+      "machine learning",
+      "high school education",
+      "equitable participation"
+    ],
+    "shortSummary": "A four-week museum program introduced 42 high-school learners to machine learning through scientific questions, datasets and hands-on activities. Knowledge-inventory scores and self-efficacy improved, while measures of bias understanding and applying ML in science showed a less consistent pattern. Exit tickets and interviews added evidence that tests alone missed. The uncontrolled evaluation informs curriculum design but does not establish comparative effectiveness, durable learning or the elimination of participation gaps.",
+    "fullSummary": "Learning about machine learning becomes more concrete when young people use it to investigate a scientific question. Gabrielle Rabinowitz and colleagues evaluated a curriculum that connected ML concepts with natural-science data and a research-mentorship pathway at the American Museum of Natural History. The program aimed to make advanced ideas accessible through practical activities while widening participation in a field with uneven access. Its evaluation examined knowledge, confidence and learners' explanations rather than relying only on whether participants enjoyed working with technology.\n\nThe four-week curriculum was implemented across two years and the study included 42 high-school-age participants. Recruitment followed the museum mentorship program's existing application routes through prior programs, partner schools and community organizations. Activities combined scientific datasets, interactive tools, unplugged exercises and embodied demonstrations. Learners considered different ML methods, participated in field-science activities and created a decision flowchart for choosing a method appropriate to a research question. Bias and the possible consequences of using a model were also part of the curriculum.\n\nThe evaluation combined a 35-item Machine Learning Concept Inventory with measures of self-efficacy and career interest, exit tickets and retrospective interviews. The inventory had undergone preliminary validation, but the authors identified further work needed on its structure and use with different populations. This mix of measures is valuable because operating a tool, explaining a concept and deciding whether ML is appropriate are related but distinct learning outcomes. A single total score can conceal strengths in one area and uncertainty in another.\n\nOverall inventory scores and self-efficacy improved after the program. However, the inventory did not detect significant changes in knowledge of ML bias or the skill of applying ML to scientific research. Exit tickets and interviews contained examples of learners explaining limitations, questioning data quality and considering when a model should be used. The authors interpret these differences as a reason to examine measurement alignment and the difficulty of the targeted concepts. Qualitative examples enrich the picture, but they should not erase nonsignificant results or be treated as proof that every participant mastered those ideas.\n\nThe evaluation had no untreated comparison group, so it cannot isolate the curriculum's causal contribution from selection, maturation or other program experiences. The sample was small and drawn from a specific mentorship setting. Subgroup analyses suggested gains among learners from under-represented groups, but some initial knowledge gaps persisted and subgroup sizes were uneven. Long-term effects on understanding, research participation and career interest remained untested. The evidence therefore supports further curriculum development without establishing that the program closes broader educational or demographic opportunity gaps.\n\nFor AIEDHK, the program suggests a practical route through locally meaningful scientific data. Learners could classify environmental observations, compare model errors and justify whether the dataset is adequate for a proposed question. Assessment should include explanations of limitations and decisions about when not to use ML, alongside conceptual questions. A later project would help test whether the understanding carries forward. These are proposed extensions beyond the evaluation. The useful contribution is a science-centered curriculum with multiple forms of learning evidence and an explicit recognition that access, confidence and conceptual mastery each require their own assessment.",
+    "keyTakeaways": [
+      "The four-week museum curriculum involved 42 high-school learners and combined ML methods with scientific data and practical activities.",
+      "Knowledge and self-efficacy improved, but inventory results for bias and applying ML in science were not significant.",
+      "No comparison group, small subgroups and no long-term follow-up limit claims about causal effects or closing opportunity gaps."
+    ],
+    "whyItMatters": "AIEDHK can connect ML literacy with scientific decisions and assess when learners judge a model inappropriate. Multiple evidence sources are useful, but qualitative examples and confidence gains should not replace direct checks of conceptual understanding.",
+    "sourceUrl": "https://doi.org/10.1186/s40594-025-00543-5",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://link.springer.com/article/10.1186/s40594-025-00543-5"
+      },
+      {
+        "label": "Publisher full PDF",
+        "url": "https://link.springer.com/content/pdf/10.1186/s40594-025-00543-5.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-168-backfill.png",
+    "imageAlt": "Teenagers and a science educator compare wildlife camera photographs and record uncertainty on a simple classification flowchart in a museum learning studio.",
+    "summaryImage": "/images/research/summary/aied-168-backfill-summary.png",
+    "summaryImageAlt": "Teenagers and a science educator compare wildlife camera photographs and record uncertainty on a simple classification flowchart in a museum learning studio.",
+    "summaryAudio": "/audio/research/aied-168-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-169",
+    "slug": "news-openai-academy-role-based-learning-paths",
+    "title": "Industry news: OpenAI Academy adds learning paths for educators, students, developers, and leaders",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "OpenAI Academy",
+      "AI for Educators",
+      "college students",
+      "role-based learning",
+      "assessment"
+    ],
+    "shortSummary": "OpenAI expanded its Academy on September 21 with courses for educators, college students, developers, and leaders, alongside its existing workplace pathway. Course badges depend on passing an assessment. Anthropic's learning approach and Google's Gemini-related training provide useful comparisons, but the new portfolio is not evidence that all roles need the same skills. Institutions can choose tasks and assessments that reflect what each group actually needs to decide and do.",
+    "fullSummary": "OpenAI expanded its Academy on September 21, 2026 with learning paths for developers, leaders, educators, and college students. They join the existing Apply AI at Work pathway, and course badges are awarded after learners pass the relevant assessment. The announcement organises training around roles rather than a single general introduction. For educational institutions, that creates an opportunity to ask which decisions and practices each group needs to develop.\n\nThe educator and student pathways have different purposes. OpenAI describes educators planning activities and reviewing generated material against learning objectives, while students practise tasks such as organising study, reviewing drafts, and preparing for applications. These are intended course activities, not demonstrated effects on teaching quality or student attainment. A school or university should inspect the actual tasks before deciding how the courses fit its programme.\n\nRole-specific training can be useful because a teacher, a technical developer, and an institutional leader may encounter the same system from different positions. A teacher must judge whether an explanation serves a lesson. A developer needs to understand how an application behaves when information is missing. A leader must decide which activities deserve support and how the organisation will learn from experience. Shared terminology helps, but the assessment should reflect these different responsibilities.\n\nA university could combine a common introductory activity with separate applied tasks. Everyone might examine one flawed AI response and identify what needs checking. Educators could then revise a lesson activity, students could review a draft against an assignment, and technical staff could document a failure case in a small application. A later discussion would reveal which concerns are shared and which require specialised expertise.\n\nAnthropic's Claude Academy framing emphasises intentional delegation and the skills people should continue to practise. Google's AI Educator Series connects Gemini with problem solving and inquiry, and its recent announcement adds partner-specific credit pathways. Compared with these resources, OpenAI's new portfolio offers another way to organise training. The relevant comparison is what learners practise and demonstrate, not simply how many courses or badges a platform lists.\n\nAssessment deserves particular attention when a course teaches people to work with an assistant. A polished artifact can be produced without a clear understanding of its limitations. An assessment can therefore ask the learner to explain one rejected suggestion, identify a missing source, or adapt the workflow to a changed requirement. Those tasks make judgment visible. Learners should also be able to explain what they could not verify. They also provide feedback that remains useful when the product interface changes.\n\nInstitutions should leave room for different starting points and for learning beyond the provider's examples. Staff and students can bring a real task they have permission to use, document how assistance changed it, and discuss what remained their responsibility. The Academy expansion supplies a structured set of entry points. Its local value will depend on whether participation leads to more thoughtful choices and demonstrable capability in the work people actually do.",
+    "keyTakeaways": [
+      "The September 21 expansion adds role-focused pathways and assessment-linked badges.",
+      "Different institutional roles need different applied tasks even when they share foundational AI concepts.",
+      "Assess judgment through rejected suggestions, missing evidence, and adaptation to changed requirements."
+    ],
+    "whyItMatters": "Role-based AI learning can help institutions move beyond generic awareness if it is connected to observable decisions and responsibilities.",
+    "sourceUrl": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: New Academy learning paths — 2026-09-21",
+        "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths/"
+      },
+      {
+        "label": "Anthropic: Approach to teaching and learning AI — 2026-08-20",
+        "url": "https://claude.com/resources/articles/anthropics-approach-to-teaching-and-learning-ai"
+      },
+      {
+        "label": "Google: AI Educator Series September update — 2026-09-03",
+        "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
+      },
+      {
+        "label": "Google: College and continuing-education credit pathways — 2026-09-18",
+        "url": "https://blog.google/products-and-platforms/products/education/college-credit-ai-educator-series/"
+      }
+    ],
+    "createdAt": "2026-09-21",
+    "image": "/images/research/covers/aied-169-backfill.png",
+    "imageAlt": "Participants in a university AI workshop compare a lesson activity, software workflow and reading notes while a student records questions.",
+    "summaryImage": "/images/research/summary/aied-169-backfill-summary.png",
+    "summaryImageAlt": "Participants in a university AI workshop compare a lesson activity, software workflow and reading notes while a student records questions.",
+    "summaryAudio": "/audio/research/aied-169-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
     "id": "aied-170",
     "slug": "teacher-authorship-ai-science-lesson-design-environmental-agency",
     "createdAt": "2026-09-22",
@@ -2352,6 +2746,202 @@ export const researchNewsBackfill20260824To1013: ResearchPaper[] = [
     "summaryImage": "/images/research/summary/aied-171-opus55-research-workflows-summary.png",
     "summaryImageAlt": "An education researcher and a developer compare an annotated geometry lesson with code and a verification diagram on a laptop in a university studio",
     "summaryAudio": "/audio/research/aied-171-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-172",
+    "createdAt": "2026-09-23",
+    "title": "AI feedback improved answers during an augmented-reality physics lab, while independent transfer was not assessed",
+    "authors": [
+      "Atakan Coban",
+      "David Dzsotjan",
+      "Stefan Küchemann",
+      "Jürgen Durst",
+      "Jochen Kuhn",
+      "Christoph Hoyer"
+    ],
+    "venue": "EPJ Quantum Technology",
+    "year": 2025,
+    "type": "journal",
+    "slug": "ai-feedback-augmented-reality-quantum-physics-lab",
+    "tags": [
+      "physics education",
+      "augmented reality",
+      "formative feedback",
+      "quantum cryptography",
+      "learning processes"
+    ],
+    "shortSummary": "A physics laboratory study compared feedback and no-feedback questions within an augmented-reality quantum-cryptography activity involving 21 student groups. GPT-4 feedback helped groups improve their immediate explanations, while gaze records suggested changes in attention to relevant representations and equipment. The measured outcome was answer improvement during supported discussion. A small voluntary sample, exploratory gaze analyses and no independent delayed test limit broader claims about learning and the value of the combined technology.",
+    "fullSummary": "In a physics laboratory, a learner may need to connect an abstract model with the behavior of real equipment. Atakan Coban and colleagues studied whether spoken AI feedback could help make that connection during an augmented-reality activity about quantum cryptography. The system overlaid representations on a physical apparatus and asked groups to explain key steps. The research is distinctive because it examined both the answers students produced and where they looked while discussing the problem, rather than treating interaction with a visualization as evidence of understanding by itself.\n\nTwenty-one student groups at a German university participated in an approximately three-hour laboratory experiment. The groups were assigned to two sequences: one received GPT-4 feedback on questions one and three, and the other on questions two and four. All completed the same experimental steps. The physical activity was an analogy demonstration of a quantum-key-distribution protocol, while augmented-reality glasses displayed relevant representations. Spoken responses were converted to text, and the AI's feedback was converted back to speech so that the group could hear and discuss it.\n\nThe feedback prompts included the question and a reference answer. The model was instructed to compare the group's explanation with that reference and guide correction without simply revealing the answer. In the no-feedback condition, it asked the question and then directed the group onward. Groups could receive multiple feedback rounds while developing their response. The comparison therefore tested the opportunity to revise an explanation with adaptive guidance within the activity, not whether AI feedback was better than expert human feedback or whether the resulting understanding persisted independently.\n\nThe analysis favored questions receiving feedback: groups improved their explanations during the interaction. Gaze records suggested that feedback on conceptual questions drew attention toward virtual representations, whereas feedback on experimental procedures drew attention toward physical materials. These observations offer hypotheses about how feedback and representations work together. Looking at a relevant object, however, does not demonstrate that the learner interpreted it correctly. The gaze analysis also used an exploratory significance threshold of .10 because of limited sample size, requiring particular caution when interpreting individual effects.\n\nThe study was small and participation voluntary. Its measured learning outcome consisted of responses produced during the supported laboratory process, with no delayed or unfamiliar task performed independently. The model's behavior reflected a specific period in 2024, and students were initially unfamiliar with the headset. Some reported discomfort from its weight or heat later in the activity. Because all groups used the augmented-reality environment, the study does not isolate the value of AR itself. Nor can the findings establish that adding both technologies will benefit other subjects or classroom settings.\n\nFor AIEDHK, the practical design question is whether feedback directs learners back to evidence they can inspect. A laboratory pilot could ask students to revise an explanation using an observation, diagram or measurement, then test the same principle through a new situation without guidance. Teachers should separately review the factual quality of feedback and the usability of the equipment. These are proposed extensions beyond the experiment. The useful contribution is a coordinated feedback-and-representation workflow, whose educational value still depends on what learners can explain after the support is removed.",
+    "keyTakeaways": [
+      "Twenty-one lab groups received feedback on different questions in a counterbalanced activity using the same augmented-reality setup.",
+      "GPT-4 feedback improved explanations during supported discussion; gaze patterns suggested shifts toward task-relevant representations.",
+      "No delayed independent learning test was included, and exploratory gaze tests used an alpha threshold of .10."
+    ],
+    "whyItMatters": "AIEDHK can connect AI feedback to observable laboratory evidence and test the explanation again without support. Attention traces and better revised answers should remain distinct from proof of lasting conceptual understanding.",
+    "sourceUrl": "https://doi.org/10.1140/epjqt/s40507-025-00310-z",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://link.springer.com/article/10.1140/epjqt/s40507-025-00310-z"
+      },
+      {
+        "label": "Publisher full PDF",
+        "url": "https://link.springer.com/content/pdf/10.1140/epjqt/s40507-025-00310-z.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-172-backfill.png",
+    "imageAlt": "Two students and an instructor inspect polarizer components while comparing an annotated light-path diagram in an optics teaching laboratory.",
+    "summaryImage": "/images/research/summary/aied-172-backfill-summary.png",
+    "summaryImageAlt": "Two students and an instructor inspect polarizer components while comparing an annotated light-path diagram in an optics teaching laboratory.",
+    "summaryAudio": "/audio/research/aied-172-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-173",
+    "slug": "news-gpt-6-sol-luna-task-cost-selection",
+    "title": "Product news: GPT-6 Sol and Luna broaden lower-cost model choices for educational and research workflows",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "GPT-6 Sol",
+      "GPT-6 Luna",
+      "model evaluation",
+      "research costs",
+      "educational applications"
+    ],
+    "shortSummary": "OpenAI released GPT-6 Sol and Luna on September 22, extending its model family with lower-priced options for coding, professional work, and computer use. This September 23 report focuses on choosing a model for a specific educational task. Anthropic's same-day Opus 5.5 release and Gemini's inquiry tools provide context. Token prices matter, but a useful comparison also includes errors, retries, review effort, and what learners are expected to do themselves.",
+    "fullSummary": "OpenAI introduced GPT-6 Sol and GPT-6 Luna on September 22, 2026. This September 23 report examines the models' relevance to educational and research workflows, rather than treating the reporting date as their launch. OpenAI positions them as more affordable options for coding, professional work, and computer use. The launch announcement lists API access and selected ChatGPT Work and Codex plans, while noting that the models were not yet available in Chat.\n\nThe two tiers create a practical selection problem. A task that extracts a few fields from a well-structured document may need a different level of capability from one that reconciles conflicting evidence across several sources. Choosing the most expensive model for every step may waste resources; choosing the cheapest without checking its errors can also be costly. The useful unit of comparison is a completed, reviewed task.\n\nAt launch, standard API prices were $2 per million input tokens and $10 per million output tokens for Sol, and $0.10 and $0.50 respectively for Luna. Those prices do not determine the final cost of a workflow. A longer answer, repeated attempts, tool use, and human correction can change the result. Institutions should compare the total effort required to reach an acceptable output under the same task conditions.\n\nA university pilot could select several ordinary activities: organising a supplied reading list, checking a table against its source, and explaining a small piece of code. Reviewers would decide in advance what counts as an error and which qualifications must remain visible. They could then compare models without knowing which produced each response. The exercise should record failure cases as well as successful outputs, rather than showcasing only the best examples.\n\nAnthropic's same-day Opus 5.5 announcement also emphasises efficiency and complex work. Gemini's existing inquiry and learning tools provide a contrasting reminder that task completion is not the only educational objective. OpenAI's new tiers broaden the options, but a cheaper or stronger assistant does not decide which parts of a learning activity should be delegated. Teachers still need to identify the reasoning students must practise themselves.\n\nFor an educational application, model selection may change within one workflow. A relatively simple stage could organise known material, while a harder stage could receive additional scrutiny or a different model. Such routing should remain understandable to the team maintaining the application. When a result fails, they need to know which stage and configuration produced it, rather than assume that a product name describes every action taken.\n\nThe release is therefore an opportunity to make model choice more deliberate. A small evaluation with realistic tasks can reveal where lower cost preserves acceptable quality and where additional capability or human attention is worthwhile. Students can participate by explaining the trade-offs and checking outputs against sources. The strongest educational use would combine broader access with better judgment about when an assistant is sufficient, when it is uncertain, and when the work should remain with a person.",
+    "keyTakeaways": [
+      "GPT-6 Sol and Luna launched September 22; this article reports them on September 23.",
+      "Compare total reviewed task cost, including retries and correction, rather than token prices alone.",
+      "Model routing should remain inspectable, while learning design determines what students must practise themselves."
+    ],
+    "whyItMatters": "More model tiers can improve access when institutions evaluate the actual work and preserve the educational decisions that price comparisons cannot answer.",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-6-sol-and-luna/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: Introducing GPT-6 Sol and Luna — 2026-09-22",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      },
+      {
+        "label": "Anthropic: Introducing Claude Opus 5.5 — 2026-09-22",
+        "url": "https://www.anthropic.com/claude-opus-5-5"
+      },
+      {
+        "label": "Google: AI Educator Series September update — 2026-09-03",
+        "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
+      }
+    ],
+    "createdAt": "2026-09-23",
+    "image": "/images/research/covers/aied-173-backfill.png",
+    "imageAlt": "A lecturer and postgraduate compare two anonymous response sheets with a source table while another student records review effort.",
+    "summaryImage": "/images/research/summary/aied-173-backfill-summary.png",
+    "summaryImageAlt": "A lecturer and postgraduate compare two anonymous response sheets with a source table while another student records review effort.",
+    "summaryAudio": "/audio/research/aied-173-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-174",
+    "createdAt": "2026-09-24",
+    "title": "AI-assisted short-answer grading broadly resembled instructor grading, without testing learning gains",
+    "authors": [
+      "Tobias Heinrich",
+      "Spencer Baily",
+      "Kuan-Wu Chen",
+      "Jack DeOliveira",
+      "Sanghoon Park",
+      "Navida Chun-Han Wang"
+    ],
+    "venue": "PLOS ONE",
+    "year": 2025,
+    "type": "journal",
+    "slug": "ai-assisted-political-science-grading-feedback-trials",
+    "tags": [
+      "assessment",
+      "short-answer questions",
+      "AI-assisted grading",
+      "instructor oversight",
+      "higher education"
+    ],
+    "shortSummary": "Randomized grading comparisons across political-science courses analyzed 3,080 short-answer responses from 271 students. Instructor-guided GPT-4 prompts broadly resembled human grading on selected evaluation measures, with small and context-dependent differences. Human feedback was slightly more likely to be rated helpful overall. The study evaluates grading and feedback workflows, not student learning or critical-thinking gains, and low regrade-request rates cannot establish that all errors or biases were absent.",
+    "fullSummary": "Detailed comments on short answers are valuable but difficult to provide repeatedly in a large class. Tobias Heinrich and colleagues tested whether a language model could extend an instructor's grading approach by using explicit criteria and examples. Their political-science study evaluated the resulting scores, student requests for regrading and perceptions of feedback. The relevant question was whether an AI-assisted workflow could approximate selected aspects of instructor grading at scale, not whether automated scoring should become the final authority over an academic judgment.\n\nThe analysis covered 271 students, twenty-six tests and 3,080 short-answer responses across undergraduate courses in the 2023–2024 academic year. About 88 percent of responses received AI-assisted grading. For each question, randomly selected responses were graded intensively by instructors and used as examples in a prompt that also contained the question, rubric and a new response. GPT-4 then produced a score and written feedback for the remaining answers. Students were informed of the approach and could request human regrading under the course policy.\n\nThe researchers examined three outcomes. First, they tested how closely a short-answer score tracked performance on other assessment items. Second, they analyzed requests for human regrading as a practical signal of grading problems students considered worth contesting. Third, they asked students how helpful they found prior feedback. Random assignment of responses supported comparison of grading methods, but these outcomes capture different aspects of assessment quality. None is a direct test of whether reading the feedback caused subsequent learning or improved critical thinking.\n\nAverage differences between grading methods were generally small, with variation across courses and student subgroups. The pooled difference in score discrimination was not significant. Human-graded responses attracted slightly more regrade requests, while human feedback was modestly more likely to be rated helpful overall. The study therefore supports further investigation of instructor-guided AI grading without establishing that one method is uniformly superior. Similarity on these measures also does not mean that every individual score was correct or that students received equally useful advice in every case.\n\nThe boundaries are especially important because grading affects students. Regrade requests were uncommon and could miss errors that students did not recognize or were reluctant to challenge; the policy also allowed a regrade to lower a score. The trial did not examine ideological bias, favoritism or long-term learning effects. One course contributed almost half the pooled sample, and the proprietary model may be difficult to reproduce after retirement. The experiment evaluated a particular prompt-and-example workflow rather than all forms of automated assessment or high-stakes examination scoring.\n\nFor AIEDHK, a cautious pilot could begin with low-stakes formative responses, explicit rubrics and a human appeal route. Instructors could audit both accepted grades and unchallenged responses, examine subgroup patterns and check whether feedback supports better work on a later task. Learners should understand how the judgment was produced and how to contest it. These are proposed evaluation steps beyond the paper. The useful contribution is evidence about a scalable feedback workflow, with responsibility for assessment quality and evidence of learning still requiring separate human judgment and measurement.",
+    "keyTakeaways": [
+      "The analysis included 271 students,26 tests and 3,080 short-answer responses; about 88 percent were graded with GPT-4 assistance.",
+      "Selected grading measures were broadly similar, with small differences and course-level variation; human feedback was slightly more often rated helpful.",
+      "The study did not test learning gains or ideological bias, and low regrade requests do not prove an absence of errors."
+    ],
+    "whyItMatters": "AIEDHK can distinguish grading-workflow evidence from evidence of educational benefit. Any pilot should include an explicit rubric, human review and appeal, and an independent test of whether feedback improves later work.",
+    "sourceUrl": "https://doi.org/10.1371/journal.pone.0328041",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0328041"
+      },
+      {
+        "label": "Author data and replication code",
+        "url": "https://osf.io/7auxr/"
+      }
+    ],
+    "image": "/images/research/covers/aied-174-backfill.png",
+    "imageAlt": "A professor and teaching assistant compare a short-answer rubric, annotated responses and a laptop feedback draft while recording a justification.",
+    "summaryImage": "/images/research/summary/aied-174-backfill-summary.png",
+    "summaryImageAlt": "A professor and teaching assistant compare a short-answer rubric, annotated responses and a laptop feedback draft while recording a justification.",
+    "summaryAudio": "/audio/research/aied-174-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-175",
+    "slug": "news-claude-tag-personal-connectors-channel-audience",
+    "title": "Product news: Claude Tag adds personal connectors in channels, separating source access from the audience for a reply",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude Tag",
+      "personal connectors",
+      "collaborative research",
+      "information sharing",
+      "team permissions"
+    ],
+    "shortSummary": "Anthropic's September 24 Claude Tag update lets people use their own connectors for requests in a Slack channel, with controls over how the response is posted. Rollout begins on Team plans, with Enterprise to follow. The distinction matters for educational teams: permission to read a document is not the same as permission to show its contents to everyone in a channel. OpenAI's administration tools and Gemini's course context provide useful comparisons.",
+    "fullSummary": "Anthropic announced personal connectors for Claude Tag on September 24, 2026. A person can ask Claude in a Slack channel to use information available through their own connected accounts, alongside the channel's shared tools. The rollout begins on Team plans, with Enterprise to follow. Users can review responses before posting, and Anthropic notes that anything posted is visible to the channel. The update therefore changes both access to information and the responsibility for presenting it.\n\nAn educational team can encounter this distinction during ordinary collaboration. A researcher may have access to a draft that colleagues have not yet seen. A teacher may hold notes that are appropriate for private preparation but not for a whole department. Asking an assistant to consult that material does not automatically make every detail suitable for the audience receiving the answer. The source permission and the communication decision need separate attention.\n\nA proposed training exercise could use fictional documents with different audiences. One might be a public course outline, another an internal planning note, and a third a draft that contains an unconfirmed decision. Participants would decide what a channel summary should include and which points require clarification. They could compare their decisions with an assistant's draft before anything is posted. This keeps the focus on purposeful communication rather than on the mechanics of a connector.\n\nReview should include context as well as sensitive details. A sentence can be harmless in isolation but misleading when removed from the document's qualifications or date. A summary might present an idea as an agreed plan or omit the person responsible for checking it. Educational teams can ask whether the reply preserves the status of each statement, especially when it combines information from several sources with different owners.\n\nOpenAI's Admin plugin exposes supported workspace actions under existing permissions. Gemini in Classroom uses selected course and assignment material to inform study prompts. Compared with these approaches, Claude Tag brings individually accessible context into a shared conversation. The products solve different problems, and none removes the need to decide who should see the resulting information. Convenient retrieval and appropriate sharing are related but distinct capabilities.\n\nThe announcement also distinguishes personal requests from unattended work: scheduled routines use the channel's administrator-provided connectors. That difference matters when a team turns a useful one-off comparison into a recurring process. The information available to the routine may not match what a person supplied during the original conversation. A team should check the actual inputs and audience again rather than assume that the first successful result will repeat unchanged.\n\nFor a research group or teaching department, the update can support more contextual collaboration if people understand these boundaries. A useful practice is to identify the source, the intended audience, and the status of the claim before accepting a shared response. Colleagues should be able to correct a misleading summary and return to the relevant original. The learning opportunity is to make information stewardship visible within everyday teamwork, not merely to connect more accounts.",
+    "keyTakeaways": [
+      "Team-plan rollout begins September 24; Enterprise availability was still forthcoming in the announcement.",
+      "Individual access to a source does not determine whether its contents belong in a channel reply.",
+      "Recurring routines use shared channel connectors, so their inputs need to be checked separately."
+    ],
+    "whyItMatters": "Context-rich collaboration works better when educators and researchers understand both who can retrieve information and who can see the resulting message.",
+    "sourceUrl": "https://claude.com/resources/articles/claude-tag-now-supports-personal-connectors-in-channels",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Personal connectors in Claude Tag channels — 2026-09-24",
+        "url": "https://claude.com/resources/articles/claude-tag-now-supports-personal-connectors-in-channels"
+      },
+      {
+        "label": "OpenAI: Admin plugin for ChatGPT Work and Codex — 2026-08-25",
+        "url": "https://openai.com/index/introducing-admin-plugin/"
+      },
+      {
+        "label": "Google Workspace: Gemini in Classroom expansion — 2026-08-04",
+        "url": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html"
+      }
+    ],
+    "createdAt": "2026-09-24",
+    "image": "/images/research/covers/aied-175-backfill.png",
+    "imageAlt": "A research team compares a public summary with a sample internal draft while discussing document access and the audience for a shared response.",
+    "summaryImage": "/images/research/summary/aied-175-backfill-summary.png",
+    "summaryImageAlt": "A research team compares a public summary with a sample internal draft while discussing document access and the audience for a shared response.",
+    "summaryAudio": "/audio/research/aied-175-backfill-summary.m4a",
     "summaryAudioTitle": "Listen to the summary"
   },
   {

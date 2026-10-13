@@ -2945,6 +2945,395 @@ export const researchNewsBackfill20260824To1013: ResearchPaper[] = [
     "summaryAudioTitle": "Listen to the summary"
   },
   {
+    "id": "aied-176",
+    "createdAt": "2026-09-25",
+    "title": "AI scribes produced fuller educational feedback notes, but human editing did not remove every error",
+    "authors": [
+      "Jaideep S. Talwalkar",
+      "David Chartash",
+      "Lisa Zhang",
+      "Michael Makutonin",
+      "Conrad W. Safranek",
+      "Anne Elizabeth Sidamon-Eristoff",
+      "Lee H. Schwamm",
+      "Donald S. Wright"
+    ],
+    "venue": "JMIR Medical Education",
+    "year": 2026,
+    "type": "journal",
+    "slug": "ambient-ai-scribe-educational-feedback-note-quality",
+    "tags": [
+      "medical education",
+      "feedback documentation",
+      "AI scribes",
+      "human review",
+      "faculty workflows"
+    ],
+    "shortSummary": "A randomized workshop study assigned 13 medical educators to human-only or AI-assisted feedback documentation. AI-assisted narratives scored higher for inclusion of useful feedback elements, but they were much longer and sometimes inaccurate. Review of 117 generated elements found eight mischaracterizations and two hallucinations; editing reduced most mischaracterizations but did not remove the two hallucinations. The study measured documentation quality and workload, not subsequent student competence or clinical outcomes.",
+    "fullSummary": "Good verbal feedback can lose detail when an educator later turns it into a written note. Jaideep Talwalkar and colleagues tested whether an ambient AI scribe could preserve more of that educational conversation. Their study took place in a medical interviewing workshop using standardized patients. The AI was asked to summarize feedback that had actually been spoken, not to invent a new assessment of the learner. That distinction makes factual fidelity to the source conversation central to evaluating the workflow.\n\nThirteen clinician educators were randomized to human-only or AI-assisted documentation. The workshop involved 102 first-year medical students who attended, and feedback forms were submitted for 94 of them. In the AI condition, a scribe generated a transcript of the interview and feedback exchange. A private GPT-4o instance within the university's infrastructure then extracted educational feedback, which instructors reviewed and edited before submission. The comparison instructors wrote their narratives without AI assistance. The intervention therefore combined recording, summarization and human editing rather than replacing the educator's observation.\n\nResearchers rated human-only, unedited AI and human-edited AI narratives using a five-point feedback-quality instrument. Median scores were two for human-only notes and three for both AI-assisted forms. AI-assisted notes were also substantially longer. Their higher scores indicate that more of the instrument's feedback elements were explicitly documented, but do not establish that the additional detail was always accurate, necessary or useful to the student. A well-structured narrative and a faithful account of what happened are related but separate qualities.\n\nA factuality review of 117 generated feedback elements found eight mischaracterizations and two hallucinations. Editing reduced the mischaracterizations to one, but the two hallucinations remained in the reviewed sample. This is a concrete reason not to treat a human-editing step as an automatic guarantee of accuracy. Task-load and usability scores did not differ significantly between conditions, with wide uncertainty and challenging ratings in both groups. The study does not establish a time-saving benefit merely because it found no statistically significant workload difference.\n\nThe trial was small and limited to one institution and workshop format. Instructors were the randomized units, and a modest number of educators produced many individual notes. Raters were formally blinded, but could usually identify whether a narrative had AI assistance, partly because the writing differed markedly. Only a subsample received detailed factuality review. The research did not measure whether students understood, used or benefited from the notes on a later encounter. It therefore supports evaluating a documentation workflow, not claims about improved clinical competence or patient outcomes.\n\nFor AIEDHK, the broader application is preserving feedback in supervised practice settings without losing its evidential basis. A pilot could require each substantive comment to be traceable to an observed action or recorded exchange, and ask the educator to correct unsupported interpretations before sharing the note. A later learner task could establish whether the feedback changed performance. These are proposed steps beyond the trial. The useful opportunity is better capture of educational detail, with source fidelity, review burden and learner benefit assessed separately rather than assumed from the length or polish of the generated document.",
+    "keyTakeaways": [
+      "Thirteen educators were randomized to documentation workflows; AI-assisted notes contained more rated feedback elements.",
+      "In 117 reviewed elements, eight mischaracterizations and two hallucinations appeared; editing left one mischaracterization and both hallucinations.",
+      "No significant workload or usability advantage was established, and subsequent learner or clinical outcomes were not measured."
+    ],
+    "whyItMatters": "AIEDHK can use AI to help capture observed feedback while requiring each important statement to remain grounded in the source interaction.More complete documentation should not be confused with verified accuracy or improved learner performance.",
+    "sourceUrl": "https://doi.org/10.2196/89996",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://mededu.jmir.org/2026/1/e89996/"
+      },
+      {
+        "label": "Publisher-listed earlier preprint and first-publication record",
+        "url": "https://preprints.jmir.org/preprint/89996"
+      }
+    ],
+    "image": "/images/research/covers/aied-176-backfill.png",
+    "imageAlt": "A medical educator and two adult students compare an interviewing observation checklist with generated feedback and an annotated reflection sheet.",
+    "summaryImage": "/images/research/summary/aied-176-backfill-summary.png",
+    "summaryImageAlt": "A medical educator and two adult students compare an interviewing observation checklist with generated feedback and an annotated reflection sheet.",
+    "summaryAudio": "/audio/research/aied-176-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-177",
+    "slug": "news-claude-plugin-submission-reusable-teaching-tools",
+    "title": "Product news: Claude opens a plugin submission portal, giving educational developers a clearer route from prototype to distribution",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude plugins",
+      "educational development",
+      "reusable tools",
+      "software review",
+      "tool evaluation"
+    ],
+    "shortSummary": "Anthropic opened a developer submission portal for Claude plugins on September 25, bringing submission checks, review feedback, publication control, and usage analytics into one process. Plugins can package connectors and reusable skills. For educational developers, the new route makes distribution more concrete, but directory approval does not establish classroom suitability. OpenAI's developer-learning paths and Gemini's practical training provide complementary ways to think about evaluation, maintenance, and the people a tool is intended to serve.",
+    "fullSummary": "Anthropic announced a plugin submission portal on September 25, 2026. Developers on paid Claude plans can submit extensions, receive automated checks and review feedback, and choose when to publish after approval. Plugins can package connectors, reusable skills, or both. The update gives builders a clearer path into the Claude directory, but it does not establish that an approved extension has been evaluated for a particular course, age group, or educational purpose.\n\nFor educational developers, distribution changes the scale of responsibility. A prototype used by its author can rely on explanations given in person. A tool installed by another teacher needs to communicate its purpose, expected inputs, and limitations on its own. It should behave sensibly when a file is missing, a source is unavailable, or the user asks for something outside its intended scope. Those situations belong in development before the listing becomes public.\n\nA small university team might build a tool that checks a supplied bibliography for incomplete fields. The first version could work on the team's own examples, yet fail on another discipline's sources or a bilingual document. A useful evaluation would include those cases and explain what the tool does not determine. Finding a complete-looking citation is different from confirming that the source exists or supports the claim in the text.\n\nReusable instructions also need maintenance. A skill can encode a good workflow, but the surrounding application, source format, or institutional expectation may change. The developer should make it possible to identify the version used and understand consequential updates. Teachers who rely on the tool need a way to report a failure without exposing student work unnecessarily. A public listing is the beginning of that relationship, not the end of development.\n\nOpenAI's September Academy expansion includes a developer pathway covering evaluation and operating AI applications. Google's Gemini-related educator training offers a complementary view from teaching practice. These resources can help a team connect technical testing with the activity a teacher is trying to support. Anthropic's portal adds a distribution process; the institution still needs to decide whether the extension fits its users and evidence requirements.\n\nUsage analytics can help identify where a tool is being found or installed, but they should not be read as measures of learning. Many installations may reflect curiosity, while a smaller number of sustained users may reveal a valuable niche. Developers can pair those signals with specific reports: which task was attempted, where the result failed, and what the user needed instead. That information is more useful for improvement than popularity alone.\n\nAn educational extension is ready for wider use when someone outside the original team can understand, test, and question it. A clear description, realistic examples, visible limitations, and a correction route all contribute to that readiness. The new portal makes the publication process easier to follow. For educators building tools, the more important achievement is a reusable activity that colleagues can adopt with an informed understanding of what it does and what still requires their judgment.",
+    "keyTakeaways": [
+      "The September 25 portal supports plugin submission, review, publication, and usage monitoring.",
+      "Directory approval should be distinguished from suitability for a specific educational activity.",
+      "Test unfamiliar inputs, document limits, and maintain a correction route as the tool reaches new users."
+    ],
+    "whyItMatters": "Educational tool distribution becomes more responsible when the workflow, evidence limits, and maintenance expectations are understandable beyond the original developer.",
+    "sourceUrl": "https://claude.com/resources/articles/build-plugins-for-claude",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Build plugins for Claude — 2026-09-25",
+        "url": "https://claude.com/resources/articles/build-plugins-for-claude"
+      },
+      {
+        "label": "OpenAI: New Academy learning paths — 2026-09-21",
+        "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths/"
+      },
+      {
+        "label": "Google: AI Educator Series September update — 2026-09-03",
+        "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
+      }
+    ],
+    "createdAt": "2026-09-25",
+    "image": "/images/research/covers/aied-177-backfill.png",
+    "imageAlt": "A student developer demonstrates a bibliography-checking prototype while a librarian and lecturer compare three source cards and a reference page.",
+    "summaryImage": "/images/research/summary/aied-177-backfill-summary.png",
+    "summaryImageAlt": "A student developer demonstrates a bibliography-checking prototype while a librarian and lecturer compare three source cards and a reference page.",
+    "summaryAudio": "/audio/research/aied-177-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-178",
+    "createdAt": "2026-09-26",
+    "title": "Guided AI dialogue was followed by more developed reading questions, with task order limiting causal interpretation",
+    "authors": [
+      "Xiaoyu Zhao",
+      "Guili Kong",
+      "Hui Zhou",
+      "Liting Liao",
+      "Xiuhan Li"
+    ],
+    "venue": "Smart Learning Environments",
+    "year": 2026,
+    "type": "journal",
+    "slug": "guided-ai-dialogue-reading-question-quality",
+    "tags": [
+      "digital reading",
+      "question generation",
+      "dialogue learning",
+      "learner agency",
+      "AI scaffolding"
+    ],
+    "shortSummary": "A within-student study of 112 undergraduates compared questions written after ordinary digital reading with questions written after a second reading supported by ERNIE Bot dialogue. The AI-supported phase produced more questions and higher rated question quality. Dialogue patterns also differed by performance. Because all students encountered the ordinary reading first and a different AI-supported text second, the evidence cannot separate assistance from order, practice and text effects or establish independent transfer.",
+    "fullSummary": "An educational assistant can be designed to help a reader ask a better question instead of simply supplying an answer. Xiaoyu Zhao and colleagues studied this possibility through a guided dialogue mode built around ERNIE Bot. After reading, students proposed questions for classmates, and researchers examined how numerous, clear and cognitively demanding those questions were. This places a learner-generated artifact at the center of evaluation, while raising an important design question: does improved questioning during support carry over when the support is absent?\n\nThe instructional quasi-experiment involved 112 sophomore students at a university in central China. Each student first read one article in a general digital-reading mode and posted questions. After a break, the student read a second article and engaged in AI-supported dialogue before completing the same kind of question-generation task. Experts selected texts considered comparable in length, relevance and conceptual demand. Nevertheless, the ordinary reading always preceded the AI-supported reading, so mode, text and order were not independently varied.\n\nThe agent was designed to encourage inquiry through examples, follow-up prompts, counter-questions and evaluative feedback, rather than simply return direct answers. Learners retained some control over how they responded or redirected the conversation. Researchers collected 1,234 student-generated questions and 579 dialogue segments, then coded the questions for cognitive level and features such as clarity, relevance and logical structure. They also used sequence analysis to examine how learners combined dialogue strategies. These measures describe questioning performance and observed interaction, not the full internal process of comprehension.\n\nStudents produced an average of 5.90 questions after the AI-supported phase, compared with 5.13 after general reading. Rated overall question quality was also higher, with reported means of 5.86 and 5.18 on the study's eight-point scale. Higher-performing questioners showed different patterns of reflection, evaluation and adjustment in their dialogue. The findings suggest that a scaffolded conversation can be a useful setting for practicing inquiry. However, associations between dialogue patterns and question quality do not establish that a particular strategy independently caused the difference.\n\nThe design warrants a restrained conclusion. Repeating the task may help students understand what is expected, and the second text may elicit different questions even if experts regard the texts as comparable. There was no counterbalanced sequence to separate these influences. The short activity also did not test autonomous transfer, stable metacognitive regulation or later questioning without AI. Coding reliability supports consistency of the ratings, but cannot resolve those design limitations. The result is evidence of stronger observed performance in the supported phase, not proof of a durable increase in a general questioning ability.\n\nFor AIEDHK, a useful next study would reverse the order for some learners and include a third, unfamiliar text read without assistance. Teaching could ask students to identify what a question assumes, explain why it matters and connect it to a specific passage. Teachers could assess the quality of those justifications rather than reward the number of questions alone. These are proposed extensions beyond the paper. The practical opportunity is to make inquiry visible and teachable, while checking whether the learner can continue to formulate worthwhile questions after the conversational support has been removed.",
+    "keyTakeaways": [
+      "All 112 students completed general reading first and AI-supported reading of a different text second.",
+      "The supported phase yielded more questions and higher rated quality, but mode was confounded with order and text.",
+      "Dialogue sequences are process associations; the study did not test delayed autonomous questioning or stable metacognitive gains."
+    ],
+    "whyItMatters": "AIEDHK can ask learners to generate and justify questions as a visible inquiry outcome. Counterbalanced tasks and later unaided reading would help distinguish an immediate scaffold benefit from a transferable capability.",
+    "sourceUrl": "https://doi.org/10.1186/s40561-026-00455-z",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://link.springer.com/article/10.1186/s40561-026-00455-z"
+      },
+      {
+        "label": "Author research data",
+        "url": "https://doi.org/10.6084/m9.figshare.28938359"
+      }
+    ],
+    "image": "/images/research/covers/aied-178-backfill.png",
+    "imageAlt": "Two university students and a teacher compare an annotated article with three question cards during a reading seminar.",
+    "summaryImage": "/images/research/summary/aied-178-backfill-summary.png",
+    "summaryImageAlt": "Two university students and a teacher compare an annotated article with three question cards during a reading seminar.",
+    "summaryAudio": "/audio/research/aied-178-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-179",
+    "slug": "news-claude-marketplace-institutional-tool-fit",
+    "title": "Product news: Claude Marketplace gathers extensions and services, making educational tool selection a task-fit decision",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude Marketplace",
+      "educational tools",
+      "institutional selection",
+      "AI ecosystems",
+      "workflow fit"
+    ],
+    "shortSummary": "Anthropic launched Claude Marketplace on September 23, bringing connectors, plugins, agents, products, and service partners into a common discovery destination. This September 26 report focuses on what an educational institution should compare when exploring that catalogue. OpenAI's role-based learning paths and Gemini's education partnerships provide context. A listing can make a tool easier to find, but its value depends on the task, required access, support, and evidence of useful performance.",
+    "fullSummary": "Anthropic launched Claude Marketplace on September 23, 2026, bringing several kinds of partner offering into a common discovery destination. The catalogue includes plugins and connectors, Claude-powered products and agents, and service partners. This September 26 report examines the implications for educational organisations. The marketplace changes how options are found; it does not turn every listing into the same kind of product or establish its suitability for a school or research team.\n\nThose categories matter because they solve different problems. A connector provides access to a source or action. A reusable workflow packages a way of doing a task. A separate product may have its own interface and operating model, while a service partner helps an organisation implement something. Comparing them only by a short description can hide the work an institution must still do. The first question should be what problem needs solving.\n\nA department might want help organising approved course materials. Before exploring tools, it could define the users, the material that may be read, the output required, and the decisions that remain with staff. That brief makes it possible to distinguish a helpful extension from one that offers impressive but unnecessary capabilities. It also gives reviewers a basis for deciding whether an existing institutional tool already meets the need.\n\nA small trial should use a task that staff can check directly. For example, a candidate tool might produce a source-linked overview from several public documents. Reviewers could inspect missing items, incorrect attributions, and the handling of contradictory information. They should also examine what happens when access is removed or a document changes. A successful demonstration on a hand-picked example is only a starting point for understanding operational fit.\n\nOpenAI's new Academy pathways separate learning needs for developers, leaders, educators, and students. Google's Missouri partnership connects Gemini access with training and local institutional choice. These developments provide a useful comparison with Anthropic's marketplace: discovering a tool is one part of adoption, while people still need the knowledge and support to use it appropriately. A catalogue cannot decide those responsibilities for them.\n\nInstitutions should keep the comparison understandable to the people who will use the result. Staff need to know which accounts or files a tool relies on, who maintains it, and how they can get help. They should be able to stop using a poor fit without losing the core materials for their work. A narrowly useful tool with clear support can be a better choice than a broad one whose behaviour is difficult to explain.\n\nThe marketplace's practical benefit is easier discovery across an expanding ecosystem. For an educational team, a defensible selection record would connect the chosen offering to a defined task, a checked trial, and a plan for support and review. That record can be revisited when the product changes or the institution's needs develop. The aim is to expand useful capability while keeping the reasons for each choice visible to colleagues.",
+    "keyTakeaways": [
+      "The September 23 marketplace groups different offerings; a connector, product, and service partner are not interchangeable.",
+      "Define the educational task and evidence requirements before comparing listings.",
+      "Use a checked trial and clear support expectations to justify adoption beyond a demonstration."
+    ],
+    "whyItMatters": "A larger AI ecosystem is useful to institutions when it leads to better-matched tools and understandable choices, rather than simply more installations.",
+    "sourceUrl": "https://claude.com/resources/articles/claude-marketplace",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Claude Marketplace launch — 2026-09-23",
+        "url": "https://claude.com/resources/articles/claude-marketplace"
+      },
+      {
+        "label": "OpenAI: New Academy learning paths — 2026-09-21",
+        "url": "https://openai.com/index/expanding-openai-academy-with-new-learning-paths/"
+      },
+      {
+        "label": "Google: Missouri AI and career-training partnership — 2026-09-08",
+        "url": "https://blog.google/products-and-platforms/products/education/missouri-state-education-partnership/"
+      }
+    ],
+    "createdAt": "2026-09-26",
+    "image": "/images/research/covers/aied-179-backfill.png",
+    "imageAlt": "A coordinator, instructor and student representative compare three tool-purpose cards with a course example and an access checklist.",
+    "summaryImage": "/images/research/summary/aied-179-backfill-summary.png",
+    "summaryImageAlt": "A coordinator, instructor and student representative compare three tool-purpose cards with a course example and an access checklist.",
+    "summaryAudio": "/audio/research/aied-179-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-180",
+    "createdAt": "2026-09-27",
+    "title": "A primary mathematics AI pilot reported before-and-after gains, with comparative effectiveness still unclear",
+    "authors": [
+      "Jingxi Liu",
+      "Daner Sun",
+      "Jin Sun",
+      "Jingyun Wang",
+      "Philip Leung Ho Yu"
+    ],
+    "venue": "Computers and Education: Artificial Intelligence",
+    "year": 2025,
+    "type": "journal",
+    "slug": "primary-mathematics-ai-word-problem-pilot-evidence",
+    "tags": [
+      "primary mathematics",
+      "word problems",
+      "AI scaffolding",
+      "learning-system design",
+      "evaluation quality"
+    ],
+    "shortSummary": "A ChatGPT-supported word-problem system was studied in two fifth-grade classes totaling 104 pupils. The detailed performance analysis reported gains among 49 AI-group pupils after three post-task outliers were removed. Although the abstract describes a comparative advantage, the main results present a within-group paired analysis rather than a clear between-group effect. The paper offers a learning-system design and preliminary task evidence, while leaving stronger claims about comparative and lasting effectiveness unresolved.",
+    "fullSummary": "Primary-school word problems require students to connect language with a mathematical representation, choose a strategy and check whether an answer makes sense. Jingxi Liu and colleagues designed ChatGPT-MPS to support that process through structured guidance and opportunities to compare solutions. Their paper describes both system development and a classroom pilot. Reading the detailed analysis, however, is essential: the evidence it reports is narrower than the comparative effectiveness claim made in the abstract, and that distinction should shape any practical interpretation.\n\nThe study involved 104 fifth-grade pupils from two existing classes in Guangdong, China. One class of 52 used the system and another class of 52 served as a comparison. Assignment followed class membership rather than individual randomization. The AI group received a ten-minute introduction and worked for 40 minutes on twelve curriculum-aligned word problems with step-by-step support. The comparison class worked on the same problem set under the same time constraint without the system. The design therefore began with a potentially informative classroom comparison.\n\nThe main performance results nevertheless focus on the AI class alone. After removing three post-task outliers, the paired analysis included 49 pupils. Their mean score rose from 56.45 to 72.59, a gain of 16.14 points. This is a reported before-and-after change within the participating class. The main results do not present a clear between-group estimate supporting the abstract's statement that the experimental group improved more than the comparison group. A significant paired test cannot substitute for that comparison, because practice, instruction and other changes could also contribute to improvement.\n\nThe system itself offers useful design ideas. It organizes guidance for primary-level problems, preserves learning records and allows learners to access more than one solution method. Students also completed an interest questionnaire, whose results linked perceived value, knowledge and engagement with interest in the system. These are perceptions measured together, rather than independent evidence that the tool caused motivation or conceptual growth. Comparing approaches could support reasoning, but only if learners understand and can explain why a method fits the problem rather than merely read a generated procedure.\n\nThe study's short activity, single school and intact-class allocation restrict generalization. The removal of three observations also makes the reported analytic sample important. The paper does not establish delayed retention or performance on an unfamiliar problem without assistance, and the detailed results do not resolve comparative effectiveness. System responsiveness and positive interest ratings are relevant to feasibility, but cannot validate every generated explanation or demonstrate durable mathematical understanding. The appropriate conclusion is preliminary evidence of an immediate task-score change within a designed learning environment.\n\nFor AIEDHK, a follow-up evaluation could retain the system's structured guidance while reporting both classes' baseline and follow-up results transparently. A prespecified analysis should account for class allocation and document missing data or outlier decisions. Learners could also explain a solution, identify an incorrect step and solve a new problem without AI after a delay. These are proposed improvements beyond the reported pilot. The practical contribution is a reviewable design for supporting word-problem work, with a clear need for stronger evidence before claiming that the system outperforms conventional teaching or builds independent problem-solving skill.",
+    "keyTakeaways": [
+      "The pilot involved 104 pupils in two intact classes, but the detailed paired performance analysis concerned 49 AI-group pupils.",
+      "The reported mean gain was 16.14 points after three post-task outliers were removed; this is a within-group change.",
+      "A clear comparative effect and delayed independent transfer were not established in the main results, despite the stronger abstract wording."
+    ],
+    "whyItMatters": "AIEDHK can preserve useful learning-system ideas while checking whether the reported analysis supports the headline. Before-and-after gains, positive perceptions and a described comparison group are not substitutes for a transparent between-group evaluation.",
+    "sourceUrl": "https://doi.org/10.1016/j.caeai.2025.100438",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.sciencedirect.com/science/article/pii/S2666920X25000785"
+      },
+      {
+        "label": "Open institutional copy of the publisher full article",
+        "url": "https://rims.khazar.org/bitstreams/4c7cc63b-e0eb-42d1-b657-13ec7524594a/download"
+      }
+    ],
+    "image": "/images/research/covers/aied-180-backfill.png",
+    "imageAlt": "A teacher and two pupils discuss part-whole bar models for a shopping word problem while one pupil records the reasoning.",
+    "summaryImage": "/images/research/summary/aied-180-backfill-summary.png",
+    "summaryImageAlt": "A teacher and two pupils discuss part-whole bar models for a shopping word problem while one pupil records the reasoning.",
+    "summaryAudio": "/audio/research/aied-180-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-181",
+    "slug": "news-lowes-ai-guidance-workplace-learning",
+    "title": "Industry news: Lowe's AI assistants illustrate the difference between immediate guidance and lasting workplace learning",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "workplace learning",
+      "Mylow",
+      "vocational education",
+      "expertise",
+      "AI assistance"
+    ],
+    "shortSummary": "OpenAI's September 25 Lowe's case describes AI assistants that help customers and store associates work through project questions. This September 27 report considers the implications for vocational learning. The account shows a route to guidance during work, not a measured increase in employees' independent expertise. Anthropic's small-business workflows and Gemini's practical learning tools provide comparisons for designing support that helps people understand a decision rather than only obtain an answer.",
+    "fullSummary": "OpenAI published a Lowe's case on September 25, 2026 describing Mylow and Mylow Companion, assistants for customers and store associates. The company account emphasises conversational project guidance, including voice access for staff while they help customers. This September 27 report examines the workplace-learning question raised by that design. The case describes use and business experience; it does not establish that employees developed lasting expertise because an assistant answered their questions.\n\nReceiving help during a task and learning from that help are related but different outcomes. A worker may complete an unfamiliar activity successfully while still being unable to explain the decision later. Another may use the answer to connect a new case with existing experience. A training programme should decide which of these outcomes it expects and what evidence would show that the expectation was met.\n\nVocational educators can explore the distinction with a simulated customer conversation. A learner first clarifies what the customer is trying to achieve, then consults a supplied knowledge resource or an assistant. The learner must explain which information is relevant and what remains unknown. An instructor can change one detail and ask how the recommendation should change. This tests whether the learner is interpreting the situation rather than repeating the first plausible response.\n\nThe case also draws attention to experienced workers. Expertise does not mean knowing every product or procedure, and an assistant may be useful when someone moves beyond their usual area. Training can therefore focus on recognising the limits of one's knowledge and identifying when another person is needed. A confident answer should not remove the option to ask a colleague with relevant experience.\n\nAnthropic's September small-business expansion packages recurring work into reusable workflows, while Gemini's established learning tools offer guided support and practice. Compared with OpenAI's retail case, these examples show different ways of making information available at the moment of need. The educational design question remains whether the person can understand, question, and adapt the guidance. Convenience alone cannot answer it.\n\nA workplace pilot could examine several forms of evidence. It might record whether a question was resolved correctly, whether the employee could explain the reason, and whether they handled a related case later with less help. Customer experience and business measures can be considered separately. The comparison should use tasks of similar difficulty. This would avoid interpreting a commercial result as proof of learning, while still recognising that timely guidance can be useful for the work itself.\n\nThe practical lesson for colleges and employers is to build a small reflective step into assisted work. A learner might note what they asked, which part of the answer they checked, and what they would do differently next time. The record can be brief and focused on the decision. Lowe's provides a current example of AI guidance embedded in everyday service; educators can use it to ask how immediate support becomes an opportunity to develop judgment over time.",
+    "keyTakeaways": [
+      "The September 25 case describes workplace guidance, not a causal test of employee learning.",
+      "Use changed scenarios to check whether a learner understands the reason behind an assisted answer.",
+      "Evaluate immediate task success and later independent judgment as separate outcomes."
+    ],
+    "whyItMatters": "AI at work can support vocational learning when guidance is followed by explanation, adaptation, and reflection on the decision made.",
+    "sourceUrl": "https://openai.com/index/lowes/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: Lowe's project-guidance assistants — 2026-09-25",
+        "url": "https://openai.com/index/lowes/"
+      },
+      {
+        "label": "Anthropic: Small-business workflows and training expansion — 2026-09-15",
+        "url": "https://claude.com/resources/articles/claude-for-small-business-launches-new-workflows-integrations-and-training-programs"
+      },
+      {
+        "label": "Google: Advancing AI tools for learning — 2025-08-06",
+        "url": "https://blog.google/intl/en-au/products/explore-get-answers/advancing-our-ai-tools-for-learning/"
+      }
+    ],
+    "createdAt": "2026-09-27",
+    "image": "/images/research/covers/aied-181-backfill.png",
+    "imageAlt": "A trainer and two adult learners compare a fictional room project, paint swatches and sample boards with a tablet checklist.",
+    "summaryImage": "/images/research/summary/aied-181-backfill-summary.png",
+    "summaryImageAlt": "A trainer and two adult learners compare a fictional room project, paint swatches and sample boards with a tablet checklist.",
+    "summaryAudio": "/audio/research/aied-181-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-182",
+    "createdAt": "2026-09-28",
+    "title": "Students preferred AI design feedback in a small study, while improvements in design quality were not established",
+    "authors": [
+      "Tanja Katharina Schmitt-Fumian",
+      "Selina Tauscher",
+      "Katja Thoring"
+    ],
+    "venue": "Proceedings of the Design Society (ICED25)",
+    "year": 2025,
+    "type": "conference",
+    "slug": "ai-human-design-feedback-student-perceptions",
+    "tags": [
+      "design education",
+      "formative feedback",
+      "human-AI collaboration",
+      "ideation",
+      "student perceptions"
+    ],
+    "shortSummary": "An ICED 25 study asked 25 students to compare GPT-4 feedback with comments from human educators on a design-ideation task. Students generally rated the AI comments more positively for support, clarity and organization. Feedback order was randomized, and interviews explored the reasons for preferences. The study measured reception of textual comments, not independently rated improvements in designs or later creative ability, and substantial prompt-development work preceded the comparison.",
+    "fullSummary": "Feedback can feel encouraging and well organized without necessarily improving the idea it addresses. Tanja Katharina Schmitt-Fumian, Selina Tauscher and Katja Thoring examined how design students received comments generated by GPT-4 compared with comments written by educators. Presented at ICED 25, the study offers a focused look at feedback reception during ideation. Its strongest contribution is understanding what students valued in the comments, while the effect of those comments on subsequent design quality remains a different question.\n\nTwenty-five students developed an idea for a startup intended to reduce academic stress. The task began with rapid idea generation and a short refinement period. Six human educators and GPT-4 then provided textual feedback using a common structure addressing strengths, areas for improvement and further development. Each student received both sources of feedback. Presentation order was randomized, with thirteen seeing human feedback first and twelve seeing AI feedback first. Students completed a survey and a recorded interview about their experience of the comments.\n\nThe AI setup was not an untouched default chatbot. Before the main comparison, the researchers iteratively refined its prompts to produce appropriate feedback and make the source less obvious to readers. The intended comment length was 150 words, and the feedback was structured around the same core categories for humans and AI. This preparation is part of the intervention. Any claim about speed or scalability should therefore distinguish rapid generation of an individual response from the earlier work needed to define, calibrate and review a suitable feedback approach.\n\nStudents generally gave more favorable ratings to AI comments across the measured dimensions, including supportiveness, inspiration, coherence and organization. Interviews helped explain the appeal of a consistently positive tone and explicit structure. These results suggest features that educators might also adopt in their own feedback. They do not demonstrate that agreement, encouragement or perceived correctness reliably identifies a better critique. A challenging comment may be less comfortable yet reveal a genuine weakness, and an agreeable AI response may be easy to accept without improving the underlying design.\n\nThe study was small and conducted outside a normal graded project. Educators and students did not know one another, and the analysis focused on textual feedback and student perceptions. It did not establish changes in independently rated design quality, transfer to a later ideation task or a sustained increase in creative capability. The authors also question how well AI can challenge assumptions rather than soften its response. Those limits make this exploratory evidence about feedback reception, not a basis for replacing the contextual judgment of a design teacher.\n\nFor AIEDHK, a useful next step would pair perception measures with revision evidence. Students could identify which comment prompted a change, explain the reason for accepting or rejecting it, and submit the revised idea for independent assessment. A teacher could examine whether the feedback exposed a weak assumption or merely improved presentation. These are proposed extensions beyond the study. The practical opportunity is to combine clear, constructive feedback with substantive critique, and to evaluate whether that combination helps learners make stronger design decisions rather than only feel more supported.",
+    "keyTakeaways": [
+      "Twenty-five students compared AI and human comments on the same ideation task, with feedback order randomized.",
+      "AI comments received more favorable student ratings for qualities such as support and organization.",
+      "The study did not establish better designs or lasting creativity, and prompt optimization was part of the preparation."
+    ],
+    "whyItMatters": "AIEDHK can learn from the clarity and structure students value in feedback while testing actual revisions separately. Positive reception should complement, rather than stand in for, evidence that a critique improves the learner’s decisions.",
+    "sourceUrl": "https://doi.org/10.1017/pds.2025.10057",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.cambridge.org/core/journals/proceedings-of-the-design-society/article/ai-vs-human-exploring-the-potential-of-generative-ai-as-a-feedback-tool-to-support-ideation-in-design-education/B7B047299B4E271B91BC639843BEDE3F"
+      },
+      {
+        "label": "Open conference full PDF",
+        "url": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/B7B047299B4E271B91BC639843BEDE3F/S2732527X25100576a.pdf/ai-vs-human-exploring-the-potential-of-generative-ai-as-a-feedback-tool-to-support-ideation-in-design-education.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-182-backfill.png",
+    "imageAlt": "A lecturer and two design students compare a service storyboard with annotated feedback sheets while a student records revision ideas.",
+    "summaryImage": "/images/research/summary/aied-182-backfill-summary.png",
+    "summaryImageAlt": "A lecturer and two design students compare a service storyboard with annotated feedback sheets while a student records revision ideas.",
+    "summaryAudio": "/audio/research/aied-182-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-183",
+    "slug": "news-claude-sonnet-5-5-everyday-educational-work",
+    "title": "Product news: Claude Sonnet 5.5 targets faster everyday work, with task boundaries still central to educational use",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude Sonnet 5.5",
+      "model selection",
+      "teacher preparation",
+      "research workflows",
+      "AI evaluation"
+    ],
+    "shortSummary": "Anthropic released Claude Sonnet 5.5 on September 28, positioning it as a faster, lower-cost complement to Opus 5.5 for well-defined work. The company reports improvements in coding, documents, and communication, with efficiency gains dependent on the task. OpenAI's recently released GPT-6 Sol and Luna and Gemini's course-connected support provide context. Educational teams should evaluate the work they actually need, including the review required before a draft becomes usable.",
+    "fullSummary": "Anthropic introduced Claude Sonnet 5.5 on September 28, 2026, the second model in its 5.5 family. The company positions it as a faster, lower-cost complement to Opus 5.5 for well-scoped tasks, coding fixes, and document work. It reports output generation more than 30% faster than Sonnet 5 and up to 30% lower cost for most work. Those are vendor-reported comparisons, not guaranteed savings for every course or research workflow.\n\nThe emphasis on well-defined work is useful for educators. A teacher asking for several examples of a concept can specify the intended audience, source material, and errors the examples should help students recognise. A broad request to improve an entire course leaves more decisions implicit. The model's speed matters less if the teacher has to reconstruct what it assumed about the curriculum after reading the output.\n\nA preparation task could therefore begin with a small, checked source and a clear purpose. For instance, a lecturer might ask for alternative explanations of a statistical idea while requiring the same definition and assumptions in every version. Colleagues would check whether the differences are in presentation or in substance. A shorter or more fluent explanation can still be misleading if it removes the condition under which the statement is true.\n\nThe same distinction applies to research documents. An assistant may reorganise a report, improve headings, or make a table easier to read without being authorised to change the interpretation. Reviewers need to know whether a revision altered the evidence, the wording, or both. A useful comparison preserves the original and records consequential changes, so clarity does not come at the cost of an unnoticed shift in meaning.\n\nOpenAI's GPT-6 Sol and Luna, released on September 22, also broaden the range of lower-cost models for professional and technical work. Gemini's course-connected learning support offers a different reference point: a tool can be designed around a learner's material and task. Anthropic's Sonnet release adds another option, but the right comparison depends on what the user needs to produce or understand, rather than a single overall ranking.\n\nA department can test a few representative tasks before changing its default model. Reviewers might examine factual omissions, adherence to source material, usefulness of explanations, and time spent correcting drafts. The settings and inputs should be recorded, and examples that failed should remain in the comparison. Faster generation may be valuable when it reduces total preparation effort, but speed should be measured separately from the quality of the final material.\n\nFor students, an efficient assistant should create more room for useful practice rather than quietly take over the central reasoning. A teacher can ask learners to compare two explanations, identify a missing qualification, or revise a draft using evidence. Sonnet 5.5's announcement makes everyday assistance more capable according to Anthropic's tests. The educational opportunity is to pair that capability with precise tasks and a clear account of what a person must still inspect, decide, and learn.",
+    "keyTakeaways": [
+      "Sonnet 5.5 launched September 28 with vendor-reported speed and workload-efficiency gains.",
+      "Define the educational task and preserve source assumptions before comparing model outputs.",
+      "Measure correction effort and final material quality separately from generation speed."
+    ],
+    "whyItMatters": "A faster everyday model is most useful when it helps teachers and researchers complete clearly specified work without obscuring the decisions that require review.",
+    "sourceUrl": "https://www.anthropic.com/claude-sonnet-5-5",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Introducing Claude Sonnet 5.5 — 2026-09-28",
+        "url": "https://www.anthropic.com/claude-sonnet-5-5"
+      },
+      {
+        "label": "OpenAI: Introducing GPT-6 Sol and Luna — 2026-09-22",
+        "url": "https://openai.com/index/introducing-gpt-6-sol-and-luna/"
+      },
+      {
+        "label": "Google Workspace: Gemini in Classroom expansion — 2026-08-04",
+        "url": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html"
+      }
+    ],
+    "createdAt": "2026-09-28",
+    "image": "/images/research/covers/aied-183-backfill.png",
+    "imageAlt": "A lecturer, research assistant and postgraduate compare two concept explanations and a table of points to check while recording revision notes.",
+    "summaryImage": "/images/research/summary/aied-183-backfill-summary.png",
+    "summaryImageAlt": "A lecturer, research assistant and postgraduate compare two concept explanations and a table of points to check while recording revision notes.",
+    "summaryAudio": "/audio/research/aied-183-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
     "id": "aied-184",
     "slug": "adaptive-ai-feedback-teacher-diagnostic-reasoning-justification-accuracy",
     "createdAt": "2026-09-29",
@@ -3054,6 +3443,200 @@ export const researchNewsBackfill20260824To1013: ResearchPaper[] = [
     "summaryImage": "/images/research/summary/aied-185-devday-research-agents-summary.png",
     "summaryImageAlt": "A professor and two researchers discuss a human review checkpoint in a research workflow drawn on a whiteboard beside a monitor in a bright seminar room",
     "summaryAudio": "/audio/research/aied-185-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-186",
+    "createdAt": "2026-09-30",
+    "title": "A four-family AI-supported coaching study showed promising shared-reading changes under continuous expert review",
+    "authors": [
+      "Yusuf Akemoğlu",
+      "Zhaohui Li",
+      "Qingxiao Zheng",
+      "Emily Brooke Roberts",
+      "Samar Pratap Singh",
+      "Jinjun Xiong"
+    ],
+    "venue": "Journal of Autism and Developmental Disorders",
+    "year": 2026,
+    "type": "journal",
+    "slug": "paicoach-shared-reading-human-reviewed-parent-support",
+    "tags": [
+      "inclusive education",
+      "shared reading",
+      "parent coaching",
+      "human-in-the-loop AI",
+      "single-case research"
+    ],
+    "shortSummary": "PaiCoach was evaluated with four mothers and their young autistic children using staggered baseline, coaching and maintenance phases. Parent implementation of communication-support strategies and children's responsiveness increased during the coaching package. However, the package included live training and expert review of every AI output;31.4 percent required editing. The findings support further study of supervised assistance, not autonomous intervention or general effectiveness across autistic children and families.",
+    "fullSummary": "AI may help organize feedback about a parent-child learning interaction, but interpreting that interaction requires care. Yusuf Akemoğlu and colleagues evaluated PaiCoach as a support for parents during shared book reading with young autistic children. The system analyzed short videos and drafted feedback connected to specific moments. Trained reviewers checked the outputs before families could access them. The study therefore concerns an AI-assisted professional workflow, with human interpretation built into the intervention rather than added only when something appeared to go wrong.\n\nFour mother-child pairs participated. The children were 45 to 56 months old and used limited expressive language, while continuing their existing support services. A concurrent multiple-baseline design staggered the introduction of the intervention across families. Each pair completed several baseline sessions, six or seven intervention sessions and one or two maintenance observations, over approximately ten to twelve weeks. During baseline, parents recorded ordinary shared reading. The intervention began with an hour of live online training and continued with video-based coaching through PaiCoach.\n\nThe researchers measured how consistently parents implemented the targeted communication-support strategies and how children responded during the observed reading routines. Visual analysis showed increases after the coaching package was introduced, with corresponding improvements in child responsiveness. Maintenance observations occurred about three weeks later with feedback disabled, and offered preliminary evidence that some changes remained. Staggering intervention onset strengthens an individual-level analysis compared with a single before-and-after observation, but four families still provide a narrow basis for generalization.\n\nThe human-review results are central to interpreting the technology. Across 53 reviewed sessions and 879 coded instances, 31.4 percent of AI-generated outputs required editing. Reviewers corrected problems involving timing, strategy identification, fidelity scoring and feedback. Child communication was especially difficult to classify when gestures were obscured or speech overlapped. These are consequential details in a setting where a mistaken interpretation could change the advice a family receives. The published outcomes were based on the reviewed system, not on uncorrected AI output delivered automatically to parents.\n\nThe study cannot separate the effects of initial live training, continued expert-validated feedback, the platform and the AI analysis itself. It also does not establish superiority to conventional coaching, benefits across other routines or sustained changes beyond the brief maintenance period. All participating parents were mothers, and the children and contexts represented only a small part of the diversity of autistic communication. Reported workflow efficiencies came from implementation experience rather than a randomized comparison of staff time. The appropriate conclusion is promising preliminary evidence for a supervised coaching package with substantial ongoing review requirements.\n\nFor AIEDHK, the broader research lesson is to report the whole human-AI workflow and make its review burden visible. Future evaluations could compare coaching approaches, include more families and communication styles, and test whether observed changes extend to meaningful everyday participation. They should also examine which AI errors persist and how corrections affect feedback. These are proposed research directions beyond the study, not guidance to replace a family's existing support. The opportunity lies in assisting professional observation and family learning while preserving human judgment about each interaction and keeping claims proportional to the evidence.",
+    "keyTakeaways": [
+      "Four mother-child pairs were studied with staggered intervention onset and brief maintenance observations during shared reading.",
+      "Observed improvements followed a package including live training and expert-reviewed AI coaching; the AI component was not isolated.",
+      "All outputs were checked, and 31.4 percent required editing; the results do not demonstrate autonomous or broadly generalizable intervention effectiveness."
+    ],
+    "whyItMatters": "AIEDHK can assess AI-supported inclusive education by documenting both learner interaction and the expert work required to interpret it. Small supervised studies are useful early evidence, but they do not justify claims of autonomous capability or universal benefit.",
+    "sourceUrl": "https://doi.org/10.1007/s10803-026-07519-6",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://link.springer.com/article/10.1007/s10803-026-07519-6"
+      },
+      {
+        "label": "Publisher full PDF",
+        "url": "https://link.springer.com/content/pdf/10.1007/s10803-026-07519-6.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-186-backfill.png",
+    "imageAlt": "A mother and preschool child share an illustrated storybook while an early-years educator quietly reviews observation notes nearby.",
+    "summaryImage": "/images/research/summary/aied-186-backfill-summary.png",
+    "summaryImageAlt": "A mother and preschool child share an illustrated storybook while an early-years educator quietly reviews observation notes nearby.",
+    "summaryAudio": "/audio/research/aied-186-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-187",
+    "slug": "news-classic-reading-plans-chatgpt-reader-choice",
+    "title": "Product news: A ChatGPT Work reading-plan case puts personal interests alongside the effort of reading classics",
+    "authors": [
+      "OpenAI Academy"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "reading guidance",
+      "literature education",
+      "ChatGPT Work",
+      "reader agency",
+      "personalization"
+    ],
+    "shortSummary": "OpenAI Academy's September 29 profile describes Karen Rodriguez using ChatGPT Work to turn reader surveys into personalised plans for exploring classic literature. This September 30 report considers the educational design behind that use. Anthropic's learning guidance and Gemini's study tools offer comparisons, but a tailored plan is not evidence that reading comprehension has improved. The reader still needs room to choose, question an interpretation, and engage directly with the book.",
+    "fullSummary": "OpenAI Academy published a profile of Karen Rodriguez on September 29, 2026, describing her use of ChatGPT Work to create personalised reading plans for Literary Fancy subscribers. The plans draw on readers' interests, prior reading, and available time, and explain why a recommendation may fit. This September 30 report examines that guidance model. It is a practitioner story, not a controlled study of reading engagement, comprehension, or long-term reading habits.\n\nA reading plan can solve a real starting problem. Someone interested in classic literature may not know which book to try first or how to approach an unfamiliar style. A manageable suggestion with a clear reason can make the next step less intimidating. But personalisation should remain open to disagreement. A reader may want to depart from past preferences, try a difficult work, or reject the assistant's account of what they would enjoy.\n\nFor a literature class, the useful question is how guidance leads back to the text. An assistant might suggest a theme to notice, but students should be able to point to the passage that supports or complicates that suggestion. If they begin with a ready-made interpretation, they can actively test it rather than search only for confirming examples. The book remains the source of evidence, while the guide is a provisional aid.\n\nA proposed activity could ask students to compare two possible reading routes through a set of public-domain texts. They would explain which sequence they prefer and what they expect to gain from it. After reading one selection, they would revisit that expectation and revise the plan. This makes the plan responsive to experience rather than a prescription that must be completed to count as success.\n\nAnthropic's Claude Academy approach emphasises agency and deliberate choices about assistance. Gemini's established study tools support guided exploration and practice. OpenAI's profile adds a concrete example of AI used to prepare a reading pathway. The products and contexts differ, but they invite the same educational distinction: organising access to material is not the same as doing the interpretive work that gives reading its value.\n\nTeachers and librarians can also examine whose interests a recommendation system makes visible. A short survey may miss a reader's language preferences, access needs, or wish to encounter an unfamiliar perspective. Asking a follow-up question can be more useful than producing a longer list. The person using the plan should understand the basis of the recommendations and have a simple way to change them.\n\nA meaningful evaluation would look beyond the elegance of the generated guide. Readers might discuss a passage, explain a changed interpretation, or describe why they abandoned one book and chose another. Completion is one possible signal, but thoughtful selection and sustained attention matter too. The case offers a practical way to connect AI assistance with a human reading community. Its strongest educational use would help people begin and continue reading while preserving their authority to make meaning for themselves.",
+    "keyTakeaways": [
+      "The September 29 profile describes a personalised reading-plan practice, not demonstrated comprehension effects.",
+      "Treat AI guidance as provisional and return to passages that support or challenge it.",
+      "Let readers revise recommendations as their interests and experience develop."
+    ],
+    "whyItMatters": "Personalised guidance can support reading when it helps people enter the text and make their own interpretive choices, rather than replacing those choices.",
+    "sourceUrl": "https://academy.openai.com/public/blogs/making-the-classics-more-approachable-with-chatgpt-work-2026-09-29",
+    "sourceUrls": [
+      {
+        "label": "OpenAI Academy: Making classics more approachable — 2026-09-29",
+        "url": "https://academy.openai.com/public/blogs/making-the-classics-more-approachable-with-chatgpt-work-2026-09-29"
+      },
+      {
+        "label": "Anthropic: Approach to teaching and learning AI — 2026-08-20",
+        "url": "https://claude.com/resources/articles/anthropics-approach-to-teaching-and-learning-ai"
+      },
+      {
+        "label": "Google: Advancing AI tools for learning — 2025-08-06",
+        "url": "https://blog.google/intl/en-au/products/explore-get-answers/advancing-our-ai-tools-for-learning/"
+      }
+    ],
+    "createdAt": "2026-09-30",
+    "image": "/images/research/covers/aied-187-backfill.png",
+    "imageAlt": "An intergenerational reading circle discusses an annotated reading plan and passages in open books in a library alcove.",
+    "summaryImage": "/images/research/summary/aied-187-backfill-summary.png",
+    "summaryImageAlt": "An intergenerational reading circle discusses an annotated reading plan and passages in open books in a library alcove.",
+    "summaryAudio": "/audio/research/aied-187-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-188",
+    "createdAt": "2026-10-01",
+    "title": "Postgraduate readers used AI critiques in different ways, with original-source checking remaining essential",
+    "authors": [
+      "Haoming Lin",
+      "Wei Wei",
+      "Bin Zou",
+      "Ying Zheng"
+    ],
+    "venue": "Discover Computing",
+    "year": 2026,
+    "type": "journal",
+    "slug": "genai-critical-reading-source-checking-process-patterns",
+    "tags": [
+      "academic reading",
+      "critical AI literacy",
+      "metacognition",
+      "postgraduate education",
+      "source evaluation"
+    ],
+    "shortSummary": "An observational study followed 53 postgraduate readers as they revised critiques of academic articles using generated reviews, a chatbot and the original paper. Screen recordings and interviews revealed different patterns of reliance, re-reading and dialogue that varied with the perceived difficulty of the task. The study explains how AI-supported reading can unfold, but without a non-AI comparison or independent transfer assessment it does not establish that the tool improved critical-reading ability.",
+    "fullSummary": "An AI critique can introduce a useful perspective on a research paper, but it can also become a substitute for checking what the paper actually says. Haoming Lin and colleagues investigated this tension by observing postgraduate students during AI-assisted academic reading. Their focus was the process: which resources students consulted, how they moved between them and why they chose a particular strategy. This offers a different kind of evidence from a study comparing final scores, and it requires a correspondingly careful interpretation.\n\nFifty-three master's students in English education or applied linguistics at a university in eastern China participated. They were recruited through snowball sampling and already had experience with academic reading and generative AI. Each selected an empirical article, wrote an initial critical review and then revised it with access to a Coze-based tool using DeepSeek R 1. The tool supplied critiques across multiple aspects of the paper and an embedded chatbot, while the original article remained available. Students could decide how to use those resources.\n\nResearchers analyzed screen recordings of the reading and revision activity, then used reflective interviews to explore learners' explanations of their choices. Sequence analysis identified three recurring patterns. One relied mainly on generated critiques with little return to the original article. Another involved repeated comparison between the generated material and the paper. A third included more direct chatbot dialogue, particularly when students were considering whether evidence adequately supported an argument. These patterns describe activities across tasks and should not be treated as fixed categories of learner ability.\n\nInterviews suggested that perceived difficulty shaped the strategy selected. For apparently straightforward aspects, some students focused on recalling content or improving their wording. More challenging issues prompted comparison, verification or dialogue. However, more dialogue did not always mean more direct engagement with the source: students could move between two AI-generated resources while rarely reopening the paper. The result illustrates why a sophisticated-looking discussion can still leave an evidential gap if the model's interpretation is not checked against methods, results and limitations in the original research.\n\nThe study was observational and had no non-AI control group or separate experimental comparison of the tool's functions. Screen behavior indicates visible actions rather than directly revealing comprehension, and retrospective accounts may not capture every reason for a choice. The sample came from one discipline cluster and institution and was predominantly female. The study did not establish a causal improvement in critical-reading skill or test whether strategies transferred independently to a new article. Its value is a detailed description of how learners distribute attention and effort among available resources.\n\nFor AIEDHK, research-reading activities could require a short evidence trail: the AI's claim, the relevant passage or table in the paper, and the reader's reasoned judgment about the match. A learner could also identify one claim that remains uncertain and explain what additional information would resolve it. Later review of a new paper without the tool would help test transfer. These are proposed extensions beyond the study. The practical lesson is to keep the primary source active in the workflow and evaluate the reader's justification, rather than assume that more generated commentary or a longer chatbot conversation represents deeper critical engagement.",
+    "keyTakeaways": [
+      "The study observed 53 postgraduate readers using generated critiques, an embedded chatbot and original research articles.",
+      "Resource-use patterns varied with perceived task difficulty; more AI dialogue did not always involve more original-source checking.",
+      "No non-AI control or independent transfer test was included, so the study describes processes rather than establishing learning gains."
+    ],
+    "whyItMatters": "AIEDHK can make source verification a visible part of AI-assisted research reading. Ask learners to connect an interpretation to the paper’s actual evidence and explain uncertainty, instead of using dialogue volume as a proxy for understanding.",
+    "sourceUrl": "https://doi.org/10.1007/s10791-026-10069-1",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://link.springer.com/article/10.1007/s10791-026-10069-1"
+      },
+      {
+        "label": "Publisher full PDF",
+        "url": "https://link.springer.com/content/pdf/10.1007/s10791-026-10069-1.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-188-backfill.png",
+    "imageAlt": "Graduate readers and a supervisor compare an annotated article's results table with a laptop critique while recording evidence checks.",
+    "summaryImage": "/images/research/summary/aied-188-backfill-summary.png",
+    "summaryImageAlt": "Graduate readers and a supervisor compare an annotated article's results table with a laptop critique while recording evidence checks.",
+    "summaryAudio": "/audio/research/aied-188-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-189",
+    "slug": "news-claude-code-mods-learning-tool-customization",
+    "title": "Product news: Claude Code mods let developers reshape the assistant, making tool configuration part of software literacy",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude Code mods",
+      "developer education",
+      "tool configuration",
+      "TypeScript",
+      "AI workflows"
+    ],
+    "shortSummary": "Anthropic introduced Claude Code mods on October 1: small TypeScript extensions that can alter behaviour and interface elements and are distributed through plugins. They run with Claude Code's machine access and are not sandboxed. Compared with OpenAI's recent developer-platform extensions and Gemini's coding tools, the release makes a useful educational topic: students should understand how configuration changes an assistant, how to test those changes, and who is responsible for the resulting behaviour.",
+    "fullSummary": "Anthropic introduced mods for Claude Code on October 1, 2026. These small TypeScript extensions can change how the assistant behaves or how parts of its interface appear, and they are distributed inside plugins. Mods work in the command-line and desktop applications. Anthropic explicitly states that they run with the same machine access as Claude Code and are not sandboxed. For educational developers, this is executable customisation rather than a harmless presentation preference.\n\nThe release makes a useful software-literacy question concrete: when two people say they used the same AI tool, did they actually use the same environment? Different instructions, extensions, or interface changes can alter what the model sees and what the user can inspect. A course comparing results should record those conditions, rather than attribute every difference to the underlying model alone.\n\nA simple teaching example could change how a test result is displayed in an isolated practice environment. Students would compare the original output with the revised presentation and check that important failures remain visible. They would explain which information was removed, reordered, or highlighted and why. The purpose would be to examine the relationship between interface design and judgment, not to make an unsuccessful test look successful.\n\nBehavioural changes deserve an equally explicit contract. If an extension transforms an instruction or intervenes in a tool call, reviewers should understand the intended transformation and its limits. An educational team can keep examples of normal, missing, and unexpected inputs, then check the observed results. A mod that appears useful in one demonstration may interact differently with another extension, so the combined environment also needs examination.\n\nOpenAI's recent DevDay announcements include new ways for developers to extend ChatGPT experiences. Gemini 3.8 Flash offers another route to building and revising software with model assistance. Compared with these developments, Anthropic's mods focus on customising the coding assistant itself. The distinction matters: building an application, extending a platform, and changing the tool used to develop software create different responsibilities and should be taught as such.\n\nStudents can document a customisation with a brief explanation of the problem, the change, and the evidence that it works. They should retain a way to return to the original behaviour and identify which version was used for an assessed task. Another student should be able to repeat the same check. In a shared teaching environment, staff need to know which extensions are installed and how changes are introduced. This makes troubleshooting possible when a student's result differs from an instructor's example.\n\nThe feature expands developer control, but more customisation is not automatically better for learning. A clear default environment may be preferable for an introductory course, while an advanced class can use mods to study event handling, interface choices, and reproducibility. The strongest submission would show a small, justified change whose effects can be explained and tested. That turns a new extension mechanism into an opportunity to understand the tools shaping the work.",
+    "keyTakeaways": [
+      "Mods launched October 1 as executable Claude Code customisations distributed through plugins.",
+      "Their machine access makes provenance and tested behaviour important when used in teaching environments.",
+      "Record the configured environment and assess a small, reversible change against its intended effect."
+    ],
+    "whyItMatters": "Customisable AI development tools can teach software literacy when learners understand and test the environment that mediates their work.",
+    "sourceUrl": "https://claude.com/resources/articles/claude-code-mods",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Claude Code mods — 2026-10-01",
+        "url": "https://claude.com/resources/articles/claude-code-mods"
+      },
+      {
+        "label": "OpenAI: DevDay 2026 recap — 2026-09-29",
+        "url": "https://openai.com/index/devday-2026-recap/"
+      },
+      {
+        "label": "Google DeepMind: Gemini 3.8 Flash — 2026-09-02",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+      }
+    ],
+    "createdAt": "2026-10-01",
+    "image": "/images/research/covers/aied-189-backfill.png",
+    "imageAlt": "An instructor and two programming students compare test-result panels, including a failed check, with configuration notes and an annotated event-flow sketch.",
+    "summaryImage": "/images/research/summary/aied-189-backfill-summary.png",
+    "summaryImageAlt": "An instructor and two programming students compare test-result panels, including a failed check, with configuration notes and an annotated event-flow sketch.",
+    "summaryAudio": "/audio/research/aied-189-backfill-summary.m4a",
     "summaryAudioTitle": "Listen to the summary"
   }
 ];

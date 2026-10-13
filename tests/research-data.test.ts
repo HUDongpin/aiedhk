@@ -24,11 +24,11 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains 177 curated Research News items", () => {
+test("research news fallback contains 189 curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 177);
-  assert.equal(papers[0]?.slug, "news-openai-devday-2026-agents-education-research");
+  assert.equal(papers.length, 189);
+  assert.equal(papers[0]?.slug, "news-claude-code-mods-learning-tool-customization");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
@@ -36,6 +36,12 @@ test("research news fallback contains 177 curated Research News items", () => {
 test("the reviewed date backlog contains exactly one research paper and one clearly labeled product-news item per day", () => {
   const papers = getResearchPapers("en");
   const expectedByDate = new Map([
+    ["2026-10-01", ["aied-188", "aied-189"]],
+    ["2026-09-30", ["aied-186", "aied-187"]],
+    ["2026-09-28", ["aied-182", "aied-183"]],
+    ["2026-09-27", ["aied-180", "aied-181"]],
+    ["2026-09-26", ["aied-178", "aied-179"]],
+    ["2026-09-25", ["aied-176", "aied-177"]],
     ["2026-09-24", ["aied-174", "aied-175"]],
     ["2026-09-23", ["aied-172", "aied-173"]],
     ["2026-09-21", ["aied-168", "aied-169"]],
@@ -429,8 +435,20 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-189",
+      "aied-188",
+      "aied-187",
+      "aied-186",
       "aied-185",
       "aied-184",
+      "aied-183",
+      "aied-182",
+      "aied-181",
+      "aied-180",
+      "aied-179",
+      "aied-178",
+      "aied-177",
+      "aied-176",
       "aied-175",
       "aied-174",
       "aied-173",
@@ -630,7 +648,7 @@ test("all entries from aied-038 onward have non-empty local M4A audio", () => {
     return id >= 38;
   });
 
-  assert.equal(backlog.length, 140);
+  assert.equal(backlog.length, 152);
   const hashes = new Set<string>();
   for (const paper of backlog) {
     assert.ok(paper.summaryAudio, `${paper.id} should declare summary audio`);
@@ -640,7 +658,7 @@ test("all entries from aied-038 onward have non-empty local M4A audio", () => {
     assert.ok(audioBuffer.byteLength > 100_000, `${paper.summaryAudio} should contain audible narration`);
     hashes.add(createHash("sha256").update(audioBuffer).digest("hex"));
   }
-  assert.equal(hashes.size, 140, "all backlog narrations must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 152, "all backlog narrations must have unique SHA-256 hashes");
 });
 
 test("reviewed papers use human-reviewed translations when present and fall back to English otherwise", () => {

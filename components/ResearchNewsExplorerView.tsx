@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Pagination from "@/components/Pagination";
 import ResearchCard from "@/components/ResearchCard";
 import ResearchFilters from "@/components/ResearchFilters";
 import type { Dictionary, Locale } from "@/lib/i18n";
@@ -54,25 +54,7 @@ export default function ResearchNewsExplorerView({ locale, dictionary, years, cu
         </div>
       )}
 
-      {result.totalPages > 1 && (
-        <div className="mt-10 flex flex-wrap justify-center gap-3">
-          {Array.from({ length: result.totalPages }).map((_, index) => {
-            const nextPage = index + 1;
-            const active = nextPage === result.page;
-            return (
-              <Link
-                key={nextPage}
-                href={hrefWithPage(locale, current, nextPage)}
-                className={`focus-ring grid h-11 w-11 place-items-center rounded-full text-sm font-black transition ${
-                  active ? "bg-aied-cyan text-slate-950" : "border border-slate-200 bg-white text-slate-600 hover:text-aied-blue"
-                }`}
-              >
-                {nextPage}
-              </Link>
-            );
-          })}
-        </div>
-      )}
+      <Pagination locale={locale} dictionary={dictionary} page={result.page} totalPages={result.totalPages} hrefForPage={(page) => hrefWithPage(locale, current, page)} />
     </section>
   );
 }

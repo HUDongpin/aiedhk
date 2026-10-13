@@ -13,3 +13,7 @@ coverage
 output
 .playwright-cli
 *.tsbuildinfo
+
+# Local research drafts and generation receipts
+tmp
+outputs

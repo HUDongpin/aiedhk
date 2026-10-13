@@ -1678,6 +1678,586 @@ export const researchNewsBackfill20260824To1013: ResearchPaper[] = [
     "summaryAudioTitle": "Listen to the summary"
   },
   {
+    "id": "aied-150",
+    "createdAt": "2026-09-12",
+    "title": "An engineering module taught students to audit AI claims before using them in design work",
+    "authors": [
+      "Christine E. King",
+      "Beth A. Lopour"
+    ],
+    "venue": "Biomedical Engineering Education",
+    "year": 2025,
+    "type": "journal",
+    "slug": "engineering-design-ai-claim-audit-source-verification",
+    "tags": [
+      "engineering education",
+      "critical AI literacy",
+      "source verification",
+      "problem-based learning",
+      "research skills"
+    ],
+    "shortSummary": "A biomedical engineering course asked students to verify ChatGPT's claims against research literature and revise an AI-generated device proposal with tracked changes. Thirty-one of 68 students answered the evaluation survey, reporting better awareness of limitations and less automatic trust. Project reflections showed selective use, especially for brainstorming. This teaching report offers a concrete assessment design, but it did not demonstrate a causal improvement in critical-thinking ability or student learning outcomes.",
+    "fullSummary": "Telling students to check an AI answer is easier than showing what a good check should contain. Christine E. King and Beth A. Lopour developed a biomedical engineering module that turned verification into an assessable activity. Students compared generated claims with published research, examined references and documented the changes needed to make a proposed design credible. The aim was to make the boundary between a plausible suggestion and supported engineering reasoning visible before students relied on AI in a larger project.\n\nThe activities were introduced in an upper-division quantitative physiology course with 68 students. One assignment used a published review of brain–computer interfaces as a reference point. Students questioned ChatGPT about relevant developments, checked the accuracy of its responses and investigated the citations it supplied. They identified kinds of query for which the output was useful or unreliable. This made source evaluation part of disciplinary work rather than an abstract warning about hallucination or a test of whether prose sounded convincing.\n\nA second assignment asked students to obtain a proposed brain–computer-interface design from ChatGPT and revise it. The deliverable included the original response, an edited version with tracked changes and explanations supporting retained or altered statements. Students had to make the design feasible and connect its claims to relevant literature. They then completed a problem-based design project in which AI use was optional, but any use had to be described. The structure therefore preserved evidence of students' judgment as well as the final design artifact.\n\nOnly 31 students completed the optional evaluation survey. Respondents generally reported a better understanding of the tool's strengths and weaknesses and less trust in unverified responses. The statistical tests compared their ratings with a neutral response, so the reported significance should not be read as a randomized gain in critical-thinking skill. Project reflections added useful detail: five of 22 groups did not use ChatGPT, while eleven described using it mainly for ideation. Some groups explicitly described further research to check generated information.\n\nThis is a teaching report with encouraging process evidence, not a controlled effectiveness trial. Fewer than half of enrolled students answered the survey, creating a risk that respondents differed from nonrespondents. The module used ChatGPT 3.5, and its behavior and knowledge limits should not be generalized automatically to later systems. Treating a review article as a reference also does not make that article infallible. The authors explicitly state that the study was not adequately powered to assess student learning outcomes. It cannot establish that skepticism alone produced better design decisions.\n\nFor AIEDHK, the transferable contribution is the assignment architecture. Students can submit a claim, the source used to check it, a correction and a reason for the final decision. Teachers can assess the quality of that evidence trail, including justified acceptance rather than only rejection of AI suggestions. A later independent task could test whether verification practices carry over to unfamiliar material. These are proposed evaluation steps beyond the report. The educational goal is a learner who can judge a useful idea against evidence and constraints, not merely produce a polished account of having used AI responsibly.",
+    "keyTakeaways": [
+      "The module combined literature-based claim checking with a tracked revision of an AI-generated engineering design.",
+      "The optional survey had 31 respondents from 68 students; project reflections showed selective use, especially ideation.",
+      "The report did not establish causal critical-thinking or learning gains, and its statistical survey results were comparisons with neutral ratings."
+    ],
+    "whyItMatters": "AIEDHK can adapt the evidence trail as an assessment product: original claim, checked source, reasoned correction and final judgment. This makes verification observable while keeping claims about learning proportional to the evidence.",
+    "sourceUrl": "https://doi.org/10.1007/s43683-025-00192-8",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://link.springer.com/article/10.1007/s43683-025-00192-8"
+      },
+      {
+        "label": "Publisher full PDF including assignment appendices",
+        "url": "https://link.springer.com/content/pdf/10.1007/s43683-025-00192-8.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-150-backfill.png",
+    "imageAlt": "An instructor and two engineering students compare an assistive-device block diagram with a research page containing a crossed-out claim and a corrected statement.",
+    "summaryImage": "/images/research/summary/aied-150-backfill-summary.png",
+    "summaryImageAlt": "An instructor and two engineering students compare an assistive-device block diagram with a research page containing a crossed-out claim and a corrected statement.",
+    "summaryAudio": "/audio/research/aied-150-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-151",
+    "slug": "news-anthropic-threat-report-information-literacy",
+    "title": "Industry news: Anthropic's misuse report gives educators a concrete reason to teach source provenance",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "information literacy",
+      "AI misuse",
+      "source provenance",
+      "digital citizenship",
+      "critical reading"
+    ],
+    "shortSummary": "Anthropic's September 10 threat report describes selected operations involving misuse of Claude, including deceptive information activity. This September 12 report focuses on the educational implications of fabricated authority and hidden coordination. The cases are not a representative measure of all AI use. OpenAI's managed teacher access and Gemini's course-context tools remain relevant comparisons: a helpful interface or supplied source collection does not eliminate the need to examine where a claim comes from.",
+    "fullSummary": "Anthropic published its September threat intelligence report on September 10, 2026, covering selected misuse activity observed between December 2025 and August 2026. The company describes cases across several areas, including influence operations and fraud, and says it disrupted the activity it identified. This September 12 article focuses on the report's implications for information literacy. Anthropic explicitly presents notable cases, not a representative sample from which the frequency of all AI misuse can be estimated.\n\nFor educators, the relevant problem is broader than recognising machine-written sentences. A piece of information can appear credible because it sits inside a polished website, carries an impressive institutional label, or is repeated by several apparently separate accounts. Readers need to investigate who produced it, which evidence supports it, and whether the sources are genuinely independent. Fluent language alone answers none of those questions.\n\nA classroom activity can explore this with harmless, teacher-created examples. Students could receive three short accounts of a fictional community event, each with a different source history. Two might trace back to the same unsupported statement, while the third links to a clear original record. Students would draw the chain of evidence and explain why repetition does not necessarily provide corroboration. There is no need to expose them to live malicious sites or reproduce operational abuse techniques.\n\nThe task can also distinguish uncertainty from accusation. An unfamiliar publisher is not automatically dishonest, and an error does not prove an organised campaign. Students should be able to state what they know, what they cannot verify, and which additional evidence would change their view. That is a more defensible habit than labelling every suspicious-looking text as AI-generated or treating detection software as a final judge.\n\nOpenAI's recent teacher partnerships and Anthropic's own school offering place AI inside managed educational settings. Gemini in Classroom can connect study prompts with course materials. These arrangements help define access and context, but they do not make every source or generated explanation reliable. A curated collection can contain an outdated document, and an assistant can misrepresent an otherwise sound source. Institutional access and critical reading remain complementary responsibilities.\n\nA library or department could maintain a small set of examples showing different failure modes: a real citation used for an unsupported claim, a copied statement presented as independent confirmation, and a source whose date changes its meaning. Learners can practise returning to the original and recording exactly what it establishes. The emphasis should be on a repeatable method of checking, not on memorising a list of trusted-looking brands.\n\nThreat reports can support this teaching when their own evidence limits are examined. Students can ask what the reporting organisation could observe, how cases were selected, and which conclusions extend beyond the available record. Anthropic's publication supplies a current industry example for that discussion. The educational response is to strengthen habits of attribution, corroboration, and proportionate confidence, while leaving technical incident investigation to the people responsible for those systems.",
+    "keyTakeaways": [
+      "Anthropic's September 10 report contains selected notable cases, not an estimate of typical AI-use risk.",
+      "Trace claims to original evidence and distinguish independent corroboration from repetition.",
+      "Information-literacy teaching should support justified uncertainty rather than automatic accusations of deception."
+    ],
+    "whyItMatters": "As plausible-looking information becomes easier to produce, learners need practical ways to inspect provenance and calibrate confidence.",
+    "sourceUrl": "https://www.anthropic.com/threat-intelligence-report-september-2026",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: September 2026 threat intelligence report — 2026-09-10",
+        "url": "https://www.anthropic.com/threat-intelligence-report-september-2026"
+      },
+      {
+        "label": "OpenAI: Additional U.S. teacher district partnerships — 2026-08-26",
+        "url": "https://openai.com/index/bringing-chatgpt-for-teachers-to-more-us-school-districts/"
+      },
+      {
+        "label": "Anthropic: School and district teacher offering — 2026-08-28",
+        "url": "https://claude.com/resources/articles/claude-for-teachers-now-available-for-schools-and-districts"
+      },
+      {
+        "label": "Google Workspace: Gemini in Classroom expansion — 2026-08-04",
+        "url": "https://workspaceupdates.googleblog.com/2026/08/gemini-in-google-classroom-is-expanding-to-users-of-all-ages-with-contextualized-Gemini-starter-prompts-for-students.html"
+      }
+    ],
+    "createdAt": "2026-09-12",
+    "image": "/images/research/covers/aied-151-backfill.png",
+    "imageAlt": "A teacher and three students trace connections between three printed excerpts and an original source document during a media-literacy lesson.",
+    "summaryImage": "/images/research/summary/aied-151-backfill-summary.png",
+    "summaryImageAlt": "A teacher and three students trace connections between three printed excerpts and an original source document during a media-literacy lesson.",
+    "summaryAudio": "/audio/research/aied-151-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-152",
+    "createdAt": "2026-09-13",
+    "title": "Stating the data-science step increased acceptance of AI code suggestions, while alternatives alone did not",
+    "authors": [
+      "Dhivyabharathi Ramasamy",
+      "Cristina Sarasua",
+      "Abraham Bernstein"
+    ],
+    "venue": "Empirical Software Engineering",
+    "year": 2025,
+    "type": "journal",
+    "slug": "data-science-workflow-context-ai-code-alternatives",
+    "tags": [
+      "research workflows",
+      "data science",
+      "AI coding assistance",
+      "human-AI interaction",
+      "analysis quality"
+    ],
+    "shortSummary": "An experiment with 28 data scientists tested a notebook assistant that could include workflow context and offer alternative code recommendations. Naming the data-science step increased acceptance of suggestions, while alternatives alone showed no significant effect. Predictive tasks were easier for the assistant-supported workflow than descriptive analysis. The small study informs interface design; accepting more generated code does not by itself demonstrate better scientific reasoning, reliable findings or improved learner competence.",
+    "fullSummary": "An AI coding assistant can produce valid-looking code while misunderstanding the analytical step a researcher is trying to complete. Dhivyabharathi Ramasamy, Cristina Sarasua and Abraham Bernstein examined whether making that step explicit helps, and whether offering alternative code paths adds value. Their study used CATSci, a notebook interface that lets users inspect, edit, accept or reject recommendations. For education researchers and students learning analysis, the underlying question is how an interface can support deliberate analytical choices rather than make code insertion the default measure of success.\n\nThe experiment recruited 28 data scientists from Upwork, each reporting at least one year of relevant experience. Participants were randomly allocated to four groups of seven, combining the presence or absence of workflow-step information with the presence or absence of alternative recommendations. All used a GPT-4-based assistant in Jupyter notebooks. They completed a descriptive task involving correlations in a prepared public dataset and a predictive task involving a financial classification dataset. Task order was randomized, and interaction logs were combined with surveys and written feedback.\n\nThe interface allowed prompts to include previous notebook cells, additional instructions and an explicit data-science step, such as exploration or modeling. In the alternatives condition, the assistant supplied a main suggestion plus three other possibilities. Users could examine the code before inserting it. This design made the research question narrower than whether AI helps data analysis in general: every group had AI support, and the experiment varied particular features of the assistance and its presentation.\n\nProviding the workflow step significantly increased the probability that users accepted a recommendation. Offering alternatives alone did not produce a significant difference. Acceptance and task scores also differed between descriptive and predictive work, with the predictive task performing more favorably. Participants often wanted additional instructions and contextual information to obtain useful suggestions. These results suggest that communicating analytical intent may matter more than simply multiplying proposed solutions. They also show that success on one kind of data task should not be assumed to transfer to another.\n\nThe findings have practical limits. Seven participants per group provide limited statistical power, and the tasks were intentionally simple. The study's reported power analysis was only 0.5 for a large effect under its assumptions. Users were encouraged to rely on the assistant as much as possible, and the interface did not retain a complete conversational history automatically. Most importantly, acceptance is a behavior, not a guarantee that a method is justified or a conclusion is valid. The results do not establish educational learning gains, scientific reproducibility or superiority over working without an assistant.\n\nFor AIEDHK, research-methods teaching could use the workflow idea while retaining independent checks. Before requesting code, a learner could state the question, the current analytical step, the data assumptions and the expected output. After receiving a suggestion, the learner could explain why the method fits, inspect errors and compare a plausible alternative where it matters. A later unaided task could test understanding of the analysis. These are proposed extensions beyond the study. The useful lesson is to make analytical purpose explicit and inspect the result, while keeping convenience, code acceptance and evidential quality as separate outcomes.",
+    "keyTakeaways": [
+      "Twenty-eight experienced data scientists tested four combinations of workflow-step context and alternative AI code suggestions.",
+      "Workflow context increased recommendation acceptance; alternatives alone did not show a significant effect, and task type mattered.",
+      "The small AI-only comparison concerns interface features and behavior, not proof of better scientific validity or learner understanding."
+    ],
+    "whyItMatters": "AIEDHK research workflows can require an explicit analytical purpose before code generation and a reasoned method check afterward. More accepted code should not be treated as stronger evidence or a substitute for statistical judgment.",
+    "sourceUrl": "https://doi.org/10.1007/s10664-025-10622-4",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://link.springer.com/article/10.1007/s10664-025-10622-4"
+      },
+      {
+        "label": "Author study data and analyses",
+        "url": "https://doi.org/10.5281/zenodo.10943330"
+      }
+    ],
+    "image": "/images/research/covers/aied-152-backfill.png",
+    "imageAlt": "A researcher and graduate student discuss a sparse scatterplot, analysis workflow cards, and handwritten questions about a model choice.",
+    "summaryImage": "/images/research/summary/aied-152-backfill-summary.png",
+    "summaryImageAlt": "A researcher and graduate student discuss a sparse scatterplot, analysis workflow cards, and handwritten questions about a model choice.",
+    "summaryAudio": "/audio/research/aied-152-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-153",
+    "slug": "news-devin-astra-testing-evidence-software-learning",
+    "title": "Product news: Devin's Astra testing case separates a working demonstration from the checks still missing",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Devin",
+      "GPT-6 Astra",
+      "software testing",
+      "programming education",
+      "verification evidence"
+    ],
+    "shortSummary": "OpenAI's September 11 Cognition case describes Devin using GPT-6 Astra to test software and return a recording alongside a report of passed and untested checks. This September 13 article examines that evidence format, rather than repeating Astra's model launch. Anthropic's browser actions and Gemini's coding demonstrations provide comparisons. For student software projects, the useful question is what a demonstration proves, what it leaves open, and who performs the next check.",
+    "fullSummary": "OpenAI published a Cognition case study on September 11, 2026 describing how Devin uses GPT-6 Astra to test software and show its results. One example pairs a recording of a game running in a simulator with a report identifying checks completed and areas left untested. This September 13 article examines that review workflow. It is a vendor-published example, not an independent estimate of reliability or a new report on Astra's original launch.\n\nThe combination is useful because a demonstration and a test report answer different questions. A recording can show what happened during one run. A report can specify which conditions were checked and which were omitted. Neither should be mistaken for proof that every user journey, device, or edge case works. Students learning to build software need to understand that boundary before they learn to produce more persuasive demonstrations. Reviewers should be able to reproduce the most important check.\n\nA course project could require a short evidence packet with every proposed change. The packet might include the requirement, the exact version tested, a relevant recording, and a list of unresolved checks. The student would explain why those checks are relevant to the change. A polished video without that explanation would be incomplete, while an honest report of a remaining failure could demonstrate strong engineering judgment.\n\nFor example, a team building a quiz interface might show a correct answer being accepted. Reviewers could then ask what happens with an empty response, a keyboard-only interaction, a repeated submission, or a narrow screen. The team does not need to test every conceivable situation at once. It needs to select cases that meaningfully challenge the intended behaviour and state what remains outside the evidence.\n\nAnthropic's browser tools expand an assistant's ability to act on visible interfaces. Google's Gemini 3.8 Flash announcement showcases generated interactive software. These developments make the quality of review increasingly important. OpenAI's Cognition example contributes a useful reporting pattern, but the platforms' different capabilities should not be collapsed into a claim that all generated applications are self-validating. The people accepting a change still need to understand the tests.\n\nTeachers can also ask students to revise their confidence after a new observation. A feature may pass the original check and fail when the input changes. The appropriate response is to update the claim, preserve the failed case, and improve the test, rather than delete the evidence or broaden the success statement. This makes debugging part of the assessed reasoning rather than an embarrassing detour hidden from the final presentation.\n\nThe case's most transferable idea is therefore modest: show the behaviour and describe the scope of the checks. In a capstone review, a student should be able to say which requirement a recording supports, which test could falsify their claim, and what another reviewer should try next. An AI agent can help assemble those materials, but a convincing engineering account depends on the connection among requirement, execution, limitation, and human acceptance.",
+    "keyTakeaways": [
+      "The case concerns a September 11 testing workflow, not Astra's original model announcement.",
+      "A recording shows one observed run; a test report should state the scope and remaining gaps.",
+      "Student projects can assess how evidence supports a requirement and how confidence changes after a failure."
+    ],
+    "whyItMatters": "AI-assisted software education benefits when students learn to make bounded, falsifiable claims about their work rather than simply present a polished demo.",
+    "sourceUrl": "https://openai.com/index/cognition-devin-testing-with-astra/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: Cognition tests Devin work with Astra — 2026-09-11",
+        "url": "https://openai.com/index/cognition-devin-testing-with-astra/"
+      },
+      {
+        "label": "Anthropic: Claude in Chrome general availability — 2026-08-26",
+        "url": "https://claude.com/resources/articles/claude-in-chrome-generally-available"
+      },
+      {
+        "label": "Google DeepMind: Gemini 3.8 Flash — 2026-09-02",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+      }
+    ],
+    "createdAt": "2026-09-13",
+    "image": "/images/research/covers/aied-153-backfill.png",
+    "imageAlt": "A student presents a shape-based quiz on a tablet while a lecturer and teammate review a partly completed checklist and a narrow-screen preview.",
+    "summaryImage": "/images/research/summary/aied-153-backfill-summary.png",
+    "summaryImageAlt": "A student presents a shape-based quiz on a tablet while a lecturer and teammate review a partly completed checklist and a narrow-screen preview.",
+    "summaryAudio": "/audio/research/aied-153-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-154",
+    "createdAt": "2026-09-14",
+    "title": "Structured chatbot speaking practice was linked to better oral scores and lower self-reported anxiety",
+    "authors": [
+      "Dongliang Ding",
+      "Ahmad Muhyiddin B Yusof"
+    ],
+    "venue": "Humanities and Social Sciences Communications",
+    "year": 2025,
+    "type": "journal",
+    "slug": "conversation-bot-speaking-practice-performance-anxiety",
+    "tags": [
+      "language learning",
+      "speaking practice",
+      "conversation bots",
+      "learner confidence",
+      "mixed-methods research"
+    ],
+    "shortSummary": "A six-week study compared 60 learners in two existing IELTS-preparation classes. Those using Mondly for supplementary speaking practice improved more on oral assessments and reported a larger reduction in speaking anxiety than those using alternative practice activities. Interviews described useful repetition and a less judgmental setting, alongside limitations in conversational variety. The evidence is encouraging but class-based allocation, one commercial platform and short follow-up limit causal and long-term conclusions.",
+    "fullSummary": "An AI conversation partner can offer repeated opportunities to speak without the immediate social pressure of addressing a teacher or classmate. Dongliang Ding and Ahmad Muhyiddin B Yusof investigated whether that kind of practice was associated with better speaking performance and lower speaking anxiety. Their study examined a structured use of Mondly within IELTS preparation. It concerns a defined language-learning activity rather than a general claim that conversational AI can replace the interpersonal work of learning to communicate.\n\nSixty undergraduate learners from two existing classes at an IELTS preparation center in China took part. Thirty used Mondly as a supplementary out-of-class speaking resource for six weeks, and thirty completed alternative speaking practice. The study used a convenience sample and intact classes rather than individual random assignment. Before and after the intervention, participants completed an IELTS-format speaking assessment and a nineteen-item speaking-anxiety questionnaire. Interviews with thirteen learners from the chatbot group added information about how the activity felt and where they encountered difficulties.\n\nThe chatbot practice included functional conversations and extended responses linked to the speaking curriculum. Learners could rehearse situations, receive feedback and repeat practice. The authors sought to make the practice relevant to the skills being assessed, such as fluency, pronunciation and the organization of a spoken response. That alignment matters when interpreting the findings: improvement on a closely matched assessment is useful, but it does not automatically establish flexible communication across unfamiliar topics, partners or social settings.\n\nAverage speaking scores rose from 5.06 to 5.78 in the chatbot group and from 5.14 to 5.42 in the comparison group. Analyses adjusting for pre-test scores favored the chatbot condition for both speaking performance and self-reported anxiety. Interviewees described benefits involving practice, confidence and willingness to speak. These reports help explain why a low-pressure practice setting may appeal to learners, but they do not independently establish the mechanism of improvement. The combination of structured tasks, feedback, repetition and the particular platform was evaluated as a package.\n\nSeveral qualifications remain important. One center and two intact classes offer limited protection against differences in teaching context or learner characteristics. The intervention was short, and the commercial platform did not allow researchers to isolate individual features. Anxiety was measured through self-report, not as a clinical outcome, and the study does not establish an enduring change beyond the immediate post-test. Some participants wanted more varied topics and interaction options. Human partners still supply unpredictable responses, shared context and negotiation of meaning that a structured application may not reproduce fully.\n\nFor AIEDHK, a reasonable pilot would position chatbot practice as preparation for human communication. Learners could rehearse a scenario, review a small number of recurring difficulties, and then complete a related conversation with a peer or teacher. Evaluation should include an unfamiliar speaking task, recorded practice exposure and a delayed check, alongside learners' own experience. These are proposed next steps rather than outcomes of the study. The practical aim is additional meaningful practice that helps a person speak more effectively with other people, with performance, confidence and longer-term development kept as separate questions.",
+    "keyTakeaways": [
+      "Sixty learners in two intact classes compared six weeks of Mondly-supported speaking practice with alternative practice activities.",
+      "Speaking assessments and self-reported anxiety favored the chatbot condition after adjustment for baseline scores.",
+      "Class-based allocation, a single platform and short follow-up limit causal claims and do not establish durable real-world communication gains."
+    ],
+    "whyItMatters": "AIEDHK can use conversational practice as preparation for peer and teacher interaction. Evaluate unfamiliar oral tasks and later performance, while treating confidence and speaking-anxiety reports as complementary learner outcomes.",
+    "sourceUrl": "https://doi.org/10.1057/s41599-025-05550-z",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.nature.com/articles/s41599-025-05550-z"
+      },
+      {
+        "label": "Open publisher full PDF",
+        "url": "https://www.nature.com/articles/s41599-025-05550-z.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-154-backfill.png",
+    "imageAlt": "A learner practices speaking with a headset in a language-centre booth while a peer waits at the door with a role-play picture card.",
+    "summaryImage": "/images/research/summary/aied-154-backfill-summary.png",
+    "summaryImageAlt": "A learner practices speaking with a headset in a language-centre booth while a peer waits at the door with a role-play picture card.",
+    "summaryAudio": "/audio/research/aied-154-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-155",
+    "slug": "news-gpt-live-api-language-learning-pauses",
+    "title": "Product news: GPT-Live-1 API gives language-learning designers more control over pauses and turn-taking",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "GPT-Live-1",
+      "language learning",
+      "voice agents",
+      "learner participation",
+      "interaction design"
+    ],
+    "shortSummary": "OpenAI released GPT-Live-1 through its API on September 10, with simultaneous listening and speaking, interruption handling, and delegated reasoning. This September 14 report focuses on language-learning design. An early Speak account suggests fewer interruptions, but does not establish improved proficiency. Anthropic's continuity features and Gemini's Guided Learning provide useful contrasts: good assistance must leave learners room to formulate an answer, revise it, and decide when they need help.",
+    "fullSummary": "OpenAI launched GPT-Live-1 in the API on September 10, 2026, bringing a voice model that can listen and speak simultaneously to developers. The announcement describes interruption handling and the ability to delegate deeper work to other models and tools. This September 14 report focuses on the implications for language practice. An early account from Speak describes fewer interruptions during learners' thinking pauses; it is a product evaluation report, not evidence of a gain in language proficiency.\n\nA pause in a language lesson can mean several things. The learner may be searching for a word, planning the next clause, checking grammar, or deciding whether to ask for help. An assistant that responds too quickly can remove the opportunity to complete the thought. One that waits indefinitely can leave the learner unsupported. The design problem is to make assistance responsive without making the learner a spectator in the conversation.\n\nTeachers could evaluate a voice prototype with a small set of clearly defined interactions. One learner pauses mid-sentence, another corrects a word, and another explicitly asks for a hint. Reviewers would examine whether the assistant treats those situations differently and whether the learner can regain the floor. The task should include varied accents and speaking speeds, while avoiding the assumption that one conversational rhythm is the standard everyone should match.\n\nThe content of a reply matters as much as its timing. A smooth response can still misunderstand the learner's meaning or give an unhelpful correction. A useful transcript review would identify what the student was trying to say, how the assistant interpreted it, and whether the next exchange helped clarify the idea. This gives the teacher a way to inspect the interaction without reducing quality to speed or the number of turns.\n\nAnthropic's shared chat and Cowork memory addresses continuity across tasks. Gemini's established Guided Learning addresses stepwise support for understanding. Compared with OpenAI's voice API, these features show that educational assistance has several dimensions: carrying context, shaping guidance, and managing conversation. A language activity may benefit from some of them, but should still be designed around what the learner needs to practise rather than around the assistant's most impressive feature.\n\nA proposed lesson could ask learners to tell a short story, review one exchange with a teacher, and tell the story again to a classmate. The assessment would focus on whether the learner can communicate the intended meaning more effectively in the later interaction. Enjoyment, perceived confidence, and technical interruptions could be recorded separately. This would avoid assuming that a pleasant conversation automatically produces transferable speaking skill.\n\nDevelopers also need to make the transition between speaking and acting clear. A request to explain a sentence is different from a request to save or send work. The application should preserve the learner's control over those actions. GPT-Live-1 makes more natural voice interaction available as a building block; its educational value depends on how designers protect thinking time, make misunderstandings recoverable, and connect assisted practice with meaningful human communication.",
+    "keyTakeaways": [
+      "The API release was September 10; an early partner report concerns interruptions, not measured language gains.",
+      "Voice-tutor evaluation should inspect pauses, self-correction, misunderstandings, and the learner's ability to regain the floor.",
+      "Assess later communication separately from enjoyment, speed, and perceived fluency."
+    ],
+    "whyItMatters": "Voice AI can become a better practice partner when interaction design preserves the time and agency learners need to formulate their own meaning.",
+    "sourceUrl": "https://openai.com/index/introducing-gpt-live-1-in-the-api/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: GPT-Live-1 in the API — 2026-09-10",
+        "url": "https://openai.com/index/introducing-gpt-live-1-in-the-api/"
+      },
+      {
+        "label": "Anthropic: Memory across Cowork and chat — 2026-08-25",
+        "url": "https://claude.com/resources/articles/claudes-memory-works-everywhere-and-you-decide-whats-in-it"
+      },
+      {
+        "label": "Google: Advancing AI tools for learning — 2025-08-06",
+        "url": "https://blog.google/intl/en-au/products/explore-get-answers/advancing-our-ai-tools-for-learning/"
+      }
+    ],
+    "createdAt": "2026-09-14",
+    "image": "/images/research/covers/aied-155-backfill.png",
+    "imageAlt": "A learner pauses thoughtfully in a language studio while a tutor listens and a classmate holds a three-scene speaking cue card.",
+    "summaryImage": "/images/research/summary/aied-155-backfill-summary.png",
+    "summaryImageAlt": "A learner pauses thoughtfully in a language studio while a tutor listens and a classmate holds a three-scene speaking cue card.",
+    "summaryAudio": "/audio/research/aied-155-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-156",
+    "createdAt": "2026-09-15",
+    "title": "AI-supported lesson-design teams maintained immediate scores after withdrawal, but durable learning was not tested",
+    "authors": [
+      "Daniele Agostini",
+      "Anna Serbati",
+      "Federica Picasso",
+      "Anastasiya Lipnevich"
+    ],
+    "venue": "Frontiers in Education",
+    "year": 2026,
+    "type": "journal",
+    "slug": "chatgpt-collaborative-lesson-design-immediate-withdrawal",
+    "tags": [
+      "collaborative learning",
+      "teacher education",
+      "lesson design",
+      "AI feedback",
+      "evidence boundaries"
+    ],
+    "shortSummary": "A crossover study organized 102 teachers-in-training into 21 lesson-design groups, with complete knowledge-test data from 82 participants. Teams used ChatGPT during either the first or second task. Scores rose during AI-supported phases and did not show a detectable immediate decline after withdrawal for the first sequence. Reflections also described efficiency gains and reduced peer idea-building. Short timing, weak test consistency and sequential tasks prevent interpreting this pattern as established long-term retention.",
+    "fullSummary": "When an AI system joins a design group, the question is not only whether the group finishes a better plan. It is also whether participants learn from the discussion and continue contributing their own ideas. Daniele Agostini and colleagues explored this tension in collaborative lesson design, asking teachers-in-training to treat ChatGPT as a contributor whose suggestions could be questioned. Their study followed both individual knowledge checks and group-produced artifacts, providing a view of collaboration that extends beyond the final written lesson.\n\nThe study involved 102 postgraduate teachers-in-training organized into 21 groups. In a four-hour session, groups completed two connected tasks: first select and justify inclusive educational technologies, then develop a detailed teaching intervention. Groups were allocated to opposite sequences. One used ChatGPT 3.5 in the first task and worked without it in the second; the other began without AI and gained access for the second task. Complete data for all three individual knowledge checks were available for 82 participants, with 38 and 44 in the two sequences.\n\nThe first sequence improved on the knowledge check after the AI-supported task, particularly on technology-related items. Its scores did not show a statistically detectable decline in the immediately following task without AI. The other sequence showed its clearer improvement after AI became available. The authors describe this pattern as sustained performance after withdrawal within the study timeframe. That is a narrower conclusion than proving durable retention: the same session continued, and a nonsignificant decline does not establish equivalence or guarantee that knowledge will persist later.\n\nGroup artifacts and written reflections added a more complicated picture. Participants described AI as useful for organizing work and producing structured suggestions, but some also reported less spontaneous exchange of ideas among peers. The issue is therefore not whether AI participation is uniformly helpful or harmful. A tool can make drafting easier while changing who proposes, questions and develops ideas. The qualitative evidence comes from participants' accounts of their collaboration, rather than a complete independent record of every conversational contribution.\n\nSeveral methodological limits deserve attention. The individual test contained thirteen mostly recall or understanding items and had low internal-consistency estimates. Only 82 of 102 participants contributed complete test data. The two design tasks were sequential and different, so task demands, practice and carryover complicate comparisons. There was no delayed follow-up and no final common task in which both sequences worked without AI. The results provide an exploratory account of short-term collaboration and score patterns, not a secure estimate of enduring learning or an isolated causal effect of treating AI as a teammate.\n\nFor AIEDHK, a useful classroom experiment would preserve a group's initial ideas and require members to discuss which AI suggestions they accepted, revised or rejected. Individual explanations could reveal whether every participant understood the decisions behind the shared artifact. A later common task without assistance, and a stronger knowledge measure, would help test whether any benefit lasts. These are proposed extensions beyond the reported study. The educational priority is a group that continues to reason together, with efficient document production evaluated separately from individual understanding and the quality of peer participation.",
+    "keyTakeaways": [
+      "The study involved 102 participants in 21 groups, but complete three-wave knowledge-test analysis included 82 participants.",
+      "Immediate scores were maintained after AI withdrawal in one sequence; this is not proof of durable retention or statistical equivalence.",
+      "Group reflections suggested both efficient production and possible reductions in peer idea-building; weak measurement and sequential tasks constrain inference."
+    ],
+    "whyItMatters": "AIEDHK can evaluate AI-supported collaboration through both individual explanations and group interaction evidence. A good shared lesson plan does not establish that all members learned or that peer reasoning remained strong.",
+    "sourceUrl": "https://doi.org/10.3389/feduc.2026.1751618",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1751618/full"
+      },
+      {
+        "label": "Publisher full PDF",
+        "url": "https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2026.1751618/pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-156-backfill.png",
+    "imageAlt": "Four teacher trainees discuss a laptop lesson suggestion, compare activity cards, and record a reasoned revision in a notebook.",
+    "summaryImage": "/images/research/summary/aied-156-backfill-summary.png",
+    "summaryImageAlt": "Four teacher trainees discuss a laptop lesson suggestion, compare activity cards, and record a reasoned revision in a notebook.",
+    "summaryAudio": "/audio/research/aied-156-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-157",
+    "slug": "news-google-public-service-ai-project-learning",
+    "title": "Industry news: Google.org selects public-service AI projects, offering cases for responsible project-based learning",
+    "authors": [
+      "Google.org"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "public-service AI",
+      "project-based learning",
+      "community engagement",
+      "AI literacy",
+      "open-source plans"
+    ],
+    "shortSummary": "Google.org announced 15 recipients of its AI for Government Innovation challenge on September 15, combining funding with expert support for public-service projects. The selection is a starting point, not proof that the proposed systems have delivered their intended benefits. OpenAI's agent infrastructure, Anthropic's delegation guidance, and Gemini's inquiry training give educators practical comparison points for teaching how to define a public problem, involve users, and evaluate a proposed solution.",
+    "fullSummary": "Google.org announced 15 recipients of its AI for Government Innovation challenge on September 15, 2026. The programme combines funding and expert support for organisations working with public services, with projects intended to become adaptable open-source blueprints. The announcement includes work on clearer public communication and transport information. Selection signals support for a proposal; it does not show that every system is deployed, every blueprint is available, or every intended benefit has been achieved.\n\nFor project-based learning, the interesting starting point is the public problem rather than the model. A confusing letter, an inaccessible timetable, or an unclear application step can create real difficulty. Students can learn to describe that difficulty in terms a user recognises before proposing an AI feature. They should be able to explain what the current process does, where people encounter trouble, and what an improvement would look like.\n\nA proposed university activity could use a fictional local-service notice. Students would identify the decisions a reader needs to make, then produce a clearer version with AI assistance. Another group would check whether any condition, deadline, or exception had been lost. The exercise would reward accurate communication, not merely shorter text. It would also show why a system that sounds helpful can still create a problem if it changes the meaning of a requirement.\n\nThe people affected should help define success. A service designer may value fewer support requests, while a resident may value understanding what to do and reaching a person when the situation is unusual. These goals can overlap without being identical. Students can compare several evaluation questions and identify whose experience each one captures. That makes stakeholder reasoning part of the project rather than a paragraph added after the prototype is finished.\n\nOpenAI's September Agents API provides infrastructure for sustained tool-based workflows. Anthropic's Claude Academy guidance encourages intentional delegation. Google's Gemini inquiry training supports a different stage: examining questions and evidence. Together, these resources can help learners consider how an application is built and why it should be built. None determines whether a particular public-service proposal is appropriate for the people it would affect.\n\nA responsible classroom project can stay small. Teams might test a prototype with fictional records and volunteer reviewers, record misunderstandings, and revise the design before considering real deployment. They should preserve an ordinary route to the service for people who do not want or cannot use the AI interface. A failed prototype can still be a strong learning outcome if students explain what it revealed and why they changed direction.\n\nThe grant announcement offers a set of contemporary cases for that kind of analysis. Educators can ask which claims are aspirations, which are demonstrated features, and what evidence would justify expansion. As the projects develop, the same questions can be revisited against public artifacts and user experience. The valuable lesson is that public benefit must be specified and examined, not inferred from a grant, an open-source intention, or a polished demonstration.",
+    "keyTakeaways": [
+      "The September 15 announcement selects supported projects; it does not certify completed public-service outcomes.",
+      "Start a student project with a user's problem and an observable definition of improvement.",
+      "Evaluate preserved meaning, participation, and alternatives alongside prototype functionality."
+    ],
+    "whyItMatters": "Public-service AI cases can help students connect technical development with the experiences and choices of the people a system is meant to serve.",
+    "sourceUrl": "https://blog.google/company-news/outreach-and-initiatives/google-org/ai-government-innovation-recipients/",
+    "sourceUrls": [
+      {
+        "label": "Google.org: AI for Government Innovation recipients — 2026-09-15",
+        "url": "https://blog.google/company-news/outreach-and-initiatives/google-org/ai-government-innovation-recipients/"
+      },
+      {
+        "label": "OpenAI: Introducing the Agents API — 2026-09-10",
+        "url": "https://openai.com/index/introducing-the-agents-api/"
+      },
+      {
+        "label": "Anthropic: Approach to teaching and learning AI — 2026-08-20",
+        "url": "https://claude.com/resources/articles/anthropics-approach-to-teaching-and-learning-ai"
+      },
+      {
+        "label": "Google: AI Educator Series September update — 2026-09-03",
+        "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
+      }
+    ],
+    "createdAt": "2026-09-15",
+    "image": "/images/research/covers/aied-157-backfill.png",
+    "imageAlt": "An older resident, students and a lecturer discuss a fictional community bus route while a student records suggestions about service and accessibility.",
+    "summaryImage": "/images/research/summary/aied-157-backfill-summary.png",
+    "summaryImageAlt": "An older resident, students and a lecturer discuss a fictional community bus route while a student records suggestions about service and accessibility.",
+    "summaryAudio": "/audio/research/aied-157-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-158",
+    "createdAt": "2026-09-16",
+    "title": "Progressive mind maps strengthened programming performance beyond chatbot assistance alone",
+    "authors": [
+      "Xindong Ye",
+      "Wenyu Zhang",
+      "Yuxin Zhou",
+      "Xiaozhi Li",
+      "Qiang Zhou"
+    ],
+    "venue": "Humanities and Social Sciences Communications",
+    "year": 2025,
+    "type": "journal",
+    "slug": "progressive-mind-maps-chatbot-programming-learning",
+    "tags": [
+      "programming education",
+      "mind mapping",
+      "instructional scaffolding",
+      "computational thinking",
+      "secondary education"
+    ],
+    "shortSummary": "A study of 111 seventh-grade students compared chatbot-supported Python learning with two forms of mind-map scaffolding. The group progressing from partially completed maps to independent construction achieved the strongest programming-test results. Questionnaire-based computational-thinking outcomes also favored the scaffolded conditions, but post-test programming self-efficacy did not differ significantly between groups. The study supports examining the structure around AI help, while intact-class allocation and limited process data constrain causal and transfer claims.",
+    "fullSummary": "A chatbot can answer a programming question without helping a beginner organize the problem that generated it. Xindong Ye and colleagues investigated whether mind maps could provide that missing structure. Their approach asked learners to make the sequence and relationships in a solution visible before and during coding. The comparison was between different ways of supporting chatbot use, not between access to AI and no access. This makes the study relevant to the instructional design surrounding an assistant rather than a simple technology-adoption decision.\n\nThe quasi-experiment involved 111 seventh-grade pupils from three classes at one junior high school in southeastern China. One class of 36 used progressive mind-map scaffolding with a GPT-4-based chatbot. Another class of 36 constructed its own maps with chatbot support. The remaining 39 pupils used chatbot assistance without the mapping scaffold. The same teacher taught Python concepts across an eleven-week course, including preparation and assessment. The differentiated intervention occupied six weeks, so the overall course duration should not be confused with six weeks of identical experimental exposure.\n\nThe progressive approach began with teacher-prepared maps containing gaps. Learners then moved to maps supported by prompts before constructing maps independently. Across the lessons, students clarified a problem, analyzed it, planned a solution, wrote and debugged code, and reflected on the result. The teacher monitored the process, including whether pupils simply generated code. The intended relationship was reciprocal: maps helped students formulate more focused requests, and chatbot feedback could help them revise the represented solution.\n\nThe progressive-map group had the highest programming post-test score, outperforming the self-constructed-map group by 5.11 points and the chatbot-only group by 9.31 points. The self-constructed-map group also exceeded the chatbot-only group. Overall computational-thinking questionnaire scores favored the mapped conditions, but the pattern was not uniform across subscales. Algorithmic thinking and cooperation did not differ significantly between groups. Programming self-efficacy improved within groups, but its post-test comparison was not significant. Those distinctions prevent a general claim that the scaffold improved every aspect of programming learning.\n\nThe study has several limits. Only three intact classes participated, so class differences cannot be ruled out by similar pre-test averages. The computational-thinking measure was a self-report scale rather than a direct demonstration of every named skill. The authors also noted limited assessment of the maps themselves and of students' interactions with the chatbot. Without those process measures, it is difficult to determine which parts of the scaffold mattered most. The study did not establish delayed retention or independent transfer to a substantially different programming problem.\n\nFor AIEDHK, the practical opportunity is to make planning a visible part of AI-supported coding. A teacher could ask students to draw a short decision structure, explain a branch and predict a result before requesting help. Support could gradually be reduced as the learner becomes able to plan independently. Evaluation should include unfamiliar code-tracing or debugging tasks without the assistant and should inspect how the map changes. These are proposed extensions beyond the experiment. The useful design principle is structured problem representation with fading support, while keeping tested programming performance distinct from self-reported confidence and broad claims about thinking skills.",
+    "keyTakeaways": [
+      "Three classes totaling 111 pupils compared progressive maps, self-constructed maps and chatbot-only programming support.",
+      "The progressive-map group led on programming tests; computational-thinking questionnaire advantages varied across subscales.",
+      "Post-test self-efficacy did not differ significantly, and the study did not establish delayed independent transfer."
+    ],
+    "whyItMatters": "AIEDHK can place visible planning before code generation and gradually reduce scaffolds. Evaluate whether learners can trace, explain and debug unfamiliar code independently, not only finish an assisted program.",
+    "sourceUrl": "https://doi.org/10.1057/s41599-025-04846-4",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.nature.com/articles/s41599-025-04846-4"
+      },
+      {
+        "label": "Open publisher full PDF",
+        "url": "https://www.nature.com/articles/s41599-025-04846-4.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-158-backfill.png",
+    "imageAlt": "A teacher and two students compare a simple Python loop with a hand-drawn programming concept map while one learner adds explanatory notes.",
+    "summaryImage": "/images/research/summary/aied-158-backfill-summary.png",
+    "summaryImageAlt": "A teacher and two students compare a simple Python loop with a hand-drawn programming concept map while one learner adds explanatory notes.",
+    "summaryAudio": "/audio/research/aied-158-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-159",
+    "slug": "news-one-claude-docs-slides-academic-revision",
+    "title": "Product news: Claude merges chat and Cowork while adding document and slide creation in beta",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude Docs",
+      "Claude Slides",
+      "academic communication",
+      "revision",
+      "agent workflows"
+    ],
+    "shortSummary": "Anthropic's September 16 announcement begins merging Claude chat and Cowork and introduces Docs and Slides alongside Design inside conversations. Rollout starts with Pro and Max, while the creation tools remain in beta on paid plans. OpenAI's agent infrastructure and Gemini's educational tools provide comparison points. For academic work, the convenience of turning one conversation into several artifacts makes it especially important to check how evidence and uncertainty survive each revision.",
+    "fullSummary": "Anthropic announced on September 16, 2026 that Claude chat and Cowork were beginning to merge into one experience. The rollout starts with Pro and Max users over the following weeks. Claude Docs and Slides also arrive, with Design available inside conversations; these creation tools are in beta on paid plans. The change reduces the need to choose a separate place for discussion, longer tasks, and artifact creation, but it is not immediate universal availability.\n\nFor academic work, moving from discussion to a document and then to slides is a familiar sequence. Each step changes the audience and the amount of detail that can be shown. An assistant may make that sequence faster, while also carrying a weak assumption through every output. A coherent set of artifacts is useful only if the central claim, supporting evidence, and limitations remain appropriate to each format.\n\nA research seminar could examine this directly. Students begin with a short, checked analysis and ask for a report and presentation. They then compare the conclusions across the two. Did a cautious association become a causal statement? Did a small sample disappear from the slide? Did a chart lose its unit or source? The task can make compression visible as an editorial decision, rather than treating slides as a decorative version of the report.\n\nRevision should also remain understandable to collaborators. If a student changes the interpretation in the document, the presentation needs to be reviewed for consistency. If the assistant changes a figure, the team should be able to identify why. A shared source record and a brief note of consequential changes can help people who were not present in the original conversation. They should not need access to every informal exchange to judge the final claim.\n\nOpenAI's September Agents API supports longer tool-based workflows, while Gemini's educational resources place AI assistance inside inquiry and teaching activities. Compared with those developments, Anthropic's update changes the surface where work is discussed and produced. The technologies can make different stages more convenient, but the educational purpose still needs to be explicit. Producing a report, slides, and an illustration is not itself evidence that a student understands the argument.\n\nTeachers could therefore assess a short explanation of one important editorial choice. A student might justify why a qualification remained on a slide, why a visual was removed, or why a source did not support the original wording. Another student could challenge that decision using the same evidence. This gives the class a reason to inspect the content rather than reward the sheer volume or polish of generated material.\n\nThe unified experience may suit work that develops through repeated discussion and revision. Its value for education will depend on whether that continuity makes ideas easier to question, not merely easier to package. A useful final handoff would contain the current artifact, the evidence it relies on, and any unresolved interpretation. The interface can connect the work; the learner should still be able to explain the choices that gave it meaning.",
+    "keyTakeaways": [
+      "The September 16 merger starts with a staged Pro/Max rollout; Docs, Slides, and Design are in beta on paid plans.",
+      "Check how claims, sources, units, and uncertainty change when a report becomes a presentation.",
+      "Assess consequential editorial decisions as well as the final artifacts."
+    ],
+    "whyItMatters": "Integrated creation tools can support academic communication when learners remain able to explain and challenge the reasoning preserved in each output.",
+    "sourceUrl": "https://claude.com/resources/articles/cowork-is-now-claude",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Cowork and chat become one Claude — 2026-09-16",
+        "url": "https://claude.com/resources/articles/cowork-is-now-claude"
+      },
+      {
+        "label": "OpenAI: Introducing the Agents API — 2026-09-10",
+        "url": "https://openai.com/index/introducing-the-agents-api/"
+      },
+      {
+        "label": "Google: AI Educator Series September update — 2026-09-03",
+        "url": "https://blog.google/products-and-platforms/products/education/new-ai-educator-trainings-september-2026/"
+      }
+    ],
+    "createdAt": "2026-09-16",
+    "image": "/images/research/covers/aied-159-backfill.png",
+    "imageAlt": "A researcher rehearses at a lectern while a supervisor and peer compare an annotated report passage with a projected chart and context note.",
+    "summaryImage": "/images/research/summary/aied-159-backfill-summary.png",
+    "summaryImageAlt": "A researcher rehearses at a lectern while a supervisor and peer compare an annotated report passage with a projected chart and context note.",
+    "summaryAudio": "/audio/research/aied-159-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-160",
+    "createdAt": "2026-09-17",
+    "title": "Motivational agents changed some algebra-learning choices without a significant overall test advantage",
+    "authors": [
+      "Man Su",
+      "Belle Dang",
+      "Andy Nguyen",
+      "Tomohiro Nagashima"
+    ],
+    "venue": "npj Science of Learning",
+    "year": 2025,
+    "type": "journal",
+    "slug": "motivational-agents-algebra-choice-learning-evidence",
+    "tags": [
+      "adaptive learning",
+      "pedagogical agents",
+      "algebra",
+      "self-regulated learning",
+      "learner choice"
+    ],
+    "shortSummary": "A randomized study analyzed 49 secondary pupils using an adaptive algebra system with or without motivational pedagogical agents. The agent condition showed descriptive gains, but its adjusted post-test advantage and error-rate difference were not significant. Interaction analyses highlighted different choices about optional learning activities and the importance of prior knowledge. The study illustrates why engagement paths deserve attention, while a small sample and 25-minute intervention cannot establish durable benefits from adding an agent.",
+    "fullSummary": "Adding a friendly agent to an adaptive lesson does not automatically improve what students learn. Man Su and colleagues examined that assumption in an algebra environment that offered choices about optional learning activities. Their study treated those choices as part of self-regulation: when to attempt a task, seek support or move on. The main value of the investigation lies in combining outcome measures with interaction traces, while retaining an important null finding about the overall learning advantage of the agent condition.\n\nFifty-four ninth- and tenth-grade pupils from two German schools took part and were randomly assigned to versions of the AlgeSPACE system with or without motivational pedagogical agents. Five pupils were excluded because of incomplete post-tests or disengagement, leaving 49 in the analysis: 24 with agents and 25 without them. After a pre-test and brief tutorial, pupils worked independently for 25 minutes and completed an immediate post-test. The system recorded their choices, answers, solution steps and time spent during the activity.\n\nThe agents delivered motivational prompts around learning opportunities, such as trying a problem before receiving automated feedback. The study therefore examined a particular combination of visual presence and motivational messaging within a designed algebra system. It did not evaluate an open-ended generative tutor or compare every possible kind of adaptive feedback. The prompts were delivered at predefined points and were not dynamically personalized to each moment of misunderstanding or disengagement, a distinction relevant to interpreting both the outcomes and the proposed improvements.\n\nBoth conditions improved from pre-test to post-test. Although descriptive gains were larger with agents, the condition effect on post-test scores was not significant after adjustment for prior knowledge; the reported p value was .189. Error rates also did not differ significantly. Prior knowledge was a stronger predictor of performance. Process mining and sequence analyses revealed differences in how learners navigated optional activities, but such patterns should not be converted into a claim of proven overall effectiveness. A different path through a lesson can be informative without producing a reliably better test result.\n\nThe exploratory design places limits on subgroup and behavioral interpretations. The final sample was small, the activity brief, and all participants came from one national context and a narrow age range. Excluding some disengaged participants also matters when the intervention itself is intended to influence engagement. Logged decisions show what students selected, but do not fully reveal why they skipped a task or whether a choice was strategically appropriate. There was no delayed assessment of algebra understanding or evidence that these choice patterns would persist during repeated use.\n\nFor AIEDHK, the study suggests evaluating an agent through the learning decision it is intended to support. A pilot could ask learners to explain selected choices, such as skipping a familiar example or requesting another attempt, and compare those explanations with performance on a new problem. Repeated sessions and delayed tests would provide a stronger basis for judging benefit. These are proposed extensions beyond the experiment. The practical lesson is to distinguish an engaging interface, a meaningful learning choice and measurable understanding, while reporting null comparisons as clearly as positive interaction patterns.",
+    "keyTakeaways": [
+      "The final sample included 49 pupils,24 with motivational agents and 25 without, during 25 minutes of adaptive algebra practice.",
+      "Adjusted post-test performance and error rates did not show a significant overall agent advantage.",
+      "Interaction traces illuminate learning choices, but brief exposure, small samples and excluded disengaged participants limit broader claims."
+    ],
+    "whyItMatters": "AIEDHK can test whether an agent supports a specific learning decision rather than assume its presence adds value. Report learning outcomes, choice patterns and null comparisons separately, and ask learners why they selected or skipped activities.",
+    "sourceUrl": "https://doi.org/10.1038/s41539-025-00366-7",
+    "sourceUrls": [
+      {
+        "label": "Peer-reviewed article: full text and publication record",
+        "url": "https://www.nature.com/articles/s41539-025-00366-7"
+      },
+      {
+        "label": "Open publisher full PDF",
+        "url": "https://www.nature.com/articles/s41539-025-00366-7.pdf"
+      }
+    ],
+    "image": "/images/research/covers/aied-160-backfill.png",
+    "imageAlt": "Two students discuss annotated algebra examples while choosing a next practice task on a tablet under a teacher's observation.",
+    "summaryImage": "/images/research/summary/aied-160-backfill-summary.png",
+    "summaryImageAlt": "Two students discuss annotated algebra examples while choosing a next practice task on a tablet under a teacher's observation.",
+    "summaryAudio": "/audio/research/aied-160-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-161",
+    "slug": "news-claude-projects-coordination-capstone-learning",
+    "title": "Product news: Claude's redesigned projects coordinate parallel work, creating a new teaching challenge for team accountability",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude projects",
+      "multi-agent coordination",
+      "capstone projects",
+      "shared context",
+      "software teamwork"
+    ],
+    "shortSummary": "Anthropic introduced a redesigned project experience in Claude Code beta on September 17 for a limited group of eligible Pro and Max users. A coordinator can divide work among threads and bring results together, with shared context and a project library. OpenAI's Agents API and Gemini's coding capabilities offer related building blocks. For student teams, the key question is how to preserve clear responsibilities and individual understanding when more work can be delegated.",
+    "fullSummary": "Anthropic introduced redesigned projects in Claude Code beta on September 17, 2026. A coordinator can scope requests, delegate work across threads, review outputs, and assemble results. Initial access is limited to selected Pro and Max users of cloud sessions without existing web or desktop projects; broader access is planned. This is a specific project-coordination release, distinct from the previous day's announcement merging Claude chat and Cowork.\n\nThe feature makes a familiar educational problem more visible: dividing work is easier than ensuring that everyone understands the whole. A student team can produce several components quickly while losing track of assumptions at their boundaries. If one part uses a different data format or definition, the final system may fail despite each contributor reporting success. Coordination needs a shared account of what the parts must do together.\n\nA capstone team could begin with a small interface agreement before delegating implementation. It would specify the information exchanged, the cases that must be handled, and the evidence expected at handoff. Students could then review whether each result meets that agreement. The purpose is not to eliminate disagreement, but to make it possible to locate and resolve a disagreement without relying on the memory of one participant.\n\nAnthropic describes threads working on separate repository copies and branches, with shared memory and a library of materials. Separate work areas can reduce accidental interference, but they do not settle overlapping design decisions. A project still needs someone to examine the integrated result. Students should understand that several successful component checks may leave a failure in the interaction between components.\n\nOpenAI's September Agents API also supports subagents and managed task execution. Gemini 3.8 Flash's announcement emphasises coding and longer agent workflows. These developments broaden the ways teams can delegate, but do not prescribe how a course should assess participation. The same educational objective could be served by a simpler tool if students can demonstrate planning, integration, and reasoned review more clearly through it.\n\nOne proposed assessment would ask each student to explain a decision outside the component they initially led. Another would require the team to preserve an integration failure and show how it was diagnosed. These activities can reveal whether the shared project became a learning environment or merely a collection of outsourced tasks. They also make room for students who contribute through testing, documentation, or coordination rather than only writing code.\n\nTeams should keep the goal revisable and the current decision record easy to find. A remembered assumption may help a new thread begin, but a changed requirement should be explicit enough for every contributor to notice. Usage also needs attention when many threads run at once. A team might review the first delegated result against its plan before expanding the work, making scope changes visible before they multiply across several active threads. The redesigned project offers a stronger coordination surface; a strong educational use would leave students better able to define responsibilities, reconcile conflicting work, and explain why the combined result deserves acceptance.",
+    "keyTakeaways": [
+      "The September 17 beta has limited initial eligibility and should not be described as available to all Claude users.",
+      "Parallel task completion does not establish that the integrated result works.",
+      "Assess shared understanding, integration reasoning, and coordination alongside component output."
+    ],
+    "whyItMatters": "More capable project orchestration makes it important to teach the human work of defining interfaces, resolving disagreements, and accepting a combined result.",
+    "sourceUrl": "https://claude.com/resources/articles/projects-redesigned",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Projects redesigned — 2026-09-17",
+        "url": "https://claude.com/resources/articles/projects-redesigned"
+      },
+      {
+        "label": "OpenAI: Introducing the Agents API — 2026-09-10",
+        "url": "https://openai.com/index/introducing-the-agents-api/"
+      },
+      {
+        "label": "Google DeepMind: Gemini 3.8 Flash — 2026-09-02",
+        "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/3-8-flash-and-3-8-flash-cyber/"
+      }
+    ],
+    "createdAt": "2026-09-17",
+    "image": "/images/research/covers/aied-161-backfill.png",
+    "imageAlt": "An engineering capstone team compares interface cards and a test checklist beside a whiteboard showing three components joining one application.",
+    "summaryImage": "/images/research/summary/aied-161-backfill-summary.png",
+    "summaryImageAlt": "An engineering capstone team compares interface cards and a test checklist beside a whiteboard showing three components joining one application.",
+    "summaryAudio": "/audio/research/aied-161-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
     "id": "aied-170",
     "slug": "teacher-authorship-ai-science-lesson-design-environmental-agency",
     "createdAt": "2026-09-22",

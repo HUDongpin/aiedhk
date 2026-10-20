@@ -441,5 +441,180 @@ export const researchNewsBackfill20261014To1020: ResearchPaper[] = [
     "summaryImageAlt": "A Korean adult learner and a Black language tutor practise an excursion-planning conversation with a tablet and a clearly sketched route map in a sunny language studio",
     "summaryAudio": "/audio/research/aied-223-backfill-summary.m4a",
     "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-224",
+    "slug": "research-preprint-lecture-audio-description-rules-and-listener-preferences-did-not-always-agree",
+    "title": "Preprint: Lecture audio-description rules and listener preferences did not always agree",
+    "authors": [
+      "Stylianos Psychias",
+      "Yingqiang Gao"
+    ],
+    "venue": "arXiv preprint",
+    "year": 2026,
+    "type": "tool-dataset",
+    "tags": [
+      "preprint",
+      "accessibility",
+      "audio description",
+      "benchmark",
+      "inclusive education"
+    ],
+    "shortSummary": "AD4Edu proposes a benchmark and evaluation framework for describing visual information in university lectures. Four blind or low-vision raters assessed 400 description pairs, revealing a gap between compliance with the researchers’ rules and individual preferences, especially about length. This preprint offers tools for studying that gap, with small-sample and playback limitations. It does not demonstrate improved course learning or certify that a lecture meets accessibility requirements.",
+    "fullSummary": "An October 12 preprint by Stylianos Psychias and Yingqiang Gao introduces AD4Edu, a benchmark for audio descriptions of university lectures. The corpus draws on 66 recordings covering six subjects. Its 45-rule framework combines existing guidance with provisional education-specific rules, while an evaluation tool checks aspects of description quality. Four blind or low-vision raters assessed 400 pairs of descriptions.\n\nThe researchers found that rule compliance and listener preference could diverge. A rubric agreed strongly with judgments about resolving references such as pointing, but much less with preferences about length. Some raters preferred longer descriptions that the framework penalized. The study also found that its preference-optimization training did not consistently improve the earlier model baseline across evaluation measures.\n\nThe evidence is preliminary and not peer reviewed. Four raters cannot represent the full diversity of accessibility needs, and their agreement was low. Descriptions were played separately rather than inserted into lecture audio, so extra length did not compete with the lecturer’s speech. The benchmark also relies on machine-generated reference descriptions that professional describers had not checked. It is an evaluation resource, not a certification of accessible teaching or a test of learning gains.\n\nFor AIEDHK, an editorial design proposal is to evaluate a description inside the teaching activity where it will be heard. An accessibility team could select a short lecture segment containing a graph, test whether the narration identifies the relevant axes and relationship, and ask listeners what remains unclear. That proposed pilot would examine both factual adequacy and the experience of following the explanation. It should let participants explain their preferences rather than forcing every response into a single quality score.\n\nConsider a lecturer saying that a curve rises more quickly after a threshold. A description might need to name the axes, identify the threshold, and connect the visual change to the spoken claim. Listing every tick mark could be unnecessary for one learner and helpful for another who wants to reconstruct the graph. A player could therefore offer an optional extended description while retaining a concise synchronized version. This is a hypothetical interface idea; the preprint does not establish that such a control improves comprehension.\n\nA local evaluation could separate several questions. Does the description accurately represent the graph? Does it arrive at a usable moment? Can the listener answer the course’s intended question? Does the playback control work comfortably with their assistive technology? These outcomes would provide different evidence, and a high automated score should not collapse them into one conclusion. Testing a second segment with different subject matter would also help identify whether a successful explanation depended on unusually simple visuals.\n\nThe broader opportunity is to involve learners in choosing what an educational description must accomplish. Automated checks can help flag missing references or likely repetition, while user evaluation can reveal needs that a rule does not anticipate. Universities considering a pilot could treat the benchmark as a starting resource and document where local requirements differ. The result would be an inspectable design process whose success is assessed in real listening and learning tasks, with individual preferences still visible.",
+    "keyTakeaways": [
+      "AD4Edu combines a lecture benchmark with a proposed 45-rule evaluation framework.",
+      "Four blind or low-vision raters evaluated 400 description pairs; rule scores and preferences diverged.",
+      "The preprint’s separate-playback design and small rater sample limit conclusions about classroom accessibility."
+    ],
+    "whyItMatters": "Accessible lecture support needs both accurate descriptions and usable listening experiences. A benchmark score can inform development, while learners still need to help define and test the experience.",
+    "sourceUrl": "https://arxiv.org/abs/2610.17042",
+    "sourceUrls": [
+      {
+        "label": "Version 1 full text — 12 October 2026",
+        "url": "https://arxiv.org/html/2610.17042v1"
+      },
+      {
+        "label": "Preprint record and version history",
+        "url": "https://arxiv.org/abs/2610.17042"
+      }
+    ],
+    "createdAt": "2026-10-19",
+    "image": "/images/research/covers/aied-224-backfill.png",
+    "imageAlt": "A Black female university student listens through headphones and uses a physical playback control while a White male accessibility specialist reviews a graph and lecture monitor nearby",
+    "summaryImage": "/images/research/summary/aied-224-backfill-summary.png",
+    "summaryImageAlt": "A Black female university student listens through headphones and uses a physical playback control while a White male accessibility specialist reviews a graph and lecture monitor nearby",
+    "summaryAudio": "/audio/research/aied-224-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-225",
+    "slug": "news-gemini-notebook-classroom-insights-sharing",
+    "title": "Product news: Gemini Notebook adds teacher insight summaries for Classroom assignments, with visible conversation access",
+    "authors": [
+      "Google"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Gemini Notebook",
+      "Google Classroom",
+      "teacher insight",
+      "formative assessment",
+      "student transparency"
+    ],
+    "shortSummary": "Google announced insight summaries for teacher-assigned Gemini Notebooks in Classroom on October 19, alongside updated administrative sharing controls. The update gives teachers a new starting point for reviewing how students used an assigned activity. Its scope is specific: the feature concerns Classroom assignments, and learners are notified that their conversations are visible to their teacher. Educational interpretation still requires checking context, speaking with students, and distinguishing a summary of interaction from evidence of understanding.",
+    "fullSummary": "Google's October 19, 2026 announcement introduces AI-generated insight summaries and access to student conversation transcripts for Gemini Notebooks assigned through Google Classroom. Learners see a notice that their assigned-notebook conversations are visible to their teacher. The update covers Education Fundamentals, Standard, and Plus, with a rollout beginning that day; Gemini LTI support is described as forthcoming. Administrators also gain finer external-sharing controls, including trusted domains, while external sharing remains off by default. These details define the release's scope, rather than a general right to inspect every student notebook. Both teachers and students need Gemini Notebook enabled for their groups or organizational units, and insights require students to have used the assigned notebook.\n\nFor a teacher, the appropriate next step after reading an insight summary would be to formulate a question worth checking. A report suggesting that several students are uncertain about a concept could prompt inspection of the relevant exchanges and a brief classroom discussion. The teacher should ask whether the students were confused, testing an idea, or exploring beyond the assigned task. Similar words can arise for different reasons. A summary can direct attention, but the teaching decision still needs enough context to justify the interpretation.\n\nConsider a proposed activity using a notebook of teacher-selected local-history sources. A summary highlights repeated questions about whether one account is reliable. Instead of immediately reteaching factual content, the teacher examines a small set of relevant exchanges and asks students to explain their source judgments. The questions might reveal a productive disagreement about evidence. The class could then compare authorship, purpose, and corroboration across documents. This is an example of a possible response to the new information, not an outcome demonstrated by Google's product announcement.\n\nStudents should also understand how the activity will be used. Before beginning, the teacher could explain which assigned conversation will be reviewed, what feedback it may inform, and what it will not decide by itself. Learners could be invited to point out an exchange that does not represent their current view or to add a later explanation. That would make room for revision and experimentation within the task. A visible notice is an interface feature; a meaningful classroom explanation of expectations still requires an educator's judgment.\n\nThe new sharing controls also make the boundary of a course activity a practical planning issue. A school working across several domains should decide who needs access before distributing materials, then test the intended roles with a small, approved example. The educational content and the sharing arrangement should be checked together: an appropriate activity is not ready if some intended learners cannot open it or if its audience is wider than expected. These are proposed preparation steps, not claims that the release changes an institution's policies automatically.\n\nA bounded pilot could examine whether teachers find the summaries interpretable, whether students understand the review arrangement, and whether the resulting teaching response addresses an actual need. An independent task or classroom explanation would still be required to assess understanding. Schools should also distinguish the announced Classroom rollout from the later LTI availability. The immediate product change concerns visibility into assigned interactions and control over sharing; any assertion that it improves formative assessment, equity, or attainment would require evidence about those outcomes in the setting where it is used.",
+    "keyTakeaways": [
+      "The update applies to teacher-assigned Classroom notebooks, with conversation visibility disclosed to students.",
+      "Treat an AI summary as a prompt for contextual review, not a grade or diagnosis on its own.",
+      "External sharing has administrative controls, and LTI availability remains a later step."
+    ],
+    "whyItMatters": "Teachers can use interaction summaries more responsibly when they verify the context, explain the review process to learners, and connect any intervention to independent evidence of understanding.",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/teacher-led-gemini-notebook-in-google-Classroom-now-offers-insight-summaries-for-educators-and-updated-sharing-settings-for-admins-including-trusted-domains.html",
+    "sourceUrls": [
+      {
+        "label": "Google Workspace Updates: Teacher-led Gemini Notebook insights and sharing — October 19, 2026",
+        "url": "https://workspaceupdates.googleblog.com/2026/10/teacher-led-gemini-notebook-in-google-Classroom-now-offers-insight-summaries-for-educators-and-updated-sharing-settings-for-admins-including-trusted-domains.html"
+      }
+    ],
+    "createdAt": "2026-10-19",
+    "image": "/images/research/covers/aied-225-backfill.png",
+    "imageAlt": "A white history teacher and two students with East Asian and Black backgrounds discuss annotated archive sources beside a tablet showing a simple class-summary panel",
+    "summaryImage": "/images/research/summary/aied-225-backfill-summary.png",
+    "summaryImageAlt": "A white history teacher and two students with East Asian and Black backgrounds discuss annotated archive sources beside a tablet showing a simple class-summary panel",
+    "summaryAudio": "/audio/research/aied-225-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-226",
+    "slug": "research-preprint-students-access-to-generative-ai-did-not-ensure-equally-usable-support-across-languages",
+    "title": "Preprint: Students’ access to generative AI did not ensure equally usable support across languages",
+    "authors": [
+      "Ming Li",
+      "Qin Xie",
+      "Ariunaa Enkhtur",
+      "Lilan Chen",
+      "Fei Cheng"
+    ],
+    "venue": "arXiv preprint (work in progress)",
+    "year": 2026,
+    "type": "tool-dataset",
+    "tags": [
+      "preprint",
+      "multilingual education",
+      "AI access",
+      "student agency",
+      "higher education"
+    ],
+    "shortSummary": "Interviews with 42 undergraduates at universities in China, Japan, and Mongolia explored how students selected AI tools, chose interaction languages, and checked outputs. Participants described different routes from technical access to useful academic support, including switching languages when responses seemed inadequate. This work-in-progress preprint presents situated accounts rather than national comparisons or measured learning gains. It raises practical questions about evaluating an AI service in the languages students actually use.",
+    "fullSummary": "Ming Li and colleagues report interviews with 42 undergraduates at one university each in China, Japan, and Mongolia. The October 4 work-in-progress preprint examines how access conditions and languages shaped reported AI use. Interviews took place during 2024 and early 2025. Researchers combined qualitative interpretation with exploratory text-network and correspondence analyses of translated transcripts.\n\nThe sample included 15 students in China, 13 in Japan, and 14 in Mongolia. Participants described different tool choices and language practices. Some Mongolian participants reported switching to English when local-language responses seemed less satisfactory; Japanese participants mainly described interaction in Japanese. Across settings, students reported checking accuracy and considering privacy, dependence, and the place of AI in their academic work.\n\nThese are situated self-reports, not representative national results or tests of model quality. The authors identify small institutional samples, translated corpora, and differences in interview timing and mode as limitations. The preprint has not established learning effects. Its central question is nevertheless practical: what additional work must a student perform before a technically available service becomes useful for a particular academic task?\n\nFor AIEDHK, an editorial proposal is to test a teaching tool through a complete multilingual activity. Students could choose a familiar language, ask for an explanation of a course concept, check the response against an authoritative class resource, and record any translation or reformulation needed. The evaluation would inspect that whole sequence rather than ending when the tool returns fluent text. This is a suggested pilot, not a learning intervention validated by the interviews.\n\nConsider an introductory economics explanation of opportunity cost. A student might understand an everyday example in Cantonese, need the formal term in English for the course, and submit an explanation in written Chinese. A useful test would examine whether meaning survives those transitions. A bilingual teacher could check whether the response quietly changes the choice being compared or introduces a culturally unfamiliar example. The student could identify which version helped and why, while retaining the original response so that corrections remain visible.\n\nThe resulting evidence could distinguish access, accuracy, language effort, and independent understanding. A platform might be easy to open yet require repeated translation before its content is usable. Another might be fluent in a preferred language but unreliable on a specialized concept. An unaided explanation after the activity could provide a separate check of what the student understood. Recording these dimensions separately would prevent a simple usage count from standing in for all of them, without presuming that more language switching is always harmful.\n\nInstitutions could also invite students to describe workarounds that routine analytics miss: consulting a classmate, comparing two language versions, or returning to a textbook. These reports would guide support and future evaluation, rather than rank language communities by ability or readiness. The preprint gives an initial vocabulary for asking such questions. A local programme would still need evidence from its own learners, subjects, and language combinations before claiming that a tool provides equitable educational support.",
+    "keyTakeaways": [
+      "The qualitative sample comprised 42 undergraduates across three individual university settings.",
+      "Students reported different tool and language strategies; these accounts do not establish national or model-performance rankings.",
+      "The preprint motivates local multilingual usability checks, while learning effects remain untested."
+    ],
+    "whyItMatters": "Language support affects the work required to use educational AI. Institutions can examine translation effort, factual accuracy, and independent understanding instead of assuming that account access provides equivalent support.",
+    "sourceUrl": "https://arxiv.org/abs/2610.05301",
+    "sourceUrls": [
+      {
+        "label": "Version 1 full text — 4 October 2026",
+        "url": "https://arxiv.org/pdf/2610.05301v1"
+      },
+      {
+        "label": "Preprint record — work in progress",
+        "url": "https://arxiv.org/abs/2610.05301"
+      }
+    ],
+    "createdAt": "2026-10-20",
+    "image": "/images/research/covers/aied-226-backfill.png",
+    "imageAlt": "An East Asian female university student and a South Asian male language tutor compare bilingual economics notes and two AI explanations in a sunlit campus language centre",
+    "summaryImage": "/images/research/summary/aied-226-backfill-summary.png",
+    "summaryImageAlt": "An East Asian female university student and a South Asian male language tutor compare bilingual economics notes and two AI explanations in a sunlit campus language centre",
+    "summaryAudio": "/audio/research/aied-226-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-227",
+    "slug": "news-gemini-interactive-apps-google-sites-drafts",
+    "title": "Product news: Gemini apps can move into private Google Sites drafts, adding a handoff point for classroom review",
+    "authors": [
+      "Google"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Gemini",
+      "Google Sites",
+      "interactive learning",
+      "student projects",
+      "publication review"
+    ],
+    "shortSummary": "Google's October 19 update lets users export interactive apps from Gemini into a new private Google Sites draft. This October 20 report examines the draft as a useful point for reviewing a classroom prototype before sharing it. Students could explain the app's intended behaviour, test a few consequential cases, and check the audience with their teacher. Export does not itself mean publication, and a functioning interactive demonstration does not establish either conceptual accuracy or student understanding.",
+    "fullSummary": "Google announced on October 19, 2026 that interactive apps created in Gemini could be exported to Google Sites as new private drafts. The update is available on web, Android, and iOS for eligible Workspace, Workspace Individual, and personal-account users with Gemini access. Sites must be enabled, and users must have permission to create and edit sites; existing Sites and Drive policies continue to apply. This October 20 report focuses on the handoff into a draft, before a person decides to publish and share it.\n\nFor a classroom project, that intermediate state could become an explicit review checkpoint. A student would first describe what the app is intended to help someone explore, which inputs it accepts, and what a correct result should look like. The teacher and peers could then test the prototype against that description. Keeping the learning purpose visible matters because an interactive interface can attract attention even when its underlying explanation is incomplete. This is a proposed teaching use of the export workflow, not evidence from a classroom evaluation of the release.\n\nConsider a student-built simulation comparing water use under different household choices. Before sharing it, students manually calculate a few examples with supplied fictional values and predict the results. They then check units, reset behaviour, and the handling of an unusual input. A classmate tries to explain the simulation's assumptions after using it. If the explanation differs from the authors' intention, the team can revise the labels, instructions, or model. The exercise gives the draft a clear purpose: revealing problems while revision remains part of the assignment.\n\nReview should also examine what the interaction encourages learners to notice. A slider may make change easy to see while hiding why two quantities are related. A student could therefore pair the app with a short explanation of the rule, an example worked without the interface, and a statement of where the model stops being appropriate. Peers could test whether changing one input produces the expected consequence. These activities assess the reasoning represented by the prototype, rather than rewarding complexity, animation, or the number of controls it contains.\n\nPublication introduces a separate audience decision. A teacher could ask students to identify the intended readers, remove unnecessary personal information, and check that the shared page contains the instructions and source acknowledgments needed by someone outside the group. They should open the result using an appropriate test role and device before assuming it is usable. A draft that works for its creator may still be unsuitable for its intended audience. The review is an educational proposal; the announcement does not claim that export automatically checks content quality or accessibility.\n\nThe new connection reduces a handoff between creating an interactive app and preparing a site, while preserving a draft stage where people can make deliberate choices. A small pilot could assess whether students can explain the model, identify a failure case, and justify what they choose to share. The evidence should include their reasoning as well as the finished page. Successful export establishes that an artifact reached another product; a publishable learning resource requires a separate judgment about its behaviour, explanation, audience, and instructional purpose.",
+    "keyTakeaways": [
+      "Gemini export creates a private Google Sites draft; publication remains a separate action.",
+      "The draft can serve as a checkpoint for checking model assumptions, calculations, and intended audience.",
+      "A working exported app is not by itself evidence of accurate teaching content or student understanding."
+    ],
+    "whyItMatters": "A clear draft stage gives teachers and learners a place to inspect an interactive project and explain its limitations before deciding how to share it.",
+    "sourceUrl": "https://workspaceupdates.googleblog.com/2026/10/publish-interactive-apps-from-gemini-app-to-Google-Sites.html",
+    "sourceUrls": [
+      {
+        "label": "Google Workspace Updates: Publish interactive apps from Gemini to Google Sites — October 19, 2026",
+        "url": "https://workspaceupdates.googleblog.com/2026/10/publish-interactive-apps-from-gemini-app-to-Google-Sites.html"
+      }
+    ],
+    "createdAt": "2026-10-20",
+    "image": "/images/research/covers/aied-227-backfill.png",
+    "imageAlt": "A Latina science teacher and a South Asian student compare a water-conservation activity prototype on a laptop with an annotated flow-diagram notebook, with a measuring jug apart from the computer",
+    "summaryImage": "/images/research/summary/aied-227-backfill-summary.png",
+    "summaryImageAlt": "A Latina science teacher and a South Asian student compare a water-conservation activity prototype on a laptop with an annotated flow-diagram notebook, with a measuring jug apart from the computer",
+    "summaryAudio": "/audio/research/aied-227-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
   }
 ];

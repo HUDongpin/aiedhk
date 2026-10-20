@@ -24,11 +24,11 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains 223 curated Research News items", () => {
+test("research news fallback contains 227 curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 223);
-  assert.equal(papers[0]?.slug, "news-chatgpt-live-1-1-multilingual-oral-practice");
+  assert.equal(papers.length, 227);
+  assert.equal(papers[0]?.slug, "news-gemini-interactive-apps-google-sites-drafts");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
@@ -36,6 +36,8 @@ test("research news fallback contains 223 curated Research News items", () => {
 test("the reviewed date backlog contains exactly one research paper and one clearly labeled product-news item per day", () => {
   const papers = getResearchPapers("en");
   const expectedByDate = new Map([
+    ["2026-10-20", ["aied-226", "aied-227"]],
+    ["2026-10-19", ["aied-224", "aied-225"]],
     ["2026-10-18", ["aied-222", "aied-223"]],
     ["2026-10-17", ["aied-220", "aied-221"]],
     ["2026-10-16", ["aied-218", "aied-219"]],
@@ -452,6 +454,10 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-227",
+      "aied-226",
+      "aied-225",
+      "aied-224",
       "aied-223",
       "aied-222",
       "aied-221",
@@ -699,7 +705,7 @@ test("all entries from aied-038 onward have non-empty local M4A audio", () => {
     return id >= 38;
   });
 
-  assert.equal(backlog.length, 186);
+  assert.equal(backlog.length, 190);
   const hashes = new Set<string>();
   for (const paper of backlog) {
     assert.ok(paper.summaryAudio, `${paper.id} should declare summary audio`);
@@ -709,7 +715,7 @@ test("all entries from aied-038 onward have non-empty local M4A audio", () => {
     assert.ok(audioBuffer.byteLength > 100_000, `${paper.summaryAudio} should contain audible narration`);
     hashes.add(createHash("sha256").update(audioBuffer).digest("hex"));
   }
-  assert.equal(hashes.size, 186, "all backlog narrations must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 190, "all backlog narrations must have unique SHA-256 hashes");
 });
 
 test("reviewed papers use human-reviewed translations when present and fall back to English otherwise", () => {

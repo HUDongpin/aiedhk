@@ -7,8 +7,8 @@ The starting production deployment is `dpl_C12hvV5ReUQsHF56qzoVUJmr46nM`, with t
 | Batch | Coverage dates | IDs | Expected live total | Status |
 |---|---|---|---:|---|
 | A | 14–15 October | 214–217 | 217 | Live and verified |
-| B | 16–18 October | 218–223 | 223 | In progress |
-| C | 19–20 October | 224–227 | 227 | Planned |
+| B | 16–18 October | 218–223 | 223 | Live and verified |
+| C | 19–20 October | 224–227 | 227 | In progress |
 
 Each article retains the existing 480–600-word English summary, three takeaways, educational relevance, a distinct photographic master copied to the two News image paths, and complete static English narration. Coverage dates use the existing owner-approved `createdAt` convention; release receipts record actual deployment times separately. Unreviewed locales retain the existing English fallback and do not claim localized audio.
 
@@ -19,3 +19,5 @@ Review and commit content, images and audio together. Run `npm run release:verif
 Local evidence, candidate drafts, prompts, audio receipts and release reports are retained outside Git under `tmp/backfill-20261020/`. This task does not restore the daily automation, send newsletters, change existing articles, fill the separate 22 August gap, or expand localization.
 
 Batch A reached READY on 20 October 2026 at 09:16:39 UTC (17:16:39 Hong Kong), deployment `dpl_7JW1tHHn2zMSGBmMvuxjhQwRSZQq`, committed revision `a28c53e3196b3f4be87a95d8f2e5e4875431318e`. Production verification confirmed 217 items, all 56 new localized detail routes, 12 static media files, four real initial audio play/pause checks, and all four listing images and stable identifiers on desktop and mobile. A supplemental browser navigation timed out; bounded image-decoding checks subsequently passed, with the original observation retained in local evidence.
+
+Batch B reached READY on 20 October 2026 at 10:18:16 UTC (18:18:16 Hong Kong), deployment `dpl_BVLNMXtKCbyuUpSLNt1PSFZjDWnW`, committed revision `6823c94a50ec1d1aa31e1c5199b7ec623fc6cccc`. Production verification confirmed 223 items, all 84 new localized detail routes, 18 static media files, six real initial audio play/pause checks, and all six cards and images on desktop and mobile. A temporary verifier incorrectly required each badge to start to the right of the card midpoint; the 220 badge missed that heuristic by 0.03125 CSS pixels while correctly aligning with the header right/top. Direct right/top/padding/bounds checks passed for all twelve viewport-card cases. Original observations and one recovered navigation timeout remain in local evidence; no production styling changed.

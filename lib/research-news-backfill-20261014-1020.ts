@@ -174,5 +174,272 @@ export const researchNewsBackfill20261014To1020: ResearchPaper[] = [
     "summaryImageAlt": "Three teachers discuss annotated history lesson and question cards on a sunlit staff-room pinboard, with a course outline on a tablet",
     "summaryAudio": "/audio/research/aied-217-backfill-summary.m4a",
     "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-218",
+    "slug": "research-blending-guidance-with-reflection-prompted-more-revisions-than-reflective-ai-feedback-alone",
+    "title": "Blending guidance with reflection prompted more revisions than reflective AI feedback alone",
+    "authors": [
+      "Omar Alsaiari",
+      "Nilufar Baghaei",
+      "Jason M. Lodge",
+      "Omid Noroozi",
+      "Dragan Gašević",
+      "Marie Boden",
+      "Hassan Khosravi"
+    ],
+    "venue": "Computers and Education: Artificial Intelligence",
+    "year": 2026,
+    "type": "journal",
+    "tags": [
+      "feedback design",
+      "student-generated resources",
+      "metacognition",
+      "programming education"
+    ],
+    "shortSummary": "A 12-week study followed 329 students receiving directive, reflective, or hybrid AI feedback while creating learning resources. Hybrid feedback had the highest observed content-revision rate, and both hybrid and directive feedback exceeded the reflective condition. Hybrid and directive conditions did not differ significantly from each other, and final resource quality showed no significant group difference. The study makes revision behavior visible while leaving deeper understanding and transfer unresolved.",
+    "fullSummary": "Omar Alsaiari and colleagues compared three AI feedback designs during a 12-week design and programming course involving 329 students. Learners created resources such as questions and explanatory notes in RiPPLE. The platform allocated students to directive, metacognitive, or hybrid conditions on first login. Feedback combined common summary and strengths sections with different suggestions: explicit guidance, reflective questions, or both.\n\nContent-revision rates were 21.1% for directive, 12.1% for metacognitive, and 27.5% for hybrid feedback, calculated over analyzed submission events. Both directive and hybrid conditions exceeded the metacognitive condition in adjusted comparisons. Hybrid did not significantly exceed directive feedback. Engagement time, confidence, and resource quality showed no statistically significant condition effects.\n\nThe authors identify a single course, high starting performance, behavioral proxies, and absent transfer evidence as limitations. Their analysis did not distinguish superficial edits from deeper changes. The study therefore supports a difference in observable revision behavior, without establishing that hybrid feedback produced superior understanding. A useful next question is what kinds of revision an educational activity should invite, and how a teacher could recognize them.\n\nFor AIEDHK, one editorial proposal is to let students author a practice question, receive a short correction plus a reasoning prompt, and then explain the revision to a peer. The correction could identify an ambiguous answer option; the prompt could ask why a learner with a particular misconception might select it. This combination is a suggested classroom design, not an intervention whose benefits were demonstrated by the paper. It would make the intended thinking task explicit before the teacher interprets a higher revision count.\n\nConsider a beginner programming question about a loop that stops too early. A directive comment might point to the boundary condition. A reflective question might ask the author to predict what happens when the input contains one item. Students could trace that case, revise their explanation, and add a contrasting case with no items. The teacher would then have three artifacts to inspect: the original question, the test reasoning, and the revision. Counting keystrokes or reopened drafts would not reveal whether the author understood the boundary.\n\nA small pilot could score revision depth using a few concrete criteria: whether the error was correctly diagnosed, whether the explanation now matches the code, and whether the new example discriminates between plausible answers. The same students could later solve a related question without feedback. That follow-up would address a different outcome from resource quality, while the peer explanation would help identify copied reasoning. Teachers would also need to allow a justified decision to keep an already sound question unchanged.\n\nFor developers, a useful evaluation dashboard could place revision frequency beside examples of what changed and a measure of independent performance. These indicators should remain separate because a system can stimulate activity without improving understanding. A more reflective message may also require time that is invisible in click data. The practical opportunity is to compare feedback designs against the learning task they are meant to support, then investigate the decisions behind both action and deliberate non-action.",
+    "keyTakeaways": [
+      "Observed content-revision rates were 27.5% hybrid, 21.1% directive, and 12.1% metacognitive.",
+      "Hybrid and directive feedback each exceeded metacognitive feedback; hybrid versus directive was not significant.",
+      "Resource quality and confidence did not differ significantly, and revision depth was not measured."
+    ],
+    "whyItMatters": "Teachers can test feedback designs against the kind of reasoning a task requires. More editing is useful evidence about behavior, but it does not alone establish better understanding.",
+    "sourceUrl": "https://doi.org/10.1016/j.caeai.2026.100553",
+    "sourceUrls": [
+      {
+        "label": "Publisher article",
+        "url": "https://www.sciencedirect.com/science/article/pii/S2666920X26000147"
+      },
+      {
+        "label": "Author institutional record and open-access copy",
+        "url": "https://research.wur.nl/en/publications/directive-metacognitive-or-a-blend-of-both-a-comparison-of-ai-gen/"
+      }
+    ],
+    "createdAt": "2026-10-16",
+    "image": "/images/research/covers/aied-218-backfill.png",
+    "imageAlt": "A Black male programming student and an East Asian female peer trace a loop on a small whiteboard while revising a printed multiple-choice question in a university maker room",
+    "summaryImage": "/images/research/summary/aied-218-backfill-summary.png",
+    "summaryImageAlt": "A Black male programming student and an East Asian female peer trace a loop on a small whiteboard while revising a printed multiple-choice question in a university maker room",
+    "summaryAudio": "/audio/research/aied-218-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-219",
+    "slug": "news-claude-code-review-general-availability-teaching",
+    "title": "Product news: Claude Code Review becomes generally available, making review decisions a teaching opportunity",
+    "authors": [
+      "Anthropic"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "Claude Code",
+      "code review",
+      "programming education",
+      "software testing",
+      "human judgment"
+    ],
+    "shortSummary": "Anthropic made Claude Code Review generally available for Team and Enterprise organizations on October 15. This October 16 report examines how programming courses might use automated findings as material for explanation and testing. A proposed review exercise asks students to reproduce a reported defect, defend or reject the diagnosis, and verify a correction. Faster product workflows do not establish stronger programming skills, and a completed automated review does not remove responsibility for the final code.",
+    "fullSummary": "Anthropic announced on October 15, 2026 that Claude Code Review had left research preview for Team and Enterprise organizations. Administrators enable it, connect the GitHub App, and select repositories; reviews then run on new pull requests. The announcement introduces repository-level choices for review depth and reports faster operation. Those are product capabilities and vendor performance claims. This October 16 report considers an educational use without interpreting them as evidence that students learn programming more effectively.\n\nIn a programming course, an automated review finding could become the beginning of an explanation task. Before changing the code, a student would state the circumstances under which the alleged defect occurs and predict an observable consequence. They would then construct the smallest example that tests that prediction. If the finding is mistaken, the student should explain why and identify the assumption that failed. This proposed exercise places responsibility for the diagnosis with the learner, even when a tool first draws attention to the issue.\n\nFor example, a team might build a classroom equipment-booking application with fictional users. A review could question whether two people can reserve the same item at once. Students would need to distinguish an interface warning from the underlying rule, reproduce a conflicting request, and explain how their correction protects that rule. A neat patch without the reproduction would leave an important part of the reasoning invisible. A test that passes only because the original requirement was weakened would not resolve the problem the students were asked to investigate.\n\nPeer discussion could add a second layer. One learner proposes the reproduction, another challenges whether it represents a real use case, and a third checks the proposed correction against the stated requirement. The final submission might include a brief decision record: the finding, the evidence examined, the chosen response, and a remaining uncertainty. Roles should rotate so that all students practise diagnosis and explanation. This is a suggested course design, not a study reported in Anthropic's announcement or a claim that automated comments reliably identify every consequential defect.\n\nInstructors would also need to choose what the tool is allowed to influence in an assessment. An exercise about understanding a known bug may permit automated review after an initial independent attempt. An examination of unaided debugging would require a different arrangement. The same product can fit these activities differently because their learning goals differ. Review speed, number of findings, and volume of corrected code should not automatically become grades; each can increase without demonstrating that the learner understands the behaviour being changed.\n\nThe general-availability release makes a managed review workflow available within the announced organizational plans. For educators considering a pilot, the useful question is whether students can turn its findings into justified, reproducible judgments. A small collection of prepared examples could reveal where learners can explain the trigger, where they need help, and where the tool's advice distracts them. Evaluate that work alongside an independent debugging task. The educational claim should follow the evidence collected about learners, while the product announcement remains evidence only for the service and its stated scope.",
+    "keyTakeaways": [
+      "Code Review is generally available for Claude Team and Enterprise organizations.",
+      "A reported defect can prompt a learning task: reproduce it, explain the trigger, and test the correction.",
+      "Vendor workflow improvements and automated review completion do not demonstrate student mastery."
+    ],
+    "whyItMatters": "When AI helps write and review code, programming assessment can focus on whether students can defend a diagnosis and demonstrate that a correction preserves the original requirement.",
+    "sourceUrl": "https://claude.com/resources/articles/code-review-is-now-generally-available",
+    "sourceUrls": [
+      {
+        "label": "Anthropic: Code Review is now generally available — October 15, 2026",
+        "url": "https://claude.com/resources/articles/code-review-is-now-generally-available"
+      }
+    ],
+    "createdAt": "2026-10-16",
+    "image": "/images/research/covers/aied-219-backfill.png",
+    "imageAlt": "A South Asian programming lecturer and a white student test a small equipment-booking application beside handwritten bug-reproduction steps in a warm computer classroom",
+    "summaryImage": "/images/research/summary/aied-219-backfill-summary.png",
+    "summaryImageAlt": "A South Asian programming lecturer and a white student test a small equipment-booking application beside handwritten bug-reproduction steps in a warm computer classroom",
+    "summaryAudio": "/audio/research/aied-219-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-220",
+    "slug": "research-project-scores-improved-with-teacher-and-ai-feedback-in-a-structured-university-course",
+    "title": "Project scores improved with teacher and AI feedback in a structured university course",
+    "authors": [
+      "Valentina Grion",
+      "Beatrice Doria",
+      "Daniele Agostini",
+      "Giorgia Slaviero"
+    ],
+    "venue": "Assessment & Evaluation in Higher Education",
+    "year": 2026,
+    "type": "journal",
+    "tags": [
+      "teacher education",
+      "assessment design",
+      "project-based learning",
+      "feedback comparison"
+    ],
+    "shortSummary": "A University of Padua study compared two AI feedback systems with teacher feedback in a course involving 238 students. Forty-seven project groups entered the final analysis, and average project scores rose from 23.81 to 27.70 out of 30. The study found bounded evidence of comparability between sources, alongside a substantial ceiling effect. Its results concern a shared assessment design and revised projects, rather than proving general interchangeability between teachers and AI.",
+    "fullSummary": "Valentina Grion and colleagues compared teacher feedback with two AI systems in a University of Padua assessment course involving 238 students. Forty-seven project groups entered the analysis. The course used explicit assessment criteria, and students were unaware of their feedback source. The paper labels the systems GPT-o4-mini and DeepSeek R1. Two instructors jointly supplied human feedback and scored projects while blinded to condition and stage.\n\nAverage project scores increased from 23.81 to 27.70 on a 30-point scale. Within a predefined one-point margin, the GPT-o4-mini comparison met equivalence criteria; DeepSeek R1 met non-inferiority criteria without establishing equivalence. The authors emphasize that 91% of groups scored at least 27 after feedback, leaving limited headroom for detecting differences.\n\nThe small group-level sample and ceiling effect constrain interpretation. Prior AI experience was not collected, and the design could not isolate the contribution of individual teaching components. Improvement on revised projects does not establish the same improvement on later independent tasks. These results concern the studied assessment arrangement, not a general finding that any AI output can replace a teacher’s feedback.\n\nFor AIEDHK, the editorial implication is to make the assessment arrangement concrete before testing a feedback provider. A teacher education team could first agree on what a strong lesson plan must demonstrate: alignment between objectives and activities, credible evidence of pupil understanding, and a workable response when learners struggle. They could then select examples illustrating different quality levels. This proposed preparation would provide a shared basis for examining generated comments; it has not been separately validated by the reported comparison.\n\nA possible pilot would ask groups to design a lesson about comparing fractions. Feedback might identify a mismatch between a visual model and the intended concept. Reviewers would check whether the comment correctly locates the mismatch and suggests something the group can implement. Students would retain their original plan and explain how the revision changes the learning opportunity. A discussion about the exact teaching decision could reveal more than a generic judgment that the feedback was fluent, friendly, or sufficiently detailed.\n\nEvaluation should also leave room for differences to appear. If almost every project receives a score near the top, a team could add a separate transfer task or a more discriminating criterion while preserving a fair grading process. It should decide in advance what difference would matter educationally, rather than treating an inconclusive statistical comparison as equivalence. Time spent checking comments, errors requiring correction, and students’ ability to justify their lesson choices would be useful additional observations in such a local pilot.\n\nThe teacher’s role in this proposal includes setting the standard, examining difficult cases, and deciding when a student needs dialogue beyond a written comment. An AI system could be evaluated as one contributor within that arrangement. Its usefulness would depend on how reliably it supports the intended task under local conditions. The published comparison gives institutions a reason to investigate this possibility carefully, while the next independent performance and the quality of human oversight remain questions for local evidence.",
+    "keyTakeaways": [
+      "Forty-seven groups’ mean project scores rose from 23.81 to 27.70 out of 30.",
+      "Equivalence and non-inferiority were tested against a predefined one-point margin, with different conclusions for the two systems.",
+      "A strong ceiling effect and small group sample limit what similar project scores establish."
+    ],
+    "whyItMatters": "A feedback tool should be evaluated together with clear criteria, task design, and opportunities to revise. Comparability in one structured course does not establish general substitutability for teachers.",
+    "sourceUrl": "https://doi.org/10.1080/02602938.2026.2697962",
+    "sourceUrls": [
+      {
+        "label": "Open-access publisher full text — 8 July 2026",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/02602938.2026.2697962"
+      },
+      {
+        "label": "Author institutional record",
+        "url": "https://iris.unitn.it/handle/11572/494590"
+      }
+    ],
+    "createdAt": "2026-10-17",
+    "image": "/images/research/covers/aied-220-backfill.png",
+    "imageAlt": "A White woman teacher educator and a Black female trainee review an annotated lesson-planning notebook and a marked assessment rubric beside an equivalent-fractions classroom diagram",
+    "summaryImage": "/images/research/summary/aied-220-backfill-summary.png",
+    "summaryImageAlt": "A White woman teacher educator and a Black female trainee review an annotated lesson-planning notebook and a marked assessment rubric beside an equivalent-fractions classroom diagram",
+    "summaryAudio": "/audio/research/aied-220-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-221",
+    "slug": "news-chatgpt-slides-space-shared-editing",
+    "title": "Product news: ChatGPT Slides brings shared editing into Space, inviting closer review of group presentations",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "ChatGPT Slides",
+      "ChatGPT Space",
+      "collaborative learning",
+      "presentations",
+      "evidence review"
+    ],
+    "shortSummary": "ChatGPT Slides began rolling out on October 16 to eligible Pro, Business, and Enterprise users with Space access. Its shared editing workflow gives education teams a new setting for reviewing a presentation together. Reported here on October 17, the relevant change is collaboration inside ChatGPT Space. A proposed seminar activity asks students to connect slide claims to evidence, record consequential revisions, and explain the finished argument individually, keeping presentation quality separate from demonstrated understanding.",
+    "fullSummary": "OpenAI's October 16, 2026 release notes describe the rollout of ChatGPT Slides to eligible Pro, Business, and Enterprise users with Space access on web and desktop. The feature supports real-time work on a shared deck and shared comments. The accompanying product page describes direct editing, AI-assisted changes, and presentation or export options. This October 17 report focuses on the new collaborative workflow inside Space; it is distinct from the previously reported PowerPoint add-in and Anthropic's separate slide tools.\n\nFor a group assignment, the central educational question is who can explain and defend the presentation. A deck may contain contributions from several students and an assistant, while the final visual style makes them look uniform. An instructor could therefore ask the group to identify the evidence for each major claim and describe the decisions behind two substantial revisions. This would give reviewers something more specific to examine than a general statement that the team used AI responsibly. The proposal does not assume that the software automatically records authorship in an assessment-ready form.\n\nConsider a seminar in which students present a small, teacher-provided environmental dataset. One student checks units and chart axes, another checks the relationship between the data and the spoken conclusion, and another looks for omitted uncertainty. They discuss disputed changes before accepting them into the shared deck. A shortened sentence should still express what the evidence supports. If a visually attractive chart suggests a trend that the underlying values do not justify, the group should revise the chart and explain the problem in their own words.\n\nThe presentation could then undergo a deliberately focused peer review. Reviewers receive one question: which slide contains a claim that they cannot trace to the supplied evidence? The authors respond by improving the explanation, adding the missing support, or removing the claim. A separate round can address visual legibility and navigation. Keeping those rounds explicit helps the teacher see whether the group improved the argument, improved its appearance, or both. These are suggested assessment activities, not outcomes demonstrated by the product announcement.\n\nIndividual understanding still needs its own opportunity to appear. After the group presentation, each student could explain a selected chart without the deck, respond to a changed assumption, or identify a conclusion the data cannot support. The task need not reproduce every production step; it should test the reasoning the course intends students to learn. A shared artifact can be useful evidence of collective work while remaining insufficient evidence of each member's understanding, especially when an assistant helped reorganize or rewrite the content.\n\nFor institutions, a sensible pilot would start with an eligible teaching team and a bounded presentation task, then examine access, revision decisions, and the quality of students' explanations. The announced plan and Space requirements should be checked before making participation compulsory. Exported presentations should also be reviewed in the format students will actually present. The release offers another place to create and revise together; its educational value will depend on the assignment's demands for evidence, explanation, and individual accountability, rather than on the polish of the finished slides alone.",
+    "keyTakeaways": [
+      "The new event is collaborative Slides inside ChatGPT Space, with eligibility and rollout limits.",
+      "Group review can inspect evidence and reasoning separately from visual presentation.",
+      "Individual explanations remain necessary when assessing understanding behind a shared deck."
+    ],
+    "whyItMatters": "Shared editing can support a reviewable group process when an assignment requires students to justify changes and defend the final argument themselves.",
+    "sourceUrl": "https://chatgpt.com/features/slides/",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: ChatGPT Slides product page",
+        "url": "https://chatgpt.com/features/slides/"
+      },
+      {
+        "label": "OpenAI: ChatGPT release notes — October 16, 2026",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      }
+    ],
+    "createdAt": "2026-10-17",
+    "image": "/images/research/covers/aied-221-backfill.png",
+    "imageAlt": "Three university students of Black, East Asian, and White backgrounds compare a projected data slide with a marked-up source chart in an evening campus seminar",
+    "summaryImage": "/images/research/summary/aied-221-backfill-summary.png",
+    "summaryImageAlt": "Three university students of Black, East Asian, and White backgrounds compare a projected data slide with a marked-up source chart in an evening campus seminar",
+    "summaryAudio": "/audio/research/aied-221-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-222",
+    "slug": "research-a-sri-lankan-case-study-shows-ai-assessment-adoption-progressing-unevenly-across-academic-work",
+    "title": "A Sri Lankan case study found AI use varied across assessment functions",
+    "authors": [
+      "Amali Henadirage",
+      "B. T. K. Chathuranga",
+      "Nuwan Gunarathne"
+    ],
+    "venue": "International Journal of Educational Technology in Higher Education",
+    "year": 2026,
+    "type": "journal",
+    "tags": [
+      "assessment governance",
+      "management education",
+      "Sri Lanka",
+      "teacher practice"
+    ],
+    "shortSummary": "A qualitative case study at one Sri Lankan management faculty examined AI use across assessment design, administration, grading, and feedback. Fifteen interviews with nine academics, supported by documents, indicated more developed use in designing assessments than in grading or feedback. The evidence was collected in 2024 and published in 2026. It describes local practice and professional pressures, while leaving student learning effects and national patterns outside the study’s reach.",
+    "fullSummary": "Amali Henadirage, B. T. K. Chathuranga, and Nuwan Gunarathne studied AI assessment practices at a management faculty in Sri Lanka. Their evidence included 15 interviews with nine academics and document analysis, collected between April and June 2024. Published in January 2026, the paper examines how adoption differed across parts of academic work, rather than measuring an AI intervention’s effect on student attainment.\n\nThe researchers interpreted reported practices using the SAMR model and institutional theory. They found more developed AI use in assessment design and setting, while grading and feedback largely remained at a substitution level. Professional expectations and norms were identified as a prominent adoption driver. The interviews also described concerns about contextual understanding, accuracy, and institutional support.\n\nThis is a single-faculty qualitative case, with purposively selected academics who already used ChatGPT. It cannot estimate national adoption rates or establish learning benefits. The accounts also describe an earlier period of rapidly changing technology. Their value is a detailed example of uneven adoption: a department can use AI to prepare questions while maintaining quite different practices for deciding grades.\n\nFor AIEDHK, an editorial governance proposal is to document AI use by assessment function. A faculty team could separately record who drafts a question, checks its disciplinary accuracy, approves the task, evaluates responses, and resolves disputed judgments. That exercise would avoid treating the whole process as a single yes-or-no adoption decision. It would also make clear where responsibility sits when an apparently small drafting aid begins influencing what students are asked to demonstrate. This proposal is not an intervention evaluated in the study.\n\nConsider a management lecturer preparing a case about a small firm’s inventory decision. An AI tool could suggest alternative scenarios, but a subject specialist would still need to verify that the numbers and constraints make sense. A colleague could then test whether the marking criteria reward the intended reasoning. If the same tool later drafts comments on student submissions, that would introduce a separate use requiring its own review. Approval to brainstorm a case would not automatically answer questions about the quality of generated judgments.\n\nProfessional development could use that concrete workflow as a discussion object. Academics could bring one draft task, explain where assistance entered, and show the changes made after checking it. A peer might identify an implausible business assumption or a criterion that accidentally rewards polished prose over analysis. Recording the issue and resolution would create a practical teaching resource. It would not prove that the revised task improves learning, but it would let a department inspect the basis for its assessment decisions.\n\nA local evaluation could then examine a small set of outcomes: question accuracy, alignment with course objectives, consistency of marking, student understanding of expectations, and staff review time. It should keep those measures distinct from tool-use frequency or enthusiasm. The study’s case encourages institutions to ask which part of assessment is changing and why. The proposed response is a more explicit account of academic responsibility, followed by evidence about the particular task and students affected.",
+    "keyTakeaways": [
+      "The case combined 15 interviews with nine academics and documents collected in 2024.",
+      "AI adoption differed between assessment design, grading, and feedback, with professional norms a prominent reported driver.",
+      "One faculty’s qualitative evidence cannot establish national adoption patterns or student learning effects."
+    ],
+    "whyItMatters": "Universities can make more precise decisions by examining each assessment function separately. The relevant question is which academic judgment a tool influences, who checks it, and what evidence supports the resulting task.",
+    "sourceUrl": "https://doi.org/10.1186/s41239-026-00578-w",
+    "sourceUrls": [
+      {
+        "label": "Open-access publisher full text — 27 January 2026",
+        "url": "https://link.springer.com/article/10.1186/s41239-026-00578-w"
+      }
+    ],
+    "createdAt": "2026-10-18",
+    "image": "/images/research/covers/aied-222-backfill.png",
+    "imageAlt": "A Sri Lankan management lecturer and a White female colleague review a small-business inventory case, a simple stock chart, and marking criteria in a bright faculty meeting room",
+    "summaryImage": "/images/research/summary/aied-222-backfill-summary.png",
+    "summaryImageAlt": "A Sri Lankan management lecturer and a White female colleague review a small-business inventory case, a simple stock chart, and marking criteria in a bright faculty meeting room",
+    "summaryAudio": "/audio/research/aied-222-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
+  },
+  {
+    "id": "aied-223",
+    "slug": "news-chatgpt-live-1-1-multilingual-oral-practice",
+    "title": "Product news: ChatGPT Voice adds GPT-Live-1.1 and multilingual voices, raising practical questions for oral practice",
+    "authors": [
+      "OpenAI"
+    ],
+    "venue": "AI Product and Learning Report",
+    "year": 2026,
+    "type": "policy-ethics",
+    "tags": [
+      "product news",
+      "ChatGPT Voice",
+      "GPT-Live-1.1",
+      "language education",
+      "oral practice",
+      "learner choice"
+    ],
+    "shortSummary": "OpenAI's October 15 update introduces GPT-Live-1.1 and Quip to ChatGPT Voice with additional language-specific voices. Availability varies by region and account. This October 18 report considers a bounded oral-practice activity in which learners choose a useful speaking situation, clarify misunderstandings, and later repeat the task with a person. A more natural voice can change the experience of practice, but neither its accent nor a smooth conversation establishes that the learner's language ability has improved.",
+    "fullSummary": "OpenAI began rolling out GPT-Live-1.1 and GPT-Live-1.1 Quip in ChatGPT Voice on October 15, 2026, alongside additional voices for several languages. The company describes more natural accents, while warning that available voices vary by region and account. This October 18 report concerns that update, rather than the earlier GPT-Live launch or its API release. The accompanying Voice documentation also makes access dependent on factors including plan and workspace settings, so a classroom should check the experience available to its own users.\n\nFor language educators, a useful pilot would begin with a communication goal rather than a preferred synthetic accent. A learner might practise requesting clarification, explaining a timetable change, or politely disagreeing with a proposed plan. The teacher could define success as making the intended meaning understandable and responding appropriately to a follow-up question. That leaves room for different voices and speaking styles without treating resemblance to one model voice as the objective. These are proposed assessment choices, not learning effects established by OpenAI's release.\n\nConsider an activity about planning a group excursion. The learner prepares three constraints, such as a departure time, a budget, and an accessibility need, using fictional details. During practice, they must explain the constraints and notice when the assistant proposes something inconsistent with them. Afterwards, they describe one misunderstanding and how they repaired it. The educational focus is on communication and checking meaning. A conversation that sounds agreeable throughout may be less revealing than a short exchange in which the learner successfully identifies and resolves a specific problem.\n\nIn a local pilot, a teacher could check which pacing and response-style adjustments the available Voice experience supports before assigning an activity. Learners could then discuss which adjustment makes the task workable and which removes a challenge they want to practise. They should have a way to pause, prepare, or choose another participation format. The purpose of the proposed exercise is deliberate practice, with flexible participation and no assumption that every account provides identical controls.\n\nEvaluation should include a change of partner and context. After assisted rehearsal, two learners could complete a related task together using new constraints. A teacher might look for whether each person asks a needed question, explains a decision, and recovers from a misunderstanding. The comparison would need careful design before it could support any claim of improvement, but even a small classroom review can show whether the intended behaviour actually occurs. Satisfaction with a voice and successful task completion should be recorded separately from an independent judgment of language performance.\n\nThe product update expands the options educators may encounter when designing oral activities. It does not supply a language curriculum, an impartial pronunciation standard, or evidence that a particular voice improves proficiency. A bounded trial can instead make learner choice and communication goals explicit, check the settings available in the local environment, and retain only the evidence needed for the teaching question. The most useful outcome would be a clearer account of what learners can communicate beyond the AI conversation and where they still want support.",
+    "keyTakeaways": [
+      "GPT-Live-1.1 and additional voices are rolling out with account and regional differences.",
+      "Design oral tasks around intended meaning and repairing misunderstandings rather than imitating one accent.",
+      "Check performance with a new partner or task before inferring learning from a fluent AI conversation."
+    ],
+    "whyItMatters": "Voice options matter most when learners can use them to practise a defined communicative purpose and demonstrate that skill beyond the rehearsal setting.",
+    "sourceUrl": "https://help.openai.com/en/articles/20001274-chatgpt-voice",
+    "sourceUrls": [
+      {
+        "label": "OpenAI: ChatGPT Voice documentation",
+        "url": "https://help.openai.com/en/articles/20001274-chatgpt-voice"
+      },
+      {
+        "label": "OpenAI: GPT-Live-1.1 release entry — October 15, 2026",
+        "url": "https://help.openai.com/en/articles/6825453-chatgpt-release-notes"
+      }
+    ],
+    "createdAt": "2026-10-18",
+    "image": "/images/research/covers/aied-223-backfill.png",
+    "imageAlt": "A Korean adult learner and a Black language tutor practise an excursion-planning conversation with a tablet and a clearly sketched route map in a sunny language studio",
+    "summaryImage": "/images/research/summary/aied-223-backfill-summary.png",
+    "summaryImageAlt": "A Korean adult learner and a Black language tutor practise an excursion-planning conversation with a tablet and a clearly sketched route map in a sunny language studio",
+    "summaryAudio": "/audio/research/aied-223-backfill-summary.m4a",
+    "summaryAudioTitle": "Listen to the summary"
   }
 ];

@@ -1,3 +1,4 @@
+import { researchNewsBackfill20261014To1020 } from "@/lib/research-news-backfill-20261014-1020";
 import { researchNewsBackfill20260824To1013 } from "@/lib/research-news-backfill-20260824-1013";
 import type { ResearchPaper } from "@/lib/types";
 import { researchNewsCommentary20260907 } from "@/lib/research-news-commentary-20260907";
@@ -14,6 +15,7 @@ import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill
 import { researchNewsBackfill20260811To0821 } from "@/lib/research-news-backfill-20260811-0821";
 
 const reviewedResearchPaperSource: ResearchPaper[] = [
+  ...researchNewsBackfill20261014To1020,
   ...researchNewsBackfill20260824To1013,
   ...researchNewsCommentary20260907,
   {

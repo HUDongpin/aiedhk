@@ -7,7 +7,7 @@ import { getAcademyLessons } from "@/lib/academy-data";
 
 export const revalidate = 3600;
 
-const STATIC_PATHS = ["", "/mission", "/news", "/academy", "/about"] as const;
+const STATIC_PATHS = ["", "/mission", "/news", "/academy", "/about", "/privacy", "/disclosure"] as const;
 
 export interface SitemapArticle {
   slug: string;

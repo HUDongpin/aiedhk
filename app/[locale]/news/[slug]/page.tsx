@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ArticleMonetization from "@/components/ArticleMonetization";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import ResearchCard from "@/components/ResearchCard";
@@ -201,6 +202,7 @@ export default async function ResearchDetailPage({ params }: ResearchDetailPageP
             </div>
           </aside>
         </div>
+        <ArticleMonetization locale={typedLocale} section="news" slug={paper.slug} />
       </article>
 
       <section className="bg-white/72 py-16">

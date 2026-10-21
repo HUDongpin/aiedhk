@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import CTA from "@/components/CTA";
+import HomeAd from "@/components/HomeAd";
+import { getMonetizationConfig } from "@/lib/monetization";
 import { getDictionary, isLocale, type Locale } from "@/lib/i18n";
 
 interface HomePageProps {
@@ -13,6 +15,7 @@ export default async function HomePage({ params }: HomePageProps) {
   if (!isLocale(locale)) notFound();
   const typedLocale = locale as Locale;
   const dictionary = getDictionary(typedLocale);
+  const monetization = getMonetizationConfig();
 
   const cardLinks = [`/${typedLocale}/mission`, `/${typedLocale}/news`, `/${typedLocale}/about`];
   return (
@@ -67,6 +70,8 @@ export default async function HomePage({ params }: HomePageProps) {
           </Link>
         ))}
       </section>
+
+      {monetization.ads ? <HomeAd config={monetization.ads} locale={typedLocale} /> : null}
 
       <section className="container-page grid gap-6 py-16 lg:grid-cols-2">
         <div className="rounded-4xl border border-slate-200 bg-white p-8 shadow-card">

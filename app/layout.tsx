@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/next";
 import BackToTopArrow from "@/components/BackToTopArrow";
 import "./globals.css";
+import { getMonetizationConfig } from "@/lib/monetization";
+
+const publisherId = getMonetizationConfig().publisherId;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aied.hk"),
@@ -14,6 +17,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/favicon.svg",
   },
+  ...(publisherId ? { other: { "google-adsense-account": publisherId } } : {}),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

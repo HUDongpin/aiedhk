@@ -43,6 +43,8 @@ npm run start
 
 ## Environment variables
 
+Optional reader support, a single home-page AdSense unit, and reviewed Gamma affiliate recommendations are disabled by default. Setup, public configuration names, privacy choices, external account prerequisites and the 30-day evaluation are documented in [the monetization launch guide](docs/monetization-launch.md).
+
 The research newsletter trial is runnable when a Postgres database is attached through Vercel Marketplace, Neon, Supabase, or another Postgres provider that exposes `DATABASE_URL`.
 
 ```bash

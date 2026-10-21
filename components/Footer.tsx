@@ -1,10 +1,14 @@
 import Link from "next/link";
 import type { Dictionary, Locale } from "@/lib/i18n";
 import Logo from "./Logo";
+import SupportButton from "./SupportButton";
+import { getMonetizationConfig, type MonetizationConfig } from "@/lib/monetization";
+import { monetizationCopy } from "@/lib/monetization-copy";
 
 interface FooterProps {
   locale: Locale;
   dictionary: Dictionary;
+  monetization?: MonetizationConfig;
 }
 
 const ecosystemLinks = [
@@ -14,7 +18,8 @@ const ecosystemLinks = [
   { label: "CAIS", href: "https://www.cais.hk" },
 ];
 
-export default function Footer({ locale, dictionary }: FooterProps) {
+export default function Footer({ locale, dictionary, monetization = getMonetizationConfig() }: FooterProps) {
+  const copy = monetizationCopy[locale];
   const navItems = [
     { href: `/${locale}`, label: dictionary.nav.home },
     { href: `/${locale}/mission`, label: dictionary.nav.mission },
@@ -29,6 +34,7 @@ export default function Footer({ locale, dictionary }: FooterProps) {
         <div>
           <Logo locale={locale} />
           <p className="mt-5 max-w-md text-sm leading-7 text-aied-muted">{dictionary.footer.description}</p>
+          {monetization.support ? <div className="mt-5"><SupportButton locale={locale} support={monetization.support} trackClicks={monetization.trackClicks} placement="footer" /></div> : null}
         </div>
         <div>
           <h3 className="text-sm font-black uppercase tracking-[0.18em] text-aied-ink">{dictionary.footer.navigation}</h3>
@@ -51,7 +57,12 @@ export default function Footer({ locale, dictionary }: FooterProps) {
           </div>
         </div>
       </div>
-      <div className="border-t border-slate-100 py-5 text-center text-xs font-medium text-slate-500">
+      <div className="border-t border-slate-100 px-4 py-5 text-center text-xs font-medium text-slate-500">
+        <div className="mb-4 flex flex-wrap justify-center gap-x-6 gap-y-3">
+          <Link href={`/${locale}/privacy`} className="focus-ring underline underline-offset-4">{copy.privacyTitle}</Link>
+          <Link href={`/${locale}/disclosure`} className="focus-ring underline underline-offset-4">{copy.disclosureTitle}</Link>
+          {monetization.ads ? <a href={`/${locale}?privacy=1#home-ad`} className="focus-ring underline underline-offset-4">{copy.privacyChoices}</a> : null}
+        </div>
         {dictionary.footer.copyright}
       </div>
     </footer>

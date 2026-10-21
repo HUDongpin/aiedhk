@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import ArticleMonetization from "@/components/ArticleMonetization";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -92,6 +93,7 @@ export default async function AcademyDetailPage({ params }: AcademyDetailPagePro
           <div className="rounded-4xl border border-slate-200 bg-white p-7 shadow-card"><h2 className="text-xl font-black tracking-tight text-aied-ink">{dictionary.academy.relatedConcepts}</h2><div className="mt-4 flex flex-wrap gap-2" lang={presentation.contentHtmlLang} dir={presentation.contentDir}>{lesson.relatedConcepts.map((concept) => <span key={concept} className="rounded-full bg-aied-soft px-3 py-1.5 text-sm font-bold text-aied-blue">{concept}</span>)}</div></div>
         </aside>
       </div>
+      <ArticleMonetization locale={typedLocale} section="academy" slug={lesson.slug} />
     </article>
     <section className="bg-white/72 py-16"><div className="container-page"><h2 className="text-3xl font-black tracking-tight text-aied-ink">{dictionary.academy.relatedLessons}</h2><div className="mt-8 grid gap-6">{related.map((item) => <AcademyCard key={item.id} lesson={item} locale={typedLocale} dictionary={dictionary} />)}</div></div></section>
   </div>;

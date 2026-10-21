@@ -6,6 +6,7 @@ import HtmlLangSync from "@/components/HtmlLangSync";
 import JsonLd from "@/components/JsonLd";
 import { getDictionary, getLocaleMeta, isLocale, locales, type Locale } from "@/lib/i18n";
 import { organizationJsonLd, webSiteJsonLd } from "@/lib/structured-data";
+import { getMonetizationConfig } from "@/lib/monetization";
 
 interface LocaleLayoutProps {
   children: React.ReactNode;
@@ -50,14 +51,15 @@ export default async function LocaleLayout({ children, params }: LocaleLayoutPro
   const typedLocale = locale as Locale;
   const dictionary = getDictionary(typedLocale);
   const meta = getLocaleMeta(typedLocale);
+  const monetization = getMonetizationConfig();
 
   return (
     <div lang={meta.htmlLang} dir={meta.dir}>
       <HtmlLangSync lang={meta.htmlLang} dir={meta.dir} />
       <JsonLd data={[organizationJsonLd(), webSiteJsonLd()]} />
-      <Header locale={typedLocale} dictionary={dictionary} />
+      <Header locale={typedLocale} dictionary={dictionary} support={monetization.support} trackClicks={monetization.trackClicks} />
       <main>{children}</main>
-      <Footer locale={typedLocale} dictionary={dictionary} />
+      <Footer locale={typedLocale} dictionary={dictionary} monetization={monetization} />
     </div>
   );
 }

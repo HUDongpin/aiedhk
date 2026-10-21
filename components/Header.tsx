@@ -7,10 +7,14 @@ import { localeMeta, type Dictionary, type Locale } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Logo from "./Logo";
+import SupportButton from "./SupportButton";
+import type { SupportConfig } from "@/lib/monetization";
 
 interface HeaderProps {
   locale: Locale;
   dictionary: Dictionary;
+  support?: SupportConfig | null;
+  trackClicks?: boolean;
 }
 
 function LanguageSwitcherFallback({ locale }: { locale: Locale }) {
@@ -41,7 +45,7 @@ function normalizePath(path: string) {
   return path.replace(/\/$/, "") || "/";
 }
 
-export default function Header({ locale, dictionary }: HeaderProps) {
+export default function Header({ locale, dictionary, support = null, trackClicks = false }: HeaderProps) {
   const [open, setOpen] = useState(false);
   const pathname = usePathname();
   const navItems = [
@@ -89,6 +93,7 @@ export default function Header({ locale, dictionary }: HeaderProps) {
           })}
         </nav>
         <div className="hidden items-center gap-3 lg:flex">
+          <SupportButton locale={locale} support={support} trackClicks={trackClicks} />
           <HeaderLanguageSwitcher locale={locale} />
         </div>
         <button
@@ -125,6 +130,7 @@ export default function Header({ locale, dictionary }: HeaderProps) {
           <div className="pt-2">
             <HeaderLanguageSwitcher locale={locale} align="left" />
           </div>
+          <SupportButton locale={locale} support={support} trackClicks={trackClicks} placement="mobile-menu" />
         </div>
       </div>
     </header>

@@ -31,6 +31,7 @@ export default function LanguageSwitcher({ locale, align = "right" }: LanguageSw
   const [open, setOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
   const currentMeta = localeMeta[locale];
+  const resolvedAlign = currentMeta.dir === "rtl" ? (align === "left" ? "right" : "left") : align;
 
   useEffect(() => {
     if (!open) return;
@@ -73,7 +74,7 @@ export default function LanguageSwitcher({ locale, align = "right" }: LanguageSw
       <div
         className={cn(
           "absolute z-[60] mt-3 w-max min-w-full max-w-[calc(100vw-2rem)] rounded-3xl border border-slate-200 bg-white p-2 shadow-[0_24px_70px_rgba(15,23,42,0.16)] transition",
-          align === "left" ? "left-0 origin-top-left" : "right-0 origin-top-right",
+          resolvedAlign === "left" ? "left-0 origin-top-left" : "right-0 origin-top-right",
           open ? "scale-100 opacity-100" : "pointer-events-none scale-95 opacity-0"
         )}
         role="listbox"

@@ -9,14 +9,29 @@ function localPublicPath(path: string) {
   return join(process.cwd(), "public", path);
 }
 
-function pngDimensions(path: string) {
+function bitmapDimensions(path: string) {
   const buffer = readFileSync(path);
-  assert.equal(buffer.toString("ascii", 1, 4), "PNG", `${path} should be a PNG file`);
-  assert.equal(buffer.readUInt32BE(12), 0x49484452, `${path} should include a PNG IHDR chunk`);
+  if (buffer.toString("ascii", 1, 4) === "PNG") {
+    assert.equal(buffer.readUInt32BE(12), 0x49484452, `${path} should include a PNG IHDR chunk`);
+    return { width: buffer.readUInt32BE(16), height: buffer.readUInt32BE(20) };
+  }
+
+  assert.equal(buffer.toString("ascii", 0, 4), "RIFF", `${path} should be a PNG or WebP bitmap`);
+  assert.equal(buffer.toString("ascii", 8, 12), "WEBP", `${path} should have a WebP signature`);
+  const chunk = buffer.toString("ascii", 12, 16);
+  if (chunk === "VP8X") {
+    return { width: buffer.readUIntLE(24, 3) + 1, height: buffer.readUIntLE(27, 3) + 1 };
+  }
+  if (chunk === "VP8L") {
+    const packed = buffer.readUInt32LE(21);
+    return { width: (packed & 0x3fff) + 1, height: ((packed >>> 14) & 0x3fff) + 1 };
+  }
+  assert.equal(chunk, "VP8 ", `${path} should have a supported WebP image chunk`);
+  assert.equal(buffer.toString("hex", 23, 26), "9d012a", `${path} should have a VP8 frame header`);
 
   return {
-    width: buffer.readUInt32BE(16),
-    height: buffer.readUInt32BE(20),
+    width: buffer.readUInt16LE(26) & 0x3fff,
+    height: buffer.readUInt16LE(28) & 0x3fff,
   };
 }
 
@@ -24,18 +39,21 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains 227 curated Research News items", () => {
+test("research news fallback contains 233 curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 227);
-  assert.equal(papers[0]?.slug, "news-gemini-interactive-apps-google-sites-drafts");
+  assert.equal(papers.length, 233);
+  assert.equal(papers[0]?.slug, "news-claude-security-continuous-review-education");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
 
-test("the reviewed date backlog contains exactly one research paper and one clearly labeled product-news item per day", () => {
+test("the reviewed date backlog contains exactly one research paper and one clearly labeled product or industry news item per day", () => {
   const papers = getResearchPapers("en");
   const expectedByDate = new Map([
+    ["2026-10-23", ["aied-232", "aied-233"]],
+    ["2026-10-22", ["aied-230", "aied-231"]],
+    ["2026-10-21", ["aied-228", "aied-229"]],
     ["2026-10-20", ["aied-226", "aied-227"]],
     ["2026-10-19", ["aied-224", "aied-225"]],
     ["2026-10-18", ["aied-222", "aied-223"]],
@@ -150,8 +168,8 @@ test("the reviewed date backlog contains exactly one research paper and one clea
     assert.equal(research.length, 1, `${date} should contain one research paper`);
     assert.match(
       `${productNews[0]?.title} ${productNews[0]?.tags.join(" ")}`,
-      /product news/i,
-      `${date} product news should be explicitly labeled`,
+      /product news|industry news/i,
+      `${date} product or industry news should be explicitly labeled`,
     );
   }
 });
@@ -347,7 +365,7 @@ test("each reviewed paper has a local generated raster cover asset", () => {
   const papers = getResearchPapers("en");
 
   for (const paper of papers) {
-    assert.match(paper.image, /^\/images\/research\/covers\/.+\.png$/);
+    assert.match(paper.image, /^\/images\/research\/covers\/.+\.(png|webp)$/);
     assert.ok(existsSync(localPublicPath(paper.image)), `${paper.image} should exist`);
   }
 });
@@ -357,7 +375,7 @@ test("reviewed paper covers are wide science-magazine bitmap images, not SVG pos
 
   for (const paper of papers) {
     const filePath = localPublicPath(paper.image);
-    const { width, height } = pngDimensions(filePath);
+    const { width, height } = bitmapDimensions(filePath);
     const aspectRatio = width / height;
 
     assert.ok(width >= 1500, `${paper.image} should have enough horizontal detail for full-bleed cards`);
@@ -371,11 +389,11 @@ test("each reviewed paper has a local generated summary illustration asset", () 
 
   for (const paper of papers) {
     assert.ok(paper.summaryImage, `${paper.slug} should have a summary illustration`);
-    assert.match(paper.summaryImage, /^\/images\/research\/summary\/.+\.png$/);
+    assert.match(paper.summaryImage, /^\/images\/research\/summary\/.+\.(png|webp)$/);
     assert.ok(existsSync(localPublicPath(paper.summaryImage)), `${paper.summaryImage} should exist`);
     assert.ok(paper.summaryImageAlt, `${paper.slug} should describe its summary illustration`);
 
-    const { width, height } = pngDimensions(localPublicPath(paper.summaryImage));
+    const { width, height } = bitmapDimensions(localPublicPath(paper.summaryImage));
     const aspectRatio = width / height;
 
     assert.ok(width >= 1500, `${paper.summaryImage} should have enough horizontal detail`);
@@ -454,6 +472,12 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-233",
+      "aied-232",
+      "aied-231",
+      "aied-230",
+      "aied-229",
+      "aied-228",
       "aied-227",
       "aied-226",
       "aied-225",
@@ -690,7 +714,7 @@ test("static summary media assets are available locally", () => {
 
     const summaryImagePath = localPublicPath(paper.summaryImage);
     const summaryAudioPath = localPublicPath(paper.summaryAudio);
-    const { width, height } = pngDimensions(summaryImagePath);
+    const { width, height } = bitmapDimensions(summaryImagePath);
     const audioBuffer = readFileSync(summaryAudioPath);
 
     assert.ok(width >= 1500, `${paper.summaryImage} should have enough horizontal detail`);
@@ -705,7 +729,7 @@ test("all entries from aied-038 onward have non-empty local M4A audio", () => {
     return id >= 38;
   });
 
-  assert.equal(backlog.length, 190);
+  assert.equal(backlog.length, 196);
   const hashes = new Set<string>();
   for (const paper of backlog) {
     assert.ok(paper.summaryAudio, `${paper.id} should declare summary audio`);
@@ -715,7 +739,7 @@ test("all entries from aied-038 onward have non-empty local M4A audio", () => {
     assert.ok(audioBuffer.byteLength > 100_000, `${paper.summaryAudio} should contain audible narration`);
     hashes.add(createHash("sha256").update(audioBuffer).digest("hex"));
   }
-  assert.equal(hashes.size, 190, "all backlog narrations must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 196, "all backlog narrations must have unique SHA-256 hashes");
 });
 
 test("reviewed papers use human-reviewed translations when present and fall back to English otherwise", () => {

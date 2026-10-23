@@ -63,6 +63,13 @@ const aiTopics = [
   ["cross-validation-for-small-datasets", "Cross-Validation for Small Datasets"],
   ["prediction-and-causal-inference", "Prediction and Causal Inference"],
   ["bayesian-updating-for-ai-decisions", "Bayesian Updating for AI Decisions"],
+  ["decision-trees-and-rule-based-models", "Decision Trees and Rule-Based Models"],
+  ["clustering-without-ground-truth-labels", "Clustering Without Ground-Truth Labels"],
+  ["dimensionality-reduction-and-visualization", "Dimensionality Reduction and Visualization"],
+  ["gradient-descent-and-optimization", "Gradient Descent and Optimization"],
+  ["loss-functions-and-learning-objectives", "Loss Functions and Learning Objectives"],
+  ["self-supervised-learning", "Self-Supervised Learning"],
+  ["contrastive-learning", "Contrastive Learning"],
 ] as const;
 
 const theoryTopics = [
@@ -115,6 +122,13 @@ const theoryTopics = [
   ["embodied-cognition", "Embodied Cognition"],
   ["constructionism", "Constructionism"],
   ["experiential-learning", "Experiential Learning"],
+  ["reflective-practice", "Reflective Practice"],
+  ["transformative-learning", "Transformative Learning"],
+  ["andragogy-and-adult-learning", "Andragogy and Adult Learning"],
+  ["heutagogy-and-self-determined-learning", "Heutagogy and Self-Determined Learning"],
+  ["cognitive-flexibility-theory", "Cognitive Flexibility Theory"],
+  ["variation-theory", "Variation Theory"],
+  ["apos-theory-in-mathematics-learning", "APOS Theory in Mathematics Learning"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

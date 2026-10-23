@@ -77,6 +77,13 @@ const aiTopics = [
   ["federated-learning", "Federated Learning"],
   ["differential-privacy", "Differential Privacy"],
   ["machine-unlearning", "Machine Unlearning"],
+  ["knowledge-graphs-for-educational-ai", "Knowledge Graphs for Educational AI"],
+  ["neuro-symbolic-ai", "Neuro-Symbolic AI"],
+  ["constraint-satisfaction-and-scheduling", "Constraint Satisfaction and Scheduling"],
+  ["search-and-planning-in-ai", "Search and Planning in AI"],
+  ["multi-agent-coordination", "Multi-Agent Coordination"],
+  ["tool-permissions-and-least-privilege", "Tool Permissions and Least Privilege"],
+  ["sandboxing-ai-generated-code", "Sandboxing AI-Generated Code"],
 ] as const;
 
 const theoryTopics = [
@@ -143,6 +150,13 @@ const theoryTopics = [
   ["epistemic-cognition", "Epistemic Cognition"],
   ["conceptual-and-procedural-knowledge", "Conceptual and Procedural Knowledge"],
   ["representational-competence", "Representational Competence"],
+  ["learning-with-multiple-external-representations", "Learning with Multiple External Representations"],
+  ["analogical-reasoning", "Analogical Reasoning"],
+  ["case-based-reasoning", "Case-Based Reasoning"],
+  ["problem-based-learning", "Problem-Based Learning"],
+  ["project-based-learning", "Project-Based Learning"],
+  ["knowledge-building-theory", "Knowledge Building Theory"],
+  ["connectivism", "Connectivism"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

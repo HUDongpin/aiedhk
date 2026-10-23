@@ -1,3 +1,4 @@
+import { academyRelease20260919To20260925 } from "@/lib/academy-release-20260919-20260925";
 import { academyRelease20260912To20260918 } from "@/lib/academy-release-20260912-20260918";
 import { academyRelease20260905To20260911 } from "@/lib/academy-release-20260905-20260911";
 import { academyRelease20260829To20260904 } from "@/lib/academy-release-20260829-20260904";
@@ -7,6 +8,7 @@ import { academyBackfill20260811To0815 } from "@/lib/academy-backfill-20260811-0
 import { academyBackfill20260817To0821 } from "@/lib/academy-backfill-20260817-0821";
 
 export const reviewedAcademyLessons: AcademyLesson[] = [
+  ...academyRelease20260919To20260925,
   ...academyRelease20260912To20260918,
   ...academyRelease20260905To20260911,
   ...academyRelease20260829To20260904,

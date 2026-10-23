@@ -26,13 +26,13 @@ export default function AcademyCard({ lesson, locale, dictionary }: AcademyCardP
           />
         </div>
         <div className="flex min-w-0 flex-col p-6 sm:p-7">
-          <div dir="ltr" className="flex items-start justify-between gap-4 text-xs font-black uppercase tracking-[0.18em]">
+          <div dir="ltr" className="flex flex-col items-start gap-3 text-xs font-black uppercase tracking-[0.18em] lg:flex-row lg:justify-between lg:gap-4">
             <div dir={locale === "ar" ? "rtl" : "ltr"} className="flex min-w-0 flex-wrap items-center gap-2">
               <span className="rounded-full bg-aied-soft px-3 py-1 text-aied-blue">{dictionary.academy.tracks[lesson.track]}</span>
               <span className="rounded-full border border-slate-200 bg-white px-3 py-1 text-slate-500">{dictionary.academy.levels[lesson.level]}</span>
               <span className="text-slate-400">{formatDate(lesson.createdAt, locale)}</span>
             </div>
-            <span className="shrink-0 text-right text-[0.68rem] leading-5 text-aied-blue" aria-label={`Lesson identifier ${lesson.listingIdentifier}`}>
+            <span className="order-first shrink-0 self-end text-right text-[0.68rem] leading-5 text-aied-blue lg:order-none lg:self-start" aria-label={`Lesson identifier ${lesson.listingIdentifier}`}>
               {lesson.listingIdentifier}
             </span>
           </div>

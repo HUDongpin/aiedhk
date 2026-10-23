@@ -91,6 +91,13 @@ const aiTopics = [
   ["optical-character-recognition-for-learning-materials", "Optical Character Recognition for Learning Materials"],
   ["document-layout-and-table-understanding", "Document Layout and Table Understanding"],
   ["vector-databases-and-retrieval-indexes", "Vector Databases and Retrieval Indexes"],
+  ["speech-recognition-across-accents", "Speech Recognition Across Accents"],
+  ["caption-alignment-and-timing", "Caption Alignment and Timing"],
+  ["handwriting-recognition", "Handwriting Recognition"],
+  ["ai-assisted-assessment-item-generation", "AI-Assisted Assessment Item Generation"],
+  ["reliability-of-automated-essay-scoring", "Reliability of Automated Essay Scoring"],
+  ["computerized-adaptive-testing", "Computerized Adaptive Testing"],
+  ["the-cold-start-problem-in-recommendations", "The Cold-Start Problem in Recommendations"],
 ] as const;
 
 const theoryTopics = [
@@ -171,6 +178,13 @@ const theoryTopics = [
   ["attribution-theory", "Attribution Theory"],
   ["the-development-of-interest", "The Development of Interest"],
   ["flow-and-learning", "Flow and Learning"],
+  ["school-belonging", "School Belonging"],
+  ["identity-and-learning", "Identity and Learning"],
+  ["possible-selves", "Possible Selves"],
+  ["stereotype-threat-in-learning-contexts", "Stereotype Threat in Learning Contexts"],
+  ["test-anxiety-and-learning", "Test Anxiety and Learning"],
+  ["epistemic-emotions", "Epistemic Emotions"],
+  ["social-interdependence-theory", "Social Interdependence Theory"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

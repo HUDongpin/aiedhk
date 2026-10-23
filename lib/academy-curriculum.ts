@@ -98,6 +98,13 @@ const aiTopics = [
   ["reliability-of-automated-essay-scoring", "Reliability of Automated Essay Scoring"],
   ["computerized-adaptive-testing", "Computerized Adaptive Testing"],
   ["the-cold-start-problem-in-recommendations", "The Cold-Start Problem in Recommendations"],
+  ["exploration-and-exploitation", "Exploration and Exploitation"],
+  ["contextual-bandits-for-learning-support", "Contextual Bandits for Learning Support"],
+  ["simulated-learners-and-their-limits", "Simulated Learners and Their Limits"],
+  ["deepfakes-and-media-authenticity", "Deepfakes and Media Authenticity"],
+  ["ai-watermarks-and-detection-limits", "AI Watermarks and Detection Limits"],
+  ["red-teaming-educational-ai", "Red-Teaming Educational AI"],
+  ["using-language-models-as-evaluators", "Using Language Models as Evaluators"],
 ] as const;
 
 const theoryTopics = [
@@ -185,6 +192,13 @@ const theoryTopics = [
   ["test-anxiety-and-learning", "Test Anxiety and Learning"],
   ["epistemic-emotions", "Epistemic Emotions"],
   ["social-interdependence-theory", "Social Interdependence Theory"],
+  ["group-cognition", "Group Cognition"],
+  ["socially-shared-regulation-of-learning", "Socially Shared Regulation of Learning"],
+  ["adaptive-help-seeking", "Adaptive Help-Seeking"],
+  ["epistemic-games", "Epistemic Games"],
+  ["argumentation-in-science-learning", "Argumentation in Science Learning"],
+  ["concept-mapping", "Concept Mapping"],
+  ["assessment-literacy", "Assessment Literacy"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

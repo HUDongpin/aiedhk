@@ -49,6 +49,13 @@ const aiTopics = [
   ["procuring-and-evaluating-educational-ai-vendors", "Procuring and Evaluating Educational AI Vendors"],
   ["participatory-design-of-educational-ai", "Participatory Design of Educational AI"],
   ["evaluating-the-learning-impact-of-ai", "Evaluating the Learning Impact of AI"],
+  ["tokenization-and-multilingual-ai", "Tokenization and Multilingual AI"],
+  ["sampling-temperature-and-top-p", "Sampling, Temperature, and Top-p"],
+  ["structured-outputs-and-json-schemas", "Structured Outputs and JSON Schemas"],
+  ["prompt-injection-and-untrusted-content", "Prompt Injection and Untrusted Content"],
+  ["grounded-answers-and-citation-verification", "Grounded Answers and Citation Verification"],
+  ["abstention-and-selective-prediction", "Abstention and Selective Prediction"],
+  ["probability-calibration-in-ai", "Probability Calibration in AI"],
 ] as const;
 
 const theoryTopics = [
@@ -87,6 +94,13 @@ const theoryTopics = [
   ["inclusive-pedagogy-and-digital-accessibility", "Inclusive Pedagogy and Digital Accessibility"],
   ["evidence-informed-educational-decision-making", "Evidence-Informed Educational Decision Making"],
   ["implementation-science-in-education", "Implementation Science in Education"],
+  ["the-worked-example-effect", "The Worked-Example Effect"],
+  ["self-explanation-in-learning", "Self-Explanation in Learning"],
+  ["the-generation-effect", "The Generation Effect"],
+  ["elaborative-interrogation", "Elaborative Interrogation"],
+  ["desirable-difficulties", "Desirable Difficulties"],
+  ["productive-failure", "Productive Failure"],
+  ["the-icap-framework", "The ICAP Framework"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

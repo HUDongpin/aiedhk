@@ -9,7 +9,7 @@ test("Academy publishes at least seventy ordered reviewed English lessons", () =
 
   assert.ok(lessons.length >= 70);
   assert.deepEqual(
-    lessons.map((lesson) => lesson.id),
+    lessons.filter((lesson) => Number(lesson.id.slice(8)) <= 70).map((lesson) => lesson.id),
     [
       "academy-069",
       "academy-070",
@@ -87,8 +87,8 @@ test("Academy publishes at least seventy ordered reviewed English lessons", () =
     new Set(lessons.map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
   );
-  assert.equal(lessons.filter((lesson) => lesson.track === "ai-knowledge").length, 35);
-  assert.equal(lessons.filter((lesson) => lesson.track === "educational-theory").length, 35);
+  assert.equal(lessons.filter((lesson) => Number(lesson.id.slice(8)) <= 70 && lesson.track === "ai-knowledge").length, 35);
+  assert.equal(lessons.filter((lesson) => Number(lesson.id.slice(8)) <= 70 && lesson.track === "educational-theory").length, 35);
   assert.deepEqual(
     new Set(lessons.filter((lesson) => ["academy-009", "academy-010", "academy-011", "academy-012", "academy-013", "academy-014", "academy-015", "academy-016", "academy-017", "academy-018", "academy-019", "academy-020", "academy-021", "academy-022", "academy-023", "academy-024"].includes(lesson.id)).map((lesson) => lesson.track)),
     new Set(["ai-knowledge", "educational-theory"])
@@ -215,7 +215,7 @@ test("each launch lesson has complete reviewed copy and one unique stable image 
     "Implementation Science in Education",
   ];
 
-  assert.deepEqual(new Set(lessons.map((lesson) => lesson.title)), new Set(expectedTitles));
+  assert.deepEqual(new Set(lessons.filter((lesson) => Number(lesson.id.slice(8)) <= 70).map((lesson) => lesson.title)), new Set(expectedTitles));
   assert.equal(new Set(lessons.map((lesson) => lesson.id)).size, lessons.length);
   assert.equal(new Set(lessons.map((lesson) => lesson.listingIdentifier)).size, lessons.length);
   assert.equal(new Set(lessons.map((lesson) => lesson.slug)).size, lessons.length);

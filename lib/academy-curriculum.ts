@@ -84,6 +84,13 @@ const aiTopics = [
   ["multi-agent-coordination", "Multi-Agent Coordination"],
   ["tool-permissions-and-least-privilege", "Tool Permissions and Least Privilege"],
   ["sandboxing-ai-generated-code", "Sandboxing AI-Generated Code"],
+  ["persistent-memory-in-ai-assistants", "Persistent Memory in AI Assistants"],
+  ["chunking-documents-for-retrieval", "Chunking Documents for Retrieval"],
+  ["hybrid-search-and-reranking", "Hybrid Search and Reranking"],
+  ["numerical-reasoning-with-computational-tools", "Numerical Reasoning with Computational Tools"],
+  ["optical-character-recognition-for-learning-materials", "Optical Character Recognition for Learning Materials"],
+  ["document-layout-and-table-understanding", "Document Layout and Table Understanding"],
+  ["vector-databases-and-retrieval-indexes", "Vector Databases and Retrieval Indexes"],
 ] as const;
 
 const theoryTopics = [
@@ -157,6 +164,13 @@ const theoryTopics = [
   ["project-based-learning", "Project-Based Learning"],
   ["knowledge-building-theory", "Knowledge Building Theory"],
   ["connectivism", "Connectivism"],
+  ["the-community-of-inquiry-framework", "The Community of Inquiry Framework"],
+  ["transactional-distance", "Transactional Distance"],
+  ["self-efficacy-in-learning", "Self-Efficacy in Learning"],
+  ["expectancy-value-theory", "Expectancy-Value Theory"],
+  ["attribution-theory", "Attribution Theory"],
+  ["the-development-of-interest", "The Development of Interest"],
+  ["flow-and-learning", "Flow and Learning"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

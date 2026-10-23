@@ -1,8 +1,26 @@
+import { academyRelease20261017To20261023 } from "@/lib/academy-release-20261017-20261023";
+import { academyRelease20261010To20261016 } from "@/lib/academy-release-20261010-20261016";
+import { academyRelease20261003To20261009 } from "@/lib/academy-release-20261003-20261009";
+import { academyRelease20260926To20261002 } from "@/lib/academy-release-20260926-20261002";
+import { academyRelease20260919To20260925 } from "@/lib/academy-release-20260919-20260925";
+import { academyRelease20260912To20260918 } from "@/lib/academy-release-20260912-20260918";
+import { academyRelease20260905To20260911 } from "@/lib/academy-release-20260905-20260911";
+import { academyRelease20260829To20260904 } from "@/lib/academy-release-20260829-20260904";
+import { academyRelease20260822To20260828 } from "@/lib/academy-release-20260822-20260828";
 import type { AcademyLesson } from "@/lib/types";
 import { academyBackfill20260811To0815 } from "@/lib/academy-backfill-20260811-0815";
 import { academyBackfill20260817To0821 } from "@/lib/academy-backfill-20260817-0821";
 
 export const reviewedAcademyLessons: AcademyLesson[] = [
+  ...academyRelease20261017To20261023,
+  ...academyRelease20261010To20261016,
+  ...academyRelease20261003To20261009,
+  ...academyRelease20260926To20261002,
+  ...academyRelease20260919To20260925,
+  ...academyRelease20260912To20260918,
+  ...academyRelease20260905To20260911,
+  ...academyRelease20260829To20260904,
+  ...academyRelease20260822To20260828,
   ...academyBackfill20260817To0821,
   ...academyBackfill20260811To0815,
   {

@@ -1,3 +1,4 @@
+import { researchNewsLocalizations20261021To1023 } from "@/lib/research-news-localizations-20261021-1023";
 import type { Locale } from "@/lib/i18n";
 import type { ResearchPaperLocalization } from "@/lib/types";
 import { commentaryLocalizations20260907 } from "@/lib/research-news-commentary-localizations-20260907";
@@ -13,6 +14,7 @@ import { commentaryLocalizations20260907 } from "@/lib/research-news-commentary-
  * and then reviewed before being pasted here.
  */
 export const reviewedResearchPaperLocalizations: Record<string, Partial<Record<Locale, ResearchPaperLocalization>>> = {
+  ...researchNewsLocalizations20261021To1023,
   ...commentaryLocalizations20260907,
   "aied-025": {
     "zh-hant": {

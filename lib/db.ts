@@ -4,13 +4,17 @@ type DatabaseClient = ReturnType<typeof postgres>;
 
 let cachedClient: DatabaseClient | null = null;
 
-function shouldUseSsl(connectionString: string) {
-  try {
-    const url = new URL(connectionString);
-    return !["localhost", "127.0.0.1", "::1"].includes(url.hostname);
-  } catch {
-    return true;
-  }
+export function postgresConnectionOptions(connectionString: string) {
+  const host = new URL(connectionString).hostname;
+  const local = ["localhost", "127.0.0.1", "::1", "[::1]"].includes(host);
+  return {
+    ssl: local ? false as const : "require" as const,
+    // Verified against the project's Neon endpoint: direct TLS works where
+    // traditional PostgreSQL SSLRequest negotiation stalls on the local route.
+    sslnegotiation: host.endsWith(".neon.tech") ? "direct" : undefined,
+    connect_timeout: 15,
+    idle_timeout: 20,
+  };
 }
 
 export function isDatabaseConfigured() {
@@ -27,7 +31,7 @@ export function getDatabaseClient() {
   if (!cachedClient) {
     cachedClient = postgres(connectionString, {
       max: 1,
-      ssl: shouldUseSsl(connectionString) ? "require" : false,
+      ...postgresConnectionOptions(connectionString),
     });
   }
 

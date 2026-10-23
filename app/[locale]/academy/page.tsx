@@ -8,6 +8,7 @@ import SectionHeader from "@/components/SectionHeader";
 import { filterAcademyLessonList } from "@/lib/academy-filter";
 import { getAcademyLessons } from "@/lib/academy-data";
 import { getDictionary, getLocaleMeta, isLocale, locales, type Locale } from "@/lib/i18n";
+import { getNewsletterCopy } from "@/lib/newsletter/messages";
 import { absoluteUrl } from "@/lib/site";
 
 interface AcademyPageProps { params: Promise<{ locale: string }> }
@@ -32,18 +33,15 @@ export default async function AcademyPage({ params }: AcademyPageProps) {
   const dictionary = getDictionary(typedLocale);
   const lessons = getAcademyLessons(typedLocale);
   const result = filterAcademyLessonList(lessons, { pageSize: 6 });
-  const newsletterCopy = {
-    ...dictionary.research.newsletter,
-    ...dictionary.academy.newsletter,
-    privacyNote: "",
-  };
+  const newsletterCopy = getNewsletterCopy(typedLocale, "academy");
   return <div className="bg-hub-gradient">
     <section className="container-page pb-10 pt-16 lg:pb-12 lg:pt-20">
       <div className="grid gap-8 lg:grid-cols-[1.05fr_0.95fr] lg:items-end">
         <SectionHeader eyebrow={dictionary.academy.eyebrow} title={dictionary.academy.title} description={dictionary.academy.intro} />
-        <aside aria-label={dictionary.academy.newsletter.eyebrow}>
+        <aside aria-label={newsletterCopy.eyebrow}>
           <ResearchNewsletterSignup
             locale={typedLocale}
+            channel="academy"
             sourcePath={`/${typedLocale}/academy`}
             copy={newsletterCopy}
           />

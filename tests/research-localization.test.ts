@@ -8,6 +8,7 @@ import {
 } from "@/lib/research-reviewed-localizations";
 import { reviewedResearchPapers } from "@/lib/research-reviewed-data";
 import { generateResearchLocalization } from "@/lib/research-pipeline/generation";
+import { locales } from "@/lib/i18n";
 
 test("every reviewed localization key maps to a real article id", () => {
   const ids = new Set(reviewedResearchPapers.map((paper) => paper.id));
@@ -51,6 +52,31 @@ test("the flagship article aied-025 is fully localized into both Chinese scripts
     assert.ok(localization.fullSummary.split(/\n\n/).length >= 5, "paragraph structure should be preserved");
     assert.equal(localization.keyTakeaways.length, 3);
     assert.equal(localization.tags.length, 3);
+  }
+});
+
+test("October 21–23 News has complete translated content in every supported non-English locale", () => {
+  for (let number = 228; number <= 233; number += 1) {
+    const id = `aied-${number}`;
+    const source = reviewedResearchPapers.find((paper) => paper.id === id);
+    assert.ok(source);
+    assert.equal(localizedLocalesForPaper(id).length, locales.length - 1);
+
+    for (const locale of locales.filter((locale) => locale !== "en")) {
+      const translation = getReviewedLocalization(id, locale);
+      const page = getResearchPaperBySlug(source.slug, locale);
+      assert.ok(translation && page, `${id} ${locale} must have an actual translation`);
+      assert.equal(page.fullSummary.split("\n\n").length, 7);
+      assert.equal(page.keyTakeaways.length, 3);
+      assert.equal(page.tags.length, source.tags.length);
+      assert.ok(page.fullSummary.length > 700);
+      assert.notEqual(page.fullSummary, source.fullSummary);
+      assert.doesNotMatch(page.fullSummary, /\[\[\[|Translation results/);
+      assert.equal(page.sourceUrl, source.sourceUrl);
+      assert.equal(page.createdAt, source.createdAt);
+      assert.equal(page.image, source.image);
+      assert.equal(page.summaryAudio, undefined, "English narration must not appear as translated audio");
+    }
   }
 });
 

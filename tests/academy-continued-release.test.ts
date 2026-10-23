@@ -14,7 +14,13 @@ function releaseLessons() {
 
 test("Academy August–October releases preserve contiguous daily pairs and stable track identifiers", () => {
   const lessons = releaseLessons();
-  assert.ok(lessons.length >= 14, "the first complete seven-day release must be present");
+  assert.equal(lessons.length, 126, "all 63 daily pairs must be published");
+  const all = getAcademyLessons("en");
+  assert.equal(all.length, 196, "the original 70 lessons and all 126 new lessons must remain available");
+  for (const track of ["ai-knowledge", "educational-theory"]) {
+    assert.equal(all.filter((lesson) => lesson.track === track).length, 98);
+    assert.equal(lessons.filter((lesson) => lesson.track === track).length, 63);
+  }
   assert.equal(lessons.length % 2, 0, "no day may publish only one track");
   for (let index = 0; index < lessons.length; index += 1) {
     const lesson = lessons[index];

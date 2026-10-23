@@ -105,6 +105,13 @@ const aiTopics = [
   ["ai-watermarks-and-detection-limits", "AI Watermarks and Detection Limits"],
   ["red-teaming-educational-ai", "Red-Teaming Educational AI"],
   ["using-language-models-as-evaluators", "Using Language Models as Evaluators"],
+  ["adversarial-robustness", "Adversarial Robustness"],
+  ["ensembles-and-predictive-uncertainty", "Ensembles and Predictive Uncertainty"],
+  ["confidence-intervals-for-ai-evaluation", "Confidence Intervals for AI Evaluation"],
+  ["label-noise-and-annotation-agreement", "Label Noise and Annotation Agreement"],
+  ["reproducible-ai-experiments", "Reproducible AI Experiments"],
+  ["on-device-and-edge-ai", "On-Device and Edge AI"],
+  ["caching-and-batching-ai-requests", "Caching and Batching AI Requests"],
 ] as const;
 
 const theoryTopics = [
@@ -199,6 +206,13 @@ const theoryTopics = [
   ["argumentation-in-science-learning", "Argumentation in Science Learning"],
   ["concept-mapping", "Concept Mapping"],
   ["assessment-literacy", "Assessment Literacy"],
+  ["student-self-assessment", "Student Self-Assessment"],
+  ["peer-assessment", "Peer Assessment"],
+  ["feedback-literacy", "Feedback Literacy"],
+  ["authentic-learning", "Authentic Learning"],
+  ["activity-theory-and-expansive-learning", "Activity Theory and Expansive Learning"],
+  ["funds-of-knowledge", "Funds of Knowledge"],
+  ["translanguaging-in-education", "Translanguaging in Education"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

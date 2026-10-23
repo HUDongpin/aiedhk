@@ -11,7 +11,7 @@ This is a complete Next.js website template for `www.aied.hk`. It is designed as
 - React
 - Tailwind CSS
 - Next.js API routes
-- Postgres subscription storage through `DATABASE_URL`
+- Postgres channel subscriptions through `NEWSLETTER_DATABASE_URL` or `DATABASE_URL`
 - Postgres research CMS with local mock data fallback
 - Static SVG thumbnails
 - English, Traditional Chinese, and Simplified Chinese UI
@@ -43,34 +43,13 @@ npm run start
 
 ## Environment variables
 
-The research newsletter trial is runnable when a Postgres database is attached through Vercel Marketplace, Neon, Supabase, or another Postgres provider that exposes `DATABASE_URL`.
+`DATABASE_URL` supplies the existing research database and, by default, newsletter state. `NEWSLETTER_DATABASE_URL` can isolate newsletter state for a particular Preview deployment. Research content reads continue to use `DATABASE_URL`.
 
-```bash
-DATABASE_URL="postgres://..."
-```
+Newsletter delivery defaults to `NEWSLETTER_DELIVERY_MODE=off`. Test mode requires `NEWSLETTER_TEST_RECIPIENTS`, `RESEND_API_KEY`, and `NEWSLETTER_FROM`; live mode also requires `RESEND_WEBHOOK_SECRET`. Set `NEWSLETTER_PUBLIC_ORIGIN` to a verified server origin, or use Vercel's trusted Preview hostname. `CRON_SECRET` protects the minute worker. `.env.example` lists variable names only; inject real values securely and keep environment files out of Git and deployment artifacts.
 
-Optional future variables for weekly sending:
+The research pipeline separately uses `ADMIN_USERNAME`, `ADMIN_PASSWORD`, the `AI_*` settings, and optional source API settings. These publication controls are unchanged by newsletter work.
 
-```bash
-CRON_SECRET="change-me"
-ADMIN_USERNAME="admin"
-ADMIN_PASSWORD="change-me"
-AI_BASE_URL="https://dashscope-intl.aliyuncs.com/compatible-mode/v1"
-AI_API_KEY="sk-..."
-AI_MODEL="qwen-plus"
-OPENALEX_API_KEY="optional"
-SEMANTIC_SCHOLAR_API_KEY="optional"
-RESEND_API_KEY="re_..."
-NEWSLETTER_FROM="AIEDHK <updates@aied.hk>"
-```
-
-Apply the subscription table before collecting emails:
-
-```bash
-psql "$DATABASE_URL" -f migrations/001_newsletter_subscribers.sql
-psql "$DATABASE_URL" -f migrations/002_research_pipeline.sql
-npm run seed:research
-```
+Before production newsletter migration, back up the database. Apply `migrations/001_newsletter_subscribers.sql` followed by additive `migrations/003_newsletter_channels.sql` to the newsletter database, inspect and apply legacy consent migration, then initialize the baseline once. The existing research schema remains `migrations/002_research_pipeline.sql`; do not change research source data for newsletter acceptance. See [Newsletter operations](docs/newsletter-operations.md) for the exact sequence, configuration, migration categories, Preview isolation, and rollback procedure.
 
 ## Pages
 
@@ -203,10 +182,10 @@ Research News drafts are created by the automated ingestion cron and curated thr
 - Ingestion: `GET /api/cron/research-ingest`
 - Review and publish: `/admin/research-news`
 
-### Research newsletter subscription
+### News and Academy subscriptions
 
 ```http
-POST /api/research-news/subscribe
+POST /api/newsletter/subscribe
 Content-Type: application/json
 ```
 
@@ -214,7 +193,8 @@ Example body:
 
 ```json
 {
-  "email": "reader@example.com",
+  "email": "<subscriber email>",
+  "channel": "news",
   "locale": "en",
   "sourcePath": "/en/news",
   "honeypot": ""
@@ -223,21 +203,22 @@ Example body:
 
 Responses:
 
-- `201` with `status: "subscribed"` for a new subscription.
-- `200` with `status: "already_subscribed"` for an existing email.
-- `400` with `status: "invalid_email"` for invalid email input.
-- `503` with `status: "database_not_configured"` when `DATABASE_URL` is missing.
+- `202` with `status: "pending_confirmation"` after the provider accepts the confirmation message. The channel remains pending until an explicit confirmation POST.
+- `200` with `status: "already_subscribed"` for an active channel with the same language.
+- `400` for invalid input, `429` for throttling, and `503` for unavailable or unconfigured delivery.
 
-### Research newsletter unsubscribe
+The endpoint also accepts native URL-encoded forms. `channel` is explicitly `news` or `academy`; each has independent consent and language. The compatibility JSON endpoint `/api/research-news/subscribe` remains available. Confirmation links expire after 48 hours. `GET /api/newsletter/confirm?token=…` is read-only; the page's POST confirms consent. All 14 site locales are supported, with clearly labelled English fallback where reviewed content translations are absent.
+
+### Channel unsubscribe
 
 ```http
 GET  /api/newsletter/unsubscribe?token=<token>&language=en
 POST /api/newsletter/unsubscribe?token=<token>
 ```
 
-- `GET` is the human-facing link in every email footer. It flags the subscriber as `unsubscribed` and returns a localized confirmation page.
-- `POST` is the RFC 8058 one-click target advertised through the `List-Unsubscribe` and `List-Unsubscribe-Post` headers on each weekly send.
-- Responses: `200` unsubscribed / already unsubscribed, `400` missing token, `404` unknown token, `503` when `DATABASE_URL` is missing.
+- `GET` is a read-only localized page. It never cancels enrollment just because a scanner opens the link.
+- The human form submits `intent=unsubscribe` by POST. RFC 8058 one-click clients POST `List-Unsubscribe=One-Click` in a URL-encoded or multipart body, as advertised by the digest's unsubscribe headers.
+- New links stop only their own channel. Preserved legacy links stop the enrollments derived from the legacy record. One-click responses are idempotent and avoid exposing subscription existence.
 
 ### SEO routes
 
@@ -298,23 +279,38 @@ credentials. The weekly loop is then:
    edits, approves, and publishes drafts.
 3. Optionally run `npm run translate:research` to draft `zh-hant`/`zh-hans`
    versions for review before publishing multilingual copies.
-4. Monday newsletter crons send per-locale digests of published items.
+4. The separate minute newsletter worker plans daily, per-subscriber digests using only published content and the recorded channel consent.
 
-### Weekly newsletter
+### Daily newsletter worker
 
 ```http
-GET /api/cron/research-newsletter?dryRun=1
+GET /api/cron/newsletter?dryRun=1
 Authorization: Bearer <CRON_SECRET>
 ```
 
-Dry run returns the current weekly digest payload. Live mode sends only published research items to active subscribers when `RESEND_API_KEY` and `NEWSLETTER_FROM` are configured.
+Dry run previews eligibility without writing catalog, run, queue, or lease state. The compatibility `/api/cron/research-newsletter` route uses the same worker restricted to News. Delivery requires an explicit configured test/live mode and an initialized content baseline.
+
+News starts daily at 09:20 HKT, sends only eligible newly available content, and includes at most five articles; overflow remains for later days and empty batches send nothing. Academy starts at 09:30 HKT and sends a complete two-lesson curriculum pair, with per-subscriber cycles and labelled reviews. Frozen payloads, stable idempotency keys, bounded retries, signed webhook reconciliation, and channel-specific holds prevent blind resends after uncertain outcomes.
+
+Administrative commands default to read-only output:
+
+```bash
+npm run newsletter:admin -- status
+npm run newsletter:admin -- migrate
+npm run newsletter:admin -- baseline
+npm run newsletter:admin -- preview
+npm run newsletter:admin -- acceptance
+npm run test:newsletter:integration
+```
+
+`migrate`, `baseline`, `tick`, and `acceptance` require `--apply` to mutate state. Acceptance sends are explicitly labelled Preview samples to already confirmed allowlisted subscribers; they do not manufacture evidence of a production publication. The integration runner uses an explicit loopback test database or an owned ephemeral local PostgreSQL and fails if neither is available. Follow [Newsletter operations](docs/newsletter-operations.md) for real inbox acceptance, source-failure handling, migration, and release requirements.
 
 ### Vercel crons
 
 `vercel.json` schedules:
 
 - Research ingestion: Monday 01:00 UTC / 09:00 HKT
-- English newsletter: Monday 01:20 UTC / 09:20 HKT
+- Newsletter queue: every minute; daily planning from 01:20 UTC / 09:20 HKT for News and 01:30 UTC / 09:30 HKT for Academy
 
 Before public launch, configure and verify `www.aied.hk` DNS and SSL in Vercel. This environment could not resolve `www.aied.hk` during planning.
 
@@ -427,6 +423,8 @@ Recommended storage options:
 
 ## Suggested deployment to Vercel
 
+The current project is manually deployed and has no Git integration. Deploy only a committed clean revision after `npm run release:verify`, which includes the local newsletter integration suite. Supply per-deployment Preview settings securely as described in [Newsletter operations](docs/newsletter-operations.md). The setup steps below apply when creating a new Vercel project.
+
 1. Push the project to GitHub.
 2. Import the repository into Vercel.
 3. Set the framework preset to Next.js.
@@ -438,8 +436,8 @@ npm run build
 
 5. Add the domain `www.aied.hk` in Vercel project settings.
 6. Configure DNS at the domain registrar according to Vercel instructions.
-7. Add `DATABASE_URL` and run `migrations/001_newsletter_subscribers.sql` before enabling the newsletter trial.
-8. Add future environment variables for crawling, AI summarization, Resend, and weekly cron sending when those features are implemented.
+7. Configure database access, take the required backup, and apply newsletter migrations 001 and 003 before migration/baseline initialization; keep sending off during setup.
+8. Configure publication and newsletter settings separately. Complete the relevant Preview and release evidence before enabling live newsletter delivery.
 
 ## Design notes
 

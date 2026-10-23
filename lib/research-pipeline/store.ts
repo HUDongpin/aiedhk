@@ -48,6 +48,7 @@ interface PaperRow {
   source_key?: string | null;
   relevance_score?: number | null;
   score_reasons?: unknown;
+  localization_locale?: string | null;
 }
 
 export interface ReviewPaperInput {
@@ -178,7 +179,8 @@ function publishedPaperSelect(locale: Locale) {
       coalesce(loc.why_it_matters, rp.why_it_matters) as why_it_matters,
       rp.source_url,
       rp.created_at,
-      rp.published_at
+      rp.published_at,
+      loc.locale as localization_locale
     from research_papers rp
     left join research_paper_localizations loc
       on loc.research_paper_id = rp.id
@@ -198,6 +200,23 @@ export async function getPublishedResearchPapersFromDatabase(localeInput = "en")
     `);
     return rows.map(rowToResearchPaper);
   });
+}
+
+// Email planning must distinguish a source outage from an empty published feed.
+// Website rendering retains its existing fallback behavior above.
+export async function getPublishedResearchNewsletterPapers(localeInput = "en") {
+  const sql = getDatabaseClient();
+  if (!sql) throw new Error("research_database_not_configured");
+  const locale = normalizeLocale(localeInput);
+  const rows = await sql.unsafe<PaperRow[]>(`${publishedPaperSelect(locale)} order by rp.published_at desc nulls last, rp.created_at desc`);
+  return rows.map((row) => ({ paper: rowToResearchPaper(row), contentLocale: row.localization_locale ? locale : "en" as const }));
+}
+
+export async function getPublishedResearchNewsletterSlugs() {
+  const sql = getDatabaseClient();
+  if (!sql) throw new Error("research_database_not_configured");
+  const rows = await sql<{ slug: string }[]>`select slug from research_papers where status='published'`;
+  return rows.map((row) => row.slug);
 }
 
 export async function getPublishedResearchPaperBySlugFromDatabase(slug: string, localeInput = "en") {

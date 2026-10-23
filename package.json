@@ -13,15 +13,18 @@
     "translate:research": "tsx scripts/translate-reviewed-papers.ts",
     "hygiene:check": "node scripts/check-worktree-clean.mjs",
     "hygiene:overlap": "node scripts/check-worktree-overlap.mjs",
-    "release:verify": "npm run hygiene:check && npm run hygiene:overlap && npm test && npm run build && npm run typecheck && npm run hygiene:overlap && npm run hygiene:check"
+    "release:verify": "npm run hygiene:check && npm run hygiene:overlap && npm test && npm run test:newsletter:integration && npm run build && npm run typecheck && npm run hygiene:overlap && npm run hygiene:check",
+    "newsletter:admin": "tsx scripts/newsletter-admin.ts",
+    "test:newsletter:integration": "node scripts/test-newsletter-integration.mjs"
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
     "@vercel/analytics": "^2.0.1",
-    "next": "16.2.9",
+    "next": "16.4.2",
     "postgres": "^3.4.9",
     "react": "19.2.7",
-    "react-dom": "19.2.7"
+    "react-dom": "19.2.7",
+    "resend": "^6.34.1"
   },
   "devDependencies": {
     "@types/node": "24.10.1",

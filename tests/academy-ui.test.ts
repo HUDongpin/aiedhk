@@ -6,9 +6,11 @@ import { renderToStaticMarkup } from "react-dom/server";
 import AcademyFilters from "@/components/AcademyFilters";
 import AcademyExplorerView, { academyPageHref } from "@/components/AcademyExplorerView";
 import ResearchNewsletterSignup from "@/components/ResearchNewsletterSignup";
+import AcademyPage from "@/app/[locale]/academy/page";
 import { filterAcademyLessonList } from "@/lib/academy-filter";
 import { getAcademyLessons } from "@/lib/academy-data";
 import { getDictionary, locales } from "@/lib/i18n";
+import { getNewsletterCopy } from "@/lib/newsletter/messages";
 
 const academyCardSource = readFileSync("components/AcademyCard.tsx", "utf8");
 const academyDetailSource = readFileSync("app/[locale]/academy/[slug]/page.tsx", "utf8");
@@ -81,20 +83,27 @@ test("active Academy pagination exposes the current page to assistive technology
   assert.match(html, /aria-current="page"[^>]*href="\/en\/academy\?page=2"[^>]*>2<\/a>/);
 });
 
-test("Academy places a localized compact newsletter invitation beside the hero", () => {
+test("Academy places an accurate localized channel invitation beside the hero", async () => {
   for (const locale of locales) {
-    const copy = getDictionary(locale).academy.newsletter;
+    const copy = getNewsletterCopy(locale, "academy");
     assert.ok(copy.eyebrow.trim(), `${locale} newsletter eyebrow should be localized`);
     assert.ok(copy.title.trim(), `${locale} newsletter title should be localized`);
     assert.ok(copy.description.trim(), `${locale} newsletter description should be localized`);
   }
 
-  const dictionary = getDictionary("en");
-  const html = renderToStaticMarkup(React.createElement(ResearchNewsletterSignup, {
-    locale: "en",
-    sourcePath: "/en/academy",
-    copy: { ...dictionary.research.newsletter, ...dictionary.academy.newsletter, privacyNote: "" },
-  }));
+  function findSignup(node: React.ReactNode): React.ReactElement<React.ComponentProps<typeof ResearchNewsletterSignup>> | undefined {
+    for (const child of React.Children.toArray(node)) {
+      if (!React.isValidElement<{ children?: React.ReactNode }>(child)) continue;
+      if (child.type === ResearchNewsletterSignup) return child as React.ReactElement<React.ComponentProps<typeof ResearchNewsletterSignup>>;
+      const match = findSignup(child.props.children);
+      if (match) return match;
+    }
+  }
+  const signupElement = findSignup(await AcademyPage({ params: Promise.resolve({ locale: "en" }) }));
+  assert.ok(signupElement);
+  assert.equal(signupElement.props.channel, "academy");
+  assert.equal(signupElement.props.sourcePath, "/en/academy");
+  const html = renderToStaticMarkup(signupElement);
 
   const heroGrid = academyPageSource.indexOf("lg:grid-cols-[1.05fr_0.95fr]");
   const signup = academyPageSource.indexOf("<ResearchNewsletterSignup");
@@ -103,8 +112,9 @@ test("Academy places a localized compact newsletter invitation beside the hero",
   assert.match(academyPageSource, /sourcePath={`\/\$\{typedLocale\}\/academy`}/);
   assert.doesNotMatch(academyPageSource, /variant="wide"/);
   assert.match(html, /Keep learning/);
-  assert.match(html, /Connect PedaNova Academy lessons with the latest AIED technologies and learning theories/);
-  assert.match(html, /Daily curated lesson updates\./);
+  assert.match(html, /Build your AI and education knowledge/);
+  assert.match(html, /Receive two curated lessons daily: one on AI knowledge and one on educational theory/);
+  assert.match(html, /Confirm by email before receiving updates/);
   assert.doesNotMatch(html, /each week/);
   assert.match(html, /you@example\.com/);
   assert.match(html, />Subscribe<\/button>/);
@@ -112,15 +122,14 @@ test("Academy places a localized compact newsletter invitation beside the hero",
   assert.doesNotMatch(html, /lg:text-5xl/);
 });
 
-test("News newsletter shows the free daily summary eyebrow", () => {
-  const dictionary = getDictionary("en");
+test("News newsletter explains daily checks and delivery only for new items", () => {
   const html = renderToStaticMarkup(React.createElement(ResearchNewsletterSignup, {
     locale: "en",
     sourcePath: "/en/news",
-    copy: dictionary.research.newsletter,
+    channel: "news",
   }));
 
-  assert.match(html, /Free daily summary/);
-  assert.match(html, /Daily curated news updates\./);
+  assert.match(html, /Research in your inbox/);
+  assert.match(html, /We check daily and send only when there is new research news, with up to five items per email/);
   assert.doesNotMatch(html, /Free weekly trial/);
 });

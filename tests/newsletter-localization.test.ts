@@ -1,48 +1,35 @@
 import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
-import { join } from "node:path";
 import test from "node:test";
+import { GET as worker } from "@/app/api/cron/newsletter/route";
+import { GET as legacy } from "@/app/api/cron/research-newsletter/route";
+import { dueNewsletterChannels } from "@/lib/newsletter/policy";
 
-function source(path: string) {
-  return readFileSync(join(process.cwd(), path), "utf8");
-}
-
-test("the daily newsletter localizes subject, body, and CTA per subscriber locale", () => {
-  const cronSource = source("app/api/cron/research-newsletter/route.ts");
-
-  assert.match(cronSource, /const emailCopy: Partial<Record<Locale, EmailCopy>>/);
-  assert.match(cronSource, /"zh-hant":/);
-  assert.match(cronSource, /"zh-hans":/);
-  // subject/heading come from the locale copy, not a hardcoded English string
-  assert.match(cronSource, /subject: copy\.subject/);
-  assert.match(cronSource, /copyFor\(input\.subscriber\.locale\)/);
-  assert.match(cronSource, /Daily Research News/);
-  assert.doesNotMatch(cronSource, /Weekly Research News/);
+test("one minute newsletter worker replaces per-language schedules while ingestion is unchanged", () => {
+  const config = JSON.parse(readFileSync("vercel.json", "utf8")) as { crons: Array<{ path: string; schedule: string }> };
+  assert.deepEqual(config.crons, [
+    { path: "/api/cron/research-ingest", schedule: "0 1 * * 1" },
+    { path: "/api/cron/newsletter", schedule: "* * * * *" },
+  ]);
+  assert.deepEqual(dueNewsletterChannels(new Date("2026-10-23T01:19:00Z")), []);
+  assert.deepEqual(dueNewsletterChannels(new Date("2026-10-23T01:20:00Z")), ["news"]);
+  assert.deepEqual(dueNewsletterChannels(new Date("2026-10-23T01:30:00Z")), ["news", "academy"]);
 });
 
-test("newsletter delivery isolates per-recipient failures", () => {
-  const cronSource = source("app/api/cron/research-newsletter/route.ts");
-
-  assert.match(cronSource, /Promise\.allSettled/);
-  assert.doesNotMatch(cronSource, /await Promise\.all\(/);
-});
-
-test("vercel schedules localized newsletters daily while ingestion remains weekly", () => {
-  const config = JSON.parse(source("vercel.json")) as { crons: Array<{ path: string; schedule: string }> };
-  const scheduleFor = (path: string) => config.crons.find((cron) => cron.path === path)?.schedule;
-
-  assert.equal(scheduleFor("/api/cron/research-newsletter?language=en"), "20 1 * * *");
-  assert.equal(scheduleFor("/api/cron/research-newsletter?language=zh-hant"), "21 1 * * *");
-  assert.equal(scheduleFor("/api/cron/research-newsletter?language=zh-hans"), "22 1 * * *");
-  assert.equal(scheduleFor("/api/cron/research-ingest"), "0 1 * * 1");
-});
-
-test("daily newsletter delivery skips an empty digest before loading subscribers", () => {
-  const cronSource = source("app/api/cron/research-newsletter/route.ts");
-  const emptyDigestGuard = cronSource.indexOf('if (digest.items.length === 0)');
-  const subscriberQuery = cronSource.indexOf("getActiveResearchNewsletterSubscribers()");
-
-  assert.ok(emptyDigestGuard >= 0);
-  assert.ok(subscriberQuery > emptyDigestGuard);
-  assert.match(cronSource, /status: "skipped_empty_digest"/);
+test("new and compatibility cron routes require authentication and honor the off switch without database access", async () => {
+  const previousSecret = process.env.CRON_SECRET;
+  const previousMode = process.env.NEWSLETTER_DELIVERY_MODE;
+  process.env.CRON_SECRET = "newsletter-test-only-secret";
+  process.env.NEWSLETTER_DELIVERY_MODE = "off";
+  try {
+    for (const handler of [worker, legacy]) {
+      const denied = await handler(new Request("https://www.aied.hk/api/cron/newsletter"));
+      assert.equal(denied.status, 401);
+      const disabled = await handler(new Request("https://www.aied.hk/api/cron/newsletter", { headers: { authorization: "Bearer newsletter-test-only-secret" } }));
+      assert.deepEqual(await disabled.json(), { status: "disabled" });
+    }
+  } finally {
+    if (previousSecret === undefined) delete process.env.CRON_SECRET; else process.env.CRON_SECRET = previousSecret;
+    if (previousMode === undefined) delete process.env.NEWSLETTER_DELIVERY_MODE; else process.env.NEWSLETTER_DELIVERY_MODE = previousMode;
+  }
 });

@@ -70,6 +70,13 @@ const aiTopics = [
   ["loss-functions-and-learning-objectives", "Loss Functions and Learning Objectives"],
   ["self-supervised-learning", "Self-Supervised Learning"],
   ["contrastive-learning", "Contrastive Learning"],
+  ["knowledge-distillation", "Knowledge Distillation"],
+  ["model-quantization", "Model Quantization"],
+  ["low-rank-adaptation", "Low-Rank Adaptation"],
+  ["synthetic-training-data", "Synthetic Training Data"],
+  ["federated-learning", "Federated Learning"],
+  ["differential-privacy", "Differential Privacy"],
+  ["machine-unlearning", "Machine Unlearning"],
 ] as const;
 
 const theoryTopics = [
@@ -129,6 +136,13 @@ const theoryTopics = [
   ["cognitive-flexibility-theory", "Cognitive Flexibility Theory"],
   ["variation-theory", "Variation Theory"],
   ["apos-theory-in-mathematics-learning", "APOS Theory in Mathematics Learning"],
+  ["realistic-mathematics-education", "Realistic Mathematics Education"],
+  ["instrumental-genesis", "Instrumental Genesis"],
+  ["commognition-and-learning-mathematics", "Commognition and Learning Mathematics"],
+  ["threshold-concepts", "Threshold Concepts"],
+  ["epistemic-cognition", "Epistemic Cognition"],
+  ["conceptual-and-procedural-knowledge", "Conceptual and Procedural Knowledge"],
+  ["representational-competence", "Representational Competence"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

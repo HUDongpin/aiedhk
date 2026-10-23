@@ -56,6 +56,13 @@ const aiTopics = [
   ["grounded-answers-and-citation-verification", "Grounded Answers and Citation Verification"],
   ["abstention-and-selective-prediction", "Abstention and Selective Prediction"],
   ["probability-calibration-in-ai", "Probability Calibration in AI"],
+  ["precision-recall-and-decision-thresholds", "Precision, Recall, and Decision Thresholds"],
+  ["learning-from-imbalanced-data", "Learning from Imbalanced Data"],
+  ["data-leakage-in-machine-learning", "Data Leakage in Machine Learning"],
+  ["overfitting-and-regularization", "Overfitting and Regularization"],
+  ["cross-validation-for-small-datasets", "Cross-Validation for Small Datasets"],
+  ["prediction-and-causal-inference", "Prediction and Causal Inference"],
+  ["bayesian-updating-for-ai-decisions", "Bayesian Updating for AI Decisions"],
 ] as const;
 
 const theoryTopics = [
@@ -101,6 +108,13 @@ const theoryTopics = [
   ["desirable-difficulties", "Desirable Difficulties"],
   ["productive-failure", "Productive Failure"],
   ["the-icap-framework", "The ICAP Framework"],
+  ["learning-by-teaching", "Learning by Teaching"],
+  ["peer-instruction", "Peer Instruction"],
+  ["dialogic-teaching", "Dialogic Teaching"],
+  ["distributed-cognition", "Distributed Cognition"],
+  ["embodied-cognition", "Embodied Cognition"],
+  ["constructionism", "Constructionism"],
+  ["experiential-learning", "Experiential Learning"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

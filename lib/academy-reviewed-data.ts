@@ -1,9 +1,11 @@
+import { academyRelease20260829To20260904 } from "@/lib/academy-release-20260829-20260904";
 import { academyRelease20260822To20260828 } from "@/lib/academy-release-20260822-20260828";
 import type { AcademyLesson } from "@/lib/types";
 import { academyBackfill20260811To0815 } from "@/lib/academy-backfill-20260811-0815";
 import { academyBackfill20260817To0821 } from "@/lib/academy-backfill-20260817-0821";
 
 export const reviewedAcademyLessons: AcademyLesson[] = [
+  ...academyRelease20260829To20260904,
   ...academyRelease20260822To20260828,
   ...academyBackfill20260817To0821,
   ...academyBackfill20260811To0815,

@@ -35,14 +35,14 @@ export default function ResearchCard({ paper, locale, dictionary, featured = fal
           />
         </div>
         <div className="flex h-full min-w-0 flex-col p-6 sm:p-7">
-          <div dir="ltr" className="flex items-start justify-between gap-4 text-xs font-black uppercase tracking-[0.18em]">
+          <div dir="ltr" className="flex flex-col items-start gap-3 text-xs font-black uppercase tracking-[0.18em] lg:flex-row lg:justify-between lg:gap-4">
             <div dir={locale === "ar" ? "rtl" : "ltr"} className="flex min-w-0 flex-wrap items-center gap-2">
               <span className="rounded-full bg-aied-soft px-3 py-1 text-aied-blue">{dictionary.paperTypes[paper.type]}</span>
               <span className="text-slate-400">
                 {paper.type === "policy-ethics" ? formatDate(paper.createdAt, locale) : paper.year}
               </span>
             </div>
-            <span dir={locale === "ar" ? "rtl" : "ltr"} className="shrink-0 text-right text-[0.68rem] leading-5 text-aied-blue" aria-label={`Article identifier ${listingIdentifier}`}>
+            <span dir={locale === "ar" ? "rtl" : "ltr"} className="order-first shrink-0 self-end text-right text-[0.68rem] leading-5 text-aied-blue lg:order-none lg:self-start" aria-label={`Article identifier ${listingIdentifier}`}>
               {listingIdentifier}
             </span>
           </div>

@@ -1,3 +1,5 @@
+import { researchNewsRelease20261024To1026 } from "@/lib/research-news-release-20261024-1026";
+import { researchNewsHistoricalGaps20261026 } from "@/lib/research-news-historical-gaps-20261026";
 import { researchNewsBackfill20261021To1023 } from "@/lib/research-news-backfill-20261021-1023";
 import { researchNewsBackfill20261014To1020 } from "@/lib/research-news-backfill-20261014-1020";
 import { researchNewsBackfill20260824To1013 } from "@/lib/research-news-backfill-20260824-1013";
@@ -16,6 +18,8 @@ import { researchNewsBackfill20260731To0806 } from "@/lib/research-news-backfill
 import { researchNewsBackfill20260811To0821 } from "@/lib/research-news-backfill-20260811-0821";
 
 const reviewedResearchPaperSource: ResearchPaper[] = [
+  ...researchNewsRelease20261024To1026,
+  ...researchNewsHistoricalGaps20261026,
   ...researchNewsBackfill20261021To1023,
   ...researchNewsBackfill20261014To1020,
   ...researchNewsBackfill20260824To1013,

@@ -112,6 +112,9 @@ const aiTopics = [
   ["reproducible-ai-experiments", "Reproducible AI Experiments"],
   ["on-device-and-edge-ai", "On-Device and Edge AI"],
   ["caching-and-batching-ai-requests", "Caching and Batching AI Requests"],
+  ["conformal-prediction", "Conformal Prediction"],
+  ["out-of-distribution-detection", "Out-of-Distribution Detection"],
+  ["model-cards-and-their-limits", "Model Cards and Their Limits"],
 ] as const;
 
 const theoryTopics = [
@@ -213,6 +216,9 @@ const theoryTopics = [
   ["activity-theory-and-expansive-learning", "Activity Theory and Expansive Learning"],
   ["funds-of-knowledge", "Funds of Knowledge"],
   ["translanguaging-in-education", "Translanguaging in Education"],
+  ["advance-organizers", "Advance Organizers"],
+  ["learning-with-contrasting-cases", "Learning with Contrasting Cases"],
+  ["learning-progressions", "Learning Progressions"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

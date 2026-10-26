@@ -39,11 +39,11 @@ function fileHash(path: string) {
   return createHash("sha256").update(readFileSync(path)).digest("hex");
 }
 
-test("research news fallback contains 233 curated Research News items", () => {
+test("research news fallback contains 242 curated Research News items", () => {
   const papers = getResearchPapers("en");
 
-  assert.equal(papers.length, 233);
-  assert.equal(papers[0]?.slug, "news-claude-security-continuous-review-education");
+  assert.equal(papers.length, 242);
+  assert.equal(papers[0]?.slug, "news-gemini-notebook-connected-source-actions");
   assert.ok(papers.every((paper) => !paper.sourceUrl.includes("example.com")));
   assert.ok(papers.every((paper) => paper.fullSummary.split(/\s+/).length >= 430));
 });
@@ -51,6 +51,11 @@ test("research news fallback contains 233 curated Research News items", () => {
 test("the reviewed date backlog contains exactly one research paper and one clearly labeled product or industry news item per day", () => {
   const papers = getResearchPapers("en");
   const expectedByDate = new Map([
+    ["2026-10-26", ["aied-241", "aied-242"]],
+    ["2026-10-25", ["aied-239", "aied-240"]],
+    ["2026-10-24", ["aied-237", "aied-238"]],
+    ["2026-08-22", ["aied-235", "aied-236"]],
+    ["2026-07-10", ["aied-019", "aied-234"]],
     ["2026-10-23", ["aied-232", "aied-233"]],
     ["2026-10-22", ["aied-230", "aied-231"]],
     ["2026-10-21", ["aied-228", "aied-229"]],
@@ -166,11 +171,16 @@ test("the reviewed date backlog contains exactly one research paper and one clea
     const research = entries.filter((paper) => paper.type !== "policy-ethics");
     assert.equal(productNews.length, 1, `${date} should contain one product-news item`);
     assert.equal(research.length, 1, `${date} should contain one research paper`);
-    assert.match(
-      `${productNews[0]?.title} ${productNews[0]?.tags.join(" ")}`,
-      /product news|industry news/i,
-      `${date} product or industry news should be explicitly labeled`,
-    );
+    if (productNews[0]?.id === "aied-019") {
+      // Completing July 10 preserves its already-published headline.
+      assert.equal(productNews[0].title, "News: OpenAI launches GPT-5.6 and brings Codex into ChatGPT");
+    } else {
+      assert.match(
+        `${productNews[0]?.title} ${productNews[0]?.tags.join(" ")}`,
+        /product news|industry news/i,
+        `${date} product or industry news should be explicitly labeled`,
+      );
+    }
   }
 });
 
@@ -472,6 +482,12 @@ test("static summary media assets are available locally", () => {
   assert.deepEqual(
     papersWithAudio.map((paper) => paper.id),
     [
+      "aied-242",
+      "aied-241",
+      "aied-240",
+      "aied-239",
+      "aied-238",
+      "aied-237",
       "aied-233",
       "aied-232",
       "aied-231",
@@ -596,6 +612,8 @@ test("static summary media assets are available locally", () => {
       "aied-114",
       "aied-111",
       "aied-110",
+      "aied-236",
+      "aied-235",
       "aied-109",
       "aied-108",
       "aied-107",
@@ -680,6 +698,7 @@ test("static summary media assets are available locally", () => {
       "aied-078",
       "aied-077",
       "aied-076",
+      "aied-234",
       "aied-019",
       "aied-075",
       "aied-074",
@@ -729,7 +748,7 @@ test("all entries from aied-038 onward have non-empty local M4A audio", () => {
     return id >= 38;
   });
 
-  assert.equal(backlog.length, 196);
+  assert.equal(backlog.length, 205);
   const hashes = new Set<string>();
   for (const paper of backlog) {
     assert.ok(paper.summaryAudio, `${paper.id} should declare summary audio`);
@@ -739,7 +758,7 @@ test("all entries from aied-038 onward have non-empty local M4A audio", () => {
     assert.ok(audioBuffer.byteLength > 100_000, `${paper.summaryAudio} should contain audible narration`);
     hashes.add(createHash("sha256").update(audioBuffer).digest("hex"));
   }
-  assert.equal(hashes.size, 196, "all backlog narrations must have unique SHA-256 hashes");
+  assert.equal(hashes.size, 205, "all backlog narrations must have unique SHA-256 hashes");
 });
 
 test("reviewed papers use human-reviewed translations when present and fall back to English otherwise", () => {

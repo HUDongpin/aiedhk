@@ -39,11 +39,20 @@ export async function loadNewsletterFeed(channel: NewsletterChannel, options: { 
   const diagnostics = { missing: 0, sourceMismatch: 0, invalid: 0 };
   const load = options.databasePapers ?? getPublishedResearchNewsletterPapers;
   const byLocale = new Map<Locale, Map<string, NewsletterEmailItem>>();
+  const reviewedBySlug = new Map(reviewedResearchPapers.map((paper) => [paper.slug, paper]));
   // Load all reviewed languages before touching the catalog. Any source failure aborts this channel.
   const database = await Promise.all(locales.map(async (locale) => [locale, await load(locale)] as const));
   for (const [locale, rows] of database) {
     const localized = new Map<string, NewsletterEmailItem>();
-    for (const { paper, contentLocale } of rows) localized.set(paper.slug, { id: paper.id, slug: paper.slug, title: paper.title, summary: paper.shortSummary, contentLocale, image: resolveNewsletterImage("news", paper, diagnostics) });
+    for (const { paper, contentLocale } of rows) {
+      const reviewed = reviewedBySlug.get(paper.slug);
+      // Database rows use UUIDs. Reuse a reviewed media identity only for the
+      // same article and exact source, without replacing database content.
+      const imageSource = paper.contentId == null && reviewed && reviewed.image === paper.image
+        ? { ...paper, contentId: reviewed.contentId ?? reviewed.id } : paper;
+      localized.set(paper.slug, { id: paper.id, slug: paper.slug, title: paper.title, summary: paper.shortSummary, contentLocale,
+        image: resolveNewsletterImage("news", imageSource, diagnostics) });
+    }
     for (const paper of reviewedResearchPapers) {
       if (localized.has(paper.slug)) continue;
       const translation = locale === "en" ? undefined : getReviewedLocalization(paper.id, locale);

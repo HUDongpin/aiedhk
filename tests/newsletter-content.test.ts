@@ -66,13 +66,43 @@ test("a database article with the same slug but a changed image never borrows th
   assert.equal(JSON.stringify(warnings.mock.calls[0].arguments).includes(paper.image), false);
 });
 
-test("a database article can use a stable contentId only when its prepared source matches", async (context) => {
+test("a database UUID uses its matching reviewed image without replacing database content", async (context) => {
+  const warnings = context.mock.method(console, "warn", () => {});
+  const original = reviewedResearchPapers[0];
+  const staticFeed = await loadNewsletterFeed("news", { databasePapers: async () => [] });
+  const expectedImage = staticFeed.find((entry) => entry.key === original.slug)!.items.en![0].image;
+  const paper = { ...original, id: "4c1d8455-d19c-4bf0-9b0f-562a1668f47a", contentId: undefined,
+    title: "Reviewed database title", shortSummary: "Reviewed database summary", imageAlt: "Database cover description" };
+  const feed = await loadNewsletterFeed("news", { databasePapers: async () => [{ paper, contentLocale: "fr" }] });
+  for (const locale of locales) {
+    const item = feed.find((entry) => entry.key === paper.slug)!.items[locale]![0];
+    assert.deepEqual(item.image, { ...expectedImage, alt: paper.imageAlt });
+    assert.equal(item.id, paper.id);
+    assert.equal(item.title, paper.title);
+    assert.equal(item.summary, paper.shortSummary);
+    assert.equal(item.contentLocale, "fr");
+  }
+  assert.equal(warnings.mock.callCount(), 0);
+});
+
+test("a database UUID cannot borrow a reviewed image with a different slug or source", async (context) => {
+  context.mock.method(console, "warn", () => {});
+  const original = reviewedResearchPapers[0];
+  const paper = { ...original, id: "4c1d8455-d19c-4bf0-9b0f-562a1668f47a", contentId: undefined };
+  for (const changed of [{ ...paper, slug: "different-database-article" },
+    { ...paper, image: "/images/research/covers/new-unprepared-image.jpg" }]) {
+    const feed = await loadNewsletterFeed("news", { databasePapers: async () => [{ paper: changed, contentLocale: "en" }] });
+    assert.equal(feed.find((entry) => entry.key === changed.slug)!.items.en![0].image, undefined);
+  }
+});
+
+test("a database article's explicit contentId remains authoritative", async (context) => {
   context.mock.method(console, "warn", () => {});
   const original = reviewedResearchPapers[0];
   const paper = { ...original, id: "database-row-uuid", contentId: original.id };
   const feed = await loadNewsletterFeed("news", { databasePapers: async () => [{ paper, contentLocale: "en" }] });
   assert.ok(feed.find((entry) => entry.key === paper.slug)!.items.en![0].image);
-  const changedIdentity = { ...original, id: "different-database-row" };
+  const changedIdentity = { ...original, id: "different-database-row", contentId: "different-content-id" };
   const changed = await loadNewsletterFeed("news", { databasePapers: async () => [{ paper: changedIdentity, contentLocale: "en" }] });
   assert.equal(changed.find((entry) => entry.key === paper.slug)!.items.en![0].image, undefined);
 });

@@ -4,6 +4,12 @@ const nextConfig = {
   turbopack: {
     root: new URL(".", import.meta.url).pathname,
   },
+  async headers() {
+    return [{
+      source: "/images/newsletter/:path*",
+      headers: [{ key: "Cache-Control", value: "public, max-age=31536000, immutable" }],
+    }];
+  },
   async redirects() {
     const localePattern = "en|zh-hant|zh-hans|es|fr|pt|de|ar|ko|ja|hi|ru|id|bn";
 

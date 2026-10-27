@@ -1,5 +1,6 @@
 import { localeMeta, type Locale } from "@/lib/i18n";
 import { getNewsletterCopy } from "./messages";
+import { digestCopy } from "./digest-copy";
 import type { NewsletterChannel, NewsletterEmailItem, RenderedNewsletterEmail } from "./types";
 
 interface EmailCopy {
@@ -113,14 +114,14 @@ function itemUrl(siteUrl: string, locale: Locale, channel: NewsletterChannel, sl
   return base.toString();
 }
 
-function shell(locale: Locale, title: string, body: string): string {
+function shell(locale: Locale, title: string, body: string, digestLayout = false): string {
   const { htmlLang, dir } = localeMeta[locale];
   return `<!doctype html>
 <html lang="${htmlLang}" dir="${dir}">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escapeHtml(title)}</title></head>
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>${escapeHtml(title)}</title>${digestLayout ? '<style>@media screen and (max-width:480px){.digest-shell{padding:20px 16px!important}.digest-content{padding:20px 16px!important}}</style>' : ""}</head>
 <body style="margin:0;padding:24px 12px;background:#f5f5f4;color:#202020;font-family:Arial,Helvetica,sans-serif;line-height:1.6;">
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0"><tr><td align="center">
-<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:680px;background:#ffffff;border:1px solid #dededb;"><tr><td dir="${dir}" style="padding:28px;text-align:${dir === "rtl" ? "right" : "left"};overflow-wrap:anywhere;">
+<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:680px;background:#ffffff;border:1px solid #dededb;"><tr><td${digestLayout ? ' class="digest-shell"' : ""} dir="${dir}" style="padding:28px;text-align:${dir === "rtl" ? "right" : "left"};overflow-wrap:anywhere;">
 <p style="margin:0 0 12px;font-size:13px;letter-spacing:1px;">AIEDHK</p>
 ${body}
 </td></tr></table></td></tr></table>
@@ -129,6 +130,32 @@ ${body}
 
 function action(label: string, url: string): string {
   return `<a href="${escapeHtml(url)}" style="color:#155e59;text-decoration:underline;">${escapeHtml(label)}</a>`;
+}
+
+function imageRow(item: NewsletterEmailItem, siteUrl: string, url: string): string {
+  const image = item.image;
+  // Frozen historical catalogs may have no media. Never let optional media
+  // prevent a readable digest, or turn a content field into an arbitrary URL.
+  if (!image || typeof image.path !== "string" || typeof image.alt !== "string"
+    || !/^\/images\/newsletter\/[a-z0-9][a-z0-9_-]*-[a-f0-9]{12,64}\.jpg$/.test(image.path)
+    || !Number.isInteger(image.width) || !Number.isInteger(image.height)
+    || image.width < 1 || image.height < 1 || image.width > 720 || image.height > 720) return "";
+  const origin = httpUrl(siteUrl);
+  const loopback = ["localhost", "127.0.0.1", "[::1]"].includes(origin.hostname);
+  if (origin.protocol !== "https:" && !(origin.protocol === "http:" && loopback)) return "";
+  const src = new URL(image.path, origin).toString();
+  const width = Math.min(624, image.width);
+  const height = Math.round(width * image.height / image.width);
+  const alt = image.alt.trim() || item.title;
+  return `<tr><td align="center" style="padding:0;background:#f0f4f2;">
+<a href="${escapeHtml(url)}" style="display:block;text-decoration:none;"><img src="${escapeHtml(src)}" width="${width}" height="${height}" alt="${escapeHtml(alt)}" style="display:block;width:100%;max-width:${width}px;height:auto;border:0;color:#334155;font:14px/1.5 Arial,Helvetica,sans-serif;"></a>
+</td></tr>`;
+}
+
+function readButton(label: string, url: string): string {
+  return `<table role="presentation" cellspacing="0" cellpadding="0"><tr><td bgcolor="#155e59" style="background:#155e59;border-radius:6px;mso-padding-alt:12px 20px;">
+<a href="${escapeHtml(url)}" style="display:inline-block;padding:12px 20px;border:1px solid #155e59;border-radius:6px;color:#ffffff;font-size:16px;font-weight:bold;line-height:1.4;text-decoration:none;">${escapeHtml(label)}</a>
+</td></tr></table>`;
 }
 
 export function renderNewsletterDigest({
@@ -146,25 +173,31 @@ export function renderNewsletterDigest({
   const unsubscribe = httpUrl(unsubscribeUrl).toString();
   const copy = getNewsletterCopy(locale, channel);
   const mail = emailCopy[locale];
+  const digest = digestCopy[locale];
+  const emoji = channel === "news" ? "📰" : "🎓";
   const label = channel === "news" ? copy.newsLabel : copy.academyLabel;
   const isReview = channel === "academy" && review;
   const reviewPrefix = isReview ? `${copy.reviewLabel} · ` : "";
-  const heading = `${reviewPrefix}${label}`;
-  const subject = `AIEDHK · ${reviewPrefix}${channel === "news" ? mail.newsSubject : mail.academySubject}`;
+  const heading = `${emoji} ${reviewPrefix}${label}`;
+  const subject = `${emoji} AIEDHK · ${reviewPrefix}${channel === "news" ? mail.newsSubject : mail.academySubject}`;
+  const count = `${digest.countLabel}: ${items.length}`;
+  const intro = channel === "news" ? digest.newsIntro : digest.academyIntro;
   const renderedItems = items.map((item) => {
     const url = itemUrl(siteUrl, locale, channel, item.slug);
     const content = localeMeta[item.contentLocale];
     const fallback = item.contentLocale !== locale;
     const ideas = item.coreIdeas ?? [];
-    const html = `<section style="margin:24px 0;padding-top:20px;border-top:1px solid #dededb;">
-${fallback ? `<p style="font-size:13px;color:#666;">${escapeHtml(copy.fallbackLabel)}</p>` : ""}
+    const html = `<table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="margin:0 0 24px;border:1px solid #dededb;border-collapse:separate;border-spacing:0;background:#ffffff;">
+${imageRow(item, siteUrl, url)}
+<tr><td class="digest-content" style="padding:24px;overflow-wrap:anywhere;word-wrap:break-word;">
+${fallback ? `<p style="margin:0 0 12px;font-size:13px;line-height:1.5;color:#52615d;">${escapeHtml(copy.fallbackLabel)}</p>` : ""}
 <div lang="${content.htmlLang}" dir="${content.dir}" style="text-align:${content.dir === "rtl" ? "right" : "left"};">
-<h2 style="font-size:21px;line-height:1.35;margin:0 0 12px;">${escapeHtml(item.title)}</h2>
-<p>${escapeHtml(item.summary)}</p>
-${ideas.length > 0 ? `<p lang="${localeMeta[locale].htmlLang}" dir="${localeMeta[locale].dir}" style="font-weight:bold;">${escapeHtml(mail.ideasHeading)}</p><ul>${ideas.map((idea) => `<li>${escapeHtml(idea)}</li>`).join("")}</ul>` : ""}
+<h2 style="font-size:21px;line-height:1.35;margin:0 0 12px;color:#202c29;">${escapeHtml(item.title)}</h2>
+<p style="margin:0 0 20px;font-size:16px;line-height:1.65;color:#37433f;">${escapeHtml(item.summary)}</p>
+${ideas.length > 0 ? `<p lang="${localeMeta[locale].htmlLang}" dir="${localeMeta[locale].dir}" style="margin:0 0 8px;font-size:16px;font-weight:bold;color:#202c29;">${escapeHtml(mail.ideasHeading)}</p><ul style="margin:0 0 20px;padding-inline-start:22px;font-size:16px;line-height:1.65;color:#37433f;">${ideas.map((idea) => `<li style="margin:0 0 6px;">${escapeHtml(idea)}</li>`).join("")}</ul>` : ""}
 </div>
-<p>${action(copy.readMore, url)}</p>
-</section>`;
+${readButton(copy.readMore, url)}
+</td></tr></table>`;
     const text = [
       ...(fallback ? [copy.fallbackLabel] : []), item.title, item.summary,
       ...(ideas.length > 0 ? [mail.ideasHeading, ...ideas.map((idea) => `- ${idea}`)] : []),
@@ -173,14 +206,17 @@ ${ideas.length > 0 ? `<p lang="${localeMeta[locale].htmlLang}" dir="${localeMeta
     return { html, text };
   });
   const footer = `${copy.unsubscribeAction} · ${label}`;
-  const body = `<h1 style="font-size:26px;line-height:1.3;">${escapeHtml(heading)}</h1>
-<p>${escapeHtml(copy.description)}</p>
+  const body = `<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;opacity:0;">${escapeHtml(`${count}. ${intro}`)}</div>
+<h1 style="margin:0 0 10px;font-size:26px;line-height:1.3;color:#202c29;">${escapeHtml(heading)}</h1>
+<p data-newsletter-count="${items.length}" style="margin:0 0 6px;font-size:13px;font-weight:bold;color:#155e59;">${escapeHtml(count)}</p>
+<p style="margin:0 0 26px;font-size:16px;line-height:1.65;color:#52615d;">${escapeHtml(intro)}</p>
 ${renderedItems.map((item) => item.html).join("\n")}
-<p style="border-top:1px solid #dededb;padding-top:20px;font-size:13px;">${action(footer, unsubscribe)}</p>`;
+<p style="border-top:1px solid #dededb;padding-top:20px;margin:4px 0 10px;font-size:13px;line-height:1.6;color:#52615d;">${escapeHtml(copy.description)}</p>
+<p style="margin:0;font-size:13px;line-height:1.6;">${action(footer, unsubscribe)}</p>`;
   return {
     subject,
-    html: shell(locale, subject, body),
-    text: ["AIEDHK", heading, copy.description, ...renderedItems.map((item) => item.text), `${footer}: ${unsubscribe}`].join("\n\n"),
+    html: shell(locale, subject, body, true),
+    text: ["AIEDHK", heading, count, intro, ...renderedItems.map((item) => item.text), copy.description, `${footer}: ${unsubscribe}`].join("\n\n"),
   };
 }
 

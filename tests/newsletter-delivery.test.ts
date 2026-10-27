@@ -46,7 +46,7 @@ integration("competing workers send once and preserve one stable idempotency key
 });
 
 integration("a transient failure retries the same immutable payload and never marks it delivered", async () => {
-  await fixture();
+  const data = await fixture();
   const sent: ProviderSendInput[] = [];
   const provider: NewsletterProvider = { async send(input) {
     sent.push(input);
@@ -56,11 +56,18 @@ integration("a transient failure retries the same immutable payload and never ma
   let [row] = await db.sql`select * from newsletter_deliveries`;
   assert.equal(row.status, "queued");
   assert.equal(new Date(row.next_attempt_at).toISOString(), "2026-10-23T01:32:00.000Z");
+  // A visual rollout can refresh the catalog while an old text-only message is
+  // waiting. Its retry must still use the original frozen provider envelope.
+  await db.sql`update newsletter_content set items=${db.sql.json({ en: [{ id: data.contentKey, slug: data.contentKey,
+    title: "Updated catalog", summary: "Illustrated content", contentLocale: "en",
+    image: { path: "/images/newsletter/news-updated-0123456789abcdef.jpg", alt: "A classroom", width: 720, height: 450 },
+  }] })} where content_key=${data.contentKey}`;
   await queue.sendNext({ policy, provider, now: new Date(now.getTime() + 130_000) });
   [row] = await db.sql`select * from newsletter_deliveries`;
   assert.equal(row.status, "accepted");
   assert.equal(sent.length, 2);
   assert.deepEqual(sent[1], sent[0]);
+  assert.deepEqual(sent[1].payload, { subject: "Digest", html: "<p>body</p>", text: "body" });
 });
 
 integration("unsubscribe, suppression, unpublished content and allowlist are rechecked before sends", async () => {

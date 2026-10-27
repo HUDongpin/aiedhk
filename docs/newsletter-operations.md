@@ -112,6 +112,8 @@ Email digests supply both `List-Unsubscribe` and `List-Unsubscribe-Post` headers
 
 ## Preview acceptance and production evidence
 
+For digest artwork preparation, immutable image retention, local layout previews and size/cost budgets, follow [Newsletter visuals](newsletter-visuals.md). Prepare and commit new derivatives before release; the release check is read-only and rejects stale image manifests. Frozen runs and queued payloads keep their original rendering.
+
 Use an isolated newsletter database and a verified Preview origin. The acceptance helper refuses live/off mode, the production origin, and `VERCEL_ENV=production`. It reads existing reviewed content, optionally refreshes only the Preview catalog, and never creates a scheduled production run or a fake publication event.
 
 1. Confirm the deployment is the intended clean revision, then apply the schema and initialize its baseline.

@@ -114,3 +114,28 @@ integration("test delivery is allowlisted and dry-run never creates records or a
   await planner.planPage(run.id, { mode: "test", testRecipients: ["person-2@example.com"] });
   assert.equal((await db.sql`select count(*)::int as count from newsletter_deliveries`)[0].count, 1);
 });
+
+integration("image preparation only affects future runs and never changes a frozen catalog or queued payload", async () => {
+  await subscriber(1, "academy");
+  const original = entry("pair", "academy");
+  await planner.initializeBaseline([original], start);
+  const frozen = await planner.ensureRun("academy", now, "live");
+  const illustrated = entry("pair", "academy");
+  for (const items of Object.values(illustrated.items)) for (const item of items ?? []) {
+    item.image = { path: "/images/newsletter/academy-lesson-0123456789abcdef.jpg", alt: "Teachers and learners", width: 720, height: 450 };
+  }
+  await planner.refreshCatalog("academy", [illustrated], now);
+  assert.equal((await planner.ensureRun("academy", now, "live")).id, frozen.id);
+  await planner.planPage(frozen.id, { mode: "live", testRecipients: [] });
+  const [old] = await db.sql`select id,payload from newsletter_deliveries`;
+  assert.doesNotMatch(old.payload.html, /<img\b/);
+  await db.sql`update newsletter_deliveries set status='accepted' where id=${old.id}`;
+  const next = await planner.ensureRun("academy", new Date(now.getTime() + 86400_000), "live");
+  await planner.planPage(next.id, { mode: "live", testRecipients: [] });
+  const [updated] = await db.sql`select payload from newsletter_deliveries where run_id=${next.id}`;
+  assert.equal((updated.payload.html.match(/<img\b/g) ?? []).length, 2);
+  assert.deepEqual((await db.sql`select payload from newsletter_deliveries where id=${old.id}`)[0].payload, old.payload);
+  const [content] = await db.sql`select baseline,first_seen_at from newsletter_content where content_key='pair'`;
+  assert.equal(content.baseline, true);
+  assert.equal(new Date(content.first_seen_at).toISOString(), start.toISOString());
+});

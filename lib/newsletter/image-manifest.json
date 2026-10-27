@@ -1,0 +1,3563 @@
+{
+  "schemaVersion": 1,
+  "processor": {
+    "version": 1,
+    "maxEdge": 720,
+    "maxBytes": 120000,
+    "sharp": "0.35.5"
+  },
+  "images": {
+    "academy:academy-001": {
+      "sourcePath": "/images/academy/covers/academy-001-what-ai-is.png",
+      "sourceSha256": "de0ddb6d6ff7bd7c3038506750f4b11cf4de052eac10bb23a8b81d9f7cd733c1",
+      "path": "/images/newsletter/academy-academy-001-5baca34cc3a2df9de4a5fc1dbf746418d4d711663dcc017c9ce6aba53289da80.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 75203
+    },
+    "academy:academy-002": {
+      "sourcePath": "/images/academy/covers/academy-002-ml-dl-generative-ai.png",
+      "sourceSha256": "8046832d6329d84b1ee1ac820c4a7dde1e9da9018a416d1db39dbb272e6c2850",
+      "path": "/images/newsletter/academy-academy-002-b94a2c38b40bdbdcacd3095476d59653529dfde50d277e4529d054998b315f5b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 78291
+    },
+    "academy:academy-003": {
+      "sourcePath": "/images/academy/covers/academy-003-how-llms-generate-text.png",
+      "sourceSha256": "d1c0bd0c7cc483a27dc89e27d3ff782cb6ed821c831b68d23eb01314ff3cd80e",
+      "path": "/images/newsletter/academy-academy-003-0160b170b7957c7ab6a21e7fc8c8a6e24927fcc96692bf181ecf4db4f516e5f7.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 75099
+    },
+    "academy:academy-004": {
+      "sourcePath": "/images/academy/covers/academy-004-behaviorism-consequences.png",
+      "sourceSha256": "c68fd2c007851234b573608a2585e93a24eefec25bd68549a0dcf3b6c44a2ff6",
+      "path": "/images/newsletter/academy-academy-004-d9bc038d0d5ce76a48e660ad1334fe11fc370e47c83c30420c73aa26cbdc3d4f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 53869
+    },
+    "academy:academy-005": {
+      "sourcePath": "/images/academy/covers/academy-005-cognitive-load-theory-diverse-v3.png",
+      "sourceSha256": "9f515c79cfed2b6e109276ac63259284d6e671378f252b0920f62e67d6d5edf9",
+      "path": "/images/newsletter/academy-academy-005-0f93465cd1afadda3edbe52de6fe512682139be3c310f3ae7df54986f5e46eb3.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 55454
+    },
+    "academy:academy-006": {
+      "sourcePath": "/images/academy/covers/academy-006-constructivism-knowledge-building.png",
+      "sourceSha256": "015647cd7c054e2832d6b90f6ae4fb312a8c52e33a772d94b0755d14c322a989",
+      "path": "/images/newsletter/academy-academy-006-9a3d8e1a7075ecac03058b0f8a40ba6bfe84239cb0655f193b0ff3829036c1f9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 81145
+    },
+    "academy:academy-007": {
+      "sourcePath": "/images/academy/covers/academy-007-training-validation-and-test-data.png",
+      "sourceSha256": "56e0f75023013e4a5a6034eed031124b5906ecf5ce356746dc701c2754d0f72e",
+      "path": "/images/newsletter/academy-academy-007-d672f9bf2ffc155ff4f561a3c25dc8437f7d6f9134e827f7a34a4937658d2304.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 35367
+    },
+    "academy:academy-008": {
+      "sourcePath": "/images/academy/covers/academy-008-working-memory-and-long-term-memory-diverse-v2.png",
+      "sourceSha256": "8b502819a0a3f1a943691f9856e53be4d12c39c47e9a519a662d0266b0353897",
+      "path": "/images/newsletter/academy-academy-008-8ec2db0231b628cd0c0ad78b1429bbf7a51e313db6e371652633f4a4559456d5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63456
+    },
+    "academy:academy-009": {
+      "sourcePath": "/images/academy/covers/academy-009-supervised-unsupervised-reinforcement-learning.png",
+      "sourceSha256": "46d2e0ec4b8d7e7dcccc046435a504562d75215d7f21468d0901abb17b7e730b",
+      "path": "/images/newsletter/academy-academy-009-0965bea68c7c33bc56eee5771cf26d03910c6012bac4330a7c5bdfcf0a4c3995.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 55139
+    },
+    "academy:academy-010": {
+      "sourcePath": "/images/academy/covers/academy-010-retrieval-practice.png",
+      "sourceSha256": "1bf5c75bcd6bea87891c056c1ae52f5ab1e54a796ab1502e79258cbd7f9b5f94",
+      "path": "/images/newsletter/academy-academy-010-41bf29ff6b78f511b468ba955bccd4d208ba849ab4436c3fbbd05e7acbbdf561.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 51375
+    },
+    "academy:academy-011": {
+      "sourcePath": "/images/academy/covers/academy-011-features-labels-and-learned-representations.png",
+      "sourceSha256": "ad1bdee32f04351807c2e0a8091cf8eeae9f69ad9aeb1944e15f965cbfe0732b",
+      "path": "/images/newsletter/academy-academy-011-f672f86f3cc7fd64cf2b7ea894a31578fccbd5e181a7dd5f653a657d2b299ea7.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 52410
+    },
+    "academy:academy-012": {
+      "sourcePath": "/images/academy/covers/academy-012-spacing-and-interleaving.png",
+      "sourceSha256": "4e9857530cd5c9e7409107d5166e4c569ca92a1d5ae7b6e512a05b133daf0925",
+      "path": "/images/newsletter/academy-academy-012-7a61754196f0151b336435bcc157ab363d8940a3ec5e56508c5e7218f6bbdcc1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65926
+    },
+    "academy:academy-013": {
+      "sourcePath": "/images/academy/covers/academy-013-what-neural-networks-learn.png",
+      "sourceSha256": "d2d7fe39e75b2790f132f7f478d1373cf6cedbb9c6917061730c792e6aede1f6",
+      "path": "/images/newsletter/academy-academy-013-4816f586f1c6209e8ca5bb736c32f00cacce42aaf5e2793eac7d84a082df186f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64954
+    },
+    "academy:academy-014": {
+      "sourcePath": "/images/academy/covers/academy-014-dual-coding-and-multimedia-learning.png",
+      "sourceSha256": "0f6534c47045a0ec0259d83798f5b903b7b3e0626819297af03e67e4be5c47ab",
+      "path": "/images/newsletter/academy-academy-014-ecb767aed763bb55af1195e30bea47996d8f0650493967baecf310bd53128d08.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59918
+    },
+    "academy:academy-015": {
+      "sourcePath": "/images/academy/covers/academy-015-prompts-context-and-model-responses.png",
+      "sourceSha256": "eb8048b94a61b0229cb95d0a909422b35a6e0dab20db39152bfcd97811024857",
+      "path": "/images/newsletter/academy-academy-015-c17cfb137bccbebff594e386be097ec2fc44e9f436e11b8bd7c7df2cdd4cc57b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68484
+    },
+    "academy:academy-016": {
+      "sourcePath": "/images/academy/covers/academy-016-scaffolding-and-the-zone-of-proximal-development.png",
+      "sourceSha256": "f5249e8a47c27419181c583cca5098692e3ebea43707ed1e6d8d97c778f1e6c6",
+      "path": "/images/newsletter/academy-academy-016-a647d49a7a82f71c9179b1e00e605b7259a523d1916dc7543a953cde343db56b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59789
+    },
+    "academy:academy-017": {
+      "sourcePath": "/images/academy/covers/academy-017-ai-errors-uncertainty-and-hallucination.png",
+      "sourceSha256": "9076bdc9e7afe920007708c36510d7eead9afe1a4f721a5658a02d776605158a",
+      "path": "/images/newsletter/academy-academy-017-48e7a26bbbb56b3ed3af2f88bbcf0f1fc26c15dad911213af9b6bfd685c0ea21.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61067
+    },
+    "academy:academy-018": {
+      "sourcePath": "/images/academy/covers/academy-018-metacognition-and-self-regulated-learning.png",
+      "sourceSha256": "17113ebe8f3277e1492d1a1a44b8bbd9957d1b8f41aea4c0bee3b5c46e18478a",
+      "path": "/images/newsletter/academy-academy-018-89c7fecd2aeeaa6e997bc7d1a43f797d7b829cc9b3689a3590981a06d9b48348.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66787
+    },
+    "academy:academy-019": {
+      "sourcePath": "/images/academy/covers/academy-019-evaluating-ai-system-performance.png",
+      "sourceSha256": "b4bf2d20d720962a151301f9a9f350bbe503c959558bc0b3be94c6f7e65d4fca",
+      "path": "/images/newsletter/academy-academy-019-81035c6142d43d989c520b86989c21d9100a2f2e60a3d51355edea73ebb20126.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68190
+    },
+    "academy:academy-020": {
+      "sourcePath": "/images/academy/covers/academy-020-motivation-self-determination-and-agency.png",
+      "sourceSha256": "87209061862ac2c0067486eb6249d44f7769fbf768db282c9b53e9a2841934ed",
+      "path": "/images/newsletter/academy-academy-020-018d06bfbc80febd013254db58ba8693b20dadf463c23c5e012336497bc982da.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 48920
+    },
+    "academy:academy-021": {
+      "sourcePath": "/images/academy/covers/academy-021-embeddings-and-semantic-similarity.png",
+      "sourceSha256": "1c8145dd9d75f417fead90e83c447fd5d495de2a1c375c5576d5bf71c857f939",
+      "path": "/images/newsletter/academy-academy-021-fc3807fbeb42d80a5b860e00c2bd2f2154013114edb0b77d0025d07d71bd585c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74187
+    },
+    "academy:academy-022": {
+      "sourcePath": "/images/academy/covers/academy-022-schema-theory.png",
+      "sourceSha256": "4269b276b3c582a58ce888d5af1ee972823489161248b00db9dd9f3e3e2ff407",
+      "path": "/images/newsletter/academy-academy-022-90f61ef6abd2479592fc2802a4d96e15a49a1e71ad835b2d740b812eaaaa66b6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59644
+    },
+    "academy:academy-023": {
+      "sourcePath": "/images/academy/covers/academy-023-transformers-attention-and-context-windows.png",
+      "sourceSha256": "69c504252881a67015b0f533c537eb4a3facb42ecddb60e495fbc6f40ecf3a7e",
+      "path": "/images/newsletter/academy-academy-023-c548138957a1412b4f0cc27cddbe5ee6cf819d32685fd3eedd422b5b134422ee.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68006
+    },
+    "academy:academy-024": {
+      "sourcePath": "/images/academy/covers/academy-024-conceptual-change.png",
+      "sourceSha256": "af73f6fc39211d41413c710588c3ca0909bc1dbbacd2f202d5f236d50336bedb",
+      "path": "/images/newsletter/academy-academy-024-068d8c920e4ef84d1298351e0f579c3d9fdfc74ad8cdee2a76d54bc6b78f8af2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59379
+    },
+    "academy:academy-025": {
+      "sourcePath": "/images/academy/covers/academy-025-retrieval-augmented-generation.png",
+      "sourceSha256": "94849ff2f8e5a15e98a8e21651118bb8cd8e8f3c26224c80c34a84153b1da918",
+      "path": "/images/newsletter/academy-academy-025-5f04ecee3d7e6e972520bb6d7ea803e3a44e6ddb558e774f0d12ded467253f16.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65538
+    },
+    "academy:academy-026": {
+      "sourcePath": "/images/academy/covers/academy-026-situated-learning.png",
+      "sourceSha256": "d93f76c09febee24e0cc66dbe324833e625c33d292ac6e15f0d6561d44e4157c",
+      "path": "/images/newsletter/academy-academy-026-cb2ddb908d46a8b8ea17609764eedf36a22e3e2cd7a562b8aef5a95bd957b8e5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 76706
+    },
+    "academy:academy-027": {
+      "sourcePath": "/images/academy/covers/academy-027-fine-tuning-instruction-tuning-and-preference-learning.png",
+      "sourceSha256": "5979eb54e6fd25ebaf3617bc448a5553d207b347b37e8d71b036675ce0921519",
+      "path": "/images/newsletter/academy-academy-027-c45e514a74ee17d5a62b010b7ea84c7c30f291bd97acc37bfb37dfd741e6a9a5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72656
+    },
+    "academy:academy-028": {
+      "sourcePath": "/images/academy/covers/academy-028-communities-of-practice.png",
+      "sourceSha256": "fa2ccf0bb77bf3d109352b66344ffb51590a12aeda2f2780ad4d8354c2ef792b",
+      "path": "/images/newsletter/academy-academy-028-919a55cd018a51809aeb382dcb1efdd0b2fc314ae419acf5a5b12f4bdab875b2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72009
+    },
+    "academy:academy-029": {
+      "sourcePath": "/images/academy/covers/academy-029-multimodal-ai.png",
+      "sourceSha256": "b9340fa531231d498b74220c4d22ed6975b9778667c1ebce671c2930051a106e",
+      "path": "/images/newsletter/academy-academy-029-54587c6f4e04ea888f1fca95b32dc7724c7050dd198f8043188e8321622ce63b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57763
+    },
+    "academy:academy-030": {
+      "sourcePath": "/images/academy/covers/academy-030-social-learning-and-modeling.png",
+      "sourceSha256": "4c23ead9d333c7e60efd4dd9e4a1f96ba927bbb204d1b34ecaf34c6bfe8dddb6",
+      "path": "/images/newsletter/academy-academy-030-964177bb3383a4dcd2d39c4045fb1262da5113549a9ec59a6f25c5a950dba457.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69132
+    },
+    "academy:academy-031": {
+      "sourcePath": "/images/academy/covers/academy-031-ai-agents-tools-and-workflows.png",
+      "sourceSha256": "c7aac1a7fc590efdd8c9cc7a24f35dfa3f1869ba9debc7cbcd197910b2dbef26",
+      "path": "/images/newsletter/academy-academy-031-7cab35b59fbe66a27c63e17f30ae166192353d672aa68a3865557a57bfd4f5e4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71438
+    },
+    "academy:academy-032": {
+      "sourcePath": "/images/academy/covers/academy-032-mastery-learning.png",
+      "sourceSha256": "9f9c2a55baf8321da63b34f5db22b7e0b5736171d6f278be43bfe14d34af21a9",
+      "path": "/images/newsletter/academy-academy-032-e3398da1e8bdb8eb91711ea097dace5ff3a850f7a218ca99ce30fe7f7345dd44.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67443
+    },
+    "academy:academy-033": {
+      "sourcePath": "/images/academy/covers/academy-033-knowledge-tracing-and-learner-models.png",
+      "sourceSha256": "c280a5fa4b2452296f45cab988efa7f5050b6dfe2c69f14a410f94612c0760aa",
+      "path": "/images/newsletter/academy-academy-033-433bb97a76e7172c404a013825c9ff74c80cffe2ee79e70485f97beb57219cb1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65299
+    },
+    "academy:academy-034": {
+      "sourcePath": "/images/academy/covers/academy-034-formative-assessment.png",
+      "sourceSha256": "d37279692808e60b21c34c37feb32b8244ef85b26c0dc9941fc9fcb12b39d7ce",
+      "path": "/images/newsletter/academy-academy-034-5ef03fb5a7eccfe87f7328d5694061d245e220103688411a05f61ac0317d01f9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63425
+    },
+    "academy:academy-035": {
+      "sourcePath": "/images/academy/covers/academy-035-recommendation-and-personalization-systems.png",
+      "sourceSha256": "446ed9c10b8361e074930bc0538423a492696d1f1130e4a8b31cc4f94bd605b2",
+      "path": "/images/newsletter/academy-academy-035-48fe9a4c0aa9358a92a7e5489d4d497b8783c9390933046e8190764a7e7e8db8.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66493
+    },
+    "academy:academy-036": {
+      "sourcePath": "/images/academy/covers/academy-036-feedback-for-learning.png",
+      "sourceSha256": "4cacbb573dbdcf9a2cc9227f3e5f8226c3a9bdc97b165ffb5160bfa31cc4e7af",
+      "path": "/images/newsletter/academy-academy-036-f562402448ab2333f0d3dc2608d7484a41372aae0305f3c484b91e838b5f535f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69415
+    },
+    "academy:academy-037": {
+      "sourcePath": "/images/academy/covers/academy-037-computer-vision-for-learning.png",
+      "sourceSha256": "66aaa32a5722343ecbd3bf07879aeaee0c575c5fa2c61ed69c92b7299216e6e8",
+      "path": "/images/newsletter/academy-academy-037-dc33fb3af826d4db04839dc6ad78d88e9470d7ff76fe69726b8d375de97fa7a2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62867
+    },
+    "academy:academy-038": {
+      "sourcePath": "/images/academy/covers/academy-038-deliberate-practice.png",
+      "sourceSha256": "e32336c8a89d385c357e52831775b2f430739c31fb3cd1d0a08b20e70bbb5196",
+      "path": "/images/newsletter/academy-academy-038-29bd2dad1c55de12d5c0b084cb841dc20bc017d055892b54375219f484ad01df.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60173
+    },
+    "academy:academy-039": {
+      "sourcePath": "/images/academy/covers/academy-039-speech-recognition-and-synthesis.png",
+      "sourceSha256": "eafeecbb9684f31b9b657415d938caf4e4c340e2cfb9cfa2b70d35deb4f2933c",
+      "path": "/images/newsletter/academy-academy-039-db6288f7c6bdd6348a59feaa41344719fb2cac4b5177c990a323039ada2bbde6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 52694
+    },
+    "academy:academy-040": {
+      "sourcePath": "/images/academy/covers/academy-040-transfer-of-learning.png",
+      "sourceSha256": "fb6612ffb72c093482ef4cffa98f0e1719a012aabf08c9a446a6609f27de79bd",
+      "path": "/images/newsletter/academy-academy-040-e7b9d26e6d6c5b0aeb37e443194f74790f9d4c96d86551a52e55d28325099872.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66035
+    },
+    "academy:academy-041": {
+      "sourcePath": "/images/academy/covers/academy-041-algorithmic-bias-and-fairness.png",
+      "sourceSha256": "c3228d59ce8de9b6ba4243a4626200cc23d8904e15fc1f029cae9a0008906df5",
+      "path": "/images/newsletter/academy-academy-041-06d9d81fff383210877d5ab5b5015ebcf7280f8fb13773af8aa872dec174f1b0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58699
+    },
+    "academy:academy-042": {
+      "sourcePath": "/images/academy/covers/academy-042-achievement-goal-theory.png",
+      "sourceSha256": "5e5d3638c48b392fda0b3ca89cc49271a3ac8f55a708a06edaf402f4a82977b6",
+      "path": "/images/newsletter/academy-academy-042-a0ba6f098b49705e1cfd4d21ac549871aed9f31611996b4d4d702ad9c32cec9b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62991
+    },
+    "academy:academy-043": {
+      "sourcePath": "/images/academy/covers/academy-043-privacy-security-and-educational-data.png",
+      "sourceSha256": "e5e6c5cc814126c1ae654bc1aed00daf243394bd18f2d0d25feae1e80358c287",
+      "path": "/images/newsletter/academy-academy-043-05df9be9f55c764aae888e18efc51db4c0bfbcc1ccc2d13b16b7bf219cec1373.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 52350
+    },
+    "academy:academy-044": {
+      "sourcePath": "/images/academy/covers/academy-044-control-value-theory-of-achievement-emotions.png",
+      "sourceSha256": "2d6005f404900551708e7e0359a330864a9176c995699b56c4b2bceeccc28a58",
+      "path": "/images/newsletter/academy-academy-044-41bb6cca3000fb40a1bbe7d357b9b0fee377c4eb61aee488b8a963096b332bb1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60979
+    },
+    "academy:academy-045": {
+      "sourcePath": "/images/academy/covers/academy-045-explainability-and-transparency.png",
+      "sourceSha256": "32ff83a583e9bd0eed9998bc3955ea5285915128a145e40663cd57182808eda5",
+      "path": "/images/newsletter/academy-academy-045-2e32fbd1cde14a352b455b6ab9b3e4eb9e587cfcddef6a7ec7e1abe562c27431.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 56763
+    },
+    "academy:academy-046": {
+      "sourcePath": "/images/academy/covers/academy-046-cognitive-apprenticeship.png",
+      "sourceSha256": "9905cbe39a04d0cc9ff321e2d870a0b4cdc6339bd692055e9162a1fcb9f6acc9",
+      "path": "/images/newsletter/academy-academy-046-d483929a671c3bf3c61bba793b9836df36c780b7d064fb38fe6c23b7a1d81862.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61027
+    },
+    "academy:academy-047": {
+      "sourcePath": "/images/academy/covers/academy-047-human-in-the-loop-ai.png",
+      "sourceSha256": "cb42fef69e519c5e669e0f3686579bf2ebae565a727161199c5f1e642a2b4b46",
+      "path": "/images/newsletter/academy-academy-047-ba0903e596ebc244c8b8afc334ab6d95524612fca8b4614b46749f56d109ae9d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63444
+    },
+    "academy:academy-048": {
+      "sourcePath": "/images/academy/covers/academy-048-inquiry-based-learning.png",
+      "sourceSha256": "25c506c3b3c6f9eac556db6de168f1d92d7f190dc5638cac9a9a1da07fbe55c0",
+      "path": "/images/newsletter/academy-academy-048-8a419239748ef163ad34c0352c502ed54ac4d6c589bf2f6513c075274d2674dd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72227
+    },
+    "academy:academy-049": {
+      "sourcePath": "/images/academy/covers/academy-049-ai-safety-and-risk-management.png",
+      "sourceSha256": "4ba4e2e88d8b15da9947d2140a8e5a09c2c396cbf1ac65fab31504b569288ba0",
+      "path": "/images/newsletter/academy-academy-049-17cd3983cd8ceb83097fc54c324fef9f6591c9e62a502be46935414ce5505b1e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63779
+    },
+    "academy:academy-050": {
+      "sourcePath": "/images/academy/covers/academy-050-collaborative-learning.png",
+      "sourceSha256": "a460b5f472cf559695aceaf98ded9e0505fc86758af091363a0a88c16282c7db",
+      "path": "/images/newsletter/academy-academy-050-e850bac7bf96998e542bec271c211a5d5b1d256ba9b76bc0e411f320112e2619.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66031
+    },
+    "academy:academy-051": {
+      "sourcePath": "/images/academy/covers/academy-051-benchmarking-and-evaluation-design.png",
+      "sourceSha256": "d9dd2fcabac003176afc3cd3fe4d461452577518aa89e2cf094250783fac25ef",
+      "path": "/images/newsletter/academy-academy-051-b1a4c82f7a245fe7a2d57026091cd5afc2ba7f04636d407488efbf0492d190c8.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54545
+    },
+    "academy:academy-052": {
+      "sourcePath": "/images/academy/covers/academy-052-universal-design-for-learning.png",
+      "sourceSha256": "a45558299e35ee4d2550f7b47a465149f1123247a076b504eab84a4774109407",
+      "path": "/images/newsletter/academy-academy-052-0f9893b54293dce1344478f033b272ba0ea10b1acd3580e1e04fecdc4a94173d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72715
+    },
+    "academy:academy-053": {
+      "sourcePath": "/images/academy/covers/academy-053-open-and-closed-ai-models.png",
+      "sourceSha256": "e000d48b3c7b23558a4de6d477c8578fe56746d62057f07c6f761fc756260bf4",
+      "path": "/images/newsletter/academy-academy-053-4125155c37a72413c1f1f731fbc68e6ce752c2676ead971c61b5c1326219c47f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59466
+    },
+    "academy:academy-054": {
+      "sourcePath": "/images/academy/covers/academy-054-culturally-responsive-pedagogy.png",
+      "sourceSha256": "d498949f8904c83a2b6d3266cab7f68a111f45cffba397330834ba9efb2d8753",
+      "path": "/images/newsletter/academy-academy-054-976367d1a29b9a763f96f2ddcc295716d863a933b174068a7073fe62f93541fa.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 76417
+    },
+    "academy:academy-055": {
+      "sourcePath": "/images/academy/covers/academy-055-compute-efficiency-and-environmental-cost.png",
+      "sourceSha256": "1847d402e13a30889b6cd77be4039917c56e98f9885e13f14d3110b6f92f19b5",
+      "path": "/images/newsletter/academy-academy-055-dc02c4fbf87aeb134e5b474e42848b9b99e738c338a57c2ed8cca0410c72c5e5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 56670
+    },
+    "academy:academy-056": {
+      "sourcePath": "/images/academy/covers/academy-056-learning-analytics-and-assessment-validity.png",
+      "sourceSha256": "59474558ba13a2bef2cca05a38deb053b284be400eedb0a366170f83fedffc48",
+      "path": "/images/newsletter/academy-academy-056-65fbddcb26bc714576fa49668bd1f3defee3b210120164905f02a2cd0941a5a4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54101
+    },
+    "academy:academy-057": {
+      "sourcePath": "/images/academy/covers/academy-057-ai-governance-in-education.png",
+      "sourceSha256": "0ae33c8fa4a433d0da9fdc5e49af7177379052904b3bebe12c69655659043a16",
+      "path": "/images/newsletter/academy-academy-057-0c0f6e39cf80c72841e461756b18a8327e75b7ec2e958b1ea89e8ba33abdfd03.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61725
+    },
+    "academy:academy-058": {
+      "sourcePath": "/images/academy/covers/academy-058-teacher-professional-judgment.png",
+      "sourceSha256": "46c5f9733791f66519996091c49be1579d7bc7d3e6c9233b70dff927021aa1ed",
+      "path": "/images/newsletter/academy-academy-058-a3d535361dbf074f7308eada1a404adaa442dc67a7291219eeac9216692e2212.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 51178
+    },
+    "academy:academy-059": {
+      "sourcePath": "/images/academy/covers/academy-059-designing-responsible-ai-learning-systems.png",
+      "sourceSha256": "84341de8f578f7927be1c110c198c4c5fc67bf609f69cb31b2fddb00c60824f8",
+      "path": "/images/newsletter/academy-academy-059-d3ea73e6dc7ab885eb216e5c0d7fea10741ddb8ab08a47064d905bfc36c4fe87.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59975
+    },
+    "academy:academy-060": {
+      "sourcePath": "/images/academy/covers/academy-060-ethics-care-and-human-flourishing-in-education.png",
+      "sourceSha256": "04eecc5cf14527601ef21d527dab28d91bb3b17b9b4e79af3f3a3ccb5a15cc77",
+      "path": "/images/newsletter/academy-academy-060-98e00f525b101b9bae776f75a716fbba3aa6d5be72bbb8f2a3bce016dd929657.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59976
+    },
+    "academy:academy-061": {
+      "sourcePath": "/images/academy/covers/academy-061-educational-data-governance-and-data-quality.png",
+      "sourceSha256": "abaf72910a55d0243285258715c1196a6aa2bdf39c4add353d5772bcef00cb94",
+      "path": "/images/newsletter/academy-academy-061-a3b80a5502d8a5997c3357cfe7d706e88ee8ea35998876fa90fa9df3ab2dd345.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 49960
+    },
+    "academy:academy-062": {
+      "sourcePath": "/images/academy/covers/academy-062-teacher-professional-learning.png",
+      "sourceSha256": "18a0744b4ec0b76137fe271354114804e469cbfca7a9d1b2d947d06a1e2ea38c",
+      "path": "/images/newsletter/academy-academy-062-60f6c199b2a6242011e90cfef68a7259a5a4aab582dd53ed33be426946a083e1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60644
+    },
+    "academy:academy-063": {
+      "sourcePath": "/images/academy/covers/academy-063-model-monitoring-drift-and-incident-response.png",
+      "sourceSha256": "a055cc6e26b064fe64fd32d1cf7c87e8391cbfe3310d3cde33b058b71cf1e108",
+      "path": "/images/newsletter/academy-academy-063-52ca15bd23d0892d7e9262b8b349f9a923af774718afe9c5b5a60da1287daee3.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57587
+    },
+    "academy:academy-064": {
+      "sourcePath": "/images/academy/covers/academy-064-student-voice-and-learner-participation.png",
+      "sourceSha256": "dde1a335baf3e9c86c504cf25549a60f2ad2c134ebabd574e416fa19594cf2cc",
+      "path": "/images/newsletter/academy-academy-064-98db340d95923eeef8a26edc1afeccbc392d074ee4e9fe57623d1c2110cb9e5b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62915
+    },
+    "academy:academy-065": {
+      "sourcePath": "/images/academy/covers/academy-065-procuring-and-evaluating-educational-ai-vendors.png",
+      "sourceSha256": "6859b054516c24cb0a2999a64852a9ba84092f79053dda839455f5f25fb0828e",
+      "path": "/images/newsletter/academy-academy-065-932c1c3511f949f03f5bd067e2b14ea8ea8314d8ddf768d07678bd28c2fe5bd4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69652
+    },
+    "academy:academy-066": {
+      "sourcePath": "/images/academy/covers/academy-066-inclusive-pedagogy-and-digital-accessibility.png",
+      "sourceSha256": "a31e1f6e2407a05b064b388699b970e6b2cf37a961db01443da5c309a55d55c5",
+      "path": "/images/newsletter/academy-academy-066-538647600aac049a666d1782990d01ac9d81934fff80446f63580d61489efa19.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57322
+    },
+    "academy:academy-067": {
+      "sourcePath": "/images/academy/covers/academy-067-participatory-design-of-educational-ai.png",
+      "sourceSha256": "bb5fbd46f9e6154bcb798ea3db5d32b8b08d13929777f911effd9d711b7de9ca",
+      "path": "/images/newsletter/academy-academy-067-1ea820bb83236c38e1e60f5ba04af1aca519e6cee30bcf262e26295aea916904.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60831
+    },
+    "academy:academy-068": {
+      "sourcePath": "/images/academy/covers/academy-068-evidence-informed-educational-decision-making.png",
+      "sourceSha256": "04e2f42f4028ac94520e9d9110925c1e75499b35a0461cad96606d24cdcfbd38",
+      "path": "/images/newsletter/academy-academy-068-e972f298b4b88859ade4e505e744855a412b5d5ab5df0c3792c11f1c5112afea.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62669
+    },
+    "academy:academy-069": {
+      "sourcePath": "/images/academy/covers/academy-069-evaluating-the-learning-impact-of-ai.png",
+      "sourceSha256": "6bb4b1c34a181fd6e593bcd8c655eaa90a1babd229763c5ad049a0bb7ed8e79b",
+      "path": "/images/newsletter/academy-academy-069-f34bab8b74e916dd1c690480575d5a4facf777f4dbd58860687707582b3360fc.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 55368
+    },
+    "academy:academy-070": {
+      "sourcePath": "/images/academy/covers/academy-070-implementation-science-in-education.png",
+      "sourceSha256": "4006304263fe3d1a27549a8d0732564cc9f46a25dbee42fcd0f57ebb0fbd3af2",
+      "path": "/images/newsletter/academy-academy-070-1ee1720ffc3abc00e78668fde7e8ae44ebb6512ad2d5441062b53e00b2723ba1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 52758
+    },
+    "academy:academy-071": {
+      "sourcePath": "/images/academy/covers/academy-071-tokenization-and-multilingual-ai.png",
+      "sourceSha256": "7944afd2bf10a193577b76def903d1e4db030335df8e8d4afefc010fe145965f",
+      "path": "/images/newsletter/academy-academy-071-ab29c45908cf2e0ee9c99e05916af4dfc5a0fd35a652982455152972f9db75ab.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68033
+    },
+    "academy:academy-072": {
+      "sourcePath": "/images/academy/covers/academy-072-the-worked-example-effect.png",
+      "sourceSha256": "b9dd4e702ca40d7018077684ec21b1edb92d80755ba3103eceb3849957636c21",
+      "path": "/images/newsletter/academy-academy-072-167f873e1fe4cb255a2c4e785a9a1b0519725189d6f1a8c9f4fa2a8a6610f6fe.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64606
+    },
+    "academy:academy-073": {
+      "sourcePath": "/images/academy/covers/academy-073-sampling-temperature-and-top-p.png",
+      "sourceSha256": "3daa23d7f3dff01eb350a01950f109ddc5a06a3c14a27ac58e473d529a7db4e5",
+      "path": "/images/newsletter/academy-academy-073-f6b39cf6583267354e059ecd0432a856c9a5015b618f2717ef12d9edf8ec26bd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62631
+    },
+    "academy:academy-074": {
+      "sourcePath": "/images/academy/covers/academy-074-self-explanation-in-learning.png",
+      "sourceSha256": "761ab1b16c3970ec7bceb16c98683ae0d9f38de7bff8599ebf61225b976337d9",
+      "path": "/images/newsletter/academy-academy-074-99e0103b8fb41c1116fa4fe4e35ee3e2ddf0734d36613c498be627cccd212312.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70337
+    },
+    "academy:academy-075": {
+      "sourcePath": "/images/academy/covers/academy-075-structured-outputs-and-json-schemas.png",
+      "sourceSha256": "133cfa6bbe3462eab69d739e14cdfba989b3beed26f65e1f44227e12a1caba34",
+      "path": "/images/newsletter/academy-academy-075-d6669f2a819d21b334e9ffeb7be799598dd2814829dc758fadf27306b4d21a05.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69546
+    },
+    "academy:academy-076": {
+      "sourcePath": "/images/academy/covers/academy-076-the-generation-effect.png",
+      "sourceSha256": "18705bee3db15547c24fe695860dbf05c5c047b248e93318868665e5f5eed437",
+      "path": "/images/newsletter/academy-academy-076-7f225745348c19ff5b6fac8acd4c9d30376ff425a330748da3b195a7da7739bf.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63964
+    },
+    "academy:academy-077": {
+      "sourcePath": "/images/academy/covers/academy-077-prompt-injection-and-untrusted-content.png",
+      "sourceSha256": "a5c95313a33f3ec117d5801c769145fd750c05be418c8c2e89b8eb4e0496e94b",
+      "path": "/images/newsletter/academy-academy-077-eb15ab6a90d772b8ba943bdd36e7cccb1fed8a64d9cfe3a5ce80d64c7a8ff5c9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57364
+    },
+    "academy:academy-078": {
+      "sourcePath": "/images/academy/covers/academy-078-elaborative-interrogation.png",
+      "sourceSha256": "f67384074d6589f5f77bc91a7f415a22e845de149c908e1a61d0854ae16c8b62",
+      "path": "/images/newsletter/academy-academy-078-686978fe11721f88de2599aca6ae4675e1dfd83839ec635033ca1ca4c834ebb0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61479
+    },
+    "academy:academy-079": {
+      "sourcePath": "/images/academy/covers/academy-079-grounded-answers-and-citation-verification.png",
+      "sourceSha256": "274167fc1c2094f3a645e5dfe0cc1dbfd240be2f16eb4004fccadf5f81f9df17",
+      "path": "/images/newsletter/academy-academy-079-ddbc87dc5678619137eda1f2686bb62195368f36f83253104e10d2e1f80001ed.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 73083
+    },
+    "academy:academy-080": {
+      "sourcePath": "/images/academy/covers/academy-080-desirable-difficulties.png",
+      "sourceSha256": "ff3df11ec96df68b072376b7221353f2f92c81af79cb646da319eae11246253d",
+      "path": "/images/newsletter/academy-academy-080-d1068f02bac841efa21256c2831a74033b58506e160f9d34579b2dc05cd83399.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64822
+    },
+    "academy:academy-081": {
+      "sourcePath": "/images/academy/covers/academy-081-abstention-and-selective-prediction.png",
+      "sourceSha256": "87d39f9ae74de2c6723351f4b4a20b86cebfc69feb9f6ba9bb02dc0aadab6f46",
+      "path": "/images/newsletter/academy-academy-081-a8de2f30f9b19a50d5e0383c30a20577c32abf68b119591163add8688337291f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 78349
+    },
+    "academy:academy-082": {
+      "sourcePath": "/images/academy/covers/academy-082-productive-failure.png",
+      "sourceSha256": "861c6faf155b934334891102d2ccfdb51cac87398e922f2c3f749f24983e56a4",
+      "path": "/images/newsletter/academy-academy-082-dc173e2c0ed132a2039c60d8f2a6d44d7dd7f55db1a65f6e212915eb26c0f889.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68172
+    },
+    "academy:academy-083": {
+      "sourcePath": "/images/academy/covers/academy-083-probability-calibration-in-ai.png",
+      "sourceSha256": "ae7642348a9d9f0b9dfa02e13a356d7d4e8f23bcad9ebba21cae0b75a4d5a49f",
+      "path": "/images/newsletter/academy-academy-083-7e1eb0410669c374be73a272e9a4743d1014ee07cb281169abd137f5a2907a03.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61452
+    },
+    "academy:academy-084": {
+      "sourcePath": "/images/academy/covers/academy-084-the-icap-framework.png",
+      "sourceSha256": "96ecb90cf263d24d0b210bd997da364c77cdea839cfdd4c71fcc4807390a14fb",
+      "path": "/images/newsletter/academy-academy-084-4de527852b3a9b8eaf7d778fbac4f3395e9f7a3fe95d33e474c393bf5ed0a567.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69002
+    },
+    "academy:academy-085": {
+      "sourcePath": "/images/academy/covers/academy-085-precision-recall-and-decision-thresholds.png",
+      "sourceSha256": "75613e5ef91b1c3bf93997dca7e93f5b3ee948e2720266e23b27bb59997d6d7f",
+      "path": "/images/newsletter/academy-academy-085-0763ed44b94c906a16ead9409b4c6dc31a1ffe49645570f93d7c042a410a22cf.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 52701
+    },
+    "academy:academy-086": {
+      "sourcePath": "/images/academy/covers/academy-086-learning-by-teaching.png",
+      "sourceSha256": "3a72a120464d6f2d550c25af4effe46b22715eef8549d285bf99ae763ff81d94",
+      "path": "/images/newsletter/academy-academy-086-f62b293dfc334583ca9192962a02c43a2edc535f1bbdd12168cb5c1ade2a86e2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71641
+    },
+    "academy:academy-087": {
+      "sourcePath": "/images/academy/covers/academy-087-learning-from-imbalanced-data.png",
+      "sourceSha256": "acada6d4af29e780777291c900126f3e2eb1745eb9afe4e88f0d95ad8eb41f05",
+      "path": "/images/newsletter/academy-academy-087-4fbacbf138eceeae4d29de72b2d3c50181ac677f3efc18e5f217cbe5b6981bac.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70118
+    },
+    "academy:academy-088": {
+      "sourcePath": "/images/academy/covers/academy-088-peer-instruction.png",
+      "sourceSha256": "c3f6610d036c027a65ed02a8ff1e2475e73ede976383e36bebbee3be6725d2ba",
+      "path": "/images/newsletter/academy-academy-088-33e4baa8eee7bd61c28141ae2a6b6be811263bcafa1714f404a8c04cdafe7554.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65387
+    },
+    "academy:academy-089": {
+      "sourcePath": "/images/academy/covers/academy-089-data-leakage-in-machine-learning.png",
+      "sourceSha256": "79a047bf11b43d915f6c77b4ae87138dee43a0cd5f65b215d43e35ef5ebf4494",
+      "path": "/images/newsletter/academy-academy-089-c6d7a6a35925a1796e8821e4c7b3716e1eb3605d13401a8d274d41b4b0f26d12.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62130
+    },
+    "academy:academy-090": {
+      "sourcePath": "/images/academy/covers/academy-090-dialogic-teaching.png",
+      "sourceSha256": "b2795595102522b70d1c9c4287837d056a3e9a188dbeffc66cd4988ba7df05cf",
+      "path": "/images/newsletter/academy-academy-090-a97aa225caef816810a3380b0757a01e0b2e21b2a95c0a183bb5e1bcabec19fb.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 78024
+    },
+    "academy:academy-091": {
+      "sourcePath": "/images/academy/covers/academy-091-overfitting-and-regularization.png",
+      "sourceSha256": "8b53aa34ec4dbe766fa656e6db6c6410a69601152096672df0c837017eca3789",
+      "path": "/images/newsletter/academy-academy-091-3c1d549267eb2dc2de613419c1f2e510290652985c211522a80a6fee683e6e48.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60847
+    },
+    "academy:academy-092": {
+      "sourcePath": "/images/academy/covers/academy-092-distributed-cognition.png",
+      "sourceSha256": "eb415f708e810d2a3e4ddeb6a2ff209c683da01ba7af417c37c0901abc1f0097",
+      "path": "/images/newsletter/academy-academy-092-b368479e818558d13f107c413da98a9d93e6b4e57c98a462ecffe45f63868acb.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 102096
+    },
+    "academy:academy-093": {
+      "sourcePath": "/images/academy/covers/academy-093-cross-validation-for-small-datasets.png",
+      "sourceSha256": "40b1455ae1b8ba550d64052dd2a91daa13990710d11fac4bfa9c6c9ae7f1af1c",
+      "path": "/images/newsletter/academy-academy-093-043922b8c49b15ec5f9f1b55619718755d2f77a74200d4ccbb1cbf9ee2c6bb11.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69416
+    },
+    "academy:academy-094": {
+      "sourcePath": "/images/academy/covers/academy-094-embodied-cognition.png",
+      "sourceSha256": "fdb3d57c59b69a7dbccd2eda71f2c34aeabf82a235e0c437bc33431f539f4ecf",
+      "path": "/images/newsletter/academy-academy-094-f05a93c43734f38c86be4f013926d451bb973adbcd5d119fead842c3bd9dc34d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 73271
+    },
+    "academy:academy-095": {
+      "sourcePath": "/images/academy/covers/academy-095-prediction-and-causal-inference.png",
+      "sourceSha256": "f85185e994ed044fac353b70feb67eec8e0d4bf410dad456d94ffd3bc14c9160",
+      "path": "/images/newsletter/academy-academy-095-ca04efdf01a90d55274f82b29ba4e1df2a9f2b0cdabf001210125898baf725f4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 55716
+    },
+    "academy:academy-096": {
+      "sourcePath": "/images/academy/covers/academy-096-constructionism.png",
+      "sourceSha256": "0b5a5d79527956e2ef2fe94b5a3d0500db30ee1c48b662c561cf35ea05f2cfa6",
+      "path": "/images/newsletter/academy-academy-096-54c1b7e5a49b494350ce4fdac39737fc095785c258b39bd313296efe11389f46.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68113
+    },
+    "academy:academy-097": {
+      "sourcePath": "/images/academy/covers/academy-097-bayesian-updating-for-ai-decisions.png",
+      "sourceSha256": "bc2e783c6361a4f068949c1eadb8d7fcc46f9f31de3be4a398fcf80d25396815",
+      "path": "/images/newsletter/academy-academy-097-6a1758a95c13e89e15e4209ce1c5c115bcd82531c28c1119c6a2ce9a1c40bf7e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69013
+    },
+    "academy:academy-098": {
+      "sourcePath": "/images/academy/covers/academy-098-experiential-learning.png",
+      "sourceSha256": "2aaa5048ede3bd58a42ca6f879d244841c73db69352cbebbfd239a76bdbc711b",
+      "path": "/images/newsletter/academy-academy-098-fc70ba49dfe94a9f1973c657df24df3e477f5afe02d9b1461f4d892c35742d3f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67778
+    },
+    "academy:academy-099": {
+      "sourcePath": "/images/academy/covers/academy-099-decision-trees-and-rule-based-models.png",
+      "sourceSha256": "3a341f16c9c40ff2f9b73270750c4e20046f019f2585f096a13684663bcb99fd",
+      "path": "/images/newsletter/academy-academy-099-81a98201e0111e4c08be97c181b95c8e9c0b9de364e60b0faf4b3724644938d6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66770
+    },
+    "academy:academy-100": {
+      "sourcePath": "/images/academy/covers/academy-100-reflective-practice.png",
+      "sourceSha256": "b2963b3e56881adbde05f7963c7846117ec51bae321128d61acb0e46eb54e5c9",
+      "path": "/images/newsletter/academy-academy-100-dfc0a751e0ca26b99c72b8871174e48ce6217f48ac1d453a58c0e484a1445e53.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 77179
+    },
+    "academy:academy-101": {
+      "sourcePath": "/images/academy/covers/academy-101-clustering-without-ground-truth-labels.png",
+      "sourceSha256": "c30fe157331c7509243341c2f89e3a9e23cb611771d52457718c80a03b6a2f0b",
+      "path": "/images/newsletter/academy-academy-101-b77992344aef362a024faebba6e4400844cebbb4ec3c6fe74586bcf46f901cd9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74040
+    },
+    "academy:academy-102": {
+      "sourcePath": "/images/academy/covers/academy-102-transformative-learning.png",
+      "sourceSha256": "d36e320665f7b4fc08a539a46d06c4652385963b6e74b1fbbe54055f3e4d344c",
+      "path": "/images/newsletter/academy-academy-102-3748291fcedc5bf5281239d1c61ca680166be8c8e4958c3d0317c586af2ec2e5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72314
+    },
+    "academy:academy-103": {
+      "sourcePath": "/images/academy/covers/academy-103-dimensionality-reduction-and-visualization.png",
+      "sourceSha256": "830771e9f6c92bfa13a2caab0f7227cb67579dae65740e9580e1f5dde3b26cdd",
+      "path": "/images/newsletter/academy-academy-103-bff1d78d0642de29fe10b16e0ddda23f11a47138f7fe87ff5232bad544124e0e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62361
+    },
+    "academy:academy-104": {
+      "sourcePath": "/images/academy/covers/academy-104-andragogy-and-adult-learning.png",
+      "sourceSha256": "4e84500f1379a5a2a7d2e66d95490b64487f1dbf03c49b39937af7d9813eb432",
+      "path": "/images/newsletter/academy-academy-104-5f14f50e62eb319388c88fe163550ef67145bbcab67d838aba67fe292b9c408c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72565
+    },
+    "academy:academy-105": {
+      "sourcePath": "/images/academy/covers/academy-105-gradient-descent-and-optimization.png",
+      "sourceSha256": "ed66a7660c4e0e0bda4d8c2fcef1a75b714bcc6fae531830bab69fc584e7f76b",
+      "path": "/images/newsletter/academy-academy-105-8c6a01cb6c409aa3ffa24fd06e0fb21b2f47e1d0f09f69e0286b1076988d09e8.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63054
+    },
+    "academy:academy-106": {
+      "sourcePath": "/images/academy/covers/academy-106-heutagogy-and-self-determined-learning.png",
+      "sourceSha256": "05d751cd8b6d97333aabd885ec83a4e69b75c5de6b52bf1c2f93040955fe3256",
+      "path": "/images/newsletter/academy-academy-106-63338523fccc53f474e1154f6cf8183c40d167243acd421cc2aeae6e6fb37bff.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 83584
+    },
+    "academy:academy-107": {
+      "sourcePath": "/images/academy/covers/academy-107-loss-functions-and-learning-objectives.png",
+      "sourceSha256": "0a52ec8dae08f6917b73cad393f6f82fc0b807a3dd5b6fba5499b17103b1da3b",
+      "path": "/images/newsletter/academy-academy-107-7d406dcfb19c2b2f7df257f5e41a3ffa7e05e742f34ae75d67184022b93bb48c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63947
+    },
+    "academy:academy-108": {
+      "sourcePath": "/images/academy/covers/academy-108-cognitive-flexibility-theory.png",
+      "sourceSha256": "ea208594e72c53a91faed6542ca5815ce37ef28a079d05ec98e8445bc81946ad",
+      "path": "/images/newsletter/academy-academy-108-6dfba8b1e5c222a3c67b1b3086d84225789462f355fa7299016928d8e59ed13f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 81043
+    },
+    "academy:academy-109": {
+      "sourcePath": "/images/academy/covers/academy-109-self-supervised-learning.png",
+      "sourceSha256": "dcb96fefd01a85ef7ee096abd4dc6bf360519240c93c7dec464096e740941928",
+      "path": "/images/newsletter/academy-academy-109-870209c2167e0e6b8229a36002a2650f2997a61863111fcf2d4d2a6eb2a62c2b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70242
+    },
+    "academy:academy-110": {
+      "sourcePath": "/images/academy/covers/academy-110-variation-theory.png",
+      "sourceSha256": "d4ec54330487bfc620d455c537061bedc7674edd4ca99df6508412e2c2789c12",
+      "path": "/images/newsletter/academy-academy-110-8dcc9a2df2e9c8618af678fdae87d2bbdd23ac241594a2b533870f0fcefcd43a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64837
+    },
+    "academy:academy-111": {
+      "sourcePath": "/images/academy/covers/academy-111-contrastive-learning.png",
+      "sourceSha256": "a82080bd289df412ad1677c6eb3946f2570f135f6790ffb2800dc27bc4517211",
+      "path": "/images/newsletter/academy-academy-111-f24c191d9bb02519e350a57167b19ed2a8789fce660d5d75a22f9783f986b136.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72198
+    },
+    "academy:academy-112": {
+      "sourcePath": "/images/academy/covers/academy-112-apos-theory-in-mathematics-learning.png",
+      "sourceSha256": "5f221e368989ef59aad1e056f9acc9c25f2a90fe32af9f4cb6360419541af7bd",
+      "path": "/images/newsletter/academy-academy-112-dd1b11a9c377c555cbda91a8248786029f18f66568de58180af80795d8c6ad96.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66246
+    },
+    "academy:academy-113": {
+      "sourcePath": "/images/academy/covers/academy-113-knowledge-distillation.png",
+      "sourceSha256": "b8059adaded2eedd861b8e81f8d91cd978080c74de76cd242a8efb91676cd84d",
+      "path": "/images/newsletter/academy-academy-113-bc3969e6c4db8acb9258a6bd29044abdec9d3c8c1136247a4584eb554e77a864.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54718
+    },
+    "academy:academy-114": {
+      "sourcePath": "/images/academy/covers/academy-114-realistic-mathematics-education.png",
+      "sourceSha256": "1e3d292681ca28abbbfd3cbe4d09fb5b18f672a04edd143fcb3c2f10b91acc46",
+      "path": "/images/newsletter/academy-academy-114-dfef36e9202838b1230d882be62fe27e0dbc2caad0289a32eff5c13a1deb3609.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70721
+    },
+    "academy:academy-115": {
+      "sourcePath": "/images/academy/covers/academy-115-model-quantization.png",
+      "sourceSha256": "5b55af7ab31eabc19b8222678b298b8ccf5ae0707b9888d3b4919609096e55a7",
+      "path": "/images/newsletter/academy-academy-115-1064347acfab58c5cb57fc4a7da524956dd2fddc4ebbd743c52ddad90c438141.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65072
+    },
+    "academy:academy-116": {
+      "sourcePath": "/images/academy/covers/academy-116-instrumental-genesis.png",
+      "sourceSha256": "932ccf342a15549ea9601f714c1439f54ef7b9648f2959d5bb03dc3c68ccb14a",
+      "path": "/images/newsletter/academy-academy-116-564ff790a6e87657381bf143410c4d2edf1119887408c8c8eadc69d22a0c694f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67010
+    },
+    "academy:academy-117": {
+      "sourcePath": "/images/academy/covers/academy-117-low-rank-adaptation.png",
+      "sourceSha256": "b516c565ce59fc71ed5d92e1a8437559a51600a4db7ad38df8a9680c73490032",
+      "path": "/images/newsletter/academy-academy-117-6f84763b0a108058ace7a210d124bc4bd333939f9855575fb06d493b0d36ecf7.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 56983
+    },
+    "academy:academy-118": {
+      "sourcePath": "/images/academy/covers/academy-118-commognition-and-learning-mathematics.png",
+      "sourceSha256": "c9ff52bfb1d89bcd59f18282b7fc70f70326570b439f78a9dfa78303b214b753",
+      "path": "/images/newsletter/academy-academy-118-6090d87e18e4a7ce4c510bfafa0ad839c1872dae7ac34ccbb80b84ce2f42e140.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65778
+    },
+    "academy:academy-119": {
+      "sourcePath": "/images/academy/covers/academy-119-synthetic-training-data.png",
+      "sourceSha256": "da3354c623c2b0e7ba3b354050b5f37a31ce16eecf229b1729b4a92e025a97b5",
+      "path": "/images/newsletter/academy-academy-119-60060d0c97276751683a8e67e77725ce87951fec64a99d37873b56f4edd20a60.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64706
+    },
+    "academy:academy-120": {
+      "sourcePath": "/images/academy/covers/academy-120-threshold-concepts.png",
+      "sourceSha256": "6a4057b0fc5800aa78077ac040a102f43baea4370c6bf886419da2e648dfd554",
+      "path": "/images/newsletter/academy-academy-120-cb6335235cdfe7048e035db0b8e043a39828b4d035828e6f0fe7f4a8c3c5eec8.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61831
+    },
+    "academy:academy-121": {
+      "sourcePath": "/images/academy/covers/academy-121-federated-learning.png",
+      "sourceSha256": "7d06f0d414902876fbc28dbbc613a2c11f83c23f5b1ccca754db36172c16cec7",
+      "path": "/images/newsletter/academy-academy-121-7278a05db3d4ce0abc6a299a34c0e46f9b13baa6555e9c13a00e522beadf49b8.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63866
+    },
+    "academy:academy-122": {
+      "sourcePath": "/images/academy/covers/academy-122-epistemic-cognition.png",
+      "sourceSha256": "516ef324459cd83b264094b3104d1ed83ece2051b4fb027a803c5db042fae67e",
+      "path": "/images/newsletter/academy-academy-122-010cd255b8122ccc30111fb304de88bffceff27395689206182043b5a71a60f4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71272
+    },
+    "academy:academy-123": {
+      "sourcePath": "/images/academy/covers/academy-123-differential-privacy.png",
+      "sourceSha256": "2779d1b2fc36f60997107ef6850850284b48e6e0ad2c98b02779bf09dc579499",
+      "path": "/images/newsletter/academy-academy-123-8a743f8008951fb7d6e8eff94f54b77fdf4fd1eb397ec695b75244c09ca60fbf.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57245
+    },
+    "academy:academy-124": {
+      "sourcePath": "/images/academy/covers/academy-124-conceptual-and-procedural-knowledge.png",
+      "sourceSha256": "031a6ee8903f57088f807ba8ceba4683daf43bb2f95076c5b8ab286130af2b2e",
+      "path": "/images/newsletter/academy-academy-124-df76ad6fae896d3fb61cf10c517bde0436ced1bd6e1dacf37c79ddd0cecc10d3.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63525
+    },
+    "academy:academy-125": {
+      "sourcePath": "/images/academy/covers/academy-125-machine-unlearning.png",
+      "sourceSha256": "7d5c112dc28c060d81a32fea7e6b2eec17dfd4715b194fe790b1c17370cacec9",
+      "path": "/images/newsletter/academy-academy-125-ff53ef73f8b09e21a6a3bb1c4ef71049c998f052d0446db3829defea1f5e4276.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70293
+    },
+    "academy:academy-126": {
+      "sourcePath": "/images/academy/covers/academy-126-representational-competence.png",
+      "sourceSha256": "ece72718b7f96b66645ed9bc7a0312c7816832a77098b78025535df11b07f4dc",
+      "path": "/images/newsletter/academy-academy-126-d8fef552798941cafec2806d4ba2ff61fa5b7bee3586a97badbd29c2a58919bd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69001
+    },
+    "academy:academy-127": {
+      "sourcePath": "/images/academy/covers/academy-127-knowledge-graphs-for-educational-ai.png",
+      "sourceSha256": "4bdc5c2462d19ed68eac6519149f7af05e632154f92234f90f0281b56b8b56a7",
+      "path": "/images/newsletter/academy-academy-127-6705d0ca0c1d383f41315c813decbcdbfb4439cdde71aabfafdab9f942e0579b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71956
+    },
+    "academy:academy-128": {
+      "sourcePath": "/images/academy/covers/academy-128-learning-with-multiple-external-representations.png",
+      "sourceSha256": "0c818899e8dcbd3bf07a9ec4a9e368c4ab6cbea36ce02703b7fa3e349358b33f",
+      "path": "/images/newsletter/academy-academy-128-5f4a94e97f27f38e7a3814c1910db4804a9c1dae435ce66594db81870dd55013.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 73198
+    },
+    "academy:academy-129": {
+      "sourcePath": "/images/academy/covers/academy-129-neuro-symbolic-ai.png",
+      "sourceSha256": "00f8fd288931ddc941dbdfc4ba30fffa60d43eaa9de9a9286fcba09bf8928065",
+      "path": "/images/newsletter/academy-academy-129-9912a50671e79d83a5706bff05371f88d0184e4175e521e4504bc718ddabf6a9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62092
+    },
+    "academy:academy-130": {
+      "sourcePath": "/images/academy/covers/academy-130-analogical-reasoning.png",
+      "sourceSha256": "abd335ea036630b28ac247fe3a054fcb46aee230193c4fa4ed8386cfd088c178",
+      "path": "/images/newsletter/academy-academy-130-524a866da7f8c17023da4813a75682aa02e8055ee4824019e299266ba113deef.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63429
+    },
+    "academy:academy-131": {
+      "sourcePath": "/images/academy/covers/academy-131-constraint-satisfaction-and-scheduling.png",
+      "sourceSha256": "ae2bc049858d2e244834c212a1f7233164ae134f8989226b93a809fbe6f874dc",
+      "path": "/images/newsletter/academy-academy-131-d934dc618d41a3b3f6ac2c7513b61d2eb4047976d31ccb91d1417575c3c8f7ec.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69395
+    },
+    "academy:academy-132": {
+      "sourcePath": "/images/academy/covers/academy-132-case-based-reasoning.png",
+      "sourceSha256": "2c345803d48bde57b5f4d355f05d9cf98c370a697f797567e94252cd9ed1a76c",
+      "path": "/images/newsletter/academy-academy-132-31f857cc07df66ee96e93536980ce3025fe306b9bbdc515dcd525a1166ae1179.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67292
+    },
+    "academy:academy-133": {
+      "sourcePath": "/images/academy/covers/academy-133-search-and-planning-in-ai.png",
+      "sourceSha256": "6c2e2d1afcb29cbaca67485691c653015b04df885a7e4de910863bbf0d9ee14a",
+      "path": "/images/newsletter/academy-academy-133-9fce02e925b2e3db9418ceeb5e1de6ce8307daa19c919d6d13cd9ce4f7c891e0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63686
+    },
+    "academy:academy-134": {
+      "sourcePath": "/images/academy/covers/academy-134-problem-based-learning.png",
+      "sourceSha256": "0d2d40556176759a29bf7f255add4be669dba7be9b720d55f76b8cf7c1ceb95b",
+      "path": "/images/newsletter/academy-academy-134-2b312f4b3511972cd5e0e2c21f68d1c5c1bf5c8a18529a06fc6fcbfda8e849bc.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74425
+    },
+    "academy:academy-135": {
+      "sourcePath": "/images/academy/covers/academy-135-multi-agent-coordination.png",
+      "sourceSha256": "7812f93fdb340bf098d6ab7d1f7da9dc8d91304c1358bb3ae85d4ed5730aac01",
+      "path": "/images/newsletter/academy-academy-135-78d1b06284002cbadbdda657d3dda733cc107b1ef78e83a6d96424dfe8032d68.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67055
+    },
+    "academy:academy-136": {
+      "sourcePath": "/images/academy/covers/academy-136-project-based-learning.png",
+      "sourceSha256": "1353fed991c4af8a94335e3c806f57d8e896851aaf5bf047f3b9945ce5847b9b",
+      "path": "/images/newsletter/academy-academy-136-6eed00511951334dd2eea5715c83e244a621ce10f17f6cf56a86dad4487ac3af.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 75987
+    },
+    "academy:academy-137": {
+      "sourcePath": "/images/academy/covers/academy-137-tool-permissions-and-least-privilege.png",
+      "sourceSha256": "f0c262b8600b167e047bb386171391178087880f34cec394c2a82123e8753416",
+      "path": "/images/newsletter/academy-academy-137-6877fa48cfba2f52cd3518aba919ec7ed9fb98b7e02dd6ea44567107c1e0a031.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62036
+    },
+    "academy:academy-138": {
+      "sourcePath": "/images/academy/covers/academy-138-knowledge-building-theory.png",
+      "sourceSha256": "ea48fe5c5206347436fbb66f11880ad0b924a4c627e64b557324e1b92ce9a165",
+      "path": "/images/newsletter/academy-academy-138-a7f468bfb177ca988db14529706163838f0d648dfdf2897c11ead0728cfb8862.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 56804
+    },
+    "academy:academy-139": {
+      "sourcePath": "/images/academy/covers/academy-139-sandboxing-ai-generated-code.png",
+      "sourceSha256": "5d15117c3298d6d5024d0065e3dfe0b0d93f8c93748c19988f8738f6ce4b8128",
+      "path": "/images/newsletter/academy-academy-139-e843017419b7e22309bdf172cac4b42fa9b6efb3461b74a641f2d09e75f77a06.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68841
+    },
+    "academy:academy-140": {
+      "sourcePath": "/images/academy/covers/academy-140-connectivism.png",
+      "sourceSha256": "a5cbecca6fd7d5ba44242f9c7d4982d2dd20c1a4662251b699f7f2fb2f9ab09b",
+      "path": "/images/newsletter/academy-academy-140-cea247c076dea95ad6f392da8bb81f090e71c49c8ee0405b1c2e7d5bed57cb8e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60879
+    },
+    "academy:academy-141": {
+      "sourcePath": "/images/academy/covers/academy-141-persistent-memory-in-ai-assistants.png",
+      "sourceSha256": "fbf4d3ce6d1dce194d7bf6b0479cdbdc541e19849e45ee9e01b0f4070d5fcb0a",
+      "path": "/images/newsletter/academy-academy-141-e2b5608b6f30fe25e232922bcfb58bf9462110634cf84e6030a24143df554d96.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69824
+    },
+    "academy:academy-142": {
+      "sourcePath": "/images/academy/covers/academy-142-the-community-of-inquiry-framework.png",
+      "sourceSha256": "66dab1affd1222a4ba1e038cdc18163f27871da4c95ce965dce18efb46b7835f",
+      "path": "/images/newsletter/academy-academy-142-a61a899c53e919cb693fab7d655e6479a884cd3175a92b5ef8d6bc442e3959a5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70008
+    },
+    "academy:academy-143": {
+      "sourcePath": "/images/academy/covers/academy-143-chunking-documents-for-retrieval.png",
+      "sourceSha256": "bf6e4d2bf42acac78600452ad88355071ede91ae0fb5fd145d94a2c3e6906aa5",
+      "path": "/images/newsletter/academy-academy-143-00df3e92084465a78f9d46111bddd6a020c5a95e76fcf8ce04bcfeaa1e7788f0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71291
+    },
+    "academy:academy-144": {
+      "sourcePath": "/images/academy/covers/academy-144-transactional-distance.png",
+      "sourceSha256": "6d95109879e106a372ff348fc94215f8bc71b847bf79b1a56afc24c6535f2897",
+      "path": "/images/newsletter/academy-academy-144-adfd5d08d40af9564871261566d0c2140a78a1ef6b1f1b269861a7c9a1d5c4c7.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66532
+    },
+    "academy:academy-145": {
+      "sourcePath": "/images/academy/covers/academy-145-hybrid-search-and-reranking.png",
+      "sourceSha256": "b62fce3220db9db249d3d747c6047023d4dcf92ad420e2f6abdf61b40da6ca0c",
+      "path": "/images/newsletter/academy-academy-145-c284e791370bd4ec994707e3bf954dbad5eb3e0ceee36be7a3c4935e86e7e8f3.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70102
+    },
+    "academy:academy-146": {
+      "sourcePath": "/images/academy/covers/academy-146-self-efficacy-in-learning.png",
+      "sourceSha256": "d70a551e18261d84781e1b3b8d863d8157ac8e3ae9a672cd72edf592083e7cd9",
+      "path": "/images/newsletter/academy-academy-146-ce2f575dfdacee1696276b4b15bcf9ab4c6887ead5698cad47bd53130dc1c440.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70741
+    },
+    "academy:academy-147": {
+      "sourcePath": "/images/academy/covers/academy-147-numerical-reasoning-with-computational-tools.png",
+      "sourceSha256": "d1ab8c715df199a206da8978b11a6f02f20be6170d80f62455504e36c3a19db8",
+      "path": "/images/newsletter/academy-academy-147-b5e82d6ac44d3e62eda94e6645cc1623c76a0d78e39a5879a7fa7cd26a1535a9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60650
+    },
+    "academy:academy-148": {
+      "sourcePath": "/images/academy/covers/academy-148-expectancy-value-theory.png",
+      "sourceSha256": "009a6cd31acfb51aa591726ee0e3c6d917d8762290a1a7c75fa85f20fe3c3385",
+      "path": "/images/newsletter/academy-academy-148-7f84a1eef42cb0aefa9e58492c3e88a26e51207a95f4af966b43ba95efbd67da.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60927
+    },
+    "academy:academy-149": {
+      "sourcePath": "/images/academy/covers/academy-149-optical-character-recognition-for-learning-materials.png",
+      "sourceSha256": "72a467f634abd5b09fe0cf5c0285bac246e85c3bee0ca47243d3dc97bf0a6fd3",
+      "path": "/images/newsletter/academy-academy-149-63ef394662b429c497808b190ed57d9f6286588a2594c73a87a1af2442f95ad9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61277
+    },
+    "academy:academy-150": {
+      "sourcePath": "/images/academy/covers/academy-150-attribution-theory.png",
+      "sourceSha256": "906ee8f8d4d5c54265b956beb96e59d6c2b1173c8b70b2764ec1029b917d3759",
+      "path": "/images/newsletter/academy-academy-150-ef6b7e60986983eb9a915d0f810d00489c6b2faa89d4f81efb3f49ee01fd6579.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 75546
+    },
+    "academy:academy-151": {
+      "sourcePath": "/images/academy/covers/academy-151-document-layout-and-table-understanding.png",
+      "sourceSha256": "fe8278e8945e12cf91a5ab4f3d86cdfdfe0e2da76b965d97a51dc1af09c29422",
+      "path": "/images/newsletter/academy-academy-151-201d7076bab858d52fce7fbdc855c1f06ced4f2f1f5fc0f2f34fc225456b86f3.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 56580
+    },
+    "academy:academy-152": {
+      "sourcePath": "/images/academy/covers/academy-152-the-development-of-interest.png",
+      "sourceSha256": "b20d611fd96a8a6a04513dbdf025617a7da17e1de75daf91f7708210b9f6a1f0",
+      "path": "/images/newsletter/academy-academy-152-0071cfaf986a2e7ea422ab0c3393cd1571144ce7167e8547e1af101b52b84c8c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62850
+    },
+    "academy:academy-153": {
+      "sourcePath": "/images/academy/covers/academy-153-vector-databases-and-retrieval-indexes.png",
+      "sourceSha256": "c4107ee6dd4cdfaa60e710a991b18b3cd0e2a038539bc10e0f0aee07a595fd93",
+      "path": "/images/newsletter/academy-academy-153-141081499b2c674c1577ae2c64a8160ff00d98c5d238f50b41cc2bf2ee10ff3d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66224
+    },
+    "academy:academy-154": {
+      "sourcePath": "/images/academy/covers/academy-154-flow-and-learning.png",
+      "sourceSha256": "bb630d1a2dbbcb381c4559058f13d3ce9c0c33afbf43afe32263595e5b48e6d3",
+      "path": "/images/newsletter/academy-academy-154-e81d1f2a09f1e97074463182d6a7dcaf283b70644a24fa0c52705f77c461b341.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72599
+    },
+    "academy:academy-155": {
+      "sourcePath": "/images/academy/covers/academy-155-speech-recognition-across-accents.png",
+      "sourceSha256": "cb06de4bddc28f5f13ab1a667223d3a8441b3e62561cdd8ba67e537cdd8940fd",
+      "path": "/images/newsletter/academy-academy-155-34faa602950bada35221bc711407d2d6df5d93b2a9062e30e056f76d089620e1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65872
+    },
+    "academy:academy-156": {
+      "sourcePath": "/images/academy/covers/academy-156-school-belonging.png",
+      "sourceSha256": "7e2db15f81faf1cecc275ae23e7f74109d5b2fdac60f1fe963e8409be2ba03d6",
+      "path": "/images/newsletter/academy-academy-156-35bd6f4a33d267b811bb055af629d353d6075e0cc97e97653f828816c32e9c76.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 73669
+    },
+    "academy:academy-157": {
+      "sourcePath": "/images/academy/covers/academy-157-caption-alignment-and-timing.png",
+      "sourceSha256": "8f42eb47468bbdc78aef5b427e9f71385be4ea83df8e49056dd8687950ca53c0",
+      "path": "/images/newsletter/academy-academy-157-225998695226ce1740d917b3aabf88450b77571f25dd258a1fe6e25dac4fd3f5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70995
+    },
+    "academy:academy-158": {
+      "sourcePath": "/images/academy/covers/academy-158-identity-and-learning.png",
+      "sourceSha256": "9d97d4130868307a5ae115adc9b4519439f490d7826cddf2012747aeb5e56c78",
+      "path": "/images/newsletter/academy-academy-158-9d2b292f0a4307902a6b255a96f520ff27d482921e429f59493e5f6b8b6377f5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59490
+    },
+    "academy:academy-159": {
+      "sourcePath": "/images/academy/covers/academy-159-handwriting-recognition.png",
+      "sourceSha256": "e12921a806ee7815f2e6ef382c9201ed490252776fb8002491f25b00042bbbbf",
+      "path": "/images/newsletter/academy-academy-159-8ee88c0f33eded35303ef4ca48134ece326b613c874344ae23db794ac0309fdc.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62583
+    },
+    "academy:academy-160": {
+      "sourcePath": "/images/academy/covers/academy-160-possible-selves.png",
+      "sourceSha256": "fa450457e68f5c544bd44e48f904d4f7493617cb6fa36a7e6f40eeced8799d4a",
+      "path": "/images/newsletter/academy-academy-160-29ec104717a3b7c4cabf9897a9e72a4c46be3e71c00b497e1fa702851a907766.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 73961
+    },
+    "academy:academy-161": {
+      "sourcePath": "/images/academy/covers/academy-161-ai-assisted-assessment-item-generation.png",
+      "sourceSha256": "23e8a35fa95e7bed6ed12a027dfc7a1057eba6daefcf326519f04c9dbdf7289a",
+      "path": "/images/newsletter/academy-academy-161-f34837aae58c1207ac817cf3a15bc94c17d2a86722fecfff20dea4e62bd34b51.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71977
+    },
+    "academy:academy-162": {
+      "sourcePath": "/images/academy/covers/academy-162-stereotype-threat-in-learning-contexts.png",
+      "sourceSha256": "9a7f0f45f1c345b3b98a6c2b5085e4e461a2b6a771f0a5ed02b838c008c48342",
+      "path": "/images/newsletter/academy-academy-162-5a3fa08c65c5b8ff414f3286381bc7254a468677b0bdeb9450f5ce5c3f89145b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59462
+    },
+    "academy:academy-163": {
+      "sourcePath": "/images/academy/covers/academy-163-reliability-of-automated-essay-scoring.png",
+      "sourceSha256": "3a458dd0d0229e54b7efa8364f9e9d8f7e5fd42ac79ca41dd99bc459863929be",
+      "path": "/images/newsletter/academy-academy-163-61afa287b11f2ec0df2056790ebd8168b99d3bfa582d9a1bd2eeaaa3e71776f2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67575
+    },
+    "academy:academy-164": {
+      "sourcePath": "/images/academy/covers/academy-164-test-anxiety-and-learning.png",
+      "sourceSha256": "102c85752ea55eedbac6dd54c7d5d75ee97fa614b1991c25319d2a4e67c2f9e8",
+      "path": "/images/newsletter/academy-academy-164-f109c94d1603a8f3399554864b44f2e28b0ab0d4990d099edad7cff042a207e4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67546
+    },
+    "academy:academy-165": {
+      "sourcePath": "/images/academy/covers/academy-165-computerized-adaptive-testing.png",
+      "sourceSha256": "8efd10a49b015dbb629f9f203fe5b6b25fb6885996d726419985324bbdbe0698",
+      "path": "/images/newsletter/academy-academy-165-4b82db294aa17de6f64ee41c3f7b5e06a5e3d8ea191f9ef0e58841cfc37d4884.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64715
+    },
+    "academy:academy-166": {
+      "sourcePath": "/images/academy/covers/academy-166-epistemic-emotions.png",
+      "sourceSha256": "956ef4dd8513b34078b09b230aaba794076175cbf0565dcc06478002ee8a7e3d",
+      "path": "/images/newsletter/academy-academy-166-f73962f230695038d93f1b4fc3bc9c0e57853591f65f5042cc1f3515924d66c4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70144
+    },
+    "academy:academy-167": {
+      "sourcePath": "/images/academy/covers/academy-167-the-cold-start-problem-in-recommendations.png",
+      "sourceSha256": "014ea7ea5b5f1e00e0599f0c0aaa6f916fd545fadecfcb97075f4698b8ffb4b3",
+      "path": "/images/newsletter/academy-academy-167-8926237fbbed60a6fd835b5571e3aafa4f7aa843380d74c1a2ff4abcec60a235.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66539
+    },
+    "academy:academy-168": {
+      "sourcePath": "/images/academy/covers/academy-168-social-interdependence-theory.png",
+      "sourceSha256": "11c249ecbd99bd2d18ae9d9e4d1b1cf5f7875a074980fa7a0072ddef1a160fd7",
+      "path": "/images/newsletter/academy-academy-168-dfa9e5a6807718406043c5cf3e88913afbcc1cd20e79eae8424335e4744a9e13.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 89231
+    },
+    "academy:academy-169": {
+      "sourcePath": "/images/academy/covers/academy-169-exploration-and-exploitation.png",
+      "sourceSha256": "eb2aa6fde3a3bfd0554999676655fde9d5408c21cd50217422f32a45ec9c87b3",
+      "path": "/images/newsletter/academy-academy-169-b91bcf2a650d5b11140632d9baf9bba9d0be7ce20d562864c549ea5595233a64.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63548
+    },
+    "academy:academy-170": {
+      "sourcePath": "/images/academy/covers/academy-170-group-cognition.png",
+      "sourceSha256": "d7488a20f6e05f7d2bdfa060e3247bed7533e69733a3513af39f56e899bacff5",
+      "path": "/images/newsletter/academy-academy-170-2e5ba8116508b55e2e7882df729d0332bab420d3e80ae256f26958e9803c47f1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 56746
+    },
+    "academy:academy-171": {
+      "sourcePath": "/images/academy/covers/academy-171-contextual-bandits-for-learning-support.png",
+      "sourceSha256": "8d82fc4d50243d608d5f88842f7e03ab937c8342e0ee689c749bd120a7f0ba7d",
+      "path": "/images/newsletter/academy-academy-171-75e60b639318cf50ccccf4a187c36cbcc563dc070d96fbfe6c2686a8464411ac.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61770
+    },
+    "academy:academy-172": {
+      "sourcePath": "/images/academy/covers/academy-172-socially-shared-regulation-of-learning.png",
+      "sourceSha256": "d899e8f73fa78a7390eff806e77e19815c910536619cd98702b600cb91693f70",
+      "path": "/images/newsletter/academy-academy-172-b1e297c7b44e33db1812b7cf97d74a3fb9f87f707c34da5c0e310ad004bb3116.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61700
+    },
+    "academy:academy-173": {
+      "sourcePath": "/images/academy/covers/academy-173-simulated-learners-and-their-limits.png",
+      "sourceSha256": "3d328e3b3e2ee015bc933ee122e8f247e25f7db8303fc31787b5ab084d243ef1",
+      "path": "/images/newsletter/academy-academy-173-7c58255b2a1c8b6fab5b914a9b04b9630c4476d635f56ec7e89392dd002a0345.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 53169
+    },
+    "academy:academy-174": {
+      "sourcePath": "/images/academy/covers/academy-174-adaptive-help-seeking.png",
+      "sourceSha256": "f8938662a943e71c3cf8a3df7c22943ffd34a36a13c03d2489e8c9e8ee80b4d3",
+      "path": "/images/newsletter/academy-academy-174-32522c590d74c83e8995b97cf24aaaad003fe89762aacae77010da472e98009a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 75122
+    },
+    "academy:academy-175": {
+      "sourcePath": "/images/academy/covers/academy-175-deepfakes-and-media-authenticity.png",
+      "sourceSha256": "b7ad7ec16300261d6984ce70fbde9ea85f4101d4b6a52034c1600c9b830f94c8",
+      "path": "/images/newsletter/academy-academy-175-56ff5a8e8e8af5acb86dcef7352ab374ba7803eb9cfa12089215062556e84ee0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67109
+    },
+    "academy:academy-176": {
+      "sourcePath": "/images/academy/covers/academy-176-epistemic-games.png",
+      "sourceSha256": "662bd12ca120ff501712ebebbd2ae9381f077a73242edecf2fdeaf290a908923",
+      "path": "/images/newsletter/academy-academy-176-91856b72583e0ab431c95970eccc814261c2e8f9a0ebe27434739d2efa15e618.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69510
+    },
+    "academy:academy-177": {
+      "sourcePath": "/images/academy/covers/academy-177-ai-watermarks-and-detection-limits.png",
+      "sourceSha256": "a4863bc6f938bdee5996df7cb0e6f440f87ad42914534eee0bfed5e07e3e6fc9",
+      "path": "/images/newsletter/academy-academy-177-a3355c73d6cb5b542827947c29eebb2dec3b7602750f58e1622edb36b917a8c1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60886
+    },
+    "academy:academy-178": {
+      "sourcePath": "/images/academy/covers/academy-178-argumentation-in-science-learning.png",
+      "sourceSha256": "151439f39538de8089c565eaddc03535f835ce6d8f077e457520f5c48cb31a2b",
+      "path": "/images/newsletter/academy-academy-178-51d4223b1968fada380429396d4985649b5b597294ab327a5285f86e7dfdbab9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72312
+    },
+    "academy:academy-179": {
+      "sourcePath": "/images/academy/covers/academy-179-red-teaming-educational-ai.png",
+      "sourceSha256": "267a2cca8a895f45d378bb59eb0023f6065127eb6241617686d85f468bf4cf7a",
+      "path": "/images/newsletter/academy-academy-179-ff44d72123ec52946763e1af5b5eb2904e7a526c201bfba4401a113c14ea2e7d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62234
+    },
+    "academy:academy-180": {
+      "sourcePath": "/images/academy/covers/academy-180-concept-mapping.png",
+      "sourceSha256": "fcc32570f3e8b444f601ef3b2b1f59d3f7f4d716c1b0109936ef9ed4c27d4856",
+      "path": "/images/newsletter/academy-academy-180-9a05dbb4a8e4ed18ccc74714c8f6c8b8d4bbf28bf8724265c0b2bdf5f1674f23.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 73704
+    },
+    "academy:academy-181": {
+      "sourcePath": "/images/academy/covers/academy-181-using-language-models-as-evaluators.png",
+      "sourceSha256": "a65e5a694f09116aa824f7d325710c38e6dbb573748295abd873e0c54949e6db",
+      "path": "/images/newsletter/academy-academy-181-f3d58f398d1db2ce264992c036f828e746c1baeba7a0731d632b65148de9f3ae.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60015
+    },
+    "academy:academy-182": {
+      "sourcePath": "/images/academy/covers/academy-182-assessment-literacy.png",
+      "sourceSha256": "5f8093241b34e84daa7ed817f50028a4395e2a8d4771f130eec19aaa61b116be",
+      "path": "/images/newsletter/academy-academy-182-768be695d164f0ec095578e365f47648d9cc5dcb7068d7300c5ab436bb5b10bd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69351
+    },
+    "academy:academy-183": {
+      "sourcePath": "/images/academy/covers/academy-183-adversarial-robustness.png",
+      "sourceSha256": "408cdcced3842c0b6d03ae59f8c9d98286efc1ddd1865ac0d418819441d5db99",
+      "path": "/images/newsletter/academy-academy-183-bf405de21211fe66ee462bcfb8b8f4d3093a8e3800bdc4de3663bfa9331b49f2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58704
+    },
+    "academy:academy-184": {
+      "sourcePath": "/images/academy/covers/academy-184-student-self-assessment.png",
+      "sourceSha256": "5af0292a3e2a864eb07a1df108262da6522ae9898155613bf62f81a6def83e28",
+      "path": "/images/newsletter/academy-academy-184-d43b6c02e1f5e5d759b84e18a5356c81b5ca1b8a02f67b662ff1a3d2561c13e3.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66108
+    },
+    "academy:academy-185": {
+      "sourcePath": "/images/academy/covers/academy-185-ensembles-and-predictive-uncertainty.png",
+      "sourceSha256": "0a5475b6f54e14a9f0b925520178e8ebcdc7170b3d9cb39369522e1e16e65b1d",
+      "path": "/images/newsletter/academy-academy-185-5b8bf35cbab18cf96bf29e4d50f6019e11e023a451092c42d3e98c792910be64.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62858
+    },
+    "academy:academy-186": {
+      "sourcePath": "/images/academy/covers/academy-186-peer-assessment.png",
+      "sourceSha256": "98bcc2b1d1b768376ac0162e32da9220735b5a7c1bcbda1258d016c6d3bc8c3b",
+      "path": "/images/newsletter/academy-academy-186-52d09f07dc06f1f1c735fe8c9946b34e38d1b7a28463cbd990aaed6b1a766cf9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71816
+    },
+    "academy:academy-187": {
+      "sourcePath": "/images/academy/covers/academy-187-confidence-intervals-for-ai-evaluation.png",
+      "sourceSha256": "72e608faf2d21ef08def163c773862f1f35038b3e434324929dd6a49048491ff",
+      "path": "/images/newsletter/academy-academy-187-a20b8600d94a05b692d1fe4abf5d8faaf87cf5b166c3c57be5514b9c9ffc679d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 48943
+    },
+    "academy:academy-188": {
+      "sourcePath": "/images/academy/covers/academy-188-feedback-literacy.png",
+      "sourceSha256": "0ec03c11abc841b298c9ff28e4637f1bbdb126049520579275da872f748375d6",
+      "path": "/images/newsletter/academy-academy-188-12e3851d5cf722b1499feecc99ba7cafbbc159e5154105b43362fb47ca3ef2dc.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65383
+    },
+    "academy:academy-189": {
+      "sourcePath": "/images/academy/covers/academy-189-label-noise-and-annotation-agreement.png",
+      "sourceSha256": "0b6183cbf6f6e8ad4d6eecd705791eb4763258b20a9f479ad25d54b41ac7c75e",
+      "path": "/images/newsletter/academy-academy-189-dd3b0890271f2ab5e501067d2e6c0ca99a042f68473e19fe05693fc041b14768.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70511
+    },
+    "academy:academy-190": {
+      "sourcePath": "/images/academy/covers/academy-190-authentic-learning.png",
+      "sourceSha256": "ceb8e25f493c893fb525def212e6ff768c44622e032d2c9a4d5c1fa697d623e3",
+      "path": "/images/newsletter/academy-academy-190-192a5983599da13bebfea8e00cbae4bd9bd497b1dad418f8cf70f363cc3f84d8.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 75318
+    },
+    "academy:academy-191": {
+      "sourcePath": "/images/academy/covers/academy-191-reproducible-ai-experiments.png",
+      "sourceSha256": "f16148a6dac0616886a704b7123a5947652a0fe214421b437c534fb77c3a7155",
+      "path": "/images/newsletter/academy-academy-191-16daf6516ac4c102bbe581873bec3a7e457ebc424820b436107b15032a14c59b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66201
+    },
+    "academy:academy-192": {
+      "sourcePath": "/images/academy/covers/academy-192-activity-theory-and-expansive-learning.png",
+      "sourceSha256": "89a75e8e9f667a7fcabc82ab3d58f2cc096e9ae7cb045c78dcd24d23ffc40261",
+      "path": "/images/newsletter/academy-academy-192-db160e5df29d0b6d8857f50a0f790022c3851e741720e13b339c59fb87009961.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58219
+    },
+    "academy:academy-193": {
+      "sourcePath": "/images/academy/covers/academy-193-on-device-and-edge-ai.png",
+      "sourceSha256": "ac9c91b2592fad218541e2a37f45d2951933d11777b00baf3317b81d46cc7044",
+      "path": "/images/newsletter/academy-academy-193-ffc34e0f30d567e9a647d0a29142d2be971a7c8ee7ce9299344faf401077d1bf.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 79417
+    },
+    "academy:academy-194": {
+      "sourcePath": "/images/academy/covers/academy-194-funds-of-knowledge.png",
+      "sourceSha256": "4bb50746d4c9ef78e822ededac190b058a089933ae06f5450a9b071a29d6531b",
+      "path": "/images/newsletter/academy-academy-194-0b08dcc5bd8a3ea282e0a0fe72c256ec7b8bc9cdcfabb89f1b45bd44c8a90c6d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 80602
+    },
+    "academy:academy-195": {
+      "sourcePath": "/images/academy/covers/academy-195-caching-and-batching-ai-requests.png",
+      "sourceSha256": "aa0f5512f3da0c9d5cf96df1be0c69b92b13b45241f274a5f19ec18fbf258c55",
+      "path": "/images/newsletter/academy-academy-195-683663bf130eb16f16190eff8b56e784405633e5813893f6d9408d71e1bb191f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72689
+    },
+    "academy:academy-196": {
+      "sourcePath": "/images/academy/covers/academy-196-translanguaging-in-education.png",
+      "sourceSha256": "710a906a18a4e2185f28eb86718e769621a05f51242c2b4d3458abd7e941a1b2",
+      "path": "/images/newsletter/academy-academy-196-374143f32f6fc6c1baff493384e919b097593fadaa85c07efb8a7b362a8efff6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67580
+    },
+    "academy:academy-197": {
+      "sourcePath": "/images/academy/covers/academy-197-conformal-prediction.png",
+      "sourceSha256": "b117ab5aef30ef43dfd46002e019873570ed3653cffb7325bb8998d7b49dccb3",
+      "path": "/images/newsletter/academy-academy-197-a281f0cb2e93c7139b1f871eb917bb5d7d25c2a9e849c6bc1da0734539d5ff29.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62433
+    },
+    "academy:academy-198": {
+      "sourcePath": "/images/academy/covers/academy-198-advance-organizers.png",
+      "sourceSha256": "7f96b90fc145552818c130288d4177919d578ecb0ee5dbcaf4b8a7eeb23eee4a",
+      "path": "/images/newsletter/academy-academy-198-527b92f8b50f0796615edf3249c8c9fe5eee3d8a62af2cdcb6f1d59d44f89fa1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64188
+    },
+    "academy:academy-199": {
+      "sourcePath": "/images/academy/covers/academy-199-out-of-distribution-detection.png",
+      "sourceSha256": "4b896673e27d6d90db4e2475f82d4f0c787888ab5048138635c725a6a4a27544",
+      "path": "/images/newsletter/academy-academy-199-fb730b8787b0be0385479f2634b5e82bffea433289d3360d7165c19091007695.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 87586
+    },
+    "academy:academy-200": {
+      "sourcePath": "/images/academy/covers/academy-200-learning-with-contrasting-cases.png",
+      "sourceSha256": "5efe92083df75a751c21dd9a6b0e73f8e3047d7eae53e777b9cbc23fcaa9a27a",
+      "path": "/images/newsletter/academy-academy-200-ff85137ae19bd9ffec9497ed5111c1cebd84e24cf996571346db5e9fa75e8c92.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72804
+    },
+    "academy:academy-201": {
+      "sourcePath": "/images/academy/covers/academy-201-model-cards-and-their-limits.png",
+      "sourceSha256": "dd4881f32e03d9503d4256944294014e3241e59fcd4435246c4201eaecadaa53",
+      "path": "/images/newsletter/academy-academy-201-758100c863a199e137f8915ebbf286a3ebcc201a2c45ae9e2a18d6dbbac77a17.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62389
+    },
+    "academy:academy-202": {
+      "sourcePath": "/images/academy/covers/academy-202-learning-progressions.png",
+      "sourceSha256": "712c9cb07163215d46f4ce0c0028b3fc55615e11c3e99a235d28ee1b9b3d545b",
+      "path": "/images/newsletter/academy-academy-202-29d4ce325a0f2b10a4706168292b2151c8137a01e8412abdc619aed7513b3217.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74638
+    },
+    "news:aied-001": {
+      "sourcePath": "/images/research/covers/aied-001-zawacki-richter-2019.png",
+      "sourceSha256": "fb5fa9abec1558c57963aa6d2adfbba4dc8378ece65c8eaba81306e4750f4c00",
+      "path": "/images/newsletter/news-aied-001-7af433c0b71b1ff43424e477165ebf338b477a3b15d9ec3805d5900a81871084.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 84619
+    },
+    "news:aied-002": {
+      "sourcePath": "/images/research/covers/aied-002-kasneci-2023-v2.png",
+      "sourceSha256": "bfcf3cdf6109b9dc7c574f8236fb108e233e6576f06fb92a5c8f639261ec8862",
+      "path": "/images/newsletter/news-aied-002-7932d8c22b7d35572778c7d0f863446154c26d73b4e7da27285f9de09e45fc49.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60973
+    },
+    "news:aied-003": {
+      "sourcePath": "/images/research/covers/aied-003-chen-2020.png",
+      "sourceSha256": "766cba5f37ca620d466e019cebaf4b19e2ef0c12936ae68cdd248a2ddd60c38a",
+      "path": "/images/newsletter/news-aied-003-7646a98f1212a8c411ce84577471182228d676677d6eb08eb1296aee04f6f445.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 89055
+    },
+    "news:aied-004": {
+      "sourcePath": "/images/research/covers/aied-004-anderson-1985.png",
+      "sourceSha256": "5aac7c4482b8d78684c594b2c9178dd3bb45b206c8c470832c6a49918f7fabe0",
+      "path": "/images/newsletter/news-aied-004-a9889099f7cca718f4177802aed9234f06555d10800ed2e2600ad517055c455a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64644
+    },
+    "news:aied-005": {
+      "sourcePath": "/images/research/covers/aied-005-romero-2010.png",
+      "sourceSha256": "e456c943b578757b73cd2b43dc9f07ab8d0159017bdd40d6ce7b4d031ab6d231",
+      "path": "/images/newsletter/news-aied-005-4e9996aabdb4317fda8fb098cf3d47bcabeb9a9ffb112c96a5365d4a54ada303.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 92030
+    },
+    "news:aied-006": {
+      "sourcePath": "/images/research/covers/aied-006-corbett-1995.png",
+      "sourceSha256": "3d78ba82313986db0a0625bce268a40e3eece9cfa725b54cd972cebb2b4043cf",
+      "path": "/images/newsletter/news-aied-006-3b4b509539f2925fc023b1c52f887d37d913aa2b6f74dd7036faa80529c0c23b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70230
+    },
+    "news:aied-007": {
+      "sourcePath": "/images/research/covers/aied-007-vanlehn-2011.png",
+      "sourceSha256": "aa8ef8eb1b1cf516756e6ed6a5b3e82e9a2b58a5635f3dc9b9742ddf6c0d1349",
+      "path": "/images/newsletter/news-aied-007-9ea73d303451918c22e0d95e42c7e8be84155e3cc9f2d5e24f265c030997142e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67246
+    },
+    "news:aied-008": {
+      "sourcePath": "/images/research/covers/aied-008-anderson-1995.png",
+      "sourceSha256": "f6e8679a130fb1ea5da191a381f4600f757b89b0d2a615d074d9f456668b1e87",
+      "path": "/images/newsletter/news-aied-008-f72a274dce704cbb0bf24cb5f3d7d73fc83d48e4d07a969b759c0a3b677a88ec.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68346
+    },
+    "news:aied-009": {
+      "sourcePath": "/images/research/covers/aied-009-crompton-2023.png",
+      "sourceSha256": "374df5cfe936b8a3fe557894b11b74a88ccdc2391067dba929a86e12b291fd21",
+      "path": "/images/newsletter/news-aied-009-08ce6ae970a34840b49096f93426655500fecb7a5616ea64706bd29170b27e2d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 85808
+    },
+    "news:aied-010": {
+      "sourcePath": "/images/research/covers/aied-010-hwang-2020.png",
+      "sourceSha256": "0c9ec3167fbf359fa0b9f2aecb50916453f5bf15ae423247b0c536c29b65533b",
+      "path": "/images/newsletter/news-aied-010-6eae17fcb123cf208e9c6badaeaaf24b563a4a0033b721574e5d91fbd27fdba2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 88337
+    },
+    "news:aied-011": {
+      "sourcePath": "/images/research/covers/aied-011-reddig-2025.png",
+      "sourceSha256": "2af8654a911572b824f9406bc994aa2011f482fe7914665779eb94090b83eee4",
+      "path": "/images/newsletter/news-aied-011-80e5d2591a1deff43c5e4e85e5db11f75b977af73f2b55387cef4d43977b3a71.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63958
+    },
+    "news:aied-012": {
+      "sourcePath": "/images/research/covers/aied-012-openai-teachers-2025.png",
+      "sourceSha256": "b0897b541e2a8a7afb0903f7e181816524e6865de669c8cd1bf2745e2e991ea3",
+      "path": "/images/newsletter/news-aied-012-24517cb9e6a3e9176240993a0431486a2bb39703b3cec5edd21ab1440c869be9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 78921
+    },
+    "news:aied-013": {
+      "sourcePath": "/images/research/covers/aied-013-genai-programming-2025.png",
+      "sourceSha256": "fa3fc6e04a056dca7af28ff37bc7098fbed90e4bd1a96248432b8563d729bcfe",
+      "path": "/images/newsletter/news-aied-013-8db9314e7ae502c87249ed7da3cd589a8097ad735c5ac50657766fecb0f07776.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71714
+    },
+    "news:aied-014": {
+      "sourcePath": "/images/research/covers/aied-014-openai-countries-2026-v2.png",
+      "sourceSha256": "47bcf8e8c8e9a4e40f71dc49bb4032114aee64986d6b4f7b4895353243ff8b03",
+      "path": "/images/newsletter/news-aied-014-65389519d905fcc046a3b528f3295107106d5db8dd2ed6a5d6bc3160146bd4cc.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71777
+    },
+    "news:aied-015": {
+      "sourcePath": "/images/research/covers/aied-015-efl-chatgpt-ai-literacy-2026.png",
+      "sourceSha256": "ce8c7fd10efc660b180eca413df79f44637dd7d188aa1313dcb50260aeec6ac1",
+      "path": "/images/newsletter/news-aied-015-7e5a098b4cbb6e7994eb797726a73490308e4ee7415844b873429dbdea4dd4a7.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 73578
+    },
+    "news:aied-016": {
+      "sourcePath": "/images/research/covers/aied-016-openai-education-opportunity-2026.png",
+      "sourceSha256": "7bc816832f48f77d5ac0dad178325603684cdc03d73ab00914eec1b5891cb395",
+      "path": "/images/newsletter/news-aied-016-ce85ac975a564ea2ce7c17b53836f89e8b4d8fb4b3388ab2f37f0871ca6aa80f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65867
+    },
+    "news:aied-017": {
+      "sourcePath": "/images/research/covers/aied-017-metacognitive-genai-engagement-2026.png",
+      "sourceSha256": "1a0207a65e4a5d275c593c6a5cb1fdd86a461f0f0301de0c47137dffa86110ae",
+      "path": "/images/newsletter/news-aied-017-da67a2bdc237b2718598d9a7fc9b5408ea73b493e2ecac1e8cff2c96119ab32a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 81483
+    },
+    "news:aied-018": {
+      "sourcePath": "/images/research/covers/aied-018-openai-learning-outcomes-2026.png",
+      "sourceSha256": "ceccb08362e3965f0fa4db20f29327b86b72ebc1f3984493fe19f432b4774cb2",
+      "path": "/images/newsletter/news-aied-018-6fa7f4f78452c49f55134afa15c1d6ca3ce79fbcf9a9779f860d472cd374510b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 89518
+    },
+    "news:aied-019": {
+      "sourcePath": "/images/research/covers/aied-019-openai-gpt-5-6-codex-2026.png",
+      "sourceSha256": "5ee8bbc784e5d5c6eb32720982c868135b4a925bfd0cbb41a87aa1aad2cb33f5",
+      "path": "/images/newsletter/news-aied-019-eb0ccd4232a4bac1e19722a516cd17d1a18331b16333bd02415c1b8bfdd13f09.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74080
+    },
+    "news:aied-020": {
+      "sourcePath": "/images/research/covers/aied-020-chatgpt-ethics-adoption-2026.png",
+      "sourceSha256": "8db61f0ae818adbc3ad4906b5f59f3d1064d13a7eb966b1af285bb8306aca302",
+      "path": "/images/newsletter/news-aied-020-ac0da65e48be92ee89c8f8791e7105792105ec9085b1b2efefae1e4850006c0e.jpg",
+      "width": 720,
+      "height": 461,
+      "bytes": 74717
+    },
+    "news:aied-021": {
+      "sourcePath": "/images/research/covers/aied-021-ai-workbenches-openai-anthropic-2026.png",
+      "sourceSha256": "fbeee1fca346ce200114319fa58d65f50659d8383eea8ce684eb2dfc7037e421",
+      "path": "/images/newsletter/news-aied-021-6ed14fedf168e7d926fc7f5100c7891e6e974a6c649b9a9f841456be3d9e04c5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 89041
+    },
+    "news:aied-022": {
+      "sourcePath": "/images/research/covers/aied-022-technology-enhanced-clil-review-2025.png",
+      "sourceSha256": "e472b47eaca8b66b2e625cccc375a8425aba9d61334baa786ac0f5caf662a0e8",
+      "path": "/images/newsletter/news-aied-022-4f3908d60b771e23eaff0e7132f45560e98181404eb83afa591482b08865b03c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71814
+    },
+    "news:aied-023": {
+      "sourcePath": "/images/research/covers/aied-023-claude-for-teachers-2026.png",
+      "sourceSha256": "de378e0f13114c1206b6c244d68d451fab491cfdeffa680174fdf0e1e5a97a19",
+      "path": "/images/newsletter/news-aied-023-52337b748d7b24d96c302bc9ca9467f00f6113533e4ae1f70bfeacd3c65deeb4.jpg",
+      "width": 720,
+      "height": 461,
+      "bytes": 72342
+    },
+    "news:aied-024": {
+      "sourcePath": "/images/research/covers/aied-024-gpt4-feedback-2026.png",
+      "sourceSha256": "d42402c7bb1cda14d3fcec6e9fed4e352a5f85e56388e20f4fdbb9411813b70c",
+      "path": "/images/newsletter/news-aied-024-4263e96e744c38a16a153cc6df96f861023eab962576739e9dd02db3a65d4151.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60581
+    },
+    "news:aied-025": {
+      "sourcePath": "/images/research/covers/aied-025-interactive-learning-reflection-2026.png",
+      "sourceSha256": "7441e8cea3b2422effcb519b6c0df2336d09a24c0572cee0bdc7b15f8fa9e60d",
+      "path": "/images/newsletter/news-aied-025-e07fd0443ee126c6be2a1c528eec1e6bdaaf435530b5915eedf8cf069719c95f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58180
+    },
+    "news:aied-026": {
+      "sourcePath": "/images/research/covers/aied-026-ai-programming-performance-learning-2026.png",
+      "sourceSha256": "30ee1ec142382647cab4fdab05f8c1cf38f2e90560a4082fc88662ff390bc6e6",
+      "path": "/images/newsletter/news-aied-026-8b56f66687ea0357d927e66fc0ba9b39e2cdf4a0931ce725e9d126917ba1a3b0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54555
+    },
+    "news:aied-027": {
+      "sourcePath": "/images/research/covers/aied-027-ai-learning-pathways-2026.png",
+      "sourceSha256": "cace482c6b7ebf681c88969f7f346c9fe0010f8240dcf6ec2c58d4859718ce5b",
+      "path": "/images/newsletter/news-aied-027-88c6fa00e416dce42bf70893018c7e9bec0938fb5f2c1694f06d7ba08a605421.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60101
+    },
+    "news:aied-028": {
+      "sourcePath": "/images/research/covers/aied-028-structured-ai-physics-tutor-2025.png",
+      "sourceSha256": "d8d3e0a8a3ce2872bbc4b2f995eb00c82b3880bf37df89a68acb0875a2fbd7b0",
+      "path": "/images/newsletter/news-aied-028-8c108e1131eded5c7438839d3f0c79c369871c63c8585d7192e58034b33e3ef1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67276
+    },
+    "news:aied-029": {
+      "sourcePath": "/images/research/covers/aied-029-live-agent-notebook-2026.png",
+      "sourceSha256": "daf255ea43aeb7f365284e84351ce6395a7bdbb50babae1c06139cb343f503a7",
+      "path": "/images/newsletter/news-aied-029-2e70916067f78236ca5a152008eee0aeb5d7b675d90c167c787562bf446c6011.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63457
+    },
+    "news:aied-030": {
+      "sourcePath": "/images/research/covers/aied-030-primary-machine-learning-literacy-2026.png",
+      "sourceSha256": "4234630816f178290256aae87a30c19e94d40c376884d49fadca9e246f885cb4",
+      "path": "/images/newsletter/news-aied-030-5567f2b05e9103a4ad2bd0ef93f76614f4adfb29d60043a0f1fc19dc094682cd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71878
+    },
+    "news:aied-031": {
+      "sourcePath": "/images/research/covers/aied-031-ai-creation-learning-studios-2026.png",
+      "sourceSha256": "414302b3ac40e5561979a882edf78e127e66eac343557ba9c9ac8b4c40473408",
+      "path": "/images/newsletter/news-aied-031-d6edae99a729760ec5c42527b23798d94a74a024386ba3518a3486dc5020eb59.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62663
+    },
+    "news:aied-032": {
+      "sourcePath": "/images/research/covers/aied-032-genai-self-regulated-learning-rct-2026.png",
+      "sourceSha256": "41680e8233254446ba7ecc0a8d0d713b9a3ecbd9cae294ccc5489647c23a31ad",
+      "path": "/images/newsletter/news-aied-032-31c75dbb01db5e01a63b1295e48fd6d1d3e5480c7c91f262e329959357336b2b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61852
+    },
+    "news:aied-033": {
+      "sourcePath": "/images/research/covers/aied-033-governed-institutional-ai-agents-2026.png",
+      "sourceSha256": "9e891413cd040d6d2cfdc27f00074e57506b0952763be3a0fb861372d4568137",
+      "path": "/images/newsletter/news-aied-033-5c6fb5933b184980c11b638110e554da4646d0edd8ee0f86c3a7630beb9c8e87.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 56854
+    },
+    "news:aied-034": {
+      "sourcePath": "/images/research/covers/aied-034-llm-math-feedback-rct-2026.png",
+      "sourceSha256": "99c09eca96a344acefde81222fb71b37e5bc3b3fe245fa45b0cb87861366ef51",
+      "path": "/images/newsletter/news-aied-034-8b96ecbd99daaff19687c4f4dc1814d75755cee626cce99d8c10f93244f0b3c0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 53957
+    },
+    "news:aied-035": {
+      "sourcePath": "/images/research/covers/aied-035-workspace-native-learning-tools-2026.png",
+      "sourceSha256": "87a8244f7c7a17f1e3092a5ff07ab97974b73f7e2be09e074fe178aa27bdfaaf",
+      "path": "/images/newsletter/news-aied-035-87b92c4d20d13a6c79b37726598a25762c7f2a7a35cece757b87c9ef8bfe3474.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62812
+    },
+    "news:aied-036": {
+      "sourcePath": "/images/research/covers/aied-036-rag-chatbot-null-effects-2026.png",
+      "sourceSha256": "eec4a5ebebc672202a867444cb8dc2fe3b18231eb2e52710bdcb43511b0b9d66",
+      "path": "/images/newsletter/news-aied-036-6909c423f8f6c3edd910cfcfd399aeca58065bfd174e5efa85c8b445aa02ca62.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 56034
+    },
+    "news:aied-037": {
+      "sourcePath": "/images/research/covers/aied-037-personal-context-reflective-ai-products-2026.png",
+      "sourceSha256": "c35e35d0a1bd6dfefd494ce2a386aeeb3abcda9f5016a4f7c63d80c62d964743",
+      "path": "/images/newsletter/news-aied-037-611257729070f8043ab63d1d9b07b11bcdd7c7cd8f5a1d47dcd776fef1ba07a2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69577
+    },
+    "news:aied-038": {
+      "sourcePath": "/images/research/covers/aied-038-ai-tools-english-learning-motivation-2026.png",
+      "sourceSha256": "756eaf2d56e4231a595331e5549700c4ee594a05699fe66ed81dd5659ab0acf1",
+      "path": "/images/newsletter/news-aied-038-403fd5e0ffe2fa654414e367bed26cdbeab58f7f3d0ce50b758bc2cdf4ad4e26.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 49174
+    },
+    "news:aied-039": {
+      "sourcePath": "/images/research/covers/aied-039-cross-device-ai-workspaces-learning-2026.png",
+      "sourceSha256": "e0b8ef8f8e33d9f61f0e10b59c4786cb2b802f4ee481918abc82950b028ef4c5",
+      "path": "/images/newsletter/news-aied-039-2e24c60e4ec94ebf06964e9e0a1fe2dd580b140d63c3c2e222c455fb67dec904.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60035
+    },
+    "news:aied-040": {
+      "sourcePath": "/images/research/covers/aied-040-classroom-ai-grade-specific-llms-2026.png",
+      "sourceSha256": "6b833112b33709e78a1e84183d485a5781b45a4320aa35d58bbd7e6666d27eec",
+      "path": "/images/newsletter/news-aied-040-710e0b507ec0ac23afb990deadf1c4de32b3abe9b155840223fedc11dcfe1c98.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60799
+    },
+    "news:aied-041": {
+      "sourcePath": "/images/research/covers/aied-041-chatgpt-deep-research-source-review-2026.png",
+      "sourceSha256": "fcf2bd0bff60d54f1669dd94af017e39e2ac38da32fbc2f4b3d8ae79d07d8256",
+      "path": "/images/newsletter/news-aied-041-eb8b58f718001065ecada2fdc6ce682318c2ffbb94af98df62057ff0c332a753.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57946
+    },
+    "news:aied-042": {
+      "sourcePath": "/images/research/covers/aied-042-human-centered-genai-feedback-2026.png",
+      "sourceSha256": "3274d92f4b8e46b87c3995e4449360317145e0fc96df4c061d1863859fb9608e",
+      "path": "/images/newsletter/news-aied-042-1a40c372a25fa350a80ca6af4f9296f4cfd7d6dd9a3b2472bc4756ab7b05b5e2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57298
+    },
+    "news:aied-043": {
+      "sourcePath": "/images/research/covers/aied-043-claude-role-certifications-2026.png",
+      "sourceSha256": "abe1fe25a49d9b3f32b4c6e1935f70800adfeeb467b58c6f1b0ddf4fe17f798c",
+      "path": "/images/newsletter/news-aied-043-96b58ea1707dd45be3c2842f3c3e8425858d5b8b8ee472eb626dcb8cfc9595ee.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65828
+    },
+    "news:aied-044": {
+      "sourcePath": "/images/research/covers/aied-044-genai-collaborative-efl-projects-2026.png",
+      "sourceSha256": "d5761a0c925c11d7f020e2d1e602a7581e698e852cf69deffd8b25b9dc94c611",
+      "path": "/images/newsletter/news-aied-044-b53cb1e5e7a4a0db195e3e6b95f926c4cbffadfc022478e8e529c7c3b9729815.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 56568
+    },
+    "news:aied-045": {
+      "sourcePath": "/images/research/covers/aied-045-gemini-media-verification-education-2026.png",
+      "sourceSha256": "192b44f98439c5604f5b1af78a9047aa0aaaa02e8e94db0bd517b52cc1145957",
+      "path": "/images/newsletter/news-aied-045-46b4c785566c854c282b9c4d01e14fe2a455b65e64c86901f2694ad10ee51bf2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61142
+    },
+    "news:aied-046": {
+      "sourcePath": "/images/research/covers/aied-046-chatgpt-learning-outcomes-meta-analysis-2026.png",
+      "sourceSha256": "c4bf3c1a0ceab5be85758a51337c2aeeee1ae67864c7a9472a77f2e81054fe2b",
+      "path": "/images/newsletter/news-aied-046-c3333948a6bf551a9507ee88c81af4843b6120a1647a0c79b2345880d209d10f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59177
+    },
+    "news:aied-047": {
+      "sourcePath": "/images/research/covers/aied-047-mcp-governed-institutional-connectors-2026.png",
+      "sourceSha256": "7e7b0ad780d047287843921916f70b88327a2d22e19e49a3f1f19aa69b304f64",
+      "path": "/images/newsletter/news-aied-047-713c73c46e3cf884df8a07eee240378a6beac5c29de4d46f3a2ffc4e0d9eb9a2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58186
+    },
+    "news:aied-048": {
+      "sourcePath": "/images/research/covers/aied-048-unscaffolded-genai-teacher-design-2026.png",
+      "sourceSha256": "4ef9e92fa7e693f49797806a6c9cae67a5fca130e15e7310364bb51a9850f815",
+      "path": "/images/newsletter/news-aied-048-f9aeb0434be321f80a74dc292505a70c17b3a7a161d7e878443d290ceccce5fc.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66958
+    },
+    "news:aied-049": {
+      "sourcePath": "/images/research/covers/aied-049-openai-ai-skills-jam-k12-educators-2026.png",
+      "sourceSha256": "357aeb1ffe581a6627d63aa3d154587687487ae72c13369d3172a0cab35dec31",
+      "path": "/images/newsletter/news-aied-049-091f614209933a03fca816f06f36576f0a4b9be7951f137df66d9904de6a92f9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66582
+    },
+    "news:aied-050": {
+      "sourcePath": "/images/research/covers/aied-050-generative-ai-learning-experiment-2026.png",
+      "sourceSha256": "825e23483c283787bd30c4a69f5c628191640f115485bfb2eef931791c9ee09e",
+      "path": "/images/newsletter/news-aied-050-f77c9f777bc90d5611090a78c0e97cea85f1c055bac8b8c57a353321d50b5b5c.jpg",
+      "width": 720,
+      "height": 459,
+      "bytes": 57400
+    },
+    "news:aied-051": {
+      "sourcePath": "/images/research/covers/aied-051-gpt56-opus5-gemini-study-notebooks-2026.png",
+      "sourceSha256": "f7aed1f04314d3acb388362cc4f1127492e60626bfe0f0de5ed2097d26be2307",
+      "path": "/images/newsletter/news-aied-051-3a6256b422b73182e84cdac9bd1733ab47902292f9dadf4cd7731c3eb700e24b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67208
+    },
+    "news:aied-052": {
+      "sourcePath": "/images/research/covers/aied-052-genai-literacy-modules-experiment-2026.png",
+      "sourceSha256": "6a397d457d63c6b60f0d69f930a3a34d60372759b95faf279bebadf719f7e197",
+      "path": "/images/newsletter/news-aied-052-da57c840a6d89d4dd745a56bad44958e6182fa6b1353eb003804365af1ac66e2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71517
+    },
+    "news:aied-053": {
+      "sourcePath": "/images/research/covers/aied-053-institutional-ai-research-learning-control-2026.png",
+      "sourceSha256": "b8245cc0f0bcf0587967b3495a0e58eaa5a9c977ae55c79a457d8c5ecbcf5694",
+      "path": "/images/newsletter/news-aied-053-4a533d179ffe1c968b2d1ec8750781221132aadcecb8f71af938a7aba5f5854c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64904
+    },
+    "news:aied-054": {
+      "sourcePath": "/images/research/covers/aied-054-education-productivity-gap-ai-effort-2026.png",
+      "sourceSha256": "2f5679b1465035e749cba8f5b6b849f315bf9883a78548f665abc7a912554d65",
+      "path": "/images/newsletter/news-aied-054-796e7e2504b211d36c1cd4ffac7342403f4103a903bbf9be37f11a378ddb966a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58689
+    },
+    "news:aied-055": {
+      "sourcePath": "/images/research/covers/aied-055-transcription-memory-classroom-context-2026.png",
+      "sourceSha256": "af5a6ed491ab25b2808b5755fec5aaa53198e1e7a682dcc17b50a01475fce403",
+      "path": "/images/newsletter/news-aied-055-023c081cb5ed03e6ce26626e5f4df11ecb74b01fdc7be825c84a71f8e0c3de3d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64568
+    },
+    "news:aied-056": {
+      "sourcePath": "/images/research/covers/aied-056-generative-ai-guardrails-high-school-mathematics-2026.png",
+      "sourceSha256": "99a4dd1885b94ba0ec1919988b9ac62d4f45b9479ca1f5f3c5533eba9376bd41",
+      "path": "/images/newsletter/news-aied-056-d3276de4f5bd2bc6ace3b17c2624a4d9fbbf9b4d0de989391fe28cdd232ccb3a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54406
+    },
+    "news:aied-057": {
+      "sourcePath": "/images/research/covers/aied-057-microsoft-elevate-educator-expert-deadline-2026.png",
+      "sourceSha256": "7985f682ed7ff293f5a256fe94cada3c91b801b84a0b68dff90e34608bb647b5",
+      "path": "/images/newsletter/news-aied-057-e38bed28c1a9a9ac76ca0bc029ad18ce81e0dc69de04d44607bdd61d76667b76.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 53099
+    },
+    "news:aied-058": {
+      "sourcePath": "/images/research/covers/aied-058-tutor-copilot-human-ai-real-time-expertise-2026.png",
+      "sourceSha256": "a8987bce2d4a7a5a280b3a2646d9864d1dc5d5b972a0ba6bbe27aadeba7b4fb8",
+      "path": "/images/newsletter/news-aied-058-a674ebf81e3f44ddb2c94c0c21a8b5b0dfd819ead02732f434c9513a9336ca13.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 39891
+    },
+    "news:aied-059": {
+      "sourcePath": "/images/research/covers/aied-059-gemini-docs-multilingual-education-rollout-2026.png",
+      "sourceSha256": "57f4986aafd56386c78bc9c791df86baaf572a8762ea6cd2977a654b46ccda01",
+      "path": "/images/newsletter/news-aied-059-49c317c0ced96ea55d881a3d5c69b4419b47b3773b9df6fd63bbe9bca4543eda.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57220
+    },
+    "news:aied-060": {
+      "sourcePath": "/images/research/covers/aied-060-k12-chatgpt-adaptation-prompt-scaffolds-2026.png",
+      "sourceSha256": "ff81525f283e7f162da54ee3b8d9a08cdd0a56fb8378904834f08a38ca96bb74",
+      "path": "/images/newsletter/news-aied-060-ea905a05b4b2ce2a76e407dc99a87ab48e71c060bb741396308f135bd2403fc1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 51859
+    },
+    "news:aied-061": {
+      "sourcePath": "/images/research/covers/aied-061-eu-ai-act-article50-transparency-education-2026.png",
+      "sourceSha256": "351165bf90408e8050db193f4883e773dadfbcf0aace045c88639c2b26c3eb79",
+      "path": "/images/newsletter/news-aied-061-0fc1f2d231e0f1f16f61b0b2e86b392bda37031b280ffcfcc8637de93fbe2d6b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69636
+    },
+    "news:aied-062": {
+      "sourcePath": "/images/research/covers/aied-062-ai-literacy-gender-equity-elementary-steam-pbl-aiot-2026.png",
+      "sourceSha256": "19628212f95c4648177d5cbb1ced3a5fbb264a368785734ee67abcf3e2e0f3d5",
+      "path": "/images/newsletter/news-aied-062-0ce39c740d55d1c9bda66421058101849f0e133c9e0e9ae53dc8c07cf26cdd59.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 79488
+    },
+    "news:aied-063": {
+      "sourcePath": "/images/research/covers/aied-063-google-meet-ai-notes-admin-controls-2026.png",
+      "sourceSha256": "9737015a6c416f6f0138d547baf8d4e8c1e6c167160b3e7a58efb8d41377949d",
+      "path": "/images/newsletter/news-aied-063-e1483a5c2b117d4b39677ecbe08ccda645b951fdcdc7e0f0cdde6945db6a3e1f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 50286
+    },
+    "news:aied-064": {
+      "sourcePath": "/images/research/covers/aied-064-generative-ai-teacher-self-directed-professional-development-2026.png",
+      "sourceSha256": "ab327c77d6a62ff9138ccd4367db46471f286cf0775cb623ca71e79cda14ce26",
+      "path": "/images/newsletter/news-aied-064-f26e23384f32f15a9935a21f6bd0c58b442bc2565bf6081319296c45fccd4072.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 47320
+    },
+    "news:aied-065": {
+      "sourcePath": "/images/research/covers/aied-065-openai-k12-educator-plugin-teacher-access-2026.png",
+      "sourceSha256": "a125da69d40b253316cac7f8622f4007a09cd209735d0f20cbad109eaa35e7ee",
+      "path": "/images/newsletter/news-aied-065-f16d98ed58ca821f8fc84727bd7891b36047df238942ef0a634b51d9219167e1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54825
+    },
+    "news:aied-066": {
+      "sourcePath": "/images/research/covers/aied-066-llm-safety-children-multiturn-red-team-2026.png",
+      "sourceSha256": "9cc0ae12908e7d1ed869df1f93a70978d074120e21c53a18193a6bf0e0e077af",
+      "path": "/images/newsletter/news-aied-066-3adf0e0cfc5070bec87323ac9e6cca34618527b5973b112e1eb1bf25c5478c24.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 41849
+    },
+    "news:aied-067": {
+      "sourcePath": "/images/research/covers/aied-067-gemini-forms-quizzes-claude-opus41-retirement-2026.png",
+      "sourceSha256": "49eeeed06759dca7e946ad95f2a9ce9fed9cce5febf06bc23744f20617a56d84",
+      "path": "/images/newsletter/news-aied-067-d70fea70e32b0c45d28e224c5b87feb8e7328fdc82df5b9ab90c5fd812332f50.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59212
+    },
+    "news:aied-068": {
+      "sourcePath": "/images/research/covers/aied-068-generative-ai-learning-penalty-chinese-secondary-education-2026.png",
+      "sourceSha256": "8d1a6a37da1a88bd4d2a209eb3e3705e00b8e72c073725fc838ae3b10a3b803b",
+      "path": "/images/newsletter/news-aied-068-6846f30da580abb733f01dff73323ef8d16f2e5a9099999be1086ceaf49a9903.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 49342
+    },
+    "news:aied-069": {
+      "sourcePath": "/images/research/covers/aied-069-gpt56-luna-free-access-teen-safeguards-2026.png",
+      "sourceSha256": "dcfd3ada773a519a2b08301c5688193f32b28b5d58c6c8fcd51b4058e1a17fce",
+      "path": "/images/newsletter/news-aied-069-a492944dcadb273f91389709d660bff3ecf8f15b33822927762960f41761a643.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 52805
+    },
+    "news:aied-070": {
+      "sourcePath": "/images/research/covers/aied-070-antecedents-consequences-ai-misuse-university-students-2026.png",
+      "sourceSha256": "1585e0c1080a5ac70fbde32aa81515273750608a7654c33d817151a8666e6d4c",
+      "path": "/images/newsletter/news-aied-070-94f247253f531687e54b7ecbb420ddac95bd8a4e4980139cb3bdeb63fd7dab14.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60897
+    },
+    "news:aied-071": {
+      "sourcePath": "/images/research/covers/aied-071-microsoft-ai-economy-institute-frontier-firms-work-2026.png",
+      "sourceSha256": "e4b38310c0d66633a7d9112dd816c9b48a3110588c8bc5d6dc4a6aedb62aad84",
+      "path": "/images/newsletter/news-aied-071-c8741a0b243405094c14c8beb36219354a8c0808a32468449e0d5b2fdc61947e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65241
+    },
+    "news:aied-072": {
+      "sourcePath": "/images/research/covers/aied-072-genai-digital-multimodal-composing-tesol-teacher-education-2026.png",
+      "sourceSha256": "3b0b26f16340609026f14e3f6cb65e352f4571b4e27d0fa35a312304fa672a59",
+      "path": "/images/newsletter/news-aied-072-331b38967e8506884b7d3a6a433e818f7c5b3486757e3159cd3f1e3cd7eb821f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72420
+    },
+    "news:aied-073": {
+      "sourcePath": "/images/research/covers/aied-073-microsoft-iste-2026-ai-education-takeaways-2026.png",
+      "sourceSha256": "61f70b39958807b3eadb6a54bb9f8cfe8f2de77ecf29338fb3f73ce1f444cc6c",
+      "path": "/images/newsletter/news-aied-073-fa777092705c8f90fada0724fb743128d4f104b618425528f5a2329ce75141e3.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66217
+    },
+    "news:aied-074": {
+      "sourcePath": "/images/research/covers/aied-074-ai-tutoring-assessment-mathematics-systematic-review-2026.png",
+      "sourceSha256": "10e4a56c306ed6328ab2202b6c74d30149eae4a42995e51f0d8cb84223707823",
+      "path": "/images/newsletter/news-aied-074-96b811604397bb75df39e2b691b281bade48b5789c841ac5aa2abb6d8e8135b6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 56661
+    },
+    "news:aied-075": {
+      "sourcePath": "/images/research/covers/aied-075-microsoft-ai-infrastructure-sustainability-report-2026.png",
+      "sourceSha256": "545234585905aae8db80546e36b1ac65bc06a02b484692eabbd711bd15503998",
+      "path": "/images/newsletter/news-aied-075-8e7389af97a4b8f9f9e6f2e9fe22ba01f5b0ea0167ed0e561862d99743f7619b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 80198
+    },
+    "news:aied-076": {
+      "sourcePath": "/images/research/covers/aied-076-interactive-llm-learning-dashboard-reflection-2026.png",
+      "sourceSha256": "d89dd0ac0764032dc7f03af16d55c777eed6eafaef60ed3f981eae61eba63b6e",
+      "path": "/images/newsletter/news-aied-076-db04a75500951126256582932c92c941bf87745d521538be38e9466f49509483.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58463
+    },
+    "news:aied-077": {
+      "sourcePath": "/images/research/covers/aied-077-unesco-multilingual-youth-ai-assistant-2026.png",
+      "sourceSha256": "133c4e0a84fa05b5cb8dca3b9b75033c6f57465fe510be5847ac8b477a9a8340",
+      "path": "/images/newsletter/news-aied-077-117aa974dccb0d2d42e56675cede965de6f7255fdfdfa14f883765c8bc46cacc.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60399
+    },
+    "news:aied-078": {
+      "sourcePath": "/images/research/covers/aied-078-ai-english-language-education-systematic-review-2026.png",
+      "sourceSha256": "cb9442f58923769770bd2e283cbbccbfbc232395d90796dccb8e4aa96c8d66f5",
+      "path": "/images/newsletter/news-aied-078-e11c1d9432550ff384937aae031e99009c879617eff9d0914ded1587c81c845a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62629
+    },
+    "news:aied-079": {
+      "sourcePath": "/images/research/covers/aied-079-england-ai-edtech-procurement-guidance-2026.png",
+      "sourceSha256": "9eacf24580f910eeb526f6a9f5c4352b7dabc06ada51c826168f0a8d55c58784",
+      "path": "/images/newsletter/news-aied-079-36166b0871ac52c8d70ca74050d7363465535bf10a19b0045fbdd7014f14b6a0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58189
+    },
+    "news:aied-080": {
+      "sourcePath": "/images/research/covers/aied-080-student-ai-dependency-literacy-self-efficacy-2026.png",
+      "sourceSha256": "540ae757ea3b21ae3cb4a151caac08bcf965cbb44e6bb62e395cf3311c75403a",
+      "path": "/images/newsletter/news-aied-080-8d022e2becc946e300f9b5ebca865dab4f5fba0f9ed8aac5a6ba7e1c757a90f1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58395
+    },
+    "news:aied-081": {
+      "sourcePath": "/images/research/covers/aied-081-gemini-chrome-uk-connected-ai-2026.png",
+      "sourceSha256": "8740f570da9d44ab2170cf34529793fb81c65dfccb77bdc5beceefcaff5df4eb",
+      "path": "/images/newsletter/news-aied-081-fcf3725733476ba388f081394b356f3915c4bbb0685307e94aba72f4d8382045.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 53504
+    },
+    "news:aied-082": {
+      "sourcePath": "/images/research/covers/aied-082-pedagogy-grounded-deepseek-lesson-plans-2026.png",
+      "sourceSha256": "45b40494d4b4843d3a265c405cd67c328355c31285bcd70f6f0c25f0a7e11550",
+      "path": "/images/newsletter/news-aied-082-1be34fe9ffac429c67f79209f906b8067f0dee85caba2e63d401dade6afff29c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64173
+    },
+    "news:aied-083": {
+      "sourcePath": "/images/research/covers/aied-083-china-vocational-ai-robotics-majors-2026.png",
+      "sourceSha256": "2ef60d84c8a447c20d2e33c6b6da3d887ec5a3ef51e7efe134f611a5cc5aeb14",
+      "path": "/images/newsletter/news-aied-083-a5f3f864ee58de6510f607720ae2f96402dd17ff4cf6803cce8c0156222de05d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69751
+    },
+    "news:aied-084": {
+      "sourcePath": "/images/research/covers/aied-084-genai-use-peer-trust-ai-literacy-2026.png",
+      "sourceSha256": "021de7c6ee100091bd31854b790cb2487f552bff1fefbdf6a2245aedb08e8a5b",
+      "path": "/images/newsletter/news-aied-084-b32a5fcf784b464e44855246e7820a0e946f09834eebc0acea5fe0a7be73319f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 55508
+    },
+    "news:aied-085": {
+      "sourcePath": "/images/research/covers/aied-085-china-national-smart-education-platform-pilots-2026.png",
+      "sourceSha256": "cf1ecbf3f159f882d2b1815a64c89033c8da8e32d411177fb608d3e82a74ca94",
+      "path": "/images/newsletter/news-aied-085-1eae8a37f23f2f93286f5aadbb39c3a53a266cb1af777ac48d47b1a9b732eed6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60599
+    },
+    "news:aied-086": {
+      "sourcePath": "/images/research/covers/aied-086-pedagogical-suitability-ai-tutors-2026.png",
+      "sourceSha256": "d96b855557d6242e948ca0737a9967d57c31928d565109ee996062456e3f7aa7",
+      "path": "/images/newsletter/news-aied-086-27b98c660836d6117cea82686e09c3eb1cf833e8d256db5cd6684d5d7a2d544f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54910
+    },
+    "news:aied-087": {
+      "sourcePath": "/images/research/covers/aied-087-agentic-browser-coding-learning-handoffs-2026.png",
+      "sourceSha256": "2a1104af7cb512c42c4dbd2a6908ac696c54796377390c4b26e7a69fafbdde92",
+      "path": "/images/newsletter/news-aied-087-488f73f58e977bdd6426f258d00b6f62bb60d726f99cce647ced467c3bb1197d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54226
+    },
+    "news:aied-088": {
+      "sourcePath": "/images/research/covers/aied-088-teaching-monster-pedagogical-content-knowledge-2026.png",
+      "sourceSha256": "9d1ed2a941f3924bf943dc0578a8d60ada305392485b7f851f19766b5a7a1d59",
+      "path": "/images/newsletter/news-aied-088-f80d4aef8199d1db8c9bb23a0aee8b00ab6b43945af6849e6add19925a37193d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64702
+    },
+    "news:aied-089": {
+      "sourcePath": "/images/research/covers/aied-089-ai-actions-plugin-security-education-purpose-2026.png",
+      "sourceSha256": "02c7077309707f016d564135a219e2b7adda01a0a29fa593ec3a7b8c269919ab",
+      "path": "/images/newsletter/news-aied-089-c9925cfa5051bc046ea8f67d9f2d780e729dbe1f9fc2ed4be8a88aad4c51d1a3.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65139
+    },
+    "news:aied-090": {
+      "sourcePath": "/images/research/covers/aied-090-ai-generated-interactive-fiction-education-2026.png",
+      "sourceSha256": "ca107a689b42436f90a49a158ee480f6f7fa52d0be7acb9bbdd8c3a13cfd9a22",
+      "path": "/images/newsletter/news-aied-090-4894ea4e21766be0d6722b71bcad190558dd0bea337e37b1fdb50de1af49fb4f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64352
+    },
+    "news:aied-091": {
+      "sourcePath": "/images/research/covers/aied-091-source-grounded-ai-workflows-education-2026.png",
+      "sourceSha256": "f0c065f25af2a9a985547f3c82ea0c037805b71ca31d9db08357e00fe78f95ed",
+      "path": "/images/newsletter/news-aied-091-1f2ce1a006df2aec2ac271acee417b988455fc57075442e35a1d6c6927db69bc.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72475
+    },
+    "news:aied-092": {
+      "sourcePath": "/images/research/covers/aied-092-socratic-tutor-withholding-contract-2026.png",
+      "sourceSha256": "1d4579cdf77120dffbd23b3615d0aaaf37f0b35a7ab103001b4af1aa2f487ca6",
+      "path": "/images/newsletter/news-aied-092-afa5fe0f96ba0aa0129827306f4df4af6daf5882499f7dce4e06815b2964a381.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 52784
+    },
+    "news:aied-093": {
+      "sourcePath": "/images/research/covers/aied-093-ai-account-context-literacy-2026.png",
+      "sourceSha256": "fa62593a34f70bf06c5c425cae751fc97e67d4e77d0a93551558458bb8f4b6c4",
+      "path": "/images/newsletter/news-aied-093-8fb48de39e19e05b493f727c1e295777df6a73a15c5e1ca509beea883be08c1e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74142
+    },
+    "news:aied-094": {
+      "sourcePath": "/images/research/covers/aied-094-principal-trait-analysis-2026.png",
+      "sourceSha256": "d0e52dcc1c1489faf8e4ab7fd98ea963d842d9daaaf7dc567690afd308ad9357",
+      "path": "/images/newsletter/news-aied-094-4824aa540eeeed74f5f4a8ee0fb0a0e8484df918d9d306cb5b8a958b9ac63d00.jpg",
+      "width": 720,
+      "height": 461,
+      "bytes": 65381
+    },
+    "news:aied-095": {
+      "sourcePath": "/images/research/covers/aied-095-reasoning-routing-supervised-agent-workflows-2026.png",
+      "sourceSha256": "dd84acc99c02fe7c3bb258e59ce6bcbbf433b0dc4514473a0e7cb91710ddcad9",
+      "path": "/images/newsletter/news-aied-095-8c70be0e0a56893b06eb7d5cd171a126ca8cc2475fa8e8a9a3f6f147db560654.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58231
+    },
+    "news:aied-096": {
+      "sourcePath": "/images/research/covers/aied-096-lecture-video-curation-course-grounded-ai-2026.png",
+      "sourceSha256": "82571fdcd095be2be50bea8fb06f2035c86e38bb390641515bbb59b32d289a75",
+      "path": "/images/newsletter/news-aied-096-5ca302a431ba654940618e6290b777661246d641e9c161ea288382e0530d9137.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60863
+    },
+    "news:aied-097": {
+      "sourcePath": "/images/research/covers/aied-097-connected-source-permission-review-workflows-2026.png",
+      "sourceSha256": "7a8fd0f4e9e08b1974bf44958d351ca84a4304169e3ea99d91342290ba5922c0",
+      "path": "/images/newsletter/news-aied-097-bbb8693c3c67a188b2ac8c0a058f2bdd417770edcc276830d25cc2bd81c908f4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62376
+    },
+    "news:aied-098": {
+      "sourcePath": "/images/research/covers/aied-098-inside-student-reasoning-action-simulation-2026.png",
+      "sourceSha256": "5dba8c89809807b0b76836b0c5f4fa5705cde81a820a47779c12f759698c93ed",
+      "path": "/images/newsletter/news-aied-098-f743c5f81c48e96b340b05ed8caa75eb1bcc051d6fdfd2845a294c98a37b203c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 50294
+    },
+    "news:aied-099": {
+      "sourcePath": "/images/research/covers/aied-099-interactive-session-reliability-evidence-2026.png",
+      "sourceSha256": "d5f3fe499beca2ae1e76891cea9fab0e829dc2cca9faf8c84f6228e85e4e58fa",
+      "path": "/images/newsletter/news-aied-099-73c298a913b2473c778677ff1e8fe5f78cdc77b2bd2305ac40ac50fdcb835f98.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 47298
+    },
+    "news:aied-100": {
+      "sourcePath": "/images/research/covers/aied-100-joint-course-grade-transformer-trace-2026.png",
+      "sourceSha256": "11212fefb67678b949f8c2a3b942cf5ea839ea2cd50a5d1c2d12953320993c68",
+      "path": "/images/newsletter/news-aied-100-edf16351675b2018b2da562e2ac0b0d11cc1304d8d2ca6e2da6cae8ec4837f41.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59845
+    },
+    "news:aied-101": {
+      "sourcePath": "/images/research/covers/aied-101-mcp-oauth-redirect-reliability-institutions-2026.png",
+      "sourceSha256": "dd9885b352bc4ea2859d2eee5b7c9ada1a1d930dff98d053e93a233c89e24cec",
+      "path": "/images/newsletter/news-aied-101-a846575e3371ad1f316d2a3ad7ded7e052c714dfce63439d1dc5a1115a402037.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 48943
+    },
+    "news:aied-102": {
+      "sourcePath": "/images/research/covers/aied-102-generative-ai-object-oriented-programming-assessments-2026.png",
+      "sourceSha256": "46bff1befc7b2e4e8b5042732bea9c36e102d924c28ba6b22bcd5c66cebb326a",
+      "path": "/images/newsletter/news-aied-102-24fefa8cc8eb59e49a91e772dcdf2ac0ecac6fa4da30e19cd03685a29d4e042b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58681
+    },
+    "news:aied-103": {
+      "sourcePath": "/images/research/covers/aied-103-project-transcript-controls-selection-clearing-2026.png",
+      "sourceSha256": "53a267bd977ef6aecb2f8d043a5af896b25d6a823c34d95e61bcbb284ef18fc1",
+      "path": "/images/newsletter/news-aied-103-cf66a833dd7f71432dcf13d5026d25ba2508302f286addb53fdae63151e1c637.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 55920
+    },
+    "news:aied-104": {
+      "sourcePath": "/images/research/covers/aied-104-scaffold-do-not-substitute-ai-harm-cycle-2026.png",
+      "sourceSha256": "31feb9d3a17197541d2f251cea194c77e8a24b97a31c61eec075ac943d6cb622",
+      "path": "/images/newsletter/news-aied-104-fb0ade9b0576ed923c7f25d48691e9602d1c2826902a4bb61da226313d69d74b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 51651
+    },
+    "news:aied-105": {
+      "sourcePath": "/images/research/covers/aied-105-gemini-classroom-all-ages-contextual-study-2026.png",
+      "sourceSha256": "2400d498b17787d40ee9ca50c28a9891f45d96cf90b20593a4070a95a4538874",
+      "path": "/images/newsletter/news-aied-105-1c7f7652ceed600c90deefe699ae8a769a169f0d1e517e6041e8b8b09f9c2013.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 51684
+    },
+    "news:aied-106": {
+      "sourcePath": "/images/research/covers/aied-106-semantics-constrained-counterfactual-recourse-2026.png",
+      "sourceSha256": "fd062dcf61aa554f2a095f2bd1fa7cdbb4c7de878bb88146ea5a26ff65c49042",
+      "path": "/images/newsletter/news-aied-106-1b19ecc0115a926102a657457f8edef8ec43886adc398c326380967526f50329.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 49130
+    },
+    "news:aied-107": {
+      "sourcePath": "/images/research/covers/aied-107-session-model-defaults-cross-session-review-2026.png",
+      "sourceSha256": "d8ce119eaaacfd991a9cb2f6a03265d11de1608f728fe0eb8cfe11f59ab21f20",
+      "path": "/images/newsletter/news-aied-107-186cbdb389f09bb85eab8dddd463a7c2a176409153fb8f7eec052e88ffeaa32b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 51087
+    },
+    "news:aied-108": {
+      "sourcePath": "/images/research/covers/aied-108-learnai-just-in-time-co-creation-2026.png",
+      "sourceSha256": "2ca5dc484d422dced03067c05cbb8f9dab24f65be7ecd81f7d9f68766a59956c",
+      "path": "/images/newsletter/news-aied-108-df073ead4f95bea93ead7960206212836145c7ee66e28f4977f53d00e30bdec9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65014
+    },
+    "news:aied-109": {
+      "sourcePath": "/images/research/covers/aied-109-concise-output-style-gateway-cache-control-2026.png",
+      "sourceSha256": "46f06f8f80d5a7a3a3b056e079c9389b32b5425ffdc2f678110886a00bf64771",
+      "path": "/images/newsletter/news-aied-109-a8464935087f908a4a5ce338b72f083697b9a8189acb4e9812530f25530e797b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54342
+    },
+    "news:aied-110": {
+      "sourcePath": "/images/research/covers/aied-110-dual-gatekeeping-pedagogically-grounded-ai-video-2026.png",
+      "sourceSha256": "5c4483beece5355c995bac049dd8d3e38f82c7dfa9380b61628185afe32307d9",
+      "path": "/images/newsletter/news-aied-110-9b211bfe5210170fdf79c7a6222f094604c448849351f83ae4eb18f4617a5463.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 77931
+    },
+    "news:aied-111": {
+      "sourcePath": "/images/research/covers/aied-111-tool-selection-workspace-boundaries-ai-learning-2026.png",
+      "sourceSha256": "00278fa1a86e3ecbc1f0a3546d275427f826c08fad3401192fcaa891bffc5384",
+      "path": "/images/newsletter/news-aied-111-474791067b1326a1a057352f2245e24d7ec05da2de7bb9c55823c722affb0ee4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71338
+    },
+    "news:aied-112": {
+      "sourcePath": "/images/research/covers/aied-112-astra-agi-learning-evidence-2026.png",
+      "sourceSha256": "5c9c0e8c3dc6de0beb1ab90c077881085e4da83ca5c1c868b0b57eff6a563a4e",
+      "path": "/images/newsletter/news-aied-112-ea5416b5ea0a9054f6ce9572085a5f06c244cf1225a932bd2ae700cf57d309b2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 53550
+    },
+    "news:aied-113": {
+      "sourcePath": "/images/research/covers/aied-113-fable-5-1-aied-workflows-2026.png",
+      "sourceSha256": "4305728584cbfd8d8bc36d30a2a5de96f272ea84907109d537c3e05ffcc96e30",
+      "path": "/images/newsletter/news-aied-113-8138144556a4fb98ae1db1fe1646201be2678ea1f84bb253ce1d1b6fff9b6574.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71797
+    },
+    "news:aied-114": {
+      "sourcePath": "/images/research/covers/aied-114-backfill.png",
+      "sourceSha256": "0e0f384a39005c61dbeca717cbd5ec7afd0b4b7cc5a981bd4a63a6c4597869df",
+      "path": "/images/newsletter/news-aied-114-4f83256d306a20a9b1daf56c661c861ce03cdd46fe0a662aca2a32c513802579.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 73330
+    },
+    "news:aied-115": {
+      "sourcePath": "/images/research/covers/aied-115-backfill.png",
+      "sourceSha256": "ff006d9927b1ebadc42fba1324a88391aa233b8760e11fa04ba2f4b8664af8d8",
+      "path": "/images/newsletter/news-aied-115-86682cfd70691371ccb705649c606638afe1a30d2cc4a03ad35568e82893aa3b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 82978
+    },
+    "news:aied-116": {
+      "sourcePath": "/images/research/covers/aied-116-backfill.png",
+      "sourceSha256": "84422b9a76f8fc8ddc0a62361e1baa65f8f994f9bedcbb6a7c9adbf10a707aeb",
+      "path": "/images/newsletter/news-aied-116-fd57eaf2a7da70aa411d709346da92fd9320b592e227364e337ae1c660152a25.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66472
+    },
+    "news:aied-117": {
+      "sourcePath": "/images/research/covers/aied-117-backfill.png",
+      "sourceSha256": "9c1efbab3b71bbe94e533d51c07fa9879c1a2a611d1caa75406228c4bf1062e1",
+      "path": "/images/newsletter/news-aied-117-3ea2cfa18612058106315957ea4d8596d4c44d2553ed3590fca789f0e4fa5818.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70633
+    },
+    "news:aied-118": {
+      "sourcePath": "/images/research/covers/aied-118-backfill.png",
+      "sourceSha256": "4c83b5b3566f2a4bcaf7bd7ed4c3d030fd3892691f0e2243cd476c35754ce91c",
+      "path": "/images/newsletter/news-aied-118-78d21e2fbd08d4b15cd8900c192c36c00dbd0befed6dcb1076ad1589e90c9c1a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71237
+    },
+    "news:aied-119": {
+      "sourcePath": "/images/research/covers/aied-119-backfill.png",
+      "sourceSha256": "5009a86ce4290894f273e04451535570354ab3d7371346598b65f5eadb509379",
+      "path": "/images/newsletter/news-aied-119-e9a6677d7d8457de91b26ded91340049126a3bb4c1db6134b5de7cf8fde68d0e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71595
+    },
+    "news:aied-120": {
+      "sourcePath": "/images/research/covers/aied-120-backfill.png",
+      "sourceSha256": "bc942c11a49cd50a34b1b9c4c5d8b027e6b219b02d3f34606b35c1102ed3b4bb",
+      "path": "/images/newsletter/news-aied-120-5c5792bb8bdcd72021b60e391bd81dabf3040af1c561128c6c5ed8a9bf80ca71.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63221
+    },
+    "news:aied-121": {
+      "sourcePath": "/images/research/covers/aied-121-backfill.png",
+      "sourceSha256": "48c75db83c95652177ad1a25054c899ed754419eddb57bf8193752c1448464fe",
+      "path": "/images/newsletter/news-aied-121-97598187b840f07683528cca6f12b91517f22404e86964f90d9a0b96063f09e6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68163
+    },
+    "news:aied-122": {
+      "sourcePath": "/images/research/covers/aied-122-backfill.png",
+      "sourceSha256": "ad0c97323c5a32d84ce1cffbcbcb9be890800b6a528a29c9112384e5ed5cf490",
+      "path": "/images/newsletter/news-aied-122-03c1be8101318505b4e4b65ebc7702780a9a2b0c45ef7fa63b5b0368892479c5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67654
+    },
+    "news:aied-123": {
+      "sourcePath": "/images/research/covers/aied-123-backfill.png",
+      "sourceSha256": "96384a22236530f35a9480b1eea81c11428177a05383f731188030601f9073db",
+      "path": "/images/newsletter/news-aied-123-c0fe4156d259fb12bd9b670c474acc26a852e2ee68fb862dbd18e7c8441176fb.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64961
+    },
+    "news:aied-124": {
+      "sourcePath": "/images/research/covers/aied-124-backfill.png",
+      "sourceSha256": "b087729afba842c5e80e33e32e59fcd7662e62f38362965e06ef6addd6e9af62",
+      "path": "/images/newsletter/news-aied-124-3a6f40058f5bf7281d6a3d0754a1802ac2e07972180ceb9a20dc9c5cf1cca37a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58530
+    },
+    "news:aied-125": {
+      "sourcePath": "/images/research/covers/aied-125-backfill.png",
+      "sourceSha256": "8a5bc47b5e4389f73ccbc512e865a762cef732d819c3ca43e8165bfef9831abc",
+      "path": "/images/newsletter/news-aied-125-b93bc7b735da56dc3bd1290787c4524b6562017ddce2459b6a2acd875dab3707.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66250
+    },
+    "news:aied-126": {
+      "sourcePath": "/images/research/covers/aied-126-backfill.png",
+      "sourceSha256": "c7bbc1322143a1990c600d2a1233532bd699d5208a2568e002661ff87ac0ba20",
+      "path": "/images/newsletter/news-aied-126-68df8f3d1ee653271341e2dd822952cd21f1e2d9a183db4583f4458030e17bcf.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 77315
+    },
+    "news:aied-127": {
+      "sourcePath": "/images/research/covers/aied-127-backfill.png",
+      "sourceSha256": "9a51c8fc914cd61c7242d13fc4c58c5d01a4cedb0820821582ba8aab2f53a17a",
+      "path": "/images/newsletter/news-aied-127-601f05d36eadfd30d5f4d8710dd198974c46ac16beabb99fcc9d54aa94591a80.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70342
+    },
+    "news:aied-128": {
+      "sourcePath": "/images/research/covers/aied-128-backfill.png",
+      "sourceSha256": "1bb05920036a274e87c2fbab7744c0a8cfe425af95f46d5703dda6ed1c9cdec2",
+      "path": "/images/newsletter/news-aied-128-63e1faf8eba0a06762b7478929a53a1f73c911e253f7b6cc435cfe6069c3c24e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60964
+    },
+    "news:aied-129": {
+      "sourcePath": "/images/research/covers/aied-129-backfill.png",
+      "sourceSha256": "5368631c9cf082cb0d1a6c3157ed55a4c81146cdc19b9626bb0bb6cd75ea53ce",
+      "path": "/images/newsletter/news-aied-129-fb74c03c2a8295320ee73cf0987458b3cf84592c58a322c3db03937e1ca9df74.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69573
+    },
+    "news:aied-130": {
+      "sourcePath": "/images/research/covers/aied-130-backfill.png",
+      "sourceSha256": "7ea5f1c337e2be386c7ec853e7c72ed48e705ed92ef1d41811f864a587186815",
+      "path": "/images/newsletter/news-aied-130-bc8dbed4168a2c24b2bade2211dfae0c9b393b0007ed28827573d19e213f213e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 92319
+    },
+    "news:aied-131": {
+      "sourcePath": "/images/research/covers/aied-131-backfill.png",
+      "sourceSha256": "260f78b15660a7cb05e538811fb54ca41ed309fa523ed95f364fa58c046c1d25",
+      "path": "/images/newsletter/news-aied-131-36b5b33a1f2d23e063387d077e68af137c6a3a779458f814fcbb0cc69673e70a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59042
+    },
+    "news:aied-132": {
+      "sourcePath": "/images/research/covers/aied-132-backfill.png",
+      "sourceSha256": "b54dafd8491b4453df5388d16ba80b04d12338232e528027dd0aeaf912390646",
+      "path": "/images/newsletter/news-aied-132-bd6914ec65201ad5677a5f95ae4513605186019ef6b3120904311d8bac983daa.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63155
+    },
+    "news:aied-133": {
+      "sourcePath": "/images/research/covers/aied-133-backfill.png",
+      "sourceSha256": "cfbea4b62f5e967e2f723e3f5235283bfc2af57a337352ccc16a9fadde7f0136",
+      "path": "/images/newsletter/news-aied-133-6c733e07a285b36880eaf79234f732fa115b6fbc7f9cc0b917884f4ffb2f0553.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74129
+    },
+    "news:aied-134": {
+      "sourcePath": "/images/research/covers/aied-134-backfill.png",
+      "sourceSha256": "a2b672405e9bad8910828ff5b17162f58f5272e83ee802de9898d1f1f5d4f081",
+      "path": "/images/newsletter/news-aied-134-975476869fc50ac7e0181a0b674126d9b6dc2ca8bbbde65961e22f53233cfee6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57471
+    },
+    "news:aied-135": {
+      "sourcePath": "/images/research/covers/aied-135-backfill.png",
+      "sourceSha256": "707f0d655d048977a0d6b88b1aef0077ad9bcbe49fa2f7d5037b857e443f5b2d",
+      "path": "/images/newsletter/news-aied-135-d01446172bce57691accda0269427cf8ed7ed6f9bf47596b01f0785284df7500.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62297
+    },
+    "news:aied-136": {
+      "sourcePath": "/images/research/covers/aied-136-backfill.png",
+      "sourceSha256": "0f2cbe325f7dd91ccfbb88f9e17dc596687dbbe56fdc436010b4c97d092c401d",
+      "path": "/images/newsletter/news-aied-136-d67d2b8aef47dc83b432d7161ff2c60915777d96dfe7e64c92259c83730b3372.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61739
+    },
+    "news:aied-137": {
+      "sourcePath": "/images/research/covers/aied-137-backfill.png",
+      "sourceSha256": "f546dbce311d67951ca443fba4d70c843e0310609c582ef00729fef620ef2049",
+      "path": "/images/newsletter/news-aied-137-900fd8772b02f17a236d646a5062755985acf290c6fce346382769f9edc46a48.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69978
+    },
+    "news:aied-138": {
+      "sourcePath": "/images/research/covers/aied-138-backfill.png",
+      "sourceSha256": "290bdd8748b431e20d405185218a4ae25e7496ca3d48ff250ca98bbf988831d6",
+      "path": "/images/newsletter/news-aied-138-076dea4c8273901f4414756a857dba19f64b59547e64d68645c0aaa4d750656b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70443
+    },
+    "news:aied-139": {
+      "sourcePath": "/images/research/covers/aied-139-backfill.png",
+      "sourceSha256": "754c34ad83128dfd245ae338372607ae97541b0883e59883dba6586846e7468d",
+      "path": "/images/newsletter/news-aied-139-6c4c355cda04fa6802d20e3d5fed104cdea8ce4e2e4cb2053c441b2315bcc4d6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69601
+    },
+    "news:aied-140": {
+      "sourcePath": "/images/research/covers/aied-140-backfill.png",
+      "sourceSha256": "1e37dd0db103a0d909e37b9f1c57ada356845cd3c7d0abc3b78653ac42c69f1c",
+      "path": "/images/newsletter/news-aied-140-84c600412f2fe2d733cb312528c556eea06853fc65bd0c8323f12d056c76cbdf.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63771
+    },
+    "news:aied-141": {
+      "sourcePath": "/images/research/covers/aied-141-backfill.png",
+      "sourceSha256": "4486a74785cd8a29bd7bc11d7b061cbdfa380eb40162e53d8595a41a58408a49",
+      "path": "/images/newsletter/news-aied-141-fa9bbe6e1bd06bcd164e2c0edb95ce1246d5bd7ef1153f9904ab1b5ab4ebf3e8.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 75219
+    },
+    "news:aied-142": {
+      "sourcePath": "/images/research/covers/aied-142-backfill.png",
+      "sourceSha256": "391cc3d31d9f54471e68b5154a3a4618915798fc91448fc0c4d819c4f5239985",
+      "path": "/images/newsletter/news-aied-142-387172ebcb9b28a9b77e161d6716af5b009d132477d0b72a8966c672b155e0bd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 82135
+    },
+    "news:aied-143": {
+      "sourcePath": "/images/research/covers/aied-143-backfill.png",
+      "sourceSha256": "60ca5c94b449ff9bde8f869dac5884498492fba0d831d82ac402aa80ddb8bf7b",
+      "path": "/images/newsletter/news-aied-143-d6efc20601649c7d55c87e647c4900f6362919ba1e5d2c95fb2f86693f8095af.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72572
+    },
+    "news:aied-144": {
+      "sourcePath": "/images/research/covers/aied-144-backfill.png",
+      "sourceSha256": "20d4e5c854c477e02f91931991acd5ae2c1768d50479d776aba8f871c23b322f",
+      "path": "/images/newsletter/news-aied-144-f38c5d20172bb6d2decd44a89edfb4398627443ec90b28919cc9513c48ae695a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68063
+    },
+    "news:aied-145": {
+      "sourcePath": "/images/research/covers/aied-145-backfill.png",
+      "sourceSha256": "f5c58bac1b895919c03ec10982f4d7dd4d79009b597f19d60101a8239913e42b",
+      "path": "/images/newsletter/news-aied-145-01ff388feb5a6faafa439758c010878f0539afe553201ced1e2dea4651d83d6b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72470
+    },
+    "news:aied-146": {
+      "sourcePath": "/images/research/covers/aied-146-backfill.png",
+      "sourceSha256": "b4577f64740a5df125b0cf2f6c7572cadc7356a25180128497d298775dd3c69d",
+      "path": "/images/newsletter/news-aied-146-1c842777f59b09fcb0c65d395b6131233015f1e2cf04b2485797cf70d652bf2a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66695
+    },
+    "news:aied-147": {
+      "sourcePath": "/images/research/covers/aied-147-backfill.png",
+      "sourceSha256": "c3f8fb814a90634fbd7e95427e5fe988ca4d086f65a3ada838b340c11b90b6c9",
+      "path": "/images/newsletter/news-aied-147-a940ed1740b18317d04532e851bf17ba66824f51328d2805d1708fd688b44027.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 77110
+    },
+    "news:aied-148": {
+      "sourcePath": "/images/research/covers/aied-148-backfill.png",
+      "sourceSha256": "7596cd7e0e0d05e5a7d3d17128ccaa0b1563e825870c21c260d4e69e020b54a5",
+      "path": "/images/newsletter/news-aied-148-e568e9a8ddd3f3af5ce40e5cb3cf4d75c3639419a5632717a1c718671841ff4a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59543
+    },
+    "news:aied-149": {
+      "sourcePath": "/images/research/covers/aied-149-backfill.png",
+      "sourceSha256": "23844b75479b9f7b78b5f514fd3d252e4ae4a3e64f7efa9e2162fa96abf19380",
+      "path": "/images/newsletter/news-aied-149-9601c74f730d950489a485c7d8de64d889b8f0973b9f57b0645da704bcff52ef.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61408
+    },
+    "news:aied-150": {
+      "sourcePath": "/images/research/covers/aied-150-backfill.png",
+      "sourceSha256": "bb331e47c7cd6582f2d82067b21597c611d643b39ad31540e401b15f2ab66d4a",
+      "path": "/images/newsletter/news-aied-150-bec75820614e03ace0d0270c488e570d8c6bf88cf796233a8092296290694ae3.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60811
+    },
+    "news:aied-151": {
+      "sourcePath": "/images/research/covers/aied-151-backfill.png",
+      "sourceSha256": "3aaacbbefe60dc3c13d51cc4832b99973155ec89ab64733337c4ec0aba312749",
+      "path": "/images/newsletter/news-aied-151-a3576bc8a48467b0f2c0328248e25f1afe6af237961be35313f0f6241bcc5532.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57088
+    },
+    "news:aied-152": {
+      "sourcePath": "/images/research/covers/aied-152-backfill.png",
+      "sourceSha256": "8b68fa88e805000f94c31f26b03adf163931c40ab47d2a6e8d48df57c0128040",
+      "path": "/images/newsletter/news-aied-152-95b312e78ee6360cae3e8926afc6e00593dd60892266d5d33c3eee726eaa8b5c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61750
+    },
+    "news:aied-153": {
+      "sourcePath": "/images/research/covers/aied-153-backfill.png",
+      "sourceSha256": "7694db23c7debf486aaccfc5148f4295e9f7e04fc80c60d38bb39cf8c6f4347e",
+      "path": "/images/newsletter/news-aied-153-f0e5c44ab56bb429bfc23c2b2727eee2e8bb43caed48bb3c1964e2e107ee358c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54836
+    },
+    "news:aied-154": {
+      "sourcePath": "/images/research/covers/aied-154-backfill.png",
+      "sourceSha256": "2c197480453ba38f9c275ef7627c41ef6346b7836476bfba6b929ee7be5c989e",
+      "path": "/images/newsletter/news-aied-154-60cbca26e2d9a3d0684d1f8c1951cd93f25a9e9d7db424e59c1d93b0ee539df6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63499
+    },
+    "news:aied-155": {
+      "sourcePath": "/images/research/covers/aied-155-backfill.png",
+      "sourceSha256": "769b9f315fdcf9ecff064fd979c6a6040315c85bbec3c308ff2a37b034ec125b",
+      "path": "/images/newsletter/news-aied-155-a01112906715627b2603289ddda8fe0a9fa07f782c015c5eef1d529892014e3e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70198
+    },
+    "news:aied-156": {
+      "sourcePath": "/images/research/covers/aied-156-backfill.png",
+      "sourceSha256": "aca79df1831df4c140988a7eb10216c00f7f7e16d4428034b4d0a1de5d96584b",
+      "path": "/images/newsletter/news-aied-156-f6b2e0ace9fad442960b7d0e21c12b0d2968f04026942c98b1d8869a11086092.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70860
+    },
+    "news:aied-157": {
+      "sourcePath": "/images/research/covers/aied-157-backfill.png",
+      "sourceSha256": "042775a83523d9cc56b8ceca3e66ca5487ac2a0bd2d9a29f7fc8495ea2ad48ea",
+      "path": "/images/newsletter/news-aied-157-611789a0955037f7ad6b3cb4de6e594dc158d1917a93bfbc6d09f13fc1387941.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72059
+    },
+    "news:aied-158": {
+      "sourcePath": "/images/research/covers/aied-158-backfill.png",
+      "sourceSha256": "c18d8d558de0c0e0fd3fcc752a12de6a208f04c4c164274aaf6895ce3aea137b",
+      "path": "/images/newsletter/news-aied-158-67d680ed006873f0a0ee15886423c54002b81b791d80f79808cfce67d6fac9eb.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63961
+    },
+    "news:aied-159": {
+      "sourcePath": "/images/research/covers/aied-159-backfill.png",
+      "sourceSha256": "9455e4276a89ed9f4b650ec78093c412de85c325670584923269f09a823482ea",
+      "path": "/images/newsletter/news-aied-159-be358975f94bf747ee64d6299e1844a13f7295efc7562d4ac8b74def8c6d52bd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 52668
+    },
+    "news:aied-160": {
+      "sourcePath": "/images/research/covers/aied-160-backfill.png",
+      "sourceSha256": "793f9ffb26685a165fd5d8c5ea590edff56bc98c9b8936f7a6e1f18651c37a96",
+      "path": "/images/newsletter/news-aied-160-9a066137bb6a377d635eb4e37f113dd9b414e58d987da15ea9a7fcf6e80aab54.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66224
+    },
+    "news:aied-161": {
+      "sourcePath": "/images/research/covers/aied-161-backfill.png",
+      "sourceSha256": "0221658fdcd49e4d843b62fb1c67d398f1818b98170116409578978f2b767abb",
+      "path": "/images/newsletter/news-aied-161-e36d9083305ef278947423e0bbb2c9b359911f0f714af34825f7c9709c930ac1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64738
+    },
+    "news:aied-162": {
+      "sourcePath": "/images/research/covers/aied-162-backfill.png",
+      "sourceSha256": "ddb14feb62104b506759a348006ce489418ebc82a9218aeb2105d03010e4fb2c",
+      "path": "/images/newsletter/news-aied-162-3bf49141df6407c83e50ae42285f0173a1e702067e927894f62e917afa0c8127.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62804
+    },
+    "news:aied-163": {
+      "sourcePath": "/images/research/covers/aied-163-backfill.png",
+      "sourceSha256": "adbb70961cdc677f459cf2a0c0a9423f049f5844844163580e0d09f766ad2743",
+      "path": "/images/newsletter/news-aied-163-f58bb95e35691fad996e35763c3efe4e6a64ccbed16e60c1e47a6e2f12b35cb9.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62036
+    },
+    "news:aied-164": {
+      "sourcePath": "/images/research/covers/aied-164-backfill.png",
+      "sourceSha256": "6a7ac38495322ca6c80f53a439d7565567f566ea7f6752a1273967e92f91af26",
+      "path": "/images/newsletter/news-aied-164-3584b94083aea5e7a83345773595eae25d584627603eeb20d2e34c1115acfc9f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64401
+    },
+    "news:aied-165": {
+      "sourcePath": "/images/research/covers/aied-165-backfill.png",
+      "sourceSha256": "03042255e82b05017b9cad0ff1070bf39bc8cb23d200c5bbe4586631b2d9664b",
+      "path": "/images/newsletter/news-aied-165-2c5871203fd6a4140cc461b51d0c42ac5633e5b657ce1b3690b0772492427fdd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67339
+    },
+    "news:aied-166": {
+      "sourcePath": "/images/research/covers/aied-166-backfill.png",
+      "sourceSha256": "be19dcb415bcbc8c9808a08ad156628ea4de04b8eb7b6b938b1a255aea4b9ca2",
+      "path": "/images/newsletter/news-aied-166-012a76520663e17c37cc050cdda472f49a6593f59850252be02f54651a2e332e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60511
+    },
+    "news:aied-167": {
+      "sourcePath": "/images/research/covers/aied-167-backfill.png",
+      "sourceSha256": "8be595408c386bc7fbe5299b2dcc17a70e88e71a04429b61c1732d6f1ef443e8",
+      "path": "/images/newsletter/news-aied-167-9fbf8b5074d13c4199b22ead456cc4206aee80f6d8f4ab3080a3879f3f42b426.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69615
+    },
+    "news:aied-168": {
+      "sourcePath": "/images/research/covers/aied-168-backfill.png",
+      "sourceSha256": "7507dcf7604f4762aa7b75963f9b1ab3d413d2fedfd471746aca1a177eb12373",
+      "path": "/images/newsletter/news-aied-168-edec6ebb5ae61eaa2a8940195cd80bcc735552191162494ea019627a21b26709.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63486
+    },
+    "news:aied-169": {
+      "sourcePath": "/images/research/covers/aied-169-backfill.png",
+      "sourceSha256": "4d90e0355290fb9210eb6d41eaa8086d9d9a4637df216cb807753153eb5e6532",
+      "path": "/images/newsletter/news-aied-169-b353261452be963f53d165f9ae87b2e67f1da2236d937d18df976d1b9edeba30.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68299
+    },
+    "news:aied-170": {
+      "sourcePath": "/images/research/covers/aied-170-teacher-science-planning.png",
+      "sourceSha256": "d4c45b74b9cb69997e162e27e2c50e493f4581b18db5995f2e7adcb116a2db63",
+      "path": "/images/newsletter/news-aied-170-8f90a6882d4120107564ae1f0e9b679c8f8eee6f39113b642a78d1864c037552.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 89184
+    },
+    "news:aied-171": {
+      "sourcePath": "/images/research/covers/aied-171-opus55-research-workflows.png",
+      "sourceSha256": "f6d68e20838792f4bff7dcdcb9758fb0997163792892580a600c74fc768f9c20",
+      "path": "/images/newsletter/news-aied-171-77db920920c5d98c75dff066b68981f1ce83228439b557abe711d9b1de33a741.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69196
+    },
+    "news:aied-172": {
+      "sourcePath": "/images/research/covers/aied-172-backfill.png",
+      "sourceSha256": "8291cb9b34e5b911928c58b93b27d246ec24c0b3c4efb5fbbf26d7af7ccd841a",
+      "path": "/images/newsletter/news-aied-172-396aaa31265157f997c0f474afca8ee5b2fa4ae603621f09c0af49322943bc2d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60546
+    },
+    "news:aied-173": {
+      "sourcePath": "/images/research/covers/aied-173-backfill.png",
+      "sourceSha256": "b10f5c5763f86e13d29baaf3c58850656bf76571fbb86de310b8b237f4e8cc11",
+      "path": "/images/newsletter/news-aied-173-2dc1a4440291963ec1d19b09e9839e0bc71fe4688540ab2b656e954764e42f93.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58828
+    },
+    "news:aied-174": {
+      "sourcePath": "/images/research/covers/aied-174-backfill.png",
+      "sourceSha256": "2e9c18f1c784fecabfdec2e0ed21583f99e01b782e8ce4114ae8f6e26c49d5c5",
+      "path": "/images/newsletter/news-aied-174-0080a444923644ba0276faec94e1ca9e8cbd37e080e31d53689bf3214b5f8edd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64152
+    },
+    "news:aied-175": {
+      "sourcePath": "/images/research/covers/aied-175-backfill.png",
+      "sourceSha256": "bb8d830b58aa24832f542a71544fa526a419985e79488bccf4ff38bf8121eda3",
+      "path": "/images/newsletter/news-aied-175-31f5f546a7882dac760d865f3dc8f87bb7eeb20b6c6312a1bc73891e6f8fd41a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63163
+    },
+    "news:aied-176": {
+      "sourcePath": "/images/research/covers/aied-176-backfill.png",
+      "sourceSha256": "bcde3eea60cc178e06713b8c6554407f7ad016736f8895bd44e501daed837bab",
+      "path": "/images/newsletter/news-aied-176-756bab11ddc4cf4b77fbee32e4dec60a66585590f5abfd35e87d176ac7ff5630.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58035
+    },
+    "news:aied-177": {
+      "sourcePath": "/images/research/covers/aied-177-backfill.png",
+      "sourceSha256": "4df2ce0373cc296856f33097d12601fae914d494c925e55a0774fa8af2138594",
+      "path": "/images/newsletter/news-aied-177-bc59501b01e42e156ccfa57c27f2e8c48dd4eed29e1b54cea90f6027af109955.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64629
+    },
+    "news:aied-178": {
+      "sourcePath": "/images/research/covers/aied-178-backfill.png",
+      "sourceSha256": "7d63f4fc9cfd25635590d8f27c0bc67697c19c3605db9c970c2d43d1bae7d937",
+      "path": "/images/newsletter/news-aied-178-10c53f95304ce38fc54f89683a75749a1351d03c4c750f02d07ec525368b5e0f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57444
+    },
+    "news:aied-179": {
+      "sourcePath": "/images/research/covers/aied-179-backfill.png",
+      "sourceSha256": "9cc62f6a3b0f919ab3562fde784c19b1c0b4a9f64e8c53f8d70370e30f7fd0ae",
+      "path": "/images/newsletter/news-aied-179-6d48d2f1514cb813ef276e6816aa2bd2da09550b6b73c09c0ea7b4a5cfa5414d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63432
+    },
+    "news:aied-180": {
+      "sourcePath": "/images/research/covers/aied-180-backfill.png",
+      "sourceSha256": "d8ffa864eb334f056909ed4d6669c3d67d72a7124da94cfe9e70f8861d21684a",
+      "path": "/images/newsletter/news-aied-180-ef43a3b33db3a5ea502a1d92b27b4dc4cc5dcd5de9672dc2d3730eaa209aa3b4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65171
+    },
+    "news:aied-181": {
+      "sourcePath": "/images/research/covers/aied-181-backfill.png",
+      "sourceSha256": "c1566c882421afac5aa16147091ab5b2145e212322720d95ec9c5196e5ae3571",
+      "path": "/images/newsletter/news-aied-181-2d93502af2a0b18750a7fc14929e9917729e1d25f17ad6b8f73fedfbac021f71.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62651
+    },
+    "news:aied-182": {
+      "sourcePath": "/images/research/covers/aied-182-backfill.png",
+      "sourceSha256": "9bda4ae68986f69dde7817d179505268fc385e5cac75bf0785b16d7285875133",
+      "path": "/images/newsletter/news-aied-182-68fe04abcc6292c361f3cba9b097b45969c4eac3630270213cda2ab6fc4cefc4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69016
+    },
+    "news:aied-183": {
+      "sourcePath": "/images/research/covers/aied-183-backfill.png",
+      "sourceSha256": "a1ad69756aede1b3dcbc1ff803a05ac51b73c9198286d7e0c4b8a7b6dd2cde1e",
+      "path": "/images/newsletter/news-aied-183-cd629ed93ecfeaa2e0dc83dee0fdd9a94fb065cb7cb2b71fe19d9146f9e023ce.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65626
+    },
+    "news:aied-184": {
+      "sourcePath": "/images/research/covers/aied-184-teacher-diagnostic-feedback.png",
+      "sourceSha256": "311faa18548239aeb3a61c21717518aeeed09bba3cce6d28caed3d849117e907",
+      "path": "/images/newsletter/news-aied-184-063a59fa637ef30486ccadbbc06a34656f3004f8d119f6a0de11adb3f3a45794.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63517
+    },
+    "news:aied-185": {
+      "sourcePath": "/images/research/covers/aied-185-devday-research-agents.png",
+      "sourceSha256": "a76d1765b30510f0275b8c9e76dcf5906af290de2b3d98cd56b0a3255289727c",
+      "path": "/images/newsletter/news-aied-185-bf99cd000bf700383e3e055d54e6581d0c5415c1eedf2386d000989299dbb171.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 75854
+    },
+    "news:aied-186": {
+      "sourcePath": "/images/research/covers/aied-186-backfill.png",
+      "sourceSha256": "bbe8439559bb48d7028eb0566456bf35030a60d246388a83d2e68cb320734c3d",
+      "path": "/images/newsletter/news-aied-186-c7b3e63e6cd83339b7f6e9918e403b32dc4025170105264c73649f0493e4ac6b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68664
+    },
+    "news:aied-187": {
+      "sourcePath": "/images/research/covers/aied-187-backfill.png",
+      "sourceSha256": "d95c8c508472a02e1f73eac253092d6e4583911d6f9f906906cc12600d4b92f8",
+      "path": "/images/newsletter/news-aied-187-8004035696d45ac211e3ab655f2e5b5497d98e58d43430cf0114ee33889f69d0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65839
+    },
+    "news:aied-188": {
+      "sourcePath": "/images/research/covers/aied-188-backfill.png",
+      "sourceSha256": "bec4528c54e514b6f0659b4b9ad13ff4aeb38f89d4a594131a4c13848de8a049",
+      "path": "/images/newsletter/news-aied-188-eafff6f1115e1ad9993e68ed5ab1b40b59a91d6a18521e36d1cc8fec1fed10b7.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63041
+    },
+    "news:aied-189": {
+      "sourcePath": "/images/research/covers/aied-189-backfill.png",
+      "sourceSha256": "205e47d1fbd119c0cfe5e9c46a19d500773520d16bdd72e90bb377eca1046ace",
+      "path": "/images/newsletter/news-aied-189-639776c24628550fe7dc0b00f5e1f2fba558545a0566d179a913b68ac7e18ad7.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64196
+    },
+    "news:aied-190": {
+      "sourcePath": "/images/research/covers/aied-190-backfill.png",
+      "sourceSha256": "36a9697911ab8d8567f9cad689093fa704cd406e07daed12257fe736f66a9616",
+      "path": "/images/newsletter/news-aied-190-a644d2f607a8ed4536ffdbb2be1a37fffd04a6ac0ac1328a78629f09d2c8c771.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61400
+    },
+    "news:aied-191": {
+      "sourcePath": "/images/research/covers/aied-191-backfill.png",
+      "sourceSha256": "e78680f0948f0acc8fcecd066747a246db1bbe9aa442769bc9733914f4a54ed6",
+      "path": "/images/newsletter/news-aied-191-2476f1e985cad0c6b1c0c126e47c761a9c864cf58ed7365cfd19842a4004dbfd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59799
+    },
+    "news:aied-192": {
+      "sourcePath": "/images/research/covers/aied-192-backfill.png",
+      "sourceSha256": "a46153cacbebc8b1091b5f35845c2789657c798dc3dd986b2c2afc247dac05bd",
+      "path": "/images/newsletter/news-aied-192-98a72f5499b03fe15f3ffa2e1f38f564143cc7942aa2662307b37dd88f293d45.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 66542
+    },
+    "news:aied-193": {
+      "sourcePath": "/images/research/covers/aied-193-backfill.png",
+      "sourceSha256": "528c84e0ff47d08fb43c6ecc3a2ace6c12f5e4fd584afea3a92dfd2829f2312c",
+      "path": "/images/newsletter/news-aied-193-332a41960d8a31d08ebbe28bb2821d02124963f935f1e2d63aed10ffc8ead325.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62938
+    },
+    "news:aied-194": {
+      "sourcePath": "/images/research/covers/aied-194-backfill.png",
+      "sourceSha256": "3f898f1e597e9c60758ff7779d66e27a810db1d6bf2b22e00e7e06c6d62f0b6a",
+      "path": "/images/newsletter/news-aied-194-a1b71536854085cbd4a5016c2719390dfb90ed10a686f7112fd6e627326df24a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58137
+    },
+    "news:aied-195": {
+      "sourcePath": "/images/research/covers/aied-195-backfill.png",
+      "sourceSha256": "5b751b68340cced345e264af978c845d3d637c5e49f4040ccd1de89857b440e4",
+      "path": "/images/newsletter/news-aied-195-4a4dd8a29d8fc872e8cbfc8e15ab9e48f100b4f0c24ce370f8b5cb4ce125f72b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69715
+    },
+    "news:aied-196": {
+      "sourcePath": "/images/research/covers/aied-196-backfill.png",
+      "sourceSha256": "a503f152c50333802b952866e1c126c0ec8e8bac42408c131d0af992a328beb9",
+      "path": "/images/newsletter/news-aied-196-e23ccd989e9d3d2616e629d8b6cd458532a1f10ba31c599a772e8378b1486aec.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 52960
+    },
+    "news:aied-197": {
+      "sourcePath": "/images/research/covers/aied-197-backfill.png",
+      "sourceSha256": "c7da64c2ae6991326bc25d782e86bf2f3677e2d00673c1f3b9e3a546e3181ee1",
+      "path": "/images/newsletter/news-aied-197-0b09ab8d19b1ce89b0ed39df22966eb2214beb71044c2f136fb99286c3ce7a3c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70872
+    },
+    "news:aied-198": {
+      "sourcePath": "/images/research/covers/aied-198-backfill.png",
+      "sourceSha256": "0048341e976a7853b5d6a0e0446ce486022265ef9244347ab6be024ea0dc7133",
+      "path": "/images/newsletter/news-aied-198-26e1ed5da50e8b891a2e075bacd1de547abe95366ad95a0217ab07a440d6ec1c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 55979
+    },
+    "news:aied-199": {
+      "sourcePath": "/images/research/covers/aied-199-backfill.png",
+      "sourceSha256": "4501e68fe7d707f23a7b21b5988565a43fd09ffdc74720dec010564c33add7ba",
+      "path": "/images/newsletter/news-aied-199-5edbafde2a60b38272c9ea597438984804cd67d78f4a8b7c4eb7df9b643ff23f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62467
+    },
+    "news:aied-200": {
+      "sourcePath": "/images/research/covers/aied-200-backfill.png",
+      "sourceSha256": "8b33b12e66ec381f10213c7b814e9805901f1ea8134f47998bdde18873588024",
+      "path": "/images/newsletter/news-aied-200-c1e9c1e6b103ec302683afa86670cf42d5cbeb4d8c9ce639cff812dc4d59a676.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61351
+    },
+    "news:aied-201": {
+      "sourcePath": "/images/research/covers/aied-201-backfill.png",
+      "sourceSha256": "766889f81116acbc98f8e82e736145f46768e91a7746619309d22f807279c51b",
+      "path": "/images/newsletter/news-aied-201-b1c3c1c77c3fb9f09aa5717b840db740380bb5a84884a121111738856c85d135.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62309
+    },
+    "news:aied-202": {
+      "sourcePath": "/images/research/covers/aied-202-backfill.png",
+      "sourceSha256": "0d9ad4a603ec34cfc0ed56cfb8731a0d9436fce21416e1467b8a70c727bd01c2",
+      "path": "/images/newsletter/news-aied-202-683acafe429c8190ed960dee398c8bc9e39aff03aca652e756a25c7700ec0e70.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69852
+    },
+    "news:aied-203": {
+      "sourcePath": "/images/research/covers/aied-203-backfill.png",
+      "sourceSha256": "569ccd98cf9b655e549060bdfab7d51841f8f4c173456134323300b42cc6add5",
+      "path": "/images/newsletter/news-aied-203-16dfb3ae1fa9e11ccd1ea84da2e6846df41d4fde21641dfad824af9544054927.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 55528
+    },
+    "news:aied-204": {
+      "sourcePath": "/images/research/covers/aied-204-backfill.png",
+      "sourceSha256": "c3155585656b7db817f20e72b0e638659da49badda5c3ce0de1a0e5f7e7c549d",
+      "path": "/images/newsletter/news-aied-204-b3cb42d4954a0407d6efa7d8088f24cf3dd7d493819376a52f3984f35e6dea2e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 53352
+    },
+    "news:aied-205": {
+      "sourcePath": "/images/research/covers/aied-205-backfill.png",
+      "sourceSha256": "81f8affde1787ff282d966fcf61c18d6e610467fd7482f295e694d806e83f128",
+      "path": "/images/newsletter/news-aied-205-f2b68b0fa804fea420864c07565d0fbd39f07cc4d7b55c811208badd32e979e2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 75996
+    },
+    "news:aied-206": {
+      "sourcePath": "/images/research/covers/aied-206-backfill.png",
+      "sourceSha256": "3a11745ab133c14efa80fd7bdd06c83c4bac59508fba38ed67b7a07e493ca22b",
+      "path": "/images/newsletter/news-aied-206-9498677ab266042b55609a31125ad52842193ca86667f118cb20720a9b2a51e3.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54246
+    },
+    "news:aied-207": {
+      "sourcePath": "/images/research/covers/aied-207-backfill.png",
+      "sourceSha256": "c7b290ccbc0f905cebb159bf9c1cfcfe46e79d6a97c5d6af25dd80ce6db41980",
+      "path": "/images/newsletter/news-aied-207-0b76770ac22065e06882045ef3c3b404cd0919c04ecefcda0ca8fbb0915f5062.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57229
+    },
+    "news:aied-208": {
+      "sourcePath": "/images/research/covers/aied-208-backfill.png",
+      "sourceSha256": "09838061d66da9b9e2c1c3f243d9d83e3c9e465b6d0742cbf29b70cb6cd959db",
+      "path": "/images/newsletter/news-aied-208-3e1f578a1e9f7204d3058d3c38bcdf700ca268f0f135f88e84a18db9afd2c8b0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 55651
+    },
+    "news:aied-209": {
+      "sourcePath": "/images/research/covers/aied-209-backfill.png",
+      "sourceSha256": "5463fbe0d1040a41825099e5acbfd6d54e199e0e9b610138f991e1cab1813f8c",
+      "path": "/images/newsletter/news-aied-209-3e83d6215e82dd2935866acc5ff0ebb78c20ba9ef14806530d3c6dad2bf1fa6c.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 67334
+    },
+    "news:aied-210": {
+      "sourcePath": "/images/research/covers/aied-210-backfill.png",
+      "sourceSha256": "ee8e1ee7547c9da2a21d515bca757d4084ba7107b481b148a7c5aab21acde072",
+      "path": "/images/newsletter/news-aied-210-ac69c02bfcab40b08d2ab29520150735e594c7cbe341f9ad139e71f7878b8bb1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58257
+    },
+    "news:aied-211": {
+      "sourcePath": "/images/research/covers/aied-211-backfill.png",
+      "sourceSha256": "954e0f33b0f095affd7a130544e21bc8e3558c76beff13e1e1133566a842d18a",
+      "path": "/images/newsletter/news-aied-211-4dbf178e1359e632bc603bf4c8c1b67947de16dd4ad4fc11e3ca1a593f674f5a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60800
+    },
+    "news:aied-212": {
+      "sourcePath": "/images/research/covers/aied-212-backfill.png",
+      "sourceSha256": "d3ff8b21ded636e7a0b889517489aaafccd55389c55da1620fc802bd3d63a57c",
+      "path": "/images/newsletter/news-aied-212-afe4a2e7b9bb1eb87466344375326e971264b7c02f0469f001b5e6991478861f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60340
+    },
+    "news:aied-213": {
+      "sourcePath": "/images/research/covers/aied-213-backfill.png",
+      "sourceSha256": "087fd982d0fc2c0fa7fd088cec8501841ef4e77ae575812b185f58c569743864",
+      "path": "/images/newsletter/news-aied-213-1927a16e7bbecdb4eb4774e402260a870beed12ecbb3f04e00657ce90e28ca92.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 54553
+    },
+    "news:aied-214": {
+      "sourcePath": "/images/research/covers/aied-214-backfill.png",
+      "sourceSha256": "8c0e4e29a15ded5b543d1d578aa6678e6763416dfefb74d3aee5f9cb1e2ba1c2",
+      "path": "/images/newsletter/news-aied-214-6c7b9fd5a65cd0d27bfa8bcd169e750afdbd17cf0dd07c2a8b16779432cd971b.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 76595
+    },
+    "news:aied-215": {
+      "sourcePath": "/images/research/covers/aied-215-backfill.png",
+      "sourceSha256": "32544aba7c966b4bb5adee2674277c7fa993e0560ecfd1a98b19eb7579fc8ebf",
+      "path": "/images/newsletter/news-aied-215-c69819f5514dcb38a15638baa1ecb812c09346162b5ea25e8f5b565e874cc19f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 72955
+    },
+    "news:aied-216": {
+      "sourcePath": "/images/research/covers/aied-216-backfill.png",
+      "sourceSha256": "3effb43330b73184b1572412de7b55d5ebd5ac408896bb5986e80ce36e3c6bd5",
+      "path": "/images/newsletter/news-aied-216-430846840508402cb680a4984191bb420afdfe658f5601b8e9640a7469d58898.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 57482
+    },
+    "news:aied-217": {
+      "sourcePath": "/images/research/covers/aied-217-backfill.png",
+      "sourceSha256": "6722da1d096f3b60fbaafaa71baedcd83e005af23a8a02cdb3d7fe2a9cd9cb34",
+      "path": "/images/newsletter/news-aied-217-6772737b7943f30de3414a488fd2776b54759a4c910c6b7c1e23239639e058f5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 82785
+    },
+    "news:aied-218": {
+      "sourcePath": "/images/research/covers/aied-218-backfill.png",
+      "sourceSha256": "06491098c432232c7a15631d09e8bf6fbdc1098e7f37401fe08fa0b4eafed041",
+      "path": "/images/newsletter/news-aied-218-9f22e43b527b7b7b83b80bb178c27401abc152b33befe4aebea3b1233eaebadd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74643
+    },
+    "news:aied-219": {
+      "sourcePath": "/images/research/covers/aied-219-backfill.png",
+      "sourceSha256": "023dffa753fef88122bee1a9230334ff2382fda6f8856319f4a609a9adf8ff9d",
+      "path": "/images/newsletter/news-aied-219-1c59326b5e68c2f341000770fa144854300e275bc91d783d72ba730e9113d609.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71623
+    },
+    "news:aied-220": {
+      "sourcePath": "/images/research/covers/aied-220-backfill.png",
+      "sourceSha256": "7ddfa9159ab4abc90b9ba5376027db214d899e409ddac36e99206e8be185f302",
+      "path": "/images/newsletter/news-aied-220-e9264b0174d8f1b8af669f6a4c414fe52119ac6a7af69755803649caab649605.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74499
+    },
+    "news:aied-221": {
+      "sourcePath": "/images/research/covers/aied-221-backfill.png",
+      "sourceSha256": "5e3801843ed5e78e7223181e21cc075f8206c875214c9796fa804330f3aa8835",
+      "path": "/images/newsletter/news-aied-221-3c1ed54d76b92a49f61e1f61ffb003e66557f60aba813e6fb3893a05a64cb580.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68408
+    },
+    "news:aied-222": {
+      "sourcePath": "/images/research/covers/aied-222-backfill.png",
+      "sourceSha256": "fbc718426af945ecd8270367a884a73eb9c221bdc9be9ee172ecf0541bd11b28",
+      "path": "/images/newsletter/news-aied-222-a8b0c4ee512ec1fe899a83b666c7904af95a1b9c0a2bff9ee483dd2d5e3a54fd.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 95140
+    },
+    "news:aied-223": {
+      "sourcePath": "/images/research/covers/aied-223-backfill.png",
+      "sourceSha256": "7e213e04febecf4092df394eadcd641ed6dcf9f7a061ffcc7e2d27e354f6be2b",
+      "path": "/images/newsletter/news-aied-223-738225a6bfed3ddf15da5bbf868a657eecd2d8290ebc223e444a84fe65d409df.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74183
+    },
+    "news:aied-224": {
+      "sourcePath": "/images/research/covers/aied-224-backfill.png",
+      "sourceSha256": "50f79b6df21eb701f2853c2d57eebcdf0b1cd32c16ed486629fed92686dce018",
+      "path": "/images/newsletter/news-aied-224-604ac609e027fa01a3d16886fc162f7ec7bcba56af5640204737c610c13b9910.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69824
+    },
+    "news:aied-225": {
+      "sourcePath": "/images/research/covers/aied-225-backfill.png",
+      "sourceSha256": "e3d97860c50882ff448dc2218d7ac3961f239a74b22a01f59e52c815174f4a7c",
+      "path": "/images/newsletter/news-aied-225-d39f0b263802e30c74e8d6ecfec37c0ef29b79527e23482e5b4a74955a9601fc.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 75755
+    },
+    "news:aied-226": {
+      "sourcePath": "/images/research/covers/aied-226-backfill.png",
+      "sourceSha256": "8b12f05757ad42688e442ccc6aa97656019040a83617db67262a17b4ecae6aad",
+      "path": "/images/newsletter/news-aied-226-56a71c35edb807b1eb72769b0de5bc59b0d9eaaa8f5b5f366a2484d15c4034a6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71993
+    },
+    "news:aied-227": {
+      "sourcePath": "/images/research/covers/aied-227-backfill.png",
+      "sourceSha256": "f4c3ba8a587192f43785344004cf9216a97bba95a5fabcc30ab6eb2b6e959a7f",
+      "path": "/images/newsletter/news-aied-227-019efbbb22cfee96d92ae873f484d032ccad71528e651a0d00c6ae159ade292d.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74707
+    },
+    "news:aied-228": {
+      "sourcePath": "/images/research/covers/aied-228-october.webp",
+      "sourceSha256": "8091e279066027d74d344dc4609505fe6eb8d27119ad6b884fd419c4be9658da",
+      "path": "/images/newsletter/news-aied-228-f7898efc75f78f98c2ca2fe93fad9c1005f72d4551865a66d94d2cf32f08b755.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 49938
+    },
+    "news:aied-229": {
+      "sourcePath": "/images/research/covers/aied-229-october.webp",
+      "sourceSha256": "ffe00901d909c4d4c3ea7d1337d0975e6bcea0156e3ffce74e03a1a23d3cd795",
+      "path": "/images/newsletter/news-aied-229-3dbe2c2515058484359e343d610157d626bd6135a7043e86abea519418476f01.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 74670
+    },
+    "news:aied-230": {
+      "sourcePath": "/images/research/covers/aied-230-october.webp",
+      "sourceSha256": "6a3a0f647c7fb4d6adf29fa2c4bec979056ee63c560e6559e8827c87a6277057",
+      "path": "/images/newsletter/news-aied-230-c31577f7acd927e99341060829ae07027204931d7adf1a031ca2847d4f8c6fd4.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65917
+    },
+    "news:aied-231": {
+      "sourcePath": "/images/research/covers/aied-231-october.webp",
+      "sourceSha256": "f1e7781acb6b3fd2c517bb2672622ac0b2349523e7a73116c264d71dcac881aa",
+      "path": "/images/newsletter/news-aied-231-1ada27794ed7d34c8719bf37576d6fdc1f358faf4f1f61f5199390d378df7736.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65237
+    },
+    "news:aied-232": {
+      "sourcePath": "/images/research/covers/aied-232-october.webp",
+      "sourceSha256": "665679b809c822d4bc959a90a03112e1efc3baac1bde0115199fd68a35a4ac94",
+      "path": "/images/newsletter/news-aied-232-146c27acd6d717f983385c2db6a4b46e7e61fa313694f86a588adf655865aac1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71382
+    },
+    "news:aied-233": {
+      "sourcePath": "/images/research/covers/aied-233-october.webp",
+      "sourceSha256": "b1c18f2d24a08e18d9e65a52bf0cc8171006821e011ecfe2300e15cb399013bf",
+      "path": "/images/newsletter/news-aied-233-5271af84ed722f90b4ca48a58c97f7e7c7a8bbcdce595c9d2d6018f019b062ef.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 71578
+    },
+    "news:aied-234": {
+      "sourcePath": "/images/research/covers/aied-234-historical.webp",
+      "sourceSha256": "2bd58abf222e0f1de8173587a7912a2bb3450bbf1528934c7126acce801d246a",
+      "path": "/images/newsletter/news-aied-234-09a0c1c9af992ae4670993b70bed8dd0007c03decd627dcb6425ee64ddc78945.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 85031
+    },
+    "news:aied-235": {
+      "sourcePath": "/images/research/covers/aied-235-historical.webp",
+      "sourceSha256": "2704e1c1b9a0f09fae02147be53bcd9eeff6bd08973616b882586aa6bed0a219",
+      "path": "/images/newsletter/news-aied-235-ea8e06f8e3835a6237581820e047309cd339ee7ca1743a7161f92cd542dfc4e2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 53742
+    },
+    "news:aied-236": {
+      "sourcePath": "/images/research/covers/aied-236-historical.webp",
+      "sourceSha256": "557ad68efa20dd348dcf34f798324b4a18f71ac9e7d98069645054b8b0cfb5a3",
+      "path": "/images/newsletter/news-aied-236-7f8d5899f2e27ebc8a9735b13ad906bc549e374d1048d9bccb9eeafd93975996.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68913
+    },
+    "news:aied-237": {
+      "sourcePath": "/images/research/covers/aied-237-october.webp",
+      "sourceSha256": "e320653ba94cbba88a0cace3a0b19a324c599d2c08a2a5a25b86610277d59e56",
+      "path": "/images/newsletter/news-aied-237-86340f4643d4bc95087bc1fd390646a8793d223ae4711c52b859791363f057e5.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 59561
+    },
+    "news:aied-238": {
+      "sourcePath": "/images/research/covers/aied-238-october.webp",
+      "sourceSha256": "bc94a74a53b855d899f079276aee3a617f1ee6bb89b567200c36582874404d2b",
+      "path": "/images/newsletter/news-aied-238-7521a34832251b5c0d3827c897d14608e8a9f6053e5e3d26796c8247d85c7ba6.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 63704
+    },
+    "news:aied-239": {
+      "sourcePath": "/images/research/covers/aied-239-october.webp",
+      "sourceSha256": "81f836bdb28c91122b8a2460e2a3a7e822afa6be5b9dd3af5c1816ecc01cb30a",
+      "path": "/images/newsletter/news-aied-239-e8e663da13dea588c0037fad6090a7d61d45078d5b1224b5e91d36403fd254f0.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 60785
+    },
+    "news:aied-240": {
+      "sourcePath": "/images/research/covers/aied-240-october.webp",
+      "sourceSha256": "aebbd0ab07e5de9434d6ed57575ad309f6bc80cb01670cf6bc3dbe5d9527a4a0",
+      "path": "/images/newsletter/news-aied-240-c52c1f8f7a17f845669e94cefaa1d79c249a60352f2ad1b6d3c38dad3344d0be.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61444
+    },
+    "news:aied-241": {
+      "sourcePath": "/images/research/covers/aied-241-october.webp",
+      "sourceSha256": "ea8a73ece527872edb488eae1b788c7b65a350f52633095ed621c7896705a1ad",
+      "path": "/images/newsletter/news-aied-241-545e1b19f6370330a11816ca794ef245ea312b1ca12e2e8439f1f9ea3b390cd1.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 62485
+    },
+    "news:aied-242": {
+      "sourcePath": "/images/research/covers/aied-242-october.webp",
+      "sourceSha256": "935e774c9c8daa3c2508e7a868562fa6615c3c2d8dea1a9b15e6e1f3c48b691c",
+      "path": "/images/newsletter/news-aied-242-ca87f0de2f91b78845b5eb9ab107e75bfdb56c9731158702ddae9f24d41c56c7.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 78439
+    }
+  }
+}

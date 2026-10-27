@@ -4,6 +4,7 @@ import { buildAcademyCatalog, loadNewsletterFeed } from "@/lib/newsletter/conten
 import { academyCurriculumV1 } from "@/lib/academy-curriculum";
 import { getAcademyLessons } from "@/lib/academy-data";
 import { locales } from "@/lib/i18n";
+import { reviewedResearchPapers } from "@/lib/research-reviewed-data";
 
 test("Academy catalog contains only complete published curriculum pairs with stable keys", () => {
   const all = getAcademyLessons("en");
@@ -36,4 +37,42 @@ test("a database source failure fails the news run instead of silently declaring
   await assert.rejects(loadNewsletterFeed("news", { databasePapers: async () => { throw new Error("source_unavailable"); } }), /source_unavailable/);
   const academy = await loadNewsletterFeed("academy", { databasePapers: async () => { throw new Error("must_not_call"); } });
   assert.ok(academy.length > 0, "Academy does not depend on the News database source");
+});
+
+
+test("every static newsletter item keeps its content image across locale variants", async () => {
+  const news = await loadNewsletterFeed("news", { databasePapers: async () => [] });
+  const academy = buildAcademyCatalog();
+  for (const entry of [...news, ...academy]) {
+    const canonical = entry.items.en!;
+    for (const locale of locales) for (const [index, item] of entry.items[locale]!.entries()) {
+      assert.ok(item.image, `missing image for ${entry.channel}:${item.id}`);
+      assert.match(item.image.path, /^\/images\/newsletter\/[a-z0-9_-]+-[a-f0-9]{64}\.jpg$/);
+      assert.equal(item.image.path, canonical[index].image!.path);
+      assert.ok(item.image.alt.length > 0);
+    }
+  }
+});
+
+test("a database article with the same slug but a changed image never borrows the static image", async (context) => {
+  const warnings = context.mock.method(console, "warn", () => {});
+  const paper = { ...reviewedResearchPapers[0], image: "/images/research/covers/new-unprepared-image.jpg" };
+  const feed = await loadNewsletterFeed("news", { databasePapers: async () => [{ paper, contentLocale: "en" }] });
+  const item = feed.find((entry) => entry.key === paper.slug)!.items.en![0];
+  assert.equal(item.title, paper.title);
+  assert.equal(item.image, undefined);
+  assert.equal(warnings.mock.callCount(), 1);
+  assert.deepEqual(warnings.mock.calls[0].arguments, ["newsletter_images_omitted", { channel: "news", missing: 0, sourceMismatch: locales.length, invalid: 0 }]);
+  assert.equal(JSON.stringify(warnings.mock.calls[0].arguments).includes(paper.image), false);
+});
+
+test("a database article can use a stable contentId only when its prepared source matches", async (context) => {
+  context.mock.method(console, "warn", () => {});
+  const original = reviewedResearchPapers[0];
+  const paper = { ...original, id: "database-row-uuid", contentId: original.id };
+  const feed = await loadNewsletterFeed("news", { databasePapers: async () => [{ paper, contentLocale: "en" }] });
+  assert.ok(feed.find((entry) => entry.key === paper.slug)!.items.en![0].image);
+  const changedIdentity = { ...original, id: "different-database-row" };
+  const changed = await loadNewsletterFeed("news", { databasePapers: async () => [{ paper: changedIdentity, contentLocale: "en" }] });
+  assert.equal(changed.find((entry) => entry.key === paper.slug)!.items.en![0].image, undefined);
 });

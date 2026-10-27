@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import { localeMeta, locales } from "@/lib/i18n";
+import type { NewsletterEmailItem } from "@/lib/newsletter/types";
 
 async function templates() {
   try {
@@ -26,6 +27,84 @@ const item = {
   contentLocale: "en" as const,
   coreIdeas: ["A supplied core idea.", "Another supplied core idea."],
 };
+
+const illustratedItem = {
+  ...item,
+  image: {
+    path: "/images/newsletter/news-lesson-1-0123456789abcdef.jpg",
+    alt: 'A teacher & learners discuss "AI" <together>',
+    width: 720,
+    height: 450,
+  },
+};
+
+test("illustrated digests use one linked static JPEG per item with safe alt text and proportional dimensions", async () => {
+  const { renderNewsletterDigest } = await templates();
+  for (const channel of ["news", "academy"] as const) {
+    const email = renderNewsletterDigest({ channel, locale: "en", items: [illustratedItem],
+      siteUrl: "https://preview.example.test", unsubscribeUrl: "https://preview.example.test/unsubscribe" });
+    assert.equal((email.html.match(/<img\b/g) ?? []).length, 1);
+    assert.ok(email.html.includes('src="https://preview.example.test/images/newsletter/news-lesson-1-0123456789abcdef.jpg"'));
+    assert.ok(email.html.includes('alt="A teacher &amp; learners discuss &quot;AI&quot; &lt;together&gt;"'));
+    assert.match(email.html, /width="624" height="390"/);
+    assert.match(email.html, /height:auto/);
+    assert.match(email.html, new RegExp(`<a[^>]*href="https://preview.example.test/en/${channel}/learning-foundations"[^>]*>\\s*<img`));
+    assert.ok(email.html.includes(item.title) && email.html.includes(item.summary));
+    assert.ok(email.text.includes(item.title) && email.text.includes(item.summary));
+    assert.doesNotMatch(email.text, /<img|newsletter\/.*\.jpg/);
+    assert.doesNotMatch(email.html, /data:image|cid:|\/_next\/image/);
+  }
+});
+
+test("digest subjects and headings have one channel emoji and a localized issue count", async () => {
+  const { renderNewsletterDigest } = await templates();
+  for (const locale of locales) for (const channel of ["news", "academy"] as const) {
+    const emoji = channel === "news" ? "📰" : "🎓";
+    const email = renderNewsletterDigest({ channel, locale, items: [illustratedItem, illustratedItem], review: true,
+      siteUrl: "https://example.test", unsubscribeUrl: "https://example.test/unsubscribe" });
+    assert.equal(email.subject.split(emoji).length - 1, 1);
+    assert.match(email.html, new RegExp(`<h1[^>]*>[\\s\\S]*?${emoji}[\\s\\S]*?</h1>`));
+    assert.match(email.html, /data-newsletter-count="2"/);
+    assert.ok(email.text.includes("2"));
+    assert.doesNotMatch(email.html, /undefined|\[object Object\]/);
+  }
+});
+
+test("unsafe or malformed image data degrades to the complete text card", async () => {
+  const { renderNewsletterDigest } = await templates();
+  const invalidImages = [
+    { ...illustratedItem.image, path: "https://evil.example/image.jpg" },
+    { ...illustratedItem.image, path: "//evil.example/image.jpg" },
+    { ...illustratedItem.image, path: "javascript:alert(1)" },
+    { ...illustratedItem.image, path: "/images/newsletter/../private.jpg" },
+    { ...illustratedItem.image, path: "/images/newsletter/a.jpg?token=secret" },
+    { ...illustratedItem.image, path: '/images/newsletter/a.jpg" onerror="alert(1)' },
+    { ...illustratedItem.image, width: 0 },
+    { ...illustratedItem.image, height: Infinity },
+    { ...illustratedItem.image, width: 721 },
+    { ...illustratedItem.image, alt: null },
+  ];
+  for (const image of invalidImages) {
+    const email = renderNewsletterDigest({ channel: "news", locale: "en",
+      items: [{ ...item, image } as NewsletterEmailItem], siteUrl: "https://example.test",
+      unsubscribeUrl: "https://example.test/unsubscribe" });
+    assert.doesNotMatch(email.html, /<img\b|evil\.example|onerror=/);
+    assert.ok(email.html.includes(item.title) && email.html.includes(item.summary));
+    assert.ok(email.html.includes("https://example.test/en/news/learning-foundations"));
+  }
+});
+
+test("five illustrated long-title articles stay below the HTML budget and confirmation mail remains image-free", async () => {
+  const { renderNewsletterDigest, renderNewsletterConfirmation } = await templates();
+  const email = renderNewsletterDigest({ channel: "news", locale: "zh-hans",
+    items: Array.from({ length: 5 }, (_, index) => ({ ...illustratedItem, id: `item-${index}`,
+      title: "让教师和学生理解人工智能的能力与边界：".repeat(8) })),
+    siteUrl: "https://example.test", unsubscribeUrl: "https://example.test/unsubscribe" });
+  assert.equal((email.html.match(/<img\b/g) ?? []).length, 5);
+  assert.ok(Buffer.byteLength(email.html, "utf8") < 80_000);
+  const confirmation = renderNewsletterConfirmation({ channel: "news", locale: "en", confirmUrl: "https://example.test/confirm" });
+  assert.doesNotMatch(confirmation.html + confirmation.subject, /<img\b|📰|🎓|data-newsletter-count/);
+});
 
 test("digest links use the supplied site, selected locale, channel, and item slug", async () => {
   const { renderNewsletterDigest } = await templates();

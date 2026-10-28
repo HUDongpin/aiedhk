@@ -5,11 +5,11 @@ import { GET as worker } from "@/app/api/cron/newsletter/route";
 import { GET as legacy } from "@/app/api/cron/research-newsletter/route";
 import { dueNewsletterChannels } from "@/lib/newsletter/policy";
 
-test("one minute newsletter worker replaces per-language schedules while ingestion is unchanged", () => {
+test("one multilingual newsletter worker retains channel times while ingestion is unchanged", () => {
   const config = JSON.parse(readFileSync("vercel.json", "utf8")) as { crons: Array<{ path: string; schedule: string }> };
-  assert.deepEqual(config.crons, [
+  assert.ok(config.crons.some(({ path }) => path === "/api/cron/newsletter"));
+  assert.deepEqual(config.crons.filter(({ path }) => path !== "/api/cron/newsletter"), [
     { path: "/api/cron/research-ingest", schedule: "0 1 * * 1" },
-    { path: "/api/cron/newsletter", schedule: "* * * * *" },
   ]);
   assert.deepEqual(dueNewsletterChannels(new Date("2026-10-23T01:19:00Z")), []);
   assert.deepEqual(dueNewsletterChannels(new Date("2026-10-23T01:20:00Z")), ["news"]);

@@ -5,12 +5,7 @@ import { reviewedResearchPapers } from "@/lib/research-reviewed-data";
 import { getReviewedLocalization } from "@/lib/research-reviewed-localizations";
 import { RESEARCH_NEWS_CACHE_TAG, RESEARCH_NEWS_REVALIDATE_SECONDS } from "@/lib/research-cache";
 import { filterResearchPaperList } from "@/lib/research-filter";
-import {
-  getPublishedResearchPaperBySlugFromDatabase,
-  getPublishedResearchPapersFromDatabase,
-  getPublishedResearchYearsFromDatabase,
-  getRelatedPublishedPapersFromDatabase,
-} from "@/lib/research-pipeline/store";
+import { getPublishedResearchPapersFromDatabase } from "@/lib/research-pipeline/store";
 
 export { RESEARCH_NEWS_CACHE_TAG, RESEARCH_NEWS_REVALIDATE_SECONDS } from "@/lib/research-cache";
 
@@ -122,58 +117,49 @@ const getCachedDatabasePapers = unstable_cache(
   }
 );
 
-const getCachedDatabasePaperBySlug = unstable_cache(
-  async (slug: string, locale: string) => getPublishedResearchPaperBySlugFromDatabase(slug, locale),
-  ["published-research-paper-by-slug"],
-  {
-    revalidate: RESEARCH_NEWS_REVALIDATE_SECONDS,
-    tags: [RESEARCH_NEWS_CACHE_TAG],
-  }
-);
-
-const getCachedDatabaseRelatedPapers = unstable_cache(
-  async (paper: ResearchPaper, locale: string, limit: number) => getRelatedPublishedPapersFromDatabase(paper, locale, limit),
-  ["related-published-research-papers"],
-  {
-    revalidate: RESEARCH_NEWS_REVALIDATE_SECONDS,
-    tags: [RESEARCH_NEWS_CACHE_TAG],
-  }
-);
-
-const getCachedDatabaseYears = unstable_cache(
-  async () => getPublishedResearchYearsFromDatabase(),
-  ["published-research-years"],
-  {
-    revalidate: RESEARCH_NEWS_REVALIDATE_SECONDS,
-    tags: [RESEARCH_NEWS_CACHE_TAG],
-  }
-);
-
-export async function getPublishedResearchPapers(locale: string = "en") {
-  const databasePapers = await getCachedDatabasePapers(locale);
-  const reviewedPapers = getResearchPapers(locale);
-  return databasePapers === null ? reviewedPapers : mergeResearchPapers(databasePapers, reviewedPapers);
+// Every public lookup shares one published snapshot per locale. A new article
+// URL (including a nonexistent one) must not open a separate database cache key.
+export function createPublicResearchReader(loadSnapshot: (locale: string) => Promise<ResearchPaper[] | null>) {
+  return {
+    async list(locale: string = "en") {
+      const normalized = normalizeLocale(locale);
+      const databasePapers = await loadSnapshot(normalized);
+      const reviewedPapers = getResearchPapers(normalized);
+      return databasePapers === null ? reviewedPapers : mergeResearchPapers(databasePapers, reviewedPapers);
+    },
+    async bySlug(slug: string, locale: string = "en") {
+      const normalized = normalizeLocale(locale);
+      const databasePapers = await loadSnapshot(normalized);
+      const databasePaper = databasePapers?.find((paper) => paper.slug === slug);
+      return databasePaper ? withReviewedStaticEnhancements(databasePaper) : getResearchPaperBySlug(slug, normalized);
+    },
+    async related(paper: ResearchPaper, locale: string = "en", limit = 3) {
+      const normalized = normalizeLocale(locale);
+      const databasePapers = await loadSnapshot(normalized);
+      const reviewedPapers = getRelatedPapers(paper, normalized, limit);
+      if (databasePapers === null) return reviewedPapers;
+      const tagSet = new Set(paper.tags.map((tag) => tag.toLowerCase()));
+      const related = databasePapers
+        .filter((candidate) => candidate.id !== paper.id)
+        .map((candidate) => ({ candidate, score: candidate.tags.reduce((total, tag) => total + (tagSet.has(tag.toLowerCase()) ? 1 : 0), 0) }))
+        .sort((a, b) => b.score - a.score || b.candidate.year - a.candidate.year)
+        .slice(0, limit)
+        .map(({ candidate }) => candidate);
+      return mergeResearchPapers(related, reviewedPapers).slice(0, limit);
+    },
+    async years() {
+      const databasePapers = await loadSnapshot("en");
+      return Array.from(new Set([...(databasePapers ?? []).map((paper) => paper.year), ...YEARS])).sort((a, b) => b - a);
+    },
+  };
 }
 
-export async function getPublishedResearchPaperBySlug(slug: string, locale: string = "en") {
-  const databasePaper = await getCachedDatabasePaperBySlug(slug, locale);
-  if (databasePaper) return withReviewedStaticEnhancements(databasePaper);
-  return getResearchPaperBySlug(slug, locale);
-}
-
-export async function getRelatedPublishedPapers(paper: ResearchPaper, locale: string = "en", limit = 3) {
-  const databasePapers = await getCachedDatabaseRelatedPapers(paper, locale, limit);
-  const reviewedPapers = getRelatedPapers(paper, locale, limit);
-  if (databasePapers === null) return reviewedPapers;
-  return mergeResearchPapers(databasePapers, reviewedPapers).slice(0, limit);
-}
+const publicResearch = createPublicResearchReader(getCachedDatabasePapers);
+export const getPublishedResearchPapers = publicResearch.list;
+export const getPublishedResearchPaperBySlug = publicResearch.bySlug;
+export const getRelatedPublishedPapers = publicResearch.related;
+export const getResearchYears = publicResearch.years;
 
 export async function filterPublishedResearchPapers(options: ResearchFilterOptions = {}, locale: string = "en") {
   return filterResearchPaperList(await getPublishedResearchPapers(locale), options);
-}
-
-export async function getResearchYears() {
-  const years = await getCachedDatabaseYears();
-  if (!years || years.length === 0) return YEARS;
-  return Array.from(new Set([...years, ...YEARS])).sort((a, b) => b - a);
 }

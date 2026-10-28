@@ -25,7 +25,7 @@ async function enroll() {
     values (${contact.id},${channel},'en','active',${earlier},'test','confirmed',${`token-${channel}`})`;
 }
 
-integration("one minute worker creates due channels once, handles all locales and deduplicates subsequent invocations", async () => {
+integration("scheduled worker creates due channels once, handles all locales and deduplicates subsequent invocations", async () => {
   let sent = 0;
   const runtime = createNewsletterRuntime({ sql: db.sql, config, provider: { async send(input) { sent++; return { ok: true, id: `provider-${input.id}` }; } } });
   await runtime.planner.initializeBaseline([], earlier);
@@ -66,7 +66,7 @@ integration("dry-run leaves catalog, batch, lease and delivery tables untouched"
   assert.deepEqual(await db.sql`select (select count(*) from newsletter_runs)::int as runs,(select count(*) from newsletter_deliveries)::int as deliveries,(select count(*) from newsletter_worker_lease)::int as leases,(select count(*) from newsletter_content)::int as content`, beforeCounts);
 });
 
-integration("later ticks refresh availability before retrying a frozen daily snapshot", async () => {
+integration("hourly recovery refreshes availability before retrying a frozen daily snapshot", async () => {
   let sent = 0;
   let withdrawn = false;
   const runtime = createNewsletterRuntime({ sql: db.sql, config, provider: { async send(input) {
@@ -79,7 +79,7 @@ integration("later ticks refresh availability before retrying a frozen daily sna
   await executeNewsletterTick(runtime, options);
   assert.equal(sent, 1);
   withdrawn = true;
-  await executeNewsletterTick(runtime, { ...options, now: new Date(now.getTime()+70_000) });
+  await executeNewsletterTick(runtime, { ...options, now: new Date(now.getTime()+3600_000) });
   assert.equal(sent, 1);
   assert.equal((await db.sql`select status from newsletter_deliveries where kind='digest'`)[0].status, "cancelled");
   assert.equal((await db.sql`select available from newsletter_content`)[0].available, false);

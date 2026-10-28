@@ -83,7 +83,11 @@ Baseline initialization must precede delivery. It marks already published conten
 
 ## Scheduling and delivery
 
-`/api/cron/newsletter` runs every minute. It starts the daily News run at or after **09:20 Hong Kong time**, and Academy at or after **09:30 Hong Kong time**, then continues pending planning and retry work within a bounded worker budget. The compatibility route `/api/cron/research-newsletter` uses the same worker restricted to News. Research ingestion remains the separate Monday 09:00 HKT cron; newsletter work does not change publication automation.
+`/api/cron/newsletter` runs at **09:20 and 09:30 Hong Kong time**, plus **once every hour on the hour** for recovery (26 scheduled invocations per day). The Vercel schedules are `20,30 1 * * *` and `0 * * * *`, in UTC. News starts at or after 09:20 and Academy at or after 09:30. The hourly tick recovers pending planning, failed requests and queued deliveries within the existing bounded worker budget. It replaces the previous 1,440 daily polls so Neon can become idle between invocations.
+
+Automatic recovery can now wait up to approximately one additional hour after a delivery becomes eligible. New signup confirmation mail still attempts delivery immediately in the signup request. Existing consent, frozen batches, queue IDs, retries and provider idempotency boundaries are unchanged. Do not revert to frequent polling simply because a successful tick reports zero queued or accepted messages. The compatibility route `/api/cron/research-newsletter` uses the same worker restricted to News. Research ingestion remains the separate Monday 09:00 HKT cron; newsletter work does not change publication automation.
+
+Public News list/detail pages and database reads cache for six hours to reduce background database traffic. Administrative edits, publication and withdrawal still expire the shared tag and page paths immediately. Direct database edits outside that administrative route may take up to six hours to appear publicly. Newsletter planning and retry availability checks use their uncached sources and do not inherit this public-page delay.
 
 News selects only published, non-baseline items first available after the subscriber's activation and not already accepted or reserved by a held delivery. Each email contains at most five articles. Older eligible backlog is sent first; overflow remains eligible for the next day's batch. If there is no eligible new content, no News email is queued.
 

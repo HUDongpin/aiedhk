@@ -12,7 +12,8 @@ interface ResearchNewsPageProps {
   params: Promise<{ locale: string }>;
 }
 
-export const revalidate = 300;
+// Keep this literal in sync with RESEARCH_NEWS_REVALIDATE_SECONDS for Next's static analysis.
+export const revalidate = 21600;
 
 export default async function ResearchNewsPage({ params }: ResearchNewsPageProps) {
   const { locale } = await params;

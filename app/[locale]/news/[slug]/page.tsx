@@ -17,7 +17,8 @@ interface ResearchDetailPageProps {
   params: Promise<{ locale: string; slug: string }>;
 }
 
-export const revalidate = 300;
+// Keep this literal in sync with RESEARCH_NEWS_REVALIDATE_SECONDS for Next's static analysis.
+export const revalidate = 21600;
 
 export function generateStaticParams() {
   return locales.flatMap((locale) => researchPapers.map((paper) => ({ locale, slug: paper.slug })));

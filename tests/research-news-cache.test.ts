@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import test from "node:test";
+import { RESEARCH_NEWS_REVALIDATE_SECONDS } from "@/lib/research-cache";
 
 function source(path: string) {
   return readFileSync(join(process.cwd(), path), "utf8");
@@ -11,9 +12,17 @@ test("public research news list route is cacheable instead of force-dynamic", ()
   const pageSource = source("app/[locale]/news/page.tsx");
 
   assert.doesNotMatch(pageSource, /export\s+const\s+dynamic\s*=\s*["']force-dynamic["']/);
-  assert.match(pageSource, /export\s+const\s+revalidate\s*=\s*300/);
+  assert.match(pageSource, /export\s+const\s+revalidate\s*=\s*21600/);
   assert.doesNotMatch(pageSource, /\bsearchParams\b/);
   assert.match(pageSource, /ResearchNewsExplorer/);
+});
+
+test("public news page and database caches leave six hours between background refreshes", () => {
+  assert.equal(RESEARCH_NEWS_REVALIDATE_SECONDS, 6 * 3600);
+  for (const page of ["app/[locale]/news/page.tsx", "app/[locale]/news/[slug]/page.tsx"]) {
+    const interval = Number(source(page).match(/export\s+const\s+revalidate\s*=\s*(\d+)/)?.[1]);
+    assert.equal(interval, RESEARCH_NEWS_REVALIDATE_SECONDS, `${page} must not refresh more often than its data`);
+  }
 });
 
 test("research news query state is handled in the client explorer", () => {

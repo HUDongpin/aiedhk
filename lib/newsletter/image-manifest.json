@@ -1623,6 +1623,70 @@
       "height": 450,
       "bytes": 74638
     },
+    "academy:academy-203": {
+      "sourcePath": "/images/academy/covers/academy-203-datasheets-for-datasets.png",
+      "sourceSha256": "aa37edab0ccb4d78db52445a12eb2126fe2a3bea3ba233413cedeba5050b713b",
+      "path": "/images/newsletter/academy-academy-203-1ea5d98d7283a7e8328e1cfe124bdfd964ad0e8de55c33b780fb6fdec4d88457.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65589
+    },
+    "academy:academy-204": {
+      "sourcePath": "/images/academy/covers/academy-204-generative-learning-strategies.png",
+      "sourceSha256": "2df632698df2ee517d479c5111f5c50d18ee5ba702291473be16bfc859936d46",
+      "path": "/images/newsletter/academy-academy-204-f564f2a1cd691c92f66912805b99e411df52e47040bd880f038a172d2a201b75.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 53839
+    },
+    "academy:academy-205": {
+      "sourcePath": "/images/academy/covers/academy-205-evaluating-retrieval-augmented-generation.png",
+      "sourceSha256": "485db55b73c8e3a21f20491da54ea14206ec4e430671cb0477c669bae0539166",
+      "path": "/images/newsletter/academy-academy-205-94bafe32eb7c07ee06eeb5a75d32278385eda31d460f90a9046f500593700f1e.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 70315
+    },
+    "academy:academy-206": {
+      "sourcePath": "/images/academy/covers/academy-206-preparation-for-future-learning.png",
+      "sourceSha256": "251d31fc94db6f95071f6350f4fd173bcd478a7b822e50e31628a3020bdb7895",
+      "path": "/images/newsletter/academy-academy-206-20151f98f4356acfba1c986a6a84e2fe5cb8d933081d26f1ee112fc9ed5077b7.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69067
+    },
+    "academy:academy-207": {
+      "sourcePath": "/images/academy/covers/academy-207-test-time-compute-and-reasoning-budgets.png",
+      "sourceSha256": "8beceef4214d5edf3fdf7577dff5fe2dbd58d1bfa77b7a44330aa59bc0deec38",
+      "path": "/images/newsletter/academy-academy-207-87a04989dbfb2faa8694d6ee5c6d8d1c658cbe5e1dc0fbc0c16043ae88696824.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 51968
+    },
+    "academy:academy-208": {
+      "sourcePath": "/images/academy/covers/academy-208-cognitive-diagnostic-assessment.png",
+      "sourceSha256": "9d2a3e2821a61cfefda44f941183e7f48b01592c6c0a46f060e6fe2e638a3778",
+      "path": "/images/newsletter/academy-academy-208-467c90e6c967e83e7b4c1addc610a4913eb3ad0b285ca0d11a5007ebc8ca1497.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61238
+    },
+    "academy:academy-209": {
+      "sourcePath": "/images/academy/covers/academy-209-active-learning-and-label-selection.png",
+      "sourceSha256": "fb0b5056371b16653b76c343303548070ab0ab44db63a404450202c627dc52e4",
+      "path": "/images/newsletter/academy-academy-209-96c63b85f9916d2ca13f409786a6d0ba392bf200afac5ab08a166a0fe31806a2.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 61791
+    },
+    "academy:academy-210": {
+      "sourcePath": "/images/academy/covers/academy-210-cognitive-offloading-and-learning.png",
+      "sourceSha256": "958fdff48c0e2b4e43b9302b2bf4ade550657e981a9215cdf236c3777bd8655c",
+      "path": "/images/newsletter/academy-academy-210-5851ec65facc413f2b0251505d512d82aca6a26cb00767bf83dd52e63af6d528.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 87636
+    },
     "news:aied-001": {
       "sourcePath": "/images/research/covers/aied-001-zawacki-richter-2019.png",
       "sourceSha256": "fb5fa9abec1558c57963aa6d2adfbba4dc8378ece65c8eaba81306e4750f4c00",
@@ -3558,6 +3622,70 @@
       "width": 720,
       "height": 450,
       "bytes": 78439
+    },
+    "news:aied-243": {
+      "sourcePath": "/images/research/covers/aied-243-october.webp",
+      "sourceSha256": "6417251b93a71ac3bb7db9d824c301e2760a8306a2b412e7a6d24a42ca67a988",
+      "path": "/images/newsletter/news-aied-243-d2ac648a41b2b09125d5cd56df5fa15a2e5afaa85f63dbbf6ec91bebc669e8be.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 65715
+    },
+    "news:aied-244": {
+      "sourcePath": "/images/research/covers/aied-244-october.webp",
+      "sourceSha256": "3cd60081f17c68c8cceee391eb2719588b96a5852c613996186b05d957b5d398",
+      "path": "/images/newsletter/news-aied-244-07d1cf086529adc2f369cc1b73d1f43b90a764d8798d782a81b6bf4d5bb68815.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 80576
+    },
+    "news:aied-245": {
+      "sourcePath": "/images/research/covers/aied-245-october.webp",
+      "sourceSha256": "b3065f29467285edf2aeb87745d3d5a429029a3ee05a82d7e8ec72048875c2e2",
+      "path": "/images/newsletter/news-aied-245-58300a2252d7faf4a0a3edd7a9b7dc23a6a291908c0e08815de6caadfa7072c7.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 58562
+    },
+    "news:aied-246": {
+      "sourcePath": "/images/research/covers/aied-246-october.webp",
+      "sourceSha256": "78d55dc5f3aeacf858409c6e71e0c97950b0680faa7c5f05f65c2fabab0c9370",
+      "path": "/images/newsletter/news-aied-246-1bf31d6805f16575553429b1999450001cb5ad7bf90129837be6ec5f232e8edf.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 86250
+    },
+    "news:aied-247": {
+      "sourcePath": "/images/research/covers/aied-247-october.webp",
+      "sourceSha256": "e4b9fbe29168670f809c50696b724590c6bfc2931be85b7b14aac41aa71b39dd",
+      "path": "/images/newsletter/news-aied-247-774b08cdd35e2bc5cbc5d0377c12e9ff485f63e0af193ad5f0a57bb2512d6d5a.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 64977
+    },
+    "news:aied-248": {
+      "sourcePath": "/images/research/covers/aied-248-october.webp",
+      "sourceSha256": "950f4cd8f5c866a595a56e03cfc9e3c75b7e5360395a4c21bec9a111cc5840e9",
+      "path": "/images/newsletter/news-aied-248-b87eced3ee2b4e26749685219d68a9f17451c25da8b0a617a294e85e5f8499c8.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 76833
+    },
+    "news:aied-249": {
+      "sourcePath": "/images/research/covers/aied-249-october.webp",
+      "sourceSha256": "768a6d3a349c63e8238512210a53f3640bb5e863c789698a0343e40839089697",
+      "path": "/images/newsletter/news-aied-249-ff0d4476bbdfe7138b82591c43103ad44f5d256c808b2b1235ac37f3854479ef.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 69553
+    },
+    "news:aied-250": {
+      "sourcePath": "/images/research/covers/aied-250-october.webp",
+      "sourceSha256": "5eb694ab721b22cce01ada1bb5a4ccf499e368f59d0ee2aa0e8d3d96b4c8b313",
+      "path": "/images/newsletter/news-aied-250-5d15a7ededa815faac67d252d0674b475c6cf9f21deed14877dd11166a6b6b4f.jpg",
+      "width": 720,
+      "height": 450,
+      "bytes": 68073
     }
   }
 }

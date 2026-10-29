@@ -115,6 +115,10 @@ const aiTopics = [
   ["conformal-prediction", "Conformal Prediction"],
   ["out-of-distribution-detection", "Out-of-Distribution Detection"],
   ["model-cards-and-their-limits", "Model Cards and Their Limits"],
+  ["datasheets-for-datasets", "Datasheets for Datasets"],
+  ["evaluating-retrieval-augmented-generation", "Evaluating Retrieval-Augmented Generation"],
+  ["test-time-compute-and-reasoning-budgets", "Test-Time Compute and Reasoning Budgets"],
+  ["active-learning-and-label-selection", "Active Learning and Label Selection"],
 ] as const;
 
 const theoryTopics = [
@@ -219,6 +223,10 @@ const theoryTopics = [
   ["advance-organizers", "Advance Organizers"],
   ["learning-with-contrasting-cases", "Learning with Contrasting Cases"],
   ["learning-progressions", "Learning Progressions"],
+  ["generative-learning-strategies", "Generative Learning Strategies"],
+  ["preparation-for-future-learning", "Preparation for Future Learning"],
+  ["cognitive-diagnostic-assessment", "Cognitive Diagnostic Assessment"],
+  ["cognitive-offloading-and-learning", "Cognitive Offloading and Learning"],
 ] as const;
 
 const explicitLaunchLevels: Record<string, AcademyLevel> = {

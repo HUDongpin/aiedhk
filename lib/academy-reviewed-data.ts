@@ -1,3 +1,4 @@
+import { academyRelease20261027To20261030 } from "@/lib/academy-release-20261027-20261030";
 import { academyRelease20261024To20261026 } from "@/lib/academy-release-20261024-20261026";
 import { academyRelease20261017To20261023 } from "@/lib/academy-release-20261017-20261023";
 import { academyRelease20261010To20261016 } from "@/lib/academy-release-20261010-20261016";
@@ -13,6 +14,7 @@ import { academyBackfill20260811To0815 } from "@/lib/academy-backfill-20260811-0
 import { academyBackfill20260817To0821 } from "@/lib/academy-backfill-20260817-0821";
 
 export const reviewedAcademyLessons: AcademyLesson[] = [
+  ...academyRelease20261027To20261030,
   ...academyRelease20261024To20261026,
   ...academyRelease20261017To20261023,
   ...academyRelease20261010To20261016,

@@ -16,9 +16,9 @@ test("Academy August–October releases preserve contiguous daily pairs and stab
   const lessons = releaseLessons();
   assert.equal(lessons.length, 126, "all 63 daily pairs must be published");
   const all = getAcademyLessons("en");
-  assert.equal(all.length, 202, "all prior lessons and the three October 24–26 pairs must remain available");
+  assert.equal(all.length, 210, "all prior lessons and the daily pairs through October 30 must remain available");
   for (const track of ["ai-knowledge", "educational-theory"]) {
-    assert.equal(all.filter((lesson) => lesson.track === track).length, 101);
+    assert.equal(all.filter((lesson) => lesson.track === track).length, 105);
     assert.equal(lessons.filter((lesson) => lesson.track === track).length, 63);
   }
   assert.equal(lessons.length % 2, 0, "no day may publish only one track");
@@ -43,11 +43,11 @@ test("new Academy lessons expose ordinary course copy and unique identities with
   }
 });
 
-test("Academy October 24–26 releases continue both track sequences through three digits", () => {
+test("Academy October 24–30 releases continue both track sequences through three digits", () => {
   const latest = getAcademyLessons("en")
     .filter((lesson) => Number(lesson.id.slice(8)) >= 197)
     .sort((a, b) => a.id.localeCompare(b.id));
-  assert.equal(latest.length, 6);
+  assert.equal(latest.length, 14);
 
   for (let index = 0; index < latest.length; index += 1) {
     const lesson = latest[index];
